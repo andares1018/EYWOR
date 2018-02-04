@@ -95,6 +95,9 @@ country_event = {
 			XSM = { set_country_flag = join_fact_not_annex }
 		}
 	}
+	mean_time_to_happen = {
+		days = 2 
+	}
 	option = {
 		name = rcmchina.867.a
 		ai_chance = {
@@ -133,7 +136,9 @@ country_event = {
 		has_global_flag = china_split
 		NOT = { has_war_with = JAP }
 	}
-	
+	mean_time_to_happen = {
+		days = 2 
+	}
 	option = {
 		name = rcmchina.869.a
 		ai_chance = { factor = 100 }
@@ -260,6 +265,9 @@ country_event = {
 				has_war_with = JAP
 			}
 		}
+	}
+	mean_time_to_happen = {
+		days = 2 
 	}
 	immediate = {
 		hidden_effect = {
@@ -2168,6 +2176,9 @@ country_event = {
 			NOT = { is_in_faction_with = JAP }
 		}
 	}
+	mean_time_to_happen = {
+		days = 2 
+	}
 	option = {
 		name = rcmchina.2058.a	
 		ai_chance = { factor = 100 }
@@ -2371,6 +2382,9 @@ country_event = {
 		AND = {	
 			has_defensive_war = yes
 		}
+	}
+	mean_time_to_happen = {
+		days = 2
 	}
 	immediate = {
 		remove_ideas = nanking_decade

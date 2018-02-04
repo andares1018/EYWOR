@@ -706,6 +706,9 @@ country_event = {
 		has_government = n_socialism
 		NOT = { has_idea = socialist_like_commies }
 	}
+	mean_time_to_happen = {
+		days = 2
+	}
 	immediate = {
 		add_ideas = socialist_like_commies
 	}
@@ -721,7 +724,7 @@ country_event = {
 		has_idea = socialist_like_commies
 	}
 	mean_time_to_happen = {
-		days = 5
+		days = 2
 	}
 	immediate = {
 		remove_ideas = socialist_like_commies
@@ -736,6 +739,9 @@ country_event = {
 	trigger = {
 		has_government = communism
 		NOT = { has_idea = commies_like_socialist }
+	}
+	mean_time_to_happen = {
+		days = 2
 	}
 	immediate = {
 		add_ideas = commies_like_socialist
@@ -754,6 +760,9 @@ country_event = {
 	immediate = {
 		remove_ideas = commies_like_socialist
 	}
+	mean_time_to_happen = {
+		days = 2
+	}
 	option = {
 	}
 }
@@ -764,6 +773,9 @@ country_event = {
 	trigger = {
 		has_government = democratic
 		NOT = { has_idea = democratic_dont_hate_socialist }
+	}
+	mean_time_to_happen = {
+		days = 2
 	}
 	immediate = {
 		add_ideas = democratic_dont_hate_socialist
@@ -779,6 +791,9 @@ country_event = {
 		NOT = { has_government = democratic }
 		has_idea = democratic_dont_hate_socialist
 	}
+	mean_time_to_happen = {
+		days = 2
+	}
 	immediate = {
 		remove_ideas = democratic_dont_hate_socialist
 	}
@@ -793,6 +808,9 @@ country_event = {
 		has_government = n_socialism
 		NOT = { has_idea = socialist_dont_hate_democratic }
 	}
+	mean_time_to_happen = {
+		days = 2
+	}
 	immediate = {
 		add_ideas = socialist_dont_hate_democratic
 	}
@@ -806,6 +824,9 @@ country_event = {
 	trigger = {
 		NOT = { has_government = n_socialism }
 		has_idea = socialist_dont_hate_democratic
+	}
+	mean_time_to_happen = {
+		days = 2
 	}
 	immediate = {
 		remove_ideas = socialist_dont_hate_democratic

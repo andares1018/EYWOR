@@ -235,6 +235,9 @@ country_event = {
 			}
 		}
 	}
+	mean_time_to_happen = {
+		days = 2
+	}
 	option = {#ECA
 		name = MEN.1.a
 		trigger = {
@@ -471,6 +474,9 @@ country_event = {
 				NOT = { controls_state = 763 }
 			}
 		}
+	}
+	mean_time_to_happen = {
+		days = 2
 	}
 	desc = MEN.3.d
 	option = {#ECA

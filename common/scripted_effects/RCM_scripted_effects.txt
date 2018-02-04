@@ -778,13 +778,25 @@ MEN_CREATION = {
 set_commie_rebels = {	
 	if = {
 		limit = {
-			controller = {
-				NOT = {
-					OR = {
-						tag = PRC
-						has_government = communism
-						has_government = n_socialism
-						has_country_flag = i_cracked_down_you
+			OR = {
+				controller = {
+					NOT = {
+						OR = {
+							tag = PRC
+							has_government = communism
+							has_government = n_socialism
+							has_country_flag = i_cracked_down_you
+						}
+					}
+				}
+				owner = {
+					NOT = {
+						OR = {
+							tag = PRC
+							has_government = communism
+							has_government = n_socialism
+							has_country_flag = i_cracked_down_you
+						}
 					}
 				}
 			}

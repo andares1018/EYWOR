@@ -167,7 +167,7 @@ create_field_marshal = {
 	name = "Ma Hongbin"
 	portrait_path = "gfx/leaders/MON/Portrait_Ma_Hongbin.dds"
 	traits = { defensive_doctrine } 
-	id = 4003
+	id = 4004
 	skill = 3
 }
 

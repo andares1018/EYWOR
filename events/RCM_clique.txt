@@ -27,6 +27,9 @@ country_event = {
 		}
 		NOT = { has_global_flag = clique_loop }
 	}
+	mean_time_to_happen = {
+		days = 2
+	}
 	immediate = {
 		if = {
 			limit = { NOT = { country_exists = CHI } }

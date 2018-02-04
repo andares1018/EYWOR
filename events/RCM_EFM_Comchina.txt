@@ -1160,6 +1160,9 @@ country_event = {
 			}
 		}
 	}
+	mean_time_to_happen = {
+		days = 2
+	}
 	option = {
 		name = EFM_Comchina.40.a
 		PRC = { country_event = { id = EFM_Comchina.41 days = 1 } }
@@ -1383,7 +1386,9 @@ country_event = {
 	picture = GFX_report_event_chinese_soldiers_fighting
 	
 	#fire_only_once = yes
-	
+	mean_time_to_happen = {
+		days = 2
+	}
 	trigger = {
 		tag = PRC
 		has_idea = idea_continuous_recover_from_the_long_march
@@ -1416,6 +1421,9 @@ country_event = {
 		has_idea = Long_March_2
 		has_national_unity > 40
 	}
+	mean_time_to_happen = {
+		days = 2
+	}
 	option = {
 		name = EFM_Comchina.200.a
 		swap_ideas = {
@@ -1441,6 +1449,9 @@ country_event = {
 		has_idea = idea_continuous_recover_from_the_long_march
 		has_idea = Long_March_3
 		has_national_unity > 50
+	}
+	mean_time_to_happen = {
+		days = 2
 	}
 	option = {
 		name = EFM_Comchina.201.a
@@ -1468,6 +1479,9 @@ country_event = {
 		has_idea = Long_March_4
 		has_national_unity > 60
 	}
+	mean_time_to_happen = {
+		days = 2
+	}
 	option = {
 		name = EFM_Comchina.202.a
 		swap_ideas = {
@@ -1494,6 +1508,9 @@ country_event = {
 		has_idea = Long_March_5
 		has_national_unity > 70
 	}
+	mean_time_to_happen = {
+		days = 2
+	}
 	option = {
 		name = EFM_Comchina.203.a
 		remove_ideas = Long_March_5
@@ -1517,6 +1534,9 @@ country_event = {
 		has_idea = idea_continuous_recover_from_the_long_march
 		has_idea = Long_March_5
 		has_national_unity < 60
+	}
+	mean_time_to_happen = {
+		days = 2
 	}
 	option = {
 		name = EFM_Comchina.204.a
@@ -1544,6 +1564,9 @@ country_event = {
 		has_idea = Long_March_4
 		has_national_unity < 50
 	}
+	mean_time_to_happen = {
+		days = 2
+	}
 	option = {
 		name = EFM_Comchina.205.a
 		swap_ideas = {
@@ -1570,6 +1593,9 @@ country_event = {
 		has_idea = Long_March_3
 		has_national_unity < 40
 	}
+	mean_time_to_happen = {
+		days = 2
+	}
 	option = {
 		name = EFM_Comchina.206.a
 		swap_ideas = {
@@ -1595,6 +1621,9 @@ country_event = {
 		has_idea = idea_continuous_recover_from_the_long_march
 		has_idea = Long_March_2
 		has_national_unity < 30
+	}
+	mean_time_to_happen = {
+		days = 2
 	}
 	option = {
 		name = EFM_Comchina.207.a
@@ -1931,6 +1960,9 @@ country_event = {  #start training
 			has_country_flag = training_program_marker_1
 		}
 	}
+	mean_time_to_happen = {
+		days = 2
+	}
 	immediate = {
 		hidden_effect = {
 			swap_ideas = {
@@ -1961,6 +1993,9 @@ country_event = {  #start training
 		NOT = {
 			has_country_flag = training_program_marker_2
 		}
+	}
+	mean_time_to_happen = {
+		days = 2
 	}
 	immediate = {
 		hidden_effect = {
@@ -1993,6 +2028,9 @@ country_event = {  #start training
 			has_country_flag = training_program_marker_3
 		}
 	}
+	mean_time_to_happen = {
+		days = 2
+	}
 	immediate = {
 		hidden_effect = {
 			swap_ideas = {
@@ -2023,6 +2061,9 @@ country_event = {  #start training
 		NOT = {
 			has_country_flag = training_program_marker_4
 		}
+	}
+	mean_time_to_happen = {
+		days = 2
 	}
 	immediate = {
 		hidden_effect = {
