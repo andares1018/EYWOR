@@ -3212,7 +3212,7 @@ focus_tree = {
 		}
 		select_effect = {
 			add_ideas = for_the_shintaisei
-			drop_cosmetic_tag = JAP_TOH
+			drop_cosmetic_tag = yes
 			retire_country_leader = yes
 			create_country_leader = {
 				name = "Fumimaro Konoe"

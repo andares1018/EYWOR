@@ -12,6 +12,8 @@ state={
 
 	history={
 		owner = TIB
+		add_claim_by = CHI
+		add_claim_by = PRC
 		buildings = {
 			infrastructure = 1
 			arms_factory = 1

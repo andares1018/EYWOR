@@ -86,7 +86,7 @@ country_event = {
 			factor = 100 	
 		}
 		add_political_power = 20
-		drop_cosmetic_tag = PRC_CSR
+		drop_cosmetic_tag = yes
 		custom_effect_tooltip = reform_government_tt
 		CHI = { add_opinion_modifier = { target = PRC modifier = prc_government_reform } }
 	}

@@ -2541,7 +2541,7 @@ country_event = {
 		}
 		hidden_effect = {
 			SHX = {
-				drop_cosmetic_tag = SHX_CLQ
+				drop_cosmetic_tag = yes
 			}
 			CHI = {#got the yes news
 				country_event = {

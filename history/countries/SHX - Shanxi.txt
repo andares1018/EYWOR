@@ -16,7 +16,7 @@ set_technology = {
 }
 set_cosmetic_tag = SHX_CLQ
 1939.1.1 = {
-	drop_cosmetic_tag = SHX_CLQ
+	drop_cosmetic_tag = yes
 	add_to_war = {
 		targeted_alliance = CHI
 		enemy = JAP

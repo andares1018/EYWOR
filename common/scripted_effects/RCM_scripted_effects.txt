@@ -729,6 +729,7 @@ CCP_CREATION = {
 			}
 		}
 	}
+	set_global_flag = ccp_exists
 }
 
 MEN_CREATION = {

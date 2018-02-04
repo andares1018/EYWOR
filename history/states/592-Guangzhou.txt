@@ -35,6 +35,7 @@ state={
 			remove_core_of = GUD
 			owner = CHI
 			JAP = {
+				set_province_controller = 1018
 				set_province_controller = 1047
 				set_province_controller = 7152
 				set_province_controller = 11938
