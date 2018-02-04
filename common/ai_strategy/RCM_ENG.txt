@@ -1,0 +1,21 @@
+leon_bum_is_cool = {
+	enable = {
+		tag = ENG
+		FRA = { has_completed_focus = FRA_go_with_britain }
+		country_exists = FRA
+	}
+	abort = {
+		NOT = { country_exists = FRA }
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "FRA"			
+		value = 200
+	}
+	ai_strategy = {
+		type = alliance
+		id = "FRA"			
+		value = 200
+	}	
+}

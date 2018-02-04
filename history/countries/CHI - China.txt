@@ -1,0 +1,327 @@
+﻿capital = 598 # Nanjing
+
+oob = "CHI_1936"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	gwtank = 1
+	early_fighter = 1
+	early_bomber = 1
+	mass_assault = 1
+	fleet_in_being = 1
+	early_destroyer = 1
+	early_light_cruiser = 1
+	gw_artillery = 1
+}
+#set_autonomy = {
+#	target = PLM
+#	autonomous_state = autonomy_dominion
+#}
+add_ideas = {
+	german_advisors
+	#CHI_communist_uprisings
+	chi_kmt
+	appeasement_policy
+	chiang
+	incompetent_heavy_industry
+	unbalanced_industry
+	iliterate_population
+	no_proper_equipment_design
+	the_blueshirts
+	central_club
+	nanking_decade
+	unstable_economy
+	#internationalism
+	#fascist_influence
+	#communist_influence
+	#democratic_influence
+	#soviet_german_friendship
+	#communist_pressure
+	#collectivist_ethos_focus
+}
+
+set_convoys = 40
+
+1939.1.1 = {
+	set_country_flag = china101_fired
+	set_country_flag = mbf_ed
+	set_country_flag = nineteen_thirtynine_start
+	set_global_flag = flying_tiger
+	remove_ideas = nanking_decade
+	remove_ideas = german_advisors
+	add_political_power = 1198
+	set_global_flag = hpc_joins_chi
+	set_country_flag = severed_ties_with_GER
+	complete_national_focus = chi_fight_focus
+	complete_national_focus = chi_unite_focus
+	complete_national_focus = chi_pressure_xinjiang
+	complete_national_focus = chi_industry_focus
+	complete_national_focus = chi_nationalize_industry_focus
+	complete_national_focus = chi_nationalize_industry_ii_focus
+	unlock_national_focus  = chi_attack_com
+	complete_national_focus	= reinforce_new_life_movement
+	complete_national_focus = big_rear_plan
+	complete_national_focus = chi_lushan_focus
+	complete_national_focus = chi_inst_reform_focus
+	unlock_national_focus = chi_foreign_help_focus
+	complete_national_focus = one_party_tutelage
+	complete_national_focus = chi_axis_help_focus
+	complete_national_focus = chi_comintern_help_focus
+	complete_national_focus = chi_allies_help_focus
+	complete_national_focus = kmt_reorganize_nra
+	complete_national_focus = monetary_reform
+	complete_national_focus = streamlined_industry
+	add_ideas = {
+		#laws
+		tot_economic_mobilisation
+		service_by_requirement
+		closed_economy
+
+		#ministers
+		CHI_chen_shaokuan
+		claire_lee_chennault_chi
+		kiangnan_shipyard_group
+	}
+
+	set_global_flag = fall_of_nanjing
+	create_faction = chinese_united_front
+	every_other_country = {
+		limit = {
+			is_warlord = yes
+		}
+		CHI = {
+			add_to_faction = PREV
+		}
+	}
+	add_to_faction = PRC
+	
+	remove_opinion_modifier = { target = PRC modifier = hostile_status }
+	#load_oob = "CHI_united_front"
+	set_global_flag = CHI_unite
+	oob = "CHI_1939"
+	set_technology = {
+
+		#PLACEHOLDER techs for vehicles
+		motorised_infantry = 1
+		tech_support = 1
+		tech_recon = 1
+		tech_engineers = 1
+
+		#doctrines
+		air_superiority = 1
+		pocket_defence = 1
+		defence_in_depth = 1
+		battlefleet_concentration = 1
+		convoy_sailing = 1
+
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+		radio_detection = 1
+		mechanical_computing = 1
+		computing_machine = 1
+		basic_encryption = 1
+		basic_decryption = 1
+
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		synth_oil_experiments = 1
+		oil_plant = 1
+		improved_oil_plant = 1
+		construction1 = 1
+		construction2 = 1
+		construction3 = 1
+		concentrated_industry = 1
+		concentrated_industry2 = 1
+		concentrated_industry3 = 1
+	}
+}
+
+
+set_politics = {
+
+	parties = {
+		democratic = { 
+			popularity = 15
+		}
+		
+		n_socialism = { 
+			popularity = 0
+		}
+
+		fascism = {
+			popularity = 25
+		}
+		
+		communism = {
+			popularity = 10
+		}
+		
+		neutrality = { 
+			popularity = 50
+		}
+	}
+
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+create_country_leader = {
+	name = "Chiang Kai-shek"
+	desc = "POLITICS_CHIANG_KAI-SHEK_DESC"
+	picture = "Portrait_China_Chiang_Kai_Shek.dds"
+	expire = "1965.1.1"
+	id = 5001
+	ideology = despotism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Huang Qixiang"
+	desc = ""
+	picture = "Portrait_China_HUANG_QIXIANG.dds"
+	expire = "1965.1.1"
+	ideology = democratic_centralism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Chiang Kai-shek"
+	desc = "POLITICS_CHIANG_KAI-SHEK_DESC"
+	picture = "Portrait_China_Chiang_Kai_Shek.dds"
+	expire = "1965.1.1"
+	id = 5002
+	ideology = fascism_ideology
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Xu Fulin"
+	desc = ""
+	picture = "Portrait_China_Xu_Fulin.dds"
+	expire = "1965.1.1"
+	ideology = socialism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "None"
+	desc = ""
+	picture = ""
+	expire = "1965.1.1"
+	ideology = n_socialism_ideology
+	traits = {
+		#
+	}
+}
+
+add_opinion_modifier = { target = PRC modifier = hostile_status }
+add_opinion_modifier = { target = JAP modifier = hostile_status }
+
+1939.1.1 = {
+	set_politics = {
+
+	parties = {
+		democratic = { 
+			popularity = 15
+		}
+
+		fascism = {
+			popularity = 20
+		}
+		
+		communism = {
+			popularity = 10
+			#banned = no #default is no
+		}
+		
+		neutrality = { 
+			popularity = 55
+
+		}
+	}
+
+
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+	}
+}
+
+
+create_field_marshal = {
+	name = "He Yingqin"
+	portrait_path = "gfx/leaders/CHI/Portrait_China_He_Yingqin.dds"
+	traits = { offensive_doctrine }
+	skill = 4
+}
+create_field_marshal = {
+	name = "Gu Jutong"
+        portrait_path = "gfx/leaders/CHI/Portrait_China_Gu_Zt.dds"
+	traits = { fast_planner }
+	skill = 3	
+}
+create_field_marshal = {
+	name = "Chen Cheng"
+	portrait_path = "gfx/leaders/CHI/Portrait_China_Chen_Cheng.dds"
+	traits = { offensive_doctrine }
+	skill = 4
+}
+create_field_marshal = {
+	name = "Wang Yaowu"
+	portrait_path = "gfx/leaders/CHI/Portrait_China_Wang_Yaowu.dds"
+	traits = { offensive_doctrine }
+	skill = 3
+}
+create_corps_commander = {
+	name = "Zhang Lingfu"
+	portrait_path = "gfx/leaders/CHI/Portrait_Zhang_Lingfu.dds"
+	traits = {  }
+	skill = 4
+}
+create_corps_commander = {
+	name = "Xue Yueh"
+	portrait_path = "gfx/leaders/CHI/Portrait_China_Xue.dds"
+	traits = {  }
+	skill = 3
+}
+create_corps_commander = {
+	name = "Du Yuming"
+        portrait_path = "gfx/leaders/CHI/Portrait_China_Du_Y.dds"
+	traits = { trickster }
+	skill = 2	
+}
+
+create_corps_commander = {
+	name = "Sun Liren"
+        portrait_path = "gfx/leaders/CHI/Portrait_China_Sun_L.dds"
+	traits = { panzer_leader }
+	skill = 3	
+}
+
+create_navy_leader = {
+	name = "Chen Shaokuan"
+	portrait_path = "gfx/leaders/CHI/Portrait_China_Chen_S.dds"
+	traits = { superior_tactician }
+	skill = 3
+}
+create_navy_leader = {
+	name = "Chen Qingkwen"
+	portrait_path = "gfx/leaders/CHI/Portrait_Chen_Qingkwen.dds"
+	traits = { seawolf }
+	skill = 2
+}

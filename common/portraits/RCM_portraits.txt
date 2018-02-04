@@ -1,0 +1,163 @@
+default = {
+	#navy = {
+		#male = {
+		#}
+		#female = {
+		#}
+	#}
+	
+	#army = {
+		#male = {
+		#}
+		#female = {
+		#}
+	#}
+	
+	male = {
+		"gfx/leaders/leader_unknown.dds"
+	}
+	female = {
+		"gfx/leaders/leader_unknown.dds"
+	}
+}
+
+continent = {
+	name = europe	
+	political = {
+		#MODDEDv
+		n_socialism = {
+				male = { 
+					"gfx/leaders/Europe/Portrait_Europe_Generic_2.dds" 
+			}
+		}
+		#MODDED^
+	}
+
+}
+
+continent = {
+	name = north_america
+	political = {
+		#MODDEDv
+		n_socialism = {
+				male = { 
+					"gfx/leaders/Europe/Portrait_Europe_Generic_2.dds" 
+			}
+		}
+		#MODDED^
+	}
+
+}
+
+continent = {
+	name = south_america
+	political = {
+		#MODDEDv
+		n_socialism = {
+				male = { 
+					"gfx/leaders/South America/Portrait_South_America_Generic_2.dds" 
+			}
+		}
+		#MODDED^
+	}
+
+}
+
+continent = {
+	name = australia	
+	political = {
+		#MODDEDv
+		n_socialism	= {
+				male = { 
+					"gfx/leaders/Europe/Portrait_Europe_Generic_2.dds" 
+			}
+		}
+		#MODDED^
+	}
+
+}
+
+continent = {
+	name = africa
+	
+	political = {
+		#MODDEDv
+		n_socialism	= {
+				male = { 
+					"gfx/leaders/Africa/Portrait_Africa_Generic_2.dds"
+					"gfx/leaders/SAF/Portrait_South_Africa_Political_Leader_Generic.dds"
+					"gfx/leaders/SAF/Portrait_South_Africa_Political_Leader_Generic_2.dds"
+			}
+		}
+		#MODDED^
+	}
+}
+
+continent = {
+	name = asia
+
+	political = {
+		#MODDEDv
+		n_socialism = {
+				male = { 
+					"gfx/leaders/Asia/Portrait_Asia_Generic_2.dds" 
+			}
+		}
+		#MODDED^
+	}
+}
+
+continent = {
+	name = middle_east
+	
+	political = {
+		#MODDEDv
+		n_socialism = {
+				male = { 
+					"gfx/leaders/SAU/Portrait_Arabia_Generic_1.dds"
+			}
+		}
+		#MODDED^
+	}
+}
+
+		#MODDEDv
+FIC = {
+	army = {
+		male = {
+			"gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_land_4.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
+		}
+	}
+	
+	navy = {
+		male = {
+			"gfx/leaders/Europe/Portrait_Europe_Generic_navy_1.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_navy_2.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_navy_3.dds"
+		}
+	}
+}
+SST = {
+	army = {
+		male = {
+			"gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_land_4.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
+		}
+	}
+	
+	navy = {
+		male = {
+			"gfx/leaders/Europe/Portrait_Europe_Generic_navy_1.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_navy_2.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_navy_3.dds"
+		}
+	}
+}
+#MODDED

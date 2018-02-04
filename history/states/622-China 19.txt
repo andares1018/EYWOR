@@ -1,0 +1,39 @@
+state=
+{
+	id=622
+	name="STATE_622" # Northern Shaanxi
+	manpower = 5597300
+	
+	state_category = city
+	buildings_max_level_factor=1.500
+	resources={
+		steel=3
+		tungsten=2
+	}
+	history =
+	{
+	    owner = PRC
+		add_core_of = PRC
+		add_core_of = CHI
+		victory_points = {
+			8049 4
+		}
+			buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			industrial_complex = 1
+			517 = {
+				bunker = 8
+			}
+			8049 = {
+				bunker = 8
+			}
+			7208 = {
+				bunker = 8
+			}
+		}
+	}
+	provinces={
+		517 1458 4939 7208 7314 7659 8049 10880 12356 
+	}
+}

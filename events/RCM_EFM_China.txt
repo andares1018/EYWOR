@@ -1,0 +1,128 @@
+﻿add_namespace = EFM_China
+
+# Restart Chinese civil war
+country_event = {
+	id = EFM_China.109
+	title = rcmchina.109.t
+	desc = rcmchina.109.d
+	picture = GFX_report_event_chinese_soldiers
+
+	is_triggered_only = yes
+	
+#	fire_only_once = yes
+
+#	trigger = {
+#		tag = PRC
+#		has_global_flag = PRC_restart_CHI_war
+#		NOT = { has_war_together_with = CHI }
+#	}
+
+#	mean_time_to_happen = { days = 360 }
+
+	option = {
+		name = rcmchina.109.a
+		custom_effect_tooltip = rcmchina.109_tt		
+		CHI = { country_event = { id = rcmchina.110 } }
+		effect_tooltip = {
+			declare_war_on = { target = CHI type = annex_everything }
+		}
+	}
+}
+country_event = {#second united front
+	id = EFM_China.2000
+	title = EFM_China.2000.t
+	desc = EFM_China.2000.d
+	picture = GFX_report_event_chinese_soldiers
+
+	is_triggered_only = yes
+	
+
+	option = {
+		name = EFM_China.2000.a
+		add_opinion_modifier = {
+			target = CHI modifier = chi_prc_pact
+		}
+		reverse_add_opinion_modifier = {
+			target = CHI modifier = chi_prc_pact
+		}
+		diplomatic_relation = { country = CHI relation = non_aggression_pact }
+		hidden_effect = {
+			CHI = {
+				white_peace = PRC
+			}
+			every_country = {
+				limit = {
+					is_in_faction_with = CHI
+					NOT = { tag = CHI }
+				}
+				white_peace = PRC
+				white_peace = GXC
+				white_peace = GUD
+			}
+			every_country = {
+				limit = {
+					is_in_faction_with = PRC
+					NOT = { tag = PRC }
+				}
+				white_peace = CHI
+			}
+		}
+	}
+	option = {
+		name = EFM_China.2000.b
+		trigger = {
+			NOT = {
+				has_global_flag = xian_incident_flag
+			}
+		}
+		custom_effect_tooltip = this_will_lead_to_war_tt
+	}
+}
+country_event = {#second united front #PRC acce
+	id = EFM_China.2001
+	title = EFM_China.2001.t
+	desc = EFM_China.2001.d
+	picture = GFX_report_event_chinese_soldiers
+
+	is_triggered_only = yes
+
+	option = {
+		name = EFM_China.2001.a
+		effect_tooltip = {
+			add_opinion_modifier = {
+				target = PRC modifier = chi_prc_pact
+			}
+			reverse_add_opinion_modifier = {
+				target = PRC modifier = chi_prc_pact
+			}
+			diplomatic_relation = { country = PRC relation = non_aggression_pact }
+		}
+		add_national_unity = 0.05
+		add_political_power = -30
+	}
+}
+country_event = {#second united front #PRC ref
+	id = EFM_China.2002
+	title = EFM_China.2002.t
+	desc = EFM_China.2002.d
+	picture = GFX_report_event_chinese_soldiers
+
+	is_triggered_only = yes
+
+	option = {
+		name = EFM_China.2002.a
+		if = {
+			limit = {
+				NOT = {
+					has_completed_focus = chi_attack_com
+				}
+			}
+			complete_national_focus = chi_attack_com
+			else = {
+				create_wargoal = {
+					type = annex_everything target = FROM
+				}
+			}
+		}
+	}
+}

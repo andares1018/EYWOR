@@ -1,0 +1,24 @@
+state={
+	id=761
+	name="STATE_761"
+	state_category = town
+	history = {
+	    owner = NEA
+		add_core_of = NEA
+		add_core_of = PRC
+		add_core_of = CHI
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+		}
+		1939.1.1 = {
+			 owner = CHI
+			 remove_core_of = NEA
+		}
+	}
+	provinces={
+		5007 10733 12156 
+	}
+	manpower = 608900
+	buildings_max_level_factor=1.000
+}

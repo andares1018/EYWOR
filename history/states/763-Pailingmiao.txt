@@ -1,0 +1,39 @@
+#pailingmiao
+state = {
+	id = 763
+	name = "STATE_763"
+	
+	history = {
+		owner = PLM
+		add_core_of = PLM
+		add_core_of = SHX
+		add_core_of = CHI
+		add_core_of = PRC
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			arms_factory = 1
+
+		}
+		1939.1.1 = {
+			owner = SHX
+			add_core_of = ECA
+			ECA = {
+				set_province_controller = 12331
+				set_province_controller = 10424
+				set_province_controller = 12403
+				set_province_controller = 7048
+				set_province_controller = 4525
+			}
+		}
+		victory_points = {
+			4525 2 
+		}
+	}
+	provinces = {
+		4525 7048 10424 12331 12403 
+	}
+	state_category = town
+	manpower = 1103200
+	buildings_max_level_factor = 1.500
+}

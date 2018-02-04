@@ -1,0 +1,4 @@
+﻿l_english:
+ test_the_chinese_focus:0 "Separate North China"
+ test_the_chinese_focus_desc:0 "The Chinese still refuse to acknowledge the independence of Hebei Political Council, and tensions along the border near Hebei have resulted in several skirmishes. If we demand an independent North China, we can in turn puppet the new regime and occupy it without a fight."
+ test_the_chinese_focus_short_desc:0 "§LDemand China to recognize [HPC.GetNameDef].§!"

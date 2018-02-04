@@ -1,0 +1,868 @@
+﻿###########################
+# Chinese Events BORDER WARS ADDED SOUTHERN SHAANXI #ID = 743#
+###########################
+
+add_namespace = prc
+
+country_event = {
+	id = prc.1
+	title = prc.1.t
+	desc = { 
+		text = prc.1.d_com
+		trigger = { TAG = PRC }
+	}
+	desc = {
+		text = prc.1.d_clique
+		trigger = { NOT = { TAG = PRC } }
+	}
+	picture = GFX_report_event_chinese_soldiers_02
+	trigger ={
+		tag = PRC
+		tag = NEA
+		#tag = SHD
+		CHI = { has_defensive_war_with = GXC }
+		NOT = { has_global_flag = CHI_unite_PRC }
+		NOT = { is_in_faction_with = GXC }
+		NOT = { has_country_flag = joined_2g_war }
+	}
+	#fire_only_once = yes
+	mean_time_to_happen = {
+		days = 10
+	}
+	option = { #join
+		name = prc.1.a
+		ai_chance = { 
+		base = 80 	
+		modifier = {
+				factor = 200
+				OR = { 
+					AND = {
+						has_global_flag = gud_ready
+						GXC = { has_offensive_war_with = CHI }
+					}
+					is_historical_focus_on = yes
+				}
+			}
+		}
+		hidden_effect = {
+			set_country_flag = joined_2g_war
+		}
+		GXC = { country_event = { days = 5 id = gxc.11 } }
+		CHI = { country_event = { days = 5 id = gxc.11 } }
+	}
+	option = { #not join
+		name = prc.1.b
+		ai_chance = {
+			base = 20
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						has_global_flag = gud_ready
+						GXC = { has_offensive_war_with = CHI }
+					}
+					is_historical_focus_on = yes
+				}
+			}
+		}
+	}
+}
+country_event = {
+	id = prc.2
+	title = prc.2.t
+	desc = prc.2.d
+	picture = GFX_report_event_chinese_soldiers_02
+	trigger ={
+		tag = PRC
+		date < 1939.1.1
+		NOT = {
+			has_idea = Chinese_Red_Army
+		}
+	}
+	fire_only_once = yes
+	option = { #join
+		name = prc.2.a
+		ai_chance = { 
+			factor = 100 	
+		}
+		add_political_power = 20
+		drop_cosmetic_tag = PRC_CSR
+		custom_effect_tooltip = reform_government_tt
+		CHI = { add_opinion_modifier = { target = PRC modifier = prc_government_reform } }
+	}
+	option = {
+		name = prc.2.b
+		ai_chance = { factor = 0 }
+		add_political_power = -50
+	}
+}
+country_event = {
+	id = prc.3
+	title = prc.3.t
+	desc = prc.3.d
+	picture = GFX_report_event_chinese_soldiers_02
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { #CDL outlawed and joins PRC
+		name = prc.3.a
+		effect_tooltip = {
+			add_political_power = 200
+			add_national_unity = 0.10
+			set_political_party = { ideology = n_socialism popularity = 30 }
+			add_ideas = zhang_bojun
+		}
+	}
+}
+country_event = {
+	id = prc.4
+	title = prc.4.t
+	desc = prc.4.d
+	picture = GFX_report_event_chinese_soldiers_02
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { ##CDL in power
+		name = prc.2.a
+		effect_tooltip = {
+			if = {
+				limit = { has_war_with = SOV }
+			white_peace = SOV		
+			}
+			white_peace = PRC
+		}
+		diplomatic_relation = { country = CHI relation = non_aggression_pact }
+		hidden_effect = {
+				CHI = {
+				white_peace = SOV
+				white_peace = PRC
+				white_peace = MON
+				white_peace = TAN
+				white_peace = SIK
+			}
+			every_country = {
+				limit = {
+					is_in_faction_with = CHI
+					capital_scope = { is_on_continent = asia }
+					NOT = { tag = CHI }
+				}
+				if = {
+					limit = { CHI = { is_faction_leader = yes } }
+					white_peace = SOV
+					white_peace = PRC
+					white_peace = MON
+					white_peace = TAN
+					white_peace = SIK
+					else = {
+						every_country = {
+							limit = {
+								is_faction_leader = yes
+								is_in_faction_with = CHI
+							}
+							set_country_flag = peace_sov_@ROOT
+							remove_from_faction = CHI
+						}					
+					}
+				}
+				
+			}
+			every_country = {
+				limit = {
+					is_in_faction_with = SOV
+					NOT = { tag = SOV }
+				}
+				white_peace = CHI               
+			}
+			every_country = {
+				limit = {
+				   has_country_flag = peace_sov_@ROOT
+				}
+				add_to_faction = CHI              
+			}
+		}
+	}
+}
+country_event = {
+	id = prc.5
+	title = prc.5.t
+	desc = prc.5.d
+	picture = GFX_report_event_chinese_soldiers_02
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { #ROC apologize
+		name = prc.5.a
+		add_political_power = 120
+		PRC = {
+			remove_opinion_modifier = {
+				target = CHI
+				modifier = hostile_status
+			}
+		}
+	}
+}
+
+###Kill THE HANJIAN! (for WARLORD/CHI/PRC when capture Hanjian capital)
+country_event = {
+	id = prc.6
+	title = prc.6.t
+	desc = prc.6.d
+	picture = GFX_report_event_chinese_soldiers_02
+	is_triggered_only = yes
+	trigger = {
+		any_state = {
+			owner = {
+				has_war_with = ROOT
+			}
+			OR = {
+				is_claimed_by = ROOT
+				is_core_of = ROOT
+			}
+			is_capital_of_japan_puppet = yes
+			has_state_flag = hanjian_captured_@FROM
+		}
+	}
+
+	option = { #KILL THEM ALL!
+		name = prc.6.a
+		ai_chance = {
+			factor = 60
+		}
+		add_political_power = 100
+		add_national_unity = 0.05
+		capture_collaborators = yes
+	}
+	option = { #RECRUIT THE REMAINS
+		name = prc.6.b
+		add_political_power = 20
+		add_national_unity = -0.02
+		add_manpower = 20000
+		ai_chance = {
+			factor = 40
+		}
+		#random_other_country = {
+		#	limit = {
+		#		any_owned_state = {
+		#			has_state_flag = hanjian_captured_@ROOT
+		#		}
+		#	}
+		#	ROOT = {
+		#		annex_country = {
+		#			target = PREV transfer_troops = yes
+		#		}
+		#	}
+		#}
+		#hidden_effect = {
+		#	JAP = {
+		#		country_event = {
+		#			id = rcmjapan.1000
+		#		}
+		#	}
+		#	random_state = {
+		#		limit = {
+		#			is_owned_by = ROOT
+		#			has_state_flag = hanjian_captured_@ROOT
+		#		}
+		#		clr_state_flag = hanjian_captured_@ROOT
+		#	}
+		#}
+		capture_collaborators = yes
+	}
+}
+#THE COMMIES TAKE OVER
+country_event = {
+	id = prc.7
+	title = prc.7.t
+	desc = prc.7.d
+	picture = GFX_report_event_chinese_soldiers_02
+	is_triggered_only = yes
+	option = { #OH NO!
+		name = prc.7.a
+	}
+}
+###Kill THE HANJIAN! (for COMMIE REMOTE capture Hanjian capital)
+country_event = {
+	id = prc.8
+	title = prc.8.t
+	desc = prc.8.d
+	picture = GFX_report_event_chinese_soldiers_02
+	is_triggered_only = yes
+	trigger = {
+		any_state = {
+			owner = {
+				has_war_with = ROOT
+			}
+			OR = {
+				is_claimed_by = ROOT
+				is_core_of = ROOT
+			}
+			is_capital_of_japan_puppet = yes
+			has_state_flag = hanjian_captured_@FROM
+		}
+	}
+	option = { #KILL THEM ALL!
+		name = prc.8.a
+		ai_chance = {
+			factor = 100
+		}
+		add_political_power = 100
+		add_national_unity = 0.05
+		capture_collaborators = yes
+	}
+	option = { #RECRUIT THE REMAINS
+		name = prc.8.b
+		ai_chance = {
+			factor = 0
+		}
+		add_political_power = 20
+		add_national_unity = -0.02
+		add_manpower = 20000
+		capture_collaborators = yes
+	}
+}
+#request SOV for MAN(NE) to SOV
+country_event = {
+	id = prc.9
+	title = prc.9.t
+	desc = prc.9.d
+	picture = GFX_report_event_operation_august_storm
+	is_triggered_only = yes
+	#fire_only_once = yes
+	option = { #SURE
+		name = prc.9.a
+		ai_chance = {
+			factor = 100
+		}
+		SOV = {
+			give_military_access = PRC
+		}
+		PRC = {
+			country_event = {
+				days = 2 id = prc.10
+			}
+			effect_tooltip = {
+				every_state = {
+					limit = {
+						is_MAN_state_for_liberation = yes
+						OR = {
+							is_controlled_by = SOV
+							AND = {
+								is_controlled_by = MON
+								MON = {
+									is_in_faction_with = SOV
+									has_war_together_with = SOV
+								}
+							}
+						}
+					}
+					PRC = {
+						transfer_state = PREV
+					}
+				}
+				every_state = {
+					limit = {
+						is_MAN_state_for_liberation = yes
+						NOT = {
+							OR = {
+								is_controlled_by = SOV
+								AND = {
+									is_controlled_by = MON
+									MON = {
+										is_in_faction_with = SOV
+										has_war_together_with = SOV
+									}
+								}
+							}
+						}
+						is_controlled_by_jap_or_its_puppet = yes
+						controller = {
+							has_war_with = SOV
+							has_war_with = PRC
+						}
+					}
+					PRC = {
+						set_state_owner = PREV
+					}
+				}
+			}
+		}
+		random_other_country = {
+			limit = {
+				is_legit_china = yes
+			}
+			country_event = {
+				days = 2 id = prc.10
+			}
+		}
+		add_political_power = 100
+	}
+	option = { #NAH
+		ai_chance = {
+			factor = 0
+		}
+		name = prc.9.b
+	}
+}
+#request SOV for MAN(NE)(YES to PRC/CHI)
+country_event = {
+	id = prc.10
+	title = {
+		text = prc.10.t
+		trigger = {
+			tag = PRC
+		}
+	}
+	title = {
+		text = prc.10.t_CHI
+		trigger = {
+			tag = CHI
+		}
+	}
+	desc = {
+		text = prc.10.d
+		trigger = {
+			tag = PRC
+		}
+	}
+	desc = {
+		text = prc.10.d_CHI
+		trigger = {
+			NOT = {
+				tag = PRC
+			}
+		}
+	}
+	picture = GFX_report_event_operation_august_storm
+	is_triggered_only = yes
+	#fire_only_once = yes
+	option = { #OH YEAH!
+		name = prc.10.a
+		trigger = {
+			TAG = PRC
+		}
+		PRC = {
+			every_state = {
+				limit = {
+					is_MAN_state_for_liberation = yes
+					OR = {
+						is_controlled_by = SOV
+						AND = {
+							is_controlled_by = MON
+							MON = {
+								is_in_faction_with = SOV
+								has_war_together_with = SOV
+							}
+						}
+					}
+				}
+				PRC = {
+					transfer_state = PREV
+				}
+			}
+		}
+	}
+	option = { #OH NO!
+		name = prc.10.b
+		trigger = {
+			TAG = CHI
+		}
+	}
+}
+#request SOV for MAN(NE)(NO to PRC)
+country_event = {
+	id = prc.11
+	title = prc.11.t
+	desc = prc.11.d
+	picture = GFX_report_event_operation_august_storm
+	is_triggered_only = yes
+	#fire_only_once = yes
+	option = { #OH NO!
+		name = prc.11.a
+	}
+}
+#amass support
+country_event = {
+	id = prc.12
+	title = prc.12.t
+	desc = {
+		text = prc.12.d
+		trigger = {
+			TAG = PRC
+		}
+	}
+	desc = {
+		text = prc.12.d_CHI
+		trigger = {
+			NOT = {
+				TAG = PRC
+			}
+		}
+	}
+	picture = GFX_report_event_new_personnel_batch
+	is_triggered_only = yes
+	trigger = {
+		PRC = {
+			has_idea = idea_continuous_amass_public_support
+		}
+		OR = {
+			tag = PRC
+			AND = {
+				NOT = {
+					tag = JAP
+				}
+				any_owned_state = {
+					has_state_flag = this_state_amass_support
+					has_state_flag = commie_ridden_states
+				}
+			}
+		}
+	}
+	option = { #OH yea
+		name = prc.12.a
+		trigger = {
+			TAG = PRC
+		}
+		random_state = {
+			limit = {
+				OR = {
+					has_state_flag = commie_ridden_states
+					is_controlled_by = ROOT
+				}
+				has_state_flag = this_state_amass_support
+				NOT = {
+					is_owned_by = ROOT
+				}
+			}
+			ROOT = {
+				if = {
+					limit = {
+						NOT = {
+							tag = JAP
+						}
+					}
+					set_state_owner = PREV
+				}
+			}
+		}
+		hidden_effect = {
+			every_state = {
+				clr_state_flag = this_state_amass_support
+			}
+			random_state = {
+				limit = {
+					OR = {
+						has_state_flag = commie_ridden_states
+						is_controlled_by = ROOT
+					}
+					NOT = {
+						is_owned_by = ROOT
+					}
+					owner = {
+						OR = {
+							is_warlord = yes
+							is_legit_china = yes
+						}
+					}
+				}
+				set_state_flag = this_state_amass_support
+				random_list = {
+					15 = {
+						PRC = {
+							country_event = { days = 16 id = prc.12 }
+						}
+						owner = {
+							country_event = { days = 16 id = prc.12 }
+						}
+					}
+					20 = {
+						PRC = {
+							country_event = { days = 15 id = prc.12 }
+						}
+						owner = {
+							country_event = { days = 15 id = prc.12 }
+						}
+					}
+					30 = {
+						PRC = {
+							country_event = { days = 14 id = prc.12 }
+						}
+						owner = {
+							country_event = { days = 14 id = prc.12 }
+						}
+					}
+					20 = {
+						PRC = {
+							country_event = { days = 13 id = prc.12 }
+						}
+						owner = {
+							country_event = { days = 13 id = prc.12 }
+						}
+					}
+					15 = {
+						PRC = {
+							country_event = { days = 12 id = prc.12 }
+						}
+						owner = {
+							country_event = { days = 12 id = prc.12 }
+						}
+					}
+				}
+			}
+		}
+	}
+	option = { #OH nah
+		name = prc.12.b
+		trigger = {
+			NOT = {
+				TAG = PRC
+			}
+		}
+		effect_tooltip = {
+			random_state = {
+				limit = {
+					has_state_flag = this_state_amass_support
+				}
+				PRC = {
+					set_state_owner = PREV
+				}
+			}
+		}
+	}
+}
+#uprisings
+country_event = {
+	id = prc.13
+	title = prc.13.t
+	desc = {
+		text = prc.13.d
+		trigger = {
+			TAG = PRC
+		}
+	}
+	desc = {
+		text = prc.13.d_CHI
+		trigger = {
+			NOT = {
+				TAG = PRC
+			}
+		}
+	}
+	picture = GFX_report_event_chinese_soldiers_running
+	is_triggered_only = yes
+	trigger = {
+		PRC = {
+			has_idea = idea_continuous_stage_uprisings
+		}
+		OR = {
+			tag = PRC
+			AND = {
+				NOT = {
+					tag = JAP
+				}
+				any_state = {
+					has_state_flag = commie_ridden_states
+					is_controlled_by = ROOT
+					has_state_flag = this_state_stage_uprisings
+				}
+			}
+		}
+	}
+	option = { #OH yeah
+		name = prc.13.a
+		trigger = {
+			TAG = PRC
+		}
+		random_state = {
+			limit = {
+				has_state_flag = this_state_stage_uprisings
+			}
+			ROOT = {
+				transfer_state = PREV
+			}
+		}
+		hidden_effect = {
+			every_state = {
+				clr_state_flag = this_state_stage_uprisings
+			}
+			random_state = {
+				limit = {
+					has_state_flag = commie_ridden_states
+					NOT = {
+						is_controlled_by = ROOT
+					}
+					is_owned_by = ROOT
+					controller = {
+						OR = {
+							is_warlord = yes
+							is_legit_china = yes
+						}
+					}
+				}
+				set_state_flag = this_state_stage_uprisings
+				random_list = {
+					15 = {
+						PRC = {
+							country_event = { days = 16 id = prc.13 }
+						}
+						controller = {
+							country_event = { days = 16 id = prc.13 }
+						}
+					}
+					20 = {
+						PRC = {
+							country_event = { days = 15 id = prc.13 }
+						}
+						controller = {
+							country_event = { days = 15 id = prc.13 }
+						}
+					}
+					30 = {
+						PRC = {
+							country_event = { days = 14 id = prc.13 }
+						}
+						controller = {
+							country_event = { days = 14 id = prc.13 }
+						}
+					}
+					20 = {
+						PRC = {
+							country_event = { days = 13 id = prc.13 }
+						}
+						controller = {
+							country_event = { days = 13 id = prc.13 }
+						}
+					}
+					15 = {
+						PRC = {
+							country_event = { days = 12 id = prc.13 }
+						}
+						controller = {
+							country_event = { days = 12 id = prc.13 }
+						}
+					}
+				}
+			}
+		}
+	}
+	option = { #OH nah
+		name = prc.13.b
+		trigger = {
+			NOT = {
+				TAG = PRC
+			}
+		}
+		effect_tooltip = {
+			random_state = {
+				limit = {
+					has_state_flag = this_state_stage_uprisings
+				}
+				PRC = {
+					transfer_state = PREV
+				}
+			}
+		}
+	}
+}
+#crack down
+country_event = {
+	id = prc.14
+	title = prc.14.t
+	desc = {
+		text = prc.14.d
+		trigger = {
+			TAG = PRC
+		}
+	}
+	desc = {
+		text = prc.14.d_CHI
+		trigger = {
+			NOT = {
+				TAG = PRC
+			}
+		}
+	}
+	is_triggered_only = yes
+	picture = GFX_report_event_china_flag
+	trigger = {
+		any_country = {
+			tag = FROM
+			has_idea = idea_continuous_counter_insurgency
+		}
+		OR = {
+			tag = FROM
+			tag = PRC
+		}
+	}
+	#fire_only_once = yes
+	option = { #OH YEA!
+		name = prc.14.a
+		trigger = {
+			TAG = FROM
+		}
+		random_owned_state = {
+			limit = {
+				has_state_flag = this_state_crack_down_@ROOT
+				has_state_flag = commie_ridden_states
+			}
+			clr_state_flag = commie_ridden_states
+			custom_effect_tooltip = remove_com_par_act_tt
+		}
+		hidden_effect = {
+			every_state = {
+				clr_state_flag = this_state_crack_down_@ROOT
+			}
+			random_state = {
+				limit = {
+					has_state_flag = commie_ridden_states
+					is_owned_by = ROOT
+				}
+				set_state_flag = this_state_crack_down_@ROOT
+				random_list = {
+					15 = {
+						PRC = {
+							country_event = { days = 16 id = prc.14 }
+						}
+						ROOT = {
+							country_event = { days = 16 id = prc.14 }
+						}
+					}
+					20 = {
+						PRC = {
+							country_event = { days = 15 id = prc.14 }
+						}
+						ROOT = {
+							country_event = { days = 15 id = prc.14 }
+						}
+					}
+					30 = {
+						PRC = {
+							country_event = { days = 14 id = prc.14 }
+						}
+						ROOT = {
+							country_event = { days = 14 id = prc.14 }
+						}
+					}
+					20 = {
+						PRC = {
+							country_event = { days = 13 id = prc.14 }
+						}
+						ROOT = {
+							country_event = { days = 13 id = prc.14 }
+						}
+					}
+					15 = {
+						PRC = {
+							country_event = { days = 12 id = prc.14 }
+						}
+						ROOT = {
+							country_event = { days = 12 id = prc.14 }
+						}
+					}
+				}
+			}
+		}
+	}
+	option = { #OH NO!
+		name = prc.14.b
+		trigger = {
+			TAG = PRC
+		}
+	}
+}

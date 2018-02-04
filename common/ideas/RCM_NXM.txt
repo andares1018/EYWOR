@@ -1,0 +1,343 @@
+ideas = {
+	political_advisor = {
+		NXM_earl_browder = {
+			
+			
+			allowed = {
+				original_tag = "NXM"
+			}
+			
+
+			
+			traits = { communist_revolutionary }
+	
+			on_add = {
+				country_event = political.1
+			}
+	
+			do_effect = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			picture = generic_communist_asia
+			ai_will_do = {
+				factor = 0
+			}
+		}	
+			
+		NXM_harold_ickes = {
+			
+			
+			allowed = {
+				original_tag = "NXM"
+			}
+			
+
+			
+			traits = { democratic_reformer }
+	
+			on_add = {
+				country_event = political.13
+			}
+	
+			do_effect = {
+				NOT = {
+					has_government = democratic
+				}
+			}
+			picture = generic_democratic_asia
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		NXM_charles_coughlin = {
+			
+			
+			allowed = {
+				original_tag = "NXM"
+			}
+			
+
+			
+			traits = { fascist_demagogue }
+	
+			on_add = {
+				country_event = political.7
+			}
+	
+			do_effect = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+			picture = generic_fascist_asia
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		NXM_zhang_bojun = { ai_will_do = { factor = 0 }
+			picture = idea_zhang_bojun
+			allowed = {
+				original_tag = NXM
+			}
+			traits = { socialist_idealist }
+			
+			picture = generic_n_socialism_asia
+			on_add = {
+				country_event = rcmpolitical.30
+			}					
+			do_effect = {
+				NOT = {
+					has_government = n_socialism
+				}
+			}
+			
+		}
+		NXM_pierre_dupong = {
+
+			picture = generic_political_advisor_asia_1
+			
+			allowed = {
+				original_tag = NXM
+			}
+			
+			traits = { backroom_backstabber }
+		}
+
+		NXM_psre_dupong = {
+
+			picture = generic_political_advisor_asia_1
+			
+			allowed = {
+				original_tag = NXM
+			}
+			
+			traits = { compassionate_gentleman }
+		}
+
+		NXM_pierre_krier = {
+
+			picture = generic_political_advisor_asia_3
+			
+			allowed = {
+				original_tag = NXM
+			}
+			
+			traits = { captain_of_industry }
+		}
+	}
+	# MINXMARY
+	army_chief = {
+		
+		NXM_emile_speller = {
+			
+			picture = generic_army_asia_1
+			
+			allowed = {
+				original_tag = NXM
+			}
+			
+			traits = { army_chief_defensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		NXM_alexander_von_falkenhausen = {
+			
+			picture = generic_army_asia_2
+			
+			allowed = {
+				original_tag = NXM
+			}
+			
+			traits = { army_chief_offensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}	
+	}
+
+	air_chief = {
+		
+		NXM_guillaume_soisson = {
+			
+			picture = generic_air_asia_3
+			
+			allowed = {
+				original_tag = NXM
+			}
+			
+			traits = { air_air_combat_training_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		NXM_nicholas_diedrich = {
+			
+			picture = generic_air_asia_1
+			
+			allowed = {
+				original_tag = NXM
+			}
+			
+			traits = { air_chief_ground_support_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+	}
+
+	navy_chief = {
+		
+		NXM_paul_medinger = {
+			
+			picture = generic_navy_asia_3
+			
+			allowed = {
+				original_tag = NXM
+			}
+			
+			traits = { navy_chief_decisive_battle_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		NXM_henri_ahnen = {
+			
+			picture = generic_navy_asia_1
+			
+			allowed = {
+				original_tag = NXM
+			}
+			
+			traits = { navy_chief_maneuver_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	high_command = {
+
+		NXM_francois_schammel = {
+
+			picture = generic_army_asia_1
+			
+			allowed = {
+				original_tag = NXM
+			}
+			
+			traits = { army_infantry_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		NXM_aloyse_glodt = {
+
+			picture = generic_army_asia_3
+			
+			allowed = {
+				original_tag = NXM
+			}
+			
+			traits = { army_armored_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		NXM_damien_roeser = {
+
+			picture = generic_air_asia_2
+			
+			allowed = {
+				original_tag = NXM
+			}
+			
+			traits = { air_air_superiority_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		NXM_pierre_fischbach = {
+
+			picture = generic_navy_asia_1
+			
+			allowed = {
+				original_tag = NXM
+			}
+			
+			traits = { navy_fleet_logistics_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	theorist = {
+
+		NXM_alex_federspiel = {
+					
+			picture = generic_army_asia_1
+
+			allowed = {
+				original_tag = NXM
+			}
+			
+			research_bonus = {
+				land_doctrine = 0.07
+			}
+			
+			traits = { military_theorist }
+		}
+
+		NXM_nicolas_de_dixmude = {
+					
+			picture = generic_air_asia_1
+				
+			allowed = {
+				original_tag = NXM
+			}
+			
+			research_bonus = {
+				air_doctrine = 0.07
+			}
+			
+			traits = { air_warfare_theorist }
+		}
+
+		NXM_florent_destriveaux = {
+					
+			picture = generic_navy_asia_1
+				
+			allowed = {
+				original_tag = NXM
+			}
+			
+			research_bonus = {
+				naval_doctrine = 0.07
+			}
+			
+			traits = { naval_theorist }
+		}
+	}
+
+}

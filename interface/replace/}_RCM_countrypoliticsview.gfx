@@ -1,0 +1,40 @@
+spriteTypes = {
+	#MODDED#v
+	spriteType = {
+		name = "GFX_idea_slot_foreign_advisor"
+		texturefile = "gfx/interface/ideas/idea_slot_foreign_advisor.dds"
+	}
+	
+	#MODDED#v
+	spriteType = {
+		name = "GFX_ideology_n_socialism_group"
+		texturefile = "gfx/interface/ideologies/n_socialism_group.dds"
+	}
+	
+	#MODDED#v
+	corneredTileSpriteType = {
+		name = "GFX_nat_spit_bg"
+		texturefile = "gfx/interface/nat_spit_bg.dds"
+		size= { x=365 y=155 }
+		borderSize = { x=365 y=155 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_nat_spit_text"
+		texturefile = "gfx/interface/nat_spit_text.dds"
+		size= { x=189 y=27 }
+		borderSize = { x=189 y=27 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+	
+	corneredTileSpriteType = {
+		name = "GFX_diplo_nat_spirits_bg_scroll"
+		texturefile = "gfx/interface/diplo_nat_spirits_bg_scroll.dds"
+		size= { x=520 y=92 }
+		borderSize = { x=520 y=92 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+}

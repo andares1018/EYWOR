@@ -1,0 +1,426 @@
+on_actions = {
+	on_new_term_election = {
+		random_events = {
+			100 = rcmjapan.36
+		}
+		random_events = {
+			100 = rcmfrance.1
+		}
+		random_events = {
+			100 = rcmelection.18
+		}
+	}
+	#FROM is war target
+	on_declare_war = {
+		effect = {
+			#MODDEDv
+			if = {
+				limit = {
+					ROOT = { tag = JAP }
+					FROM = {
+						is_warlord = yes
+					}
+				}
+				clr_global_flag = RRC_expand
+			}
+			if = {
+				limit = {
+					ROOT = { tag = JAP }
+					FROM = {
+						OR = {
+							tag = FIC
+							tag = HOL
+							tag = INS
+							tag = SIA
+							tag = AUS
+						}
+					}
+				}
+				USA = { country_event = { days = 15 id = rcmjapan.9932 } }
+			}
+			#MODDED^
+		}
+	}
+	on_coup_succeeded = {
+		effect = {
+			#MODDEDv
+			random_other_country = {
+				limit = {
+					has_government = fascism
+					original_tag = CHI
+					original_tag = ROOT
+				}
+				remove_ideas = dai_li
+				set_country_flag = daili_in_power
+				create_country_leader = {
+					name = ""
+					desc = "Dai Li"
+					picture = "Portrait_China_Dai_Li.dds"
+					expire = "1965.1.1"
+					ideology = fascism_ideology
+					traits = {
+						prince_of_terror
+					}
+				}
+			}
+			#MODDED^
+		}
+	}
+	on_capitulation = {
+		effect = {
+			#MODDEDv
+			if = {
+				limit = {
+					ROOT = {
+						has_war_together_with = JAP
+						is_subject_of = JAP
+					}
+					FROM = {
+						OR = {
+							original_tag = CHI
+							original_tag = PRC
+							is_originally_warlord = yes
+						}
+					}
+				}
+				ROOT = {
+					random_owned_state = {
+						limit = {
+							is_capital_of_japan_puppet = yes
+						}
+						set_state_flag = hanjian_captured_@ROOT
+						if = {
+							limit = {#NO COMMIE MILITIA/Im already commie LUL #actually nah who cares
+								OR = {
+									NOT = { has_state_flag = commie_ridden_states }
+									FROM = {
+										tag = PRC
+									}
+								}
+							}
+							FROM = {
+								country_event = { id = puppet_transfer.1 }#THIS IS TO ADJUST FROM
+							}
+							else = {#COMMIE MILITIA RAMPANT
+								FROM = {
+									country_event = { id = puppet_transfer.3 }#THIS IS TO ADJUST FROM
+								}
+							}
+						}
+					}
+					set_country_flag = i_capitulated_@ROOT					
+				}
+			}
+		}
+	}
+	#ROOT is subject FROM is previous overlord
+	on_subject_free = {
+		effect = {
+			#MODDEDv
+			if = {
+				limit = {
+					AND = {
+						TAG = FIC
+						FROM =  {
+							TAG = JAP
+						}
+					}
+				}
+				drop_cosmetic_tag = FIC_JAP
+				retire_country_leader = yes
+			}
+			#MODDED^
+		}
+	}
+	
+	#ROOT is subject FROM is overlord
+	on_subject_annexed = {
+		#MODDEDv
+		effect = {
+			FROM = {
+				country_event = { days = 10 id = core.1 }				
+			}
+		}
+		#MODDED^
+	}
+	
+	#used when puppeting in a peace conference
+	#ROOT = nation being puppeted, FROM = overlord
+	on_puppet = {
+		effect = {
+			#MODDEDv
+			if = {
+				limit = {
+					TAG = XSM
+				}
+				set_cosmetic_tag = XSM_HUI
+			}
+			if = {
+				limit = {
+					AND = {
+						TAG = FIC
+						is_subject_of = JAP
+					}
+				}
+				set_cosmetic_tag = FIC_JAP
+				create_country_leader = {
+					name = "Isamu Chō"
+					desc = ""
+					picture = "Portrait_Indochina_Isamu_Cho.dds"
+					expire = "1936.9.15"
+					ideology = fascism_ideology
+				}
+			}
+			every_country = {
+				limit = {
+					is_subject_of = JAP
+				}
+				every_state = {
+					limit = {
+						is_owned_by = ROOT
+						is_core_of = PREV 
+					}
+					PREV = {
+						transfer_state = PREV
+					}
+				}
+			}
+			every_country = {
+				limit = {
+					is_subject_of = JAP
+				}
+				every_state = {
+					limit = {
+						is_owned_by = ROOT
+						is_claimed_by = PREV 
+					}
+					PREV = {
+						transfer_state = PREV
+					}
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						original_tag = CHI
+						is_originally_warlord = yes
+						original_tag = PRC
+						original_tag = HMI
+						original_tag = TNG
+					}
+					FROM = { original_tag = JAP }
+				}
+				JAP = {
+					if = {
+						limit = {#any puppet
+							any_other_country = {
+								is_subject_of = JAP
+								OR = {
+									has_country_flag = im_rrc_now
+									owns_state = 608
+									original_tag = HPC
+									original_tag = EHB
+									original_tag = CCP
+									original_tag = RFM
+								}
+							}
+						}
+						random_other_country = {#all cliques got annexed
+							limit = {
+								is_subject_of = JAP
+								OR = {
+									has_country_flag = im_rrc_now #only RRC
+									AND = {
+										NOT = {
+											JAP = {
+												has_completed_focus = reorganized_chi_puppet
+											}
+										}
+										OR = {
+											AND = {#only rfm
+												JAP = {
+													has_completed_focus = reform_shanghai_puppet_focus
+													NOT = {
+														has_completed_focus = provisional_gov_focus
+													}
+												}
+												original_tag = RFM
+												owns_state = 613
+											}
+											AND = {#only jnc
+												owns_state = 608
+												OR = {
+													original_tag = HPC
+													original_tag = EHB
+												}
+												NOT = {
+													country_exists = RFM
+												}
+											}
+											AND = {#only great_way_gov
+												JAP = {
+													has_completed_focus = great_way_gov_focus
+													NOT = {
+														has_completed_focus = provisional_gov_focus
+														has_completed_focus = reform_shanghai_puppet_focus
+													}
+												}
+												owns_state = 613
+												original_tag = CCP
+											}
+										}
+									}
+								}
+							}
+							PREV = {
+								annex_country = {
+									target = ROOT transfer_troops = yes
+								}
+							}
+						}
+						random_other_country = {#split cliques RFM
+							limit = {
+								ROOT = {
+									OR = {
+										original_tag = XIK
+										original_tag = SIC
+										original_tag = GXC
+										original_tag = GUD
+										original_tag = CHI
+										original_tag = YUN
+									}
+								}
+								any_other_country = {
+									is_subject_of = JAP
+									owns_state = 608
+									OR = {
+										original_tag = HPC
+										original_tag = EHB
+									}
+								}
+								owns_state = 613
+								original_tag = RFM
+							}
+							annex_country = {
+								target = ROOT transfer_troops = yes
+							}
+							every_state = {
+								limit = {
+									is_owned_by = ROOT
+								}
+							}
+						}
+						random_other_country = {#split cliques EHB/HPC
+							limit = {#
+								ROOT = {
+									OR = {
+										original_tag = NXM
+										original_tag = SHD
+										original_tag = SHX
+										original_tag = PLM
+										original_tag = XSM
+										original_tag = PRC
+										original_tag = NEA
+									}
+								}
+								
+								any_other_country = {
+									owns_state = 613
+									original_tag = RFM
+								}
+								is_subject_of = JAP
+								owns_state = 608
+								OR = {
+									original_tag = HPC
+									original_tag = EHB
+								}
+							}
+							annex_country = {
+								target = ROOT transfer_troops = yes
+							}
+						}
+					}
+					if = {#no puppets, only smol EHB
+						limit = {
+							NOT = {
+								country_exists = CCP
+								country_exists = RFM
+							}
+							EHB = {
+								NOT = {
+									owns_state = 608
+								}
+							}
+							OR = {
+								HPC = {
+									NOT = {
+										is_subject_of = JAP
+									}
+								}
+								NOT = {
+									country_exists = HPC
+								}
+							}
+						}
+						FROM = {
+							annex_country = {
+								target = ROOT transfer_troops = yes
+							}
+						}
+					}
+				}
+			}
+			#MODDED^
+		}
+	}
+	
+	#used when puppeting through the occupied territories menu during peace time (or when releasing from non-core but owned territory, f.e. Britain releasing Egypt)
+	#ROOT = nation being released, FROM = overlord
+	on_release_as_puppet = {
+		effect = {
+			#MODDEDv
+			if = {
+				limit = {
+					TAG = XSM
+				}
+				set_cosmetic_tag = XSM_HUI
+			}
+			if = {
+				limit = {
+					AND = {
+						TAG = FIC
+						is_subject_of = JAP
+					}
+				}
+				set_cosmetic_tag = FIC_JAP
+				create_country_leader = {
+					name = "Isamu Chō"
+					desc = ""
+					picture = "Portrait_Indochina_Isamu_Cho.dds"
+					expire = "1936.9.15"
+					ideology = fascism_ideology
+				}
+			}
+			#MODDED^
+		}
+	}
+	#ROOT is free nation FROM is releaser
+	on_release_as_free = {
+		effect = {
+			#MODDEDv
+			if = {
+				limit = {
+					AND = {
+						TAG = FIC
+						FROM =  {
+							TAG = JAP
+						}
+					}
+				}
+				drop_cosmetic_tag = FIC_JAP
+				retire_country_leader = yes
+			}
+			#MODDED^
+		}
+	}
+}

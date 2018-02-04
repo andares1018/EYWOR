@@ -1,0 +1,479 @@
+spriteTypes = {	
+
+
+
+#国军步兵武器_CHI infantry weapons#
+SpriteType = {
+name = "GFX_CHI_infantry_weapons_medium"
+texturefile = "gfx/interface/technologies/chi_infantry_equipment_0.dds"
+}
+
+SpriteType = {
+name = "GFX_CHI_infantry_weapons1_medium"
+texturefile = "gfx/interface/technologies/chi_infantry_equipment_1.dds"
+}
+
+SpriteType = {
+name = "GFX_CHI_improved_infantry_weapons_medium"
+texturefile = "gfx/interface/technologies/chi_infantry_equipment_2.dds"
+}
+
+SpriteType = {
+name = "GFX_CHI_advanced_infantry_weapons_medium"
+texturefile = "gfx/interface/technologies/chi_infantry_equipment_3.dds"
+}
+
+
+#国军摩步/机步载具_CHI motorized/mechanized vehicles#
+SpriteType = {
+name = "GFX_CHI_motorised_infantry_medium"
+texturefile = "gfx/interface/technologies/chi_motorized_equipment_1.dds"
+}
+
+SpriteType = {
+name = "GFX_CHI_motorized_equipment_1_medium"
+texturefile = "gfx/interface/technologies/chi_motorized_equipment_1.dds"
+}
+
+
+#国军一战坦克_CHI great war tank#
+SpriteType = {
+name = "GFX_CHI_gwtank_medium"
+texturefile = "gfx/interface/technologies/CHI_gwtank.dds"
+} 
+
+
+#国军轻坦克_CHI light tank#
+SpriteType = {
+name = "GFX_CHI_basic_light_tank_medium"
+texturefile = "gfx/interface/technologies/CHI_basic_light_tank.dds"
+}
+
+SpriteType = {
+name = "GFX_CHI_improved_light_tank_medium"
+texturefile = "gfx/interface/technologies/CHI_imp_light_tank.dds"
+}
+
+SpriteType = {
+name = "GFX_CHI_advanced_light_tank_medium"
+texturefile = "gfx/interface/technologies/CHI_adv_light_tank.dds"
+}
+
+
+#国军中型坦克_CHI medium tank#
+SpriteType = {
+name = "GFX_CHI_basic_medium_tank_medium"
+texturefile = "gfx/interface/technologies/CHI_basic_main_tank.dds"
+}
+
+SpriteType = {
+name = "GFX_CHI_improved_medium_tank_medium"
+texturefile = "gfx/interface/technologies/CHI_imp_main_tank.dds"
+}
+
+SpriteType = {
+name = "GFX_CHI_advanced_medium_tank_medium"
+texturefile = "gfx/interface/technologies/CHI_adv_main_tank.dds"
+}
+
+
+#国军重型坦克_CHI heavy tank#
+SpriteType = {
+name = "GFX_CHI_basic_heavy_tank_medium"
+texturefile = "gfx/interface/technologies/CHI_basic_heavy_tank.dds"
+}
+
+SpriteType = {
+name = "GFX_CHI_improved_heavy_tank_medium"
+texturefile = "gfx/interface/technologies/CHI_imp_heavy_tank.dds"
+}
+
+SpriteType = {
+name = "GFX_CHI_advanced_heavy_tank_medium"
+texturefile = "gfx/interface/technologies/CHI_adv_heavy_tank.dds"
+}
+
+
+#国军主战坦克_CHI main battle tank#
+SpriteType = {
+name = "GFX_CHI_main_battle_tank_medium"
+texturefile = "gfx/interface/technologies/CHI_main_battle_tank.dds"
+}
+
+
+#国军超重坦克_CHI super heavy tank#
+SpriteType = {
+name = "GFX_CHI_super_heavy_tank_medium"
+texturefile = "gfx/interface/technologies/CHI_superheavy_tank.dds"
+}
+
+
+#国军战斗机_CHI fighter#
+SpriteType = {
+name = "GFX_CHI_early_fighter_medium"
+texturefile = "gfx/interface/technologies/CHI_early_fighter.dds"
+}
+
+SpriteType = {
+name = "GFX_CHI_fighter1_medium"
+texturefile = "gfx/interface/technologies/CHI_fighter1.dds"
+}
+
+SpriteType = {
+name = "GFX_CHI_fighter2_medium"
+texturefile = "gfx/interface/technologies/CHI_fighter2.dds"
+}
+
+SpriteType = {
+name = "GFX_CHI_fighter3_medium"
+texturefile = "gfx/interface/technologies/CHI_fighter3.dds"
+}
+
+
+#国军俯冲轰炸机_CHI CAS#
+SpriteType = {
+name = "GFX_CHI_CAS1_medium"
+texturefile = "gfx/interface/technologies/CHI_CAS1.dds"
+}	
+
+SpriteType = {
+name = "GFX_CHI_CAS2_medium"
+texturefile = "gfx/interface/technologies/CHI_CAS2.dds"
+}	
+
+SpriteType = {
+name = "GFX_CHI_CAS3_medium"
+texturefile = "gfx/interface/technologies/CHI_CAS3.dds"
+}
+
+
+#国军海军轰炸机_CHI naval bomber#
+SpriteType = {
+name = "GFX_CHI_naval_bomber1_medium"
+texturefile = "gfx/interface/technologies/CHI_naval_bomber1.dds"
+}	
+
+SpriteType = {
+name = "GFX_CHI_naval_bomber2_medium"
+texturefile = "gfx/interface/technologies/CHI_naval_bomber2.dds"
+}
+
+SpriteType = {
+name = "GFX_CHI_naval_bomber3_medium"
+texturefile = "gfx/interface/technologies/CHI_naval_bomber3.dds"
+}
+
+
+#国军喷气战斗机_CHI jet fighter#
+SpriteType = {
+name = "GFX_CHI_jet_fighter1_medium"
+texturefile = "gfx/interface/technologies/chi_jet_fighter1.dds"
+}	
+
+SpriteType = {
+name = "GFX_CHI_jet_fighter2_medium"
+texturefile = "gfx/interface/technologies/chi_jet_fighter2.dds"
+}
+
+
+#国军战术轰炸机_CHI tactical bomber#
+SpriteType = {
+name = "GFX_CHI_early_bomber_medium"
+texturefile = "gfx/interface/technologies/CHI_early_bomber.dds"
+}
+
+SpriteType = {
+name = "GFX_CHI_tactical_bomber1_medium"
+texturefile = "gfx/interface/technologies/CHI_tactical_bomber1.dds"
+}
+
+SpriteType = {
+name = "GFX_CHI_tactical_bomber2_medium"
+texturefile = "gfx/interface/technologies/CHI_tactical_bomber2.dds"
+}
+
+SpriteType = {
+name = "GFX_CHI_tactical_bomber3_medium"
+texturefile = "gfx/interface/technologies/CHI_tactical_bomber3.dds"
+}
+
+
+#国军喷气战术轰炸机_CHI jet tactical bomber#
+SpriteType = {
+name = "GFX_CHI_jet_tactical_bomber2_medium"
+texturefile = "gfx/interface/technologies/chi_jet_tactical_bomber2.dds"
+}	
+	
+SpriteType = {
+name = "GFX_CHI_jet_tactical_bomber1_medium"
+texturefile = "gfx/interface/technologies/chi_jet_tactical_bomber1.dds"
+}
+
+
+#国军重型战斗机_CHI heavy fighter#
+SpriteType = {
+name = "GFX_CHI_heavy_fighter1_medium"
+texturefile = "gfx/interface/technologies/CHI_heavy_fighter1.dds"
+}
+
+SpriteType = {
+name = "GFX_CHI_heavy_fighter2_medium"
+texturefile = "gfx/interface/technologies/CHI_heavy_fighter2.dds"
+}
+
+SpriteType = {
+name = "GFX_CHI_heavy_fighter3_medium"
+texturefile = "gfx/interface/technologies/CHI_heavy_fighter3.dds"
+}
+
+
+#国军战略轰炸机_CHI strategic bomber#
+SpriteType = {
+name = "GFX_CHI_strategic_bomber1_medium"
+texturefile = "gfx/interface/technologies/CHI_strategic_bomber1.dds"
+}
+
+SpriteType = {
+name = "GFX_CHI_strategic_bomber2_medium"
+texturefile = "gfx/interface/technologies/CHI_strategic_bomber2.dds"
+}
+
+SpriteType = {
+name = "GFX_CHI_strategic_bomber3_medium"
+texturefile = "gfx/interface/technologies/CHI_strategic_bomber3.dds"
+}
+
+
+#国军喷气战略轰炸机_CHI jet strategic bomber#
+SpriteType = {
+name = "GFX_CHI_jet_strategic_bomber1_medium"
+texturefile = "gfx/interface/technologies/chi_jet_strategic_bomber1.dds"
+}
+
+
+#共军步兵武器_PRC infantry weapons#
+SpriteType = {
+name = "GFX_PRC_infantry_weapons_medium"
+texturefile = "gfx/interface/technologies/chi_infantry_equipment_0.dds"
+}
+
+SpriteType = {
+name = "GFX_PRC_infantry_weapons1_medium"
+texturefile = "gfx/interface/technologies/prc_infantry_equipment_1.dds"
+}
+
+SpriteType = {
+name = "GFX_PRC_improved_infantry_weapons_medium"
+texturefile = "gfx/interface/technologies/prc_infantry_equipment_2.dds"
+}
+
+SpriteType = {
+name = "GFX_PRC_advanced_infantry_weapons_medium"
+texturefile = "gfx/interface/technologies/prc_infantry_equipment_3.dds"
+}
+
+
+#共军摩步/机步载具_PRC motorized/mechanized vehicles#
+SpriteType = {
+name = "GFX_PRC_motorised_infantry_medium"
+texturefile = "gfx/interface/technologies/prc_motorized_equipment_1.dds"
+}
+
+SpriteType = {
+name = "GFX_PRC_motorized_equipment_1_medium"
+texturefile = "gfx/interface/technologies/prc_motorized_equipment_1.dds"
+}
+
+SpriteType = {
+name = "GFX_PRC_mechanised_infantry_medium"
+texturefile = "gfx/interface/technologies/prc_mechanized_equipment_1.dds"
+}
+
+SpriteType = {
+name = "GFX_PRC_mechanised_infantry2_medium"
+texturefile = "gfx/interface/technologies/prc_mechanized_equipment_2.dds"
+}
+
+SpriteType = {
+name = "GFX_PRC_mechanised_infantry3_medium"
+texturefile = "gfx/interface/technologies/prc_mechanized_equipment_3.dds"
+}
+
+
+
+#共军一战坦克_PRC great war tank#
+SpriteType = {
+name = "GFX_PRC_gwtank_medium"
+texturefile = "gfx/interface/technologies/PRC_gwtank.dds"
+} 
+
+
+#共军轻坦克_PRC light tank#
+SpriteType = {
+name = "GFX_PRC_basic_light_tank_medium"
+texturefile = "gfx/interface/technologies/PRC_basic_light_tank.dds"
+}
+
+SpriteType = {
+name = "GFX_PRC_improved_light_tank_medium"
+texturefile = "gfx/interface/technologies/PRC_imp_light_tank.dds"
+}
+
+SpriteType = {
+name = "GFX_PRC_advanced_light_tank_medium"
+texturefile = "gfx/interface/technologies/PRC_adv_light_tank.dds"
+}
+
+
+#共军中型坦克_PRC medium tank#
+SpriteType = {
+name = "GFX_PRC_basic_medium_tank_medium"
+texturefile = "gfx/interface/technologies/PRC_basic_main_tank.dds"
+}
+
+SpriteType = {
+name = "GFX_PRC_improved_medium_tank_medium"
+texturefile = "gfx/interface/technologies/PRC_imp_main_tank.dds"
+}
+
+SpriteType = {
+name = "GFX_PRC_advanced_medium_tank_medium"
+texturefile = "gfx/interface/technologies/PRC_adv_main_tank.dds"
+}
+
+
+#共军重型坦克_PRC heavy tank#
+SpriteType = {
+name = "GFX_PRC_basic_heavy_tank_medium"
+texturefile = "gfx/interface/technologies/PRC_basic_heavy_tank.dds"
+}
+
+SpriteType = {
+name = "GFX_PRC_improved_heavy_tank_medium"
+texturefile = "gfx/interface/technologies/PRC_imp_heavy_tank.dds"
+}
+
+SpriteType = {
+name = "GFX_PRC_advanced_heavy_tank_medium"
+texturefile = "gfx/interface/technologies/PRC_adv_heavy_tank.dds"
+}
+
+
+#共军主战坦克_PRC main battle tank#
+SpriteType = {
+name = "GFX_PRC_main_battle_tank_medium"
+texturefile = "gfx/interface/technologies/PRC_main_battle_tank.dds"
+}
+
+
+#共军超重坦克_PRC super heavy tank#
+SpriteType = {
+name = "GFX_PRC_super_heavy_tank_medium"
+texturefile = "gfx/interface/technologies/PRC_superheavy_tank.dds"
+}
+
+
+
+#晋军步兵武器_SHX infantry weapons#
+SpriteType = {
+name = "GFX_SHX_infantry_weapons_medium"
+texturefile = "gfx/interface/technologies/shx_infantry_equipment_0.dds"
+}
+
+SpriteType = {
+name = "GFX_SHX_infantry_weapons1_medium"
+texturefile = "gfx/interface/technologies/chi_infantry_equipment_1.dds"
+}
+
+SpriteType = {
+name = "GFX_SHX_improved_infantry_weapons_medium"
+texturefile = "gfx/interface/technologies/shx_infantry_equipment_2.dds"
+}
+
+SpriteType = {
+name = "GFX_SHX_advanced_infantry_weapons_medium"
+texturefile = "gfx/interface/technologies/chi_infantry_equipment_3.dds"
+}
+
+
+
+
+#桂军步兵武器_GXC infantry weapons#
+SpriteType = {
+name = "GFX_GXC_infantry_weapons_medium"
+texturefile = "gfx/interface/technologies/chi_infantry_equipment_0.dds"
+}
+
+SpriteType = {
+name = "GFX_GXC_infantry_weapons1_medium"
+texturefile = "gfx/interface/technologies/chi_infantry_equipment_1.dds"
+}
+
+SpriteType = {
+name = "GFX_GXC_improved_infantry_weapons_medium"
+texturefile = "gfx/interface/technologies/chi_infantry_equipment_2.dds"
+}
+
+SpriteType = {
+name = "GFX_GXC_advanced_infantry_weapons_medium"
+texturefile = "gfx/interface/technologies/chi_infantry_equipment_3.dds"
+}
+
+
+
+
+#滇军步兵武器_YUN infantry weapons#
+SpriteType = {
+name = "GFX_YUN_infantry_weapons_medium"
+texturefile = "gfx/interface/technologies/chi_infantry_equipment_0.dds"
+}
+
+SpriteType = {
+name = "GFX_YUN_infantry_weapons1_medium"
+texturefile = "gfx/interface/technologies/chi_infantry_equipment_1.dds"
+}
+
+SpriteType = {
+name = "GFX_YUN_improved_infantry_weapons_medium"
+texturefile = "gfx/interface/technologies/chi_infantry_equipment_2.dds"
+}
+
+SpriteType = {
+name = "GFX_YUN_advanced_infantry_weapons_medium"
+texturefile = "gfx/interface/technologies/chi_infantry_equipment_3.dds"
+}
+
+
+
+
+#马家军步兵武器_XSM infantry weapons#
+SpriteType = {
+name = "GFX_XSM_infantry_weapons_medium"
+texturefile = "gfx/interface/technologies/xsm_infantry_equipment_0.dds"
+}
+
+SpriteType = {
+name = "GFX_XSM_infantry_weapons1_medium"
+texturefile = "gfx/interface/technologies/chi_infantry_equipment_1.dds"
+}
+
+SpriteType = {
+name = "GFX_XSM_improved_infantry_weapons_medium"
+texturefile = "gfx/interface/technologies/chi_infantry_equipment_2.dds"
+}
+
+SpriteType = {
+name = "GFX_XSM_advanced_infantry_weapons_medium"
+texturefile = "gfx/interface/technologies/chi_infantry_equipment_3.dds"
+}
+
+
+
+
+
+
+
+
+
+
+}

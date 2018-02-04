@@ -1,0 +1,12 @@
+MON_whites = {
+	color = rgb { 204 204 204 }
+	color_ui = rgb { 255 255 255 }
+}
+MEN_MON = {
+	color = rgb { 0 0 0 }
+	color_ui = rgb { 255 255 255 }
+}
+SIK_sem = {
+	color = rgb { 220 20 60 }
+	color_ui = rgb { 194 59 133 }
+}

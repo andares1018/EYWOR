@@ -1,0 +1,497 @@
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+ default_CHI_unit_production = {
+        enable = {
+            tag = CHI
+        }
+
+        abort = {
+            always = no
+        }
+
+        ai_strategy = {
+            type = unit_ratio
+            id = infantry
+            value = 75 
+        }
+
+        ai_strategy = {
+            type = unit_ratio
+            id = armor
+            value = 5  
+        }
+
+        ai_strategy = {
+            type = unit_ratio
+            id = motorized
+            value = 15 
+        }
+
+        ai_strategy = {
+            type = unit_ratio
+            id = cavalry
+            value = 0        
+        }
+
+        ai_strategy = {
+            type = unit_ratio
+            id = artillery
+            value = 15       
+        }
+		
+        ai_strategy = {
+            type = unit_ratio
+            id = marines
+            value = 10 
+        }
+
+        ai_strategy = {
+            type = unit_ratio
+            id = mountaineers
+            value = 10 
+        }
+
+        ai_strategy = {
+            type = unit_ratio
+            id = paratroopers
+            value = 5 
+        }
+
+        ai_strategy = {
+            type = unit_ratio
+            id = mechanized
+            value = 15 
+        }
+		
+		ai_strategy = {
+			type = equipment_production_factor
+			id = anti_tank
+			value = 10
+		}
+	
+		ai_strategy = {
+			type = equipment_production_factor
+			id = anti_air
+			value = 5
+		}
+		
+		ai_strategy = {
+			type = equipment_production_factor
+			id = artillery
+			value = 10
+		}
+		
+	# These values are used only by when evaluating for producing factories
+	ai_strategy = {
+		type = unit_ratio
+		id = capital_ship
+		value = 4
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = submarine
+		value = 3
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = screen_ship
+		value = 5
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = convoy
+		value = 3
+	}
+	
+	ai_strategy = {
+		type = equipment_production_factor
+		id = infantry
+		value = 50
+	}
+    }
+	
+natchi_war_production = {
+    enable = {
+        tag = CHI
+    }
+    abort = {
+        date > 1940.1.1
+    }
+
+    ai_strategy = {
+        type = unit_ratio
+        id = mountaineers
+        value = -100
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = marines
+        value = 30
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = infantry
+        value = 100
+    }
+    ai_strategy = {
+        type = unit_ratio
+        id = armor
+        value = -100
+    }
+	
+    ai_strategy = {
+        type = unit_ratio
+        id = anti_tank
+        value = -100
+    }
+
+    ai_strategy = {
+        type = unit_ratio
+        id = motorized
+        value = -100
+    }
+	
+    ai_strategy = {
+        type = unit_ratio
+        id = mechanized
+        value = -100
+    }
+}
+	
+	chi_armor_production = {
+	enable = {
+		tag = CHI
+		num_of_military_factories > 80
+	}
+	abort = {
+		num_of_military_factories < 79
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = armor
+		value = 10
+	}
+	
+	ai_strategy = {
+		type = unit_ratio
+		id = mechanized
+		value = 10
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = infantry
+		value = -20
+	}
+}
+
+
+slightly_naval_focused_chi = {
+	enable = {
+			tag = CHI
+
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = capital_ship
+		value = 1
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = submarine
+		value = -2
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = screen_ship
+		value = 50
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = convoy
+		value = 3
+	}
+	
+	ai_strategy = {
+		type = unit_ratio
+		id = carrier
+		value = 1
+	}
+}
+
+more_naval_focused_chi = {
+	enable = {
+			tag = CHI
+		date > "1940.1.1"
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = capital_ship
+		value = 2
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = submarine
+		value = -1
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = screen_ship
+		value = 5
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = convoy
+		value = 1
+	}
+	
+	ai_strategy = {
+		type = unit_ratio
+		id = carrier
+		value = 1
+	}
+}
+
+chi_jap_war = {
+	enable = {
+		tag = CHI
+		has_completed_focus = chi_fight_focus
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = JAP }
+		}
+	}
+	
+	ai_strategy = {
+		type = garrison
+		id = "JAP"
+		value = 500
+	}
+	ai_strategy = {
+		type = garrison
+		id = "MAN"
+		value = 500
+	}
+	ai_strategy = {
+		type = garrison
+		id = "HPC"
+		value = 500
+	}
+}
+
+fuck_comintern_mao_do_it_alone = {
+	enable = {
+		tag = PRC
+		has_war_with = CHI
+	}
+	abort = {
+		AND = {
+			NOT = { has_war_with = CHI }	
+			owns_state = 598
+		}
+	}
+	
+	ai_strategy = {
+		type = alliance
+		id = "SOV"
+		value = -500
+	}
+}
+
+ger_actually_love_china = {
+	enable = {
+		tag = GER
+		OR = {
+			JAP = {
+				has_war_with = CHI
+			}
+			JAP = {
+				has_war_with = PRC
+			}
+			JAP = {
+				has_war_with = XSM
+			}
+			JAP = {
+				has_war_with = SHX
+			}
+			JAP = {
+				has_war_with = GXC
+			}
+			JAP = {
+				has_war_with = YUN
+			}
+		}
+	}
+	abort = {
+		OR = {
+			NOT = { has_idea = german_advisors }
+			JAP = { has_war_with = ENG }
+			NOT = {
+				country_exists = CHI
+				country_exists = PRC
+				country_exists = GXC
+				country_exists = XSM
+				country_exists = YUN
+				country_exists = SHX
+			}
+			has_war_with = CHI
+			has_war_with = PRC
+			has_war_with = XSM
+			has_war_with = GXC
+			has_war_with = SHX
+			has_war_with = YUN
+		}
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "CHI"
+		value = 50
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "CHI"
+		value = -100
+	}
+	
+	ai_strategy = {
+		type = conquer
+		id = "CHI"
+		value = -150
+	}
+}
+
+dont_die_in_mountains_sweden = {
+	enable = {
+		tag = GER
+		date < 1942.5.1
+		country_exists = SWE
+		country_exists = FRA
+	}
+	abort = {
+		NOT = { country_exists = FRA }
+		date > 1942.5.1
+	}
+	
+	ai_strategy = {
+		type = ignore
+		id = "SWE"
+		value = 100
+	}
+}
+
+zhang_hate_chiang = {
+	enable = {
+		tag = NEA
+		#has_war_with = CHI
+	}
+	abort = {
+		NOT = { country_exists = PRC }
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "CHI"
+		value = 2000
+	}
+}
+CCP_tacit_truce = {
+	enable = {
+		tag = PRC
+		has_war_with = NEA
+		has_global_flag = tacit_truce_flag
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = NEA }
+			NOT = { country_exists = CHI }
+			has_opinion_modifier = chi_prc_reconciliation
+			JAP = {
+				has_completed_focus = chinese_war_focus
+				NOT = {
+					has_war_with = CHI
+				}
+			}
+		}
+	}
+	ai_strategy = {
+		type = ignore
+		id = "CHI"
+		value = 2000
+	}
+	ai_strategy = {
+		type = ignore
+		id = "NEA"
+		value = 2000
+	}
+}
+NEA_tacit_truce = {
+	enable = {
+		tag = NEA
+		has_war_with = PRC
+		has_global_flag = tacit_truce_flag
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = PRC }
+			NOT = { country_exists = CHI }
+			PRC = {
+				has_opinion_modifier = chi_prc_reconciliation
+			}
+			JAP = {
+				has_completed_focus = chinese_war_focus
+				NOT = {
+					has_war_with = CHI
+				}
+			}
+		}
+	}
+	ai_strategy = {
+		type = ignore
+		id = "PRC"
+		value = 2000
+	}
+}
+sheng_hate_tng_and_hmi = {
+	enable = {
+		tag = SIK
+		#has_war_with = CHI
+	}
+	abort = {
+		NOT = { country_exists = TNG }
+		NOT = { country_exists = HMI }
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "HMI"
+		value = 2000
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "TNG"
+		value = 2000
+	}
+}

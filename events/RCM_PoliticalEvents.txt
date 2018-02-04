@@ -1,0 +1,815 @@
+﻿###########################
+# Political Events
+###########################
+
+add_namespace = rcmpolitical
+
+#####CDL####
+country_event = {
+	id = rcmpolitical.29
+	title = rcmpolitical.29.t
+	desc = rcmpolitical.29.d
+	picture = GFX_report_event_gathering_protest
+
+	trigger = {
+		tag = CHI
+		#NOT = { has_war_with = JAP }
+		#has_global_flag = china_split
+		NOT = { has_government = communism }
+		NOT = { 
+			OR = {
+				has_completed_focus = zhang_lan_doctrine
+				has_completed_focus = qixiang_doctrine
+			}
+		}
+		n_socialism > 0.33
+	}
+	fire_only_once = yes
+	immediate = {
+		hidden_effect = { set_country_flag = dongsun_to_cdl }
+	}
+	mean_time_to_happen = {
+		days = 10
+	}
+
+	option = { #cdl outlawed
+		name = rcmpolitical.29.a
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes 
+			}
+		}
+		add_political_power = 50
+		add_national_unity = -0.20
+		add_popularity = {
+			ideology = n_socialism
+			popularity = -1
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.1
+		}
+		set_country_flag = cdl_outlawed
+		clr_country_flag = cdl_founded
+		clr_country_flag = zhang_bojun_available
+		remove_ideas = pro_com_demo
+		hidden_effect = { add_ideas = zhang_bojun }
+		remove_ideas = zhang_bojun
+		remove_ideas = zhang_dongsun
+		hidden_effect = {
+			PRC = { 
+				add_political_power = 200
+				add_national_unity = 0.10
+				set_political_party = { ideology = n_socialism popularity = 0.3 }
+				add_ideas = zhang_bojun
+				country_event = { id = prc.3 }
+			}
+		}
+	}
+	option = {
+		name = rcmpolitical.29.b
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes 
+			}
+		}
+		if = {
+			limit = { has_government = fascism }
+			add_timed_idea = { idea = fascism_defeated days = 730 }
+		}
+		set_politics = {
+			ruling_party = n_socialism
+			elections_allowed = yes
+		}
+		remove_ideas = pro_com_demo
+		clr_country_flag = cdl_founded
+		add_opinion_modifier = { target = PRC modifier = communist_sympathizer }
+		PRC = { add_opinion_modifier = { target = CHI modifier = communist_sympathizer } }
+		effect_tooltip = {
+			if = {
+				limit = { has_war_with = SOV }
+			white_peace = SOV		
+			}
+			white_peace = PRC
+			diplomatic_relation = { country = PRC relation = non_aggression_pact }
+		}
+		hidden_effect = {	
+			PRC = { country_event = { id = prc.4 } }
+		}	
+		add_national_unity = -0.05
+	}
+
+}
+####################
+###socialism
+##############################
+# Socialism on the Rise
+country_event = {
+	id = rcmpolitical.30
+	title = rcmpolitical.30.t
+	desc = rcmpolitical.30.d
+	picture = GFX_report_event_worker_protests
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_government = n_socialism }
+		AND = { NOT = { has_idea = chiang } NOT = { has_idea = chiang1 } NOT = { has_idea = chiang2 } NOT = { has_idea = chiang3 } }
+		NOT = { tag = FRA }
+		NOT = { tag = ENG }
+		OR = {
+			AND = {
+				tag = JAP
+				has_idea_with_trait = socialist_idealist
+			}
+			NOT = { tag = JAP }
+		}
+	}
+	
+	# Seek government support
+	option = {
+		name = rcmpolitical.30.a
+		trigger = {
+			AND = { NOT = { has_idea = chiang } NOT = { has_idea = chiang1 } NOT = { has_idea = chiang2 } NOT = { has_idea = chiang3 } }
+		}
+		custom_effect_tooltip = rcmpolitical.30.a.tt
+		clr_country_flag = socialism_popular_movement
+		set_country_flag = socialism_political_movement
+	}
+
+	# Seek popular support
+	option = {
+		name = rcmpolitical.30.b
+		custom_effect_tooltip = rcmpolitical.30.b.tt
+		clr_country_flag = socialism_political_movement
+		clr_country_flag = socialism_government_support
+		set_country_flag = socialism_popular_movement
+	}
+}
+
+# socialist Sympathies in Government
+country_event = {
+	id = rcmpolitical.31
+	title = rcmpolitical.31.t
+	desc = {
+		trigger = { NOT = { has_government = communism } }
+		text = rcmpolitical.31.d
+	}
+	desc = {
+		trigger = { has_government = communism } 
+		text = rcmpolitical.31.d_com
+	}
+	picture = GFX_report_event_worker_protests
+
+	trigger = {
+		has_idea_with_trait = socialist_idealist
+		NOT = { has_government = n_socialism }
+		NOT = { has_country_flag = socialism_government_support }
+	}
+	
+	mean_time_to_happen = {
+		days = 500
+		modifier = {
+			factor = 0.5
+			has_country_flag = socialism_political_movement
+		}
+	}
+	
+	option = {
+		name = rcmpolitical.31.a
+		
+		clr_country_flag = socialism_political_movement
+		set_country_flag = socialism_government_support
+	}
+}
+
+#socialist opposition formed
+country_event = {
+	id = rcmpolitical.32
+	title = rcmpolitical.32.t
+	desc = rcmpolitical.32.d
+	picture = GFX_report_event_gathering_protest
+	
+	trigger = {
+		has_idea_with_trait = socialist_idealist
+		NOT = { has_government = n_socialism }
+		NOT = { has_country_flag = socialism_opposition_formed }
+		has_country_flag = socialism_government_support
+		n_socialism > 0.2
+		is_puppet = no
+		AND = { NOT = { has_idea = chiang } NOT = { has_idea = chiang1 } NOT = { has_idea = chiang2 } NOT = { has_idea = chiang3 } }
+	}
+
+	mean_time_to_happen = {
+		days = 100
+		modifier = {
+			factor = 0.5
+			n_socialism > 0.5
+		}
+	}
+
+	immediate = {
+		hidden_effect = { 
+			remove_ideas = socialist_revolutionaries 
+			set_country_flag = socialism_opposition_formed
+		}
+	}
+	
+	option = {
+		name = rcmpolitical.32.a
+		trigger = { NOT = { has_government = communism } }
+		add_popularity = {
+			ideology = n_socialism
+			popularity = 0.10
+		}
+		add_national_unity = -0.02
+		set_country_flag = democratic_approach
+		custom_effect_tooltip = rcmpolitical.32.a.tt
+	}
+	option = {
+		name = rcmpolitical.32.b
+		trigger = { NOT = { tag = FRA } NOT = { tag = ENG } }
+		add_popularity = {
+			ideology = n_socialism
+			popularity = 0.20
+		}
+		add_national_unity = -0.10
+		set_country_flag = revolutionary_approach
+		custom_effect_tooltip = rcmpolitical.32.b.tt
+		custom_effect_tooltip = rcmpolitical.32.b.tt2
+	}
+}
+
+
+# Public Call for Elections
+country_event = {
+	id = rcmpolitical.33
+	title = { 
+		trigger = { NOT = { has_government = democratic } }
+		text = rcmpolitical.33.t
+	}
+	title = { 
+		trigger = { has_government = democratic }
+		text = rcmpolitical.33.t_demo
+	}
+	desc = rcmpolitical.33.d
+	picture = GFX_report_event_election_vote
+	
+	trigger = {
+		has_idea_with_trait = socialist_idealist
+		NOT = { has_government = n_socialism }
+		NOT = { has_government = communism }
+		has_country_flag = socialism_opposition_formed
+		has_country_flag = democratic_approach
+		NOT = { has_idea = socialist_opposition_voicing_protests }
+	}
+	
+	mean_time_to_happen = {
+		days = 150
+	}
+	
+	option = {
+		name = rcmpolitical.33.a
+		add_political_power = -20
+		add_popularity = {
+			ideology = n_socialism
+			popularity = -0.05
+		}
+	}
+	option = {
+		name = rcmpolitical.33.b
+		add_political_power = -20
+		add_ideas = socialist_opposition_voicing_protests
+	}
+}
+
+country_event = {
+	id = rcmpolitical.34
+	title = { 
+		trigger = { NOT = { has_government = democratic } }
+		text = rcmpolitical.34.t
+	}
+	title = { 
+		trigger = { has_government = democratic }
+		text = rcmpolitical.34.t_demo
+	}
+	desc = { 
+		trigger = { NOT = { has_government = democratic } }
+		text = rcmpolitical.34.d
+	}
+	desc = { 
+		trigger = { has_government = democratic }
+		text = rcmpolitical.34.d_demo
+	}
+	picture = GFX_report_event_election_vote
+	
+	trigger = {
+		has_idea_with_trait = socialist_idealist
+		NOT = { has_government = n_socialism }
+		NOT = { has_government = communism }
+		has_country_flag = democratic_approach
+		n_socialism > 0.5
+		has_country_flag = socialism_government_support
+		is_puppet = no
+		AND = { NOT = { has_idea = chiang } NOT = { has_idea = chiang1 } NOT = { has_idea = chiang2 } NOT = { has_idea = chiang3 } }
+	}
+	
+	mean_time_to_happen = {
+		days = 200
+	}
+	
+	option = {
+		name = rcmpolitical.34.a
+		if = {
+			limit = { has_government = fascism }
+			add_timed_idea = { idea = fascism_defeated days = 730 }
+		}
+		if = {
+			limit = { has_government = communism }
+			add_timed_idea = { idea = communism_defeated days = 730 }
+		}
+		set_politics = {
+			ruling_party = n_socialism
+			election_frequency = 48
+			elections_allowed = yes
+		}
+		hold_election = ROOT
+		remove_ideas = socialist_revolutionaries
+	}
+	option = {
+		name = rcmpolitical.34.b
+	}
+}
+###coup
+country_event = {
+	id = rcmpolitical.35
+	title = rcmpolitical.35.t
+	desc = rcmpolitical.35.d
+	picture = GFX_report_event_gathering_protest
+	
+	trigger = {
+		has_idea_with_trait = socialist_idealist
+		NOT = { has_government = n_socialism }
+		has_country_flag = socialism_government_support
+		has_country_flag = revolutionary_approach
+		n_socialism > 0.4
+		is_major = no
+		is_puppet = no
+		AND = { NOT = { has_idea = chiang } NOT = { has_idea = chiang1 } NOT = { has_idea = chiang2 } NOT = { has_idea = chiang3 } }
+	}
+
+	mean_time_to_happen = {
+		days = 100
+		modifier = {
+			factor = 0.5
+			n_socialism > 0.5
+		}
+	}
+	
+	option = {
+		name = rcmpolitical.35.a
+		set_politics = {
+			ruling_party = n_socialism
+			elections_allowed = no
+		}
+		add_timed_idea = { idea = reign_of_terror days = 300 }
+		remove_ideas = socialist_revolutionaries
+	}
+	option = {
+		name = rcmpolitical.35.b
+		add_political_power = -250
+		add_popularity = {
+			ideology = n_socialism
+			popularity = -0.05
+		}
+		add_national_unity = -0.25
+	}
+}
+
+# Class Conflicts Divide [Root.GetName]
+country_event = {
+	id = rcmpolitical.36
+	title = rcmpolitical.36.t
+	desc = rcmpolitical.36.d
+	picture = GFX_report_event_gathering_protest
+	
+	trigger = {
+		has_idea_with_trait = socialist_idealist
+		NOT = { has_government = n_socialism }
+		NOT = { has_government = communism }
+		n_socialism > 0.2
+	}
+
+	mean_time_to_happen = {
+		days = 365
+		modifier = {
+			factor = 0.5
+			has_country_flag = socialism_popular_movement
+		}
+	}
+	
+	option = {
+		name = rcmpolitical.36.a
+		add_popularity = {
+			ideology = n_socialism
+			popularity = 0.10
+		}
+		add_national_unity = -0.02
+	}
+}
+
+country_event = {
+	id = rcmpolitical.37
+	title = rcmpolitical.37.t
+	desc = rcmpolitical.37.d
+	picture = GFX_report_event_desertion_poster
+	
+	trigger = {
+		has_idea_with_trait = socialist_idealist
+		has_country_flag = revolutionary_approach
+		NOT = { has_government = n_socialism }
+		n_socialism > 0.25
+		NOT = { has_idea = socialist_partisans_recruiting }
+	}
+
+	mean_time_to_happen = {
+		days = 365
+		modifier = {
+			factor = 0.5
+			has_country_flag = socialism_popular_movement
+		}
+	}
+	
+	option = {
+		name = rcmpolitical.37.a
+		add_popularity = {
+			ideology = n_socialism
+			popularity = 0.10
+		}
+		add_ideas = socialist_partisans_recruiting
+	}
+}
+
+# The [Month] Revolution
+country_event = {
+	id = rcmpolitical.38
+	title = rcmpolitical.38.t
+	desc = rcmpolitical.38.d
+	picture = GFX_report_event_gathering_protest
+	
+	trigger = {
+		has_idea_with_trait = socialist_idealist
+		has_country_flag = revolutionary_approach
+		NOT = { has_government = n_socialism }
+		n_socialism > 0.4
+		AND = { NOT = { has_idea = chiang } NOT = { has_idea = chiang1 } NOT = { has_idea = chiang2 } NOT = { has_idea = chiang3 } }
+	}
+
+	mean_time_to_happen = {
+		days = 365
+		modifier = {
+			factor = 0.75
+			has_country_flag = socialism_popular_movement
+		}
+	}
+	
+	option = {
+		name = rcmpolitical.38.a
+		if = {
+			limit = {
+				has_government = democratic
+			}
+			start_civil_war = {
+				ruling_party = n_socialism
+				ideology = democratic
+				size = 0.6
+			}
+		}
+		if = {
+			limit = {
+				has_government = fascism
+			}
+			start_civil_war = {
+				ruling_party = n_socialism
+				ideology = fascism
+				size = 0.6
+			}
+		}
+		if = {
+			limit = {
+				has_government = communism
+			}
+			start_civil_war = {
+				ruling_party = n_socialism
+				ideology = communism
+				size = 0.6
+			}
+		}
+		if = {
+			limit = {
+				has_government = neutrality
+			}
+			start_civil_war = {
+				ruling_party = n_socialism
+				ideology = neutrality
+				size = 0.6
+			}
+		}
+		#add_timed_idea = { idea = reign_of_terror days = 730 }
+		remove_ideas = socialist_revolutionaries
+	}
+	option = {
+		name = rcmpolitical.38.b
+	}
+}
+
+# rcmpolitical.39 socialism >50
+
+country_event = {
+	id = rcmpolitical.39
+	title = rcmpolitical.39.t
+	desc = rcmpolitical.39.d
+	picture = GFX_report_event_journalists_speech
+
+	trigger = {
+		n_socialism > 0.5
+		NOT = { has_government = n_socialism }
+		NOT = { has_idea = socialist_revolutionaries }
+		NOT = { has_idea = reign_of_terror }
+		is_puppet = no
+		AND = { NOT = { has_idea = chiang } NOT = { has_idea = chiang1 } NOT = { has_idea = chiang2 } NOT = { has_idea = chiang3 } }
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	option = {
+		name = rcmpolitical.39.a
+		add_political_power = -100
+		trigger = { NOT = { has_government = democratic } }
+		add_popularity = {
+			ideology = n_socialism
+			popularity = -0.10
+		}
+		add_timed_idea = {
+			idea = socialist_revolutionaries
+			days = 365
+		}
+	}
+
+	option = {
+		name = rcmpolitical.39.b
+		trigger = { NOT = { has_government = democratic } }
+		add_timed_idea = {
+			idea = socialist_revolutionaries
+			days = 365
+		}
+	}
+
+	option = {
+		name = rcmpolitical.39.c
+		if = {
+			limit = { has_government = fascism }
+			add_timed_idea = { idea = fascism_defeated days = 730 }
+		}
+		if = {
+			limit = { has_government = communism }
+			add_timed_idea = { idea = communism_defeated days = 730 }
+		}
+		if = {
+			limit = { has_country_flag = democratic_approach }
+			set_politics = {
+				ruling_party = n_socialism
+				elections_allowed = yes
+			}
+		}
+		if = {
+			limit = { NOT = { has_country_flag = democratic_approach } }
+			set_politics = {
+				ruling_party = n_socialism
+				elections_allowed = no
+			}
+		}
+		add_national_unity = -0.05
+	}
+}
+###revo
+country_event = {
+	id = rcmpolitical.40
+	title = rcmpolitical.40.t
+	desc = rcmpolitical.40.d
+	picture = GFX_report_event_gathering_protest
+
+	trigger = {
+		n_socialism > 0.7
+		has_idea = socialist_revolutionaries
+		#Special case CHI PRC
+		AND = { NOT = { has_idea = chiang } NOT = { has_idea = chiang1 } NOT = { has_idea = chiang2 } NOT = { has_idea = chiang3 } }
+	}
+
+	mean_time_to_happen = {
+		days = 2
+	}
+
+	immediate = {
+		hidden_effect = { remove_ideas = socialist_revolutionaries }
+	}
+
+	option = {
+		name = rcmpolitical.40.a
+		start_civil_war = {
+			ideology = n_socialism
+			size = 0.5
+		}
+	}
+
+	option = {
+		name = rcmpolitical.40.b
+		if = {
+			limit = {
+				has_government = neutrality
+			}
+			start_civil_war = {
+				ruling_party = n_socialism
+				ideology = neutrality
+				size = 0.5
+			}
+		}
+		if = {
+			limit = {
+				has_government = fascism
+			}
+			add_timed_idea = { idea = fascism_defeated days = 730 }			
+			start_civil_war = {
+				ruling_party = n_socialism
+				ideology = fascism
+				size = 0.5
+			}
+		}
+		if = {
+			limit = {
+				has_government = communism
+			}
+			add_timed_idea = { idea = communism_defeated days = 730 }
+			start_civil_war = {
+				ruling_party = n_socialism
+				ideology = communism
+				size = 0.5
+			}
+		}
+		if = {
+			limit = {
+				has_government = democratic
+			}
+			start_civil_war = {
+				ruling_party = n_socialism
+				ideology = democratic
+				size = 0.5
+			}
+		}
+	}
+}
+
+###suppressed
+# rcmpolitical.41 socialism
+country_event = {
+	id = rcmpolitical.41
+	title = rcmpolitical.41.t
+	desc = rcmpolitical.41.d
+	picture = GFX_report_event_europe_funeral
+
+	trigger = {
+		n_socialism < 0.3
+		has_idea = socialist_revolutionaries
+	}
+
+	mean_time_to_happen = {
+		days = 2
+	}
+
+	option = {
+		name = rcmpolitical.41.a
+		remove_ideas = socialist_revolutionaries
+	}
+}
+
+# socialist_like_commies
+country_event = {
+	id = rcmpolitical.42
+	hidden = yes
+	trigger = {
+		has_government = n_socialism
+		NOT = { has_idea = socialist_like_commies }
+	}
+	immediate = {
+		add_ideas = socialist_like_commies
+	}
+	option = {
+	}
+}
+# no longer socialist_like_commies
+country_event = {
+	id = rcmpolitical.43
+	hidden = yes
+	trigger = {
+		NOT = { has_government = n_socialism }
+		has_idea = socialist_like_commies
+	}
+	mean_time_to_happen = {
+		days = 5
+	}
+	immediate = {
+		remove_ideas = socialist_like_commies
+	}
+	option = {
+	}
+}
+# commies_like_socialist
+country_event = {
+	id = rcmpolitical.44
+	hidden = yes
+	trigger = {
+		has_government = communism
+		NOT = { has_idea = commies_like_socialist }
+	}
+	immediate = {
+		add_ideas = commies_like_socialist
+	}
+	option = {
+	}
+}
+# no longer commies_like_socialist
+country_event = {
+	id = rcmpolitical.45
+	hidden = yes
+	trigger = {
+		NOT = { has_government = communism }
+		has_idea = commies_like_socialist
+	}
+	immediate = {
+		remove_ideas = commies_like_socialist
+	}
+	option = {
+	}
+}
+# democratic_dont_hate_socialist
+country_event = {
+	id = rcmpolitical.46
+	hidden = yes
+	trigger = {
+		has_government = democratic
+		NOT = { has_idea = democratic_dont_hate_socialist }
+	}
+	immediate = {
+		add_ideas = democratic_dont_hate_socialist
+	}
+	option = {
+	}
+}
+# no longer democratic_dont_hate_socialist
+country_event = {
+	id = rcmpolitical.47
+	hidden = yes
+	trigger = {
+		NOT = { has_government = democratic }
+		has_idea = democratic_dont_hate_socialist
+	}
+	immediate = {
+		remove_ideas = democratic_dont_hate_socialist
+	}
+	option = {
+	}
+}
+# socialist_dont_hate_democratic
+country_event = {
+	id = rcmpolitical.48
+	hidden = yes
+	trigger = {
+		has_government = n_socialism
+		NOT = { has_idea = socialist_dont_hate_democratic }
+	}
+	immediate = {
+		add_ideas = socialist_dont_hate_democratic
+	}
+	option = {
+	}
+}
+# no longer socialist_dont_hate_democratic
+country_event = {
+	id = rcmpolitical.49
+	hidden = yes
+	trigger = {
+		NOT = { has_government = n_socialism }
+		has_idea = socialist_dont_hate_democratic
+	}
+	immediate = {
+		remove_ideas = socialist_dont_hate_democratic
+	}
+	option = {
+	}
+}

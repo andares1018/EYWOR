@@ -1,0 +1,1248 @@
+﻿###########################
+# News Events
+###########################
+
+add_namespace = efm_news
+
+#226
+news_event = {
+	id = efm_news.1000
+	title = efm_news.1000.t
+	desc = efm_news.1001.d
+	picture = GFX_news_event_226
+	major = yes
+
+	is_triggered_only = yes
+	option = {
+		name = efm_news.1000.b
+	}
+}
+news_event = {
+	id = efm_news.1001
+	title = efm_news.1001.t
+	desc = efm_news.1001.d
+	picture = GFX_news_event_226
+	major = yes
+
+	is_triggered_only = yes
+	option = {
+		name = efm_news.1000.b
+	}
+}
+news_event = {
+	id = efm_news.1002
+	title = efm_news.1002.t
+	desc = efm_news.1002.d
+	picture = GFX_news_event_lushan_speech
+	major = yes
+
+	is_triggered_only = yes
+	option = {
+		name = efm_news.1002.a
+		trigger = { 
+			NOT = {
+				TAG = JAP
+				TAG = CHI
+			}
+		}
+	}
+	option = {
+		name = efm_news.1002.b
+		trigger = { TAG = CHI }
+	}
+	option = {
+		name = efm_news.1002.c
+		trigger = { TAG = JAP }
+	}
+}
+
+#Trautmann mediation Fail
+news_event = {
+	id = efm_news.1003
+	title = efm_news.1003.t
+	desc = efm_news.1003.d
+	picture = GFX_news_event_trautmann_mediation
+	major = yes
+
+	is_triggered_only = yes
+	option = {
+		name = efm_news.1003.a
+		trigger = { 
+			NOT = {
+				TAG = JAP
+				TAG = CHI
+				TAG = GER
+			}
+		}
+	}
+	option = {
+		name = efm_news.1003.b
+		trigger = { TAG = CHI }
+	}
+	option = {
+		name = efm_news.1003.c
+		trigger = { TAG = JAP }
+	}
+	option = {
+		name = efm_news.1003.e
+		trigger = { TAG = GER }
+	}
+}
+
+#Trautmann mediation success
+news_event = {
+	id = efm_news.1004
+	title = efm_news.1004.t
+	desc = efm_news.1004.d
+	picture = GFX_news_event_trautmann_mediation
+	major = yes
+
+	is_triggered_only = yes
+	option = {
+		name = efm_news.1004.a
+		trigger = { 
+			NOT = {
+				TAG = JAP
+				TAG = CHI
+				TAG = GER
+			}
+		}
+	}
+	option = {
+		name = efm_news.1004.b
+		trigger = { TAG = CHI }
+	}
+	option = {
+		name = efm_news.1004.c
+		trigger = { TAG = JAP }
+	}
+	option = {
+		name = efm_news.1004.e
+		trigger = { TAG = GER }
+	}
+}
+
+#Trautmann mediation China become puppet
+news_event = {
+	id = efm_news.1005
+	title = efm_news.1005.t
+	desc = efm_news.1005.d
+	picture = GFX_news_event_trautmann_mediation
+	major = yes
+
+	is_triggered_only = yes
+	option = {
+		name = efm_news.1004.a
+		trigger = { 
+			NOT = {
+				TAG = JAP
+				TAG = CHI
+				TAG = GER
+			}
+		}
+	}
+	option = {
+		name = efm_news.1005.b
+		trigger = { TAG = CHI }
+	}
+	option = {
+		name = efm_news.1005.c
+		trigger = { TAG = JAP }
+	}
+	option = {
+		name = efm_news.1005.e
+		trigger = { TAG = GER }
+	}
+}
+
+#China transfer capital
+news_event = {
+	id = efm_news.1006
+	title = efm_news.1006.t
+	desc = efm_news.1006.d
+	picture = GFX_news_event_china_transfer_capital
+	major = yes
+
+	is_triggered_only = yes
+	option = {
+		name = efm_news.1006.a
+		trigger = { 
+			NOT = {
+				TAG = JAP
+				TAG = CHI
+			}
+		}
+	}
+	option = {
+		name = efm_news.1006.b
+		trigger = { TAG = CHI }
+	}
+	option = {
+		name = efm_news.1006.c
+		trigger = { TAG = JAP }
+	}
+}
+
+#China the curve saves the nation
+news_event = {
+	id = efm_news.1007
+	title = efm_news.1007.t
+	desc = efm_news.1007.d
+	picture = GFX_news_event_018
+	major = yes
+
+	is_triggered_only = yes
+	option = {
+		name = efm_news.1007.a
+		trigger = { 
+			NOT = {
+				TAG = JAP
+				TAG = CHI
+			}
+		}
+	}
+	option = {
+		name = efm_news.1007.b
+		trigger = { TAG = CHI }
+	}
+	option = {
+		name = efm_news.1007.c
+		trigger = { TAG = JAP }
+	}
+}
+
+#China grand coalition
+news_event = {
+	id = efm_news.1008
+	title = efm_news.1008.t
+	desc = efm_news.1008.d
+	picture = GFX_news_event_Mao_and_Chiang
+	major = yes
+
+	is_triggered_only = yes
+	option = {
+		name = efm_news.1008.a
+		trigger = { 
+			NOT = {
+				TAG = PRC
+				TAG = CHI
+			}
+		}
+	}
+	option = {
+		name = efm_news.1008.b
+		trigger = { TAG = CHI }
+	}
+	option = {
+		name = efm_news.1008.c
+		trigger = { TAG = PRC }
+	}
+}
+
+#Guangdong and Guangxi conflict with China
+news_event = {
+	id = efm_news.1009
+	title = efm_news.1009.t
+	desc = efm_news.1009.d
+	picture = GFX_news_event_Guangdong_and_Guangxi
+	major = yes
+
+	is_triggered_only = yes
+	option = {
+		name = efm_news.1009.a
+		trigger = { 
+			NOT = {
+				TAG = GXC
+				TAG = GUD
+				TAG = CHI
+			}
+		}
+	}
+	option = {
+		name = efm_news.1009.b
+		trigger = { TAG = CHI }
+	}
+	option = {
+		name = efm_news.1009.c
+		trigger = { TAG = GXC }
+	}
+	option = {
+		name = efm_news.1009.e
+		trigger = { TAG = GUD }
+	}
+}
+
+news_event = {
+	id = efm_news.1010
+	title = efm_news.1010.t
+	desc = efm_news.1010.d
+	picture = GFX_news_event_Guangdong_and_Guangxi
+	major = yes
+
+	is_triggered_only = yes
+	option = {
+		name = efm_news.1010.a
+		trigger = { 
+			NOT = {
+				TAG = GXC
+				TAG = GUD
+				TAG = CHI
+			}
+		}
+	}
+	option = {
+		name = efm_news.1010.b
+		trigger = { TAG = CHI }
+	}
+	option = {
+		name = efm_news.1010.c
+		trigger = { TAG = GXC }
+	}
+	option = {
+		name = efm_news.1010.e
+		trigger = { TAG = GUD }
+	}
+}
+
+#Big East Asia Speech
+news_event = {
+	id = efm_news.1011
+	title = efm_news.1011.t
+	desc = efm_news.1011.d
+	picture = GFX_news_event_big_east_asia_speech
+	major = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_global_flag = big_east_asia_speech
+	}
+	
+	option = {
+		name = efm_news.1011.a
+		trigger = { 
+			NOT = {
+				TAG = CHI
+				TAG = JAP
+			}
+		}
+	}
+	option = {
+		name = efm_news.1011.b
+		trigger = { TAG = CHI }
+	}
+	option = {
+		name = efm_news.1011.c
+		trigger = { TAG = JAP }
+	}
+}
+
+#Wang Join Japan
+news_event = {
+	id = efm_news.1012
+	title = efm_news.1012.t
+	desc = efm_news.1012.d
+	picture = GFX_news_event_wang_join_japan
+	major = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		set_global_flag = wang_join_japan_faction
+	}
+	
+	option = {
+		name = efm_news.1012.a
+		trigger = { 
+			NOT = {
+				TAG = CHI
+				TAG = JAP
+				TAG = PRC
+			}
+		}
+	}
+	option = {
+		name = efm_news.1012.b
+		trigger = { TAG = CHI }
+	}
+	option = {
+		name = efm_news.1012.c
+		trigger = { TAG = JAP }
+	}
+	option = {
+		name = efm_news.1012.e
+		trigger = { TAG = PRC }
+	}
+}
+#New Reorganized National Government
+news_event = {
+	id = efm_news.1013
+	title = efm_news.1013.t
+	desc = efm_news.1013.d
+	picture = GFX_news_event_new_reorganized_national_government
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = efm_news.1013.a
+		trigger = { 
+			NOT = {
+				TAG = CHI
+				TAG = JAP
+				#TAG = CNJ
+				AND = {
+				has_war_together_with = CHI
+				has_war_with = JAP
+				}
+			}
+		}
+	}
+	option = {
+		name = efm_news.1013.b
+		trigger = { 
+			OR = {
+				TAG = CHI
+				AND = {
+				has_war_together_with = CHI
+				has_war_with = JAP
+				}
+			}
+		}
+	}
+	option = {
+		name = efm_news.1013.c
+		trigger = { TAG = JAP }
+	}
+	#option = {
+	#	name = efm_news.1013.e
+	#	trigger = { TAG = CNJ }
+	#	}
+}
+
+#Xi'an Incident - Reach an agreement
+news_event = {
+	id = efm_news.1014
+	title = efm_news.1014.t
+	desc = efm_news.1014.d
+	picture = GFX_news_event_Xian_Incident_1
+	major = yes
+
+	is_triggered_only = yes
+	option = {
+		name = efm_news.1014.a
+		trigger = { 
+			NOT = {
+				TAG = CHI
+				is_warlord = yes
+				TAG = PRC
+				TAG = JAP
+				TAG = SOV
+			}
+		}
+	}
+	option = {
+		name = efm_news.1014.b
+		trigger = {
+				TAG = CHI
+				is_warlord = yes
+		}
+	}
+	option = {
+		name = efm_news.1014.c
+		trigger = { TAG = PRC }
+	}
+	option = {
+		name = efm_news.1014.e
+		trigger = { TAG = JAP }
+	}
+	option = {
+		name = efm_news.1014.f
+		trigger = { TAG = SOV }
+	}
+}
+#Xi'an Incident - Impasse
+news_event = {
+	id = efm_news.1015
+	title = efm_news.1015.t
+	desc = efm_news.1015.d
+	picture = GFX_news_event_Xian_Incident_2
+	major = yes
+
+	is_triggered_only = yes
+	option = {
+		name = efm_news.1015.a
+		trigger = { 
+			NOT = {
+				TAG = CHI
+				TAG = GXC
+				TAG = SHX
+				TAG = YUN
+				TAG = XSM
+				TAG = SIK
+				TAG = GUD
+				TAG = SIC
+				TAG = HPC
+				TAG = SHD
+				TAG = PRC
+				TAG = JAP
+				TAG = SOV
+			}
+		}
+	}
+	option = {
+		name = efm_news.1015.b
+		trigger = {
+				TAG = CHI
+				TAG = GXC
+				TAG = SHX
+				TAG = YUN
+				TAG = XSM
+				TAG = SIK
+				TAG = GUD
+				TAG = SIC
+				TAG = HPC
+				TAG = SHD
+		}
+	}
+	option = {
+		name = efm_news.1015.c
+		trigger = { TAG = PRC }
+	}
+	option = {
+		name = efm_news.1015.e
+		trigger = { TAG = JAP }
+	}
+	option = {
+		name = efm_news.1015.f
+		trigger = { TAG = SOV }
+	}
+}
+#Xi'an Incident - Chiang Kai-shek has died
+news_event = {
+	id = efm_news.1016
+	title = efm_news.1016.t
+	desc = efm_news.1016.d
+	picture = GFX_news_event_018
+	major = yes
+
+	is_triggered_only = yes
+	option = {
+		name = efm_news.1016.a
+		trigger = { 
+			NOT = {
+				TAG = CHI
+				TAG = GXC
+				TAG = SHX
+				TAG = YUN
+				TAG = XSM
+				TAG = SIK
+				TAG = GUD
+				TAG = SIC
+				TAG = HPC
+				TAG = SHD
+				TAG = PRC
+				TAG = JAP
+				TAG = SOV
+			}
+		}
+	}
+	option = {
+		name = efm_news.1016.b
+		trigger = {
+				TAG = CHI
+				TAG = GXC
+				TAG = SHX
+				TAG = YUN
+				TAG = XSM
+				TAG = SIK
+				TAG = GUD
+				TAG = SIC
+				TAG = HPC
+				TAG = SHD
+		}
+	}
+	option = {
+		name = efm_news.1016.c
+		trigger = { TAG = PRC }
+	}
+	option = {
+		name = efm_news.1016.e
+		trigger = { TAG = JAP }
+	}
+	option = {
+		name = efm_news.1016.f
+		trigger = { TAG = SOV }
+	}
+}
+
+#Battle of Shanghai(China)
+news_event = {
+	id = efm_news.1017
+	title = efm_news.1017.t
+	desc = efm_news.1017.d
+	picture = GFX_news_event_battle_of_wuhan_1
+	
+	major = yes
+
+	trigger = {
+		613 = { is_controlled_by_jap_or_its_puppet = yes }
+		any_country = {
+			is_legit_china = yes
+			has_war_with = JAP
+		}
+		date < 1938.9.9
+		NOT = { has_global_flag = fall_of_shanghai_jap }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_shanghai_jap
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = efm_news.1017.a
+		trigger = { 
+			NOT = {
+				TAG = CHI
+				TAG = JAP
+			}
+		}
+	}
+	option = {
+		name = efm_news.1017.b
+		trigger = { TAG = CHI }
+	}
+	option = {
+		name = efm_news.1017.c
+		trigger = { TAG = JAP }
+	}
+}
+#Battle of Shanghai (Japan)
+#news_event = {
+#	id = efm_news.1018
+#	title = efm_news.1018.t
+#	desc = efm_news.1018.d
+#	picture = GFX_news_event_battle_of_wuhan_3
+#	
+#	major = yes
+#
+#	trigger = {
+#		OR = {
+#			750 = { is_controlled_by = JAP }
+#			any_country = {
+#				OR = {
+#					is_in_faction_with = JAP
+#					is_subject_of = JAP
+#				}
+#				has_war_with = CHI
+#				has_war_together_with = JAP
+#				controls_state = 750
+#			}
+#		}
+#		750 = { is_owned_by = CHI }
+#		JAP = { has_war_with = CHI }
+#		NOT = { has_global_flag = fall_of_shanghai_jap }
+#	}
+#	
+#	immediate = {
+#		set_global_flag = fall_of_shanghai_jap
+#	}
+#	
+#	mean_time_to_happen = {
+#		days = 2
+#	}
+#	
+#	option = {
+#		name = efm_news.1018.a
+#		trigger = { 
+#			NOT = {
+#				TAG = CHI
+#				TAG = JAP
+#			}
+#		}
+#	}
+#	option = {
+#		name = efm_news.1018.b
+#		trigger = { TAG = CHI }
+#	}
+#	option = {
+#		name = efm_news.1018.c
+#		trigger = { TAG = JAP }
+#	}
+#}
+
+#Battle of Wuhan - The Fall of Wuhan (China)
+news_event = {
+	id = efm_news.1019
+	title = efm_news.1019.t
+	desc = efm_news.1019.d
+	picture = GFX_news_event_battle_of_wuhan_1
+	
+	major = yes
+
+	trigger = {
+		OR = {
+			620 = { is_controlled_by = JAP }
+			any_country = {
+				OR = {
+					is_in_faction_with = JAP
+					is_subject_of = JAP
+				}
+				has_war_with = CHI
+				has_war_together_with = JAP
+				controls_state = 620
+			}
+		}
+		620 = { is_owned_by = CHI }
+		JAP = { has_war_with = CHI }
+		#CHI = {
+		#	NOT = {
+		#		has_idea = CHI_Transfer_capital
+		#	}
+		#}
+		NOT = { has_global_flag = fall_of_wuhan_jap }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_wuhan_jap
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = efm_news.1019.a
+		trigger = { 
+			NOT = {
+				TAG = CHI
+				TAG = JAP
+			}
+		}
+	}
+	option = {
+		name = efm_news.1019.b
+		trigger = { TAG = CHI }
+	}
+	option = {
+		name = efm_news.1019.c
+		trigger = { TAG = JAP }
+	}
+}
+#Battle of Wuhan - The Fall of Wuhan (Japan)
+news_event = {
+	id = efm_news.1020
+	title = efm_news.1020.t
+	desc = efm_news.1020.d
+	picture = GFX_news_event_battle_of_wuhan_3
+	
+	major = yes
+
+	trigger = {
+		OR = {
+			620 = { is_controlled_by = JAP }
+			any_country = {
+				OR = {
+					is_in_faction_with = JAP
+					is_subject_of = JAP
+				}
+				has_war_with = CHI
+				has_war_together_with = JAP
+				controls_state = 620
+			}
+		}
+		620 = { is_owned_by = CHI }
+		JAP = { has_war_with = CHI }
+		#CHI = {
+		#	has_idea = CHI_Transfer_capital
+		#}
+		NOT = { has_global_flag = fall_of_wuhan_jap }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_wuhan_jap
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = efm_news.1020.a
+		trigger = { 
+			NOT = {
+				TAG = CHI
+				TAG = JAP
+			}
+		}
+	}
+	option = {
+		name = efm_news.1020.b
+		trigger = { TAG = CHI }
+	}
+	option = {
+		name = efm_news.1020.c
+		trigger = { TAG = JAP }
+	}
+}
+
+#Great Repression
+news_event = {
+	id = efm_news.1021
+	title = efm_news.1021.t
+	desc = efm_news.1021.d
+	picture = GFX_news_event_006
+	
+	major = yes
+	trigger = {
+		has_global_flag = WIP_DISABLED_FOR_NOW
+		date > 1936.3.1
+		date < 1938.3.1
+		NOT = { has_global_flag = great_repression_mon }
+	}
+	
+	immediate = {
+		hidden_effect = { SOV = { puppet = MON } }
+		set_global_flag = great_repression_mon
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = efm_news.1021.a
+		trigger = { 
+			NOT = {
+				TAG = SOV
+				TAG = MON
+			}
+		}
+	}
+	option = {
+		name = efm_news.1021.b
+		trigger = { TAG = MON }
+	}
+	option = {
+		name = efm_news.1021.c
+		trigger = { TAG = SOV }
+	}
+}
+
+#China reconciliation with the CCP
+news_event = {
+	id = efm_news.1022
+	title = efm_news.1022.t
+	desc = efm_news.1022.d
+	picture = GFX_news_event_Mao_and_Chiang
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = efm_news.1022.a
+		trigger = { 
+			NOT = {
+				TAG = CHI
+				TAG = JAP
+				TAG = SHX
+				TAG = GXC
+				TAG = SHD
+				TAG = HPC
+				TAG = SIC
+				TAG = SIK
+				TAG = XSM
+				TAG = GUD
+				TAG = PRC
+			}
+		}
+	}
+	option = {
+		name = efm_news.1022.b
+		trigger = { TAG = CHI }
+	}
+	option = {
+		name = efm_news.1022.c
+		trigger = { TAG = JAP }
+		trigger = { TAG = SHX }
+		trigger = { TAG = GXC }
+		trigger = { TAG = SHD }
+		trigger = { TAG = HPC }
+		trigger = { TAG = SIC }
+		trigger = { TAG = SIK }
+		trigger = { TAG = XSM }
+		trigger = { TAG = GUD }
+	}
+	option = {
+		name = efm_news.1022.e
+		trigger = { TAG = PRC }
+	}
+}
+
+#China call for Allied support
+news_event = {
+	id = efm_news.1023
+	title = efm_news.1023.t
+	desc = efm_news.1023.d
+	picture = GFX_news_event_generic_rally
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = efm_news.1023.a
+		trigger = { 
+			NOT = {
+				TAG = CHI
+				TAG = JAP
+				TAG = USA
+				TAG = FRA
+				TAG = ENG
+				TAG = SOV
+			}
+		}
+	}
+	option = {
+		name = efm_news.1023.b
+		trigger = { TAG = CHI }
+	}
+	option = {
+		name = efm_news.1023.c
+		trigger = { TAG = JAP }
+	}
+	option = {
+		name = efm_news.1023.e
+		trigger = { TAG = USA }
+		trigger = { TAG = ENG }
+		trigger = { TAG = FRA }
+		trigger = { TAG = SOV }
+	}
+}
+
+#China select solitary fight
+news_event = {
+	id = efm_news.1024
+	title = efm_news.1024.t
+	desc = efm_news.1024.d
+	picture = GFX_news_event_generic_rally
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = efm_news.1024.a
+		trigger = { 
+			NOT = {
+				TAG = CHI
+				TAG = JAP
+				TAG = USA
+				TAG = FRA
+				TAG = ENG
+				TAG = SOV
+			}
+		}
+	}
+	option = {
+		name = efm_news.1024.b
+		trigger = { TAG = CHI }
+	}
+	option = {
+		name = efm_news.1024.c
+		trigger = { TAG = JAP }
+	}
+	option = {
+		name = efm_news.1024.e
+		trigger = { TAG = USA }
+		trigger = { TAG = ENG }
+		trigger = { TAG = FRA }
+		trigger = { TAG = SOV }
+	}
+}
+
+#China asia alliance
+news_event = {
+	id = efm_news.1025
+	title = efm_news.1025.t
+	desc = efm_news.1025.d
+	picture = GFX_news_event_hitler_handshake
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = efm_news.1025.a
+		trigger = { 
+			NOT = {
+				TAG = CHI
+				TAG = JAP
+			}
+		}
+	}
+	option = {
+		name = efm_news.1025.b
+		trigger = { TAG = CHI }
+	}
+	option = {
+		name = efm_news.1025.c
+		trigger = { TAG = JAP }
+	}
+}
+
+#China sunset project
+news_event = {
+	id = efm_news.1026
+	title = efm_news.1026.t
+	desc = efm_news.1026.d
+	picture = GFX_news_event_040
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = efm_news.1026.a
+		trigger = { 
+			NOT = {
+				TAG = CHI
+				TAG = JAP
+			}
+		}
+	}
+	option = {
+		name = efm_news.1026.b
+		trigger = { TAG = CHI }
+	}
+	option = {
+		name = efm_news.1026.c
+		trigger = { TAG = JAP }
+	}
+}
+
+#China join Axis
+news_event = {
+	id = efm_news.1027
+	title = efm_news.1027.t
+	desc = efm_news.1027.d
+	picture = GFX_news_event_hitler_handshake
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = efm_news.1027.a
+		trigger = { 
+			NOT = {
+				TAG = CHI
+				TAG = GER
+				TAG = ITA
+				TAG = JAP
+				TAG = USA
+				TAG = FRA
+				TAG = ENG
+				TAG = SOV
+			}
+		}
+	}
+	option = {
+		name = efm_news.1027.b
+		trigger = { TAG = CHI }
+	}
+	option = {
+		name = efm_news.1027.c
+		trigger = { TAG = GER }
+		trigger = { TAG = ITA }
+		trigger = { TAG = JAP }
+	}
+	option = {
+		name = efm_news.1027.e
+		trigger = { TAG = USA }
+		trigger = { TAG = ENG }
+		trigger = { TAG = FRA }
+		trigger = { TAG = SOV }
+	}
+}
+
+#The second central plains war
+news_event = {
+	id = efm_news.1028
+	title = efm_news.1028.t
+	desc = efm_news.1028.d
+	picture = GFX_news_event_001
+	major = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		set_global_flag = chi_2nd_central_plains_war
+	}
+	
+	option = {
+		name = efm_news.1028.a
+		trigger = { 
+			NOT = {
+				TAG = CHI
+				TAG = SHX
+				TAG = GXC
+			}
+		}
+	}
+	option = {
+		name = efm_news.1028.b
+		trigger = { TAG = CHI }
+	}
+	option = {
+		name = efm_news.1028.c
+		trigger = { TAG = SHX }
+	}
+	option = {
+		name = efm_news.1028.e
+		trigger = { TAG = GXC }
+	}
+}
+
+#Hebei announces autonomy
+news_event = {
+	id = efm_news.1029
+	title = efm_news.1029.t
+	desc = efm_news.1029.d
+	picture = GFX_news_event_041
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = efm_news.1029.a
+		trigger = { 
+			NOT = {
+				TAG = HPC
+				TAG = CHI
+				TAG = PRC
+				TAG = JAP
+			}
+		}
+	}
+	option = {
+		name = efm_news.1029.b
+		trigger = { TAG = HPC }
+	}
+	option = {
+		name = efm_news.1029.c
+		trigger = { TAG = CHI }
+		trigger = { TAG = PRC }
+	}
+	option = {
+		name = efm_news.1029.e
+		trigger = { TAG = JAP }
+	}
+}
+
+#End of the second central plains war
+news_event = {
+	id = efm_news.1031
+	title = efm_news.1031.t
+	desc = efm_news.1031.d
+	picture = GFX_news_event_generic_read_write
+	major = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		clr_global_flag = chi_2nd_central_plains_war
+	}
+	
+	option = {
+		name = efm_news.1031.a
+	}
+}
+
+#Japan civil war
+news_event = {
+	id = efm_news.1032
+	title = efm_news.1032.t
+	desc = efm_news.1032.d
+	picture = GFX_news_event_226_2
+	major = yes
+
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = efm_news.1032.a
+		trigger = { 
+			NOT = {
+				TAG = CHI
+				TAG = JAP
+			}
+		}
+	}
+	option = {
+		name = efm_news.1032.b
+		trigger = { TAG = JAP }
+	}
+	option = {
+		name = efm_news.1032.c
+		trigger = { TAG = CHI }
+	}
+}
+
+#Sun set
+news_event = {
+	id = efm_news.1033
+	title = efm_news.1033.t
+	desc = efm_news.1033.d
+	picture = GFX_news_event_sunset
+	major = yes
+
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = efm_news.1033.a
+		trigger = { 
+			NOT = {
+				TAG = CHI
+				TAG = JAP
+			}
+		}
+	}
+	option = {
+		name = efm_news.1033.b
+		trigger = { TAG = JAP }
+	}
+	option = {
+		name = efm_news.1033.c
+		trigger = { TAG = CHI }
+	}
+}
+#Sun set 2
+news_event = {
+	id = efm_news.1034
+	title = efm_news.1034.t
+	desc = efm_news.1034.d
+	picture = GFX_news_event_sunset
+	major = yes
+
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = efm_news.1034.a
+		trigger = { 
+			NOT = {
+				TAG = CHI
+				TAG = JAP
+			}
+		}
+	}
+	option = {
+		name = efm_news.1034.b
+		trigger = { TAG = JAP }
+	}
+	option = {
+		name = efm_news.1033.c
+		trigger = { TAG = CHI }
+	}
+}

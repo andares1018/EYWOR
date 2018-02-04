@@ -1,0 +1,31 @@
+
+state={
+	id=283
+	name="STATE_283"
+	resources={
+		tungsten=1.000
+	}
+
+	history={
+		owner = NXM
+		add_core_of = NXM
+		add_core_of = CHI
+		add_core_of = PRC
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+
+		}
+		victory_points = {
+			1630 3 
+		}
+
+	}
+
+	provinces={
+		556 1630 1778 1933 2022 2028 3742 5057 5100 6638 7397 7727 7911 7971 8102 12327 12596 12797 12820 12882 
+	}
+	manpower=6705400
+	buildings_max_level_factor=1.500
+	state_category=town
+}

@@ -1,0 +1,205 @@
+﻿###########################
+# Chinese Events BORDER WARS ADDED SOUTHERN SHAANXI #ID = 743#
+###########################
+
+add_namespace = gud
+
+# GUD choose to join 2g or not
+country_event = {
+	id = gud.1
+	title = gud.1.t
+	desc = gud.1.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = { 
+		name = gud.1.a #accept
+		ai_chance = { 
+		base = 80 	
+			modifier = {
+				factor = 150
+				is_historical_focus_on = yes
+			}
+		}
+		GXC = {
+			country_event = { days = 5 id = gxc.2 }
+		}
+	}
+	option = { 
+		name = gud.1.b #refuse
+		ai_chance = { 
+		base = 20 	
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		GXC = {
+			country_event = { days = 5 id = gxc.3 }
+		}
+	}
+}
+#Chi offer peace
+country_event = {
+	id = gud.2
+	title = gud.2.t
+	desc = gud.2.d
+	picture = GFX_report_event_chinese_officers
+	
+	#mean_time_to_happen = {
+	#	days = 10
+	#}
+
+	is_triggered_only = yes
+
+	option = { #accept
+		name = gud.2.a
+		ai_chance = { factor = 50 } 
+		CHI = {
+			country_event = { days = 5 id = rcmchina.1007 }
+		}
+		add_political_power = 50
+		GXC = { 
+			country_event = { id = gxc.8 } 
+			remove_from_faction = GUD
+		}
+	}
+	option = { #refuse
+		name = gud.2.b
+		ai_chance = { factor = 50 } 
+		CHI = {
+			country_event = { days = 5 id = rcmchina.1008 }
+		}
+	}
+}
+
+#chi war
+country_event = {
+	id = gud.3
+	title = gud.3.t
+	desc = gud.3.d
+	picture = GFX_report_event_chinese_soldiers_02
+	#mean_time_to_happen = {
+	#	days = 10
+	#}
+	is_triggered_only = yes
+	option = {
+		name = gud.3.a
+		if = {
+			limit = { GXC = { has_war_with = CHI } }
+			add_to_war = { targeted_alliance = GXC enemy = CHI }
+			GXC = { 
+				if = { limit = { GXC = { is_faction_leader = no } } 
+					set_rule = { can_create_factions = yes } 
+					create_faction = "anti_jap_salv_army"
+					add_to_faction = GUD 
+				}
+				if = { limit = { GXC = { is_faction_leader = yes } } 
+					add_to_faction = GUD 
+				}
+			}
+		}
+		if = {
+			limit = { GXC = { NOT = { has_war_with = CHI } } }
+			set_global_flag = gud_ready
+		}
+	}
+}
+
+#chi_buy_gud succ
+country_event = {
+	id = gud.4
+	title = gud.4.t
+	picture = GFX_report_event_huang_2g_bribed
+	desc = { 
+		text = gud.4.d_chi
+		trigger = { TAG = CHI }
+	}
+	desc = { 
+		text = gud.4.d
+		trigger = { NOT = { TAG = CHI } }
+	}
+	is_triggered_only = yes
+	immediate = {
+		set_global_flag = buy_gud
+	}
+	option = {
+		name = gud.4.a
+		trigger = { TAG = CHI }
+		annex_country = { target = GUD transfer_troops = yes }
+		#add_ideas = huang_guangrei
+	}
+	option = {
+		name = gud.4.b
+		trigger = { 
+			NOT = { TAG = CHI } 
+			NOT = { TAG = GXC } 
+		}
+	}
+	option = {
+		name = gud.4.c
+		trigger = { 
+			TAG = GXC
+		}
+		ai_chance = { 
+		base = 50 	
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		CHI = { country_event = { days = 10 id = rcmchina.1005 } }
+	}
+	option = {
+		name = gud.4.e
+		trigger = { 
+			TAG = GXC 
+		}
+		ai_chance = { 
+		base = 50 	
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		dismantle_faction = yes
+		CHI = { country_event = { days = 5 id = rcmchina.1014 } }
+	}
+}
+#chi_buy_gud fail
+country_event = {
+	id = gud.5
+	title = gud.5.t
+	picture = GFX_report_event_huang_2g_bribed
+	desc = { 
+		text = gud.5.d_chi
+		trigger = { TAG = CHI }
+	}
+	desc = { 
+		text = gud.5.d
+		trigger = { NOT = { TAG = CHI } }
+	}
+	is_triggered_only = yes
+	option = {
+		name = gud.5.a
+		trigger = { TAG = CHI }
+	}
+	option = {
+		name = gud.5.b
+		trigger = { 
+			NOT = { TAG = CHI } 
+			NOT = { TAG = GXC }
+		}	
+	}
+	option = {
+		name = gud.5.c
+		trigger = { 
+			TAG = GXC
+		}
+		hidden_effect = {
+			CHI = { country_event = { days = 10 id = rcmchina.1005 } }
+		}
+	}
+}
+

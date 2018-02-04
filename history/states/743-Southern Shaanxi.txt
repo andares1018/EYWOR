@@ -1,0 +1,31 @@
+state = {
+	id=743
+	name="STATE_743" # Southern Shaanxi
+	manpower = 2808900
+	state_category = city
+	resources = {
+		steel = 1
+		tungsten = 1
+	}
+	history = {
+	    owner = NEA
+		add_core_of = NEA
+		add_core_of = PRC
+		add_core_of = CHI
+		buildings = {
+			infrastructure = 4
+			arms_factory = 3
+			industrial_complex = 1
+		}
+		1939.1.1 = {
+			 owner = CHI
+			 remove_core_of = NEA
+		}
+		victory_points = { 
+			7301 5
+		}
+	}
+	provinces = {
+		2006 1976 7301 12713 4295 4256 7406 5092 4167 7418 10257
+	}
+}

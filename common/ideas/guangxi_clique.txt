@@ -1,0 +1,346 @@
+ideas = {
+
+	political_advisor = {
+
+		GXC_commie = {
+			
+			
+			allowed = {
+				original_tag = "GXC"
+			}
+			
+
+			
+			traits = { communist_revolutionary }
+	
+			on_add = {
+				country_event = political.1
+			}
+	
+			do_effect = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			picture = generic_communist_asia
+			ai_will_do = {
+				factor = 0
+			}
+		}	
+			
+		GXC_yu_zuobuo = {
+			
+			
+			allowed = {
+				original_tag = "GXC"
+			}
+			
+
+			
+			traits = { democratic_reformer }
+	
+			on_add = {
+				country_event = political.13
+			}
+	
+			do_effect = {
+				NOT = {
+					has_government = democratic
+				}
+			}
+			picture = generic_democratic_asia
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		GXC_charles_coughlin = {
+			
+			
+			allowed = {
+				original_tag = "GXC"
+			}
+			
+
+			
+			traits = { fascist_demagogue }
+	
+			on_add = {
+				country_event = political.7
+			}
+	
+			do_effect = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+			picture = generic_fascist_asia
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		GXC_zhang_bojun = { ai_will_do = { factor = 0 }
+			picture = idea_zhang_bojun
+			allowed = {
+				original_tag = GXC
+			}
+			traits = { socialist_idealist }
+			
+			picture = generic_n_socialism_asia
+			on_add = {
+				country_event = rcmpolitical.30
+			}					
+			do_effect = {
+				NOT = {
+					has_government = n_socialism
+				}
+			}
+			
+		}
+		GXC_liu_fei = {
+
+			picture = generic_political_advisor_asia_2
+			
+			allowed = {
+				original_tag = GXC
+			}
+			
+			traits = { compassionate_gentleman }
+		}
+
+		GXC_xia_wei= {
+
+			picture = generic_political_advisor_asia_1
+			
+			allowed = {
+				original_tag = GXC
+			}
+			
+			traits = { silent_workhorse }
+		}
+
+		GXC_pierre_krier = {
+
+			picture = generic_political_advisor_asia_3
+			
+			allowed = {
+				original_tag = GXC
+			}
+			
+			traits = { captain_of_industry }
+		}
+	}
+
+	theorist = {
+		GXC_yu_hanmou = {
+
+			picture = generic_army_asia_1
+			
+			allowed = {
+				original_tag = GXC
+			}
+			
+			research_bonus = {
+				land_doctrine = 0.07
+			}
+			
+			traits = { military_theorist }
+		}
+		
+		GXC_bai_yeung = { 
+
+			picture = generic_air_asia_2
+			
+			allowed = {
+				original_tag = GXC
+			}
+			
+			research_bonus = {
+				air_doctrine = 0.07
+			}
+			
+			traits = { air_warfare_theorist }
+		}
+
+		GXC_heng_lo = {
+
+			picture = generic_navy_asia_1
+			
+			allowed = {
+				original_tag = GXC
+			}
+			
+			research_bonus = {
+				naval_doctrine = 0.07
+			}
+			
+			traits = { naval_theorist }
+		}
+	}
+
+	high_command = {
+
+		GXC_li_pinxian = {
+
+			picture = generic_air_asia_2
+			
+			allowed = {
+				original_tag = GXC
+			}
+			
+			traits = { air_air_superiority_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		GXC_tau_jun = {
+
+			picture = generic_army_asia_1
+			
+			allowed = {
+				original_tag = GXC
+			}
+			
+			traits = { army_armored_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		GXC_huang_xuchu = {
+
+			picture = generic_army_asia_2
+			
+			allowed = {
+				original_tag = GXC
+			}
+			
+			traits = { army_regrouping_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		GXC_liao_lei = {
+
+			picture = generic_navy_asia_2
+			
+			allowed = {
+				original_tag = GXC
+			}
+			
+			traits = { navy_screen_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	army_chief = {
+		
+		GXC_huang_shaohong = {
+
+			picture = generic_army_asia_2
+			
+			allowed = {
+				original_tag = GXC
+			}
+			
+			traits = { army_chief_defensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	
+		GXC_bai_chongxi = {
+
+			picture = generic_army_asia_1
+			
+			allowed = {
+				original_tag = GXC
+			}
+			
+			traits = { army_chief_offensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	air_chief = {
+		
+		GXC_wang_shuming = {
+			
+			picture = generic_air_asia_1
+			
+			allowed = {
+				original_tag = GXC
+			}
+			
+
+			
+			traits = { air_chief_ground_support_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		GXC_niu_keung = {
+			
+			picture = generic_air_asia_2
+			
+			allowed = {
+				original_tag = GXC
+			}
+			
+
+			
+			traits = { air_chief_safety_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	navy_chief = {
+
+		GXC_huo_duyi = {
+			
+			picture = generic_navy_asia_1
+
+			allowed = {
+				original_tag = GXC
+			}
+					
+			traits = { navy_chief_naval_aviation_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		GXC_navy = {
+			
+			picture = generic_navy_asia_3
+
+			allowed = {
+				original_tag = GXC
+			}
+					
+			traits = { navy_chief_reform_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+}

@@ -1,0 +1,246 @@
+﻿capital = 622
+
+oob = "PRC_1936"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	mass_assault = 1
+}
+
+add_timed_idea = { idea = Chinese_Red_Army days = 295 } 
+
+drop_cosmetic_tag = PRC_SGN
+set_cosmetic_tag = PRC_CSR
+
+1939.1.1 = {
+	set_country_flag = j_focus_completed
+	set_country_flag = nineteen_thirtynine_start
+	set_cosmetic_tag = PRC_SGN
+	add_political_power = 1198
+	oob = "PRC_1939"
+	remove_ideas = Chinese_Red_Army
+	remove_ideas = PRC_Isolated_status
+	remove_ideas = Long_March_1
+	
+	add_ideas = Long_March_3
+	# Chinese Popular Front effects
+	add_to_war = {
+		targeted_alliance = CHI
+		enemy = JAP
+	}
+	remove_opinion_modifier = { target = CHI modifier = hostile_status }
+	complete_national_focus = PRC_East_conquest
+	complete_national_focus = PRC_Western_expedition
+	complete_national_focus = PRC_Red_Army_Recovery
+	complete_national_focus = PRC_Peasant_class
+	complete_national_focus = PRC_Land_reform
+	unlock_national_focus = PRC_Forcing_Chiang_against_Japan
+	complete_national_focus = PRC_Join_the_war
+	#complete_national_focus = PRC_New_education_system
+	complete_national_focus = PRC_Type_81_ma
+	complete_national_focus = PRC_makeshift_research_facility
+	#complete_national_focus = 
+	#complete_national_focus = 
+	#complete_national_focus = 
+	#complete_national_focus = 
+	#complete_national_focus = 
+	#complete_national_focus = PRC_End_of_Long_March
+	#complete_national_focus = PRC_Farmer_political_course
+	complete_national_focus = PRC_Red_Army
+	#complete_national_focus = PRC_Domestic_faction
+	#complete_national_focus = 
+	#complete_national_focus = 
+	#complete_national_focus = 
+	#complete_national_focus = 
+	#complete_national_focus = 
+	remove_ideas = Long_March_2
+	add_ideas = {
+		#laws
+		extensive_conscription
+		war_economy
+		closed_economy
+	}
+
+	
+	
+	set_technology = {
+		tech_mountaineers = 1
+		#doctrines
+		air_superiority = 1
+		pocket_defence = 1
+		defence_in_depth = 1
+
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+		radio_detection = 1
+		mechanical_computing = 1
+		computing_machine = 1
+		basic_encryption = 1
+		basic_decryption = 1
+
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		synth_oil_experiments = 1
+		oil_plant = 1
+		improved_oil_plant = 1
+		construction1 = 1
+		construction2 = 1
+		construction3 = 1
+		concentrated_industry = 1
+		concentrated_industry2 = 1
+		concentrated_industry3 = 1
+	}
+}
+
+set_politics = {
+
+	parties = {
+		democratic = { 
+			popularity = 0
+		}
+		
+		n_socialism = { 
+			popularity = 0
+		}
+
+		fascism = {
+			popularity = 0
+		}
+		
+		communism = {
+			popularity = 100
+		}
+		
+		neutrality = { 
+			popularity = 0
+		}
+	}
+	
+	ruling_party = communism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+1939.1.1 = {
+	set_politics = {
+
+		parties = {
+			democratic = { 
+				popularity = 0
+			}
+
+			fascism = {
+				popularity = 0
+			}
+			
+			communism = {
+				popularity = 100
+				#banned = no #default is no
+			}
+		}
+		
+		ruling_party = communism
+		last_election = "1936.1.1"
+		election_frequency = 48
+		elections_allowed = no
+	}
+}
+
+add_ideas = {
+	closed_economy
+	extensive_conscription
+	war_economy
+	one_last_stand
+	#PRC_Mobile_Warfare
+	PRC_Isolated_status
+	Long_March_1
+	PRC_no_skilled_personnel_1
+	no_proper_equipment_design
+	incompetent_heavy_industry
+	unbalanced_industry
+	iliterate_population
+	PRC_Poor_Air
+	PRC_Poor_navy
+}
+
+add_opinion_modifier = { target = CHI modifier = hostile_status }
+
+create_country_leader = {
+	name = "Mao Zedong"
+	desc = "POLITICS_MAO_ZEDONG_DESC"
+	picture = "gfx/leaders/CHI/Portrait_China_Mao_Zedong.dds"
+	expire = "1965.1.1"
+	ideology = marxism
+	traits = {
+		cornered_fox
+	}
+}
+
+
+create_corps_commander = {
+	name = "Lin Biao"
+	portrait_path = "gfx/leaders/PRC/Lin_Biao.dds"
+	traits = { winter_specialist fortress_buster }
+	skill = 4
+}
+
+create_corps_commander = {
+	name = "Liu Bocheng"
+	portrait_path = "gfx/leaders/PRC/Liu_Bocheng.dds"
+	traits = { trait_engineer }
+	skill = 2
+}
+
+create_corps_commander = {
+	name = "He Long"
+	portrait_path = "gfx/leaders/PRC/He_Long.dds"
+	traits = { Trickster }
+	skill = 3
+}
+
+create_corps_commander = {
+	name = "Zhu De"
+	portrait_path = "gfx/leaders/PRC/Zhu_De.dds"
+	traits = { trait_mountaineer }
+	skill = 3
+}
+
+create_corps_commander = {
+	name = "Peng Dehuai"
+	portrait_path = "gfx/leaders/PRC/Peng_Dehuai.dds"
+	traits = { hill_fighter }
+	skill = 3
+}
+
+create_corps_commander = {
+	name = "Xu Xiangqian"
+	portrait_path = "gfx/leaders/PRC/Xu_Xiangqian.dds"
+	traits = { hill_fighter }
+	skill = 2
+}
+
+create_corps_commander = {
+	name = "Ye Jianying"
+	portrait_path = "gfx/leaders/PRC/Ye_Jianying.dds"
+	traits = { trait_mountaineer }
+	skill = 3
+}
+
+create_corps_commander = {
+	name = "Luo Ronghuan"
+	portrait_path = "gfx/leaders/PRC/Luo_Ronghuan.dds"
+	traits = { Trickster }
+	skill = 2
+}
+
+create_corps_commander = {
+	name = "Nie Rongzhen"
+	portrait_path = "gfx/leaders/PRC/Nie_Rongzhen.dds"
+	traits = { Trickster }
+	skill = 2
+}

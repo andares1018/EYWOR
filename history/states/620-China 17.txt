@@ -1,0 +1,33 @@
+
+state={
+	id=620
+	name="STATE_620"
+
+	history={
+		owner = CHI
+		add_core_of = CHI
+		add_core_of = PRC
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		
+		1939.1.1 = {
+			buildings = {
+				industrial_complex = 2
+				infrastructure = 6
+				arms_factory = 1
+			}
+		}
+		victory_points = {
+			4130 5 
+		}
+	}
+
+	provinces={
+		1612 4130 4896 5030 7019 7201 7596 7609 8072 10474 10757 12086 12408 12414 
+	}
+	manpower=13232600
+	buildings_max_level_factor=1.000
+	state_category=town
+}

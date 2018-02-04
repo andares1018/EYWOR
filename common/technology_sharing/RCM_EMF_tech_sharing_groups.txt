@@ -1,0 +1,34 @@
+technology_sharing_group = {
+	id = CHI_Asia_theater_command
+	name = CHI_Asia_theater_command
+	desc = CHI_Asia_theater_command_desc
+	picture = GFX_technology_sharing_default
+    
+	research_sharing_per_country_bonus = 0.1	
+
+	categories = { air_doctrine }
+
+    available = {
+		CHI = {
+			has_war = yes
+			NOT = {
+				has_government = fascism
+			}
+		}
+    }
+}
+
+technology_sharing_group = {
+	id = PRC_Joint_command_tech_group
+	name = PRC_Joint_command_tech_group
+	desc = PRC_Joint_command_tech_group_desc
+	picture = GFX_technology_sharing_default
+    
+	research_sharing_per_country_bonus = 0.1	
+
+	categories = { land_doctrine }
+
+    available = {
+    	is_in_faction_with = PRC
+    }
+}

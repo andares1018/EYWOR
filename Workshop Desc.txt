@@ -1,0 +1,89 @@
+[h1][b]A New Update is now LIVE![/b][/h1]
+[b]For those who are having crashes on start up, a simple restart of the game should fix it.[/b]
+目前沒有計畫翻譯成中文，但歡迎翻譯組代翻
+===============================================
+[img]https://steamuserimages-a.akamaihd.net/ugc/921419279567377559/DE253F63AFA497068C413CF5F79E93E85EF8A6C2/[/img]
+[h1][b]Join our [url=https://discord.gg/uvBc9qk]discord[/url]![/b][/h1]
+Great [url=https://www.youtube.com/watch?v=BWh796kEHwo]Mod Spotlight[/url] by TheWoodstock (Sept 16/2017)
+The counter is fixed by Chairman Meow. Mod [url=https://steamcommunity.com/sharedfiles/filedetails/?id=850835220]link[/url]
+===============================================
+[h1][b]What is this mod for:[/b][/h1]
+This mod is aimed to create a more realistic Asian Theatre of World War II, which the vanilla game is severely lacking.
+
+[h1][b]What does this mod do:[/b][/h1]
+[b][i]IDEOLOGY[/i][/b]
+　　Adds a new ideology Socialism. The ideology has its own political advisors and political events. Socialist countrys may or may not have elections, it depends on how you react to the political events. The reason for this is to properly position the Ideology of the Chinese Democratic League(has strong ties w/ the communists but somewhat democratic) and Shakai Taishuto(A socialist party that shares somewhat of a common ground w/ National Socialism).
+　　Also, Non-aligned is now renamed Reactionary. World tension thresholds are also reduced. 
+
+[b][i]PLAYABILITY[/i][/b]
+◆ Current Nations w/ Comprehensive National Focuses:
+　 – Japan, China, Communist China, Sinkiang, Mongolia
+◆ Current Nations w/o completely unique National Focuses but are playable and have flavors:
+　 – East Chahar, Pailingmiao Council, Northeastern Army, Guangxi, Burma, Sichuan
+◆ Currently Playable Nations:
+　 – Pretty much all of them, except for probably Kumul (too smol)
+
+[b][i]REGIONAL FLAVOR[/i][/b]
+◆ [b]Japan[/b]
+　 – A brand new focus tree. 
+　 – The leader of Japan is now its prime ministers instead of the Emperor. 
+　 – Political advisors overhual. Also adds and replaces several military advisors.
+　 – Reworked the parties and added a few election events, which indeed happened.
+　 – A series of both historical and potential events, including the Feb. 26th Incident, Showa
+　　Restoration, ABCD Encirclement, Sino-Japanese alliance and more!
+　 – Japan can now make the historical puppets through focuses.
+　 – Adds East Hebei Autonomous Council.
+　 – Much more historical puppets in the Inner-Mongolia region.
+◆ [b]China[/b]
+　 – Adds a brand new focus tree.
+　 – Adds multiple historical Warlord states.
+　 – Map Overhual: 
+　　*Redrawn the borders of multiple states which were previously wrong, including the states in 
+　　 Manchuria. 
+　　*Adds a few more states to increase playability and historical accuracy.
+　　*Reworked the Strategic Regions
+　 – More uniform flags (ROC flag with Chinese text).
+　 – Historical events
+　 – Historical companies
+　 – Warlords now won’t integrate themselves when the Sino-Japanese War breaks out. They will just
+　　simply join the Chinese United Front instead. 
+　 – Political advisers overhaul. Also make German Advisers actually an adviser.
+　 – New mechanics, flavor, and overall improvement.
+◆ [b]Communist China:[/b]
+　 – Adds a brand new focus tree.
+　 – New mechanics, flavor, and overall improvement.
+◆ [b]Sinkiang:[/b]
+　 – Adds a brand new focus tree.
+　 – New flavor, and overall improvement.
+◆ [b]Mongolia:[/b]
+　 – Adds a new focus tree based on Mordred’s Mongolian National Focus
+　 – New flavor, and overall improvement.
+◆ [b]Korea:[/b]
+　 – Independent strategic region
+　 – Corrected leader (Lyuh Woon-hyung) and country name (People’s Republic of Korea)
+◆ [b]South East Asia:[/b]
+　 – Add French Indochina
+　 – Replace British Malaya with Federated Malay States
+　 – More states in Malay Peninsula
+===============================================
+[h1][b]TO-DO [/b][/h1](may change in the future)
+　 – wait for DLC (lol)
+　 – Include some awesome regional Asian flavor mods from the community if their devs are willing
+　　to work with me. (Contact me if you want me to include your mod!)
+===============================================
+[h1][b]CREDIT: [/b][/h1]
+Some Japanese focus tree description by Pregolli
+Lamp's Eqpt Icons 2 by 电灯弗里曼 (Lamp)
+Burma – Kaba Ma Kyei by Chewy Yui 
+Historical Japanese OOB with Manchukuo [EN] by Ukiwa
+Anglo-Soviet invasion of Iran by Hellonoobik and Elex
+Mongolia National Focus by Mordred
+East Focus mod by Wanniang
+===============================================
+[h1][b]SPECIAL THANKS : [/b][/h1]
+Huge thanks to Wanniang, the author of the East Focus mod
+The prototype of this mod is based on roemer9’s [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1137402160]Better Realism Project[/url], which I partially participated in.
+Although this mod has developed very differently from his mod, it won’t be here without his mod. 
+The foreign advisors part was created by me, then later reintroduced to his mod.
+The portraits of the mod is mostly adopted from VictorXoda’s [url=https://steamcommunity.com/sharedfiles/filedetails/?id=733860347]Black & White Portraits[/url]
+===============================================

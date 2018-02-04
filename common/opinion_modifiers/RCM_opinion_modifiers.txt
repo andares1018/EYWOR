@@ -1,0 +1,96 @@
+#########################################################################
+# OPINION MODIFIERS
+##########################################################################
+# value
+# min_trust
+# max_trust
+# decay
+# months/years/days = timer
+# trade = yes/no
+
+opinion_modifiers = {
+
+	chi_promise_focus = {
+		value = 60
+	}
+	ger_support_chi = {
+		value = -60
+	}
+	ger_accept_chi = {
+		value = 60
+		decay = -2
+		min_trust = 20
+	}
+	ger_refuse_chi = {
+		value = -10
+		decay = 0.5
+		max_trust = 0
+	}
+	chi_german_coop = {
+		value = 40
+		decay = 0.25
+		max_trust = 200
+	}
+	communist_sympathizer = {
+		value = 350
+		decay = -1
+		max_trust = 450
+	}
+	prc_government_reform = {
+		value = 50
+		decay = 0.5
+		max_trust = 0
+	}
+	jap_sov_pact_opinion = {
+		value = 50
+	}
+	jap_sov_pact_opinion_trade = {
+		trade = yes
+		value = 20
+	}
+	jap_usa_pact_opinion = {
+		value = 50
+	}
+	jap_usa_pact_opinion_trade = {
+		trade = yes
+		value = 20
+	}
+	chi_sov_pact_opinion = {
+		value = 50
+	}
+	chi_sov_pact_opinion_trade = {
+		trade = yes
+		value = 20
+	}
+	liberator = {
+		value = 50
+	}
+	sino_japanese_alliance_opinion = {
+		value = 50
+	}
+	juneau_conference_modifier = {
+		value = 30
+	}
+	japanese_industrial_aid = {
+		value = 50
+	}
+	japanese_industrial_aid_trade = {
+		trade = yes
+		value = 50
+	}
+	sov_friend = {
+		value = 50
+	}
+	tacit_agreement = {
+		value = 400
+	}
+	west_friend = {
+		value = 50
+	}
+	MODIFIERS_spirit_of_genghis = {
+		value = 120
+	}
+	agreed_truce = {
+		value = 50
+	}
+}

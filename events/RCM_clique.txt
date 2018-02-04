@@ -1,0 +1,233 @@
+﻿###########################
+# Chinese Events BORDER WARS ADDED SOUTHERN SHAANXI #ID = 743#
+###########################
+####THIS IS FOR ELIMINATING THE CORES AFTER WARLORDS/CLIENT STATES ARE DEFEATED
+add_namespace = clique
+
+# core on annex
+
+country_event = {
+	id = clique.1
+	hidden = yes
+	trigger = {
+		NOT = {
+			is_warlord = yes
+		}
+		NOT = {
+			tag = CHI
+		}
+		NOT = {
+			tag = PRC
+		}
+		NOT = {
+			tag = PLM
+		}
+		NOT = {
+			tag = MAN
+		}
+		NOT = { has_global_flag = clique_loop }
+	}
+	immediate = {
+		if = {
+			limit = { NOT = { country_exists = CHI } }
+			every_state = {
+				remove_core_of = CHI
+			}
+		}
+		if = {
+			limit = { NOT = { country_exists = PRC } }
+			every_state = {
+				remove_core_of = PRC
+			}
+		}
+		if = {
+			limit = { NOT = { country_exists = GXC } }
+			every_state = {
+				remove_core_of = GXC
+			}
+		}
+		if = {
+			limit = { NOT = { country_exists = YUN } }
+			every_state = {
+				remove_core_of = YUN
+			}
+		}
+		if = {
+			limit = { NOT = { country_exists = SHX } }
+			every_state = {
+				remove_core_of = SHX
+			}
+		}
+		if = {
+			limit = { NOT = { country_exists = XSM } }
+			every_state = {
+				remove_core_of = XSM
+			}
+		}
+		if = {
+			limit = { NOT = { country_exists = XIK } }
+			every_state = {
+				remove_core_of = XIK
+			}
+		}
+		if = {
+			limit = { NOT = { country_exists = GUD } }
+			every_state = {
+				remove_core_of = GUD
+			}
+		}
+		if = {
+			limit = { NOT = { country_exists = HPC } }
+			every_state = {
+				remove_core_of = HPC
+			}
+		}
+		if = {
+			limit = { NOT = { country_exists = SIC } }
+			every_state = {
+				remove_core_of = SIC
+			}
+		}
+		if = {
+			limit = { NOT = { country_exists = PLM } }
+			every_state = {
+				remove_core_of = PLM
+			}
+		}
+		if = {
+			limit = { NOT = { country_exists = MAN } }
+			every_state = {
+				remove_core_of = MAN
+			}
+		}
+		if = {
+			limit = { NOT = { country_exists = NXM } }
+			every_state = {
+				remove_core_of = NXM
+			}
+		}
+		if = {
+			limit = { NOT = { country_exists = SHD } }
+			every_state = {
+				remove_core_of = SHD
+			}
+		}
+		if = {
+			limit = { NOT = { country_exists = ECA } }
+			every_state = {
+				remove_core_of = ECA
+			}
+		}
+		if = {
+			limit = { NOT = { country_exists = EHB } }
+			every_state = {
+				remove_core_of = EHB
+			}
+		}
+		if = {
+			limit = { NOT = { country_exists = RFM } }
+			every_state = {
+				remove_core_of = RFM
+			}
+		}
+		if = {
+			limit = { NOT = { country_exists = HMI } }
+			every_state = {
+				remove_core_of = HMI
+			}
+		}
+		if = {
+			limit = { NOT = { country_exists = TNG } }
+			every_state = {
+				remove_core_of = TNG
+			}
+		}
+		if = {
+			limit = { NOT = { country_exists = NEA } }
+			every_state = {
+				remove_core_of = NEA
+			}
+		}
+		if = {
+			limit = { NOT = { country_exists = NSG } }
+			every_state = {
+				remove_core_of = NSG
+			}
+		}
+		if = {
+			limit = { NOT = { country_exists = SCG } }
+			every_state = {
+				remove_core_of = SCG
+			}
+		}
+		set_global_flag = clique_loop
+		random_country = {
+			country_event = { hours = 1 id = clique.2 }
+		}
+	}
+	option = {
+	}
+}
+
+country_event = {
+	id = clique.2
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		clr_global_flag = clique_loop
+	}
+	option = {
+	}
+}
+
+#AI give guns to AI CHI #Balance
+
+country_event = {
+	id = clique.3
+	hidden = yes
+	trigger = {
+		is_ai = yes
+		is_warlord = yes
+		has_equipment = {
+			infantry_equipment > 599
+		}
+		has_war_with = JAP 
+		NOT = {
+			any_neighbor_country = {
+				has_war_with = ROOT
+			}
+		}
+		any_other_country = {
+			is_legit_china = yes
+			is_ai = yes
+			has_war_together_with = ROOT
+			is_faction_leader = yes
+			is_in_faction_with = ROOT
+			has_war_with = JAP
+		}
+	}
+	mean_time_to_happen = {
+		days = 7
+	}
+	immediate = {
+		random_other_country = {
+			limit = {
+				is_legit_china = yes
+				is_ai = yes
+				has_war_together_with = ROOT
+				is_faction_leader = yes
+				is_in_faction_with = ROOT
+				has_war_with = JAP
+			}
+			ROOT = {
+				send_equipment = {
+					target = PREV
+					type = infantry_equipment
+					amount = 600
+				}
+			}
+		}
+	}
+	option = {
+	}
+}

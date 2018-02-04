@@ -1,0 +1,39 @@
+
+state={
+	id=601
+	name="STATE_601" # Xikang
+	manpower = 968200
+
+	state_category = rural
+
+	resources={
+		oil=2
+	}
+
+	history={
+		owner = XIK
+		add_core_of = XIK
+		add_core_of = SIC
+		add_core_of = CHI
+		add_core_of = PRC
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+			arms_factory = 1
+		}
+
+		1939.1.1 = {
+			buildings = {
+				industrial_complex = 1
+				infrastructure = 2
+			}
+		}
+		
+		victory_points = { 10841 5 }
+
+	}
+
+	provinces={
+		1918 1999 2067 4999 7294 7988 8104 10726 10841 10903 12837 12724
+	}
+}

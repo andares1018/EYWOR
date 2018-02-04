@@ -1,0 +1,17 @@
+﻿l_english:
+ germany.26.d:0 "Germany and China are in a state of war, and the Chinese have consequently detained the German military advisors that reforming their army. Von Falkenhausen and a few of his officers managed to elude capture, and are now on their way back to Europe."
+ stop_subject_war_end_tt:0 "§MYou will stop being a subject of [CHI.GetNameDef] when the war ends.§!\n"
+ #########RCM
+ #########RCM##########
+ news.1.t:0 "Song Zheyuan Declared Independence"
+ news.1.d:0 "Song Zheyuan and the Political Council he led decided to declare independence from the Nanking Government. Song also announced that he is willing to have a friendly relationship with the Japanese. It is believed that someone is behind the scene pushing for this, but there hasn't been any concrete evidence showing that's the case. \n\nSome experts commented that this event had allowed Japan to gain significant influence in the North China region, and could potentially disrupt the power balance between the Chinese Government and the Japanese Army. Some even claimed that this would lead to an total annexation of Hebei by Japan, but these claims are dismissed by the general public as "fearmongering"."
+ news.1.a:0 "Worrying."
+ news.1.b:0 "Nice."
+ news.1.c:0 "Traitors!"
+ news.2.d:0 "Japanese and Chinese forces have skirmished inconclusively over the strategic Marco Polo Bridge located just southwest of Beijing. \n\n[CHI.GetNameDef] has accepted full responsibility for the incident, forwarding an apology to [JAP.GetNameDef] as well as agreeing to declare Hebei-Chahar Political Council's Independence. This has surprised many experts, who had predicted that the border tensions would erupt into a full-blown war. \n\nDoes this mean lasting peace in Asia?"
+ news.2.a:0 "Doubtful."
+ news.2.b:0 "This will satisfy us... for now."
+ news.2.c:0 "We had no choice."
+ news.121.t:0 "The Fall of Nanking"
+ ###################
+ GAME_OVER_TT:0 "§RThe game will end for you.§!"

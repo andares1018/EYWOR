@@ -1,0 +1,284 @@
+﻿###########################
+# Burma Events
+###########################
+
+add_namespace = burma
+
+# Burma is split from British India
+country_event = {
+	id = burma.1
+	title = burma.1.t # Government of Burma Act 1935
+	desc = burma.1.d
+	picture = gfx/event_pictures/burma_government_house.dds
+	
+	trigger = {
+		TAG = ENG
+		date > 1937.4.1
+		country_exists = RAJ
+		NOT = { has_global_flag = burma_act }
+		}
+
+	mean_time_to_happen = {
+		days = 0
+	}
+	
+	immediate = {
+	set_global_flag = burma_act
+	}
+	
+	option = { #Keep playing ENG
+		name = burma.1.a
+		custom_effect_tooltip = burma_spawn_tooltip
+		hidden_effect = {
+			if = {
+				limit = {
+					288 = {
+						OR = {
+							is_owned_by = RAJ
+							is_owned_by = ENG
+						}
+					}
+				}
+				BUR = { transfer_state = 288 }
+				RAJ = { remove_state_core = 288 }
+			}
+			if = {
+				limit = {
+					640 = {
+						OR = {
+							is_owned_by = RAJ
+							is_owned_by = ENG
+						}
+					}
+				}
+				BUR = { transfer_state = 640 }
+				RAJ = { remove_state_core = 640 }
+			}
+			if = {
+				limit = {
+					has_dlc = "Together for Victory"
+					}
+				set_autonomy = {
+					target = BUR
+					autonomous_state = autonomy_colony
+					freedom_level = 0.35
+					}
+				else = {
+					puppet = BUR
+				}
+			}
+			RAJ = { country_event = burma.2 }
+			BUR = { set_cosmetic_tag = BUR_UK }
+			BUR = { add_state_core = 288 }
+			BUR = { add_state_core = 640 }
+			BUR = { load_oob = BUR_1937 }
+			BUR = {	
+				add_equipment_to_stockpile = {
+					type = artillery_equipment_1
+					amount = 50
+					producer = "RAJ"
+				}
+			}
+			BUR = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 300
+					producer = "RAJ"
+				}
+			}
+			BUR = { 
+				set_politics = { 
+					ruling_party = neutrality
+					last_election = "1936.11.26"
+					election_frequency = 48
+					elections_allowed = no
+				}
+				set_political_party = {
+					ideology = democratic popularity = 51
+					ideology = fascism popularity = 1
+					ideology = communism popularity = 1
+					ideology = neutrality popularity = 47
+				}
+			}
+		}
+	}
+
+	option = { #Swap to BUR
+		name = burma.1.b
+		custom_effect_tooltip = burma_swap_tooltip
+		hidden_effect = {
+			BUR = { change_tag_from = ENG }
+			if = {
+				limit = {
+					288 = {
+						OR = {
+							is_owned_by = RAJ
+							is_owned_by = ENG
+						}
+					}
+				}
+				BUR = { transfer_state = 288 }
+				RAJ = { remove_state_core = 288 }
+			}
+			if = {
+				limit = {
+					640 = {
+						OR = {
+							is_owned_by = RAJ
+							is_owned_by = ENG
+						}
+					}
+				}
+				BUR = { transfer_state = 640 }
+				RAJ = { remove_state_core = 640 }
+			}
+			if = {
+				limit = {
+					has_dlc = "Together for Victory"
+				}
+				set_autonomy = {
+					target = BUR
+					autonomous_state = autonomy_colony
+					freedom_level = 0.35
+					}
+				else = {
+					puppet = BUR
+				}
+			}
+			RAJ = { country_event = burma.2 }
+			BUR = { set_cosmetic_tag = BUR_UK }
+			BUR = { add_state_core = 288 }
+			BUR = { add_state_core = 640 }
+			BUR = { load_oob = BUR_1937 }
+			BUR = { 
+				288 = { 
+					add_building_construction = { 
+						type = arms_factory level = 1 instant_build = yes
+					}
+				}
+			}
+			BUR = { 
+				640 = { 
+					add_building_construction = { 
+						type = arms_factory level = 1 instant_build = yes
+					}
+				}
+			}
+			BUR = {	
+				add_equipment_to_stockpile = {
+					type = artillery_equipment_1
+					amount = 50
+					producer = "RAJ"
+				}
+			}
+			BUR = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 300
+					producer = "RAJ"
+				}
+			}
+			BUR = { 
+				set_politics = { 
+					ruling_party = neutrality
+					last_election = "1936.11.26"
+					election_frequency = 48
+					elections_allowed = no
+				}
+				set_political_party = {
+					ideology = democratic popularity = 51
+					ideology = fascism popularity = 1
+					ideology = communism popularity = 1
+					ideology = neutrality popularity = 47
+				}
+			}
+		}
+	}
+}
+
+#India is informed of split
+country_event = {
+	id = burma.2
+	title = burma.2.t # Government of Burma Act 1935
+	desc = burma.2.d
+	picture = gfx/event_pictures/burma_government_house.dds
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = burma.2.a #Ok
+	}
+}
+
+#Replacement of Burmese Governor
+country_event = {
+	id = burma.3 
+	title = burma.3.t # Replacement of Governor
+	desc = burma.3.d
+	picture = gfx/event_pictures/burma_government_house.dds
+	
+	trigger = {
+		TAG = ENG
+		has_global_flag = burma_act
+		AND = {
+			OR = {
+				has_country_flag = chamberlain_resigned
+				has_country_flag = chamberlain_died
+			}
+			BUR = { is_puppet_of = ENG 
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	option = { #Ok
+		name = burma.3.a
+		hidden_effect = {
+		BUR = { country_event = burma.4 }
+		}
+	}
+}
+
+#Governor is replaced
+country_event = {
+	id = burma.4 
+	title = burma.4.t # Replacement of Governor
+	desc = burma.4.d
+	picture = gfx/event_pictures/burma_government_house.dds
+	
+	is_triggered_only = yes
+	
+	option = { #Ok
+		name = burma.4.a
+		create_country_leader = {
+			name = "Reginald Dorman-Smith"
+			desc = "POLITICS_REGINALD_DORMAN-SMITH_DESC"
+			picture = "gfx/leaders/BUR/Portrait_Burma_Reginald_Dorman-Smith.dds"
+			expire = "1965.1.1"
+			ideology = despotism
+			traits = {
+			}
+		}
+	}
+}
+
+##Japanese Pet
+#country_event = {
+#	id = burma.5
+#	hidden = yes
+#	
+#	fire_only_once = yes
+#	
+#	trigger = {
+#		TAG = BUR 
+#		is_puppet_of = JAP
+#	}
+#		
+#	option = {
+#		name = burma.5.a
+#		set_cosmetic_tag = BUR_JAP
+#	}
+#}

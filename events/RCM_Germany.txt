@@ -1,0 +1,36 @@
+﻿add_namespace = rcmgermany
+# China Mod
+country_event = {
+	id = rcmgermany.2000
+	title = rcmgermany.2000.t
+	desc = rcmgermany.2000.d
+	picture = GFX_report_event_HHK_berlin
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rcmgermany.2000.a		#Agree
+		ai_chance = { factor = 100 }
+		add_political_power = 100
+		set_global_flag = ger_support_chi
+		GER = {
+				add_opinion_modifier = { target = CHI modifier = chi_promise_focus }
+			}
+		JAP = {
+				add_opinion_modifier = { target = GER modifier = ger_support_chi }
+			}
+		CHI = {
+				add_opinion_modifier = { target = GER modifier = ger_accept_chi }
+				country_event = { days = 5 id = rcmchina.1001 }
+		}
+	}
+	
+	option = {
+		name = rcmgermany.2000.b		#refuse
+		ai_chance = { factor = 0 }
+		CHI =  { 
+				add_opinion_modifier = { target = GER modifier = ger_refuse_chi } 
+				country_event = { days = 5 id = rcmchina.1002 }
+		}
+	}
+}

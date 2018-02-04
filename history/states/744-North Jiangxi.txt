@@ -1,0 +1,38 @@
+state={
+	id=744
+	name="STATE_744"
+	state_category=city
+	history = {
+		owner = CHI
+		add_core_of = CHI
+		add_core_of = PRC
+		victory_points = {
+			3992 3 
+		}
+		buildings = {
+			infrastructure = 4
+			arms_factory = 1
+			industrial_complex = 1
+		}
+		1939.1.1 = {
+			add_core_of = RFM
+			RFM = {
+				set_province_controller = 1153
+				set_province_controller = 1628
+				set_province_controller = 3992
+				set_province_controller = 4038
+				set_province_controller = 4185
+				set_province_controller = 7653
+				set_province_controller = 10114
+				set_province_controller = 11988
+				set_province_controller = 13141
+			}
+		}
+	}
+	
+	provinces={
+		1066 1153 1628 3992 4038 4083 4185 7007 7054 7653 9984 10114 10501 11961 11988 13141 
+	}
+	manpower= 5126400
+	buildings_max_level_factor=1.000
+}

@@ -1,0 +1,94 @@
+﻿###########################
+# Chinese Events BORDER WARS ADDED SOUTHERN SHAANXI #ID = 743#
+###########################
+
+add_namespace = hpc
+
+# chi declared hpc indep
+country_event = {
+	id = hpc.1
+	title = hpc.1.t
+	desc = hpc.1.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+	option = { 
+		name = gud.1.a #accept
+		ai_chance = { 
+		base = 80 	
+			modifier = {
+				factor = 150
+				is_historical_focus_on = yes
+			}
+		}
+		GXC = {
+			country_event = { days = 5 id = gxc.2 }
+		}
+	}
+	option = { 
+		name = gud.1.b #refuse
+		ai_chance = { 
+		base = 20 	
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		GXC = {
+			country_event = { days = 5 id = gxc.3 }
+		}
+	}
+}
+
+country_event = {
+	id = hpc.2
+	title = hpc.2.t
+	desc = hpc.2.d
+	picture = GFX_report_event_chinese_soldiers_running
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = hpc.2.a
+		ai_chance = {
+			base = 80
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		set_global_flag = hpc_pro_jap
+		JAP = {
+			country_event = { id = rcmjapan.2 }
+		}	
+		effect_tooltip = {
+			country_event = { days = 15 id = news.1302 }
+			JAP = {
+				give_guarantee = HPC		
+			}
+		}
+	}
+	option = {
+		name = hpc.2.b
+		ai_chance = {
+			base = 5
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		JAP = {
+			country_event = { id = rcmjapan.1 }
+		}
+	}	
+}
+#puppeted by china cuz china allies with jap
+country_event = {
+	id = hpc.3
+	title = hpc.3.t
+	desc = hpc.3.d
+	picture = GFX_report_event_japanese_chinese_surrender
+	is_triggered_only = yes
+	option = {
+		name = hpc.3.a
+	}
+}

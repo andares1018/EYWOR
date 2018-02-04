@@ -1,0 +1,6929 @@
+focus_tree = {
+	id = PRC_Focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = PRC
+		}
+	}
+	default = no
+	focus = {
+		id = PRC_East_conquest
+		icon = GFX_goal_generic_political_pressure
+		cost = 10
+		x = 1
+		y = 0
+		ai_will_do = {
+			factor = 10
+		}
+		select_effect = {
+			country_event = {
+				id = EFM_Comchina.1
+			}
+		}
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_political_power = 60
+			custom_effect_tooltip = a_war_will_be_declared_at_start_of_focus_SHX_tt
+			custom_effect_tooltip = PRC_East_conquest_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						SHX = {
+							OR = {
+								surrender_progress > 0.2
+								exists = no
+							}
+						}
+					}
+					country_event = {
+						id = EFM_Comchina.2
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							SHX = {
+								surrender_progress < 0.21
+							}
+							NOT = {
+								has_war_with = SHX
+							}
+						}
+						country_exists = SHX
+					}
+					country_event = {
+						id = EFM_Comchina.4
+					}
+				}
+			}
+		}
+		will_lead_to_war_with = SHX
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_Red_Army
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10.00
+		x = 25
+		y = 0
+		ai_will_do = {
+			modifier = {
+				factor = 0
+				date < 1937.1.1
+			}
+		}
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 2
+				technology = peoples_army
+				technology = human_infantry_offensive
+				technology = large_front_offensive
+				technology = human_wave_offensive
+				technology = guerilla_warfare
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			NOT = {
+				has_idea = Chinese_Red_Army
+			}
+		}
+	}
+	focus = {
+		id = PRC_Five_year_plans_of_China
+		icon = GFX_goal_generic_soviet_construction
+		cost = 10.00
+		x = 42
+		y = 0
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_timed_idea = {
+				idea = PRC_Five_year_plans_of_China
+				days = 1825
+			}
+			add_tech_bonus = {
+				name = construction_tech
+				bonus = 0.5
+				uses = 1
+				category = construction_tech
+			}
+			add_tech_bonus = {
+				name = engineers_tech
+				bonus = 0.5
+				uses = 1
+				category = engineers_tech
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			has_country_flag = PRC_Establish_state_or_independent_government
+		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_End_of_Long_March
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10.00
+		x = 12
+		y = 0
+		ai_will_do = {
+			factor = 10
+		}
+		select_effect = {
+			country_event = {
+				days = 10
+				id = EFM_Comchina.20
+			}
+		}
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			custom_effect_tooltip = PRC_End_of_Long_March_tt
+			add_political_power = 100
+			hidden_effect = {
+				set_country_flag = long_end_prc
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = Has_decent_or_better_recovery_tt
+				NOT = {
+					OR = {
+						has_idea = Long_March_1
+						has_idea = Long_March_2
+						has_idea = Long_March_3
+					}
+				}
+			}
+			has_war = yes
+		}
+	}
+	focus = {
+		id = PRC_Western_expedition
+		icon = GFX_goal_generic_position_armies
+		cost = 10
+		x = 7
+		y = 0
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				date < 1936.2.1
+			}
+		}
+		select_effect = {
+			country_event = {
+				id = EFM_Comchina.6
+			}
+		}
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_political_power = 60
+			custom_effect_tooltip = a_war_will_be_declared_at_start_of_focus_NXM_1_tt
+			custom_effect_tooltip = PRC_Western_expedition_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						OR = {
+							760 = {
+								is_controlled_by = PRC
+							}
+							NXM = {
+								exists = no
+							}
+						}
+					}
+					country_event = {
+						id = EFM_Comchina.7
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							NOT = {
+								760 = {
+									is_controlled_by = PRC
+								}
+							}
+							PRC = {
+								surrender_progress > 0.2
+							}
+							NOT = {
+								has_war_with = NXM
+							}
+						}
+						country_exists = NXM
+					}
+					country_event = {
+						id = EFM_Comchina.9
+					}
+				}
+			}
+		}
+		will_lead_to_war_with = NXM
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_Anti_Japanese_and_Chiang
+		icon = GFX_goal_generic_major_war
+		cost = 7.15
+		prerequisite = {
+			focus = PRC_East_conquest
+		}
+		prerequisite = {
+			focus = PRC_Western_expedition
+		}
+		mutually_exclusive = {
+			focus = PRC_Forcing_Chiang_against_Japan
+		}
+		x = 1
+		y = 1
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			if = {
+				limit = {
+					NOT = {
+						has_war_with = CHI
+					}
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = CHI
+				}
+			}
+			add_timed_idea = {
+				idea = PRC_For_the_china
+				days = 365
+			}
+			CHI = {
+				add_opinion_modifier = {
+					target = PRC
+					modifier = hostile_status
+				}
+				add_ai_strategy = {
+					type = conquer
+					id = "PRC"
+					value = 200
+				}
+			}
+			SHX = {
+				add_opinion_modifier = {
+					target = PRC
+					modifier = hostile_status
+				}
+				add_ai_strategy = {
+					type = antagonize
+					id = "PRC"
+					value = 200
+				}
+			}
+			XSM = {
+				add_opinion_modifier = {
+					target = PRC
+					modifier = hostile_status
+				}
+				add_ai_strategy = {
+					type = antagonize
+					id = "PRC"
+					value = 200
+				}
+			}
+			set_country_flag = PRC_Opposed_to_chiang
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			OR = {
+				num_of_controlled_states > 1
+				has_global_flag = zhang_refuses_tacit_truce
+			}
+			NOT = {
+				has_opinion_modifier = chi_prc_reconciliation
+			}
+		}
+		will_lead_to_war_with = CHI
+		bypass = {
+			has_global_flag = zhang_refuses_tacit_truce
+		}
+	}
+	focus = {
+		id = PRC_Call_out_nationwide
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Anti_Japanese_and_Chiang
+		}
+		x = 0
+		y = 2
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			create_faction = "Anti_japan_national_salvation_front"
+			every_other_country = {
+				limit = {
+					is_warlord = yes
+					is_puppet = no
+					NOT = {
+						has_war_with = PRC
+						is_in_faction_with = CHI
+					}
+				}
+				country_event = {
+					id = EFM_Comchina.18
+					days = 1
+				}
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_Communication_with_hebei
+		icon = GFX_goal_generic_military_deal
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_Anti_Japanese_and_Chiang
+		}
+		x = 1
+		y = 3
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			HPC = {
+				country_event = {
+					days = 1
+					id = EFM_Comchina.15
+				}
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			#is_neighbor_of = HPC
+		}
+		bypass = {
+			OR = {
+				is_in_faction_with = HPC
+				has_war_with = HPC
+				HPC = {
+					exists = no
+					is_puppet = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_Forcing_Chiang_against_Japan
+		icon = GFX_goal_generic_military_deal
+		cost = 7.15
+		prerequisite = {
+			focus = PRC_East_conquest
+		}
+		prerequisite = {
+			focus = PRC_Western_expedition
+		}
+		mutually_exclusive = {
+			focus = PRC_Anti_Japanese_and_Chiang
+		}
+		x = 5
+		y = 1
+		ai_will_do = {
+			modifier = {
+				factor = 5
+				is_historical_focus_on = yes
+			}
+		}
+		select_effect = {
+			NEA = {
+				country_event = {
+					days = 25
+					id = EFM_Comchina.11
+				}
+			}
+		}
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			custom_effect_tooltip = about_twenfivdays_in_tt
+			effect_tooltip = {
+				NEA = {
+					country_event = {
+						days = 1
+						id = EFM_Comchina.11
+					}
+				}
+			}
+			custom_effect_tooltip = they_wont_accept_if_regional_influence_too_strong_tt
+			custom_effect_tooltip = if_they_accept_tt
+			effect_tooltip = {
+				761 = { set_demilitarized_zone = yes }
+				add_political_power = 50
+				add_national_unity = 0.05
+			}
+			custom_effect_tooltip = if_they_refuse_tt
+			effect_tooltip = {
+				add_political_power = -50
+				add_national_unity = -0.05
+			}
+			custom_effect_tooltip = switch_to_AJAC_focus
+			custom_effect_tooltip = separate_line_tt
+			custom_effect_tooltip = upon_completion_tt
+			add_political_power = 75
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			has_full_control_of_state = 622
+		}
+		bypass = {
+			has_opinion_modifier = chi_prc_reconciliation
+		}
+		cancel = {
+			has_global_flag = zhang_refuses_tacit_truce
+		}
+	}
+	focus = {
+		id = PRC_Red_Army_Recovery
+		icon = GFX_goal_generic_consumer_goods
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Anti_Japanese_and_Chiang
+			focus = PRC_Forcing_Chiang_against_Japan
+		}
+		x = 3
+		y = 2
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_national_unity = 0.10
+			swap_ideas = {
+				add_idea = Long_March_2
+				remove_idea = Long_March_1
+			}
+			custom_effect_tooltip = enable_recovery_effort_focus_tt
+			#custom_effect_tooltip = continuous_recover_from_the_long_march_tt
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_makeshift_research_facility
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Red_Army_Recovery
+		}
+		x = 3
+		y = 3
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_research_slot = 1
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_Join_the_war
+		icon = GFX_goal_generic_position_armies
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_Forcing_Chiang_against_Japan
+		}
+		prerequisite = {
+			focus = PRC_Red_Army_Recovery
+		}
+		x = 5
+		y = 3
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			set_country_flag = PRC_joined_CHI_against_JAP
+			random_other_country = {
+				limit = {
+					is_legit_china = yes
+				}
+				country_event = {
+					id = rcmchina.106
+				}
+				add_to_faction = ROOT
+				PRC = {
+					add_opinion_modifier = {
+						target = PREV
+						modifier = unstable_alliance
+					}
+				}
+				add_opinion_modifier = {
+					target = PRC
+					modifier = unstable_alliance
+				}
+				add_to_war = {
+					targeted_alliance = PREV
+					enemy = JAP
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_war_with = SOV
+					}
+				}
+				custom_effect_tooltip = rcmchina.104_PRC_SOV_reinforcements
+			}
+			custom_effect_tooltip = chinese_sov_rep_dissolves
+			hidden_effect = {
+				set_cosmetic_tag = PRC_SGN
+				if = {
+					limit = {
+						NOT = {
+							has_war_with = SOV
+						}
+						any_other_country = {
+							OR = {
+								tag = ROOT
+								is_in_faction_with = ROOT
+							}
+							controls_state = 621
+							#no need 763
+						}
+					}
+				}
+			}
+			#load_oob = "PRC_SOV_reinforcements"
+			custom_effect_tooltip = PRC_Join_the_war_tt
+			set_country_flag = PRC_United_front_was_established
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			any_other_country = {
+				custom_trigger_tooltip = {
+					tooltip = is_central_government_of_china_tt
+					is_legit_china = yes
+				}
+				has_war_with = JAP
+				is_faction_leader = yes
+				NOT = {
+					has_war_with = ROOT
+				}
+			}
+			JAP = {
+				has_offensive_war = yes
+			}
+			NOT = {
+				is_puppet = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_Confrontation_Focus
+		icon = GFX_goal_generic_military_sphere
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Communication_with_hebei
+			focus = PRC_Join_the_war
+		}
+		mutually_exclusive = {
+			focus = PRC_Developing_Focus
+		}
+		x = 1
+		y = 4
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+				CHI = {
+					exists = yes
+					is_puppet = no
+				}
+			}
+		}
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_ideas = PRC_Fight_guidelines
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_Japan_war_focus
+		icon = GFX_focus_AST_war_japan
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Call_out_nationwide
+		}
+		prerequisite = {
+			focus = PRC_Confrontation_Focus
+		}
+		x = 0
+		y = 5
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			create_wargoal = {
+				type = annex_everything
+				target = JAP
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			any_other_country = {
+				is_neighbor_of = ROOT
+				has_war_with = ROOT
+				OR = {
+					is_subject_of = JAP
+					tag = JAP
+				}
+			}
+		}
+		bypass = {
+			JAP = {
+				OR = {
+					has_war_with = PRC
+					is_puppet = yes
+					exists = no
+					has_government = communism
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_Breaking_operations
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Confrontation_Focus
+		}
+		x = 2
+		y = 5
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			custom_effect_tooltip = PRC_Breaking_operations_tt
+			every_other_country = {
+				limit = {
+					has_war_with = PRC
+				}
+				add_ideas = PRC_Sabotage_factory
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			has_war = yes
+		}
+	}
+	focus = {
+		id = PRC_Developing_Focus
+		icon = GFX_goal_generic_construction2
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Join_the_war
+		}
+		mutually_exclusive = {
+			focus = PRC_Confrontation_Focus
+		}
+		x = 5
+		y = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_political_power = 100
+			add_ideas = PRC_Growth_guidelines
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_Establish_traffic_network
+		icon = GFX_goal_generic_construct_civilian
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Developing_Focus
+		}
+		x = 4
+		y = 5
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			if = {
+				limit = {
+					num_of_controlled_states > 1
+				}
+				random_owned_controlled_state = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			622 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_Soviet_armed
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Developing_Focus
+		}
+		x = 6
+		y = 5
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_Weapon_production
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Soviet_armed
+		}
+		x = 6
+		y = 6
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_Peasant_class
+		icon = GFX_focus_generic_concessions
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Forcing_Chiang_against_Japan
+		}
+		x = 7
+		y = 2
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_ideas = PRC_Farmer_Focus
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_Land_reform
+		icon = GFX_goal_generic_soviet_construction
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Peasant_class
+		}
+		x = 7
+		y = 3
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_ideas = agrarian_reform_idea
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_West_road_army_victory
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 12.00
+		prerequisite = {
+			focus = PRC_Western_expedition
+			focus = PRC_End_of_Long_March
+		}
+		mutually_exclusive = {
+			focus = PRC_CPC_First
+			focus = PRC_Expand_United_front
+			focus = PRC_Negate_stalinism
+		}
+		x = 9
+		y = 1
+		ai_will_do = {
+			factor = 5
+		}
+		select_effect = {
+			country_event = {
+				id = EFM_Comchina.211
+			}
+			country_event = {
+				days = 70
+				id = EFM_Comchina.2117
+			}
+			country_event = {
+				days = 70
+				id = EFM_Comchina.2119
+			}
+			country_event = {
+				days = 70
+				id = EFM_Comchina.2120
+			}
+		}
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			custom_effect_tooltip = a_war_will_be_declared_at_start_of_focus_NXM_2_tt
+			custom_effect_tooltip = PRC_open_suppy_tt
+			custom_effect_tooltip = if_successful_tt
+			effect_tooltip = {
+				add_ideas = PRC_Victory_in_the_west
+				add_national_unity = 0.05
+				add_political_power = 100
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			NOT = {
+				has_country_flag = no_PRC_west_expedition_victory
+			}
+			has_country_flag = PRC_west_expedition_victory
+		}
+	}
+	focus = {
+		id = PRC_Third_forces
+		icon = GFX_goal_tfv_burn_the_royal_portraits
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_West_road_army_victory
+		}
+		x = 9
+		y = 2
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			create_country_leader = {
+				name = "Zhang Guotao"
+				desc = "POLITICS_Zhang_Guotao_DESC"
+				picture = "Portrait_China_Zhang_Guotao.dds"
+				expire = "1965.1.1"
+				ideology = marxism
+				traits = { dictator }
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_Establish_authority
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Third_forces
+		}
+		x = 9
+		y = 3
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_ideas = PRC_Authority_of_zhang
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_military_junta
+		icon = GFX_focus_generic_air_defense
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Establish_authority
+		}
+		mutually_exclusive = {
+			focus = PRC_Republican
+			focus = PRC_federation
+		}
+		x = 9
+		y = 4
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_ideas = PRC_The_military_junta
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_Rise_of_reactionaries
+		icon = GFX_goal_support_fascism
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_military_junta
+		}
+		mutually_exclusive = {
+			focus = PRC_Centralisation
+			focus = PRC_Proletariat_and_democracy
+			focus = PRC_Democratic_centralism
+		}
+		x = 9
+		y = 5
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_ideas = PRC_Exclusion_of_communism
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_military_dictatorship
+		icon = GFX_focus_rom_royal_dictatorship
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Rise_of_reactionaries
+		}
+		x = 9
+		y = 6
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			set_party_name = {
+				ideology = fascism
+				long_name = zhang_prc_name
+				name = zhang_prc_name
+			}
+			custom_effect_tooltip = zhang_prc_name_politics_tt
+			hidden_effect = {
+				set_politics = {
+					ruling_party = fascism
+					elections_allowed = no
+				}
+			}
+			if = {
+				limit = {
+					num_of_controlled_states > 1
+				}
+				start_civil_war = {
+					ruling_party = fascism
+					ideology = communism
+					size = 0.5
+				}
+				hidden_effect = {
+					random_other_country = {
+						limit = {
+							original_tag = PRC
+							has_government = communism
+						}
+						set_equipment_fraction = 0.7
+						set_national_unity = 0.8
+					}
+				}
+				set_equipment_fraction = 0.7
+				set_national_unity = 0.6
+			}
+			if = {
+				limit = {
+					num_of_controlled_states < 2
+				}
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.2
+				}
+				add_popularity = {
+					ideology = communism
+					popularity = -0.2
+				}
+			}
+			set_country_flag = PRC_Establish_state_or_independent_government
+			custom_effect_tooltip = a_nation_to_be_established_tt
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = zhang_thirty_support_trigger_tt
+				fascism > 0.3
+			}
+			is_subject = no
+		}
+	}
+	focus = {
+		id = PRC_CPC_First
+		icon = GFX_goal_generic_political_pressure
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_End_of_Long_March
+		}
+		mutually_exclusive = {
+			focus = PRC_West_road_army_victory
+			focus = PRC_Expand_United_front
+			focus = PRC_Negate_stalinism
+		}
+		x = 11
+		y = 1
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 0
+				date < 1938.1.1
+			}
+		}
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_national_unity = 0.05
+			add_ideas = PRC_CPC_First
+			add_opinion_modifier = {
+				target = CHI
+				modifier = Nations_estrangement
+			}
+			CHI = {
+				add_opinion_modifier = {
+					target = PRC
+					modifier = Nations_estrangement
+				}
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			has_country_flag = PRC_Maintain_the_status
+		}
+	}
+	focus = {
+		id = PRC_Domestic_faction
+		icon = GFX_focus_generic_join_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_CPC_First
+		}
+		x = 11
+		y = 2
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_national_unity = 0.05
+			add_opinion_modifier = {
+				target = SOV
+				modifier = Nations_estrangement
+			}
+			SOV = {
+				add_opinion_modifier = {
+					target = PRC
+					modifier = Nations_estrangement
+				}
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_Route_struggle
+		icon = GFX_focus_generic_coastal_fort
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Domestic_faction
+		}
+		x = 11
+		y = 3
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_ideas = PRC_Firm_route
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_Expand_United_front
+		icon = GFX_goal_anschluss
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_End_of_Long_March
+		}
+		mutually_exclusive = {
+			focus = PRC_West_road_army_victory
+			focus = PRC_CPC_First
+			focus = PRC_Negate_stalinism
+		}
+		x = 13
+		y = 1
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 0
+				date < 1938.1.1
+			}
+		}
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_ideas = PRC_Expand_United_front
+			add_opinion_modifier = {
+				target = CHI
+				modifier = Nations_friendly
+			}
+			CHI = {
+				add_opinion_modifier = {
+					target = PRC
+					modifier = Nations_friendly
+				}
+				add_ai_strategy = {
+					type = befriend
+					id = "PRC"
+					value = 100
+				}
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			has_country_flag = PRC_Leaning_to_moscow
+		}
+	}
+	focus = {
+		id = PRC_International_faction
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Expand_United_front
+		}
+		x = 13
+		y = 2
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_national_unity = -0.05
+			add_opinion_modifier = {
+				target = SOV
+				modifier = Nations_friendly
+			}
+			SOV = {
+				add_opinion_modifier = {
+					target = PRC
+					modifier = Nations_friendly
+				}
+			}
+			create_country_leader = {
+				name = "Wang Ming"
+				desc = "POLITICS_Wang_Ming_DESC"
+				picture = "Portrait_China_Wang_Ming.dds"
+				expire = "1965.1.1"
+				ideology = marxism
+				traits = {
+				}
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_Negate_stalinism
+		icon = GFX_goal_anti_comintern_pact
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_End_of_Long_March
+		}
+		mutually_exclusive = {
+			focus = PRC_West_road_army_victory
+			focus = PRC_CPC_First
+			focus = PRC_Expand_United_front
+		}
+		x = 15
+		y = 1
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 0
+				date < 1938.1.1
+			}
+		}
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			set_party_name = {
+				ideology = communism
+				long_name = PRC_Chinese_communist_league
+				name = PRC_Chinese_communist_league
+			}
+			add_ideas = PRC_Trotskyism
+			if = {
+				limit = {
+					SOV = {
+						has_country_leader = {
+							name = "Joseph Stalin"
+						}
+					}
+				}
+				add_opinion_modifier = {
+					target = SOV
+					modifier = hostile_status
+				}
+				SOV = {
+					add_opinion_modifier = {
+						target = PRC
+						modifier = hostile_status
+					}
+				}
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			has_country_flag = PRC_estrangement_moscow
+			has_country_flag = PRC_Route_of_founding_member
+		}
+	}
+	focus = {
+		id = PRC_Trotskyism_faction
+		icon = GFX_goal_support_fourth_int
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Negate_stalinism
+		}
+		x = 15
+		y = 2
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			if = {
+				limit = {
+					has_country_flag = Chen_duxiu_comeback
+				}
+				create_country_leader = {
+					name = "Chen Duxiu"
+					desc = "POLITICS_CHEN_DUXIU_DESC"
+					picture = "Portrait_China_Chen_Duxiu.dds"
+					expire = "1965.1.1"
+					ideology = marxism
+					traits = { permanent_revolutionary }
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = Chen_duxiu_comeback
+					}
+				}
+				create_country_leader = {
+					name = "Peng Shuzhi"
+					desc = "POLITICS_PENG_SHUZHI_DESC"
+					picture = "Portrait_China_Peng_Shuzhi.dds"
+					expire = "1965.1.1"
+					ideology = marxism
+					traits = {
+					}
+				}
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+		bypass = {
+			has_country_leader = {
+				name = "Chen Duxiu"
+			}
+		}
+	}
+	focus = {
+		id = PRC_Working_class
+		icon = GFX_goal_generic_political_pressure
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_International_faction
+			focus = PRC_Trotskyism_faction
+		}
+		x = 13
+		y = 3
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_ideas = PRC_Worker_Focus
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_Republican
+		icon = GFX_goal_generic_national_unity
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Establish_authority
+			focus = PRC_Route_struggle
+			focus = PRC_Working_class
+		}
+		mutually_exclusive = {
+			focus = PRC_military_junta
+			focus = PRC_federation
+		}
+		x = 12
+		y = 4
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_political_power = 80
+			add_ideas = PRC_The_Republican
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_Centralisation
+		icon = GFX_focus_generic_self_management
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_military_junta
+			focus = PRC_Republican
+		}
+		mutually_exclusive = {
+			focus = PRC_Rise_of_reactionaries
+			focus = PRC_Democratic_centralism
+			focus = PRC_Proletariat_and_democracy
+		}
+		x = 11
+		y = 5
+		ai_will_do = {
+			modifier = {
+				factor = 0
+				has_country_leader = {
+					name = "Mao Zedong"
+				}
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_ideas = PRC_Bureaucracy
+		}
+	}
+	focus = {
+		id = PRC_Exclude_bureaucracy
+		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Trotskyism_faction
+		}
+		x = 15
+		y = 3
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_ideas = PRC_Oppose_bureaucrats
+		}
+	}
+	focus = {
+		id = PRC_federation
+		icon = GFX_focus_generic_the_giant_wakes
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Working_class
+			focus = PRC_Exclude_bureaucracy
+		}
+		mutually_exclusive = {
+			focus = PRC_military_junta
+			focus = PRC_Republican
+		}
+		x = 15
+		y = 4
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_ideas = PRC_The_federation
+			if = {
+				limit = {
+					has_government = democratic
+				}
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = yes
+				}
+			}
+			if = {
+				limit = {
+					has_government = neutrality
+				}
+				set_politics = {
+					ruling_party = neutrality
+					elections_allowed = yes
+				}
+			}
+			add_political_power = 60
+			add_national_unity = 0.05
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			NOT = {
+				has_government = fascism
+			}
+		}
+	}
+	focus = {
+		id = PRC_Proletariat_and_democracy
+		icon = GFX_focus_YUG_pan_slavic_congress
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_federation
+		}
+		mutually_exclusive = {
+			focus = PRC_Rise_of_reactionaries
+			focus = PRC_Centralisation
+			focus = PRC_Democratic_centralism
+		}
+		x = 15
+		y = 5
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = yes
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			has_government = communism
+		}
+	}
+	focus = {
+		id = PRC_Federal_Republic
+		icon = GFX_focus_generic_join_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Proletariat_and_democracy
+		}
+		x = 15
+		y = 6
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			hidden_effect = {
+				drop_cosmetic_tag = yes
+				set_cosmetic_tag = CFR
+			}
+			custom_effect_tooltip = PRC_Federal_Republic_tt
+			set_country_flag = PRC_Establish_state_or_independent_government
+			custom_effect_tooltip = a_nation_to_be_established_tt
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			OR = {
+				has_country_flag = PRC_United_front_was_established
+				has_country_flag = PRC_Opposed_to_chiang
+			}
+			num_of_controlled_states > 5
+			is_subject = no
+		}
+	}
+	focus = {
+		id = PRC_Strategic_offensive
+		icon = GFX_goal_generic_army_doctrines
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Red_Army
+		}
+		x = 20
+		y = 1
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 3
+				category = land_doctrine
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			num_of_controlled_states > 10
+		}
+	}
+	focus = {
+		id = PRC_Field_army
+		icon = GFX_goal_generic_military_sphere
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Strategic_offensive
+		}
+		x = 18
+		y = 2
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_ideas = PRC_Field_army
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_Disrupt_enemy
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Field_army
+		}
+		x = 18
+		y = 3
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			custom_effect_tooltip = PRC_Disrupt_enemy_tt
+			every_other_country = {
+				limit = {
+					is_legit_china = yes
+					has_war_with = ROOT
+					NOT = {
+						OR = {
+							has_government = communism
+							has_completed_focus = expel_the_communist_spies
+							has_completed_focus = society_cleansing
+						}
+					}
+				}
+				add_ideas = CHI_communist_uprisings
+				set_country_flag = PRC_Disrupt_enemy_to_enemy
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			any_other_country = {
+				is_neighbor_of = PRC
+				NOT = {
+					is_in_faction_with = ROOT
+					has_government = communism
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_Reorganize_NRA
+		icon = GFX_goal_generic_alliance
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Disrupt_enemy
+		}
+		x = 17
+		y = 4
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_ideas = PRC_Reorganize_troops
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			any_other_country = {
+				is_neighbor_of = PRC
+				owns_state = 613
+				has_war_with = PRC
+				NOT = {
+					has_government = communism
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_Nationwide_revolution
+		icon = GFX_goal_generic_political_pressure
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Disrupt_enemy
+		}
+		x = 18
+		y = 5
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			custom_effect_tooltip = PRC_Nationwide_revolution_tt
+			every_other_country = {
+				limit = {
+					owns_state = 613
+					NOT = {
+						has_government = communism
+						has_war_with = ROOT
+					}
+				}
+				hidden_effect = {
+					random_owned_controlled_state = {
+						limit = {
+							any_neighbor_state = {
+								owner = {
+									tag = PRC
+								}
+							}
+							NOT = {
+								state = 524
+							}
+							NOT = {
+								state = 744
+							}
+							NOT = {
+								state = 591
+							}
+						}
+						save_event_target_as = PRC_Nationwide_revolution_communist_state
+					}
+				}
+				hidden_effect = {
+					random_owned_controlled_state = {
+						limit = {
+							NOT = {
+								state = 524
+							}
+							NOT = {
+								state = 744
+							}
+							NOT = {
+								state = 591
+							}
+						}
+						save_event_target_as = PRC_Nationwide_revolution_communist_state
+					}
+				}
+				country_event = {
+					id = EFM_Comchina.46
+					days = 0
+				}
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			is_subject = no
+			any_other_country = {
+				is_neighbor_of = PRC
+				owns_state = 613
+				has_war_with = PRC
+				surrender_progress > 0.5
+			}
+		}
+	}
+	focus = {
+		id = PRC_Theater_Settings
+		icon = GFX_goal_generic_position_armies
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Disrupt_enemy
+		}
+		x = 19
+		y = 4
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_ideas = PRC_Settings
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_Guerrilla_warfare_orientation
+		icon = GFX_focus_RAJ_indian_gurkhas
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Strategic_offensive
+		}
+		mutually_exclusive = {
+			focus = PRC_Protection_of_intelligence
+		}
+		x = 20
+		y = 2
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_ideas = PRC_Trend_guerrilla_warfare
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_Roundabout_Tactics
+		icon = GFX_goal_generic_cavalry
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Guerrilla_warfare_orientation
+		}
+		x = 20
+		y = 3
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			swap_ideas = {
+				remove_idea = PRC_Trend_guerrilla_warfare
+				add_idea = PRC_Trend_guerrilla_warfare_2
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_Protection_of_intelligence
+		icon = GFX_goal_generic_army_artillery
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Strategic_offensive
+		}
+		mutually_exclusive = {
+			focus = PRC_Guerrilla_warfare_orientation
+		}
+		x = 22
+		y = 2
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_ideas = PRC_Mobile_Warfare_2
+			custom_effect_tooltip = PRC_Protection_of_intelligence_tt
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_Strengthen_assault_ability
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Protection_of_intelligence
+		}
+		x = 22
+		y = 3
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			swap_ideas = {
+				remove_idea = PRC_Mobile_Warfare_2
+				add_idea = PRC_Mobile_Warfare_3
+			}
+			custom_effect_tooltip = PRC_Protection_of_intelligence_tt
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_Underground_bunker
+		icon = GFX_goal_generic_construct_military
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Roundabout_Tactics
+			focus = PRC_Strengthen_assault_ability
+		}
+		x = 21
+		y = 4
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_ideas = PRC_Underground_bunker
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_Type_81_ma
+		icon = GFX_goal_generic_small_arms
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Red_Army
+		}
+		x = 25
+		y = 1
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_tech_bonus = {
+				name = infantry_weapons_bonus
+				bonus = 0.25
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_Homemade_artillery
+		icon = GFX_goal_generic_army_artillery2
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Type_81_ma
+		}
+		x = 24
+		y = 2
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_tech_bonus = {
+				name = infantry_weapons_bonus
+				bonus = 0.25
+				uses = 1
+				category = artillery
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_Improve_construction_method
+		icon = GFX_goal_generic_army_artillery
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Type_81_ma
+		}
+		x = 26
+		y = 2
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_tech_bonus = {
+				name = infantry_weapons_bonus
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_Motorized_unit
+		icon = GFX_goal_generic_army_motorized
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Homemade_artillery
+		}
+		prerequisite = {
+			focus = PRC_Improve_construction_method
+		}
+		x = 25
+		y = 3
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 0.75
+				technology = motorised_infantry
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = has_low_or_no_skill_shortage_tt
+				NOT = {
+					OR = {
+						has_idea = PRC_no_skilled_personnel_1
+						has_idea = PRC_no_skilled_personnel_2
+						has_idea = PRC_no_skilled_personnel_3
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_Tank
+		icon = GFX_goal_generic_army_tanks
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Motorized_unit
+		}
+		x = 25
+		y = 4
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			if = {
+				limit = {
+					has_idea = no_proper_equipment_design
+				}
+				swap_ideas = {
+					remove_idea = no_proper_equipment_design
+					add_idea = no_proper_equipment_design_no_armor
+				}
+			}
+			if = {
+				limit = {
+					has_idea = no_proper_equipment_design_no_naval
+				}
+				swap_ideas = {
+					remove_idea = no_proper_equipment_design_no_naval
+					add_idea = no_proper_equipment_design_air
+				}
+			}
+			if = {
+				limit = {
+					has_idea = no_proper_equipment_design_no_air
+				}
+				swap_ideas = {
+					remove_idea = no_proper_equipment_design_no_air
+					add_idea = no_proper_equipment_design_naval
+				}
+			}
+			if = {
+				limit = {
+					has_idea = no_proper_equipment_design_armor
+				}
+				remove_ideas = no_proper_equipment_design_armor
+			}
+			add_tech_bonus = {
+				name = armor
+				bonus = 0.5
+				uses = 1
+				category = armor
+			}
+		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = already_learned_armor_design
+				NOT = {
+					has_idea = no_proper_equipment_design
+					has_idea = no_proper_equipment_design_no_naval
+					has_idea = no_proper_equipment_design_no_air
+					has_idea = no_proper_equipment_design_armor
+				}
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = has_no_skill_shortage_tt
+				NOT = {
+					OR = {
+						has_idea = PRC_no_skilled_personnel_1
+						has_idea = PRC_no_skilled_personnel_2
+						has_idea = PRC_no_skilled_personnel_3
+						has_idea = PRC_no_skilled_personnel_4
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_Mountain_combat
+		icon = GFX_goal_generic_special_forces
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Homemade_artillery
+		}
+		prerequisite = {
+			focus = PRC_Improve_construction_method
+		}
+		x = 27
+		y = 3
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = 0.5
+				uses = 1
+				technology = tech_mountaineers
+				technology = tech_mountaineers2
+				technology = tech_mountaineers3
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_Develop_surrounding_area
+		icon = GFX_goal_generic_war_with_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Red_Army
+		}
+		x = 30
+		y = 1
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			custom_effect_tooltip = enable_amass_upri_focus_tt
+			custom_effect_tooltip = PRC_North_China_Insurgency_tt
+			hidden_effect = {
+				every_other_country = {
+					limit = {
+						OR = {
+							tag = CHI
+							is_legit_china = yes
+							is_warlord = yes
+						}
+						has_war_with = JAP
+					}
+					#add_ideas = north_china_turned_red_idea
+					country_event = {
+						id = EFM_Comchina.208
+					}
+				}
+				country_event = {
+					id = borderwar.1
+				} 
+				597 = {	set_border_war = yes }
+				615 = {	set_border_war = yes }
+				614 = {	set_border_war = yes }
+				608 = {	set_border_war = yes }
+				609 = {	set_border_war = yes }
+				611 = {	set_border_war = yes }
+				762 = {	set_border_war = yes }
+				every_state = {
+					limit = {
+						is_north_china_state_for_liberation = yes
+					}
+					set_state_flag = commie_ridden_states
+				}
+				set_global_flag = north_china_turned_red
+			}
+		}
+		available = {
+			#hidden_trigger = {
+			#	ai_cont_foc_prc = yes
+			#}
+			has_war_with = JAP
+			any_other_country = {
+				is_neighbor_of = PRC
+				has_war_with = PRC
+			}
+		}
+		bypass = {
+			date > 1940.1.1
+			is_legit_china = yes
+			has_war = no
+			is_subject = no
+		}
+	}
+	focus = {
+		id = PRC_contact_Northeast_AntiJapanese_United_Army
+		icon = GFX_focus_generic_join_comintern
+		cost = 14.29
+		prerequisite = {
+			focus = PRC_Develop_surrounding_area
+		}
+		x = 31
+		y = 2
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			custom_effect_tooltip = PRC_Manchuria_Insurgency_tt
+			hidden_effect = {
+				every_other_country = {
+					limit = {
+						OR = {
+							tag = CHI
+							is_legit_china = yes
+							is_warlord = yes
+						}
+						has_war_with = JAP
+					}
+					country_event = {
+						days = 5
+						id = EFM_Comchina.209
+					}
+				}
+				country_event = {
+					id = borderwar.3
+				}
+				every_state = {
+					limit = {
+						is_MAN_state_for_liberation = yes
+					}
+					set_state_flag = commie_ridden_states
+				}
+				set_global_flag = dongbei_turned_red
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			OR = {
+				SOV = {
+					has_war_with = JAP
+				}
+				owns_state = 608
+			}
+		}
+		bypass = {
+			date > 1940.1.1
+			is_legit_china = yes
+			has_war = no
+			is_subject = no
+		}
+	}
+	focus = {
+		id = PRC_request_northeast_china
+		icon = GFX_focus_generic_join_comintern
+		cost = 7.15
+		prerequisite = {
+			focus = PRC_Develop_surrounding_area
+		}
+		x = 29
+		y = 2
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			SOV = {
+				country_event = {
+					id = prc.9
+				}
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			NOT = {
+				any_state = {
+					is_MAN_state_for_liberation = yes
+					NOT = {
+						controller = {
+							OR = {
+								tag = SOV
+								is_in_faction_with = SOV
+							}
+							has_war_with = JAP
+						}
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_War_of_Liberation
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Develop_surrounding_area
+		}
+		x = 30
+		y = 3
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			if = {
+				limit = {
+					country_exists = CHI
+					NOT = {
+						has_war_with = CHI
+						CHI = {
+							has_government = communism
+						}
+					}
+				}
+				country_event = {
+					days = 5
+					id = EFM_China.109
+				}
+			}
+			every_other_country = {
+				limit = {
+					OR = {
+						is_legit_china = yes
+						is_warlord = yes
+					}
+					NOT = {
+						has_government = communism
+					}
+				}
+				PREV = {
+					add_timed_idea = {
+						idea = communist_influence
+						days = 180
+					}
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = PREV
+				}
+			}
+			add_timed_idea = {
+				idea = PRC_War_of_Liberation
+				days = 120
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			NOT = {
+				has_war_with = JAP
+			}
+			NOT = {
+				any_other_country = {
+					is_legit_china = yes
+					has_war_with = JAP
+				}
+			}
+		}
+		bypass = {
+		}
+	}
+	focus = {
+		id = PRC_New_Red_Army
+		icon = GFX_goal_anschluss
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_War_of_Liberation
+		}
+		mutually_exclusive = {
+			focus = PRC_PLA
+		}
+		x = 29
+		y = 4
+		ai_will_do = {
+			modifier = {
+				factor = 0
+				has_country_leader = {
+					name = "Mao Zedong"
+				}
+			}
+		}
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			army_experience = 200
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_Soviet_cooperation_plan
+		icon = GFX_focus_generic_license_production
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_New_Red_Army
+		}
+		x = 29
+		y = 6
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_relation_modifier = {
+				target = SOV
+				modifier = ROM_military_modernization
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			NOT = {
+				has_war_with = SOV
+			}
+		}
+	}
+	
+	focus = {
+		id = PRC_PLA
+		icon = GFX_goal_generic_army_doctrines
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_War_of_Liberation
+		}
+		mutually_exclusive = {
+			focus = PRC_New_Red_Army
+		}
+		x = 31
+		y = 4
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			army_experience = 100
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_Establish_the_air_force
+		icon = GFX_goal_generic_build_airforce
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Five_year_plans_of_China
+		}
+		x = 33
+		y = 1
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 0.25
+				uses = 1
+				category = air_doctrine
+			}
+			remove_ideas = PRC_Poor_Air
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			num_of_factories > 5
+		}
+	}
+	focus = {
+		id = PRC_Air_base
+		icon = GFX_goal_generic_construct_civilian
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Establish_the_air_force
+		}
+		x = 33
+		y = 2
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_study_foreign_aircraft_design
+		icon = GFX_focus_CZE_military_aeronautical_institute
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Air_base
+		}
+		x = 33
+		y = 3
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			if = {
+				limit = {
+					has_idea = no_proper_equipment_design
+				}
+				swap_ideas = {
+					remove_idea = no_proper_equipment_design
+					add_idea = no_proper_equipment_design_no_air
+				}
+				set_country_flag = technical_school_halt
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = technical_school_halt
+					}
+					has_idea = no_proper_equipment_design_no_armor
+				}
+				swap_ideas = {
+					remove_idea = no_proper_equipment_design_no_armor
+					add_idea = no_proper_equipment_design_naval
+				}
+				set_country_flag = technical_school_halt
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = technical_school_halt
+					}
+					has_idea = no_proper_equipment_design_no_naval
+				}
+				swap_ideas = {
+					remove_idea = no_proper_equipment_design_no_naval
+					add_idea = no_proper_equipment_design_armor
+				}
+				set_country_flag = technical_school_halt
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = technical_school_halt
+					}
+					has_idea = no_proper_equipment_design_air
+				}
+				remove_ideas = no_proper_equipment_design_air
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = already_learned_air_design
+				NOT = {
+					has_idea = no_proper_equipment_design
+					has_idea = no_proper_equipment_design_no_armor
+					has_idea = no_proper_equipment_design_no_naval
+					has_idea = no_proper_equipment_design_air
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_The_first_squadron
+		icon = GFX_goal_generic_air_fighter
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_study_foreign_aircraft_design
+		}
+		x = 33
+		y = 4
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_tech_bonus = {
+				name = light_fighter
+				bonus = 0.25
+				uses = 1
+				category = light_fighter
+			}
+			if = {
+				limit = {
+					has_war_with = CHI
+				}
+				add_equipment_to_stockpile = {
+					type = fighter_equipment_0
+					amount = 100
+					producer = CHI
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = fighter_equipment_0
+				amount = 100
+				producer = SOV
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_Red_Army_Air_Force
+		icon = GFX_goal_generic_build_airforce
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_The_first_squadron
+		}
+		prerequisite = {
+			focus = PRC_New_Red_Army
+		}
+		x = 28
+		y = 5
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			air_experience = 100
+			add_tech_bonus = {
+				name = air_doctrine
+				bonus = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_PLAAF
+		icon = GFX_goal_generic_air_doctrine
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_PLA
+		}
+		prerequisite = {
+			focus = PRC_The_first_squadron
+		}
+		x = 33
+		y = 5
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_tech_bonus = {
+				name = air_doctrine
+				bonus = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+			add_tech_bonus = {
+				name = light_fighter
+				bonus = 0.25
+				uses = 1
+				category = light_fighter
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_Ground_support
+		icon = GFX_goal_poland_goal
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_PLAAF
+		}
+		x = 32
+		y = 6
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_tech_bonus = {
+				name = cas_bomber
+				bonus = 0.5
+				uses = 1
+				category = cas_bomber
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_Improved_type
+		icon = GFX_goal_generic_air_fighter
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_PLAAF
+		}
+		x = 34
+		y = 6
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_tech_bonus = {
+				name = light_fighter
+				bonus = 0.5
+				uses = 1
+				category = light_fighter
+			}
+			add_tech_bonus = {
+				name = cat_heavy_fighter
+				bonus = 0.5
+				uses = 1
+				category = cat_heavy_fighter
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_Aviation_school
+		icon = GFX_goal_generic_build_airforce
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Improved_type
+		}
+		prerequisite = {
+			focus = PRC_Ground_support
+		}
+		x = 33
+		y = 7
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_tech_bonus = {
+				name = air_doctrine
+				bonus = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_rocket
+		icon = GFX_focus_rocketry
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Aviation_school
+		}
+		x = 34
+		y = 8
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_tech_bonus = {
+				name = rocketry
+				bonus = 0.5
+				uses = 1
+				category = rocketry
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_Soviet_MIG
+		icon = GFX_goal_generic_air_fighter2
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_rocket
+		}
+		x = 34
+		y = 9
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_tech_bonus = {
+				name = jet_technology
+				bonus = 0.5
+				uses = 1
+				category = jet_technology
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_Establish_the_naval
+		icon = GFX_goal_generic_build_navy
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Five_year_plans_of_China
+		}
+		x = 37
+		y = 1
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			remove_ideas = PRC_Poor_navy
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			any_state = {
+				is_controlled_by = PRC
+				is_coastal = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_Naval_base
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Establish_the_naval
+		}
+		x = 37
+		y = 2
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			if = {
+				limit = {
+					NOT = {
+						any_owned_state = {
+							dockyard > 0
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			any_state = {
+				is_controlled_by = PRC
+				is_coastal = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_study_foreign_ship
+		icon = GFX_goal_generic_navy_cruiser
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Naval_base
+		}
+		x = 37
+		y = 3
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			if = {
+				limit = {
+					has_idea = no_proper_equipment_design
+				}
+				swap_ideas = {
+					remove_idea = no_proper_equipment_design
+					add_idea = no_proper_equipment_design_no_naval
+				}
+			}
+			if = {
+				limit = {
+					has_idea = no_proper_equipment_design_no_armor
+				}
+				swap_ideas = {
+					remove_idea = no_proper_equipment_design_no_armor
+					add_idea = no_proper_equipment_design_air
+				}
+			}
+			if = {
+				limit = {
+					has_idea = no_proper_equipment_design_no_air
+				}
+				swap_ideas = {
+					remove_idea = no_proper_equipment_design_no_air
+					add_idea = no_proper_equipment_design_armor
+				}
+			}
+			if = {
+				limit = {
+					has_idea = no_proper_equipment_design_naval
+				}
+				remove_ideas = no_proper_equipment_design_naval
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = already_learned_naval_design
+				NOT = {
+					has_idea = no_proper_equipment_design
+					has_idea = no_proper_equipment_design_no_armor
+					has_idea = no_proper_equipment_design_no_air
+					has_idea = no_proper_equipment_design_naval
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_Coast_defense
+		icon = GFX_goal_generic_navy_cruiser
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_study_foreign_ship
+		}
+		x = 36
+		y = 4
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_tech_bonus = {
+				name = dd_tech
+				bonus = 0.5
+				uses = 1
+				category = dd_tech
+			}
+			add_tech_bonus = {
+				name = cl_tech
+				bonus = 0.5
+				uses = 1
+				category = cl_tech
+			}
+			add_tech_bonus = {
+				name = ca_tech
+				bonus = 0.5
+				uses = 1
+				category = ca_tech
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_Red_Army_Naval
+		icon = GFX_goal_generic_build_navy
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Coast_defense
+		}
+		prerequisite = {
+			focus = PRC_New_Red_Army
+		}
+		x = 30
+		y = 5
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			navy_experience = 100
+			add_tech_bonus = {
+				name = naval_doctrine
+				bonus = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_Transport_fleet
+		icon = GFX_goal_generic_navy_cruiser
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_study_foreign_ship
+		}
+		x = 38
+		y = 4
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_tech_bonus = {
+				name = dd_tech
+				bonus = 0.5
+				uses = 1
+				category = dd_tech
+			}
+			add_equipment_to_stockpile = {
+				type = convoy_1
+				amount = 25
+				producer = PRC
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_PLAN
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_PLA
+		}
+		prerequisite = {
+			focus = PRC_Coast_defense
+		}
+		prerequisite = {
+			focus = PRC_Transport_fleet
+		}
+		x = 37
+		y = 5
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			navy_experience = 25
+			add_tech_bonus = {
+				name = naval_doctrine
+				bonus = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_Brown_water_navy
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_PLAN
+		}
+		mutually_exclusive = {
+			focus = PRC_Submarine
+		}
+		x = 36
+		y = 6
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_tech_bonus = {
+				name = naval_doctrine
+				bonus = 0.5
+				uses = 1
+				category = cat_base_strike
+			}
+			add_tech_bonus = {
+				name = naval_doctrine
+				bonus = 0.5
+				uses = 1
+				category = fleet_in_being_tree
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_Carriers
+		icon = GFX_goal_generic_navy_carrier
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Brown_water_navy
+		}
+		mutually_exclusive = {
+			focus = PRC_Ocean_hegemony
+		}
+		x = 37
+		y = 7
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_tech_bonus = {
+				name = naval_doctrine
+				bonus = 0.5
+				uses = 1
+				category = cat_base_strike
+			}
+			add_tech_bonus = {
+				name = bc_tech
+				bonus = 0.5
+				uses = 1
+				category = bc_tech
+			}
+			add_tech_bonus = {
+				name = cv_tech
+				bonus = 0.5
+				uses = 1
+				category = cv_tech
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_Ocean_hegemony
+		icon = GFX_goal_generic_navy_battleship
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Brown_water_navy
+		}
+		mutually_exclusive = {
+			focus = PRC_Carriers
+		}
+		x = 35
+		y = 7
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_tech_bonus = {
+				name = naval_doctrine
+				bonus = 0.5
+				uses = 1
+				category = fleet_in_being_tree
+			}
+			add_tech_bonus = {
+				name = bc_tech
+				bonus = 0.5
+				uses = 1
+				category = bc_tech
+			}
+			add_tech_bonus = {
+				name = bb_tech
+				bonus = 0.5
+				uses = 1
+				category = bb_tech
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_Submarine
+		icon = GFX_goal_generic_navy_submarine
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_PLAN
+		}
+		mutually_exclusive = {
+			focus = PRC_Brown_water_navy
+		}
+		x = 38
+		y = 6
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_tech_bonus = {
+				name = naval_doctrine
+				bonus = 0.5
+				uses = 1
+				category = cat_trade_interdiction
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_Underwater_forces
+		icon = GFX_goal_generic_wolf_pack
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Submarine
+		}
+		x = 39
+		y = 7
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_tech_bonus = {
+				name = naval_doctrine
+				bonus = 0.5
+				uses = 1
+				category = cat_trade_interdiction
+			}
+			add_tech_bonus = {
+				name = ss_tech
+				bonus = 0.5
+				uses = 2
+				category = ss_tech
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_Train_naval_officers
+		icon = GFX_goal_generic_amphibious_assault
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_PLAN
+		}
+		x = 40
+		y = 6
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = 0.5
+				uses = 1
+				technology = marines
+				technology = marines2
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_Civilian_factories_development
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Five_year_plans_of_China
+		}
+		x = 41
+		y = 1
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			swap_ideas = {
+				remove_idea = iliterate_population
+				add_idea = iliterate_population_1
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_New_education_system
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Civilian_factories_development
+		}
+		x = 41
+		y = 2
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_political_power = -100
+			swap_ideas = {
+				remove_idea = iliterate_population_1
+				add_idea = iliterate_population_2
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_Chinese_Academy_of_Sciences
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_New_education_system
+		}
+		x = 41
+		y = 3
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_research_slot = 1
+			custom_effect_tooltip = enable_specialized_training_focus_tt
+			#custom_effect_tooltip = PRC_continuous_specialized_training_program_tt
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			num_of_factories > 20
+		}
+	}
+	focus = {
+		id = PRC_Expand_tsinghua_university
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Chinese_Academy_of_Sciences
+		}
+		x = 41
+		y = 4
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			remove_ideas = iliterate_population_2
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_chi_nationalize_industry_focus
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 8.00
+		prerequisite = {
+			focus = PRC_Five_year_plans_of_China
+		}
+		x = 43
+		y = 1
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			swap_ideas = {
+				remove_idea = unbalanced_industry
+				add_idea = unbalanced_industry_1
+			}
+			custom_effect_tooltip = unlock_focus_right
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			has_tech = basic_machine_tools
+			OR = {
+				has_tech = concentrated_industry
+				has_tech = dispersed_industry
+			}
+			OR = {
+				AND = {
+					num_of_factories > 25
+					has_war = no
+				}
+				AND = {
+					num_of_factories > 30
+					has_defensive_war = yes
+				}
+				AND = {
+					num_of_factories > 35
+					has_offensive_war = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_chi_nationalize_industry_ii_focus
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 9.00
+		prerequisite = {
+			focus = PRC_chi_nationalize_industry_focus
+		}
+		x = 43
+		y = 2
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			swap_ideas = {
+				remove_idea = unbalanced_industry_1
+				add_idea = unbalanced_industry_2
+			}
+			custom_effect_tooltip = unlock_focus_right
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			has_tech = improved_machine_tools
+			OR = {
+				has_tech = concentrated_industry2
+				has_tech = dispersed_industry2
+			}
+			OR = {
+				AND = {
+					num_of_factories > 45
+					has_war = no
+				}
+				AND = {
+					num_of_factories > 50
+					has_defensive_war = yes
+				}
+				AND = {
+					num_of_factories > 55
+					has_offensive_war = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_chi_nationalize_industry_iii_focus
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_chi_nationalize_industry_ii_focus
+		}
+		x = 43
+		y = 3
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			swap_ideas = {
+				remove_idea = unbalanced_industry_2
+				add_idea = unbalanced_industry_3
+			}
+			custom_effect_tooltip = unlock_focus_right
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			has_tech = advanced_machine_tools
+			OR = {
+				has_tech = concentrated_industry3
+				has_tech = dispersed_industry3
+			}
+			OR = {
+				AND = {
+					num_of_factories > 65
+					has_war = no
+				}
+				AND = {
+					num_of_factories > 70
+					has_defensive_war = yes
+				}
+				AND = {
+					num_of_factories > 75
+					has_offensive_war = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_kmt_modern_industrialization
+		icon = GFX_goal_generic_construct_civilian
+		cost = 14.29
+		prerequisite = {
+			focus = PRC_chi_nationalize_industry_iii_focus
+		}
+		x = 43
+		y = 4
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_political_power = -100
+			remove_ideas = unbalanced_industry_3
+			custom_effect_tooltip = blank_line
+			custom_effect_tooltip = unlock_focus_right
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			has_war = no
+			has_tech = assembly_line_production
+			OR = {
+				has_tech = concentrated_industry4
+				has_tech = dispersed_industry4
+			}
+			has_tech = construction4
+			num_of_factories > 85
+		}
+	}
+	focus = {
+		id = PRC_computer
+		icon = GFX_goal_generic_production2
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Expand_tsinghua_university
+		}
+		prerequisite = {
+			focus = PRC_kmt_modern_industrialization
+		}
+		x = 42
+		y = 5
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_tech_bonus = {
+				name = electronics
+				bonus = 0.5
+				uses = 1
+				category = electronics
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_Radar
+		icon = GFX_goal_generic_radar
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_kmt_modern_industrialization
+		}
+		x = 44
+		y = 5
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_tech_bonus = {
+				name = radar_tech
+				bonus = 0.5
+				uses = 1
+				category = radar_tech
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_streamlined_industry
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Five_year_plans_of_China
+		}
+		x = 49
+		y = 1
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_ideas = improved_industry
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = industry_balanced_enough
+				has_completed_focus = PRC_chi_nationalize_industry_focus
+			}
+		}
+	}
+	focus = {
+		id = PRC_kmt_rejuvenate_heavy_industry
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 25.00
+		prerequisite = {
+			focus = PRC_streamlined_industry
+		}
+		x = 46
+		y = 2
+		select_effect = {
+			add_ideas = industrial_revolution
+		}
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			custom_effect_tooltip = debuff_tt
+			show_ideas_tooltip = industrial_revolution
+			custom_effect_tooltip = blank_line
+			hidden_effect = {
+				remove_ideas = industrial_revolution
+			}
+			remove_ideas = incompetent_heavy_industry
+			608 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			615 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			606 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			614 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			716 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = industry_balanced_enough
+				has_completed_focus = PRC_chi_nationalize_industry_ii_focus
+			}
+			has_war = no
+			608 = {
+				alu_tung_trigger = yes
+			}
+			716 = {
+				alu_tung_trigger = yes
+			}
+			614 = {
+				alu_tung_trigger = yes
+			}
+			615 = {
+				alu_tung_trigger = yes
+			}
+			606 = {
+				alu_tung_trigger = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_revive_hanyang_steel
+		icon = GFX_goal_steelwork
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_kmt_rejuvenate_heavy_industry
+		}
+		x = 45
+		y = 3
+		ai_will_do = {
+			factor = 10
+		}
+		select_effect = {
+			add_ideas = steelmaking
+			add_ideas = under_construction
+		}
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			custom_effect_tooltip = debuff_tt
+			show_ideas_tooltip = steelmaking
+			show_ideas_tooltip = under_construction
+			custom_effect_tooltip = blank_line
+			hidden_effect = {
+				remove_ideas = steelmaking
+				remove_ideas = under_construction
+			}
+			756 = {
+				add_resource = {
+					type = steel
+					amount = 100
+					state = 756
+				}
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = industry_balanced_enough
+				has_completed_focus = PRC_chi_nationalize_industry_iii_focus
+			}
+			has_tech = excavation3
+			756 = {
+				alu_tung_trigger = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_anshan_steelwork
+		icon = GFX_goal_steelwork
+		cost = 12.00
+		prerequisite = {
+			focus = PRC_kmt_rejuvenate_heavy_industry
+		}
+		x = 47
+		y = 3
+		ai_will_do = {
+			factor = 10
+		}
+		select_effect = {
+			add_ideas = steelmaking
+			add_ideas = under_construction
+		}
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			custom_effect_tooltip = debuff_tt
+			show_ideas_tooltip = steelmaking
+			show_ideas_tooltip = under_construction
+			custom_effect_tooltip = blank_line
+			hidden_effect = {
+				remove_ideas = steelmaking
+				remove_ideas = under_construction
+			}
+			716 = {
+				add_resource = {
+					type = steel
+					amount = 75
+					state = 716
+				}
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = industry_balanced_enough
+				has_completed_focus = PRC_chi_nationalize_industry_iii_focus
+			}
+			has_tech = excavation3
+			716 = {
+				alu_tung_trigger = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_national_steelwork
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 25.00
+		prerequisite = {
+			focus = PRC_revive_hanyang_steel
+		}
+		prerequisite = {
+			focus = PRC_anshan_steelwork
+		}
+		x = 46
+		y = 4
+		select_effect = {
+			add_ideas = steelmaking
+			add_ideas = under_construction
+		}
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			custom_effect_tooltip = debuff_tt
+			show_ideas_tooltip = steelmaking
+			show_ideas_tooltip = under_construction
+			custom_effect_tooltip = blank_line
+			hidden_effect = {
+				remove_ideas = steelmaking
+				remove_ideas = under_construction
+			}
+			608 = {
+				add_resource = {
+					type = steel
+					amount = 25
+					state = 608
+				}
+			}
+			615 = {
+				add_resource = {
+					type = steel
+					amount = 60
+					state = 615
+				}
+			}
+			606 = {
+				add_resource = {
+					type = steel
+					amount = 70
+					state = 606
+				}
+			}
+			614 = {
+				add_resource = {
+					type = steel
+					amount = 120
+					state = 614
+				}
+			}
+			716 = {
+				add_resource = {
+					type = steel
+					amount = 40
+					state = 716
+				}
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = industry_balanced_enough
+				has_completed_focus = kmt_modern_industrialization
+			}
+			has_war = no
+			has_tech = construction4
+			has_tech = excavation4
+			608 = {
+				infra_bypass_3_tr = yes
+			}
+			716 = {
+				infra_bypass_3_tr = yes
+			}
+			614 = {
+				infra_bypass_3_tr = yes
+			}
+			615 = {
+				infra_bypass_3_tr = yes
+			}
+			606 = {
+				infra_bypass_3_tr = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_kmt_han_arsenal
+		icon = GFX_goal_generic_small_arms
+		cost = 15.00
+		prerequisite = {
+			focus = PRC_national_steelwork
+		}
+		x = 46
+		y = 5
+		select_effect = {
+			add_ideas = under_construction
+		}
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			custom_effect_tooltip = debuff_tt
+			show_ideas_tooltip = under_construction
+			custom_effect_tooltip = blank_line
+			hidden_effect = {
+				remove_ideas = under_construction
+			}
+			600 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			602 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			606 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			614 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			620 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			756 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			has_tech = construction5
+			has_tech = excavation5
+			600 = {
+				max_infra_trigger = yes
+			}
+			602 = {
+				max_infra_trigger = yes
+			}
+			606 = {
+				max_infra_trigger = yes
+			}
+			614 = {
+				max_infra_trigger = yes
+			}
+			620 = {
+				max_infra_trigger = yes
+			}
+			756 = {
+				max_infra_trigger = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_kmt_national_resource_exploration
+		icon = GFX_goal_generic_oil_refinery
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_streamlined_industry
+		}
+		x = 52
+		y = 2
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_ideas = national_resource_council
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = industry_balanced_enough
+				has_completed_focus = PRC_chi_nationalize_industry_ii_focus
+			}
+			is_puppet = no
+		}
+	}
+	focus = {
+		id = PRC_Industry_innovation
+		icon = GFX_goal_generic_construction2
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_kmt_national_resource_exploration
+		}
+		x = 49
+		y = 3
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = industry_balanced_enough
+				has_completed_focus = PRC_chi_nationalize_industry_iii_focus
+			}
+			has_tech = excavation3
+			is_puppet = no
+		}
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_tech_bonus = {
+				name = engineers_tech
+				bonus = 0.5
+				uses = 1
+				category = engineers_tech
+			}
+			add_tech_bonus = {
+				name = construction_tech
+				bonus = 0.5
+				uses = 1
+				category = construction_tech
+			}
+			add_tech_bonus = {
+				name = synth_resources
+				bonus = 0.5
+				uses = 1
+				category = synth_resources
+			}
+		}
+	}
+	focus = {
+		id = PRC_Sichuan_oilfield
+		icon = GFX_goal_generic_oil_refinery
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Industry_innovation
+		}
+		x = 48
+		y = 4
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_resource = {
+				type = oil
+				amount = 30
+				state = 605
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = industry_balanced_enough
+				has_completed_focus = kmt_modern_industrialization
+			}
+			has_war = no
+			has_tech = construction4
+			has_tech = excavation4
+			controls_state = 605
+		}
+	}
+	focus = {
+		id = PRC_Expand_yumen_oilfield
+		icon = GFX_goal_generic_construction
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Industry_innovation
+		}
+		x = 49
+		y = 5
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_resource = {
+				type = oil
+				amount = 40
+				state = 616
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = industry_balanced_enough
+				has_completed_focus = kmt_modern_industrialization
+			}
+			has_war = no
+			has_tech = construction5
+			has_tech = excavation5
+			controls_state = 616
+		}
+	}
+	focus = {
+		id = PRC_kmt_henan_aluminium
+		icon = GFX_goal_aluminium
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_kmt_national_resource_exploration
+		}
+		x = 51
+		y = 3
+		select_effect = {
+			add_ideas = excavating
+		}
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			custom_effect_tooltip = debuff_tt
+			show_ideas_tooltip = excavating
+			custom_effect_tooltip = blank_line
+			hidden_effect = {
+				remove_ideas = excavating
+			}
+			607 = {
+				add_resource = {
+					type = aluminium
+					amount = 20
+					state = 607
+				}
+			}
+			615 = {
+				add_resource = {
+					type = aluminium
+					amount = 25
+					state = 615
+				}
+			}
+			603 = {
+				add_resource = {
+					type = aluminium
+					amount = 15
+					state = 603
+				}
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = industry_balanced_enough
+				has_completed_focus = PRC_chi_nationalize_industry_iii_focus
+			}
+			has_tech = excavation3
+			607 = {
+				hainan_trigger = yes
+			}
+			615 = {
+				hainan_trigger = yes
+			}
+			603 = {
+				hainan_trigger = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_kmt_shanxi_aluminium
+		icon = GFX_goal_aluminium
+		cost = 15.00
+		prerequisite = {
+			focus = PRC_kmt_henan_aluminium
+		}
+		x = 51
+		y = 4
+		select_effect = {
+			add_ideas = excavating
+		}
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			custom_effect_tooltip = debuff_tt
+			show_ideas_tooltip = excavating
+			custom_effect_tooltip = blank_line
+			hidden_effect = {
+				remove_ideas = excavating
+			}
+			607 = {
+				add_resource = {
+					type = aluminium
+					amount = 35
+					state = 607
+				}
+			}
+			615 = {
+				add_resource = {
+					type = aluminium
+					amount = 45
+					state = 615
+				}
+			}
+			603 = {
+				add_resource = {
+					type = aluminium
+					amount = 25
+					state = 603
+				}
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = industry_balanced_enough
+				has_completed_focus = kmt_modern_industrialization
+			}
+			has_tech = excavation4
+			607 = {
+				7_infra_trigger = yes
+			}
+			615 = {
+				7_infra_trigger = yes
+			}
+			603 = {
+				7_infra_trigger = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_kmt_guizou_aluminium
+		icon = GFX_goal_aluminium
+		cost = 20.00
+		prerequisite = {
+			focus = PRC_kmt_shanxi_aluminium
+		}
+		x = 51
+		y = 5
+		select_effect = {
+			add_ideas = excavating
+		}
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			custom_effect_tooltip = debuff_tt
+			show_ideas_tooltip = excavating
+			custom_effect_tooltip = blank_line
+			hidden_effect = {
+				remove_ideas = excavating
+			}
+			607 = {
+				add_resource = {
+					type = aluminium
+					amount = 65
+					state = 607
+				}
+			}
+			615 = {
+				add_resource = {
+					type = aluminium
+					amount = 85
+					state = 615
+				}
+			}
+			603 = {
+				add_resource = {
+					type = aluminium
+					amount = 45
+					state = 603
+				}
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			has_tech = excavation5
+			607 = {
+				infra_bypass_3_tr = yes
+			}
+			615 = {
+				infra_bypass_3_tr = yes
+			}
+			603 = {
+				infra_bypass_3_tr = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_jiangxi_tungsten
+		icon = GFX_goal_tungsten
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_kmt_national_resource_exploration
+		}
+		x = 53
+		y = 3
+		select_effect = {
+			add_ideas = excavating
+		}
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			custom_effect_tooltip = debuff_tt
+			show_ideas_tooltip = excavating
+			custom_effect_tooltip = blank_line
+			hidden_effect = {
+				remove_ideas = excavating
+			}
+			600 = {
+				add_resource = {
+					type = tungsten
+					amount = 20
+					state = 600
+				}
+			}
+			593 = {
+				add_resource = {
+					type = tungsten
+					amount = 15
+					state = 593
+				}
+			}
+			602 = {
+				add_resource = {
+					type = tungsten
+					amount = 30
+					state = 602
+				}
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = industry_balanced_enough
+				has_completed_focus = PRC_chi_nationalize_industry_iii_focus
+			}
+			has_tech = excavation3
+			600 = {
+				hainan_trigger = yes
+			}
+			593 = {
+				hainan_trigger = yes
+			}
+			602 = {
+				hainan_trigger = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_guangdong_tungsten
+		icon = GFX_goal_tungsten
+		cost = 15.00
+		prerequisite = {
+			focus = PRC_jiangxi_tungsten
+		}
+		x = 53
+		y = 4
+		select_effect = {
+			add_ideas = excavating
+		}
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			custom_effect_tooltip = debuff_tt
+			show_ideas_tooltip = excavating
+			custom_effect_tooltip = blank_line
+			hidden_effect = {
+				remove_ideas = excavating
+			}
+			600 = {
+				add_resource = {
+					type = tungsten
+					amount = 35
+					state = 600
+				}
+			}
+			593 = {
+				add_resource = {
+					type = tungsten
+					amount = 25
+					state = 593
+				}
+			}
+			602 = {
+				add_resource = {
+					type = tungsten
+					amount = 55
+					state = 602
+				}
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = industry_balanced_enough
+				has_completed_focus = kmt_modern_industrialization
+			}
+			has_tech = excavation4
+			600 = {
+				7_infra_trigger = yes
+			}
+			593 = {
+				7_infra_trigger = yes
+			}
+			602 = {
+				7_infra_trigger = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_hunan_tungsten
+		icon = GFX_goal_tungsten
+		cost = 20.00
+		prerequisite = {
+			focus = PRC_guangdong_tungsten
+		}
+		x = 53
+		y = 5
+		select_effect = {
+			add_ideas = excavating
+		}
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			custom_effect_tooltip = debuff_tt
+			show_ideas_tooltip = excavating
+			custom_effect_tooltip = blank_line
+			hidden_effect = {
+				remove_ideas = excavating
+			}
+			600 = {
+				add_resource = {
+					type = tungsten
+					amount = 65
+					state = 600
+				}
+			}
+			593 = {
+				add_resource = {
+					type = tungsten
+					amount = 45
+					state = 593
+				}
+			}
+			602 = {
+				add_resource = {
+					type = tungsten
+					amount = 95
+					state = 602
+				}
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			has_tech = excavation5
+			600 = {
+				infra_bypass_3_tr = yes
+			}
+			593 = {
+				infra_bypass_3_tr = yes
+			}
+			602 = {
+				infra_bypass_3_tr = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_kmt_refinery_technology_german
+		icon = GFX_goal_generic_oil_refinery
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_kmt_national_resource_exploration
+		}
+		x = 55
+		y = 3
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_tech_bonus = {
+				name = synth_bonus
+				bonus = 0.5
+				uses = 1
+				category = synth_resources
+			}
+			597 = {
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = industry_balanced_enough
+				has_completed_focus = PRC_chi_nationalize_industry_iii_focus
+			}
+			owns_state = 597
+		}
+	}
+	focus = {
+		id = PRC_kmt_hainan_plantation
+		icon = GFX_goal_generic_production
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_kmt_refinery_technology_german
+		}
+		x = 55
+		y = 4
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			591 = {
+				add_resource = {
+					type = rubber
+					amount = 40
+					state = 591
+				}
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = industry_balanced_enough
+				has_completed_focus = kmt_modern_industrialization
+			}
+			591 = {
+				hainan_trigger = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_northeast_infra_focus
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 8.00
+		prerequisite = {
+			focus = PRC_Five_year_plans_of_China
+		}
+		x = 57
+		y = 1
+		select_effect = {
+			add_ideas = under_construction
+		}
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			custom_effect_tooltip = debuff_tt
+			show_ideas_tooltip = under_construction
+			custom_effect_tooltip = blank_line
+			hidden_effect = {
+				remove_ideas = under_construction
+			}
+			every_state = {
+				limit = {
+					is_northeast_china_state = yes
+				}
+				custom_effect_tooltip = level_3_infra_tt
+			}
+			custom_effect_tooltip = acc_tt
+			714 = {
+				level_3_infra = yes
+			}
+			715 = {
+				level_3_infra = yes
+			}
+			716 = {
+				level_3_infra = yes
+			}
+			717 = {
+				level_3_infra = yes
+			}
+			328 = {
+				level_3_infra = yes
+			}
+			610 = {
+				level_3_infra = yes
+			}
+			757 = {
+				level_3_infra = yes
+			}
+			747 = {
+				level_3_infra = yes
+			}
+		}
+		bypass = {
+			NOT = {
+				any_state = {
+					is_northeast_china_state = yes
+					infra_bypass_1_tr = no
+				}
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = industry_balanced_enough
+				has_completed_focus = PRC_chi_nationalize_industry_focus
+			}
+			NOT = {
+				any_state = {
+					is_northeast_china_state = yes
+					NOT = {
+						is_controlled_by = ROOT
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_northeast_infra_focus_ii
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_northeast_infra_focus
+		}
+		x = 57
+		y = 2
+		select_effect = {
+			add_ideas = under_construction
+		}
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			custom_effect_tooltip = debuff_tt
+			show_ideas_tooltip = under_construction
+			custom_effect_tooltip = blank_line
+			hidden_effect = {
+				remove_ideas = under_construction
+			}
+			every_state = {
+				limit = {
+					is_northeast_china_state = yes
+				}
+				custom_effect_tooltip = level_6_infra_tt
+			}
+			custom_effect_tooltip = acc_tt
+			714 = {
+				level_6_infra = yes
+			}
+			715 = {
+				level_6_infra = yes
+			}
+			716 = {
+				level_6_infra = yes
+			}
+			717 = {
+				level_6_infra = yes
+			}
+			328 = {
+				level_6_infra = yes
+			}
+			610 = {
+				level_6_infra = yes
+			}
+			757 = {
+				level_6_infra = yes
+			}
+			747 = {
+				level_6_infra = yes
+			}
+		}
+		bypass = {
+			NOT = {
+				any_state = {
+					is_northeast_china_state = yes
+					infra_bypass_2_tr = no
+				}
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = industry_balanced_enough
+				has_completed_focus = PRC_chi_nationalize_industry_ii_focus
+			}
+			NOT = {
+				any_state = {
+					is_northeast_china_state = yes
+					infra_ava_2_tr = no
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_northeast_infra_focus_iii
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 15.00
+		prerequisite = {
+			focus = PRC_northeast_infra_focus_ii
+		}
+		x = 57
+		y = 3
+		select_effect = {
+			add_ideas = under_construction
+		}
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			custom_effect_tooltip = debuff_tt
+			show_ideas_tooltip = under_construction
+			custom_effect_tooltip = blank_line
+			hidden_effect = {
+				remove_ideas = under_construction
+			}
+			hidden_effect = {
+				every_state = {
+					limit = {
+						is_northeast_china_state = yes
+					}
+					max_infra_effect = yes
+				}
+			}
+			every_state = {
+				limit = {
+					is_northeast_china_state = yes
+				}
+				custom_effect_tooltip = max_infra
+			}
+		}
+		bypass = {
+			NOT = {
+				any_state = {
+					is_northeast_china_state = yes
+					infra_bypass_3_tr = no
+				}
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = industry_balanced_enough
+				has_completed_focus = PRC_chi_nationalize_industry_iii_focus
+			}
+			NOT = {
+				any_state = {
+					is_northeast_china_state = yes
+					infra_ava_3_tr = no
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_kmt_daqing_oil_field
+		icon = GFX_goal_generic_oil_refinery
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_kmt_refinery_technology_german
+		}
+		prerequisite = {
+			focus = PRC_northeast_infra_focus_iii
+		}
+		x = 57
+		y = 4
+		select_effect = {
+			add_ideas = oil_exploring
+		}
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			custom_effect_tooltip = debuff_tt
+			show_ideas_tooltip = oil_exploring
+			custom_effect_tooltip = blank_line
+			hidden_effect = {
+				remove_ideas = oil_exploring
+			}
+			717 = {
+				add_resource = {
+					type = oil
+					amount = 75
+					state = 717
+				}
+			}
+			hidden_effect = {
+				news_event = {
+					days = 2
+					id = news.5020
+				}
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = industry_balanced_enough
+				has_completed_focus = kmt_modern_industrialization
+			}
+			has_tech = improved_oil_plant
+			717 = {
+				alu_tung_trigger = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_north_china_infra_focus
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 8.00
+		prerequisite = {
+			focus = PRC_Five_year_plans_of_China
+		}
+		x = 59
+		y = 1
+		select_effect = {
+			add_ideas = under_construction
+		}
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			custom_effect_tooltip = debuff_tt
+			show_ideas_tooltip = under_construction
+			custom_effect_tooltip = blank_line
+			hidden_effect = {
+				remove_ideas = under_construction
+			}
+			every_state = {
+				limit = {
+					is_north_china_state = yes
+				}
+				custom_effect_tooltip = level_3_infra_tt
+			}
+			custom_effect_tooltip = acc_tt
+			608 = {
+				level_3_infra = yes
+			}
+			609 = {
+				level_3_infra = yes
+			}
+			611 = {
+				level_3_infra = yes
+			}
+			614 = {
+				level_3_infra = yes
+			}
+			621 = {
+				level_3_infra = yes
+			}
+			763 = {
+				level_3_infra = yes
+			}
+			615 = {
+				level_3_infra = yes
+			}
+			762 = {
+				level_3_infra = yes
+			}
+			622 = {
+				level_3_infra = yes
+			}
+			616 = {
+				level_3_infra = yes
+			}
+			760 = {
+				level_3_infra = yes
+			}
+			612 = {
+				level_3_infra = yes
+			}
+		}
+		bypass = {
+			NOT = {
+				any_state = {
+					is_north_china_state = yes
+					infra_bypass_1_tr = no
+				}
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = industry_balanced_enough
+				has_completed_focus = PRC_chi_nationalize_industry_focus
+			}
+			NOT = {
+				any_state = {
+					is_north_china_state = yes
+					NOT = {
+						is_controlled_by = ROOT
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_north_china_infra_focus_ii
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_north_china_infra_focus
+		}
+		x = 59
+		y = 2
+		select_effect = {
+			add_ideas = under_construction
+		}
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			custom_effect_tooltip = debuff_tt
+			show_ideas_tooltip = under_construction
+			custom_effect_tooltip = blank_line
+			hidden_effect = {
+				remove_ideas = under_construction
+			}
+			every_state = {
+				limit = {
+					is_north_china_state = yes
+				}
+				custom_effect_tooltip = level_6_infra_tt
+			}
+			custom_effect_tooltip = acc_tt
+			608 = {
+				level_6_infra = yes
+			}
+			609 = {
+				level_6_infra = yes
+			}
+			611 = {
+				level_6_infra = yes
+			}
+			614 = {
+				level_6_infra = yes
+			}
+			621 = {
+				level_6_infra = yes
+			}
+			763 = {
+				level_6_infra = yes
+			}
+			615 = {
+				level_6_infra = yes
+			}
+			762 = {
+				level_6_infra = yes
+			}
+			622 = {
+				level_6_infra = yes
+			}
+			616 = {
+				level_6_infra = yes
+			}
+			760 = {
+				level_6_infra = yes
+			}
+			612 = {
+				level_6_infra = yes
+			}
+		}
+		bypass = {
+			NOT = {
+				any_state = {
+					is_north_china_state = yes
+					infra_bypass_2_tr = no
+				}
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = industry_balanced_enough
+				has_completed_focus = PRC_chi_nationalize_industry_ii_focus
+			}
+			NOT = {
+				any_state = {
+					is_north_china_state = yes
+					infra_ava_2_tr = no
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_north_china_infra_focus_iii
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 15.00
+		prerequisite = {
+			focus = PRC_north_china_infra_focus_ii
+		}
+		x = 59
+		y = 3
+		select_effect = {
+			add_ideas = under_construction
+		}
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			custom_effect_tooltip = debuff_tt
+			show_ideas_tooltip = under_construction
+			custom_effect_tooltip = blank_line
+			hidden_effect = {
+				remove_ideas = under_construction
+			}
+			every_state = {
+				limit = {
+					is_north_china_state = yes
+				}
+				custom_effect_tooltip = max_infra
+			}
+			#custom_effect_tooltip = acc_tt
+			hidden_effect = {
+				every_state = {
+					limit = {
+						is_north_china_state = yes
+					}
+					max_infra_effect = yes
+				}
+			}
+		}
+		bypass = {
+			NOT = {
+				any_state = {
+					is_north_china_state = yes
+					infra_bypass_3_tr = no
+				}
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = industry_balanced_enough
+				has_completed_focus = PRC_chi_nationalize_industry_iii_focus
+			}
+			NOT = {
+				any_state = {
+					is_north_china_state = yes
+					infra_ava_3_tr = no
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_east_china_infra_focus
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 8.00
+		prerequisite = {
+			focus = PRC_Five_year_plans_of_China
+		}
+		x = 61
+		y = 1
+		select_effect = {
+			add_ideas = under_construction
+		}
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			custom_effect_tooltip = debuff_tt
+			show_ideas_tooltip = under_construction
+			custom_effect_tooltip = blank_line
+			hidden_effect = {
+				remove_ideas = under_construction
+			}
+			every_state = {
+				limit = {
+					is_east_china_state = yes
+				}
+				custom_effect_tooltip = level_3_infra_tt
+			}
+			custom_effect_tooltip = acc_tt
+			607 = {
+				level_3_infra = yes
+			}
+			746 = {
+				level_3_infra = yes
+			}
+			620 = {
+				level_3_infra = yes
+			}
+			756 = {
+				level_3_infra = yes
+			}
+			745 = {
+				level_3_infra = yes
+			}
+			744 = {
+				level_3_infra = yes
+			}
+			606 = {
+				level_3_infra = yes
+			}
+			596 = {
+				level_3_infra = yes
+			}
+			597 = {
+				level_3_infra = yes
+			}
+			598 = {
+				level_3_infra = yes
+			}
+			613 = {
+				level_3_infra = yes
+			}
+		}
+		bypass = {
+			NOT = {
+				any_state = {
+					is_east_china_state = yes
+					infra_bypass_1_tr = no
+				}
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = industry_balanced_enough
+				has_completed_focus = PRC_chi_nationalize_industry_focus
+			}
+			NOT = {
+				any_state = {
+					is_east_china_state = yes
+					NOT = {
+						is_controlled_by = ROOT
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_east_china_infra_focus_ii
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_east_china_infra_focus
+		}
+		x = 61
+		y = 2
+		select_effect = {
+			add_ideas = under_construction
+		}
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			custom_effect_tooltip = debuff_tt
+			show_ideas_tooltip = under_construction
+			custom_effect_tooltip = blank_line
+			hidden_effect = {
+				remove_ideas = under_construction
+			}
+			every_state = {
+				limit = {
+					is_east_china_state = yes
+				}
+				custom_effect_tooltip = level_6_infra_tt
+			}
+			custom_effect_tooltip = acc_tt
+			607 = {
+				level_6_infra = yes
+			}
+			746 = {
+				level_6_infra = yes
+			}
+			620 = {
+				level_6_infra = yes
+			}
+			756 = {
+				level_6_infra = yes
+			}
+			745 = {
+				level_6_infra = yes
+			}
+			744 = {
+				level_6_infra = yes
+			}
+			606 = {
+				level_6_infra = yes
+			}
+			596 = {
+				level_6_infra = yes
+			}
+			597 = {
+				level_6_infra = yes
+			}
+			598 = {
+				level_6_infra = yes
+			}
+			613 = {
+				level_6_infra = yes
+			}
+		}
+		bypass = {
+			NOT = {
+				any_state = {
+					is_east_china_state = yes
+					infra_bypass_2_tr = no
+				}
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = industry_balanced_enough
+				has_completed_focus = PRC_chi_nationalize_industry_ii_focus
+			}
+			NOT = {
+				any_state = {
+					is_east_china_state = yes
+					infra_ava_2_tr = no
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_east_china_infra_focus_iii
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 15.00
+		prerequisite = {
+			focus = PRC_east_china_infra_focus_ii
+		}
+		x = 61
+		y = 3
+		select_effect = {
+			add_ideas = under_construction
+		}
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			custom_effect_tooltip = debuff_tt
+			show_ideas_tooltip = under_construction
+			custom_effect_tooltip = blank_line
+			hidden_effect = {
+				remove_ideas = under_construction
+			}
+			every_state = {
+				limit = {
+					is_east_china_state = yes
+				}
+				custom_effect_tooltip = max_infra
+			}
+			#custom_effect_tooltip = acc_tt
+			hidden_effect = {
+				every_state = {
+					limit = {
+						is_east_china_state = yes
+					}
+					max_infra_effect = yes
+				}
+			}
+		}
+		bypass = {
+			NOT = {
+				any_state = {
+					is_east_china_state = yes
+					infra_bypass_3_tr = no
+				}
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = industry_balanced_enough
+				has_completed_focus = PRC_chi_nationalize_industry_iii_focus
+			}
+			NOT = {
+				any_state = {
+					is_east_china_state = yes
+					infra_ava_3_tr = no
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_south_china_infra_focus
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 8.00
+		prerequisite = {
+			focus = PRC_Five_year_plans_of_China
+		}
+		x = 63
+		y = 1
+		select_effect = {
+			add_ideas = under_construction
+		}
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			custom_effect_tooltip = debuff_tt
+			show_ideas_tooltip = under_construction
+			custom_effect_tooltip = blank_line
+			hidden_effect = {
+				remove_ideas = under_construction
+			}
+			every_state = {
+				limit = {
+					is_south_china_state = yes
+				}
+				custom_effect_tooltip = level_3_infra_tt
+			}
+			custom_effect_tooltip = acc_tt
+			325 = {
+				level_3_infra = yes
+			}
+			599 = {
+				level_3_infra = yes
+			}
+			592 = {
+				level_3_infra = yes
+			}
+			603 = {
+				level_3_infra = yes
+			}
+			602 = {
+				level_3_infra = yes
+			}
+			600 = {
+				level_3_infra = yes
+			}
+			595 = {
+				level_3_infra = yes
+			}
+		}
+		bypass = {
+			NOT = {
+				any_state = {
+					is_south_china_state = yes
+					infra_bypass_1_tr = no
+				}
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = industry_balanced_enough
+				has_completed_focus = PRC_chi_nationalize_industry_focus
+			}
+			NOT = {
+				any_state = {
+					is_south_china_state = yes
+					NOT = {
+						is_controlled_by = ROOT
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_south_china_infra_focus_ii
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_south_china_infra_focus
+		}
+		x = 63
+		y = 2
+		select_effect = {
+			add_ideas = under_construction
+		}
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			custom_effect_tooltip = debuff_tt
+			show_ideas_tooltip = under_construction
+			custom_effect_tooltip = blank_line
+			hidden_effect = {
+				remove_ideas = under_construction
+			}
+			every_state = {
+				limit = {
+					is_south_china_state = yes
+				}
+				custom_effect_tooltip = level_6_infra_tt
+			}
+			custom_effect_tooltip = acc_tt
+			325 = {
+				level_6_infra = yes
+			}
+			599 = {
+				level_6_infra = yes
+			}
+			592 = {
+				level_6_infra = yes
+			}
+			603 = {
+				level_6_infra = yes
+			}
+			602 = {
+				level_6_infra = yes
+			}
+			600 = {
+				level_6_infra = yes
+			}
+			595 = {
+				level_6_infra = yes
+			}
+		}
+		bypass = {
+			NOT = {
+				any_state = {
+					is_south_china_state = yes
+					infra_bypass_2_tr = no
+				}
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = industry_balanced_enough
+				has_completed_focus = PRC_chi_nationalize_industry_ii_focus
+			}
+			NOT = {
+				any_state = {
+					is_south_china_state = yes
+					infra_ava_2_tr = no
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_south_china_infra_focus_iii
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 15.00
+		prerequisite = {
+			focus = PRC_south_china_infra_focus_ii
+		}
+		x = 63
+		y = 3
+		select_effect = {
+			add_ideas = under_construction
+		}
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			custom_effect_tooltip = debuff_tt
+			show_ideas_tooltip = under_construction
+			custom_effect_tooltip = blank_line
+			hidden_effect = {
+				remove_ideas = under_construction
+			}
+			hidden_effect = {
+				every_state = {
+					limit = {
+						is_south_china_state = yes
+					}
+					max_infra_effect = yes
+				}
+			}
+			every_state = {
+				limit = {
+					is_south_china_state = yes
+				}
+				custom_effect_tooltip = max_infra
+			}
+		}
+		bypass = {
+			NOT = {
+				any_state = {
+					is_south_china_state = yes
+					infra_bypass_3_tr = no
+				}
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = industry_balanced_enough
+				has_completed_focus = PRC_chi_nationalize_industry_iii_focus
+			}
+			NOT = {
+				any_state = {
+					is_south_china_state = yes
+					infra_ava_3_tr = no
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_For_the_Soviets
+		icon = GFX_goal_generic_soviet_construction
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Democratic_centralism
+		}
+		x = 13
+		y = 6
+		ai_will_do = {
+			modifier = {
+				factor = 0
+				has_country_leader = {
+					name = "Mao Zedong"
+				}
+			}
+		}
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_political_power = 75
+			hidden_effect = {
+				drop_cosmetic_tag = yes
+				set_cosmetic_tag = SRC
+			}
+			custom_effect_tooltip = PRC_For_the_Soviets_tt
+			set_country_flag = PRC_Establish_state_or_independent_government
+			custom_effect_tooltip = a_nation_to_be_established_tt
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			OR = {
+				has_country_flag = PRC_United_front_was_established
+				has_country_flag = PRC_Opposed_to_chiang
+			}
+			OR = {
+				controls_state = 600
+				controls_state = 613
+				controls_state = 605
+				controls_state = 608
+			}
+			is_subject = no
+		}
+	}
+	focus = {
+		id = PRC_Domestic_truce_agreement
+		icon = GFX_goal_generic_national_unity
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_For_the_Soviets
+			focus = PRC_Federal_Republic
+		}
+		mutually_exclusive = {
+			focus = PRC_reunification_of_china
+		}
+		x = 14
+		y = 7
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			every_other_country = {
+				limit = {
+					OR = {
+						is_legit_china = yes
+						is_warlord = yes
+						tag = MAN
+						tag = EHB
+						tag = CCP
+						tag = RFM
+						tag = ECA
+					}
+					exists = yes
+					is_puppet = no
+					NOT = {
+						has_war_with = ROOT
+					}
+				}
+				country_event = {
+					id = EFM_Comchina.36
+					days = 1
+				}
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			is_subject = no
+		}
+		bypass = {
+			NOT = {
+				any_other_country = {
+					OR = {
+						is_legit_china = yes
+						is_warlord = yes
+						tag = MAN
+						tag = EHB
+						tag = CCP
+						tag = RFM
+						tag = ECA
+					}
+					exists = yes
+					is_puppet = no
+					NOT = {
+						has_war_with = ROOT
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_Domestic_revolution
+		icon = GFX_goal_generic_demand_territory
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_Domestic_truce_agreement
+		}
+		mutually_exclusive = {
+			focus = PRC_Pan_national_unity_front
+		}
+		x = 13
+		y = 8
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			every_other_country = {
+				limit = {
+					OR = {
+						is_legit_china = yes
+						is_warlord = yes
+						tag = MAN
+						tag = EHB
+						tag = CCP
+						tag = RFM
+						tag = ECA
+					}
+					exists = yes
+				}
+				country_event = {
+					id = EFM_Comchina.39
+					days = 1
+				}
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			has_government = communism
+		}
+		bypass = {
+			NOT = {
+				any_other_country = {
+					OR = {
+						is_legit_china = yes
+						is_warlord = yes
+						tag = MAN
+						tag = EHB
+						tag = CCP
+						tag = RFM
+						tag = ECA
+					}
+					exists = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_Pan_national_unity_front
+		icon = GFX_goal_generic_major_alliance
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Federal_Republic
+		}
+		prerequisite = {
+			focus = PRC_Domestic_truce_agreement
+		}
+		mutually_exclusive = {
+			focus = PRC_Domestic_revolution
+		}
+		x = 15
+		y = 8
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			set_rule = {
+				can_create_factions = yes
+			}
+			create_faction = "PRC_Pan_national_unity_front"
+			every_other_country = {
+				limit = {
+					OR = {
+						tag = CHI
+						is_warlord = yes
+						tag = MAN
+						tag = EHB
+						tag = CCP
+						tag = RFM
+						tag = ECA
+						tag = SIK
+						tag = MON
+						tag = INS
+						tag = SST
+						tag = MAL
+						tag = KOR
+						tag = JAP
+						tag = FIC
+						tag = SIA
+					}
+					exists = yes
+					OR = {
+						is_puppet = no
+						is_puppet_of = PRC
+					}
+					is_in_faction = no
+					NOT = {
+						has_war_with = ROOT
+						has_government = fascism
+						has_country_flag = PRC_Refuse_truce_agreement_and_unity_front
+					}
+				}
+				country_event = {
+					id = EFM_Comchina.42
+					days = 1
+				}
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			is_in_faction = no
+		}
+	}
+	focus = {
+		id = PRC_Output_revolution
+		icon = GFX_focus_generic_strike_at_democracy2
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Domestic_revolution
+			focus = PRC_Pan_national_unity_front
+		}
+		x = 14
+		y = 9
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_ideas = PRC_Output_revolution
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_Joint_command
+		icon = GFX_goal_tfv_generic_tech_sharing
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Pan_national_unity_front
+		}
+		x = 16
+		y = 9
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			every_other_country = {
+				limit = {
+					is_in_faction_with = PRC
+				}
+				add_to_tech_sharing_group = PRC_Joint_command_tech_group
+			}
+			add_to_tech_sharing_group = PRC_Joint_command_tech_group
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			is_in_faction = yes
+		}
+	}
+	focus = {
+		id = PRC_Support_Indochina
+		icon = GFX_goal_generic_small_arms
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Output_revolution
+		}
+		x = 15
+		y = 11
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			if = {
+				limit = {
+					FIC = {
+						exists = yes
+						NOT = {
+							has_government = communism
+						}
+					}
+				}
+				FIC = {
+					add_timed_idea = {
+						idea = internationalism
+						days = 365
+					}
+				}
+			}
+			if = {
+				limit = {
+					CAM = {
+						exists = yes
+						NOT = {
+							has_government = communism
+						}
+					}
+				}
+				CAM = {
+					add_timed_idea = {
+						idea = internationalism
+						days = 365
+					}
+				}
+			}
+			if = {
+				limit = {
+					VIN = {
+						exists = yes
+						NOT = {
+							has_government = communism
+						}
+					}
+				}
+				VIN = {
+					add_timed_idea = {
+						idea = internationalism
+						days = 365
+					}
+				}
+			}
+			if = {
+				limit = {
+					LAO = {
+						exists = yes
+						NOT = {
+							has_government = communism
+						}
+					}
+				}
+				LAO = {
+					add_timed_idea = {
+						idea = internationalism
+						days = 365
+					}
+				}
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			OR = {
+				CAM = {
+					exists = yes
+					NOT = {
+						has_government = communism
+					}
+				}
+				VIN = {
+					exists = yes
+					NOT = {
+						has_government = communism
+					}
+				}
+				LAO = {
+					exists = yes
+					NOT = {
+						has_government = communism
+					}
+				}
+				FIC = {
+					exists = yes
+					NOT = {
+						has_government = communism
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_Nuclear_technology
+		icon = GFX_focus_smiling_buddha
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_computer
+		}
+		x = 42
+		y = 6
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_tech_bonus = {
+				name = nuclear
+				bonus = 0.5
+				uses = 1
+				category = nuclear
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_Block_enemy
+		icon = GFX_goal_generic_defence
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Breaking_operations
+		}
+		x = 2
+		y = 6
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			custom_effect_tooltip = PRC_Breaking_operations_tt
+			every_other_country = {
+				limit = {
+					has_war_with = PRC
+					NOT = {
+						has_idea = PRC_Sabotage_factory
+					}
+				}
+				add_ideas = PRC_Check_enemy
+			}
+			every_other_country = {
+				limit = {
+					has_war_with = PRC
+					has_idea = PRC_Sabotage_factory
+				}
+				swap_ideas = {
+					remove_idea = PRC_Sabotage_factory
+					add_idea = PRC_Check_enemy
+				}
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			has_war = yes
+		}
+	}
+	focus = {
+		id = PRC_Expand_production
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Establish_traffic_network
+		}
+		x = 4
+		y = 6
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_Democratic_centralism
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Republican
+			focus = PRC_federation
+		}
+		mutually_exclusive = {
+			focus = PRC_Rise_of_reactionaries
+			focus = PRC_Centralisation
+			focus = PRC_Proletariat_and_democracy
+		}
+		x = 13
+		y = 5
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_ideas = PRC_Group_politics
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_A_New_Countey
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Centralisation
+		}
+		x = 11
+		y = 6
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			hidden_effect = {
+				drop_cosmetic_tag = yes
+				set_cosmetic_tag = PRC_PRC
+			}
+			custom_effect_tooltip = PRC_a_new_country_tt
+			set_capital = 608
+			add_political_power = 150
+			add_national_unity = 0.05
+			set_country_flag = PRC_Establish_state_or_independent_government
+			custom_effect_tooltip = a_nation_to_be_established_tt
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			is_subject = no
+			OR = {
+				has_country_flag = PRC_United_front_was_established
+				has_country_flag = PRC_Opposed_to_chiang
+			}
+			OR = {
+				has_war_with = CHI
+				CHI = {
+					OR = {
+						exists = no
+						is_puppet = yes
+					}
+				}
+			}
+			608 = {
+				is_controlled_by = PRC
+			}
+		}
+	}
+	focus = {
+		id = PRC_Join_USSR
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_reunification_of_china
+		}
+		mutually_exclusive = {
+			focus = PRC_China_lead
+		}
+		x = 11
+		y = 8
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			SOV = {
+				country_event = {
+					id = EFM_independent.1
+					days = 1
+				}
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_China_lead
+		icon = GFX_goal_anschluss
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_military_dictatorship
+			focus = PRC_reunification_of_china
+		}
+		mutually_exclusive = {
+			focus = PRC_Join_USSR
+		}
+		x = 9
+		y = 8
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			set_rule = {
+				can_create_factions = yes
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_Support_Korea
+		icon = GFX_goal_tripartite_pact
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Output_revolution
+		}
+		x = 13
+		y = 11
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			if = {
+				limit = {
+					KOR = {
+						exists = yes
+						NOT = {
+							has_government = communism
+						}
+					}
+				}
+				KOR = {
+					add_timed_idea = {
+						idea = internationalism
+						days = 365
+					}
+				}
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			KOR = {
+				exists = yes
+				NOT = {
+					has_government = communism
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_Claim_sinkiang
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Combat_laboratory
+		}
+		x = 12
+		y = 10
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			create_wargoal = {
+				type = annex_everything
+				target = SIK
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			is_neighbor_of = SIK
+			SIK = {
+				exists = yes
+				OR = {
+					NOT = {
+						has_government = communism
+						is_in_faction_with = ROOT
+					}
+					has_country_leader = {
+						name = "Sheng Shicai"
+					}
+				}
+			}
+		}
+		bypass = {
+			SIK = {
+				is_puppet_of = PRC
+			}
+		}
+	}
+	focus = {
+		id = PRC_Revanchism_of_Chinese
+		icon = GFX_focus_generic_strike_at_democracy1
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_military_dictatorship
+		}
+		prerequisite = {
+			focus = PRC_China_lead
+		}
+		x = 8
+		y = 9
+		ai_will_do = {
+			modifier = {
+				factor = 0
+				has_government = communism
+			}
+		}
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_ideas = PRC_Revanchism
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_Concession_or_cede
+		icon = GFX_focus_AST_never_gallipoli
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_Revanchism_of_Chinese
+		}
+		prerequisite = {
+			focus = PRC_Claim_Tibet
+		}
+		x = 10
+		y = 10
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			every_other_country = {
+				limit = {
+					any_owned_state = {
+						is_core_of = PRC
+					}
+					NOT = {
+						is_in_faction_with = ROOT
+						is_puppet_of = ROOT
+					}
+					NOT = {
+						tag = CHI
+						tag = GXC
+						tag = YUN
+						tag = SHX
+						tag = XSM
+						tag = TIB
+						tag = HPC
+						tag = SIK
+						tag = GUD
+						tag = SHD
+						tag = SIC
+					}
+				}
+				country_event = {
+					id = EFM_independent.10
+					days = 1
+				}
+			}
+			add_political_power = 100
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_Demand_mongolia
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Revanchism_of_Chinese
+		}
+		prerequisite = {
+			focus = PRC_Claim_Tibet
+		}
+		x = 8
+		y = 10
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			if = {
+				limit = {
+					exists = yes
+					is_puppet = no
+				}
+				MON = {
+					country_event = {
+						id = EFM_independent.13
+						days = 1
+					}
+				}
+			}
+			if = {
+				limit = {
+					exists = yes
+					is_puppet_of = SOV
+				}
+				SOV = {
+					country_event = {
+						id = EFM_independent.13
+						days = 1
+					}
+				}
+			}
+			if = {
+				limit = {
+					exists = yes
+					is_puppet_of = JAP
+				}
+				JAP = {
+					country_event = {
+						id = EFM_independent.13
+						days = 1
+					}
+				}
+			}
+			every_other_country = {
+				limit = {
+					NOT = {
+						tag = MON
+					}
+					controls_state = 330
+				}
+				country_event = {
+					id = EFM_independent.13
+				}
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			is_subject = no
+			NOT = {
+				owns_state = 330
+			}
+			OR = {
+				MON = {
+					exists = yes
+					is_puppet = no
+					is_neighbor_of = ROOT
+				}
+				MON = {
+					is_puppet = yes
+					NOT = {
+						is_puppet_of = ROOT
+					}
+					is_neighbor_of = ROOT
+				}
+				any_other_country = {
+					controls_state = 330
+					is_neighbor_of = ROOT
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_Liberation_Siberia
+		icon = GFX_goal_anti_comintern_pact
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_Output_revolution
+		}
+		x = 14
+		y = 10
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			create_wargoal = {
+				type = annex_everything
+				target = SOV
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			has_country_flag = PRC_estrangement_moscow
+			has_country_flag = PRC_Route_of_founding_member
+		}
+		bypass = {
+			OR = {
+				has_war_with = SOV
+				SOV = {
+					exists = no
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_reunification_of_china
+		icon = GFX_goal_generic_position_armies
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_military_dictatorship
+			focus = PRC_A_New_Countey
+			focus = PRC_For_the_Soviets
+		}
+		mutually_exclusive = {
+			focus = PRC_Domestic_truce_agreement
+		}
+		x = 10
+		y = 7
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			custom_effect_tooltip = declare_war_on_all_warlords_tt
+			hidden_effect = {
+				every_country = {
+					limit = {
+						is_warlord = yes
+						is_subject = no
+					}
+					ROOT = {
+						create_wargoal = {
+							type = annex_everything
+							target = PREV
+						}
+					}
+				}
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+		bypass = {
+			NOT = {
+				any_other_country = {
+					exists = yes
+					is_warlord = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_Claim_Tibet
+		icon = GFX_goal_generic_political_pressure
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_China_lead
+			focus = PRC_Join_USSR
+		}
+		x = 10
+		y = 9
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			if = {
+				limit = {
+					TIB = {
+						exists = yes
+					}
+				}
+				TIB = {
+					country_event = {
+						id = EFM_independent.21
+					}
+				}
+			}
+			every_other_country = {
+				limit = {
+					NOT = {
+						tag = TIB
+					}
+					controls_state = 322
+				}
+				country_event = {
+					id = EFM_independent.24
+				}
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			is_subject = no
+			NOT = {
+				owns_state = 322
+			}
+			OR = {
+				TIB = {
+					is_neighbor_of = PRC
+				}
+				any_other_country = {
+					controls_state = 322
+					is_neighbor_of = PRC
+				}
+			}
+		}
+		bypass = {
+			PRC = {
+				owns_state = 322
+			}
+		}
+	}
+	focus = {
+		id = PRC_Bomber
+		icon = GFX_goal_generic_air_bomber
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Aviation_school
+		}
+		x = 32
+		y = 8
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_tech_bonus = {
+				name = tactical_bomber
+				bonus = 0.5
+				uses = 1
+				category = tactical_bomber
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_Enemy_city
+		icon = GFX_goal_generic_occupy_start_war
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Bomber
+		}
+		x = 32
+		y = 9
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_tech_bonus = {
+				name = cat_strategic_bomber
+				bonus = 0.5
+				uses = 1
+				category = cat_strategic_bomber
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_Invited_soviet_general
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Red_Army_Naval
+		}
+		x = 30
+		y = 7
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_tech_bonus = {
+				name = naval_doctrine
+				bonus = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
+			if = {
+				limit = {
+					is_in_faction_with = SOV
+				}
+				add_tech_bonus = {
+					name = naval_doctrine
+					bonus = 0.5
+					uses = 1
+					category = naval_doctrine
+				}
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			NOT = {
+				has_war_with = SOV
+			}
+		}
+	}
+	focus = {
+		id = PRC_Invited_soviet_Instructor
+		icon = GFX_goal_generic_air_doctrine
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Red_Army_Air_Force
+		}
+		x = 28
+		y = 7
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_tech_bonus = {
+				name = air_doctrine
+				bonus = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+			if = {
+				limit = {
+					is_in_faction_with = SOV
+				}
+				add_tech_bonus = {
+					name = air_doctrine
+					bonus = 0.5
+					uses = 1
+					category = air_doctrine
+				}
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			NOT = {
+				has_war_with = SOV
+			}
+		}
+	}
+	focus = {
+		id = PRC_Soviet_marine
+		icon = GFX_goal_generic_amphibious_assault
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Invited_soviet_general
+		}
+		x = 30
+		y = 8
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = 0.5
+				uses = 1
+				technology = marines
+				technology = marines2
+			}
+			if = {
+				limit = {
+					is_in_faction_with = SOV
+				}
+				add_tech_bonus = {
+					name = special_forces_bonus
+					bonus = 0.5
+					uses = 2
+					technology = marines
+					technology = marines2
+				}
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			NOT = {
+				has_war_with = SOV
+			}
+		}
+	}
+	focus = {
+		id = PRC_For_china
+		icon = GFX_goal_generic_political_pressure
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Japan_war_focus
+		}
+		x = 0
+		y = 6
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			add_ideas = PRC_For_the_china
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			has_war_with = JAP
+		}
+	}
+	focus = {
+		id = PRC_Combat_laboratory
+		icon = GFX_goal_tfv_generic_tech_sharing
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Join_USSR
+		}
+		x = 12
+		y = 9
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			SOV = {
+				add_to_tech_sharing_group = comintern_research
+			}
+			add_to_tech_sharing_group = comintern_research
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			is_in_faction_with = SOV
+			is_subject = no
+		}
+	}
+	focus = {
+		id = PRC_west_china_infra_focus
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 8.00
+		prerequisite = {
+			focus = PRC_Five_year_plans_of_China
+		}
+		x = 65
+		y = 1
+		select_effect = {
+			add_ideas = under_construction
+		}
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			custom_effect_tooltip = debuff_tt
+			show_ideas_tooltip = under_construction
+			custom_effect_tooltip = blank_line
+			hidden_effect = {
+				remove_ideas = under_construction
+			}
+			every_state = {
+				limit = {
+					is_west_china_state = yes
+				}
+				custom_effect_tooltip = level_3_infra_tt
+			}
+			custom_effect_tooltip = acc_tt
+			604 = {
+				level_3_infra = yes
+			}
+			283 = {
+				level_3_infra = yes
+			}
+			601 = {
+				level_3_infra = yes
+			}
+			605 = {
+				level_3_infra = yes
+			}
+			743 = {
+				level_3_infra = yes
+			}
+			761 = {
+				level_3_infra = yes
+			}
+		}
+		bypass = {
+			NOT = {
+				any_state = {
+					is_south_china_state = yes
+					infra_bypass_1_tr = no
+				}
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = industry_balanced_enough
+				has_completed_focus = PRC_chi_nationalize_industry_focus
+			}
+			NOT = {
+				any_state = {
+					is_south_china_state = yes
+					NOT = {
+						is_controlled_by = ROOT
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_west_china_infra_focus_ii
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_west_china_infra_focus
+		}
+		x = 65
+		y = 2
+		select_effect = {
+			add_ideas = under_construction
+		}
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			custom_effect_tooltip = debuff_tt
+			show_ideas_tooltip = under_construction
+			custom_effect_tooltip = blank_line
+			hidden_effect = {
+				remove_ideas = under_construction
+			}
+			every_state = {
+				limit = {
+					is_west_china_state = yes
+				}
+				custom_effect_tooltip = level_6_infra_tt
+			}
+			custom_effect_tooltip = acc_tt
+			604 = {
+				level_6_infra = yes
+			}
+			283 = {
+				level_6_infra = yes
+			}
+			601 = {
+				level_6_infra = yes
+			}
+			605 = {
+				level_6_infra = yes
+			}
+			743 = {
+				level_6_infra = yes
+			}
+			761 = {
+				level_6_infra = yes
+			}
+		}
+		bypass = {
+			NOT = {
+				any_state = {
+					is_west_china_state = yes
+					infra_bypass_2_tr = no
+				}
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = industry_balanced_enough
+				has_completed_focus = PRC_chi_nationalize_industry_ii_focus
+			}
+			NOT = {
+				any_state = {
+					is_west_china_state = yes
+					infra_ava_2_tr = no
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_west_china_infra_focus_iii
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 15.00
+		prerequisite = {
+			focus = PRC_west_china_infra_focus_ii
+		}
+		x = 65
+		y = 3
+		select_effect = {
+			add_ideas = under_construction
+		}
+		completion_reward = {
+			for_tracking_ten_comp_foc = yes
+			custom_effect_tooltip = debuff_tt
+			show_ideas_tooltip = under_construction
+			custom_effect_tooltip = blank_line
+			custom_effect_tooltip = blank_line
+			hidden_effect = {
+				remove_ideas = under_construction
+			}
+			every_state = {
+				limit = {
+					is_west_china_state = yes
+				}
+				custom_effect_tooltip = max_infra
+			}
+			#custom_effect_tooltip = acc_tt
+			hidden_effect = {
+				every_state = {
+					limit = {
+						is_west_china_state = yes
+					}
+					max_infra_effect = yes
+				}
+			}
+		}
+		bypass = {
+			NOT = {
+				any_state = {
+					is_west_china_state = yes
+					infra_bypass_3_tr = no
+				}
+			}
+		}
+		available = {
+			hidden_trigger = {
+				ai_cont_foc_prc = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = industry_balanced_enough
+				has_completed_focus = PRC_chi_nationalize_industry_iii_focus
+			}
+			NOT = {
+				any_state = {
+					is_west_china_state = yes
+					infra_ava_3_tr = no
+				}
+			}
+		}
+	}
+}

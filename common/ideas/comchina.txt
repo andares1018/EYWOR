@@ -1,0 +1,1526 @@
+ideas = {
+	hidden_ideas = {
+		idea_continuous_recover_from_the_long_march = {
+			available = {
+				#OR = {
+				#	has_idea = Long_March_1
+				#	has_idea = Long_March_2
+				#	has_idea = Long_March_3
+				#	has_idea = Long_March_4
+				#	has_idea = Long_March_5
+				#}
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				unity_weekly = 0.0075
+			}
+		}
+		idea_continuous_amass_public_support = {
+			available = {
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			}
+		}
+		idea_continuous_stage_uprisings = {
+			available = {
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			}
+		}
+		idea_continuous_specialized_training_program = {
+			available = {
+				#OR = {
+				#	has_idea = PRC_no_skilled_personnel_1
+				#	has_idea = PRC_no_skilled_personnel_2
+				#	has_idea = PRC_no_skilled_personnel_3
+				#	has_idea = PRC_no_skilled_personnel_4
+				#}
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			}
+		}
+	}
+	country = {
+		dongbei_turned_red_idea = {
+			picture = trotskyite_plot
+			available = {
+				has_global_flag = dongbei_turned_red
+				any_state = {
+					has_state_flag = commie_ridden_states
+				}
+			}
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+			}
+		}
+		north_china_turned_red_idea = {
+			picture = trotskyite_plot
+			available = {
+				has_global_flag = north_china_turned_red
+				any_state = {
+					has_state_flag = commie_ridden_states
+				}
+			}
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+			}
+		}
+		one_last_stand = {
+			picture = generic_fortify_the_borders
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_org_Factor = 0.15
+				#army_defence_factor = 0.5
+				army_morale_Factor = 0.15
+				#unity_factor = 0.10
+			}
+		}		
+		PRC_Isolated_status = {
+
+			picture = ast_abandon_the_westminster_system
+
+			available = {
+				NOT = {
+					is_in_faction_with = CHI
+					is_in_faction_with = SOV
+					is_neighbor_of = SOV
+					is_neighbor_of = SIK
+					has_full_control_of_state = 621
+					#no need for 763
+				}
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			modifier = {
+				ai_get_ally_desire_factor = -90
+				join_faction_tension = 1.0
+			}
+		}
+		PRC_Mobile_Warfare = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = CZE_planning_bonus
+			
+			modifier = {
+				planning_speed = 0.1
+				army_core_attack_factor = 0.1
+			}
+		}
+		PRC_Mobile_Warfare_2 = {
+		
+			picture = CZE_planning_bonus
+
+			available = {
+				num_of_controlled_states < 21
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				planning_speed = 0.1
+				army_core_attack_factor = 0.1
+				encryption = 0.5
+				decryption = 0.25
+			}
+		}
+		PRC_Mobile_Warfare_3 = {
+		
+			picture = CZE_planning_bonus
+
+			available = {
+				num_of_controlled_states < 21
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				planning_speed = 0.1
+				army_core_attack_factor = 0.15
+				encryption = 0.5
+				decryption = 0.25
+				army_speed_factor = 0.05
+			}
+		}
+		PRC_no_skilled_personnel_1 = {
+			removal_cost = -1
+			
+			#picture = great_depression
+			
+			allowed = {
+				always = no
+			}
+			
+			research_bonus = {
+				industry = -0.4
+				electronics = -2.4
+				nuclear = -7.2
+				rocketry = -2.4
+				jet_technology = -2.4
+				air_equipment = -4.8
+				naval_equipment = -3.2
+				infantry_weapons = -0.24
+				night_vision = -4
+				motorized_equipment = -0.4
+				artillery = -0.72
+				support_tech = -0.16
+				armor = -1.6
+				air_doctrine = -0.72
+				naval_doctrine = -1.2
+				land_doctrine = -0.24
+			}
+		}
+		PRC_no_skilled_personnel_2 = {
+			removal_cost = -1
+			
+			#picture = great_depression
+			
+			allowed = {
+				always = no
+			}
+			
+			research_bonus = {
+				industry = -0.3
+				electronics = -1.8
+				nuclear = -5.4
+				rocketry = -1.8
+				jet_technology = -1.8
+				air_equipment = -3.6
+				naval_equipment = -2.4
+				infantry_weapons = -0.18
+				night_vision = -3
+				motorized_equipment = -0.3
+				artillery = -0.54
+				support_tech = -0.12
+				armor = -1.2
+				air_doctrine = -0.54
+				naval_doctrine = -0.9
+				land_doctrine = -0.18
+			}
+		}
+		PRC_no_skilled_personnel_3 = {
+			removal_cost = -1
+			
+			#picture = great_depression
+			
+			allowed = {
+				always = no
+			}
+			
+			research_bonus = {
+				industry = -0.2
+				electronics = -1.2
+				nuclear = -3.6
+				rocketry = -1.2
+				jet_technology = -1.2
+				air_equipment = -2.4
+				naval_equipment = -1.6
+				infantry_weapons = -0.12
+				night_vision = -2
+				motorized_equipment = -0.2
+				artillery = -0.36
+				support_tech = -0.08
+				armor = -0.8
+				air_doctrine = -0.36
+				naval_doctrine = -0.6
+				land_doctrine = -0.12
+			}
+		}
+		PRC_no_skilled_personnel_4 = {
+			removal_cost = -1
+			
+			#picture = great_depression
+			
+			allowed = {
+				always = no
+			}
+			
+			research_bonus = {
+				industry = -0.1
+				electronics = -0.6
+				nuclear = -1.8
+				rocketry = -0.6
+				jet_technology = -0.1
+				air_equipment = -1.2
+				naval_equipment = -0.8
+				infantry_weapons = -0.06
+				night_vision = -1
+				motorized_equipment = -0.1
+				artillery = -0.18
+				support_tech = -0.04
+				armor = -0.4
+				air_doctrine = -0.18
+				naval_doctrine = -0.3
+				land_doctrine = -0.06
+			}
+		}
+		Long_March_1 = {
+			picture = ast_abandon_the_westminster_system_communism
+
+			removal_cost = -1
+			
+			available = {
+				#has_idea = Chinese_Red_Army
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			research_bonus = {
+				land_doctrine = -0.5
+			}
+
+			modifier = {
+				unity_factor = -0.5
+				research_time_factor = 0.5
+				political_power_cost = 0.75
+				industrial_capacity_factory = -0.25
+				production_factory_max_efficiency_factor = -0.1
+				#attrition = 0.25
+				#out_of_supply_factor = 0.25
+				#no_supply_grace = -50
+			}
+		}
+		Long_March_2 = {
+			picture = ast_abandon_the_westminster_system_communism
+
+			removal_cost = -1
+			
+			available = {
+				#has_idea = Chinese_Red_Army
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			research_bonus = {
+				land_doctrine = -0.4
+			}
+
+			modifier = {
+				unity_factor = -0.4
+				research_time_factor = 0.4
+				political_power_cost = 0.60
+				industrial_capacity_factory = -0.20
+				production_factory_max_efficiency_factor = -0.08
+				#attrition = 0.2
+				#out_of_supply_factor = 0.2
+				#no_supply_grace = -40
+			}
+		}
+		Long_March_3 = {
+			picture = ast_abandon_the_westminster_system_communism
+
+			removal_cost = -1
+			
+			available = {
+				#has_idea = Chinese_Red_Army
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			research_bonus = {
+				land_doctrine = -0.3
+			}
+
+			modifier = {
+				unity_factor = -0.3
+				research_time_factor = 0.3
+				political_power_cost = 0.45
+				industrial_capacity_factory = -0.15
+				production_factory_max_efficiency_factor = -0.06
+				#attrition = 0.15
+				#out_of_supply_factor = 0.15
+				#no_supply_grace = -30
+			}
+		}
+		Long_March_4 = {
+			picture = ast_abandon_the_westminster_system_communism
+
+			removal_cost = -1
+			
+			available = {
+				#has_idea = Chinese_Red_Army
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			research_bonus = {
+				land_doctrine = -0.2
+			}
+
+			modifier = {
+				unity_factor = -0.2
+				research_time_factor = 0.2
+				political_power_cost = 0.30
+				industrial_capacity_factory = -0.1
+				production_factory_max_efficiency_factor = -0.04
+				#attrition = 0.1
+				#out_of_supply_factor = 0.1
+				#no_supply_grace = -20
+			}
+		}
+		Long_March_5 = {
+			picture = ast_abandon_the_westminster_system_communism
+
+			removal_cost = -1
+			
+			available = {
+				#has_idea = Chinese_Red_Army
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			research_bonus = {
+				land_doctrine = -0.1
+			}
+
+			modifier = {
+				unity_factor = -0.1
+				research_time_factor = 0.1
+				political_power_cost = 0.15
+				industrial_capacity_factory = -0.05
+				production_factory_max_efficiency_factor = -0.02
+				#attrition = 0.05
+				#out_of_supply_factor = 0.05
+				#no_supply_grace = -10
+			}
+		}
+		PRC_Dissatisfied = {
+			picture = anti_soviet_pact
+
+			removal_cost = -1
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			modifier = {
+				unity_factor = -0.1
+			}
+		}
+		PRC_Poor_navy = {
+			picture = generic_navy_bonus
+
+			removal_cost = -1
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			research_bonus = {
+				naval_doctrine = -1.0
+			}
+		}
+		PRC_Poor_Air = {
+			picture = air_war_plans_division_focus
+
+			removal_cost = -1
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			research_bonus = {
+				air_doctrine = -1.0
+			}
+		}
+		Chinese_Red_Army = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = anti_soviet_pact
+			
+			modifier = {
+				army_org = -5
+				army_morale_factor = -0.1
+				conscription_factor = -0.5
+			}
+		}
+		PRC_Land_reform = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = FRA_scw_intervention_republicans_focus
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		PRC_For_the_china = {
+		
+			picture = trotskyite_plot_purged
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_morale_factor = 0.1
+			}
+		}
+		PRC_Exclusion_of_communism = {
+		
+			picture = saf_ossewabrandwag
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				communism_drift = -0.02
+				fascism_drift = 0.02
+				drift_defence_factor = 0.1
+			}
+		}
+		
+		PRC_Bureaucracy = {
+		
+			picture = saf_soviet_advisers
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				building_convertion_factor = 0.15
+			}
+		}
+		
+		PRC_Group_politics = {
+		
+			picture = saf_soviet_advisers
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = -0.15
+			}
+		}
+		
+		PRC_Expand_United_front = {
+		
+			picture = FRA_scw_intervention_nationalists_focus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				communism_acceptance = 85
+				democratic_acceptance = 85
+				fascism_acceptance = 20
+				communism_drift = 0.05
+				democratic_drift = 0.1
+			}
+		}
+		PRC_CPC_First = {
+		
+			picture = generic_communism_drift_bonus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				communism_drift = 0.1
+				fascism_drift = -0.1
+				political_advisor_cost_factor = -0.1
+				drift_defence_factor = 0.1
+			}
+		}
+		PRC_Firm_route = {
+		
+			picture = generic_spy_intel
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				drift_defence_factor = 0.25
+			}
+		}
+		PRC_Victory_in_the_west = {
+		
+			picture = air_support_focus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = 0.05
+			}
+		}
+		PRC_Authority_of_zhang = {
+		
+			picture = FRA_army_of_aggression_focus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				drift_defence_factor = 0.1
+				political_power_gain = 0.1
+				army_core_defence_factor = 0.1
+			}
+		}
+		
+		PRC_Trotskyism = {
+		
+			picture = home_of_revolution
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				puppet_cost_factor = -0.25
+				subversive_activites_upkeep = -0.1
+				send_volunteer_divisions_required = -0.1
+			}
+		}
+		PRC_Oppose_bureaucrats = {
+		
+			picture = ast_classify_aliens
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				planning_speed = 0.05
+				economy_cost_factor = -0.05
+				trade_laws_cost_factor = -0.05
+			}
+		}
+		
+		PRC_The_military_junta = {
+		
+			picture = generic_secret_police
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				local_resources_factor = 0.1
+				high_command_cost_factor = -0.1
+				mobilization_laws_cost_factor = -0.25
+				training_time_factor = -0.05
+				conversion_cost_civ_to_mil_factor = -0.2
+				resistance_tick_auto = 2
+				local_factory_sabotage = 0.1
+			}
+		}
+		PRC_The_Republican = {
+		
+			picture = generic_central_management
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industry_repair_factor = 0.1
+				trade_laws_cost_factor = -0.1
+				political_advisor_cost_factor = -0.1
+				conversion_cost_mil_to_civ_factor = -0.1
+				production_speed_industrial_complex_factor = 0.05
+				production_speed_infrastructure_factor = 0.05
+				production_speed_arms_factory_factor = 0.05
+				industrial_capacity_factory = 0.025
+				conscription = 0.02
+			}
+		}
+		PRC_The_federation = {
+		
+			picture = generic_agrarian_reform
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				research_time_factor = -0.03
+				economy_cost_factor = -0.1
+				theorist_cost_factor = -0.1
+				industrial_concern_cost_factor = -0.1
+				non_core_manpower = 0.1
+				land_reinforce_rate = 0.02
+				autonomy_gain_trade = 0.1
+				conscription = 0.005
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+				resistance_tick_auto = -1
+			}
+		}
+
+		PRC_Settings = {
+		
+			picture = CZE_planning_bonus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				max_planning = 0.1
+			}
+		}
+		
+		PRC_Trend_guerrilla_warfare = {
+		
+			picture = FRA_fortification_focus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				partisan_effect = 0.15
+				attrition = -0.1
+				pocket_penalty = -0.05
+				no_supply_grace = 48
+				out_of_supply_factor = -0.1
+				army_core_defence_factor = 0.15
+				army_core_attack_factor = -0.05
+			}
+		}
+		PRC_Trend_guerrilla_warfare_2 = {
+		
+			picture = FRA_fortification_focus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				partisan_effect = 0.2
+				attrition = -0.15
+				pocket_penalty = -0.1
+				no_supply_grace = 96
+				out_of_supply_factor = -0.2
+				army_core_defence_factor = 0.15
+				army_core_attack_factor = -0.05
+				army_morale_factor = 0.05
+				army_speed_factor = 0.05
+			}
+		}
+		
+		
+		PRC_War_of_Liberation = {
+		
+			picture = FRA_scw_intervention_republicans_focus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org = 10
+				army_morale_factor = 0.1
+				army_infantry_attack_factor = 0.1
+				army_infantry_defence_factor = 0.1
+			}
+		}
+		PRC_Output_revolution = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_spy_intel
+			
+			modifier = {
+				subversive_activites_upkeep = -0.25
+				foreign_subversive_activites = -0.25
+			}
+		}
+		
+		PRC_Worker_Focus = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_production_bonus
+			
+			modifier = {
+				production_speed_industrial_complex_factor = 0.05
+				production_speed_infrastructure_factor = 0.05
+				production_speed_arms_factory_factor = 0.05
+			}
+		}
+		
+		PRC_Farmer_Focus = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_goods_red_bonus
+			
+			modifier = {
+				industrial_capacity_factory = 0.05
+			}
+		}
+		
+		PRC_Field_army = {
+		
+			picture = FRA_national_mobilization_focus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org = 5
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+			}
+		}
+		
+		PRC_Develop_surrounding_area = {
+		
+			picture = FRA_scw_intervention_republicans_focus
+
+			available = {
+				has_war = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				monthly_population = 0.4
+			}
+		}
+		
+		PRC_Reorganize_troops = {
+		
+			picture = generic_manpower_bonus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription_factor = 0.025
+			}
+		}
+		
+		PRC_Underground_bunker = {
+		
+			picture = generic_air_bonus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industry_air_damage_factor = -0.25
+			}
+		}
+		
+		PRC_Steady_control_area = {
+		
+			picture = generic_volunteer_expedition_bonus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.02
+			}
+		}
+		
+		PRC_Fight_guidelines = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_morale_bonus
+			
+			modifier = {
+				army_morale_factor = 0.025
+				army_core_defence_factor = 0.05
+				dig_in_speed_factor = 0.1
+			}
+		}
+		
+		PRC_Growth_guidelines = {
+			available = {
+				has_war_with = JAP
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_production_bonus
+			
+			modifier = {
+				industrial_capacity_factory = 0.1
+			}
+		}
+		
+		PRC_Sabotage_factory = {
+			available = {
+				has_war_with = PRC
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = nkvd_2
+			
+			modifier = {
+				local_factory_sabotage = 0.1
+			}
+		}
+		PRC_Check_enemy = {
+			available = {
+				has_war_with = PRC
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = nkvd_2
+			
+			modifier = {
+				local_factory_sabotage = 0.1
+				attrition = 0.1
+			}
+		}
+		
+		PRC_Five_year_plans_of_China = {
+		
+			picture = generic_production_bonus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_infrastructure_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+			}
+		}
+		
+		PRC_Protest = {
+		
+			picture = FRA_scw_intervention_republicans_focus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			
+			modifier = {
+				industrial_capacity_factory = -0.2
+				consumer_goods_factor = 0.2
+				political_power_cost = 0.25
+			}
+		}
+		PRC_Protest_2 = {
+		
+			picture = FRA_scw_intervention_republicans_focus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			
+			modifier = {
+				industrial_capacity_factory = -0.05
+				consumer_goods_factor = 0.1
+				political_power_cost = 0.1
+			}
+		}
+		PRC_Protest_3 = {
+		
+			picture = FRA_scw_intervention_republicans_focus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			
+			modifier = {
+				political_power_cost = 0.4
+			}
+		}
+		
+		PRC_Revanchism = {
+		
+			picture = ast_abandon_the_westminster_system
+
+			allowed = {
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			
+			modifier = {
+				justify_war_goal_time = -0.4
+				generate_wargoal_tension = -0.5
+				army_morale_factor = 0.1
+			}
+		}
+	}
+
+	political_advisor = {
+
+		PRC_lin_bojiu = {
+
+			picture = generic_political_advisor_asia_1
+			
+			allowed = {
+				original_tag = PRC
+			}
+			
+			traits = { armaments_organizer }
+		}
+
+		PRC_zhou_enlai = {
+
+			picture = generic_political_advisor_asia_2
+				
+			allowed = {
+				original_tag = PRC
+			}
+			
+			traits = { ideological_crusader }
+		}
+
+		PRC_he_yuandang = {
+
+			picture = generic_political_advisor_asia_3
+			
+			allowed = {
+				original_tag = PRC
+			}
+			
+			traits = { captain_of_industry }
+		}
+	}	
+
+	army_chief = {
+		
+		PRC_zhu_de = {
+			
+			picture = generic_army_asia_1
+
+			allowed = {
+				original_tag = PRC
+			}
+			
+			traits = { army_chief_morale_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+
+		PRC_ma_jin = {
+
+			picture = generic_army_asia_2
+			
+			allowed = {
+				original_tag = PRC
+			}
+			
+			traits = { army_chief_offensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+	}
+
+	air_chief = {
+		
+
+		PRC_fang_zeyi = {
+			
+			picture = generic_air_asia_3
+			
+			allowed = {
+				original_tag = PRC
+			}
+			
+
+			
+			traits = { air_chief_ground_support_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+
+		PRC_gao_gang = {
+
+			picture = generic_air_asia_2
+			
+			allowed = {
+				original_tag = PRC
+			}
+			
+
+			
+			traits = { air_chief_safety_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	navy_chief = {
+		
+
+		PRC_ziao_jingguang = {
+			
+			picture = generic_navy_asia_1
+
+			allowed = {
+				original_tag = PRC
+			}
+					
+			traits = { navy_chief_maneuver_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+
+		PRC_gao_qiu = {
+			
+			picture = generic_navy_asia_2
+
+			allowed = {
+				original_tag = PRC
+			}
+					
+			traits = { navy_chief_decisive_battle_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	high_command = {
+
+		PRC_xu_xiangqian = {
+
+			picture = generic_army_asia_2
+			
+			allowed = {
+				original_tag = PRC
+			}
+			
+			traits = { army_regrouping_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		PRC_chen_yi = {
+
+			picture = generic_army_asia_1
+			
+			allowed = {
+				original_tag = PRC
+			}
+			
+			traits = { army_armored_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		PRC_liang_shen = {
+
+			picture = generic_air_asia_3
+			
+			allowed = {
+				original_tag = PRC
+			}
+			
+			traits = { air_air_combat_training_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		PRC_deng_ye_peng = {
+
+			picture = generic_navy_asia_1
+			
+			allowed = {
+				original_tag = PRC
+			}
+			
+			traits = { navy_amphibious_assault_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+
+
+	theorist = {
+		PRC_kwong_sun_ma = {
+
+			picture = generic_army_asia_2
+			
+			allowed = {
+				original_tag = PRC
+			}
+			
+			research_bonus = {
+				land_doctrine = 0.07
+			}
+			
+			traits = { military_theorist }
+		}
+		
+		PRC_hsia_tian = { 
+
+			picture = generic_air_asia_2
+			
+			allowed = {
+				original_tag = PRC
+			}
+			
+			research_bonus = {
+				air_doctrine = 0.07
+			}
+			
+			traits = { air_warfare_theorist }
+		}
+
+		PRC_zhang_wei = {
+
+			picture = generic_navy_asia_2
+			
+			allowed = {
+				original_tag = PRC
+			}
+			
+			research_bonus = {
+				naval_doctrine = 0.07
+			}
+			
+			traits = { naval_theorist }
+		}
+
+	}
+
+
+
+}

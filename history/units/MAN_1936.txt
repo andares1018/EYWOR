@@ -1,0 +1,402 @@
+﻿division_template = {
+	name = "Huncheng Lu" 			# Manchurian Army Mixed Brigades: 1 infantry regiment, 1 cavalry regiment, 1 artillery squadron
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		cavalry  = { x = 1 y = 0 }
+		cavalry  = { x = 1 y = 1 }
+		cavalry  = { x = 1 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+	}
+	priority = 0
+}
+division_template = {
+	name = "Qibing Lu" 			# Manchurian Army Cavalry Brigades
+	regiments = {
+		cavalry  = { x = 0 y = 0 }
+		cavalry  = { x = 1 y = 0 }
+		cavalry  = { x = 2 y = 0 }
+	}
+	priority = 0
+}
+
+units = {
+
+	### Manchurian Armed Forces ###
+
+	division = {
+		name = "Jinwei Bubing Tuan"
+		location = 4572
+		division_template = "Huncheng Lu"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "JAP" } }
+		start_equipment_factor = 0.1	
+	}
+	division = {
+		name = "Jing'an Jun"		# Mixed Japanese-Manchurian force; later Manchurian Army "Di 1 Shi(1st Division)"
+		location = 4572
+		division_template = "Huncheng Lu"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "JAP" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8		
+	}
+	division = {
+		name = "1 Qibing Lu"
+		location = 4572
+		division_template = "Qibing Lu"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "JAP" } }
+		start_equipment_factor = 0.8
+	}
+
+	# 1st Military District
+	division = {
+		name = "1 Jiandao Dui"
+		location = 11771
+		division_template = "Huncheng Lu"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "JAP" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8		
+	}
+	# 1st Area
+	division = {
+		name = "1 Huncheng Lu"
+		location = 6910
+		division_template = "Huncheng Lu"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "JAP" } }
+		start_equipment_factor = 0.8		
+	}
+	division = {
+		name = "2 Huncheng Lu"
+		location = 6910
+		division_template = "Huncheng Lu"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "JAP" } }
+		start_equipment_factor = 0.8		
+	}
+	division = {
+		name = "3 Huncheng Lu"
+		location = 6910
+		division_template = "Huncheng Lu"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "JAP" } }
+		start_equipment_factor = 0.8		
+	}
+	# 2nd Area
+	division = {
+		name = "4 Huncheng Lu"
+		location = 6868
+		division_template = "Huncheng Lu"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "JAP" } }
+		start_equipment_factor = 0.8		
+	}
+	division = {
+		name = "5 Huncheng Lu"
+		location = 6868
+		division_template = "Huncheng Lu"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "JAP" } }
+		start_equipment_factor = 0.8		
+	}
+	division = {
+		name = "6 Huncheng Lu"
+		location = 6868
+		division_template = "Huncheng Lu"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "JAP" } }
+		start_equipment_factor = 0.8		
+	}
+
+	# 2nd Military District
+	division = {
+		name = "2 Jiandao Dui"
+		location = 11850
+		division_template = "Huncheng Lu"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "JAP" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8		
+	}
+	# 3rd Area
+	division = {
+		name = "7 Huncheng Lu"
+		location = 11850
+		division_template = "Huncheng Lu"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "JAP" } }
+		start_equipment_factor = 0.8		
+	}
+	division = {
+		name = "9 Huncheng Lu"
+		location = 11850
+		division_template = "Huncheng Lu"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "JAP" } }
+		start_equipment_factor = 0.8		
+	}
+	division = {
+		name = "9 Huncheng Lu"
+		location = 11850
+		division_template = "Huncheng Lu"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "JAP" } }
+		start_equipment_factor = 0.8		
+	}
+	# 4th Area
+	division = {
+		name = "10 Huncheng Lu"
+		location = 973
+		division_template = "Huncheng Lu"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "JAP" } }
+		start_equipment_factor = 0.8		
+	}
+	division = {
+		name = "2 Qibing Lu"
+		location = 973
+		division_template = "Qibing Lu"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "JAP" } }
+		start_equipment_factor = 0.8		
+	}
+	division = {
+		name = "3 Qibing Lu"
+		location = 973
+		division_template = "Qibing Lu"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "JAP" } }
+		start_equipment_factor = 0.8		
+	}
+	division = {
+		name = "4 Qibing Lu"
+		location = 6868
+		division_template = "Qibing Lu"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "JAP" } }
+		start_equipment_factor = 0.8		
+	}
+
+	# 3rd Military District
+	division = {
+		name = "3 Jiandao Dui"
+		location = 4506
+		division_template = "Huncheng Lu"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "JAP" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8		
+	}
+	# 5th Area
+	division = {
+		name = "5 Qibing Lu"
+		location = 4506
+		division_template = "Qibing Lu"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "JAP" } }
+		start_equipment_factor = 0.8		
+	}
+	# 6th Area
+	division = {
+		name = "11 Huncheng Lu"
+		location = 4506
+		division_template = "Huncheng Lu"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "JAP" } }
+		start_equipment_factor = 0.8		
+	}
+	division = {
+		name = "12 Huncheng Lu"
+		location = 4506
+		division_template = "Huncheng Lu"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "JAP" } }
+		start_equipment_factor = 0.8		
+	}
+	division = {
+		name = "13 Huncheng Lu"
+		location = 4506
+		division_template = "Huncheng Lu"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "JAP" } }
+		start_equipment_factor = 0.8		
+	}
+	division = {
+		name = "14 Huncheng Lu"
+		location = 4506
+		division_template = "Huncheng Lu"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "JAP" } }
+		start_equipment_factor = 0.8		
+	}
+	division = {
+		name = "15 Huncheng Lu"
+		location = 4506
+		division_template = "Huncheng Lu"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "JAP" } }
+		start_equipment_factor = 0.8		
+	}
+
+	# 4th Military District
+	division = {
+		name = "4 Jiandao Dui"
+		location = 10433
+		division_template = "Huncheng Lu"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "JAP" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8		
+	}
+	# 7th Area
+	division = {
+		name = "16 Huncheng Lu"
+		location = 10433
+		division_template = "Huncheng Lu"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "JAP" } }
+		start_equipment_factor = 0.8		
+	}
+	division = {
+		name = "17 Huncheng Lu"
+		location = 10433
+		division_template = "Huncheng Lu"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "JAP" } }
+		start_equipment_factor = 0.8		
+	}
+	division = {
+		name = "18 Huncheng Lu"
+		location = 10433
+		division_template = "Huncheng Lu"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "JAP" } }
+		start_equipment_factor = 0.8		
+	}
+	# 8th Area
+	division = {
+		name = "19 Huncheng Lu"
+		location = 10433
+		division_template = "Huncheng Lu"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "JAP" } }
+		start_equipment_factor = 0.8		
+	}
+	division = {
+		name = "20 Huncheng Lu"
+		location = 10433
+		division_template = "Huncheng Lu"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "JAP" } }
+		start_equipment_factor = 0.8		
+	}
+	division = {
+		name = "21 Huncheng Lu"
+		location = 10433
+		division_template = "Huncheng Lu"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "JAP" } }
+		start_equipment_factor = 0.8		
+	}
+	# 9th Area
+	division = {
+		name = "22 Huncheng Lu"
+		location = 10379
+		division_template = "Huncheng Lu"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "JAP" } }
+		start_equipment_factor = 0.8		
+	}
+	division = {
+		name = "23 Huncheng Lu"
+		location = 10379
+		division_template = "Huncheng Lu"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "JAP" } }
+		start_equipment_factor = 0.8		
+	}
+	division = {
+		name = "6 Qibing Lu"
+		location = 10379
+		division_template = "Qibing Lu"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "JAP" } }
+		start_equipment_factor = 0.8		
+	}
+
+	# 5th Military District
+	division = {
+		name = "5 Jiandao Dui"
+		location = 900
+		division_template = "Huncheng Lu"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "JAP" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8		
+	}
+	# 10th Area
+	division = {
+		name = "24 Huncheng Lu"
+		location = 900
+		division_template = "Huncheng Lu"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "JAP" } }
+		start_equipment_factor = 0.8		
+	}
+	division = {
+		name = "25 Huncheng Lu"
+		location = 900
+		division_template = "Huncheng Lu"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "JAP" } }
+		start_equipment_factor = 0.8		
+	}
+	# 11th Area
+	division = {
+		name = "26 Huncheng Lu"
+		location = 6837
+		division_template = "Huncheng Lu"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "JAP" } }
+		start_equipment_factor = 0.8		
+	}
+	division = {
+		name = "7 Qibing Lu"
+		location = 6837
+		division_template = "Qibing Lu"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "JAP" } }
+		start_equipment_factor = 0.8		
+	}
+
+	# Manchurian Army Mongolian Unit; 8 cavalry regiments, later Manchurian Army "Di 2 Shi(2nd Division)"
+
+	# Xing'an Dong Jingbei Jun
+	division = {
+		name = "1 Qibing Tuan"
+		location = 12485
+		division_template = "Qibing Lu"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "JAP" } }
+		start_equipment_factor = 0.1
+	}
+	division = {
+		name = "2 Qibing Tuan"
+		location = 12485
+		division_template = "Qibing Lu"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "JAP" } }
+		start_equipment_factor = 0.1
+	}
+	# Xing'an Xi Jingbei Jun
+	division = {
+		name = "3 Qibing Tuan"
+		location = 10499
+		division_template = "Qibing Lu"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "JAP" } }
+		start_equipment_factor = 0.25
+	}
+	division = {
+		name = "4 Qibing Tuan"
+		location = 10499
+		division_template = "Qibing Lu"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "JAP" } }
+		start_equipment_factor = 0.25
+	}
+	# Xing'an Nan Jingbei Jun
+	division = {
+		name = "5 Qibing Tuan"
+		location = 7812
+		division_template = "Qibing Lu"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "JAP" } }
+		start_equipment_factor = 0.25
+	}
+	division = {
+		name = "6 Qibing Tuan"
+		location = 7812
+		division_template = "Qibing Lu"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "JAP" } }
+		start_equipment_factor = 0.25
+	}
+	# Xing'an Bei Jingbei Jun
+	division = {
+		name = "7 Qibing Tuan"
+		location = 13150
+		division_template = "Qibing Lu"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "JAP" } }
+		start_equipment_factor = 0.25
+	}
+	division = {
+		name = "8 Qibing Tuan"
+		location = 13150
+		division_template = "Qibing Lu"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "JAP" } }
+		start_equipment_factor = 0.25
+	}
+
+}
+

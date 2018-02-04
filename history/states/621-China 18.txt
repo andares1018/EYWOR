@@ -1,0 +1,65 @@
+#suiyuan
+state={
+	id=621
+	name="STATE_621"
+	resources={
+		steel=8.000
+	}
+	history={
+		owner = PLM
+		add_core_of = PLM
+		add_core_of = SHX
+		add_core_of = CHI
+		add_core_of = PRC
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			4960 = {
+				bunker = 5
+
+			}
+			10629 = {
+				bunker = 5
+
+			}
+			10451 = {
+				bunker = 5
+
+			}
+			
+		}
+		1939.1.1 = {
+			owner = SHX
+			add_core_of = ECA
+			ECA = {
+				set_province_controller = 12331
+				set_province_controller = 7631
+				set_province_controller = 10424
+				set_province_controller = 7158
+				set_province_controller = 12403
+				set_province_controller = 7048
+				set_province_controller = 4525
+
+			}
+
+		}
+		
+		victory_points = {
+			3427 3 
+		}
+		victory_points = {
+			7631 4 
+		}
+		victory_points = {
+			10629 3 
+		}
+
+	}
+
+	provinces={
+		1959 2087 3427 4960 4986 7631 10451 10629 10854 12609 12706 12880 
+	}
+	manpower=1283700
+	buildings_max_level_factor=1.500
+	state_category=town
+}

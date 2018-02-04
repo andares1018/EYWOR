@@ -1,0 +1,6625 @@
+focus_tree = {
+	id = china
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = CHI
+		}
+	}
+	default = yes
+	focus = {
+		id = chi_attack_com
+		icon = GFX_goal_anti_comintern_pact
+		cost = 5
+		mutually_exclusive = {
+			focus = chi_peace_com
+		}
+		x = 6
+		y = 0
+		ai_will_do = {
+			factor = 30
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		will_lead_to_war_with = PRC
+		completion_reward = {
+			effect_tooltip = {
+				create_wargoal = {
+					type = annex_everything
+					target = PRC
+				}
+			}
+			add_political_power = 120
+			hidden_effect = {
+				set_global_flag = chi_attack_comm
+				if = {
+					limit = {
+						is_ai = yes
+					}
+					declare_war_on = {
+						type = annex_everything
+						target = PRC
+					}
+					else = {
+						create_wargoal = {
+							type = annex_everything
+							target = PRC
+						}
+					}
+				}
+			}
+		}
+		available = {
+			NOT = {
+				has_global_flag = CHI_unite_PRC
+			}
+		}
+		bypass = {
+			hidden_trigger = {
+				has_country_flag = nineteen_thirtynine_start
+			}
+		}
+		cancel = {
+			has_global_flag = CHI_unite_PRC
+		}
+	}
+	focus = {
+		id = chi_peace_com
+		icon = GFX_goal_tripartite_pact
+		cost = 5.00
+		mutually_exclusive = {
+			focus = chi_attack_com
+		}
+		x = 8
+		y = 0
+		ai_will_do = {
+			factor = 30
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		completion_reward = {
+			PRC = {
+				country_event = {
+					id = EFM_Comchina.213
+					days = 1
+				}
+			}
+			add_political_power = 120
+			hidden_effect = {
+				PRC = {
+					dismantle_faction = yes
+				}
+				set_global_flag = chi_truce_com
+			}
+		}
+		bypass = {
+			OR = {
+				has_global_flag = CHI_unite_PRC
+				has_country_flag = yang_hucheng_in_charge
+			}
+		}
+	}
+	focus = {
+		id = chi_industry_focus
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 7.00
+		x = 53
+		y = 0
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.5
+				uses = 2
+				category = industry
+			}
+		}
+	}
+	focus = {
+		id = chi_inst_reform_focus
+		icon = GFX_goal_generic_cavalry
+		cost = 5.00
+		x = 29
+		y = 0
+		ai_will_do = {
+			factor = 80
+		}
+		completion_reward = {
+			add_political_power = 75
+		}
+	}
+	focus = {
+		id = chi_split_plm_focus
+		icon = GFX_split_plm_focus
+		cost = 3.57
+		x = 11
+		y = 2
+		ai_will_do = {
+			factor = 200
+		}
+		completion_reward = {
+			custom_effect_tooltip = failed_to_do_this_focus_in_time_can_lead_to_a_complete_defection_of_inner_mongolia_tt
+			PLM = {
+				country_event = {
+					id = rcmchina.2067
+				}
+			}
+		}
+		available = {
+			NOT = {
+				has_war_with = PLM
+				is_in_faction_with = JAP
+			}
+		}
+		bypass = {
+			OR = {
+				NOT = {
+					country_exists = PLM
+				}
+				has_country_flag = yang_hucheng_in_charge
+			}
+		}
+	}
+	focus = {
+		id = chi_foreign_help_focus
+		icon = GFX_goal_generic_improve_relations
+		cost = 5.00
+		x = 29
+		y = 2
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = diplomatic_effort
+				days = 365
+			}
+		}
+	}
+	focus = {
+		id = kmt_reorganize_nra
+		icon = GFX_focus_NRA
+		cost = 8.00
+		x = 45
+		y = 1
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			army_experience = 15
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = chi_lushan_focus
+		icon = GFX_goal_generic_propaganda
+		cost = 2.00
+		x = 5
+		y = 6
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			#remove_ideas = chi_kmt
+			remove_ideas = appeasement_policy
+			hidden_effect = {
+				remove_ideas = appeasement_policy_0
+				remove_ideas = appeasement_policy_2
+			}
+			add_political_power = 50
+			hidden_effect = {
+				news_event = {
+					id = news.2017
+				}
+				if = {
+					limit = {
+						is_ai = yes
+					}
+					remove_ideas = idea_gongxian_arsenal
+				}
+			}
+		}
+		available = {
+			has_war_with = JAP
+		}
+	}
+	focus = {
+		id = monetary_reform
+		icon = GFX_focus_generic_self_management
+		cost = 21.43
+		x = 51
+		y = 0
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 0
+				has_war_with = JAP
+			}
+		}
+		available = {
+			NOT = {
+				has_war_with = JAP
+			}				
+			has_idea = kung_hsiang_hsi
+		}
+		#has_idea = weng_wenhao
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = unstable_economy
+				add_idea = civilian_economy
+			}
+		}
+	}
+	focus = {
+		id = ack_hiro_sen_focus
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 7.15
+		prerequisite = {
+			focus = chi_attack_com
+		}
+		mutually_exclusive = {
+			focus = chi_fight_focus
+		}
+		x = 5
+		y = 1
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		completion_reward = {
+			JAP = {
+				country_event = {
+					days = 2
+					id = rcmchina.2026
+				}
+			}
+			effect_tooltip = {
+				JAP = {
+					add_to_faction = CHI
+					add_to_faction = HPC
+					unlock_national_focus = jap_revise_hiro_san
+					remove_opinion_modifier = {
+						target = CHI
+						modifier = hostile_status
+					}
+				}
+				remove_opinion_modifier = {
+					target = JAP
+					modifier = hostile_status
+				}
+				custom_effect_tooltip = blank_line
+				add_political_power = 120
+				remove_state_core = 612
+				remove_state_core = 757
+				remove_state_core = 610
+				remove_state_core = 609
+				remove_state_core = 715
+				remove_state_core = 716
+				remove_state_core = 328
+				remove_state_core = 717
+				remove_state_core = 714
+				remove_state_core = 747
+			}
+			custom_effect_tooltip = increase_penalty_appeasement
+			custom_effect_tooltip = promise_remove_bs_cc
+		}
+		available = {
+			has_idea = appeasement_policy
+			NOT = {
+				has_war_with = JAP
+				has_global_flag = CHI_unite_PRC
+			}
+			has_country_flag = yang_hucheng_in_charge
+			if = {
+				limit = {
+					NOT = {
+						tag = CHI
+					}
+				}
+				NOT = {
+					has_country_flag = yang_hucheng_in_charge
+				}
+			}
+		}
+		bypass = {
+		}
+	}
+	focus = {
+		id = dissolve_bs
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		cost = 5.00
+		prerequisite = {
+			focus = ack_hiro_sen_focus
+		}
+		x = 1
+		y = 2
+		ai_will_do = {
+			factor = 80
+		}
+		completion_reward = {
+			remove_ideas = the_blueshirts
+			add_popularity = {
+				ideology = fascism
+				popularity = -1
+			}
+			hidden_effect = {
+				set_party_name = {
+					ideology = fascism
+					name = no_party
+					long_name = no_party_long
+				}
+				create_country_leader = {
+					name = "None"
+					desc = ""
+					picture = ""
+					expire = "1965.1.1"
+					ideology = n_socialism_ideology
+					traits = {
+					}
+				}
+			}
+		}
+		#
+		available = {
+			is_in_faction_with = JAP
+		}
+		bypass = {
+			NOT = {
+				has_idea = the_blueshirts
+			}
+		}
+	}
+	focus = {
+		id = dissolve_cc
+		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+		cost = 5.00
+		prerequisite = {
+			focus = ack_hiro_sen_focus
+		}
+		x = 3
+		y = 2
+		ai_will_do = {
+			factor = 80
+		}
+		completion_reward = {
+			remove_ideas = central_club
+		}
+		available = {
+			is_in_faction_with = JAP
+		}
+		bypass = {
+			NOT = {
+				has_idea = central_club
+			}
+		}
+	}
+	focus = {
+		id = the_rise_of_wang
+		icon = GFX_rise_of_wang_focus
+		cost = 10.00
+		prerequisite = {
+			focus = dissolve_bs
+		}
+		prerequisite = {
+			focus = dissolve_cc
+		}
+		mutually_exclusive = {
+			focus = strengthen_chiangs_rule
+		}
+		x = 1
+		y = 3
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			set_party_name = {
+				ideology = fascism
+				name = CHI_fascism_RNG_party
+				long_name = CHI_fascism_RNG_party_long
+			}
+			create_country_leader = {
+				name = "Wang Jingwei"
+				desc = "POLITICS_WANG_JINGWEI_DESC"
+				picture = "gfx/leaders/RRC/Portrait_Wang.dds"
+				expire = "1965.1.1"
+				ideology = collaborationism
+				traits = {
+				}
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.4
+			}
+			hidden_effect = {
+				set_cosmetic_tag = RRC
+			}
+			add_ideas = fascist_influence
+		}
+		available = {
+			is_in_faction_with = JAP
+		}
+		bypass = {
+		}
+	}
+	focus = {
+		id = wang_coup
+		icon = GFX_goal_demand_sudetenland
+		cost = 10.00
+		prerequisite = {
+			focus = the_rise_of_wang
+		}
+		x = 0
+		y = 4
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			custom_effect_tooltip = wang_ruling_idea
+			hidden_effect = {
+				set_politics = {
+					ruling_party = fascism
+					elections_allowed = no
+				}
+			}
+			remove_ideas = chiang
+		}
+		available = {
+			fascism > 0.5
+		}
+		bypass = {
+		}
+	}
+	focus = {
+		id = strengthen_chiangs_rule
+		icon = GFX_strengthen_chiang
+		cost = 10.00
+		prerequisite = {
+			focus = dissolve_cc
+		}
+		prerequisite = {
+			focus = dissolve_bs
+		}
+		mutually_exclusive = {
+			focus = the_rise_of_wang
+		}
+		x = 3
+		y = 3
+		completion_reward = {
+			set_party_name = {
+				ideology = fascism
+				name = CHI_fascism_RNG_chiang_party
+				long_name = CHI_fascism_RNG_chiang_party_long
+			}
+			create_country_leader = {
+				name = "Chiang Kai-shek"
+				desc = "POLITICS_CHIANG_KAI-SHEK_DESC"
+				picture = "Portrait_China_Chiang_Kai_Shek.dds"
+				expire = "1965.1.1"
+				ideology = collaborationism
+				traits = {
+				}
+			}
+			create_country_leader = {
+				name = "Chen Guofu"
+				desc = ""
+				picture = "Portrait_Chen_Guofu.dds"
+				expire = "1965.1.1"
+				ideology = despotism
+				traits = {
+				}
+			}
+			custom_effect_tooltip = chiang_ruling_idea
+			hidden_effect = {
+				set_politics = {
+					ruling_party = fascism
+					elections_allowed = no
+				}
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.5
+			}
+			add_ideas = fascist_influence
+		}
+	}
+	focus = {
+		id = ban_communism
+		icon = GFX_goal_anti_comintern_pact
+		cost = 5.00
+		prerequisite = {
+			focus = the_rise_of_wang
+			focus = strengthen_chiangs_rule
+		}
+		x = 2
+		y = 4
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+				ideology = communism
+				popularity = -0.2
+			}
+			add_ideas = communism_banned
+		}
+		available = {
+		}
+		bypass = {
+		}
+	}
+	focus = {
+		id = government_reorganization
+		icon = GFX_goal_generic_demand_territory
+		cost = 10.00
+		prerequisite = {
+			focus = ban_communism
+			focus = wang_coup
+		}
+		x = 1
+		y = 5
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			remove_ideas = chi_kmt
+		}
+		available = {
+		}
+		bypass = {
+			NOT = {
+				has_idea = chi_kmt
+			}
+		}
+	}
+	focus = {
+		id = society_cleansing
+		icon = GFX_goal_generic_secret_weapon
+		cost = 10.00
+		prerequisite = {
+			focus = ban_communism
+		}
+		x = 2
+		y = 6
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_national_unity = -0.03
+			add_manpower = -150000
+			remove_ideas = CHI_communist_uprisings
+		}
+		available = {
+			has_idea = CHI_communist_uprisings
+		}
+		bypass = {
+		}
+	}
+	focus = {
+		id = military_indoctrination
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		prerequisite = {
+			focus = strengthen_chiangs_rule
+		}
+		x = 3
+		y = 5
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_political_power = -50
+			swap_ideas = {
+				remove_idea = chiang
+				add_idea = chiang_better
+			}
+		}
+		available = {
+			is_in_faction_with = JAP
+		}
+		bypass = {
+		}
+	}
+	focus = {
+		id = an_inch_of_mountain_an_inch_of_blood
+		icon = GFX_focus_generic_little_entente
+		cost = 10.00
+		prerequisite = {
+			focus = chi_lushan_focus
+		}
+		x = 5
+		y = 7
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_ideas = chi_inch_blood
+		}
+		available = {
+			has_war_with = JAP
+		}
+		bypass = {
+		}
+	}
+	focus = {
+		id = chi_air_arc_focus
+		icon = GFX_goal_generic_CAS
+		cost = 20.00
+		prerequisite = {
+			focus = an_inch_of_mountain_an_inch_of_blood
+		}
+		mutually_exclusive = {
+			focus = peace_with_japan
+			focus = chi_navy_sunfall_focus
+		}
+		x = 3
+		y = 8
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_ideas = chi_arc
+			news_event = {
+				id = efm_news.1026
+			}
+			add_state_claim = 536
+			add_state_claim = 282
+			add_state_claim = 535
+			add_state_claim = 528
+			add_state_claim = 555
+			add_state_claim = 537
+			add_state_claim = 533
+			add_state_claim = 534
+			add_state_claim = 531
+			add_state_claim = 529
+			add_state_claim = 530
+			add_state_claim = 532
+		}
+		available = {
+			527 = {
+				is_controlled_by = CHI
+			}
+			525 = {
+				is_controlled_by = CHI
+			}
+			524 = {
+				is_controlled_by = CHI
+			}
+		}
+		bypass = {
+			OR = {
+				NOT = {
+					country_exists = JAP
+				}
+				JAP = {
+					is_puppet = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = chi_fight_focus
+		icon = GFX_goal_generic_construct_military
+		cost = 7.15
+		prerequisite = {
+			focus = chi_peace_com
+			focus = chi_attack_com
+		}
+		mutually_exclusive = {
+			focus = ack_hiro_sen_focus
+		}
+		x = 7
+		y = 1
+		ai_will_do = {
+			factor = 30
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		completion_reward = {
+			add_political_power = 120
+			custom_effect_tooltip = decrease_penalty_appeasement
+			hidden_effect = {
+				swap_ideas = {
+					remove_idea = appeasement_policy
+					add_idea = appeasement_policy_0
+				}
+			}
+		}
+		bypass = {
+			NOT = {
+				has_idea = appeasement_policy
+			}
+		}
+	}
+	focus = {
+		id = chi_conquer_focus
+		icon = GFX_goal_generic_major_war
+		cost = 14.29
+		prerequisite = {
+			focus = ack_hiro_sen_focus
+			focus = chi_fight_focus
+		}
+		prerequisite = {
+			focus = chi_attack_com
+		}
+		x = 6
+		y = 2
+		ai_will_do = {
+			factor = 10
+		}
+		#will_lead_to_war_with = PRC
+		will_lead_to_war_with = GUD
+		will_lead_to_war_with = GXC
+		will_lead_to_war_with = SIC
+		will_lead_to_war_with = SHX
+		will_lead_to_war_with = XSM
+		will_lead_to_war_with = NXM
+		will_lead_to_war_with = XIK
+		will_lead_to_war_with = YUN
+		will_lead_to_war_with = HMI
+		will_lead_to_war_with = TNG
+		completion_reward = {
+			custom_effect_tooltip = declare_war_on_all_warlords_tt
+			hidden_effect = {
+				every_country = {
+					limit = {
+						is_warlord = yes
+						is_subject = no
+					}
+					ROOT = {
+						create_wargoal = {
+							type = annex_everything
+							target = PREV
+						}
+					}
+				}
+			}
+		}
+		available = {
+			any_other_country = {
+				exists = yes
+				is_warlord = yes
+			}
+			is_in_faction = no
+			NOT = {
+				has_global_flag = CHI_unite_PRC
+				country_exists = PRC
+			}
+		}
+		cancel = {
+			has_global_flag = CHI_unite_PRC
+		}
+	}
+	focus = {
+		id = delaying_tactics
+		icon = GFX_goal_generic_more_territorial_claims
+		cost = 5.00
+		prerequisite = {
+			focus = chi_conquer_focus
+		}
+		mutually_exclusive = {
+			focus = two_fronts_war
+		}
+		x = 5
+		y = 3
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_political_power = -50
+			country_event = {
+				id = rcmchina.2051
+			}
+			custom_effect_tooltip = if_they_accept_red
+			effect_tooltip = {
+				JAP = {
+					add_political_power = 200
+					add_timed_idea = {
+						idea = peace_talk_with_china
+						days = 180
+					}
+				}
+				custom_effect_tooltip = no_war_when_talk
+			}
+			custom_effect_tooltip = if_they_refuse_red
+			effect_tooltip = {
+				add_political_power = -20
+			}
+		}
+		available = {
+			NOT = {
+				has_war_with = JAP
+			}
+			NOT = {
+				JAP = {
+					has_annex_war_goal = CHI
+				}
+			}
+		}
+		bypass = {
+		}
+	}
+	focus = {
+		id = two_fronts_war
+		icon = GFX_goal_generic_fortify_city
+		cost = 5.00
+		prerequisite = {
+			focus = chi_conquer_focus
+		}
+		prerequisite = {
+			focus = chi_fight_focus
+		}
+		mutually_exclusive = {
+			focus = delaying_tactics
+		}
+		x = 7
+		y = 3
+		bypass = {
+			has_war_with = JAP
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_ideas = CHI_no_turning_back
+		}
+		available = {
+		}
+		bypass = {
+		}
+	}
+	focus = {
+		id = chi_navy_sunfall_focus
+		icon = GFX_goal_generic_navy_anti_submarine
+		cost = 20.00
+		prerequisite = {
+			focus = an_inch_of_mountain_an_inch_of_blood
+		}
+		mutually_exclusive = {
+			focus = chi_air_arc_focus
+			focus = peace_with_japan
+		}
+		x = 7
+		y = 8
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_ideas = chi_sunfall_sea
+			news_event = {
+				id = efm_news.1026
+			}
+			add_state_claim = 536
+			add_state_claim = 282
+			add_state_claim = 535
+			add_state_claim = 528
+			add_state_claim = 555
+			add_state_claim = 537
+			add_state_claim = 533
+			add_state_claim = 534
+			add_state_claim = 531
+			add_state_claim = 529
+			add_state_claim = 530
+			add_state_claim = 532
+		}
+		available = {
+			has_war_with = JAP
+			527 = {
+				is_controlled_by = CHI
+			}
+			525 = {
+				is_controlled_by = CHI
+			}
+			524 = {
+				is_controlled_by = CHI
+			}
+		}
+		bypass = {
+			OR = {
+				NOT = {
+					country_exists = JAP
+				}
+				JAP = {
+					is_puppet = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = chi_unite_focus
+		icon = GFX_goal_generic_military_deal
+		cost = 7.15
+		prerequisite = {
+			focus = chi_peace_com
+		}
+		prerequisite = {
+			focus = chi_fight_focus
+		}
+		x = 8
+		y = 2
+		ai_will_do = {
+			factor = 150
+		}
+		completion_reward = {
+			PRC = {
+				country_event = {
+					id = EFM_China.2000
+				}
+			}
+			custom_effect_tooltip = if_they_accept
+			effect_tooltip = {
+				add_opinion_modifier = {
+					target = PRC
+					modifier = chi_prc_pact
+				}
+				reverse_add_opinion_modifier = {
+					target = PRC
+					modifier = chi_prc_pact
+				}
+				diplomatic_relation = {
+					country = PRC
+					relation = non_aggression_pact
+				}
+				add_national_unity = 0.05
+				add_political_power = -30
+			}
+		}
+		bypass = {
+			has_global_flag = second_unite_bypass
+		}
+	}
+	focus = {
+		id = united_and_ready
+		icon = GFX_goal_generic_demand_territory
+		cost = 5.00
+		prerequisite = {
+			focus = delaying_tactics
+		}
+		x = 5
+		y = 4
+		bypass = {
+			has_war_with = JAP
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_national_unity = 0.1
+			add_political_power = 150
+		}
+		available = {
+			NOT = {
+				any_other_country = {
+					OR = {
+						is_warlord = yes
+						tag = PRC
+					}
+					exists = yes
+				}
+			}
+			NOT = {
+				has_war_with = JAP
+			}
+		}
+		bypass = {
+		}
+	}
+	
+	
+	focus = {
+		id = chi_coast_infra_focus
+		icon = GFX_focus_generic_coastal_fort
+		cost = 7.15
+		prerequisite = {
+			focus = chi_unite_focus
+			focus = united_and_ready
+			focus = two_fronts_war
+		}
+		x = 8
+		y = 5
+		ai_will_do = {
+			factor = 100
+		}
+		bypass = {
+			has_war_with = JAP
+		}
+		completion_reward = {
+			608 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					province = 10068
+					instant_build = yes
+				}
+			}
+			597 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					province = 4205
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					province = 10000
+					instant_build = yes
+				}
+			}
+			613 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					province = 7014
+					instant_build = yes
+				}
+			}
+			596 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					province = 7191
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					province = 9974
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					province = 1055
+					instant_build = yes
+				}
+			}
+			595 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					province = 4196
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					province = 7071
+					instant_build = yes
+				}
+			}
+			593 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					province = 9938
+					instant_build = yes
+				}
+			}
+			592 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					province = 1047
+					instant_build = yes
+				}
+			}
+			591 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					province = 1070
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = chi_defend_river_focus
+		icon = GFX_goal_generic_construct_military
+		cost = 7.15
+		prerequisite = {
+			focus = chi_coast_infra_focus
+		}
+		x = 8
+		y = 6
+		ai_will_do = {
+			factor = 100
+		}
+		bypass = {
+			has_war_with = JAP
+		}
+		completion_reward = {
+			600 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 1628
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 1153
+					instant_build = yes
+				}
+			}
+			602 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 9999
+					instant_build = yes
+				}
+			}
+			606 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 10044
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 11937
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 1171
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 1099
+					instant_build = yes
+				}
+			}
+			613 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 11913
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 11982
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 10076
+					instant_build = yes
+				}
+			}
+			620 = {
+				#1036 4009 4619 4631 7167 7580 7625 7637 9934 9959 10462 12467
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 5030
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 10757
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 12086
+					instant_build = yes
+				}
+			}
+			756 = {
+				#1036 4009 4619 4631 7167 7580 7625 7637 9934 9959 10462 12467
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 4631
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 4619
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 1036
+					instant_build = yes
+				}
+			}
+		}
+		available = {
+			606 = {
+				is_controlled_by = ROOT
+			}
+			613 = {
+				is_controlled_by = ROOT
+			}
+			620 = {
+				is_controlled_by = ROOT
+			}
+			756 = {
+				is_controlled_by = ROOT
+			}
+		}
+	}
+	focus = {
+		id = CHI_counter_insurgency
+		icon = GFX_goal_anti_comintern_pact
+		cost = 10
+		prerequisite = {
+			focus = chi_lushan_focus
+			focus = chi_defend_river_focus
+		}
+		x = 7
+		y = 7
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			any_owned_state = {
+				has_state_flag = commie_ridden_states
+			}
+		}
+		completion_reward = {
+			add_political_power = 100
+			custom_effect_tooltip = enable_ci_focus_tt
+			custom_effect_tooltip = warning_ci_tt
+		}
+	}
+	focus = {
+		id = big_rear_plan
+		icon = GFX_goal_generic_military_sphere
+		cost = 10.00
+		prerequisite = {
+			focus = chi_defend_river_focus
+			focus = chi_lushan_focus
+		}
+		x = 9
+		y = 7
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				NOT = {
+					has_war_with = JAP
+				}
+			}
+		}
+		cancel_if_invalid = no
+		available = {
+			613 = {
+				is_owned_and_controlled_by = ROOT
+				arms_factory > 2
+				industrial_complex > 1
+			}
+			598 = {
+				is_owned_and_controlled_by = ROOT
+				arms_factory > 1
+				industrial_complex > 0
+			}
+			596 = {
+				is_owned_and_controlled_by = ROOT
+				industrial_complex > 1
+			}
+			has_war = yes
+			605 = {
+				controller = {
+					OR = {
+						is_subject_of = ROOT
+						tag = ROOT
+					}
+				}
+			}
+		}
+		completion_reward = {
+			613 = {
+				remove_building = {
+					type = arms_factory
+					level = 3
+				}
+				remove_building = {
+					type = industrial_complex
+					level = 2
+				}
+			}
+			598 = {
+				remove_building = {
+					type = arms_factory
+					level = 2
+				}
+				remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			596 = {
+				remove_building = {
+					type = industrial_complex
+					level = 2
+				}
+			}
+			605 = {
+				add_extra_state_shared_building_slots = 10
+				add_building_construction = {
+					type = arms_factory
+					level = 5
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 5
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = last-ditch_effort
+		icon = GFX_goal_generic_demand_territory
+		cost = 10.00
+		prerequisite = {
+			focus = big_rear_plan
+		}
+		x = 9
+		y = 9
+		available = {
+			605 = {
+				is_controlled_by = CHI
+				OR = {
+					any_neighbor_state = {
+						is_controlled_by_jap_or_its_puppet = no
+					}
+					CHI = {
+						surrender_progress > 0.5
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			army_experience = 5
+			605 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 6999
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 7240
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 8026
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 12767
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 2045
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 5193
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 3259
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 12705
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 4
+					province = 12819
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = chi_pressure_xinjiang
+		icon = GFX_goal_generic_political_pressure
+		cost = 5.00
+		prerequisite = {
+			focus = chi_unite_focus
+		}
+		prerequisite = {
+			focus = chi_split_plm_focus
+		}
+		x = 11
+		y = 3
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_state_claim = 618
+			add_state_claim = 617
+			add_state_claim = 287
+			add_state_claim = 619
+			add_political_power = -25
+		}
+		available = {
+			JAP = {
+				has_war_with = CHI
+			}
+		}
+		bypass = {
+			OR = {
+				NOT = {
+					country_exists = SIK
+				}
+			}
+		}
+	}
+	focus = {
+		id = chi_war_xinjiang
+		icon = GFX_goal_generic_major_war
+		cost = 8.00
+		prerequisite = {
+			focus = chi_pressure_xinjiang
+		}
+		mutually_exclusive = {
+			focus = chi_offer_xinjiang
+		}
+		x = 10
+		y = 4
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		will_lead_to_war_with = SIK
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = SIK
+			}
+			add_political_power = 50
+		}
+		available = {
+			hidden_trigger = {
+				OR = {
+					is_ai = no
+					is_historical_focus_on = no
+				}
+			}
+			OR = {
+				is_in_faction_with = XSM
+				NOT = {
+					country_exists = XSM
+				}
+			}
+			OR = {
+				is_in_faction_with = NXM
+				NOT = {
+					country_exists = NXM
+				}
+			}
+			JAP = {
+				has_war_with = CHI
+			}
+		}
+		bypass = {
+			OR = {
+				NOT = {
+					country_exists = SIK
+				}
+				has_war_with = SIK
+			}
+		}
+	}
+	focus = {
+		id = chi_offer_xinjiang
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 8.00
+		prerequisite = {
+			focus = chi_pressure_xinjiang
+		}
+		mutually_exclusive = {
+			focus = chi_war_xinjiang
+		}
+		x = 12
+		y = 4
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				OR = {
+					date < 1942.2.12
+					NOT = {
+						GER = {
+							has_war_with = SOV
+						}
+					}
+				}
+			}
+		}
+		completion_reward = {
+			add_political_power = -50
+			SIK = {
+				country_event = {
+					id = rcmchina.2022
+				}
+			}
+		}
+		available = {
+			JAP = {
+				has_war_with = CHI
+			}
+		}
+		bypass = {
+			NOT = {
+				country_exists = SIK
+			}
+		}
+	}
+	focus = {
+		id = chi_war_xibei
+		icon = GFX_goal_generic_major_war
+		cost = 10.00
+		prerequisite = {
+			focus = chi_offer_xinjiang
+			focus = chi_war_xinjiang
+		}
+		mutually_exclusive = {
+			focus = chi_unite_xibei
+		}
+		x = 10
+		y = 5
+		ai_will_do = {
+			factor = 1
+		}
+		will_lead_to_war_with = XSM
+		will_lead_to_war_with = NXM
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = XSM
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = NXM
+			}
+			if = {
+				limit = {
+					country_exists = HMI
+					NOT = {
+						is_in_faction_with = HMI
+					}
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = HMI
+				}
+			}
+			if = {
+				limit = {
+					country_exists = TNG
+					NOT = {
+						is_in_faction_with = TNG
+					}
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = TNG
+				}
+			}
+			if = {
+				limit = {
+					country_exists = SIK
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = SIK
+				}
+			}
+			add_political_power = 100
+		}
+		available = {
+			NOT = {
+				is_in_faction_with = XSM
+				is_in_faction_with = NXM
+				is_in_faction_with = SIK
+				has_war_with = JAP
+			}
+		}
+		bypass = {
+			OR = {
+				NOT = {
+					country_exists = XSM
+					country_exists = NXM
+				}
+				AND = {
+					has_war_with = XSM
+					has_war_with = NXM
+				}
+			}
+		}
+	}
+	focus = {
+		id = chi_unite_xibei
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 10.00
+		prerequisite = {
+			focus = chi_offer_xinjiang
+			focus = chi_war_xinjiang
+		}
+		mutually_exclusive = {
+			focus = chi_war_xibei
+		}
+		x = 12
+		y = 5
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 0
+				date < 1943.1.1
+			}
+		}
+		completion_reward = {
+			SIK = {
+				country_event = {
+					id = rcmchina.2024
+				}
+			}
+			XSM = {
+				country_event = {
+					id = rcmchina.2024
+				}
+			}
+			NXM = {
+				country_event = {
+					id = rcmchina.2024
+				}
+			}
+			if = {
+				limit = {
+					country_exists = TNG
+				}
+				TNG = {
+					country_event = {
+						id = rcmchina.2024
+					}
+				}
+			}
+			if = {
+				limit = {
+					country_exists = HMI
+				}
+				HMI = {
+					country_event = {
+						id = rcmchina.2024
+					}
+				}
+			}
+			add_political_power = -100
+		}
+		available = {
+			is_in_faction_with = XSM
+			is_in_faction_with = NXM
+			OR = {
+				NOT = {
+					country_exists = SIK
+				}
+				NOT = {
+					has_war_with = SIK
+				}
+			}
+			has_war_with = JAP
+		}
+	}
+	focus = {
+		id = apologize_for_the_purge
+		icon = GFX_goal_generic_improve_relations
+		cost = 5.00
+		prerequisite = {
+			focus = chi_peace_com
+		}
+		prerequisite = {
+			focus = chi_inst_reform_focus
+		}
+		x = 15
+		y = 1
+		ai_will_do = {
+			factor = 0
+		}
+		completion_reward = {
+			PRC = {
+				country_event = {
+					days = 2
+					id = prc.5
+				}
+			}
+			effect_tooltip = {
+				PRC = {
+					remove_opinion_modifier = {
+						target = CHI
+						modifier = hostile_status
+					}
+				}
+			}
+			add_political_power = -40
+			add_national_unity = -0.05
+		}
+		available = {
+			NOT = {
+				is_in_faction_with = JAP
+			}
+			has_opinion_modifier = chi_prc_pact
+		}
+		bypass = {
+		}
+	}
+	focus = {
+		id = recognize_their_government
+		icon = GFX_goal_tripartite_pact
+		cost = 5.00
+		prerequisite = {
+			focus = chi_peace_com
+		}
+		prerequisite = {
+			focus = chi_inst_reform_focus
+		}
+		mutually_exclusive = {
+			focus = reinforce_new_life_movement
+			focus = revive_new_culture_movement
+		}
+		x = 17
+		y = 1
+		ai_will_do = {
+			factor = 0
+		}
+		completion_reward = {
+			give_guarantee = PRC
+		}
+		#remove_ideas = CHI_communist_uprisings
+		available = {
+			NOT = {
+				is_in_faction_with = JAP
+			}
+			has_opinion_modifier = chi_prc_pact
+		}
+		bypass = {
+		}
+	}
+	focus = {
+		id = rethink_socialist_values
+		icon = GFX_goal_generic_army_doctrines
+		cost = 10.00
+		prerequisite = {
+			focus = apologize_for_the_purge
+		}
+		prerequisite = {
+			focus = recognize_their_government
+		}
+		x = 16
+		y = 2
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_ideas = left_wing_rhetoric
+		}
+		available = {
+		}
+	}
+	focus = {
+		id = zhang_lan_doctrine
+		icon = GFX_zhang_lan_focus
+		cost = 10.00
+		prerequisite = {
+			focus = rethink_socialist_values
+		}
+		mutually_exclusive = {
+			focus = qixiang_doctrine
+		}
+		x = 15
+		y = 3
+		ai_will_do = {
+			factor = 2
+		}
+		select_effect = {
+			set_global_flag = chi_zhang_lan_doctrine
+		}
+		completion_reward = {
+			news_event = {
+				id = news.1301
+			}
+		}
+		available = {
+			NOT = {
+				has_completed_focus = ethnicism_focus
+			}
+		}
+		bypass = {
+			has_country_flag = cdl_founded
+		}
+	}
+	focus = {
+		id = socialist_realism
+		icon = GFX_goal_generic_production2
+		cost = 10.00
+		prerequisite = {
+			focus = zhang_lan_doctrine
+		}
+		x = 14
+		y = 4
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_political_power = 160
+		}
+		available = {
+		}
+		bypass = {
+		}
+	}
+	focus = {
+		id = qixiang_doctrine
+		icon = GFX_qixiang_focus
+		cost = 10.00
+		prerequisite = {
+			focus = rethink_socialist_values
+		}
+		mutually_exclusive = {
+			focus = zhang_lan_doctrine
+		}
+		x = 17
+		y = 3
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			add_ideas = chi_collectivism
+		}
+		available = {
+			NOT = {
+				has_completed_focus = democratism_focus
+			}
+		}
+		bypass = {
+		}
+	}
+	focus = {
+		id = land_reform
+		icon = GFX_goal_generic_position_armies
+		cost = 10.00
+		prerequisite = {
+			focus = zhang_lan_doctrine
+			focus = qixiang_doctrine
+		}
+		x = 16
+		y = 4
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_ideas = agrarian_reform_idea
+		}
+		available = {
+		}
+		bypass = {
+		}
+	}
+	focus = {
+		id = democratic_socialism
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10.00
+		prerequisite = {
+			focus = zhang_lan_doctrine
+		}
+		prerequisite = {
+			focus = land_reform
+		}
+		x = 15
+		y = 5
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_ideas = socialist_influence
+		}
+		available = {
+		}
+		bypass = {
+		}
+	}
+	focus = {
+		id = democratic_centralism_focus
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = qixiang_doctrine
+		}
+		prerequisite = {
+			focus = land_reform
+		}
+		x = 17
+		y = 5
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_ideas = communist_influence
+		}
+		available = {
+		}
+		bypass = {
+		}
+	}
+	focus = {
+		id = squash_kmt
+		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+		cost = 10.00
+		prerequisite = {
+			focus = democratic_socialism
+			focus = democratic_centralism_focus
+		}
+		x = 16
+		y = 6
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			remove_ideas = { central_club  the_blueshirts }
+		}
+		available = {
+			OR = {
+				n_socialism > 0.40
+				communism > 0.40
+			}
+			neutrality < 0.40
+			fascism < 0.30
+		}
+		bypass = {
+			AND = {
+				NOT = {
+					has_idea = central_club
+				}
+				NOT = {
+					has_idea = the_blueshirts
+				}
+			}
+		}
+	}
+	focus = {
+		id = a_new_constitution
+		icon = GFX_goal_generic_cavalry
+		cost = 10.00
+		prerequisite = {
+			focus = democratic_socialism
+		}
+		prerequisite = {
+			focus = squash_kmt
+		}
+		x = 15
+		y = 7
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			remove_ideas = chiang3
+			remove_ideas = { left_wing_rhetoric }
+			add_national_unity = 0.05
+			custom_effect_tooltip = cdl_tt
+			hidden_effect = {
+				set_politics = {
+					ruling_party = n_socialism
+					elections_allowed = yes
+				}
+				remove_ideas = chiang
+				remove_ideas = chiang1
+				remove_ideas = chiang2
+			}
+		}
+		available = {
+			n_socialism > 0.5
+		}
+		bypass = {
+		}
+	}
+	focus = {
+		id = chinese_republic
+		icon = GFX_goal_chinese_republic
+		cost = 10.00
+		prerequisite = {
+			focus = squash_kmt
+		}
+		prerequisite = {
+			focus = democratic_centralism_focus
+		}
+		x = 17
+		y = 7
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			remove_ideas = chiang3
+			remove_ideas = { left_wing_rhetoric }
+			swap_ideas = {
+				remove_idea = chi_collectivism
+				add_idea = chi_collectivism_good
+			}
+			add_national_unity = 0.05
+			custom_effect_tooltip = cacnl_tt
+			hidden_effect = {
+				set_politics = {
+					ruling_party = communism
+					elections_allowed = no
+				}
+				set_party_name = {
+					ideology = communism
+					name = CHI_communism_party_POW
+					long_name = CHI_communism_party_POW_long
+				}
+				remove_ideas = chiang
+				remove_ideas = chiang1
+				remove_ideas = chiang2
+			}
+		}
+		available = {
+			communism > 0.5
+		}
+		bypass = {
+		}
+	}
+	focus = {
+		id = socialist_science
+		icon = GFX_focus_generic_socialist_science
+		cost = 10.00
+		prerequisite = {
+			focus = a_new_constitution
+			focus = chinese_republic
+		}
+		x = 16
+		y = 8
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+	}
+	focus = {
+		id = chi_workers_culture
+		icon = GFX_focus_YUG_pan_slavic_congress
+		cost = 10.00
+		prerequisite = {
+			focus = qixiang_doctrine
+		}
+		x = 18
+		y = 4
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_ideas = workers_culture
+		}
+		available = {
+		}
+		bypass = {
+		}
+	}
+	focus = {
+		id = befriend_the_soviets
+		icon = GFX_goal_befriend_soviet
+		cost = 10.00
+		prerequisite = {
+			focus = democratic_centralism_focus
+		}
+		x = 18
+		y = 6
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				AND = {
+					fascism < 0.25
+					communism > 0.25
+				}
+				factor = 3
+			}
+		}
+		completion_reward = {
+			add_opinion_modifier = {
+				target = SOV
+				modifier = sov_friend
+			}
+		}
+		available = {
+		}
+		bypass = {
+		}
+	}
+	focus = {
+		id = join_comintern_ch
+		icon = GFX_focus_generic_join_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = befriend_the_soviets
+		}
+		prerequisite = {
+			focus = chinese_republic
+		}
+		x = 18
+		y = 8
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			SOV = {
+				country_event = {
+					id = rcmchina.2061
+				}
+			}
+		}
+		available = {
+			has_government = communism
+			SOV = {
+				is_faction_leader = yes
+			}
+			NOT = {
+				has_war_with = SOV
+				has_idea = neutrality_idea
+			}
+			is_in_faction = no
+		}
+		bypass = {
+			is_in_faction_with = SOV
+		}
+	}
+	focus = {
+		id = reinforce_new_life_movement
+		icon = GFX_goal_generic_propaganda
+		cost = 7.00
+		prerequisite = {
+			focus = chi_inst_reform_focus
+		}
+		mutually_exclusive = {
+			focus = recognize_their_government
+			focus = revive_new_culture_movement
+		}
+		x = 28
+		y = 1
+		ai_will_do = {
+			factor = 80
+		}
+		completion_reward = {
+			add_ideas = new_life
+		}
+		available = {
+		}
+		bypass = {
+		}
+	}
+	focus = {
+		id = one_party_tutelage
+		icon = GFX_goal_demand_sudetenland
+		cost = 8.00
+		prerequisite = {
+			focus = reinforce_new_life_movement
+		}
+		x = 23
+		y = 2
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			army_experience = 10
+			add_political_power = 150
+			add_national_unity = 0.05
+			hidden_effect = {
+				set_country_flag = rise_of_nationalism
+			}
+		}
+	}
+	focus = {
+		id = strengthen_cc
+		icon = GFX_goal_generic_cavalry
+		cost = 8.00
+		prerequisite = {
+			focus = one_party_tutelage
+		}
+		x = 21
+		y = 3
+		ai_will_do = {
+			factor = 15
+		}
+		completion_reward = {
+			swap_ideas = {
+				add_idea = central_club_stronger
+				remove_idea = central_club
+			}
+		}
+		available = {
+			NOT = {
+				is_in_faction_with = JAP
+			}
+			has_idea = chen_lifu
+			has_idea = central_club
+		}
+	}
+	focus = {
+		id = strengthen_bs
+		icon = GFX_goal_support_fascism
+		cost = 8.00
+		prerequisite = {
+			focus = one_party_tutelage
+		}
+		x = 25
+		y = 3
+		ai_will_do = {
+			factor = 15
+		}
+		completion_reward = {
+			swap_ideas = {
+				add_idea = the_blueshirts_stronger
+				remove_idea = the_blueshirts
+			}
+		}
+		available = {
+			NOT = {
+				is_in_faction_with = JAP
+			}
+			has_idea = dai_li
+			has_idea = the_blueshirts
+		}
+	}
+	focus = {
+		id = centralizing_power
+		icon = GFX_goal_generic_demand_territory
+		cost = 10.00
+		prerequisite = {
+			focus = strengthen_cc
+		}
+		prerequisite = {
+			focus = strengthen_bs
+		}
+		x = 23
+		y = 4
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			remove_ideas = chi_kmt
+		}
+		available = {
+		}
+		bypass = {
+			not = {
+				has_idea = chi_kmt
+			}
+		}
+	}
+	focus = {
+		id = found_mbis
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = strengthen_bs
+		}
+		x = 25
+		y = 4
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_ideas = NBIS
+			add_political_power = 80
+		}
+		available = {
+			OR = {
+				has_government = fascism
+				has_government = neutrality
+			}
+			has_idea = dai_li
+		}
+	}
+	focus = {
+		id = espionage_network
+		icon = GFX_goal_espionage_network
+		cost = 10.00
+		prerequisite = {
+			focus = found_mbis
+		}
+		x = 25
+		y = 5
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			swap_ideas = {
+				add_idea = NBIS_esp
+				remove_idea = NBIS
+			}
+		}
+		available = {
+			OR = {
+				has_government = fascism
+				has_government = neutrality
+			}
+			has_idea = dai_li
+		}
+		bypass = {
+		}
+	}
+	focus = {
+		id = chi_axis_help_party_focus
+		icon = GFX_goal_demand_sudetenland
+		cost = 10.00
+		prerequisite = {
+			focus = centralizing_power
+		}
+		prerequisite = {
+			focus = espionage_network
+		}
+		mutually_exclusive = {
+			focus = yi_dang_zhi_guo
+		}
+		x = 23
+		y = 6
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = -150
+			add_national_unity = 0.05
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+			}
+			set_rule = {
+				can_send_volunteers = yes
+			}
+		}
+		available = {
+			NOT = {
+				has_war_with = GER
+			}
+			fascism > 0.5
+		}
+		bypass = {
+			has_government = fascism
+		}
+		cancel = {
+			has_war_with = GER
+		}
+	}
+	focus = {
+		id = expel_the_communist_spies
+		icon = GFX_goal_anti_comintern_pact
+		cost = 10.00
+		prerequisite = {
+			focus = espionage_network
+		}
+		x = 25
+		y = 6
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			remove_ideas = CHI_communist_uprisings
+		}
+		available = {
+		}
+		bypass = {
+			NOT = {
+				has_idea = CHI_communist_uprisings
+			}
+		}
+	}
+	focus = {
+		id = chi_axis_help_focus
+		icon = GFX_goal_generic_military_deal
+		cost = 7.00
+		prerequisite = {
+			focus = chi_foreign_help_focus
+			focus = reinforce_new_life_movement
+		}
+		x = 27
+		y = 3
+		available = {
+			NOT = {
+				has_war_with = GER
+				is_in_faction_with = ENG
+			}
+		}
+		completion_reward = {
+			GER = {
+				country_event = {
+					id = rcmchina.2027
+				}
+			}
+			custom_effect_tooltip = if_they_accept
+			effect_tooltip = {
+				add_relation_modifier = {
+					target = GER
+					modifier = CHI_license_axis_equipment
+				}
+				if = {
+					limit = {
+						ITA = {
+							is_in_faction_with = GER
+						}
+					}
+					add_relation_modifier = {
+						target = ITA
+						modifier = CHI_license_axis_equipment
+					}
+				}
+				add_tech_bonus = {
+					name = infantry_equipment_ger
+					bonus = 0.4
+					uses = 1
+					category = infantry_weapons
+				}
+			}
+		}
+		cancel = {
+			has_war_with = GER
+			is_in_faction_with = ENG
+		}
+	}
+	focus = {
+		id = chi_axis_help_diplo_focus
+		icon = GFX_goal_molotov_ribbentrop_pact
+		cost = 7.00
+		prerequisite = {
+			focus = chi_axis_help_focus
+		}
+		mutually_exclusive = {
+			focus = chi_sov_pact_focus
+		}
+		x = 27
+		y = 4
+		completion_reward = {
+			country_event = {
+				days = 1
+				id = rcmchina.1000
+			}
+		}
+		available = {
+			num_of_factories > 30
+			country_exists = GER
+			NOT = {
+				has_war_with = GER
+			}
+			custom_trigger_tooltip = {
+				tooltip = no_sever_ties_tt
+				NOT = {
+					has_global_flag = oust_germans
+				}
+			}
+			has_idea = kung_hsiang_hsi
+		}
+		cancel = {
+			has_war_with = GER
+		}
+	}
+	focus = {
+		id = german_training_method
+		icon = GFX_focus_generic_military_mission
+		cost = 10.00
+		prerequisite = {
+			focus = chi_axis_help_diplo_focus
+		}
+		x = 27
+		y = 5
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			add_ideas = german_style_training
+		}
+		available = {
+			NOT = {
+				has_war_with = GER
+			}
+		}
+		bypass = {
+		}
+	}
+	focus = {
+		id = chi_join_axis
+		icon = GFX_goal_generic_territory_or_war
+		cost = 10.00
+		prerequisite = {
+			focus = chi_axis_help_party_focus
+		}
+		prerequisite = {
+			focus = german_training_method
+		}
+		mutually_exclusive = {
+			focus = asian_non-aligned_movement
+		}
+		x = 27
+		y = 7
+		ai_will_do = {
+			factor = 60
+			modifier = {
+				factor = 0
+				GER = {
+					has_capitulated = yes
+				}
+			}
+			modifier = {
+				factor = 0.2
+				GER = {
+					surrender_progress > 0.2
+				}
+			}
+		}
+		completion_reward = {
+			GER = {
+				country_event = {
+					id = rcmchina.2064
+				}
+			}
+		}
+		available = {
+			has_opinion = {
+				target = GER
+				value > 39
+			}
+			GER = {
+				has_opinion = {
+					target = CHI
+					value > 89
+				}
+			}
+			GER = {
+				is_faction_leader = yes
+			}
+			NOT = {
+				has_war_with = GER
+				has_idea = neutrality_idea
+			}
+			is_in_faction = no
+			has_idea = chi_german_coop
+		}
+		bypass = {
+			is_in_faction_with = GER
+		}
+	}
+	focus = {
+		id = chi_comintern_help_focus
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 7.00
+		prerequisite = {
+			focus = chi_foreign_help_focus
+		}
+		x = 29
+		y = 3
+		ai_will_do = {
+			factor = 80
+		}
+		available = {
+			NOT = {
+				has_war_with = SOV
+				is_in_faction_with = JAP
+			}
+		}
+		completion_reward = {
+			SOV = {
+				country_event = {
+					id = rcmchina.2030
+				}
+			}
+			custom_effect_tooltip = if_they_accept
+			effect_tooltip = {
+				add_relation_modifier = {
+					target = SOV
+					modifier = CHI_license_comintern_equipment
+				}
+				add_tech_bonus = {
+					name = land_doc_bonus_sov
+					bonus = 0.5
+					uses = 1
+					category = land_doctrine
+				}
+			}
+		}
+		cancel = {
+			has_war_with = SOV
+			is_in_faction_with = JAP
+		}
+	}
+	focus = {
+		id = chi_sov_pact_focus
+		icon = GFX_goal_befriend_soviet
+		cost = 7.00
+		prerequisite = {
+			focus = chi_comintern_help_focus
+		}
+		mutually_exclusive = {
+			focus = chi_axis_help_diplo_focus
+		}
+		x = 29
+		y = 4
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			SOV = {
+				country_event = {
+					id = rcmsoviet.1023
+				}
+			}
+		}
+		available = {
+			NOT = {
+				has_war_with = SOV
+			}
+		}
+		bypass = {
+		}
+	}
+	focus = {
+		id = sov_volunteer_group
+		icon = GFX_goal_generic_air_bomber
+		cost = 10.00
+		prerequisite = {
+			focus = chi_sov_pact_focus
+		}
+		x = 29
+		y = 5
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			SOV = {
+				country_event = {
+					id = rcmsoviet.1012
+				}
+			}
+			add_ideas = CHI_pavel_zhigarev
+			hidden_effect = {
+				SOV = {
+					country_event = {
+						months = 2
+						id = rcmsoviet.1013
+					}
+					country_event = {
+						months = 4
+						id = rcmsoviet.1014
+					}
+					country_event = {
+						months = 12
+						id = rcmsoviet.1015
+					}
+				}
+			}
+		}
+		available = {
+			NOT = {
+				has_war_with = SOV
+			}
+			has_idea = chi_sov_pact
+		}
+		bypass = {
+		}
+	}
+	focus = {
+		id = revive_new_culture_movement
+		icon = GFX_goal_generic_demand_territory
+		cost = 7.00
+		prerequisite = {
+			focus = chi_inst_reform_focus
+		}
+		mutually_exclusive = {
+			focus = recognize_their_government
+			focus = reinforce_new_life_movement
+		}
+		x = 30
+		y = 1
+		ai_will_do = {
+			factor = 40
+		}
+		completion_reward = {
+			add_ideas = new_culture
+		}
+		available = {
+		}
+		bypass = {
+		}
+	}
+	focus = {
+		id = chi_allies_help_focus
+		icon = GFX_goal_generic_major_alliance
+		cost = 7.00
+		prerequisite = {
+			focus = chi_foreign_help_focus
+			focus = revive_new_culture_movement
+		}
+		x = 31
+		y = 3
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			NOT = {
+				has_war_with = ENG
+				is_in_faction_with = GER
+			}
+		}
+		completion_reward = {
+			ENG = {
+				country_event = {
+					id = rcmchina.2033
+				}
+			}
+			custom_effect_tooltip = if_they_accept
+			effect_tooltip = {
+				add_relation_modifier = {
+					target = ENG
+					modifier = CHI_license_allies_equipment
+				}
+				if = {
+					limit = {
+						FRA = {
+							is_in_faction_with = ENG
+						}
+					}
+					add_relation_modifier = {
+						target = FRA
+						modifier = CHI_license_allies_equipment
+					}
+				}
+				add_tech_bonus = {
+					name = dd_bonus
+					bonus = 0.5
+					ahead_reduction = 1
+					uses = 1
+					technology = early_destroyer
+					technology = basic_destroyer
+					technology = improved_destroyer
+					technology = advanced_destroyer
+				}
+			}
+		}
+		cancel = {
+			has_war_with = ENG
+			is_in_faction_with = GER
+		}
+	}
+	focus = {
+		id = flying_tigers
+		icon = GFX_goal_generic_air_fighter
+		cost = 7.00
+		prerequisite = {
+			focus = chi_allies_help_focus
+		}
+		x = 31
+		y = 4
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			USA = {
+				country_event = {
+					id = rcmchina.2046
+				}
+			}
+			custom_effect_tooltip = if_they_accept_green
+			effect_tooltip = {
+				USA = {
+					send_equipment = {
+						target = CHI
+						type = fighter_equipment_2
+						amount = 250
+					}
+					send_equipment = {
+						target = CHI
+						type = tac_bomber_equipment_2
+						amount = 350
+					}
+				}
+			}
+		}
+		available = {
+			NOT = {
+				has_idea = chi_sov_pact
+			}
+			USA = {
+				has_war_with = JAP
+			}
+			has_idea = claire_lee_chennault_chi
+		}
+		bypass = {
+		}
+	}
+	focus = {
+		id = chi_allies_help_diplo_focus
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 10.00
+		prerequisite = {
+			focus = flying_tigers
+		}
+		x = 31
+		y = 5
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			ENG = {
+				country_event = {
+					id = rcmchina.2039
+				}
+			}
+			USA = {
+				country_event = {
+					id = rcmchina.2040
+				}
+			}
+		}
+		available = {
+			NOT = {
+				has_war_with = USA
+			}
+			NOT = {
+				has_war_with = ENG
+			}
+			NOT = {
+				is_in_faction_with = GER
+			}
+			has_defensive_war_with = JAP
+		}
+	}
+	focus = {
+		id = armed_neutrality
+		icon = GFX_goal_generic_defence
+		cost = 10.00
+		prerequisite = {
+			focus = german_training_method
+			focus = chi_allies_help_diplo_focus
+			focus = sov_volunteer_group
+		}
+		mutually_exclusive = {
+			focus = interventionism_chi
+		}
+		x = 28
+		y = 6
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_ideas = neutrality_idea
+			add_ideas = deterrence
+		}
+		available = {
+			is_in_faction = no
+		}
+		bypass = {
+		}
+	}
+	focus = {
+		id = interventionism_chi
+		icon = GFX_goal_generic_political_pressure
+		cost = 10.00
+		prerequisite = {
+			focus = chi_allies_help_diplo_focus
+			focus = sov_volunteer_group
+			focus = german_training_method
+		}
+		mutually_exclusive = {
+			focus = armed_neutrality
+		}
+		x = 30
+		y = 6
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_ideas = volunteer_corps_focus
+			add_ideas = foreign_expeditions_focus
+		}
+	}
+	focus = {
+		id = asian_non-aligned_movement
+		icon = GFX_goal_generic_demand_territory
+		cost = 10.00
+		prerequisite = {
+			focus = armed_neutrality
+			focus = interventionism_chi
+		}
+		mutually_exclusive = {
+			focus = chi_join_axis
+			focus = chi_join_allies
+		}
+		x = 29
+		y = 7
+		completion_reward = {
+			set_rule = {
+				can_create_factions = yes
+			}
+			add_political_power = 100
+			add_national_unity = 0.05
+		}
+		available = {
+			is_puppet = no
+			is_in_faction = no
+		}
+	}
+	focus = {
+		id = three_principle_of_the_people
+		icon = GFX_three_principle_focus
+		cost = 8.00
+		prerequisite = {
+			focus = revive_new_culture_movement
+		}
+		x = 35
+		y = 2
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_political_power = 75
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.1
+			}
+			add_national_unity = 0.05
+		}
+		available = {
+		}
+		bypass = {
+		}
+	}
+	focus = {
+		id = civilianism_focus
+		icon = GFX_goal_generic_consumer_goods
+		cost = 8.00
+		prerequisite = {
+			focus = three_principle_of_the_people
+		}
+		x = 33
+		y = 3
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_ideas = civilianism
+		}
+		available = {
+		}
+		bypass = {
+		}
+	}
+	focus = {
+		id = georgist_tax_reform
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 8.00
+		prerequisite = {
+			focus = civilianism_focus
+		}
+		x = 33
+		y = 4
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			swap_ideas = {
+				add_idea = civilianism2
+				remove_idea = civilianism
+			}
+		}
+		available = {
+		}
+		bypass = {
+		}
+	}
+	focus = {
+		id = health_care_program
+		icon = GFX_goal_generic_national_unity
+		cost = 8.00
+		prerequisite = {
+			focus = georgist_tax_reform
+		}
+		x = 33
+		y = 5
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			swap_ideas = {
+				add_idea = civilianism3
+				remove_idea = civilianism2
+			}
+		}
+		available = {
+		}
+		bypass = {
+		}
+	}
+	focus = {
+		id = democratism_focus
+		icon = GFX_focus_generic_the_giant_wakes
+		cost = 8.00
+		prerequisite = {
+			focus = three_principle_of_the_people
+		}
+		x = 35
+		y = 3
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_ideas = democratic_influence
+		}
+		available = {
+			NOT = {
+				has_completed_focus = qixiang_doctrine
+			}
+		}
+		bypass = {
+		}
+	}
+	focus = {
+		id = ethnicism_focus
+		icon = GFX_goal_generic_demand_territory
+		cost = 8.00
+		prerequisite = {
+			focus = three_principle_of_the_people
+		}
+		x = 37
+		y = 3
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_ideas = for_china
+		}
+		available = {
+			NOT = {
+				has_completed_focus = zhang_lan_doctrine
+			}
+		}
+		bypass = {
+		}
+	}
+	focus = {
+		id = chi_liberty_ethos
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = democratism_focus
+		}
+		prerequisite = {
+			focus = civilianism_focus
+		}
+		prerequisite = {
+			focus = ethnicism_focus
+		}
+		x = 35
+		y = 4
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_ideas = liberty_ethos_focus
+		}
+		available = {
+		}
+	}
+	focus = {
+		id = kmt_unification_decree
+		icon = GFX_goal_generic_cavalry
+		cost = 10.00
+		prerequisite = {
+			focus = ethnicism_focus
+		}
+		x = 37
+		y = 4
+		completion_reward = {
+			add_political_power = -150
+			remove_ideas = chi_kmt
+			hidden_effect = {
+				news_event = {
+					days = 3
+					id = news.5017
+				}
+			}
+		}
+		available = {
+			num_of_factories > 40
+		}
+	}
+	focus = {
+		id = national_poltical_council
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 6.00
+		prerequisite = {
+			focus = chi_inst_reform_focus
+		}
+		x = 39
+		y = 2
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			swap_ideas = {
+				add_idea = chiang1
+				remove_idea = chiang
+			}
+		}
+		available = {
+			NOT = {
+				is_in_faction_with = JAP
+			}
+			NOT = {
+				OR = {
+					has_government = fascism
+					has_government = communism
+					has_government = n_socialism
+				}
+			}
+		}
+		bypass = {
+			hidden_trigger = {
+				has_country_flag = yang_hucheng_in_charge
+			}
+		}
+	}
+	focus = {
+		id = constit_draft_focus
+		icon = GFX_draft_focus
+		cost = 8.00
+		prerequisite = {
+			focus = national_poltical_council
+		}
+		x = 39
+		y = 3
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			swap_ideas = {
+				add_idea = chiang2
+				remove_idea = chiang1
+			}
+		}
+		available = {
+			has_idea = carsun_chang
+		}
+		bypass = {
+			hidden_trigger = {
+				has_country_flag = yang_hucheng_in_charge
+			}
+		}
+	}
+	focus = {
+		id = assembly_of_the_constutients
+		icon = GFX_assembly_const_focus
+		cost = 10.00
+		prerequisite = {
+			focus = constit_draft_focus
+		}
+		x = 39
+		y = 4
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			swap_ideas = {
+				add_idea = chiang3
+				remove_idea = chiang2
+			}
+		}
+		available = {
+		}
+		bypass = {
+			hidden_trigger = {
+				has_country_flag = yang_hucheng_in_charge
+			}
+		}
+	}
+	focus = {
+		id = chi_constitution_focus
+		icon = GFX_constitution_focus
+		cost = 20.00
+		prerequisite = {
+			focus = chi_liberty_ethos
+		}
+		prerequisite = {
+			focus = assembly_of_the_constutients
+		}
+		x = 36
+		y = 5
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			remove_ideas = chiang3
+			add_political_power = 160
+		}
+		available = {
+			fascism < 0.25
+			neutrality < 0.3
+		}
+		bypass = {
+			has_government = fascism
+		}
+	}
+	focus = {
+		id = public_school_program
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = monetary_reform
+		}
+		x = 51
+		y = 1
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = iliterate_population
+				add_idea = iliterate_population_1
+			}
+		}
+		available = {
+		}
+		bypass = {
+		}
+	}
+	focus = {
+		id = kmt_reform_military_academy
+		icon = GFX_goal_generic_army_doctrines
+		cost = 10.00
+		prerequisite = {
+			focus = kmt_reorganize_nra
+		}
+		prerequisite = {
+			focus = public_school_program
+		}
+		x = 42
+		y = 2
+		completion_reward = {
+			army_experience = 25
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+			add_ideas = whampoa_spirit
+			hidden_effect = {
+				news_event = {
+					days = 3
+					id = news.5008
+				}
+			}
+		}
+		available = {
+			is_puppet = no
+		}
+	}
+	focus = {
+		id = kmt_whampoa_rifle
+		icon = GFX_focus_secret_rearmament
+		cost = 10.00
+		prerequisite = {
+			focus = kmt_reform_military_academy
+		}
+		x = 41
+		y = 3
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_equipment
+				bonus = 0.5
+				uses = 2
+				category = infantry_weapons
+			}
+			hidden_effect = {
+				news_event = {
+					days = 3
+					id = news.5004
+				}
+			}
+		}
+		available = {
+			is_puppet = no
+		}
+	}
+	focus = {
+		id = artillery_effort_chi
+		icon = GFX_goal_generic_army_artillery2
+		cost = 10.00
+		prerequisite = {
+			focus = kmt_reform_military_academy
+		}
+		x = 43
+		y = 3
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 0.5
+				uses = 2
+				category = artillery
+			}
+		}
+		available = {
+		}
+		bypass = {
+		}
+	}
+	focus = {
+		id = motorize_effort
+		icon = GFX_goal_generic_army_motorized
+		cost = 10.00
+		prerequisite = {
+			focus = artillery_effort_chi
+		}
+		prerequisite = {
+			focus = kmt_whampoa_rifle
+		}
+		x = 42
+		y = 4
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 0.5
+				uses = 2
+				technology = motorised_infantry
+			}
+		}
+		available = {
+		}
+		bypass = {
+		}
+	}
+	focus = {
+		id = learn_foreign_tank_design
+		icon = GFX_goal_generic_army_tanks
+		cost = 10.00
+		prerequisite = {
+			focus = motorize_effort
+		}
+		x = 42
+		y = 6
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = no_proper_equipment_design
+				}
+				swap_ideas = {
+					remove_idea = no_proper_equipment_design
+					add_idea = no_proper_equipment_design_no_armor
+				}
+			}
+			if = {
+				limit = {
+					has_idea = no_proper_equipment_design_no_naval
+				}
+				swap_ideas = {
+					remove_idea = no_proper_equipment_design_no_naval
+					add_idea = no_proper_equipment_design_air
+				}
+			}
+			if = {
+				limit = {
+					has_idea = no_proper_equipment_design_no_air
+				}
+				swap_ideas = {
+					remove_idea = no_proper_equipment_design_no_air
+					add_idea = no_proper_equipment_design_naval
+				}
+			}
+			if = {
+				limit = {
+					has_idea = no_proper_equipment_design_armor
+				}
+				remove_ideas = no_proper_equipment_design_armor
+			}
+		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = already_learned_armor_design
+				NOT = {
+					has_idea = no_proper_equipment_design
+					has_idea = no_proper_equipment_design_no_naval
+					has_idea = no_proper_equipment_design_no_air
+					has_idea = no_proper_equipment_design_armor
+				}
+			}
+		}
+	}
+	focus = {
+		id = china_first_tank
+		icon = GFX_goal_generic_army_tanks
+		cost = 10.00
+		prerequisite = {
+			focus = learn_foreign_tank_design
+		}
+		x = 42
+		y = 7
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 0.5
+				uses = 2
+				category = armor
+			}
+		}
+		available = {
+		}
+		bypass = {
+		}
+	}
+	focus = {
+		id = chi_army_reorganisation_focus
+		icon = GFX_focus_generic_little_entente
+		cost = 10.00
+		prerequisite = {
+			focus = motorize_effort
+		}
+		x = 43
+		y = 5
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_ideas = chi_reorganized_army_focus
+		}
+	}
+	focus = {
+		id = chi_technical_school_focus
+		icon = GFX_focus_CZE_military_aeronautical_institute
+		cost = 10.00
+		prerequisite = {
+			focus = public_school_program
+		}
+		prerequisite = {
+			focus = kmt_reorganize_nra
+		}
+		x = 45
+		y = 2
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = no_proper_equipment_design
+				}
+				swap_ideas = {
+					remove_idea = no_proper_equipment_design
+					add_idea = no_proper_equipment_design_no_air
+				}
+				set_country_flag = technical_school_halt
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = technical_school_halt
+					}
+					has_idea = no_proper_equipment_design_no_armor
+				}
+				swap_ideas = {
+					remove_idea = no_proper_equipment_design_no_armor
+					add_idea = no_proper_equipment_design_naval
+				}
+				set_country_flag = technical_school_halt
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = technical_school_halt
+					}
+					has_idea = no_proper_equipment_design_no_naval
+				}
+				swap_ideas = {
+					remove_idea = no_proper_equipment_design_no_naval
+					add_idea = no_proper_equipment_design_armor
+				}
+				set_country_flag = technical_school_halt
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = technical_school_halt
+					}
+					has_idea = no_proper_equipment_design_air
+				}
+				remove_ideas = no_proper_equipment_design_air
+			}
+		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = already_learned_air_design
+				NOT = {
+					has_idea = no_proper_equipment_design
+					has_idea = no_proper_equipment_design_no_armor
+					has_idea = no_proper_equipment_design_no_naval
+					has_idea = no_proper_equipment_design_air
+				}
+			}
+		}
+	}
+	focus = {
+		id = chi_internal_air_focus
+		icon = GFX_goal_generic_air_production
+		cost = 10.00
+		prerequisite = {
+			focus = chi_technical_school_focus
+		}
+		x = 45
+		y = 3
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			air_experience = 25
+			if = {
+				limit = {
+					capital_scope = {
+						NOT = {
+							free_building_slots = {
+								building = air_base
+								size > 1
+							}
+						}
+					}
+				}
+				random_owned_state = {
+					if = {
+						limit = {
+							free_building_slots = {
+								building = air_base
+								size > 1
+							}
+						}
+						add_building_construction = {
+							type = air_base
+							level = 2
+							instant_build = yes
+						}
+					}
+					CHI = {
+						set_country_flag = aviation_effort_AB
+					}
+				}
+			}
+			if = {
+				limit = {
+					capital_scope = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+				}
+				capital_scope = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					CHI = {
+						set_country_flag = aviation_effort_AB
+					}
+				}
+			}
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+	focus = {
+		id = chi_land_focus
+		icon = GFX_goal_generic_air_fighter
+		cost = 10.00
+		prerequisite = {
+			focus = chi_internal_air_focus
+		}
+		mutually_exclusive = {
+			focus = chi_coast_focus
+		}
+		x = 44
+		y = 4
+		completion_reward = {
+			add_ideas = air_chi_land_focus
+		}
+	}
+	focus = {
+		id = chi_coast_focus
+		icon = GFX_goal_generic_air_naval_bomber
+		cost = 10.00
+		prerequisite = {
+			focus = chi_internal_air_focus
+		}
+		mutually_exclusive = {
+			focus = chi_land_focus
+		}
+		x = 46
+		y = 4
+		completion_reward = {
+			add_ideas = air_chi_coast_focus
+		}
+	}
+	focus = {
+		id = chi_air_orga_focus
+		icon = GFX_focus_YUG_ikarus
+		cost = 10.00
+		prerequisite = {
+			focus = chi_land_focus
+			focus = chi_coast_focus
+		}
+		x = 45
+		y = 5
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_ideas = chi_air_reorganisation
+		}
+	}
+	focus = {
+		id = chi_study_foreign_ship
+		icon = GFX_goal_generic_navy_cruiser
+		cost = 10.00
+		prerequisite = {
+			focus = public_school_program
+		}
+		prerequisite = {
+			focus = kmt_reorganize_nra
+		}
+		x = 48
+		y = 2
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = no_proper_equipment_design
+				}
+				swap_ideas = {
+					remove_idea = no_proper_equipment_design
+					add_idea = no_proper_equipment_design_no_naval
+				}
+			}
+			if = {
+				limit = {
+					has_idea = no_proper_equipment_design_no_armor
+				}
+				swap_ideas = {
+					remove_idea = no_proper_equipment_design_no_armor
+					add_idea = no_proper_equipment_design_air
+				}
+			}
+			if = {
+				limit = {
+					has_idea = no_proper_equipment_design_no_air
+				}
+				swap_ideas = {
+					remove_idea = no_proper_equipment_design_no_air
+					add_idea = no_proper_equipment_design_armor
+				}
+			}
+			if = {
+				limit = {
+					has_idea = no_proper_equipment_design_naval
+				}
+				remove_ideas = no_proper_equipment_design_naval
+			}
+		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = already_learned_naval_design
+				NOT = {
+					has_idea = no_proper_equipment_design
+					has_idea = no_proper_equipment_design_no_armor
+					has_idea = no_proper_equipment_design_no_air
+					has_idea = no_proper_equipment_design_naval
+				}
+			}
+		}
+	}
+	focus = {
+		id = chi_taiwan_navy
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10.00
+		prerequisite = {
+			focus = chi_study_foreign_ship
+		}
+		x = 47
+		y = 3
+		completion_reward = {
+			navy_experience = 10
+			add_tech_bonus = {
+				name = navy_bonus
+				bonus = 0.5
+				uses = 1
+				category = naval_equipment
+			}
+			524 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+		available = {
+			524 = {
+				is_owned_by = CHI
+			}
+		}
+		bypass = {
+			524 = {
+				free_building_slots = {
+					building = dockyard
+					size < 5
+					include_locked = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = shanghai_navy
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10.00
+		prerequisite = {
+			focus = chi_study_foreign_ship
+		}
+		x = 49
+		y = 3
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			613 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		available = {
+			613 = {
+				is_owned_by = CHI
+			}
+		}
+	}
+	focus = {
+		id = chi_pacific_fleet
+		icon = GFX_goal_generic_navy_carrier
+		cost = 10.00
+		prerequisite = {
+			focus = shanghai_navy
+		}
+		prerequisite = {
+			focus = chi_taiwan_navy
+		}
+		x = 48
+		y = 4
+		completion_reward = {
+			navy_experience = 10
+			add_tech_bonus = {
+				name = cv_bonus
+				bonus = 0.25
+				uses = 1
+				category = cv_tech
+			}
+			add_tech_bonus = {
+				name = bb_bonus
+				bonus = 0.25
+				uses = 1
+				category = bb_tech
+			}
+		}
+	}
+	focus = {
+		id = chi_navy_reorganization
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		cost = 10.00
+		prerequisite = {
+			focus = chi_pacific_fleet
+		}
+		x = 47
+		y = 5
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = chi_navy_reorganization
+		}
+		available = {
+			NOT = {
+				country_exists = JAP
+			}
+		}
+	}
+	focus = {
+		id = CHI_extra_research_slot
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = chi_army_reorganisation_focus
+		}
+		prerequisite = {
+			focus = chi_air_orga_focus
+		}
+		prerequisite = {
+			focus = chi_navy_reorganization
+		}
+		x = 45
+		y = 6
+		available = {
+		}
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = chi_internal_navy_focus
+		icon = GFX_goal_generic_navy_battleship
+		cost = 10.00
+		prerequisite = {
+			focus = chi_pacific_fleet
+		}
+		x = 48
+		y = 6
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			navy_experience = 25
+			if = {
+				limit = {
+					capital_scope = {
+						NOT = {
+							is_coastal = yes
+							free_building_slots = {
+								building = naval_base
+								size > 1
+							}
+						}
+					}
+				}
+				random_owned_state = {
+					if = {
+						limit = {
+							is_coastal = yes
+							free_building_slots = {
+								building = naval_base
+								size > 1
+							}
+						}
+						add_building_construction = {
+							type = naval_base
+							level = 2
+							instant_build = yes
+						}
+					}
+					CHI = {
+						set_country_flag = navy_effort_AB
+					}
+				}
+			}
+			if = {
+				limit = {
+					capital_scope = {
+						is_coastal = yes
+						free_building_slots = {
+							building = naval_base
+							size > 1
+						}
+					}
+				}
+				capital_scope = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					CHI = {
+						set_country_flag = navy_effort_AB
+					}
+				}
+			}
+			add_tech_bonus = {
+				name = naval_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
+		}
+	}
+	focus = {
+		id = kmt_expand_jiangnan_shipyard
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10.00
+		prerequisite = {
+			focus = chi_internal_navy_focus
+		}
+		x = 48
+		y = 7
+		completion_reward = {
+			613 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			596 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			hidden_effect = {
+				news_event = {
+					days = 3
+					id = news.5018
+				}
+			}
+		}
+		available = {
+			613 = {
+				is_controlled_by = CHI
+			}
+			596 = {
+				is_controlled_by = CHI
+			}
+		}
+	}
+	focus = {
+		id = kmt_compulsory_education_chi
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		prerequisite = {
+			focus = public_school_program
+		}
+		x = 51
+		y = 2
+		completion_reward = {
+			add_political_power = -100
+			swap_ideas = {
+				remove_idea = iliterate_population_1
+				add_idea = iliterate_population_2
+			}
+		}
+	}
+	focus = {
+		id = chi_academy_rf_focus
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = kmt_compulsory_education_chi
+		}
+		x = 51
+		y = 3
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = kmt_modern_university
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = chi_academy_rf_focus
+		}
+		x = 51
+		y = 4
+		completion_reward = {
+			#remove_ideas = iliterate_population
+			#remove_ideas = iliterate_population_1
+			remove_ideas = iliterate_population_2
+		}
+		available = {
+			is_puppet = no
+		}
+	}
+	focus = {
+		id = chi_nationalize_industry_focus
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 8.00
+		prerequisite = {
+			focus = chi_industry_focus
+		}
+		x = 53
+		y = 1
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			add_ideas = chi_nationalize_industry_1_focus
+			custom_effect_tooltip = blank_line
+			swap_ideas = {
+				remove_idea = unbalanced_industry
+				add_idea = unbalanced_industry_1
+			}
+			custom_effect_tooltip = unlock_focus_right
+		}
+		available = {
+			has_tech = basic_machine_tools
+			OR = {
+				has_tech = concentrated_industry
+				has_tech = dispersed_industry
+			}
+			OR = {
+				AND = {
+					num_of_factories > 25
+					has_war = no
+				}
+				AND = {
+					num_of_factories > 30
+					has_defensive_war = yes
+				}
+				AND = {
+					num_of_factories > 35
+					has_offensive_war = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = chi_nationalize_industry_ii_focus
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 9.00
+		prerequisite = {
+			focus = chi_nationalize_industry_focus
+		}
+		x = 53
+		y = 2
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = chi_nationalize_industry_1_focus
+				add_idea = chi_nationalize_industry_2_focus
+			}
+			custom_effect_tooltip = blank_line
+			swap_ideas = {
+				remove_idea = unbalanced_industry_1
+				add_idea = unbalanced_industry_2
+			}
+			custom_effect_tooltip = unlock_focus_right
+		}
+		available = {
+			has_tech = improved_machine_tools
+			OR = {
+				has_tech = concentrated_industry2
+				has_tech = dispersed_industry2
+			}
+			OR = {
+				AND = {
+					num_of_factories > 45
+					has_war = no
+				}
+				AND = {
+					num_of_factories > 50
+					has_defensive_war = yes
+				}
+				AND = {
+					num_of_factories > 55
+					has_offensive_war = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = chi_nationalize_industry_iii_focus
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = chi_nationalize_industry_ii_focus
+		}
+		x = 53
+		y = 3
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = chi_nationalize_industry_2_focus
+				add_idea = chi_nationalize_industry_3_focus
+			}
+			custom_effect_tooltip = blank_line
+			swap_ideas = {
+				remove_idea = unbalanced_industry_2
+				add_idea = unbalanced_industry_3
+			}
+			custom_effect_tooltip = unlock_focus_right
+		}
+		available = {
+			has_tech = advanced_machine_tools
+			OR = {
+				has_tech = concentrated_industry3
+				has_tech = dispersed_industry3
+			}
+			OR = {
+				AND = {
+					num_of_factories > 65
+					has_war = no
+				}
+				AND = {
+					num_of_factories > 70
+					has_defensive_war = yes
+				}
+				AND = {
+					num_of_factories > 75
+					has_offensive_war = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = kmt_modern_industrialization
+		icon = GFX_goal_generic_construct_civilian
+		cost = 14.29
+		prerequisite = {
+			focus = chi_nationalize_industry_iii_focus
+		}
+		x = 53
+		y = 4
+		completion_reward = {
+			add_political_power = -100
+			remove_ideas = unbalanced_industry_3
+			custom_effect_tooltip = blank_line
+			custom_effect_tooltip = unlock_focus_right
+		}
+		available = {
+			has_war = no
+			has_tech = assembly_line_production
+			OR = {
+				has_tech = concentrated_industry4
+				has_tech = dispersed_industry4
+			}
+			has_tech = construction4
+			num_of_factories > 85
+		}
+	}
+	focus = {
+		id = chi_academy_ex_focus
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = chi_academy_rf_focus
+		}
+		prerequisite = {
+			focus = kmt_modern_industrialization
+		}
+		x = 52
+		y = 5
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = streamlined_industry
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = chi_industry_focus
+		}
+		x = 58
+		y = 1
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_ideas = improved_industry
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = industry_balanced_enough
+				has_completed_focus = chi_nationalize_industry_focus
+			}
+		}
+	}
+	focus = {
+		id = kmt_rejuvenate_heavy_industry
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 25.00
+		prerequisite = {
+			focus = streamlined_industry
+		}
+		x = 56
+		y = 2
+		select_effect = {
+			add_ideas = industrial_revolution
+		}
+		completion_reward = {
+			custom_effect_tooltip = debuff_tt
+			show_ideas_tooltip = industrial_revolution
+			custom_effect_tooltip = blank_line
+			hidden_effect = {
+				remove_ideas = industrial_revolution
+			}
+			remove_ideas = incompetent_heavy_industry
+			608 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			615 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			606 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			614 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			716 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = industry_balanced_enough
+				has_completed_focus = chi_nationalize_industry_ii_focus
+			}
+			has_war = no
+			608 = {
+				alu_tung_trigger = yes
+			}
+			716 = {
+				alu_tung_trigger = yes
+			}
+			614 = {
+				alu_tung_trigger = yes
+			}
+			615 = {
+				alu_tung_trigger = yes
+			}
+			606 = {
+				alu_tung_trigger = yes
+			}
+		}
+	}
+	focus = {
+		id = kmt_national_resource_exploration
+		icon = GFX_goal_generic_oil_refinery
+		cost = 10.00
+		prerequisite = {
+			focus = streamlined_industry
+		}
+		x = 60
+		y = 2
+		completion_reward = {
+			add_ideas = national_resource_council
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = industry_balanced_enough
+				has_completed_focus = chi_nationalize_industry_ii_focus
+			}
+			is_puppet = no
+		}
+	}
+	focus = {
+		id = anshan_steelwork
+		icon = GFX_goal_steelwork
+		cost = 12.00
+		prerequisite = {
+			focus = kmt_national_resource_exploration
+		}
+		prerequisite = {
+			focus = kmt_rejuvenate_heavy_industry
+		}
+		x = 57
+		y = 3
+		ai_will_do = {
+			factor = 10
+		}
+		select_effect = {
+			add_ideas = steelmaking
+			add_ideas = under_construction
+		}
+		completion_reward = {
+			custom_effect_tooltip = debuff_tt
+			show_ideas_tooltip = steelmaking
+			show_ideas_tooltip = under_construction
+			custom_effect_tooltip = blank_line
+			hidden_effect = {
+				remove_ideas = steelmaking
+				remove_ideas = under_construction
+			}
+			716 = {
+				add_resource = {
+					type = steel
+					amount = 75
+					state = 716
+				}
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = industry_balanced_enough
+				has_completed_focus = chi_nationalize_industry_iii_focus
+			}
+			has_tech = excavation3
+			716 = {
+				alu_tung_trigger = yes
+			}
+		}
+	}
+	focus = {
+		id = revive_hanyang_steel
+		icon = GFX_goal_steelwork
+		cost = 10.00
+		prerequisite = {
+			focus = kmt_national_resource_exploration
+		}
+		prerequisite = {
+			focus = kmt_rejuvenate_heavy_industry
+		}
+		x = 55
+		y = 3
+		ai_will_do = {
+			factor = 10
+		}
+		select_effect = {
+			add_ideas = steelmaking
+			add_ideas = under_construction
+		}
+		completion_reward = {
+			custom_effect_tooltip = debuff_tt
+			show_ideas_tooltip = steelmaking
+			show_ideas_tooltip = under_construction
+			custom_effect_tooltip = blank_line
+			hidden_effect = {
+				remove_ideas = steelmaking
+				remove_ideas = under_construction
+			}
+			756 = {
+				add_resource = {
+					type = steel
+					amount = 100
+					state = 756
+				}
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = industry_balanced_enough
+				has_completed_focus = chi_nationalize_industry_iii_focus
+			}
+			has_tech = excavation3
+			756 = {
+				alu_tung_trigger = yes
+			}
+		}
+	}
+	focus = {
+		id = national_steelwork
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 25.00
+		prerequisite = {
+			focus = anshan_steelwork
+		}
+		prerequisite = {
+			focus = revive_hanyang_steel
+		}
+		x = 56
+		y = 4
+		select_effect = {
+			add_ideas = steelmaking
+			add_ideas = under_construction
+		}
+		completion_reward = {
+			custom_effect_tooltip = debuff_tt
+			show_ideas_tooltip = steelmaking
+			show_ideas_tooltip = under_construction
+			custom_effect_tooltip = blank_line
+			hidden_effect = {
+				remove_ideas = steelmaking
+				remove_ideas = under_construction
+			}
+			608 = {
+				add_resource = {
+					type = steel
+					amount = 25
+					state = 608
+				}
+			}
+			615 = {
+				add_resource = {
+					type = steel
+					amount = 60
+					state = 615
+				}
+			}
+			606 = {
+				add_resource = {
+					type = steel
+					amount = 70
+					state = 606
+				}
+			}
+			614 = {
+				add_resource = {
+					type = steel
+					amount = 120
+					state = 614
+				}
+			}
+			716 = {
+				add_resource = {
+					type = steel
+					amount = 40
+					state = 716
+				}
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = industry_balanced_enough
+				has_completed_focus = kmt_modern_industrialization
+			}
+			has_war = no
+			has_tech = construction4
+			has_tech = excavation4
+			608 = {
+				infra_bypass_3_tr = yes
+			}
+			716 = {
+				infra_bypass_3_tr = yes
+			}
+			614 = {
+				infra_bypass_3_tr = yes
+			}
+			615 = {
+				infra_bypass_3_tr = yes
+			}
+			606 = {
+				infra_bypass_3_tr = yes
+			}
+		}
+	}
+	focus = {
+		id = kmt_henan_aluminium
+		icon = GFX_goal_aluminium
+		cost = 10.00
+		prerequisite = {
+			focus = kmt_national_resource_exploration
+		}
+		x = 59
+		y = 3
+		select_effect = {
+			add_ideas = excavating
+		}
+		completion_reward = {
+			custom_effect_tooltip = debuff_tt
+			show_ideas_tooltip = excavating
+			custom_effect_tooltip = blank_line
+			hidden_effect = {
+				remove_ideas = excavating
+			}
+			607 = {
+				add_resource = {
+					type = aluminium
+					amount = 20
+					state = 607
+				}
+			}
+			615 = {
+				add_resource = {
+					type = aluminium
+					amount = 25
+					state = 615
+				}
+			}
+			603 = {
+				add_resource = {
+					type = aluminium
+					amount = 15
+					state = 603
+				}
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = industry_balanced_enough
+				has_completed_focus = chi_nationalize_industry_iii_focus
+			}
+			has_tech = excavation3
+			607 = {
+				hainan_trigger = yes
+			}
+			615 = {
+				hainan_trigger = yes
+			}
+			603 = {
+				hainan_trigger = yes
+			}
+		}
+	}
+	focus = {
+		id = kmt_shanxi_aluminium
+		icon = GFX_goal_aluminium
+		cost = 15.00
+		prerequisite = {
+			focus = kmt_henan_aluminium
+		}
+		x = 59
+		y = 4
+		select_effect = {
+			add_ideas = excavating
+		}
+		completion_reward = {
+			custom_effect_tooltip = debuff_tt
+			show_ideas_tooltip = excavating
+			custom_effect_tooltip = blank_line
+			hidden_effect = {
+				remove_ideas = excavating
+			}
+			607 = {
+				add_resource = {
+					type = aluminium
+					amount = 35
+					state = 607
+				}
+			}
+			615 = {
+				add_resource = {
+					type = aluminium
+					amount = 45
+					state = 615
+				}
+			}
+			603 = {
+				add_resource = {
+					type = aluminium
+					amount = 25
+					state = 603
+				}
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = industry_balanced_enough
+				has_completed_focus = kmt_modern_industrialization
+			}
+			has_tech = excavation4
+			607 = {
+				7_infra_trigger = yes
+			}
+			615 = {
+				7_infra_trigger = yes
+			}
+			603 = {
+				7_infra_trigger = yes
+			}
+		}
+	}
+	focus = {
+		id = kmt_guizou_aluminium
+		icon = GFX_goal_aluminium
+		cost = 20.00
+		prerequisite = {
+			focus = kmt_shanxi_aluminium
+		}
+		x = 59
+		y = 5
+		select_effect = {
+			add_ideas = excavating
+		}
+		completion_reward = {
+			custom_effect_tooltip = debuff_tt
+			show_ideas_tooltip = excavating
+			custom_effect_tooltip = blank_line
+			hidden_effect = {
+				remove_ideas = excavating
+			}
+			607 = {
+				add_resource = {
+					type = aluminium
+					amount = 65
+					state = 607
+				}
+			}
+			615 = {
+				add_resource = {
+					type = aluminium
+					amount = 85
+					state = 615
+				}
+			}
+			603 = {
+				add_resource = {
+					type = aluminium
+					amount = 45
+					state = 603
+				}
+			}
+		}
+		available = {
+			has_tech = excavation5
+			607 = {
+				infra_bypass_3_tr = yes
+			}
+			615 = {
+				infra_bypass_3_tr = yes
+			}
+			603 = {
+				infra_bypass_3_tr = yes
+			}
+		}
+	}
+	focus = {
+		id = jiangxi_tungsten
+		icon = GFX_goal_tungsten
+		cost = 10.00
+		prerequisite = {
+			focus = kmt_national_resource_exploration
+		}
+		x = 61
+		y = 3
+		select_effect = {
+			add_ideas = excavating
+		}
+		completion_reward = {
+			custom_effect_tooltip = debuff_tt
+			show_ideas_tooltip = excavating
+			custom_effect_tooltip = blank_line
+			hidden_effect = {
+				remove_ideas = excavating
+			}
+			600 = {
+				add_resource = {
+					type = tungsten
+					amount = 20
+					state = 600
+				}
+			}
+			593 = {
+				add_resource = {
+					type = tungsten
+					amount = 15
+					state = 593
+				}
+			}
+			602 = {
+				add_resource = {
+					type = tungsten
+					amount = 30
+					state = 602
+				}
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = industry_balanced_enough
+				has_completed_focus = chi_nationalize_industry_iii_focus
+			}
+			has_tech = excavation3
+			600 = {
+				hainan_trigger = yes
+			}
+			593 = {
+				hainan_trigger = yes
+			}
+			602 = {
+				hainan_trigger = yes
+			}
+		}
+	}
+	focus = {
+		id = guangdong_tungsten
+		icon = GFX_goal_tungsten
+		cost = 15.00
+		prerequisite = {
+			focus = jiangxi_tungsten
+		}
+		x = 61
+		y = 4
+		select_effect = {
+			add_ideas = excavating
+		}
+		completion_reward = {
+			custom_effect_tooltip = debuff_tt
+			show_ideas_tooltip = excavating
+			custom_effect_tooltip = blank_line
+			hidden_effect = {
+				remove_ideas = excavating
+			}
+			600 = {
+				add_resource = {
+					type = tungsten
+					amount = 35
+					state = 600
+				}
+			}
+			593 = {
+				add_resource = {
+					type = tungsten
+					amount = 25
+					state = 593
+				}
+			}
+			602 = {
+				add_resource = {
+					type = tungsten
+					amount = 55
+					state = 602
+				}
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = industry_balanced_enough
+				has_completed_focus = kmt_modern_industrialization
+			}
+			has_tech = excavation4
+			600 = {
+				7_infra_trigger = yes
+			}
+			593 = {
+				7_infra_trigger = yes
+			}
+			602 = {
+				7_infra_trigger = yes
+			}
+		}
+	}
+	focus = {
+		id = hunan_tungsten
+		icon = GFX_goal_tungsten
+		cost = 20.00
+		prerequisite = {
+			focus = guangdong_tungsten
+		}
+		x = 61
+		y = 5
+		select_effect = {
+			add_ideas = excavating
+		}
+		completion_reward = {
+			custom_effect_tooltip = debuff_tt
+			show_ideas_tooltip = excavating
+			custom_effect_tooltip = blank_line
+			hidden_effect = {
+				remove_ideas = excavating
+			}
+			600 = {
+				add_resource = {
+					type = tungsten
+					amount = 65
+					state = 600
+				}
+			}
+			593 = {
+				add_resource = {
+					type = tungsten
+					amount = 45
+					state = 593
+				}
+			}
+			602 = {
+				add_resource = {
+					type = tungsten
+					amount = 95
+					state = 602
+				}
+			}
+		}
+		available = {
+			has_tech = excavation5
+			600 = {
+				infra_bypass_3_tr = yes
+			}
+			593 = {
+				infra_bypass_3_tr = yes
+			}
+			602 = {
+				infra_bypass_3_tr = yes
+			}
+		}
+	}
+	focus = {
+		id = kmt_refinery_technology_german
+		icon = GFX_goal_generic_oil_refinery
+		cost = 10.00
+		prerequisite = {
+			focus = kmt_national_resource_exploration
+		}
+		x = 63
+		y = 3
+		completion_reward = {
+			add_tech_bonus = {
+				name = synth_bonus
+				bonus = 0.5
+				uses = 1
+				category = synth_resources
+			}
+			597 = {
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = industry_balanced_enough
+				has_completed_focus = chi_nationalize_industry_iii_focus
+			}
+			owns_state = 597
+		}
+	}
+	focus = {
+		id = kmt_hainan_plantation
+		icon = GFX_goal_generic_production
+		cost = 10.00
+		prerequisite = {
+			focus = kmt_refinery_technology_german
+		}
+		x = 63
+		y = 4
+		completion_reward = {
+			591 = {
+				add_resource = {
+					type = rubber
+					amount = 40
+					state = 591
+				}
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = industry_balanced_enough
+				has_completed_focus = kmt_modern_industrialization
+			}
+			591 = {
+				hainan_trigger = yes
+			}
+		}
+	}
+	focus = {
+		id = northeast_infra_focus
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 8.00
+		prerequisite = {
+			focus = chi_industry_focus
+		}
+		x = 65
+		y = 1
+		select_effect = {
+			add_ideas = under_construction
+		}
+		completion_reward = {
+			custom_effect_tooltip = debuff_tt
+			show_ideas_tooltip = under_construction
+			custom_effect_tooltip = blank_line
+			hidden_effect = {
+				remove_ideas = under_construction
+			}
+			every_state = {
+				limit = {
+					is_northeast_china_state = yes
+				}
+				custom_effect_tooltip = level_3_infra_tt
+			}
+			custom_effect_tooltip = acc_tt
+			714 = {
+				level_3_infra = yes
+			}
+			715 = {
+				level_3_infra = yes
+			}
+			716 = {
+				level_3_infra = yes
+			}
+			717 = {
+				level_3_infra = yes
+			}
+			328 = {
+				level_3_infra = yes
+			}
+			610 = {
+				level_3_infra = yes
+			}
+			757 = {
+				level_3_infra = yes
+			}
+			747 = {
+				level_3_infra = yes
+			}
+		}
+		bypass = {
+			NOT = {
+				any_state = {
+					is_northeast_china_state = yes
+					infra_bypass_1_tr = no
+				}
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = industry_balanced_enough
+				has_completed_focus = chi_nationalize_industry_focus
+			}
+			NOT = {
+				any_state = {
+					is_northeast_china_state = yes
+					NOT = {
+						is_controlled_by = ROOT
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = northeast_infra_focus_ii
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = northeast_infra_focus
+		}
+		x = 65
+		y = 2
+		select_effect = {
+			add_ideas = under_construction
+		}
+		completion_reward = {
+			custom_effect_tooltip = debuff_tt
+			show_ideas_tooltip = under_construction
+			custom_effect_tooltip = blank_line
+			hidden_effect = {
+				remove_ideas = under_construction
+			}
+			every_state = {
+				limit = {
+					is_northeast_china_state = yes
+				}
+				custom_effect_tooltip = level_6_infra_tt
+			}
+			custom_effect_tooltip = acc_tt
+			714 = {
+				level_6_infra = yes
+			}
+			715 = {
+				level_6_infra = yes
+			}
+			716 = {
+				level_6_infra = yes
+			}
+			717 = {
+				level_6_infra = yes
+			}
+			328 = {
+				level_6_infra = yes
+			}
+			610 = {
+				level_6_infra = yes
+			}
+			757 = {
+				level_6_infra = yes
+			}
+			747 = {
+				level_6_infra = yes
+			}
+		}
+		bypass = {
+			NOT = {
+				any_state = {
+					is_northeast_china_state = yes
+					infra_bypass_2_tr = no
+				}
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = industry_balanced_enough
+				has_completed_focus = chi_nationalize_industry_ii_focus
+			}
+			NOT = {
+				any_state = {
+					is_northeast_china_state = yes
+					infra_ava_2_tr = no
+				}
+			}
+		}
+	}
+	focus = {
+		id = northeast_infra_focus_iii
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 15.00
+		prerequisite = {
+			focus = northeast_infra_focus_ii
+		}
+		x = 65
+		y = 3
+		select_effect = {
+			add_ideas = under_construction
+		}
+		completion_reward = {
+			custom_effect_tooltip = debuff_tt
+			show_ideas_tooltip = under_construction
+			custom_effect_tooltip = blank_line
+			hidden_effect = {
+				remove_ideas = under_construction
+			}
+			hidden_effect = {
+				every_state = {
+					limit = {
+						is_northeast_china_state = yes
+					}
+					max_infra_effect = yes
+				}
+			}
+			every_state = {
+				limit = {
+					is_northeast_china_state = yes
+				}
+				custom_effect_tooltip = max_infra
+			}
+		}
+		bypass = {
+			NOT = {
+				any_state = {
+					is_northeast_china_state = yes
+					infra_bypass_3_tr = no
+				}
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = industry_balanced_enough
+				has_completed_focus = chi_nationalize_industry_iii_focus
+			}
+			NOT = {
+				any_state = {
+					is_northeast_china_state = yes
+					infra_ava_3_tr = no
+				}
+			}
+		}
+	}
+	focus = {
+		id = kmt_daqing_oil_field
+		icon = GFX_goal_generic_oil_refinery
+		cost = 10.00
+		prerequisite = {
+			focus = northeast_infra_focus_iii
+		}
+		prerequisite = {
+			focus = kmt_refinery_technology_german
+		}
+		x = 65
+		y = 4
+		select_effect = {
+			add_ideas = oil_exploring
+		}
+		completion_reward = {
+			custom_effect_tooltip = debuff_tt
+			show_ideas_tooltip = oil_exploring
+			custom_effect_tooltip = blank_line
+			hidden_effect = {
+				remove_ideas = oil_exploring
+			}
+			717 = {
+				add_resource = {
+					type = oil
+					amount = 75
+					state = 717
+				}
+			}
+			hidden_effect = {
+				news_event = {
+					days = 2
+					id = news.5020
+				}
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = industry_balanced_enough
+				has_completed_focus = kmt_modern_industrialization
+			}
+			has_tech = improved_oil_plant
+			717 = {
+				alu_tung_trigger = yes
+			}
+		}
+	}
+	focus = {
+		id = north_china_infra_focus
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 8.00
+		prerequisite = {
+			focus = chi_industry_focus
+		}
+		x = 67
+		y = 1
+		select_effect = {
+			add_ideas = under_construction
+		}
+		completion_reward = {
+			custom_effect_tooltip = debuff_tt
+			show_ideas_tooltip = under_construction
+			custom_effect_tooltip = blank_line
+			hidden_effect = {
+				remove_ideas = under_construction
+			}
+			every_state = {
+				limit = {
+					is_north_china_state = yes
+				}
+				custom_effect_tooltip = level_3_infra_tt
+			}
+			custom_effect_tooltip = acc_tt
+			608 = {
+				level_3_infra = yes
+			}
+			609 = {
+				level_3_infra = yes
+			}
+			611 = {
+				level_3_infra = yes
+			}
+			614 = {
+				level_3_infra = yes
+			}
+			621 = {
+				level_3_infra = yes
+			}
+			763 = {
+				level_3_infra = yes
+			}
+			615 = {
+				level_3_infra = yes
+			}
+			762 = {
+				level_3_infra = yes
+			}
+			622 = {
+				level_3_infra = yes
+			}
+			616 = {
+				level_3_infra = yes
+			}
+			760 = {
+				level_3_infra = yes
+			}
+			612 = {
+				level_3_infra = yes
+			}
+		}
+		bypass = {
+			NOT = {
+				any_state = {
+					is_north_china_state = yes
+					infra_bypass_1_tr = no
+				}
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = industry_balanced_enough
+				has_completed_focus = chi_nationalize_industry_focus
+			}
+			NOT = {
+				any_state = {
+					is_north_china_state = yes
+					NOT = {
+						is_controlled_by = ROOT
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = north_china_infra_focus_ii
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = north_china_infra_focus
+		}
+		x = 67
+		y = 2
+		select_effect = {
+			add_ideas = under_construction
+		}
+		completion_reward = {
+			custom_effect_tooltip = debuff_tt
+			show_ideas_tooltip = under_construction
+			custom_effect_tooltip = blank_line
+			hidden_effect = {
+				remove_ideas = under_construction
+			}
+			every_state = {
+				limit = {
+					is_north_china_state = yes
+				}
+				custom_effect_tooltip = level_6_infra_tt
+			}
+			custom_effect_tooltip = acc_tt
+			608 = {
+				level_6_infra = yes
+			}
+			609 = {
+				level_6_infra = yes
+			}
+			611 = {
+				level_6_infra = yes
+			}
+			614 = {
+				level_6_infra = yes
+			}
+			621 = {
+				level_6_infra = yes
+			}
+			763 = {
+				level_6_infra = yes
+			}
+			762 = {
+				level_6_infra = yes
+			}
+			615 = {
+				level_6_infra = yes
+			}
+			622 = {
+				level_6_infra = yes
+			}
+			616 = {
+				level_6_infra = yes
+			}
+			760 = {
+				level_6_infra = yes
+			}
+			612 = {
+				level_6_infra = yes
+			}
+		}
+		bypass = {
+			NOT = {
+				any_state = {
+					is_north_china_state = yes
+					infra_bypass_2_tr = no
+				}
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = industry_balanced_enough
+				has_completed_focus = chi_nationalize_industry_ii_focus
+			}
+			NOT = {
+				any_state = {
+					is_north_china_state = yes
+					infra_ava_2_tr = no
+				}
+			}
+		}
+	}
+	focus = {
+		id = north_china_infra_focus_iii
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 15.00
+		prerequisite = {
+			focus = north_china_infra_focus_ii
+		}
+		x = 67
+		y = 3
+		select_effect = {
+			add_ideas = under_construction
+		}
+		completion_reward = {
+			custom_effect_tooltip = debuff_tt
+			show_ideas_tooltip = under_construction
+			custom_effect_tooltip = blank_line
+			hidden_effect = {
+				remove_ideas = under_construction
+			}
+			every_state = {
+				limit = {
+					is_north_china_state = yes
+				}
+				custom_effect_tooltip = max_infra
+			}
+			#custom_effect_tooltip = acc_tt
+			hidden_effect = {
+				every_state = {
+					limit = {
+						is_north_china_state = yes
+					}
+					max_infra_effect = yes
+				}
+			}
+		}
+		bypass = {
+			NOT = {
+				any_state = {
+					is_north_china_state = yes
+					infra_bypass_3_tr = no
+				}
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = industry_balanced_enough
+				has_completed_focus = chi_nationalize_industry_iii_focus
+			}
+			NOT = {
+				any_state = {
+					is_north_china_state = yes
+					infra_ava_3_tr = no
+				}
+			}
+		}
+	}
+	focus = {
+		id = east_china_infra_focus
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 8.00
+		prerequisite = {
+			focus = chi_industry_focus
+		}
+		x = 69
+		y = 1
+		select_effect = {
+			add_ideas = under_construction
+		}
+		completion_reward = {
+			custom_effect_tooltip = debuff_tt
+			show_ideas_tooltip = under_construction
+			custom_effect_tooltip = blank_line
+			hidden_effect = {
+				remove_ideas = under_construction
+			}
+			every_state = {
+				limit = {
+					is_east_china_state = yes
+				}
+				custom_effect_tooltip = level_3_infra_tt
+			}
+			custom_effect_tooltip = acc_tt
+			607 = {
+				level_3_infra = yes
+			}
+			746 = {
+				level_3_infra = yes
+			}
+			620 = {
+				level_3_infra = yes
+			}
+			756 = {
+				level_3_infra = yes
+			}
+			745 = {
+				level_3_infra = yes
+			}
+			744 = {
+				level_3_infra = yes
+			}
+			606 = {
+				level_3_infra = yes
+			}
+			596 = {
+				level_3_infra = yes
+			}
+			597 = {
+				level_3_infra = yes
+			}
+			598 = {
+				level_3_infra = yes
+			}
+			613 = {
+				level_3_infra = yes
+			}
+		}
+		bypass = {
+			NOT = {
+				any_state = {
+					is_east_china_state = yes
+					infra_bypass_1_tr = no
+				}
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = industry_balanced_enough
+				has_completed_focus = chi_nationalize_industry_focus
+			}
+			NOT = {
+				any_state = {
+					is_east_china_state = yes
+					NOT = {
+						is_controlled_by = ROOT
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = east_china_infra_focus_ii
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = east_china_infra_focus
+		}
+		x = 69
+		y = 2
+		select_effect = {
+			add_ideas = under_construction
+		}
+		completion_reward = {
+			custom_effect_tooltip = debuff_tt
+			show_ideas_tooltip = under_construction
+			custom_effect_tooltip = blank_line
+			hidden_effect = {
+				remove_ideas = under_construction
+			}
+			every_state = {
+				limit = {
+					is_east_china_state = yes
+				}
+				custom_effect_tooltip = level_6_infra_tt
+			}
+			custom_effect_tooltip = acc_tt
+			607 = {
+				level_6_infra = yes
+			}
+			746 = {
+				level_6_infra = yes
+			}
+			620 = {
+				level_6_infra = yes
+			}
+			756 = {
+				level_6_infra = yes
+			}
+			745 = {
+				level_6_infra = yes
+			}
+			744 = {
+				level_6_infra = yes
+			}
+			606 = {
+				level_6_infra = yes
+			}
+			596 = {
+				level_6_infra = yes
+			}
+			597 = {
+				level_6_infra = yes
+			}
+			598 = {
+				level_6_infra = yes
+			}
+			613 = {
+				level_6_infra = yes
+			}
+		}
+		bypass = {
+			NOT = {
+				any_state = {
+					is_east_china_state = yes
+					infra_bypass_2_tr = no
+				}
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = industry_balanced_enough
+				has_completed_focus = chi_nationalize_industry_ii_focus
+			}
+			NOT = {
+				any_state = {
+					is_east_china_state = yes
+					infra_ava_2_tr = no
+				}
+			}
+		}
+	}
+	focus = {
+		id = east_china_infra_focus_iii
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 15.00
+		prerequisite = {
+			focus = east_china_infra_focus_ii
+		}
+		x = 69
+		y = 3
+		select_effect = {
+			add_ideas = under_construction
+		}
+		completion_reward = {
+			custom_effect_tooltip = debuff_tt
+			show_ideas_tooltip = under_construction
+			custom_effect_tooltip = blank_line
+			hidden_effect = {
+				remove_ideas = under_construction
+			}
+			every_state = {
+				limit = {
+					is_east_china_state = yes
+				}
+				custom_effect_tooltip = max_infra
+			}
+			#custom_effect_tooltip = acc_tt
+			hidden_effect = {
+				every_state = {
+					limit = {
+						is_east_china_state = yes
+					}
+					max_infra_effect = yes
+				}
+			}
+		}
+		bypass = {
+			NOT = {
+				any_state = {
+					is_east_china_state = yes
+					infra_bypass_3_tr = no
+				}
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = industry_balanced_enough
+				has_completed_focus = chi_nationalize_industry_iii_focus
+			}
+			NOT = {
+				any_state = {
+					is_east_china_state = yes
+					infra_ava_3_tr = no
+				}
+			}
+		}
+	}
+	focus = {
+		id = south_china_infra_focus
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 8.00
+		prerequisite = {
+			focus = chi_industry_focus
+		}
+		x = 71
+		y = 1
+		select_effect = {
+			add_ideas = under_construction
+		}
+		completion_reward = {
+			custom_effect_tooltip = debuff_tt
+			show_ideas_tooltip = under_construction
+			custom_effect_tooltip = blank_line
+			hidden_effect = {
+				remove_ideas = under_construction
+			}
+			every_state = {
+				limit = {
+					is_south_china_state = yes
+				}
+				custom_effect_tooltip = level_3_infra_tt
+			}
+			custom_effect_tooltip = acc_tt
+			325 = {
+				level_3_infra = yes
+			}
+			599 = {
+				level_3_infra = yes
+			}
+			592 = {
+				level_3_infra = yes
+			}
+			603 = {
+				level_3_infra = yes
+			}
+			602 = {
+				level_3_infra = yes
+			}
+			600 = {
+				level_3_infra = yes
+			}
+			595 = {
+				level_3_infra = yes
+			}
+		}
+		bypass = {
+			NOT = {
+				any_state = {
+					is_south_china_state = yes
+					infra_bypass_1_tr = no
+				}
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = industry_balanced_enough
+				has_completed_focus = chi_nationalize_industry_focus
+			}
+			NOT = {
+				any_state = {
+					is_south_china_state = yes
+					NOT = {
+						is_controlled_by = ROOT
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = south_china_infra_focus_ii
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = south_china_infra_focus
+		}
+		x = 71
+		y = 2
+		select_effect = {
+			add_ideas = under_construction
+		}
+		completion_reward = {
+			custom_effect_tooltip = debuff_tt
+			show_ideas_tooltip = under_construction
+			custom_effect_tooltip = blank_line
+			hidden_effect = {
+				remove_ideas = under_construction
+			}
+			every_state = {
+				limit = {
+					is_south_china_state = yes
+				}
+				custom_effect_tooltip = level_6_infra_tt
+			}
+			custom_effect_tooltip = acc_tt
+			325 = {
+				level_6_infra = yes
+			}
+			599 = {
+				level_6_infra = yes
+			}
+			592 = {
+				level_6_infra = yes
+			}
+			603 = {
+				level_6_infra = yes
+			}
+			602 = {
+				level_6_infra = yes
+			}
+			600 = {
+				level_6_infra = yes
+			}
+			595 = {
+				level_6_infra = yes
+			}
+		}
+		bypass = {
+			NOT = {
+				any_state = {
+					is_south_china_state = yes
+					infra_bypass_2_tr = no
+				}
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = industry_balanced_enough
+				has_completed_focus = chi_nationalize_industry_ii_focus
+			}
+			NOT = {
+				any_state = {
+					is_south_china_state = yes
+					infra_ava_2_tr = no
+				}
+			}
+		}
+	}
+	focus = {
+		id = south_china_infra_focus_iii
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 15.00
+		prerequisite = {
+			focus = south_china_infra_focus_ii
+		}
+		x = 71
+		y = 3
+		select_effect = {
+			add_ideas = under_construction
+		}
+		completion_reward = {
+			custom_effect_tooltip = debuff_tt
+			show_ideas_tooltip = under_construction
+			custom_effect_tooltip = blank_line
+			hidden_effect = {
+				remove_ideas = under_construction
+			}
+			hidden_effect = {
+				every_state = {
+					limit = {
+						is_south_china_state = yes
+					}
+					max_infra_effect = yes
+				}
+			}
+			every_state = {
+				limit = {
+					is_south_china_state = yes
+				}
+				custom_effect_tooltip = max_infra
+			}
+		}
+		bypass = {
+			NOT = {
+				any_state = {
+					is_south_china_state = yes
+					infra_bypass_3_tr = no
+				}
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = industry_balanced_enough
+				has_completed_focus = chi_nationalize_industry_iii_focus
+			}
+			NOT = {
+				any_state = {
+					is_south_china_state = yes
+					infra_ava_3_tr = no
+				}
+			}
+		}
+	}
+	focus = {
+		id = peace_with_japan
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 10.00
+		prerequisite = {
+			focus = an_inch_of_mountain_an_inch_of_blood
+		}
+		mutually_exclusive = {
+			focus = chi_air_arc_focus
+			focus = chi_navy_sunfall_focus
+		}
+		x = 5
+		y = 8
+		available = {
+			NOT = {
+				is_in_faction_with = SOV
+			}
+			NOT = {
+				is_in_faction_with = ENG
+			}
+			NOT = {
+				is_in_faction_with = GER
+			}
+			NOT = {
+				any_state = {
+					OR = {
+						state = 598
+						state = 606
+						state = 596
+						state = 597
+						state = 613
+						state = 328
+						state = 609
+						state = 610
+						state = 611
+						state = 612
+						state = 757
+						state = 714
+						state = 715
+						state = 716
+						state = 717
+						state = 747
+						state = 525
+						state = 527
+					}
+					is_controlled_by_jap_or_its_puppet = yes
+				}
+			}
+		}
+		completion_reward = {
+			country_event = {
+				id = rcmchina.2055
+			}
+		}
+		bypass = {
+			NOT = {
+				has_war_with = JAP
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	focus = {
+		id = chi_academy_mp_focus
+		icon = GFX_focus_wonderweapons
+		cost = 10.00
+		prerequisite = {
+			focus = chi_academy_ex_focus
+		}
+		x = 52
+		y = 6
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = nuclear
+			}
+		}
+	}
+	focus = {
+		id = kmt_han_arsenal
+		icon = GFX_goal_generic_small_arms
+		cost = 15.00
+		prerequisite = {
+			focus = national_steelwork
+		}
+		prerequisite = {
+			focus = kmt_modern_industrialization
+		}
+		x = 56
+		y = 5
+		select_effect = {
+			add_ideas = under_construction
+		}
+		completion_reward = {
+			custom_effect_tooltip = debuff_tt
+			show_ideas_tooltip = under_construction
+			custom_effect_tooltip = blank_line
+			hidden_effect = {
+				remove_ideas = under_construction
+			}
+			600 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			602 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			606 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			614 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			620 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			756 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		available = {
+			has_tech = construction5
+			has_tech = excavation5
+			600 = {
+				max_infra_trigger = yes
+			}
+			602 = {
+				max_infra_trigger = yes
+			}
+			606 = {
+				max_infra_trigger = yes
+			}
+			614 = {
+				max_infra_trigger = yes
+			}
+			620 = {
+				max_infra_trigger = yes
+			}
+			756 = {
+				max_infra_trigger = yes
+			}
+		}
+	}
+	focus = {
+		id = end_civil_war
+		icon = GFX_goal_generic_war_with_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = chi_air_arc_focus
+			focus = peace_with_japan
+			focus = chi_navy_sunfall_focus
+			focus = last-ditch_effort
+		}
+		x = 5
+		y = 10
+		ai_will_do = {
+			factor = 100
+		}
+		will_lead_to_war_with = PRC
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = PRC
+			}
+		}
+		available = {
+			NOT = {
+				has_war_with = JAP
+			}
+		}
+		bypass = {
+			NOT = {
+				country_exists = PRC
+			}
+		}
+	}
+	focus = {
+		id = chi_allies_help_party_focus
+		icon = GFX_goal_generic_air_doctrine
+		cost = 10.00
+		prerequisite = {
+			focus = chi_constitution_focus
+		}
+		x = 36
+		y = 6
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_political_power = -50
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+			}
+			remove_ideas = the_blueshirts
+			remove_ideas = central_club
+			set_rule = {
+				can_send_volunteers = yes
+			}
+		}
+		available = {
+			NOT = {
+				has_war_with = USA
+			}
+			NOT = {
+				has_war_with = ENG
+			}
+			democratic > 0.5
+		}
+		cancel = {
+			OR = {
+				has_war_with = USA
+				has_war_with = ENG
+			}
+		}
+	}
+	focus = {
+		id = chi_join_allies
+		icon = GFX_goal_generic_alliance
+		cost = 10.00
+		prerequisite = {
+			focus = chi_allies_help_party_focus
+		}
+		prerequisite = {
+			focus = chi_allies_help_diplo_focus
+		}
+		mutually_exclusive = {
+			focus = asian_non-aligned_movement
+		}
+		x = 31
+		y = 7
+		ai_will_do = {
+			factor = 60
+			modifier = {
+				factor = 0
+				ENG = {
+					has_capitulated = yes
+				}
+			}
+			modifier = {
+				factor = 0.2
+				ENG = {
+					surrender_progress > 0.2
+				}
+			}
+		}
+		completion_reward = {
+			ENG = {
+				country_event = {
+					id = generic.2
+				}
+			}
+		}
+		available = {
+			has_opinion = {
+				target = ENG
+				value > 39
+			}
+			ENG = {
+				has_opinion = {
+					target = CHI
+					value > 89
+				}
+			}
+			NOT = {
+				has_war_with = ENG
+				has_idea = neutrality_idea
+			}
+			is_in_faction = no
+			has_idea = chi_new_equal_treaty
+		}
+		bypass = {
+			is_in_faction_with = ENG
+		}
+	}
+	focus = {
+		id = befriend_the_west
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		cost = 10.00
+		prerequisite = {
+			focus = democratic_socialism
+		}
+		x = 14
+		y = 6
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				AND = {
+					fascism < 0.25
+					n_socialism > 0.25
+				}
+				factor = 3
+			}
+		}
+		completion_reward = {
+			add_opinion_modifier = {
+				target = ENG
+				modifier = west_friend
+			}
+			add_opinion_modifier = {
+				target = USA
+				modifier = west_friend
+			}
+		}
+		available = {
+		}
+		bypass = {
+		}
+	}
+	focus = {
+		id = found_cbis
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = strengthen_cc
+		}
+		x = 21
+		y = 4
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_ideas = CBIS
+			add_political_power = 100
+		}
+		available = {
+			OR = {
+				has_government = fascism
+				has_government = neutrality
+			}
+			has_idea = chen_lifu
+		}
+	}
+	focus = {
+		id = yi_dang_zhi_guo
+		icon = GFX_goal_generic_cavalry
+		cost = 10.00
+		prerequisite = {
+			focus = political_indoctrination
+		}
+		prerequisite = {
+			focus = strengthen_the_kmt
+		}
+		mutually_exclusive = {
+			focus = chi_axis_help_party_focus
+		}
+		x = 21
+		y = 6
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_ideas = dangguo_system
+			custom_effect_tooltip = kmt_all
+			hidden_effect = {
+				set_political_party = {
+					ideology = neutrality
+					popularity = 100
+				}
+			}
+		}
+		available = {
+			has_government = neutrality
+			neutrality > 0.5
+		}
+		bypass = {
+		}
+		cancel = {
+		}
+	}
+	focus = {
+		id = strengthen_the_kmt
+		icon = GFX_goal_generic_political_pressure
+		cost = 10.00
+		prerequisite = {
+			focus = found_cbis
+		}
+		x = 20
+		y = 5
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = {
+						has_idea = CBIS
+					}
+					NOT = {
+						has_idea = CBIS_indoctrination
+					}
+				}
+				swap_ideas = {
+					add_idea = CBIS_kmt
+					remove_idea = CBIS
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_idea = CBIS
+					}
+					has_idea = CBIS_indoctrination
+				}
+				swap_ideas = {
+					add_idea = CBIS_kmt_indoctrination
+					remove_idea = CBIS_indoctrination
+				}
+			}
+			if = {
+				limit = {
+					has_idea = CBIS
+					NOT = {
+						has_idea = CBIS_indoctrination
+					}
+				}
+				swap_ideas = {
+					add_idea = CBIS_kmt
+					remove_idea = CBIS
+				}
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.2
+			}
+		}
+		available = {
+		}
+		bypass = {
+		}
+	}
+	focus = {
+		id = political_indoctrination
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		prerequisite = {
+			focus = found_cbis
+		}
+		x = 22
+		y = 5
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = {
+						has_idea = CBIS
+					}
+					NOT = {
+						has_idea = CBIS_kmt
+					}
+				}
+				swap_ideas = {
+					add_idea = CBIS_indoctrination
+					remove_idea = CBIS
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_idea = CBIS
+					}
+					has_idea = CBIS_kmt
+				}
+				swap_ideas = {
+					add_idea = CBIS_kmt_indoctrination
+					remove_idea = CBIS_kmt
+				}
+			}
+			if = {
+				limit = {
+					has_idea = CBIS
+					NOT = {
+						has_idea = CBIS_kmt
+					}
+				}
+				swap_ideas = {
+					add_idea = CBIS_indoctrination
+					remove_idea = CBIS
+				}
+			}
+		}
+		available = {
+		}
+		bypass = {
+		}
+	}
+	focus = {
+		id = join_allies_sol
+		icon = GFX_goal_generic_alliance
+		cost = 10.00
+		prerequisite = {
+			focus = befriend_the_west
+		}
+		prerequisite = {
+			focus = a_new_constitution
+		}
+		x = 14
+		y = 8
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			ENG = {
+				country_event = {
+					id = generic.2
+				}
+			}
+		}
+		available = {
+			has_government = n_socialism
+			ENG = {
+				is_faction_leader = yes
+			}
+			NOT = {
+				has_war_with = ENG
+				has_idea = neutrality_idea
+			}
+			is_in_faction = no
+		}
+		bypass = {
+			is_in_faction_with = ENG
+		}
+	}
+	focus = {
+		id = west_china_infra_focus
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 8.00
+		prerequisite = {
+			focus = chi_industry_focus
+		}
+		x = 73
+		y = 1
+		select_effect = {
+			add_ideas = under_construction
+		}
+		completion_reward = {
+			custom_effect_tooltip = debuff_tt
+			show_ideas_tooltip = under_construction
+			custom_effect_tooltip = blank_line
+			hidden_effect = {
+				remove_ideas = under_construction
+			}
+			every_state = {
+				limit = {
+					is_west_china_state = yes
+				}
+				custom_effect_tooltip = level_3_infra_tt
+			}
+			custom_effect_tooltip = acc_tt
+			604 = {
+				level_3_infra = yes
+			}
+			283 = {
+				level_3_infra = yes
+			}
+			601 = {
+				level_3_infra = yes
+			}
+			605 = {
+				level_3_infra = yes
+			}
+			743 = {
+				level_3_infra = yes
+			}
+			761 = {
+				level_3_infra = yes
+			}
+		}
+		bypass = {
+			NOT = {
+				any_state = {
+					is_south_china_state = yes
+					infra_bypass_1_tr = no
+				}
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = industry_balanced_enough
+				has_completed_focus = chi_nationalize_industry_focus
+			}
+			NOT = {
+				any_state = {
+					is_south_china_state = yes
+					NOT = {
+						is_controlled_by = ROOT
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = west_china_infra_focus_ii
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = west_china_infra_focus
+		}
+		x = 73
+		y = 2
+		select_effect = {
+			add_ideas = under_construction
+		}
+		completion_reward = {
+			custom_effect_tooltip = debuff_tt
+			show_ideas_tooltip = under_construction
+			custom_effect_tooltip = blank_line
+			hidden_effect = {
+				remove_ideas = under_construction
+			}
+			every_state = {
+				limit = {
+					is_west_china_state = yes
+				}
+				custom_effect_tooltip = level_6_infra_tt
+			}
+			custom_effect_tooltip = acc_tt
+			604 = {
+				level_6_infra = yes
+			}
+			283 = {
+				level_6_infra = yes
+			}
+			601 = {
+				level_6_infra = yes
+			}
+			605 = {
+				level_6_infra = yes
+			}
+			743 = {
+				level_6_infra = yes
+			}
+			761 = {
+				level_6_infra = yes
+			}
+		}
+		bypass = {
+			NOT = {
+				any_state = {
+					is_west_china_state = yes
+					infra_bypass_2_tr = no
+				}
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = industry_balanced_enough
+				has_completed_focus = chi_nationalize_industry_ii_focus
+			}
+			NOT = {
+				any_state = {
+					is_west_china_state = yes
+					infra_ava_2_tr = no
+				}
+			}
+		}
+	}
+	focus = {
+		id = west_china_infra_focus_iii
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 15.00
+		prerequisite = {
+			focus = west_china_infra_focus_ii
+		}
+		x = 73
+		y = 3
+		select_effect = {
+			add_ideas = under_construction
+		}
+		completion_reward = {
+			custom_effect_tooltip = debuff_tt
+			show_ideas_tooltip = under_construction
+			custom_effect_tooltip = blank_line
+			custom_effect_tooltip = blank_line
+			hidden_effect = {
+				remove_ideas = under_construction
+			}
+			every_state = {
+				limit = {
+					is_west_china_state = yes
+				}
+				custom_effect_tooltip = max_infra
+			}
+			#custom_effect_tooltip = acc_tt
+			hidden_effect = {
+				every_state = {
+					limit = {
+						is_west_china_state = yes
+					}
+					max_infra_effect = yes
+				}
+			}
+		}
+		bypass = {
+			NOT = {
+				any_state = {
+					is_west_china_state = yes
+					infra_bypass_3_tr = no
+				}
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = industry_balanced_enough
+				has_completed_focus = chi_nationalize_industry_iii_focus
+			}
+			NOT = {
+				any_state = {
+					is_west_china_state = yes
+					infra_ava_3_tr = no
+				}
+			}
+		}
+	}
+}

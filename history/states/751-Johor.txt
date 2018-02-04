@@ -1,0 +1,16 @@
+state={
+	id=751
+	name="STATE_751"
+	state_category = town
+	history={
+		owner = ENG		
+		buildings = {
+			infrastructure = 3
+		}
+	}
+	provinces={
+		4367 4424 10313 12113
+	}
+	manpower = 174620
+	buildings_max_level_factor=1.000
+}

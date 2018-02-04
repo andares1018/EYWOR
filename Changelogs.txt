@@ -1,0 +1,75 @@
+[h1][b]v1.1.0a - Update "A Nation Divided"[/b][/h1]
+
+Changelog:
+
+
+[b]Regional Flavor[/b]
+China:
+ - Fine-tuned and reorganized some of the national focuses 
+ - Add new icons for companies, and some national focuses
+ - Fix most of the reported bugs (i.e. Socialist branch of the tree doesn't work, repeating events, and many more) and some others, [b]big increase in playability[/b]
+ - Add many warlord states, 5 of them in total, not including the Pailingmiao Council and other newly-added Client states. You can read about the warlords here: 
+ (*Note: I post wikipedia links here for convenience, if you want to know more about the history, there's a lot of information out there that's worth looking into)
+	#[url=https://en.wikipedia.org/wiki/Northeastern_Army]Northeastern Army[/url]
+	#[url=https://en.wikipedia.org/wiki/Han_Fuju]Han Fuju and his role in Shandong[/url]
+	#[url=https://en.wikipedia.org/wiki/Ma_Hongkui]Ma Hongkui and his role in Ningxia[/url]
+	#[url=https://en.wikipedia.org/wiki/Tunganistan]Tunganistan[/url]
+	#[url=https://en.wikipedia.org/wiki/Yulbars_Khan]Yulbars Khan in Kumul[/url]
+ - AI China now choose his focus path and make decisions more carefully
+ - New victory points added, along with some tweaks of the city names
+ - Complete rework of the Xi'an Incident. Now Chiang can be killed!
+ - Fine-tuned the CDL event
+ - Sichuan Clique now has its own event chain of submitting to China. The "Fate of Sichuan" Focus is removed
+ - More interaction between the warlords and better event chains (Xi'an Incident, Split Pailingmiao etc.)
+ - And much more!
+ 
+Communist China:
+ - [b]A BRAND NEW FOCUS TREE[/b] (yay!) - Huge thanks to [url=http://steamcommunity.com/profiles/76561198039701306/]Wanniang[/url], the author of the [url=http://steamcommunity.com/sharedfiles/filedetails/?id=838652285]East Focus mod[/url](in Chinese).
+ The Focus tree is based largely on the one in his mod, but is heavily modified and well integrated. I have plans on integrating most of the trees there into this mod (we're pals), so stay tuned!
+ - A new way of reclaiming the land in the Northeast after the war with Japan(no more instantly get half the map)
+ - Unique continuous focuses
+ - And much more!
+
+Japan:
+ - Some changes and description added to the focus tree
+ - New focuses in regard to it's puppets in Inner Mongolia
+ - New puppets, [url=https://imgur.com/a/fXDqt]North Shanxi and South Chahar[/url]. Created through events.
+ - Bug Fixes and some fine tuning
+ - New historical OOB thanks to Ukiwa
+ - More news events and flavor in general
+ - and more!
+  
+Manchukuo:
+ - Zhang Jinghui is now the leader(the prime minister)
+ - A complete overhaul of the advisors
+ - New historical OOB thanks to Ukiwa
+ 
+Sinkiang:
+ - A new focus tree, also based on the one in East Focus. If you like my mod and can somehow read Chinese, go give it a try. Dude puts some real effort into his mod.
+ - All in all a lot more flavor is added.
+ 
+Mongolia, Pailingmiao Council & East Chahar:
+ - Huge thanks to [url=http://steamcommunity.com/id/mordredderby/]Mordred[/url] who made the [url=http://steamcommunity.com/sharedfiles/filedetails/?id=766149258]Mongolia National Focus[/url] Mod.
+ The Focus trees are also based on the one in his mod. And I've expanded upon that and made sure that the focus tree is well integrated.
+ - East Chahar get a semi-unique focus tree. The Pailingmiao Council is pretty playable, has some event flavor and has one(lol) unique focus as well.
+ - More Events when Japan is ordering reforms and what not
+
+Persia:
+ - Anglo-Soviet Invasion by Hellonoobik and Elex
+
+S.E. Asia
+ - Added Strait Settlements!
+ - Added British Burma, which will be created mid-game thanks to Chewy Yui
+ - Burma has unique political advisors and companies 
+=======
+
+[b]General Flavor[/b]
+ - New Loading Screens!!!
+	(Disclaimer: I don't claim any ownership over the loading screen paintings.)
+ - Some Socialist/labor parties around the world are reworked as belong to the socialist ideology 
+ - Some changes to the AI
+ - Added some states and victory points
+ - Balancing and Bug Fixes
+ 
+
+ 

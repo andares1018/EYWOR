@@ -1,0 +1,344 @@
+ideas = {
+	political_advisor = {
+		MAL_earl_browder = {
+			
+			
+			allowed = {
+				original_tag = "MAL"
+			}
+			
+
+			
+			traits = { communist_revolutionary }
+	
+			on_add = {
+				country_event = political.1
+			}
+	
+			do_effect = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			picture = generic_communist_europe
+			ai_will_do = {
+				factor = 0
+			}
+		}	
+			
+		MAL_harold_ickes = {
+			
+			
+			allowed = {
+				original_tag = "MAL"
+			}
+			
+
+			
+			traits = { democratic_reformer }
+	
+			on_add = {
+				country_event = political.13
+			}
+	
+			do_effect = {
+				NOT = {
+					has_government = democratic
+				}
+			}
+			picture = generic_democratic_europe
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		MAL_charles_coughlin = {
+			
+			
+			allowed = {
+				original_tag = "MAL"
+			}
+			
+
+			
+			traits = { fascist_demagogue }
+	
+			on_add = {
+				country_event = political.7
+			}
+	
+			do_effect = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+			picture = generic_fascist_europe
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		MAL_zhang_bojun = { ai_will_do = { factor = 0 }
+			picture = idea_zhang_bojun
+			allowed = {
+				original_tag = MAL
+			}
+			traits = { socialist_idealist }
+			
+			picture = generic_n_socialism_europe
+			on_add = {
+				country_event = rcmpolitical.30
+			}					
+			do_effect = {
+				NOT = {
+					has_government = n_socialism
+				}
+			}
+			
+		}
+		MAL_pierre_dupong = {
+
+			picture = generic_political_advisor_europe_1
+			
+			allowed = {
+				original_tag = MAL
+			}
+			
+			traits = { silent_workhorse }
+		}
+		
+		MAL_psre_dupong = {
+
+			picture = generic_political_advisor_europe_1
+			
+			allowed = {
+				original_tag = MAL
+			}
+			
+			traits = { compassionate_gentleman }
+		}
+
+
+		MAL_pierre_krier = {
+
+			picture = generic_political_advisor_europe_3
+			
+			allowed = {
+				original_tag = MAL
+			}
+			
+			traits = { captain_of_industry }
+		}
+	}
+	# MIMALARY
+	army_chief = {
+		
+		MAL_emile_speller = {
+			
+			picture = generic_army_europe_1
+			
+			allowed = {
+				original_tag = MAL
+			}
+			
+			traits = { army_chief_defensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		MAL_alexander_von_falkenhausen = {
+			
+			picture = generic_army_europe_2
+			
+			allowed = {
+				original_tag = MAL
+			}
+			
+			traits = { army_chief_offensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}	
+	}
+
+	air_chief = {
+		
+		MAL_guillaume_soisson = {
+			
+			picture = generic_air_europe_3
+			
+			allowed = {
+				original_tag = MAL
+			}
+			
+			traits = { air_air_combat_training_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		MAL_nicholas_diedrich = {
+			
+			picture = generic_air_europe_1
+			
+			allowed = {
+				original_tag = MAL
+			}
+			
+			traits = { air_chief_ground_support_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+	}
+
+	navy_chief = {
+		
+		MAL_paul_medinger = {
+			
+			picture = generic_navy_europe_3
+			
+			allowed = {
+				original_tag = MAL
+			}
+			
+			traits = { navy_chief_decisive_battle_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		MAL_henri_ahnen = {
+			
+			picture = generic_navy_europe_1
+			
+			allowed = {
+				original_tag = MAL
+			}
+			
+			traits = { navy_chief_maneuver_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	high_command = {
+
+		MAL_francois_schammel = {
+
+			picture = generic_army_europe_1
+			
+			allowed = {
+				original_tag = MAL
+			}
+			
+			traits = { army_infantry_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		MAL_aloyse_glodt = {
+
+			picture = generic_army_europe_3
+			
+			allowed = {
+				original_tag = MAL
+			}
+			
+			traits = { army_armored_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		MAL_damien_roeser = {
+
+			picture = generic_air_europe_2
+			
+			allowed = {
+				original_tag = MAL
+			}
+			
+			traits = { air_air_superiority_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		MAL_pierre_fischbach = {
+
+			picture = generic_navy_europe_1
+			
+			allowed = {
+				original_tag = MAL
+			}
+			
+			traits = { navy_fleet_logistics_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	theorist = {
+
+		MAL_alex_federspiel = {
+					
+			picture = generic_army_europe_1
+
+			allowed = {
+				original_tag = MAL
+			}
+			
+			research_bonus = {
+				land_doctrine = 0.07
+			}
+			
+			traits = { military_theorist }
+		}
+
+		MAL_nicolas_de_dixmude = {
+					
+			picture = generic_air_europe_1
+				
+			allowed = {
+				original_tag = MAL
+			}
+			
+			research_bonus = {
+				air_doctrine = 0.07
+			}
+			
+			traits = { air_warfare_theorist }
+		}
+
+		MAL_florent_destriveaux = {
+					
+			picture = generic_navy_europe_1
+				
+			allowed = {
+				original_tag = MAL
+			}
+			
+			research_bonus = {
+				naval_doctrine = 0.07
+			}
+			
+			traits = { naval_theorist }
+		}
+	}
+
+}

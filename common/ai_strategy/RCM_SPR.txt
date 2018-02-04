@@ -1,0 +1,16 @@
+Ger_no_ally = {
+	enable = {
+		tag = D01
+		country_exists = GER
+	}
+	abort = {
+		NOT = { country_exists = GER }
+		NOT = { GER = { is_faction_leader = yes } }
+	}
+	
+	ai_strategy = {
+		type = ignore
+		id = "GER"
+		value = 500
+	}
+}

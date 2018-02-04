@@ -1,0 +1,158 @@
+﻿capital = 1
+CHI = {
+	set_autonomy = {
+		target = NEA
+		autonomous_state = autonomy_integrated_puppet
+		freedom_level = 0.5
+	}
+}
+CHI = {
+	set_autonomy = {
+		target = SHD
+		autonomous_state = autonomy_integrated_puppet
+		freedom_level = 0.5
+	}
+}
+SOV = {
+	give_guarantee = SIK
+}
+PLM = {
+	add_opinion_modifier = { target = CHI modifier = hostile_status }
+	reverse_add_opinion_modifier = { target = CHI modifier = hostile_status }
+	add_opinion_modifier = { target = SHX modifier = hostile_status }
+	reverse_add_opinion_modifier = { target = SHX modifier = hostile_status }
+	add_opinion_modifier = { target = ECA modifier = MODIFIERS_spirit_of_genghis }
+	reverse_add_opinion_modifier = { target = ECA modifier = MODIFIERS_spirit_of_genghis }
+}
+SHX = {
+	give_military_access = PLM 
+}
+
+HPC = {
+	give_military_access = PLM 
+}
+CHI = {
+	give_military_access = SHX
+	give_military_access = SIC
+}
+SHX = {
+	give_military_access = CHI
+}
+1939.1.1 = {
+	CHI = {
+		set_autonomy = {
+			target = YUN
+			autonomous_state = autonomy_dominion
+			freedom_level = 0.1
+		}
+		set_autonomy = {
+			target = XSM
+			autonomous_state = autonomy_dominion
+			freedom_level = 0.1
+		}
+		set_autonomy = {
+			target = NXM
+			autonomous_state = autonomy_dominion
+			freedom_level = 0.1
+		}
+		set_autonomy = {
+			target = XIK
+			autonomous_state = autonomy_dominion
+			freedom_level = 0.1
+		}
+		set_autonomy = {
+			target = SHX
+			autonomous_state = autonomy_dominion
+			freedom_level = 0.1
+		}
+		set_autonomy = {
+			target = GXC
+			autonomous_state = autonomy_dominion
+			freedom_level = 0.1
+		}
+	}
+	every_country = {
+		limit = {
+			is_warlord = yes
+			is_subject_of = CHI
+		}
+		set_politics = {
+			parties = {
+				democratic = {
+					popularity = 0
+					banned = yes
+				}
+				fascism = {
+					popularity = 0
+				}
+				communism = {
+					popularity = 0
+					banned = yes
+				}
+				n_socialism = {
+					popularity = 0
+					banned = yes
+				}
+				neutrality = {
+					popularity = 100
+				}
+			}
+			ruling_party = neutrality
+			last_election = "1936.1.1"
+			election_frequency = 48
+			elections_allowed = no
+		}
+	}
+	
+}
+every_country = {
+	limit = {
+		is_warlord = yes
+		is_subject_of = CHI
+	}
+	set_politics = {
+		parties = {
+			democratic = {
+				popularity = 0
+				banned = yes
+			}
+			fascism = {
+				popularity = 0
+			}
+			communism = {
+				popularity = 0
+				banned = yes
+			}
+			n_socialism = {
+				popularity = 0
+				banned = yes
+			}
+			neutrality = {
+				popularity = 100
+			}
+		}
+		ruling_party = neutrality
+		last_election = "1936.1.1"
+		election_frequency = 48
+		elections_allowed = no
+	}
+}
+every_country = {
+	limit = {
+		NOT = {
+			tag = JAP
+			OR = {
+				has_government = democratic
+				has_government = n_socialism
+			}
+		}
+	}
+	set_politics = {
+		parties = {
+			n_socialism = {
+				popularity = 0
+				banned = yes
+			}
+		}
+	}
+}

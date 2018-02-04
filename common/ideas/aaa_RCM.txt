@@ -1,0 +1,450 @@
+ideas = {
+	hidden_ideas = {
+		socialist_like_commies = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = n_socialism
+			}			
+			removal_cost = -1
+			modifier = {
+				communism_acceptance = 45
+				democratic_acceptance = 25
+				fascism_acceptance = -40
+			}	
+		}
+		commies_like_socialist = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = communism
+			}			
+			removal_cost = -1
+			modifier = {
+				n_socialism_acceptance = 45
+			}	
+		}
+		democratic_dont_hate_socialist = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = democratic
+			}			
+			removal_cost = -1
+			modifier = {
+				n_socialism_acceptance = 25
+			}	
+		}
+		socialist_dont_hate_democratic = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = n_socialism
+			}			
+			removal_cost = -1
+			modifier = {
+				democratic_acceptance = 25
+			}	
+		}
+	}
+	economy = { 
+		law = yes
+		unstable_economy = {
+			
+			
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+		
+			modifier = {
+				consumer_goods_factor = 0.40
+				production_speed_industrial_complex_factor = -0.5
+				production_speed_arms_factory_factor = -0.5
+				conversion_cost_civ_to_mil_factor = 0.5
+				conversion_cost_mil_to_civ_factor = 0.5
+			}
+			
+			allowed_to_remove = {
+				has_completed_focus = monetary_reform
+			}
+			
+			cancel_if_invalid = no
+		}
+	}
+	country = {
+		#SIC
+		leader_hospitalized = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = {
+					has_government = democratic
+				}
+			}
+			available = {
+				has_government = neutrality
+			}			
+			removal_cost = -1
+			modifier = {
+				drift_defence_factor = -0.1
+			}	
+			cancel_if_invalid = yes
+		}
+		#MAN, unit 731
+		men_behind_the_sun = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = {
+					has_government = democratic
+				}
+			}			
+			removal_cost = -1
+			modifier = {
+				conscription = -0.02
+				enemy_partisan_effect = 0.25
+				foreign_subversive_activites = 0.3
+				communism_acceptance = 85
+			}		
+		}
+		#FRA, popular front
+		FRA_front_populaire = {
+			picture = ast_abandon_the_westminster_system
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+
+			modifier = {
+				democratic_acceptance = 50
+				n_socialism_acceptance = 50
+				communism_acceptance = 10
+			}
+		}
+		socialist_partisans_recruiting = {
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = generic_socialism_drift_bonus
+			
+			modifier = {
+				conscription = -0.002
+				n_socialism_drift = 0.05
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		socialist_opposition_voicing_protests = {
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = generic_socialism_drift_bonus
+			
+			modifier = {
+				political_power_factor = -0.5
+				n_socialism_drift = 0.05
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		socialist_revolutionaries = {
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = generic_socialism_drift_bonus
+			
+			modifier = {
+				unity_factor = -0.1
+			}
+		}
+		socialist_influence = {
+			
+			
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = n_socialism
+			}
+			removal_cost = -1
+			picture = generic_socialism_drift_bonus
+			
+			modifier = {
+				n_socialism_drift = 0.1
+				n_socialism_acceptance = 85
+			}
+		}
+		
+	}
+	foreign_advisor = {
+		generic_usa_advisor = {
+			allowed = {
+				NOT = { original_tag = CHI }
+				NOT = { original_tag = USA }
+			}
+			available = {
+				OR = {
+					is_in_faction_with = USA
+					is_subject_of = USA
+				}
+				country_exists = USA
+			}
+			traits = { firepower_advisory_team }
+			research_bonus = {
+				cat_superior_firepower = 0.1
+			}
+		}
+		
+		generic_eng_advisor = {
+			allowed = {
+				NOT = { original_tag = ENG }
+			}
+			available = {
+				OR = {
+					is_in_faction_with = ENG
+					is_subject_of = ENG
+				}
+				country_exists = ENG
+			}
+			traits = { naval_advisory_team }
+			research_bonus = {
+				naval_doctrine = 0.1
+			}
+		}
+		
+		generic_ger_advisor = {
+			allowed = {
+				NOT = { original_tag = CHI }
+				NOT = { original_tag = GER }
+			}
+			available = {
+				OR = {
+					is_in_faction_with = GER
+					is_subject_of = GER
+				}
+				country_exists = GER
+			}
+			traits = { mobile_warfare_mission }
+			research_bonus = {
+				cat_mobile_warfare = 0.1
+			}
+			modifier = {
+				training_time_army_factor = -0.1
+			}
+		}
+		
+		generic_sov_advisor = {
+			allowed = {
+				NOT = { original_tag = SOV }
+			}
+			available = {
+				OR = {
+					is_in_faction_with = SOV
+					is_subject_of = SOV
+				}
+				country_exists = SOV
+			}
+			traits = { mass_assault_mission }
+			research_bonus = {
+				cat_mass_assault = 0.1
+			}
+		}
+		
+		generic_ita_advisor = {
+			allowed = {
+				NOT = { original_tag = ITA }
+			}
+			available = {
+				OR = {
+					is_in_faction_with = ITA
+					is_subject_of = ITA
+				}
+				country_exists = ITA
+			}
+			traits = { field_artillery_specialists }
+			research_bonus = {
+				artillery = 0.10
+			}
+		}
+		generic_fra_advisor = {
+			allowed = {
+				NOT = { original_tag = FRA }
+			}
+			available = {
+				OR = {
+					is_in_faction_with = FRA
+					is_subject_of = FRA
+				}
+				country_exists = FRA
+			}
+			traits = { military_advisory_team }
+			research_bonus = {
+				land_doctrine = 0.05
+			}
+		}
+		generic_jap_advisor = {
+			allowed = {
+				NOT = { original_tag = JAP }
+			}
+			available = {
+				OR = {
+					is_in_faction_with = JAP
+					is_subject_of = JAP
+				}
+				country_exists = JAP
+			}
+			traits = { battle_plan_mission }
+			research_bonus = {
+				cat_grand_battle_plan = 0.05
+				naval_doctrine = 0.05
+			}
+		}
+	}
+	political_advisor = {
+		AST_socialist = {
+
+			allowed = {
+				original_tag = AST
+			}
+			traits = { socialist_idealist }
+			
+			picture = generic_n_socialism_europe
+			on_add = {
+				country_event = rcmpolitical.30
+			}					
+			do_effect = {
+				NOT = {
+					has_government = n_socialism
+				}
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		hugh_dalton = {
+			ai_will_do = { factor = 0 }
+			allowed = {
+				original_tag = ENG
+			}
+			traits = { socialist_idealist }
+			
+			picture = generic_n_socialism_europe
+			on_add = {
+				country_event = rcmpolitical.30
+			}					
+			do_effect = {
+				NOT = {
+					has_government = n_socialism
+				}
+			}		
+		}
+		RAJ_socialist = {
+						  
+
+			allowed = {
+				original_tag = RAJ
+			}
+			traits = { socialist_idealist }
+			
+			picture = generic_n_socialism_europe
+			on_add = {
+				country_event = rcmpolitical.30
+			}					
+			do_effect = {
+				NOT = {
+					has_government = n_socialism
+				}
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		CAN_socialist = {
+
+			allowed = {
+				original_tag = CAN
+			}
+			traits = { socialist_idealist }
+			
+			picture = generic_n_socialism_europe
+			on_add = {
+				country_event = rcmpolitical.30
+			}					
+			do_effect = {
+				NOT = {
+					has_government = n_socialism
+				}
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		NZL_socialist = {
+
+			allowed = {
+				original_tag = NZL
+			}
+			traits = { socialist_idealist }
+			
+			picture = generic_n_socialism_europe
+			on_add = {
+				country_event = rcmpolitical.30
+			}					
+			do_effect = {
+				NOT = {
+					has_government = n_socialism
+				}
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		SAF_socialist = {
+
+			allowed = {
+				original_tag = SAF
+			}
+			traits = { socialist_idealist }
+			
+			picture = generic_n_socialism_europe
+			on_add = {
+				country_event = rcmpolitical.30
+			}					
+			do_effect = {
+				NOT = {
+					has_government = n_socialism
+				}
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+
+		
+	}
+}

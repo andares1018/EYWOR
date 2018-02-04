@@ -1,0 +1,42 @@
+
+state={
+	id=613
+	name="STATE_613" # Shanghai
+	manpower = 17305100
+	
+	state_category = megalopolis
+	
+	history={
+		owner = CHI
+		add_core_of = CHI
+		add_core_of = PRC
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 2
+			arms_factory = 3
+			
+			air_base = 6
+			dockyard = 1
+			7014 = {
+				naval_base = 6
+				coastal_bunker = 1
+				bunker = 1
+			}
+			#12052 = {
+			#	naval_base = 4
+			#}
+		}
+		victory_points = {
+			7014 15
+		}
+
+		1939.1.1 = {
+			owner = RFM
+			add_core_of = RFM
+		}
+	}
+
+	provinces={
+		7014 12052 10034 12076
+	}
+}

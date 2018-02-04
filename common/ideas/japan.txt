@@ -1,0 +1,1518 @@
+ideas = {
+
+	country = {
+		JAP_expansionist_propaganda = {
+			picture = jap_prop_idea
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = {
+					
+				}
+			}			
+			removal_cost = -1
+			modifier = {
+				army_org_factor = 0.2
+				army_morale_factor = 0.2
+				political_power_factor = 0.1
+			}		
+		}
+		new_order = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = {
+					has_government = democratic
+				}
+			}			
+			removal_cost = -1
+			modifier = {
+				drift_defence_factor = 0.5
+				unity_factor = 0.15
+				unity_weekly = 0.005
+				political_power_factor = 1
+			}		
+		}
+		jap_usa_pact = {
+			allowed = {
+				always = no
+			}		
+			removal_cost = -1
+		}
+		integration_movement = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = {
+					has_government = democratic
+				}
+			}			
+			removal_cost = -1
+			picture = state_shintoism
+			modifier = {
+				autonomy_gain = -0.4
+			}		
+		}
+		independence_movement = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = {
+					has_government = democratic
+				}
+			}			
+			removal_cost = -1
+			picture = FRA_matignon_agreements
+			modifier = {
+				autonomy_gain = 0.4
+			}		
+		}
+		kokutai_gensoku = {			
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			modifier = {
+				fascism_drift = 0.5
+				political_power_gain = 1
+				drift_defence_factor = 0.5
+			}
+			rule = {
+				can_create_factions = yes
+			}
+		}
+		human_experiment = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = {
+					has_government = democratic
+				}
+			}
+			removal_cost = -1
+			modifier = {
+				research_time_factor = -0.10
+			}		
+		}
+		northern_expansion = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = {
+					has_government = democratic
+				}
+			}
+			removal_cost = -1
+			modifier = {
+				winter_attrition_factor = -0.15    
+				org_loss_when_moving = -0.15 
+			}		
+		}
+		southern_expansion = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = {
+					has_government = democratic
+				}
+			}
+			removal_cost = -1
+			modifier = {
+				amphibious_invasion = 0.15       #兩棲登陸速度 +100%
+				invasion_preparation = -0.15  
+			}		
+		}
+		for_the_shintaisei = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = {
+					has_government = democratic
+				}
+			}			
+			removal_cost = -1
+			picture = generic_fascism_drift_bonus
+			modifier = {
+				fascism_drift = 2.75
+				political_power_factor = -0.25
+			}		
+		}
+		emperor_showa = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = democratic
+				}
+			}
+			
+			removal_cost = -1
+			modifier = {
+				unity_factor = 0.15
+				political_power_gain = 0.05
+			}
+		}
+		jap_sov_pact = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = democratic
+				}
+			}
+			
+			removal_cost = -1
+			modifier = {
+			}
+		}
+		state_shintoism = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = democratic
+				}
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				industry_air_damage_factor = -0.1
+				army_org_factor = 0.05
+				army_morale_factor = 0.05
+			}
+		}
+		
+		officer_purged_jap = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = democratic
+				}
+			}
+			
+			removal_cost = -1
+	
+			research_bonus = {
+				land_doctrine = -0.10
+				naval_doctrine = -0.10
+				air_doctrine = -0.10
+			}
+
+			modifier = {
+				army_org_factor = -0.5
+			}
+		} 
+		democracy_reclaimed = {
+			allowed = {
+				always = no
+			}			
+			removal_cost = -1
+			picture = generic_democratic_drift_bonus
+			modifier = {
+				unity_weekly = 0.002
+			}		
+		}
+		a_new_republic_idea = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = democratic
+				}
+			}
+			picture = neutrality_idea
+			removal_cost = -1
+			modifier = {
+				unity_factor = 0.1
+				political_power_gain = 0.075
+			}
+		}
+		prince_purged_jap = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = democratic
+				}
+			}			
+			removal_cost = -1
+				
+			modifier = {
+				unity_factor = -0.1
+				army_org_factor = -0.1
+				#unity_weekly = 0.004				
+				political_power_factor = 0.05
+			}
+		}
+		genro_purged_jap = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = democratic
+				}
+			}			
+			removal_cost = -1
+				
+			modifier = {
+				unity_factor = -0.1
+				army_org_factor = -0.1
+				#unity_weekly = 0.004
+				political_power_factor = 0.05
+			}
+		}
+		showa_restoration = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = {
+					has_government = democratic
+				}
+			}			
+			removal_cost = -1
+			picture = generic_pp_unity_bonus
+			research_bonus = {
+				land_doctrine = 0.4
+				naval_doctrine = 0.4
+				air_doctrine = 0.4
+			}
+			modifier = {
+				fascism_drift = 0.5	
+				unity_weekly = 0.025
+				political_power_factor = 0.15
+			}
+		}
+		a_new_empire = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = {
+					has_government = democratic
+				}
+			}			
+			removal_cost = -1	
+			picture = generic_pp_unity_bonus
+			research_bonus = {
+				land_doctrine = 0.25
+				naval_doctrine = 0.25
+				air_doctrine = 0.25
+			}
+			modifier = {
+				fascism_drift = 0.7			
+				unity_weekly = 0.025
+				political_power_factor = 0.075
+			}
+		}
+		# POLITICAL
+		active_duty_generals_only = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = democratic
+				}
+			}
+			
+			removal_cost = -1
+
+			picture = generic_infantry_bonus
+			
+			modifier = {
+				democratic_drift = -0.02
+				enemy_partisan_effect = -0.1
+				political_power_factor = -0.05
+			}
+		}
+		reformed_government = {			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+			
+			modifier = {
+				unity_factor = 0.1 
+				political_power_factor = 0.1
+			}
+		}
+		student_mobilization_idea = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = democratic
+				}
+			}
+			
+			removal_cost = -1
+
+			picture = generic_infantry_bonus
+			
+			research_bonus = {
+				land_doctrine = 0.05
+			}
+		} 
+		imperial_austerity_idea = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_goods_red_bonus
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		spiritual_mobilization_idea = {
+					
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				conscription = 0.025
+				army_org_factor = 0.1
+			}
+		}
+
+		the_long_lance = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				naval_torpedo_range_factor = 1 # double the range
+			}
+		}
+		
+		imperial_glory_idea = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 1
+				unity_factor = 0.15
+			}
+		}
+		warrior_traditions_idea = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				unity_factor = 0.15
+				army_morale_factor = 0.25
+			}			
+		}
+		
+		for_the_emperor_idea = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			
+			removal_cost = -1
+
+			picture = generic_morale_bonus
+			
+			modifier = {
+				army_org = 5
+				army_morale_factor = 0.1
+			}
+		}
+		
+		peace_talk_with_china = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				justify_war_goal_time = 5
+			}			
+		}
+	}
+	
+	
+	political_advisor = {	
+		sanzo_nosaka = {			
+			allowed = {
+				original_tag = "JAP"
+			}
+			
+			available = {
+				has_completed_focus = hire_back_sanzo
+			}
+			
+			traits = { communist_revolutionary }
+	
+			on_add = {
+				country_event = political.1
+			}
+	
+			do_effect = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}	
+			
+		kijuro_shidehara = {
+			
+			
+			allowed = {
+				original_tag = "JAP"
+			}
+			
+			available = {
+				has_idea = reformed_government
+			}
+			
+			traits = { democratic_reformer }
+	
+			on_add = {
+				country_event = political.13
+			}
+	
+			do_effect = {
+				NOT = {
+					has_government = democratic
+				}
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		aso_hisashi = {
+			allowed = {
+				original_tag = "JAP"
+			}
+			
+			available = {
+				has_completed_focus = left_reform_focus
+			}
+			
+			traits = { socialist_idealist }
+	
+			on_add = {
+				country_event = rcmpolitical.30
+			}
+	
+			do_effect = {
+				NOT = {
+					has_government = n_socialism
+				}
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		kingoro_hashimoto = {
+			
+			
+			allowed = {
+				original_tag = "JAP"
+			}
+			
+
+			
+			traits = { fascist_demagogue }
+	
+			on_add = {
+				country_event = political.7
+			}
+	
+			do_effect = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	
+		mitsumasa_yonai = {
+			
+			allowed = {
+				original_tag = JAP
+			}
+			
+			traits = { silent_workhorse }
+		}
+		saionji_kinmochi = { #西園寺
+			
+			available = {
+				NOT = { has_country_flag = genro_purged_by_kodoha }
+				NOT = { has_country_flag = house_arrest_genro }
+			}
+			
+			allowed = {
+				original_tag = JAP
+			}
+			
+			traits = { genro }
+		}
+		hideki_tojo = {
+		
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = no_kanji
+					NOT = { has_idea_with_trait = strategic_mastermind }
+				}
+				has_completed_focus = konoe_cabinet
+				NOT = { has_country_flag = purged_by_kodoha }
+			}			
+			allowed = {
+				original_tag = JAP
+				NOT = { has_country_flag = tojo_cabinet_flag }
+			}			
+			traits = { prince_of_terror }
+		}
+		kanji_ishiwara = {						
+			allowed = {
+				original_tag = JAP
+			}
+			available = {
+				custom_trigger_tooltip = {
+				tooltip = no_hideki_tojo
+				NOT = { has_idea_with_trait = prince_of_terror }
+				}				 
+			}
+			research_bonus = {
+				cat_grand_battle_plan = 0.08				
+			}
+			research_bonus = {
+				land_doctrine = 0.12			
+			}
+			modifier = {
+				max_planning = 0.05
+				planning_speed = 0.05
+			}
+			traits = { strategic_mastermind pan_asianist }
+		}
+		fumimaro_konoe = {
+			allowed = {
+				original_tag = JAP
+				NOT = { has_country_flag = konoe_cabinet_lol }
+				NOT = { has_completed_focus = konoe_cabinet }
+			}
+			available = {
+				NOT = { has_country_flag = assed_by_tojo }
+			}		
+			traits = { popular_figurehead }
+			ai_will_do = {
+				factor = 100
+			}
+		}
+		hisaichi_terauchi = {
+			available = {
+				has_completed_focus = jap_placate_military_focus
+				NOT = { has_country_flag = purged_by_kodoha }
+			}			
+			allowed = {
+				original_tag = JAP
+			}			
+			traits = { backroom_backstabber }		
+		}
+		
+		chiune_sugihara = {
+			
+			
+			allowed = {
+				original_tag = JAP
+			}
+			
+			traits = { compassionate_gentleman }
+		}
+		
+		
+		ikki_kita = { #北一揮
+			
+			available = {
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+				NOT = { has_country_flag = purged_by_terauchi }
+			}
+			
+			allowed = {
+				original_tag = JAP
+			}
+			
+			traits = { ideological_crusader pan_asianist }
+		}
+		
+		makino_nobuaki = { #野牧
+			
+			available = {
+				NOT = { has_country_flag = purged_by_kodoha }
+			}
+			allowed = {
+				original_tag = JAP
+			}
+			
+			traits = { smooth_talking_charmer }
+		}
+		
+		
+		nobusuke_kishi = { #岸信介
+		
+			picture = generic_political_advisor_asia_3
+			
+			allowed = {
+				original_tag = JAP
+			}
+			
+			traits = { captain_of_industry }
+		}
+		
+		
+	}
+		
+	# MILITARY
+	army_chief = {
+		
+		kanin_kotohito = {
+			available = {
+				NOT = { has_country_flag = prince_purged_by_kodoha }
+				NOT = { has_country_flag = house_arrest_prince }
+			}
+			
+			allowed = {
+				original_tag = JAP
+			}
+					
+			traits = { army_chief_defensive_3 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		sadao_araki = { #荒木 #choose to kill/<force retire> or not after 226
+			
+			
+			allowed = {
+				original_tag = JAP
+			}
+			available = {
+				has_global_flag = kodoha_won
+				NOT = { has_country_flag = forced_to_retire_by_terauchi }
+			}
+
+			
+			traits = { army_chief_offensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		jotaro_watanabe = { #assed in 226
+			
+			
+			allowed = {
+				original_tag = JAP
+			}
+			
+			available = {
+				NOT = { has_country_flag = assed_in_226 }
+			}
+			
+			traits = { army_chief_drill_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		
+		kohei_kashii = { #香稚澔平
+			
+			
+			allowed = {
+				original_tag = JAP
+			}
+			
+			available = {
+				NOT = { has_country_flag = forced_to_retire_by_terauchi }
+			}	
+			
+			traits = { army_chief_organizational_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		#shigeru_honjo = { #本庄凡
+			
+			
+		#	allowed = {
+		#		original_tag = JAP
+		#	}
+			
+
+			
+		#	traits = { army_chief_drill_1 }
+			
+		#	ai_will_do = {
+		#		factor = 1
+		#	}
+		#}
+		
+		yoshijiro_umezu = {
+			
+			
+			allowed = {
+				original_tag = JAP
+			}
+			
+			available = {
+				NOT = { has_country_flag = purged_by_kodoha }
+			}	
+			
+			traits = { army_chief_morale_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		yoshiyuki_kawashima = { #川島
+			
+			
+			allowed = {
+				original_tag = JAP
+			}
+			
+			available = {
+				NOT = { has_country_flag = forced_to_retire_by_terauchi }
+			}
+			
+			traits = { army_chief_morale_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		hajime_sugiyama = {
+			
+			
+			allowed = {
+				original_tag = JAP
+			}
+			
+			available = {
+				NOT = { has_country_flag = purged_by_kodoha }
+			}
+			
+			traits = { army_chief_drill_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+	}
+	navy_chief = {
+		
+		
+		
+		fushimi_hiroyasu = {
+			
+			
+			allowed = {
+				original_tag = JAP
+			}
+			
+
+			
+			traits = { navy_chief_naval_aviation_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		osami_nagano = {
+			
+			
+			allowed = {
+				original_tag = JAP
+			}
+			
+			available = {
+				NOT = { has_country_flag = purged_by_kodoha }
+			}
+			
+			traits = { navy_chief_commerce_raiding_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		shigetaro_shimada = {
+			
+			
+			allowed = {
+				original_tag = JAP
+			}
+			
+
+			
+			traits = { navy_chief_decisive_battle_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	air_chief = {
+		
+		
+		torashiro_kawabe = {
+			
+			
+			allowed = {
+				original_tag = JAP
+			}
+			
+
+			
+			traits = { air_chief_night_operations_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		korechika_anami = {
+			
+			
+			allowed = {
+				original_tag = JAP
+			}
+			
+
+			
+			traits = { air_chief_ground_support_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		kenji_doihara = {
+			
+			
+			allowed = {
+				original_tag = JAP
+			}
+			
+
+			
+			traits = { air_chief_all_weather_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}	
+	
+	
+	high_command = {
+		
+		hitoshi_imamura = {
+			
+			
+			allowed = {
+				original_tag = JAP
+			}
+			
+
+			
+			traits = { army_logistics_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		yasuji_okamura = {
+			
+			
+			allowed = {
+				original_tag = JAP
+			}
+			
+
+			
+			traits = { army_infantry_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		shunroku_hata = {
+			
+			
+			allowed = {
+				original_tag = JAP
+			}
+			
+
+			
+			traits = { army_concealment_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}	
+		
+		mitsuo_fuchida = {
+			
+			
+			allowed = {
+				original_tag = JAP
+			}
+			
+
+			
+			traits = { air_tactical_bombing_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		
+		nishizo_tsukahara = {
+			
+			
+			allowed = {
+				original_tag = JAP
+			}
+			
+
+			
+			traits = { air_naval_strike_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		tateo_kato = {
+			
+			
+			allowed = {
+				original_tag = JAP
+			}
+			
+
+			
+			traits = { air_air_combat_training_3 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}	
+		
+		soemu_toyoda = {
+			
+			
+			allowed = {
+				original_tag = JAP
+			}
+			
+
+			
+			traits = { navy_capital_ship_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		matome_ugaki = {
+			
+			
+			allowed = {
+				original_tag = JAP
+			}
+			
+
+			
+			traits = { navy_naval_air_defense_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		chuichi_nagumo = {
+			
+			
+			allowed = {
+				original_tag = JAP
+			}
+			
+
+			
+			traits = { navy_carrier_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+		
+	# TECHNOLOGY
+	naval_manufacturer = {
+		
+		designer = yes
+		
+		kure_naval_arsenal = {
+			
+			
+			allowed = {
+				original_tag = JAP
+			}
+						
+			research_bonus = {
+				naval_equipment = 0.10
+			}
+			
+			traits = { atlantic_fleet_naval_manufacturer } # built Yamato
+
+		}
+		
+		yokosuka_naval_arsenal = {
+						
+			allowed = {
+				original_tag = JAP
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.10
+			}
+			
+			traits = { pacific_fleet_naval_manufacturer } #built best CVs
+
+			equipment_bonus = {
+				# 
+			}
+		}
+		
+		maizuru_naval_arsenal = {
+						
+			allowed = {
+				original_tag = JAP
+			}
+				
+			research_bonus = {
+				naval_equipment = 0.10
+			}
+			
+			traits = { convoy_escort_naval_manufacturer } #destroyer R&D
+
+			equipment_bonus = {
+				# 
+			}
+		}
+		
+		sasebo_naval_arsenal = {
+			
+			allowed = {
+				original_tag = JAP
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.10
+			}
+			
+			traits = { coastal_defence_naval_manufacturer } #used for many repairs and conversions
+			
+			equipment_bonus = {
+				
+			}
+		}	
+	}
+	
+	aircraft_manufacturer = {
+		
+		designer = yes
+		
+		mitsubishi = {
+						
+			allowed = {
+				original_tag = JAP
+			}
+			
+			
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			
+			traits = { light_aircraft_manufacturer }
+			
+			modifier = {
+			}
+		}
+		
+		aichi = {
+			
+			allowed = {
+				original_tag = JAP
+			}
+						
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			
+			traits = { medium_aircraft_manufacturer }
+		}
+		
+		nakajima = {
+						
+			allowed = {
+				original_tag = JAP
+			}
+			
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			
+			traits = { heavy_aircraft_manufacturer }
+
+		}
+		
+		yokosuka = {
+						
+			allowed = {
+				original_tag = JAP
+			}
+						
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			
+			traits = { naval_aircraft_manufacturer }
+		}
+	}
+	
+	
+	industrial_concern = {
+	
+		kawasaki = {
+			
+			allowed = {
+				original_tag = JAP
+			}
+			
+			research_bonus = {
+				industry = 0.10
+			}
+			
+			traits = { industrial_concern }
+		}
+		
+		
+		sumitomo = {
+						
+			allowed = {
+				original_tag = JAP
+			}
+						
+			research_bonus = {
+				electronics = 0.10
+			}
+			
+			traits = { electronics_concern }
+		}
+
+		JAP_idemitsu_kosan = {
+						
+			picture = generic_industrial_concern_2
+			
+			allowed = {
+				original_tag = JAP
+			}
+			available = {
+				has_completed_focus = synth_oil_focus
+			}
+						
+			research_bonus = {
+				industry = 0.05
+				synth_resources = 0.1
+			}
+			
+			traits = { refinery_concern }
+		}
+	}
+	
+	materiel_manufacturer = {
+			
+		designer = yes
+		
+		tokyo_arsenal = {
+			
+			allowed = {
+				original_tag = JAP
+			}
+			
+			research_bonus = {
+				infantry_weapons = 0.10
+			}
+			
+			traits = { infantry_equipment_manufacturer }
+		}
+		
+		nissan = {
+						
+			allowed = {
+				original_tag = JAP
+			}
+						
+			research_bonus = {
+				motorized_equipment = 0.10
+			}
+			
+			traits = { motorized_equipment_manufacturer }
+		}
+	}
+	
+	
+	tank_manufacturer = {
+	
+		designer = yes
+	
+		osaka_army_arsenal = {
+			
+			allowed = {
+				original_tag = JAP
+			}
+				
+			research_bonus = {
+				armor = 0.10
+			}
+			
+			traits = { tank_manufacturer }
+		}	
+	}
+	
+	theorist = {
+		
+		
+		tomoyuki_yamashita = {
+						
+			allowed = {
+				original_tag = JAP
+			}
+			
+			cost = 250
+						
+			research_bonus = {
+				cat_grand_battle_plan = 0.10
+			}
+			
+			traits = { grand_battle_plan_expert }
+		}
+		
+		isoroku_yamamoto = {
+						
+			allowed = {
+				original_tag = JAP
+			}
+			available = {
+				NOT = { has_country_flag = purged_by_kodoha }
+			}
+			cost = 250
+						
+			research_bonus = {
+				cat_base_strike = 0.10
+			}
+			
+			traits = { naval_aviation_pioneer }
+		}
+		
+		yoshitoshi_tokugawa = {
+						
+			allowed = {
+				original_tag = JAP
+			}
+			
+			cost = 250
+			
+			research_bonus = {
+				cat_operational_integrity = 0.10
+			}
+			
+			traits = { assault_avaition }
+		}
+				
+		sato_tetsutaro = {
+						
+			allowed = {
+				original_tag = JAP
+			}
+			
+			cost = 250
+			research_bonus = {
+				naval_doctrine = 0.12
+			}
+			
+			traits = { naval_theorist }
+		}
+		
+		hino_kumazo = {
+						
+			allowed = {
+				original_tag = JAP
+			}	
+			
+			research_bonus = {
+				air_doctrine = 0.07
+			}
+			
+			traits = { air_warfare_theorist }
+		}
+		
+		yoshio_nishina = {
+			
+			
+			allowed = {
+				original_tag = JAP
+			}
+			
+
+			
+			research_bonus = {
+				nuclear = 0.10
+			}
+			
+			traits = { nuclear_scientist }
+		}
+		
+		hideo_itokawa = {
+			
+			
+			allowed = {
+				original_tag = JAP
+			}
+			
+
+			
+			research_bonus = {
+				rocketry = 0.10
+			}
+			
+			traits = { rocket_scientist }
+		}
+	}	
+}

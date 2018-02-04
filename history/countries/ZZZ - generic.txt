@@ -1,0 +1,289 @@
+﻿capital = 1
+every_country = {
+	limit = {
+		OR = {
+			capital_scope = { 
+				OR = {
+					is_on_continent = europe
+					is_on_continent = north_america 
+					is_on_continent = oceania
+				}
+			}	
+			is_subject_of = ENG
+			is_subject_of = HOL
+			is_subject_of = FRA
+			tag = FIC
+		}
+	}
+	
+	add_ideas = {
+		generic_wartime_propagantist_europe
+		generic_staunch_patriot_europe
+		generic_progressive_activist_europe
+		generic_revolutionary_syndicalist_europe
+		generic_robber_baron_europe
+	}
+	set_country_flag = european_country_flag
+	remove_ideas = {
+		generic_wartime_propagantist_europe
+		generic_staunch_patriot_europe
+		generic_progressive_activist_europe
+		generic_revolutionary_syndicalist_europe
+		generic_robber_baron_europe
+	}
+	
+}
+every_country = {
+	limit = {
+		OR = { 
+			AND = {
+				capital_scope = { is_on_continent = asia }
+				is_puppet = no
+			}
+			is_subject_of = JAP
+			is_warlord = yes
+			tag = HPC
+			tag = GUD
+			tag = XIK
+			tag = SIC
+			tag = EHB
+			tag = ECA
+			tag = RFM
+			tag = PLM
+			tag = NEA
+			tag = SCG
+			tag = NSG
+		}
+	}
+	add_ideas = { 
+		generic_wartime_propagantist_asia
+		generic_staunch_patriot_asia
+		generic_progressive_activist_asia
+		generic_revolutionary_syndicalist_asia
+		generic_robber_baron_asia
+	}
+	set_country_flag = asian_country_flag
+	remove_ideas = {
+		generic_wartime_propagantist_asia
+		generic_staunch_patriot_asia
+		generic_progressive_activist_asia
+		generic_revolutionary_syndicalist_asia
+		generic_robber_baron_asia
+	}
+	
+}
+every_country = {
+	limit = {
+		capital_scope = { is_on_continent = middle_east }
+		is_puppet = no
+	}
+	add_ideas = { 
+		generic_wartime_propagantist_arab
+		generic_staunch_patriot_arab
+		generic_progressive_activist_arab
+		generic_revolutionary_syndicalist_arab
+		generic_robber_baron_arab
+	}
+	set_country_flag = arab_country_flag
+	remove_ideas = {
+		generic_wartime_propagantist_arab
+		generic_staunch_patriot_arab
+		generic_progressive_activist_arab
+		generic_revolutionary_syndicalist_arab
+		generic_robber_baron_arab
+	}
+}
+every_country = {
+	limit = {
+		AND = {
+			capital_scope = { is_on_continent = africa }
+			is_puppet = no
+		}
+	}
+	add_ideas = {
+		generic_wartime_propagantist_africa
+		generic_staunch_patriot_africa
+		generic_progressive_activist_africa
+		generic_revolutionary_syndicalist_africa
+		generic_robber_baron_africa
+	}
+	set_country_flag = africa_country_flag
+	remove_ideas = {
+		generic_wartime_propagantist_africa
+		generic_staunch_patriot_africa
+		generic_progressive_activist_africa
+		generic_revolutionary_syndicalist_africa
+		generic_robber_baron_africa
+	}
+}
+every_country = {
+	limit = {
+		OR = {
+			AND = {
+				capital_scope = { is_on_continent = south_america }
+				is_puppet = no
+			}
+			tag = PHI
+		}
+	}
+	add_ideas = { 
+		generic_wartime_propagantist_south_america
+		generic_staunch_patriot_south_america
+		generic_progressive_activist_south_america
+		generic_revolutionary_syndicalist_south_america
+		generic_robber_baron_south_america
+	}
+	set_country_flag = south_america_country_flag
+	remove_ideas = {
+		generic_wartime_propagantist_south_america
+		generic_staunch_patriot_south_america
+		generic_progressive_activist_south_america
+		generic_revolutionary_syndicalist_south_america
+		generic_robber_baron_south_america
+	}
+}
+1939.1.1 = {
+	every_country = {
+		limit = {
+			OR = {
+				capital_scope = { 
+					OR = {
+						is_on_continent = europe
+						is_on_continent = north_america 
+						is_on_continent = oceania
+					}
+				}	
+				is_subject_of = ENG
+				is_subject_of = HOL
+				is_subject_of = FRA
+				tag = FIC
+			}
+		}
+		
+		add_ideas = {
+			generic_wartime_propagantist_europe
+			generic_staunch_patriot_europe
+			generic_progressive_activist_europe
+			generic_revolutionary_syndicalist_europe
+			generic_robber_baron_europe
+		}
+		set_country_flag = european_country_flag
+		remove_ideas = {
+			generic_wartime_propagantist_europe
+			generic_staunch_patriot_europe
+			generic_progressive_activist_europe
+			generic_revolutionary_syndicalist_europe
+			generic_robber_baron_europe
+		}
+		
+	}
+	every_country = {
+		limit = {
+			OR = { 
+				AND = {
+					capital_scope = { is_on_continent = asia }
+					is_puppet = no
+				}
+				is_subject_of = JAP
+				is_warlord = yes
+				tag = HPC
+				tag = GUD
+				tag = XIK
+				tag = SIC
+				tag = EHB
+				tag = ECA
+				tag = RFM
+				tag = PLM
+				tag = NEA
+				tag = SCG
+				tag = NSG
+			}
+		}
+		add_ideas = { 
+			generic_wartime_propagantist_asia
+			generic_staunch_patriot_asia
+			generic_progressive_activist_asia
+			generic_revolutionary_syndicalist_asia
+			generic_robber_baron_asia
+		}
+		set_country_flag = asian_country_flag
+		remove_ideas = {
+			generic_wartime_propagantist_asia
+			generic_staunch_patriot_asia
+			generic_progressive_activist_asia
+			generic_revolutionary_syndicalist_asia
+			generic_robber_baron_asia
+		}
+		
+	}
+	every_country = {
+		limit = {
+			capital_scope = { is_on_continent = middle_east }
+			is_puppet = no
+		}
+		add_ideas = { 
+			generic_wartime_propagantist_arab
+			generic_staunch_patriot_arab
+			generic_progressive_activist_arab
+			generic_revolutionary_syndicalist_arab
+			generic_robber_baron_arab
+		}
+		set_country_flag = arab_country_flag
+		remove_ideas = {
+			generic_wartime_propagantist_arab
+			generic_staunch_patriot_arab
+			generic_progressive_activist_arab
+			generic_revolutionary_syndicalist_arab
+			generic_robber_baron_arab
+		}
+	}
+	every_country = {
+		limit = {
+			AND = {
+				capital_scope = { is_on_continent = africa }
+				is_puppet = no
+			}
+		}
+		add_ideas = {
+			generic_wartime_propagantist_africa
+			generic_staunch_patriot_africa
+			generic_progressive_activist_africa
+			generic_revolutionary_syndicalist_africa
+			generic_robber_baron_africa
+		}
+		set_country_flag = africa_country_flag
+		remove_ideas = {
+			generic_wartime_propagantist_africa
+			generic_staunch_patriot_africa
+			generic_progressive_activist_africa
+			generic_revolutionary_syndicalist_africa
+			generic_robber_baron_africa
+		}
+	}
+	every_country = {
+		limit = {
+			OR = {
+				AND = {
+					capital_scope = { is_on_continent = south_america }
+					is_puppet = no
+				}
+				tag = PHI
+			}
+		}
+		add_ideas = { 
+			generic_wartime_propagantist_south_america
+			generic_staunch_patriot_south_america
+			generic_progressive_activist_south_america
+			generic_revolutionary_syndicalist_south_america
+			generic_robber_baron_south_america
+		}
+		set_country_flag = south_america_country_flag
+		remove_ideas = {
+			generic_wartime_propagantist_south_america
+			generic_staunch_patriot_south_america
+			generic_progressive_activist_south_america
+			generic_revolutionary_syndicalist_south_america
+			generic_robber_baron_south_america
+		}
+	}
+}

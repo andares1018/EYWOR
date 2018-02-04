@@ -1,0 +1,33 @@
+﻿###########################
+# Chinese Events BORDER WARS ADDED SOUTHERN SHAANXI #ID = 743#
+###########################
+
+add_namespace = rcmtest
+
+# test on annex
+
+country_event = {
+	id = rcmtest.1
+	picture = GFX_report_event_test
+	hidden = yes
+	trigger = {
+	}
+	immediate = {
+	}
+	is_triggered_only = yes
+	option = { 
+	}
+}
+
+country_event = {
+	id = rcmtest.2
+	picture = GFX_report_event_test
+	hidden = yes
+	trigger = {
+	}
+	immediate = {
+	}
+	is_triggered_only = yes
+	option = { 
+	}
+}

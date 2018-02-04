@@ -1,0 +1,55 @@
+﻿division_template = {
+	name = "Bubing Lu"				# Represents: German-trained divisions (better equipment than rest),
+									# 	as well as two-division infantry corps (generally poorly-equipped militias),
+	regiments = {					#	and local militia groups.
+		infantry = { x = 0 y = 0 }	# Note: Chinese divisions were brigade-sized compared other nations' armies
+		infantry = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "Duli Lu"			# Represents three-division infantry corps (generally poorly-equipped militias)
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+	}
+}
+units = {
+division = {
+		name = "1st Peking Lu"
+		location = 9843
+		division_template = "Bubing Lu"
+}
+division = {
+		name = "2nd Paotingfu Lu"
+		location = 9843
+		division_template = "Bubing Lu"
+}
+division = {
+		name = "3rd Kaiping Lu"
+		location = 9843
+		division_template = "Bubing Lu"
+}
+division = {
+		name = "7th Tientsin"
+		location = 9843
+		division_template = "Duli Lu"
+}
+division = {
+		name = "8th Tsinanfu"
+		location = 9843
+		division_template = "Duli Lu"
+}
+}
+
+##### STARTING PRODUCTION #####
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "EHB"
+		}
+		requested_factories = 1
+		progress = 0.82
+		efficiency = 100
+	}
+}

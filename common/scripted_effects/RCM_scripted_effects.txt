@@ -1,0 +1,967 @@
+#	Example:
+# 
+#	example_effect = {
+#		add_political_power = 66
+#		add_popularity = {
+#			ideology = fascism
+#			popularity = 0.33
+#		}
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+
+max_infra_effect = {
+	add_building_construction = {
+		type = infrastructure
+		level = 10
+		instant_build = yes
+	}
+}
+level_3_infra = {
+	if = {
+		limit = {
+			free_building_slots = {
+				building = infrastructure
+				size > 9
+			}
+		}
+		add_building_construction = {
+			type = infrastructure
+			level = 3
+			instant_build = yes
+		}
+	}
+	if = {
+		limit = {
+			free_building_slots = {
+				building = infrastructure
+				size > 8
+			}
+			free_building_slots = {
+				building = infrastructure
+				size < 10
+			}
+		}
+		add_building_construction = {
+			type = infrastructure
+			level = 2
+			instant_build = yes
+		}
+	}
+	if = {
+		limit = {
+			free_building_slots = {
+				building = infrastructure
+				size > 7
+			}
+			free_building_slots = {
+				building = infrastructure
+				size < 9
+			}		
+		}
+		add_building_construction = {
+			type = infrastructure
+			level = 1
+			instant_build = yes
+		}
+	}
+}
+level_6_infra = {
+	if = {
+		limit = {
+			free_building_slots = {
+				building = infrastructure
+				size > 6
+			}
+			free_building_slots = {
+				building = infrastructure
+				size < 8
+			}
+		}
+		add_building_construction = {
+			type = infrastructure
+			level = 3
+			instant_build = yes
+		}
+	}
+	if = {
+		limit = {
+			free_building_slots = {
+				building = infrastructure
+				size > 5
+			}
+			free_building_slots = {
+				building = infrastructure
+				size < 7
+			}
+		}
+		add_building_construction = {
+			type = infrastructure
+			level = 2
+			instant_build = yes
+		}
+	}
+	if = {
+		limit = {
+			free_building_slots = {
+				building = infrastructure
+				size > 4
+			}
+			free_building_slots = {
+				building = infrastructure
+				size < 6
+			}
+		}
+		add_building_construction = {
+			type = infrastructure
+			level = 1
+			instant_build = yes
+		}
+	}
+}
+RRC_core = {
+	add_state_core = 609
+	add_state_core = 743
+	add_state_core = 761
+	add_state_core = 613
+	add_state_core = 592
+	add_state_core = 597
+	add_state_core = 614
+	add_state_core = 608
+	add_state_core = 596
+	add_state_core = 595
+	add_state_core = 591
+	add_state_core = 600
+	add_state_core = 620
+	add_state_core = 756
+	add_state_core = 325
+	add_state_core = 603
+	add_state_core = 606
+	add_state_core = 598
+	add_state_core = 607
+	add_state_core = 744
+	add_state_core = 745
+	add_state_core = 746
+	add_state_core = 615
+	add_state_core = 622
+	add_state_core = 605
+	add_state_core = 326
+	add_state_core = 602
+	add_state_core = 599
+	add_state_core = 593
+	add_state_core = 594
+	add_state_core = 601
+	add_state_core = 591
+	add_state_core = 729
+	add_state_core = 728
+	add_state_core = 329
+	add_state_claim = 604
+	add_state_claim = 762
+	add_state_claim = 283
+	add_state_claim = 616
+	add_state_claim = 611
+	add_state_claim = 612
+	add_state_claim = 621
+	add_state_claim = 763
+	add_state_claim = 757
+}
+peace_with_japan_land_partition = {
+	white_peace = JAP
+	JAP = {
+		white_peace = NEA
+	}
+	hidden_effect = {
+		annex_country = { target = MAN transfer_troops = no } 
+		annex_country = { target = EHB transfer_troops = no }
+		if = {
+			limit = {
+				HPC = {
+					is_subject_of = JAP
+				}
+			}
+			annex_country = { target = HPC transfer_troops = no }
+		}
+		annex_country = { target = CCP transfer_troops = no }
+		annex_country = { target = ECA transfer_troops = no }
+		annex_country = { target = RFM transfer_troops = no }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				AND = {
+					OR = {
+						state = 611
+						state = 612
+						state = 757
+					}
+					is_owned_by_jap_or_its_puppet = yes
+					NOT = {
+						has_global_flag = inner_mong_turned_red
+					}
+				}
+				AND = {
+					is_northeast_china_state = yes
+					NOT = { state = 757 }#east chahar
+					is_owned_by_jap_or_its_puppet = yes
+					NOT = {
+						has_global_flag = dongbei_turned_red
+					}
+				}
+				AND = {
+					is_north_china_state_for_liberation = yes
+					is_owned_by_jap_or_its_puppet = yes
+					NOT = {
+						has_global_flag = north_china_turned_red
+					}
+				}
+				is_owned_by = ROOT
+			}
+			OR = {
+				is_core_of = ROOT
+				is_claimed_by = ROOT
+			}
+		}
+		ROOT = { transfer_state = PREV }
+		set_state_flag = CHI_states
+	}
+	every_state = {
+		limit = {
+			OR = {
+				AND = {
+					OR = {
+						state = 611
+						state = 612
+						state = 757
+					}
+					OR = {
+						is_owned_by_jap_or_its_puppet = yes
+						is_owned_by = ROOT
+					}
+					has_global_flag = inner_mong_turned_red
+				}
+				AND = {
+					is_northeast_china_state = yes
+					NOT = { state = 757 }#east chahar
+					OR = {
+						is_owned_by_jap_or_its_puppet = yes
+						is_owned_by = ROOT
+					}
+					has_global_flag = dongbei_turned_red
+				}
+				AND = {
+					is_north_china_state_for_liberation = yes
+					OR = {
+						is_owned_by_jap_or_its_puppet = yes
+						is_owned_by = ROOT
+					}
+					has_global_flag = north_china_turned_red
+				}
+				is_owned_by = PRC
+			}
+			OR = {
+				is_core_of = PRC
+				is_claimed_by = PRC
+			}
+		}
+		PRC = { transfer_state = PREV }
+	}
+}
+create_mengjiang = {
+	custom_effect_tooltip = MEN_reform
+	add_state_core = 612
+	add_state_core = 611
+	add_state_core = 621
+	add_state_core = 763
+	add_state_core = 762
+	add_state_core = 330
+	hidden_effect = {
+		every_state = {
+			limit = {
+				OR = {
+					ECA = {
+						has_full_control_of_state = PREV
+					}
+					JAP = {
+						has_full_control_of_state = PREV
+					}
+					AND = {
+						is_controlled_by_jap_or_its_puppet = yes
+						NOT = {
+							any_neighbor_state = {
+								OR = {
+									CHI = {
+										has_full_control_of_state = PREV
+									}
+									SHX = {
+										has_full_control_of_state = PREV
+									}
+									XSM = {
+										has_full_control_of_state = PREV
+									}
+									PRC = {
+										has_full_control_of_state = PREV
+									}
+								}
+							}
+						}
+					}
+				}
+				OR = {
+					is_claimed_by = ECA
+					is_core_of = ECA
+				}
+				NOT = {
+					OR = {
+						state = 621
+						#no need 763
+						is_owned_by = NSG
+						is_owned_by = SCG
+					}
+				}
+			}
+			ECA = {
+				transfer_state = PREV
+			}
+		}
+	}
+	hidden_effect = {
+		ECA = {
+			set_cosmetic_tag = MEJ
+			set_political_party = {
+				ideology = neutrality
+				popularity = 30
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 70
+			}
+			add_popularity = {
+				ideology = n_socialism
+				popularity = 0
+			}
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+			}
+		}
+		set_global_flag = mej_exists
+	}
+}
+#HUGE
+RRC_CREATION = {
+	####CORE&ANNEX
+	set_country_flag = im_rrc_now
+	set_global_flag = rrc_exists
+	every_state = {
+		remove_core_of = RFM
+		remove_core_of = EHB
+		if = {
+			limit = {
+				HPC = {
+					is_subject_of = JAP
+				}
+			}
+			remove_core_of = HPC
+		}
+	}
+	RRC_core = yes
+	if = {
+		limit = {
+			NOT = {
+				TAG = RFM
+			}
+		}
+		annex_country = {
+			target = RFM
+			transfer_troops = yes
+		}
+		else = {
+			if = {
+				limit = {
+					HPC = { 
+						is_subject_of = JAP
+					}
+				}
+				annex_country = {
+					target = HPC
+					transfer_troops = yes
+				}
+				else = {
+					annex_country = {
+						target = EHB
+						transfer_troops = yes
+					}
+				}
+			}
+			
+		}
+	}
+	####STATES
+	every_state = {
+		limit = {
+			NOT = {
+				is_forbidden_states_in_puppet_formation = yes
+				is_owned_by = ECA
+				AND = {
+					is_owned_by = XSM
+					XSM = {
+						is_subject_of = JAP
+					}
+				}
+			}
+			OR = {
+				is_owned_by_CHI_PRC_WARLORD_SIK = yes
+				is_owned_by = JAP
+			}
+			#OR = {
+			#	is_claimed_by = PREV
+				is_core_of = PREV
+			#}
+			AND = {
+				is_controlled_by_jap_or_its_puppet = yes
+				NOT = {
+					any_neighbor_state = {
+						OR = {
+							CHI = {
+								has_full_control_of_state = PREV
+							}
+							SHX = {
+								has_full_control_of_state = PREV
+							}
+							XSM = {
+								has_full_control_of_state = PREV
+							}
+							PRC = {
+								has_full_control_of_state = PREV
+							}
+						}
+					}
+				}
+			}
+		}
+		PREV = {
+			set_state_controller = PREV
+			#set_state_owner = PREV #puppet transfer state active
+		}
+		if = {
+			limit = {
+				JAP_or_its_puppet_has_full_control_over_prev_states = yes
+			}
+			PREV = {
+				set_state_controller = PREV
+				#transfer_state = PREV #puppet transfer state active
+			}
+		}
+	}
+	#####HIST
+	set_cosmetic_tag = RRC
+	set_political_party = {
+		ideology = neutrality
+		popularity = 30
+	}
+	set_political_party = {
+		ideology = n_socialism
+		popularity = 0
+	}
+	set_political_party = {
+		ideology = fascism
+		popularity = 70
+	}
+	set_politics = {
+		ruling_party = fascism
+		elections_allowed = no
+	}
+	create_country_leader = {
+		name = "Wang Jingwei"
+		desc = "POLITICS_WANG_JINGWEI_DESC"
+		picture = "gfx/leaders/RRC/Portrait_Wang.dds"
+		expire = "1965.1.1"
+		ideology = collaborationism
+		traits = {
+		}
+	}
+	army_experience = 50
+	load_oob = RRC_focus
+	set_capital = 598
+	every_state = {
+		limit = {
+			is_core_of = PREV
+			JAP_or_its_puppet_has_full_control_over_prev_states = yes
+			NOT = {
+				OR = {
+					is_owned_by = PREV
+					is_controlled_by = PREV
+				}
+			}
+		}
+		PREV = {
+			transfer_state = PREV
+		}
+	}
+}
+JNC_CREATION = {
+	hidden_effect = {
+		transfer_state = 608
+		add_state_core = 614
+		add_state_core = 615
+		add_state_core = 608
+		add_state_core = 609
+		add_state_core = 597
+		add_state_core = 607
+		every_state = {
+			limit = {
+				JAP_or_its_puppet_has_full_control_over_prev_states = yes
+				is_core_of = PREV
+			}
+			PREV = {
+				set_state_controller = PREV
+				#transfer_state = PREV #puppet transfer state active
+			}
+		}
+		every_state = {
+			limit = {
+				is_controlled_by_jap_or_its_puppet = yes
+				is_core_of = PREV
+			}
+			PREV = {
+				set_state_controller = PREV
+				#set_state_owner = PREV #puppet transfer state active
+			}
+		}
+		load_oob = JNC_prov_focus
+		set_capital = 608
+		set_cosmetic_tag = JNC
+		set_global_flag = jnc_exists
+		set_country_flag = im_jnc_now
+		add_to_war = {
+			targeted_alliance = JAP
+			enemy = CHI
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.7
+		}
+		set_politics = {
+			ruling_party = fascism
+			elections_allowed = no
+		}
+		create_country_leader = {
+			name = "Wang Kemin"
+			desc = "POLITICS_WANG_KEMIN_DESC"
+			picture = "Portrait_JNC_Wang_Kemin.dds"
+			expire = "1945.12.25"
+			ideology = collaborationism
+		}
+		army_experience = 50
+	}
+	effect_tooltip = {
+		JNC = {
+			add_state_core = 614
+			add_state_core = 615
+			add_state_core = 608
+			add_state_core = 609
+			add_state_core = 597
+			add_state_core = 607
+		}
+	}
+	custom_effect_tooltip = JNC_prov_focus
+}
+
+RFM_CREATION = {
+	hidden_effect = {
+		set_global_flag = rfm_exists
+		RFM = {
+			annex_country = {
+				target = CCP
+				transfer_troops = yes
+			}
+			transfer_state = 613
+			transfer_state = 598
+			JAP = {
+				puppet = RFM
+			}
+			army_experience = 50
+			every_state = {
+				limit = {
+					is_controlled_by_jap_or_its_puppet = yes
+					OR = {
+						state = 598
+						state = 606
+						state = 756
+						state = 596
+						state = 746
+						state = 744
+					}
+				}
+				RFM = {
+					set_state_controller = PREV
+					#set_state_owner = PREV #puppet transfer state active
+				}
+			}
+			every_state = {
+				limit = {
+					JAP_or_its_puppet_has_full_control_over_prev_states = yes
+					OR = {
+						state = 598
+						state = 606
+						state = 756
+						state = 596
+						state = 746
+						state = 744
+					}
+				}
+				RFM = {
+					set_state_controller = PREV
+					#transfer_state = PREV #puppet transfer state active
+				}
+			}
+			add_state_core = 598
+			add_state_core = 596
+			add_state_core = 606
+			add_state_core = 756
+			add_state_core = 744
+			add_state_core = 746
+			add_state_core = 613
+			add_to_war = {
+				targeted_alliance = JAP
+				enemy = CHI
+			}
+			load_oob = RFM_focus
+			set_politics = {
+				parties = {
+					democratic = {
+						popularity = 0
+						banned = yes
+					}
+					fascism = {
+						popularity = 60
+					}
+					communism = {
+						popularity = 0
+						banned = yes
+					}
+					n_socialism = {
+						popularity = 0
+						banned = yes
+					}
+					neutrality = {
+						popularity = 40
+					}
+				}
+				ruling_party = fascism
+				last_election = "1936.1.1"
+				election_frequency = 48
+				elections_allowed = no
+			}
+		}
+	}
+	effect_tooltip = {
+		RFM = {
+			add_state_core = 598
+			add_state_core = 596
+			add_state_core = 606
+			add_state_core = 756
+			add_state_core = 744
+			add_state_core = 746
+			add_state_core = 613
+		}
+	}
+	if = {
+		limit = {
+			JAP = {
+				NOT = {
+					has_global_flag = rfm_exists
+				}
+			}
+		}
+		custom_effect_tooltip = CCP_reform
+	}
+	custom_effect_tooltip = RFM_focus
+}
+
+CCP_CREATION = {
+	custom_effect_tooltip = shanghai_puppet
+	hidden_effect = {
+		CCP = {
+			transfer_state = 613
+		}
+		JAP = {
+			puppet = CCP
+		}
+	}
+	CCP = {
+		add_state_core = 613
+	}
+	hidden_effect = {
+		CCP = {
+			add_to_war = {
+				targeted_alliance = JAP
+				enemy = CHI
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 1
+			}
+			set_politics = {
+				parties = {
+					democratic = {
+						popularity = 0
+						banned = yes
+					}
+					fascism = {
+						popularity = 100
+					}
+					communism = {
+						popularity = 0
+						banned = yes
+					}
+					neutrality = {
+						popularity = 0
+					}
+				}
+				ruling_party = fascism
+				elections_allowed = no
+			}
+		}
+	}
+}
+
+MEN_CREATION = {
+	JAP = {
+		set_autonomy = {
+			target = ECA
+			autonomous_state = autonomy_puppet
+		}
+	}
+	ECA = {
+		set_cosmetic_tag = MEN
+		army_experience = 50
+		set_politics = {
+			ruling_party = fascism
+			elections_allowed = no
+		}
+		set_political_party = {
+			ideology = neutrality
+			popularity = 30
+		}
+		set_political_party = {
+			ideology = n_socialism
+			popularity = 0
+		}
+		set_political_party = {
+			ideology = communism
+			popularity = 0
+		}
+		set_political_party = {
+			ideology = fascism
+			popularity = 70
+		}
+		create_country_leader = {
+			name = "Yondonwangchug"
+			desc = ""
+			picture = "Portrait_Yondonwangchug.dds"
+			expire = "1966.4.23"
+			ideology = fascism_ideology
+			traits = {
+				spirit_of_genghis
+			}
+		}
+		set_capital = 612
+	}
+}
+
+set_commie_rebels = {	
+	if = {
+		limit = {
+			controller = {
+				NOT = {
+					OR = {
+						tag = PRC
+						has_government = communism
+						has_government = n_socialism
+						has_country_flag = i_cracked_down_you
+					}
+				}
+			}
+			has_state_flag = commie_ridden_states
+		}
+		set_border_war = yes 
+		else = {
+			clr_state_flag = commie_ridden_states
+			set_border_war = no 
+		}
+	}	
+}
+
+capture_collaborators = {
+	hidden_effect = {
+		FROM = {
+			JAP = {
+				country_event = {
+					id = rcmjapan.1000
+				}
+			}
+		}
+		every_state = {
+			limit = {
+				is_owned_by = FROM
+			}
+			set_state_flag = transfer_hanjian_captured_@FROM
+		}
+		random_country = {
+			limit = {
+				tag = FROM
+				NOT = {
+					OR = {
+						tag = PRC
+						tag = CHI
+						is_warlord = yes
+						is_legit_china = yes
+					}
+				}
+			}
+			JAP = {
+				annex_country = {
+					target = PREV transfer_troops = yes
+				}
+			}
+		}
+		
+		every_state = {
+			limit = {
+				has_state_flag = hanjian_captured_@FROM
+			}
+			ROOT = {
+				if = {
+					limit = {
+						NOT = {
+							tag = JAP
+						}
+					}
+					transfer_state = PREV
+				}
+			}
+			clr_state_flag = hanjian_captured_@FROM
+		}
+		every_state = {
+			limit = {
+				has_state_flag = transfer_hanjian_captured_@FROM
+			}
+			ROOT = {
+				set_state_owner = PREV
+			}
+			clr_state_flag = transfer_hanjian_captured_@FROM
+		}
+	}
+	effect_tooltip = {
+		annex_country = {
+			target = FROM transfer_troops = no
+		}
+	}
+}
+
+for_tracking_ten_comp_foc = {
+	if = { #1st round
+		limit = {
+			NOT = {
+				has_country_flag = a_focus_completed
+			}
+		}
+		set_country_flag = a_focus_completed
+		else = { #2nd round
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = b_focus_completed
+					}
+				}
+				set_country_flag = b_focus_completed
+				else = { #3rd round
+					if = {
+						limit = {
+							NOT = {
+								has_country_flag = c_focus_completed
+							}
+						}
+						set_country_flag = c_focus_completed
+						else = { #4th round
+							if = {
+								limit = {
+									NOT = {
+										has_country_flag = d_focus_completed
+									}
+								}
+								set_country_flag = d_focus_completed
+								else = { #5
+									if = {
+										limit = {
+											NOT = {
+												has_country_flag = e_focus_completed
+											}
+										}
+										set_country_flag = e_focus_completed
+										else = { #6
+											if = {
+												limit = {
+													NOT = {
+														has_country_flag = f_focus_completed
+													}
+												}
+												set_country_flag = f_focus_completed
+												else = { #7
+													if = {
+														limit = {
+															NOT = {
+																has_country_flag = g_focus_completed
+															}
+														}
+														set_country_flag = g_focus_completed
+														else = { #8
+															if = {
+																limit = {
+																	NOT = {
+																		has_country_flag = h_focus_completed
+																	}
+																}
+																set_country_flag = h_focus_completed
+																else = { #9
+																	if = {
+																		limit = {
+																			NOT = {
+																				has_country_flag = i_focus_completed
+																			}
+																		}
+																		set_country_flag = i_focus_completed
+																		else = { #10
+																			if = {
+																				limit = {
+																					NOT = {
+																						has_country_flag = j_focus_completed
+																					}
+																				}
+																				set_country_flag = j_focus_completed
+																			}
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

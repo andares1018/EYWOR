@@ -1,0 +1,29 @@
+﻿###########################
+# French Events
+###########################
+
+add_namespace = rcmfrance
+
+#1936 election
+country_event = {
+	id = rcmfrance.1
+	title = rcmfrance.1.t
+	desc = rcmfrance.1.d
+	picture = GFX_report_event_french_election
+ 
+	is_triggered_only	= yes
+	
+	trigger = {
+		tag = FRA
+		has_government = democratic
+		n_socialism > 0.4
+		democratic < 0.4
+		date < 1936.6.1
+	}
+	option = {
+		name = rcmfrance.1.a
+		ai_chance = { factor = 100 }
+		add_ideas = FRA_front_populaire
+		set_politics = { ruling_party = n_socialism elections_allowed = yes }
+	}
+}

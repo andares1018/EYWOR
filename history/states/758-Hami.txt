@@ -1,0 +1,30 @@
+state={
+	id=758
+	name="STATE_758"
+	
+	history={
+		#owner = SIK
+		owner = HMI
+		add_core_of = SIK
+		add_core_of = HMI	
+		add_core_of = CHI
+		add_core_of = PRC
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			industrial_complex = 1
+		}
+		victory_points = {
+			1838 3
+		}
+		1938.10.25 = {
+			owner = SIK
+		}
+	}
+	provinces={
+		1838
+	}
+	manpower=1430700
+	state_category=town
+	buildings_max_level_factor=1.000
+}

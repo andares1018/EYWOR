@@ -1,0 +1,491 @@
+﻿division_template = {
+	name = "Duli Bubing Lu"				# Represents: German-trained divisions (better equipment than rest),
+									# 	as well as two-division infantry corps (generally poorly-equipped militias),
+	regiments = {					#	and local militia groups.
+		infantry = { x = 0 y = 0 }	# Note: Chinese divisions were brigade-sized compared other nations' armies
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+
+	priority = 0 # garrison
+}
+division_template = {
+	name = "Bubing Shi"			# Represents three-division infantry corps (generally poorly-equipped militias)
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+	}
+}
+division_template = {
+	name = "Jibing Shi"		# Represents two-division cavalry corps (generally poorly-equipped)
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+
+### OOB ###
+units = {
+	###### Kuomintang Army (CO: Chang Kai-shek) ######
+	##### Beiping-Tianjin Area (CO: ) #####
+	### 29 Juntuan (highly-reinforced corps) ###
+	
+	##### First War Area (CO: Cheng Qian) #####
+	### 2nd Army Group (CO: Liu Shi) ###
+	division = {
+		name = "3 Duli Bubing Lu"
+		location = 12408
+		division_template = "Duli Bubing Lu"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+
+	division = {
+		name = "1 Lujun Shi"
+		location = 8072
+		division_template = "Duli Bubing Lu"
+		start_equipment_factor = 0.4
+
+	}
+	
+
+	##### Second War Area (CO: Yan Xishan) #####
+	
+	### 7th Army Group (CO: Fu Zuoyi) ###
+	division = {
+		name = "4 Bubing Shi"
+		location = 9958
+		division_template = "Bubing Shi"		# Reorganized German-trained division (frontline infantry, better equipment and highest experience)
+		start_experience_factor = 0.3
+		
+	}
+	division = {
+		name = "89 Bubing Shi"
+		location = 9958
+		division_template = "Bubing Shi"		# Reorganized German-trained division (frontline infantry, better equipment and highest experience)
+		start_experience_factor = 0.3
+		
+	}
+	division = {
+		name = "17 Duli Bubing Lu"
+		location = 4114
+		division_template = "Duli Bubing Lu"
+		start_experience_factor = 0.1
+		
+
+	}
+	division = {
+		name = "6 Jibing Shi"
+		location = 4114
+		division_template = "Jibing Shi"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+
+	}
+
+
+	##### Third War Area (CO: Gu Zhutong) #####
+	division = {
+		name = "1 Duli Bubing Lu"
+		location = 7027
+		division_template = "Bubing Shi"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "1 Fujian Jingbei"
+		location = 9974
+		division_template = "Duli Bubing Lu"		# Garrison unit (poor equipment and training)
+		start_equipment_factor = 0.4
+
+	}
+	division = {
+		name = "2 Fujian Jingbei"
+		location = 4169
+		division_template = "Duli Bubing Lu"		# Garrison unit (poor equipment and training)
+		start_equipment_factor = 0.4
+
+	}
+	division = {
+		name = "3 Fujian Jingbei"
+		location = 4196
+		division_template = "Duli Bubing Lu"		# Garrison unit (poor equipment and training)
+		start_equipment_factor = 0.4
+
+	}
+	## Shanghai Defense Force ##
+	division = {
+		name = "Shanghai Jingbei"
+		location = 7014
+		division_template = "Duli Bubing Lu"		# Garrison unit (poor equipment and training)
+		start_equipment_factor = 0.4
+
+	}
+	division = {
+		name = "Lu zhan Shi"
+		location = 7014
+		division_template = "Duli Bubing Lu"		# Garrison unit (poor equipment and training)
+		start_equipment_factor = 0.4
+
+	}
+	## 8th Army (CO: Zhang Fakui) ##
+	division = {
+		name = "3 Bubing Shi"
+		location = 10076
+		division_template = "Bubing Shi"		# German-trained division (frontline infantry, better equipment and experience)
+		start_experience_factor = 0.3
+		
+	}
+	division = {
+		name = "Shui Jing Tuan"
+		location = 10076
+		division_template = "Bubing Shi"		# German-trained division (frontline infantry, better equipment and experience)
+		start_experience_factor = 0.3
+		
+	}
+	## 9th Army (CO: Zhang Zhizhong) ##
+	division = {
+		name = "36 Bubing Shi"
+		location = 7191
+		division_template = "Bubing Shi"		# German-trained division (frontline infantry, better equipment and experience)
+		start_experience_factor = 0.3
+		
+	}
+	division = {
+		name = "87 Bubing Shi"
+		location = 7191
+		division_template = "Bubing Shi"		# German-trained division (frontline infantry, better equipment and experience)
+		start_experience_factor = 0.3
+		
+	}
+	division = {
+		name = "88 Bubing Shi"
+		location = 7191
+		division_template = "Bubing Shi"		# German-trained division (frontline infantry, better equipment and experience)
+		start_experience_factor = 0.3
+		
+	}
+	## 10th Army (CO: Liu Jiangxu) ##
+	division = {
+		name = "10 Lujun Shi"
+		location = 10076
+		division_template = "Duli Bubing Lu"
+		start_equipment_factor = 0.4
+
+	}
+	### 15th Army Group (CO: Chen Cheng) ###
+	division = {
+		name = "11 Bubing Shi"
+		location = 12076
+		division_template = "Bubing Shi"		# Reorganized German-trained division (frontline infantry, better equipment and highest experience)
+		start_experience_factor = 0.3
+		
+	}
+	division = {
+		name = "14 Bubing Shi"
+		location = 12076
+		division_template = "Bubing Shi"		# German-trained division (frontline infantry, better equipment and experience)
+		start_experience_factor = 0.3
+		
+	}
+	division = {
+		name = "4 Duli Bubing Lu"
+		location = 12076
+		division_template = "Duli Bubing Lu"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "18 Duli Bubing Lu"
+		location = 12076
+		division_template = "Duli Bubing Lu"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "39 Duli Bubing Lu"
+		location = 4042
+		division_template = "Duli Bubing Lu"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "54 Duli Bubing Lu"
+		location = 4042
+		division_template = "Duli Bubing Lu"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "74 Duli Bubing Lu"
+		location = 4042
+		division_template = "Duli Bubing Lu"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+	### 19th Army Group (CO: Xu Yue) ###
+	division = {
+		name = "6 Bubing Shi"
+		location = 7058
+		division_template = "Bubing Shi"		# German-trained division (frontline infantry, better equipment and experience)
+		start_experience_factor = 0.3
+		
+	}
+	division = {
+		name = "9 Bubing Shi"
+		location = 7058
+		division_template = "Bubing Shi"		# German-trained division (frontline infantry, better equipment and experience)
+		start_experience_factor = 0.3
+		
+	}
+	division = {
+		name = "25 Duli Bubing Lu"
+		location = 1096
+		division_template = "Duli Bubing Lu"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+
+	##### Yangtze War Area (CO: ) #####
+	division = {
+		name = "Wuhan Jingbei"
+		location = 4619
+		division_template = "Duli Bubing Lu"		# Garrison unit (poor equipment and training)
+		start_equipment_factor = 0.4
+
+	}
+	division = {
+		name = "Shashi Jingbei"
+		location = 4130
+		division_template = "Duli Bubing Lu"		# Garrison unit (poor equipment and training)
+		start_equipment_factor = 0.4
+
+	}
+	division = {
+		name = "Di 1 Nanchang Jingbei"
+		location = 3992
+		division_template = "Duli Bubing Lu"		# Garrison unit (poor equipment and training)
+		start_equipment_factor = 0.4
+
+	}
+	division = {
+		name = "Di 2 Nanchang Jingbei"
+		location = 3992
+		division_template = "Duli Bubing Lu"		# Garrison unit (poor equipment and training)
+		start_equipment_factor = 0.4
+
+	}
+	division = {
+		name = "Di 3 Nanchang Jingbei"
+		location = 3992
+		division_template = "Duli Bubing Lu"		# Garrison unit (poor equipment and training)
+		start_equipment_factor = 0.4
+
+	}
+	division = {
+		name = "Huaining Jingbei"
+		location = 1083
+		division_template = "Duli Bubing Lu"		# Garrison unit (poor equipment and training)
+		start_equipment_factor = 0.4
+
+	}
+	### River Defense Force (CO: ) ###
+	division = {
+		name = "11 Lujun Shi"
+		location = 1036
+		division_template = "Bubing Shi"
+		start_equipment_factor = 0.4
+
+	}
+	division = {
+		name = "12 Lujun Shi"
+		location = 7637
+		division_template = "Bubing Shi"
+		start_equipment_factor = 0.4
+
+	}
+	division = {
+		name = "13 Lujun Shi"
+		location = 10377
+		division_template = "Bubing Shi"
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "14 Lujun Shi"
+		location = 7159
+		division_template = "Bubing Shi"
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "15 Lujun Shi"
+		location = 7502
+		division_template = "Bubing Shi"
+		start_equipment_factor = 0.4
+
+	}
+	division = {
+		name = "43 Duli Bubing Lu"
+		location = 9959
+		division_template = "Duli Bubing Lu"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+	### Capital Garrison Force (CO: ) ###
+	division = {
+		name = "2 Lujun Shi"
+		location = 11913
+		division_template = "Duli Bubing Lu"
+		start_equipment_factor = 0.4
+
+	}
+	division = {
+		name = "Peixun Shi"
+		location = 11913
+		division_template = "Bubing Shi"		# Reorganized German-trained division (frontline infantry, better equipment and highest experience)
+		start_experience_factor = 0.3
+		
+	}
+	division = {
+		name = "1 Nanking Jingbei"
+		location = 11913
+		division_template = "Duli Bubing Lu"		# Garrison unit (poor equipment and training)
+		
+	}
+	division = {
+		name = "2 Nanking Jingbei"
+		location = 11913
+		division_template = "Duli Bubing Lu"		# Garrison unit (poor equipment and training)
+			}
+	division = {
+		name = "3 Nanking Jingbei"
+		location = 11913
+		division_template = "Duli Bubing Lu"		# Garrison unit (poor equipment and training)
+			}
+	division = {
+		name = "4 Nanking Jingbei"
+		location = 11913
+		division_template = "Duli Bubing Lu"		# Garrison unit (poor equipment and training)
+			}
+
+	
+
+	## qianjun ##
+	division = {
+		name = "12 Lujun Shi"
+		location = 4504
+		division_template = "Bubing Shi"
+		start_equipment_factor = 0.4
+
+	}
+	division = {
+		name = "13 Lujun Shi"
+		location = 7101
+		division_template = "Bubing Shi"
+		start_equipment_factor = 0.4
+
+	}
+	division = {
+		name = "41 Duli Bubing Lu"
+		location = 7097
+		division_template = "Duli Bubing Lu"
+		start_equipment_factor = 0.4
+
+	}
+	division = {
+		name = "14 Lujun Shi"
+		location = 10763
+		division_template = "Bubing Shi"
+		start_equipment_factor = 0.4
+
+	}
+	division = {
+		name = "15 Lujun Shi"
+		location = 10616
+		division_template = "Duli Bubing Lu"
+		start_equipment_factor = 0.4
+
+	}
+	##### ROCN #####
+	navy = {
+		name = "Di 1 Jiandui"
+		base = 7014
+		location = 7014 #Shanghai
+		ship = { name = "Yingrui" definition = light_cruiser equipment = { light_cruiser_1 = {amount = 1 owner = CHI } } }
+		ship = { name = "Ninghai" definition = light_cruiser equipment = { light_cruiser_1 = {amount = 1 owner = CHI } } }
+		ship = { name = "Hairong" definition = light_cruiser equipment = { light_cruiser_1 = {amount = 1 owner = CHI } } }
+		ship = { name = "Zhaohe" definition = light_cruiser equipment = { light_cruiser_1 = {amount = 1 owner = CHI } } }
+		ship = { name = "Haiqi" definition = light_cruiser equipment = { light_cruiser_1 = {amount = 1 owner = CHI } } }
+		ship = { name = "Dadong" definition = destroyer equipment = { destroyer_1 = {amount = 1 owner = CHI } } }
+		ship = { name = "Zejiang" definition = destroyer equipment = { destroyer_1 = {amount = 1 owner = CHI } } }
+	}
+}
+
+
+### Air Forces ###
+air_wings = {
+# Roughly 300 fighters, 21 tac bombers, but only 200 aircraft total were serviceable in 1937 due to neglect
+	# Beijing
+	608 = { 
+		fighter_equipment_0 = { owner = "CHI" amount = 30 }				# 3rd PG - Fiat CR.32
+	}
+	#Shanghai
+	613 = {
+		fighter_equipment_0 = { owner = "CHI" amount = 70 } 		# 4th PF, 5th PG, 9th PS - Curtiss Hawk
+		tac_bomber_equipment_0 =  { owner = "CHI" amount = 15 }		# Combined BG -- Martin 139WC, Savoia S.72
+	}
+}
+
+
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "CHI"
+		}
+		requested_factories = 5
+		progress = 0.33
+		efficiency = 60
+	}
+	add_equipment_production = {
+		equipment = {
+			type = fighter_equipment_0
+			creator = "CHI"
+		}
+		requested_factories = 1
+		progress = 0.55
+		efficiency = 60
+	}	
+	
+#Under Construction in Shanghai
+	# Light Cruiser 
+	add_equipment_production = { 		# "Pinghai"
+		equipment = {
+			type = light_cruiser_1
+			creator = "CHI" 
+		}
+		requested_factories = 1
+		progress = 0.33
+		amount = 1
+	}
+}

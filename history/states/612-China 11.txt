@@ -1,0 +1,31 @@
+#chahar
+state = {
+	id = 612
+	name = "STATE_612"
+
+	history = {
+		owner = PLM
+		add_core_of = PLM
+		add_core_of = CHI
+		add_core_of = PRC
+		buildings = {
+			infrastructure = 1
+			arms_factory = 1
+			industrial_complex = 1
+		}
+		1939.1.1 = {
+			owner = ECA
+			add_core_of = ECA
+		}
+		victory_points = {
+			11752 3 
+		}
+	}
+
+	provinces = {
+		1551 1608 1796 4222 4612 4655 7545 10372 11752 12448 
+	}
+	manpower = 336000
+	buildings_max_level_factor = 1.500
+	state_category = town
+}

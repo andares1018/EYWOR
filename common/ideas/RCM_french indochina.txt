@@ -1,0 +1,345 @@
+ideas = {
+	political_advisor = {
+		FIC_earl_browder = {
+			
+			
+			allowed = {
+				original_tag = "FIC"
+			}
+			
+
+			
+			traits = { communist_revolutionary }
+	
+			on_add = {
+				country_event = political.1
+			}
+	
+			do_effect = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			picture = generic_communist_europe
+			ai_will_do = {
+				factor = 0
+			}
+		}	
+			
+		FIC_harold_ickes = {
+			
+			
+			allowed = {
+				original_tag = "FIC"
+			}
+			
+
+			
+			traits = { democratic_reformer }
+	
+			on_add = {
+				country_event = political.13
+			}
+	
+			do_effect = {
+				NOT = {
+					has_government = democratic
+				}
+			}
+			picture = generic_democratic_europe
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		FIC_charles_coughlin = {
+			
+			
+			allowed = {
+				original_tag = "FIC"
+			}
+			
+
+			
+			traits = { fascist_demagogue }
+	
+			on_add = {
+				country_event = political.7
+			}
+	
+			do_effect = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+			picture = generic_fascist_europe
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		FIC_zhang_bojun = {
+			allowed = {
+				original_tag = FIC
+			}
+			traits = { socialist_idealist }
+			
+			picture = generic_n_socialism_europe
+			on_add = {
+				country_event = rcmpolitical.30
+			}					
+			do_effect = {
+				NOT = {
+					has_government = n_socialism
+				}
+			}
+			ai_will_do = {
+				factor = 0
+			}
+			
+		}
+		FIC_pierre_dupong = {
+
+			picture = generic_political_advisor_europe_1
+			
+			allowed = {
+				original_tag = FIC
+			}
+			
+			traits = { compassionate_gentleman }
+		}
+
+		FIC_martin_karp = {
+
+			picture = generic_political_advisor_europe_2
+				
+			allowed = {
+				original_tag = FIC
+			}
+			
+			traits = { backroom_backstabber }
+		}
+
+		FIC_pierre_krier = {
+
+			picture = generic_political_advisor_europe_3
+			
+			allowed = {
+				original_tag = FIC
+			}
+			
+			traits = { captain_of_industry }
+		}
+	}
+	# MIFICARY
+	army_chief = {
+		
+		FIC_emile_speller = {
+			
+			picture = generic_army_europe_1
+			
+			allowed = {
+				original_tag = FIC
+			}
+			
+			traits = { army_chief_defensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		FIC_alexander_von_falkenhausen = {
+			
+			picture = generic_army_europe_2
+			
+			allowed = {
+				original_tag = FIC
+			}
+			
+			traits = { army_chief_offensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}	
+	}
+
+	air_chief = {
+		
+		FIC_guillaume_soisson = {
+			
+			picture = generic_air_europe_3
+			
+			allowed = {
+				original_tag = FIC
+			}
+			
+			traits = { air_air_combat_training_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		FIC_nicholas_diedrich = {
+			
+			picture = generic_air_europe_1
+			
+			allowed = {
+				original_tag = FIC
+			}
+			
+			traits = { air_chief_ground_support_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+	}
+
+	navy_chief = {
+		
+		FIC_paul_medinger = {
+			
+			picture = generic_navy_europe_3
+			
+			allowed = {
+				original_tag = FIC
+			}
+			
+			traits = { navy_chief_decisive_battle_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		FIC_henri_ahnen = {
+			
+			picture = generic_navy_europe_1
+			
+			allowed = {
+				original_tag = FIC
+			}
+			
+			traits = { navy_chief_maneuver_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	high_command = {
+
+		FIC_francois_schammel = {
+
+			picture = generic_army_europe_1
+			
+			allowed = {
+				original_tag = FIC
+			}
+			
+			traits = { army_infantry_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		FIC_aloyse_glodt = {
+
+			picture = generic_army_europe_3
+			
+			allowed = {
+				original_tag = FIC
+			}
+			
+			traits = { army_armored_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		FIC_damien_roeser = {
+
+			picture = generic_air_europe_2
+			
+			allowed = {
+				original_tag = FIC
+			}
+			
+			traits = { air_air_superiority_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		FIC_pierre_fischbach = {
+
+			picture = generic_navy_europe_1
+			
+			allowed = {
+				original_tag = FIC
+			}
+			
+			traits = { navy_fleet_logistics_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	theorist = {
+
+		FIC_alex_federspiel = {
+					
+			picture = generic_army_europe_1
+
+			allowed = {
+				original_tag = FIC
+			}
+			
+			research_bonus = {
+				land_doctrine = 0.07
+			}
+			
+			traits = { military_theorist }
+		}
+
+		FIC_nicolas_de_dixmude = {
+					
+			picture = generic_air_europe_1
+				
+			allowed = {
+				original_tag = FIC
+			}
+			
+			research_bonus = {
+				air_doctrine = 0.07
+			}
+			
+			traits = { air_warfare_theorist }
+		}
+
+		FIC_florent_destriveaux = {
+					
+			picture = generic_navy_europe_1
+				
+			allowed = {
+				original_tag = FIC
+			}
+			
+			research_bonus = {
+				naval_doctrine = 0.07
+			}
+			
+			traits = { naval_theorist }
+		}
+	}
+
+}

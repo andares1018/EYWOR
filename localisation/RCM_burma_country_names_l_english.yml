@@ -1,0 +1,15 @@
+﻿l_english:
+
+ BUR_fascism:0 "State of Burma"
+ BUR_fascism_DEF:0 "The State of Burma"
+ BUR_democratic:0 "Burma"
+ BUR_democratic_DEF:0 "Burma"
+ BUR_neutrality:0 "Union of Myanmar"
+ BUR_neutrality_DEF:0 "The Union of Myanmar"
+ BUR_communism:1 "Socialist Republic of Burma"
+ BUR_communism_DEF:0 "The Socialist Republic of Burma"
+ 
+ BUR_fascism_ADJ:0 "Burmese"
+ BUR_democratic_ADJ:0 "Burmese"
+ BUR_neutrality_ADJ:0 "Myanma"
+ BUR_communism_ADJ:0 "Burmese" 

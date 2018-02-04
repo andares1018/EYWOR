@@ -1,0 +1,26 @@
+﻿MON = {
+	army = {
+		male = {
+			"gfx/leaders/MON/Portrait_Mongol_Generic.dds"
+			"gfx/leaders/MON/Portrait_Mongol_Generic2.dds"
+		}
+	}
+}
+
+ECA = {
+	army = {
+		male = {
+			"gfx/leaders/MON/Portrait_Mongol_Generic.dds"
+			"gfx/leaders/MON/Portrait_Mongol_Generic2.dds"
+		}
+	}
+}
+
+PLM = {
+	army = {
+		male = {
+			"gfx/leaders/MON/Portrait_Mongol_Generic.dds"
+			"gfx/leaders/MON/Portrait_Mongol_Generic2.dds"
+		}
+	}
+}

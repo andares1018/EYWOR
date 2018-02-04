@@ -1,0 +1,43 @@
+
+state={
+	id=746
+	name="STATE_746"
+
+	history={
+		owner = CHI
+		add_core_of = CHI
+		add_core_of = PRC
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+
+		}
+		victory_points = {
+			7656 2
+		}
+		1939.1.1 = {
+			buildings = {
+				industrial_complex = 2
+				infrastructure = 3
+
+			}
+			add_core_of = RFM
+			RFM = {
+				set_province_controller = 4010
+				set_province_controller = 7085
+				set_province_controller = 9995
+				set_province_controller = 10098
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		4010 4066 4519 7085 7126 7459 7540 7568 7656 9995 10098 10434 10446 12012 12426 
+	}
+	manpower=13145400
+	buildings_max_level_factor=1.000
+	state_category=town
+}

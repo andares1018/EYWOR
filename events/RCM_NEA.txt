@@ -1,0 +1,192 @@
+﻿###########################
+# Chinese Events BORDER WARS ADDED SOUTHERN SHAANXI #ID = 743#
+###########################
+
+add_namespace = nea
+#kmt refuse, cliques consider joining
+country_event = {
+	id = nea.1
+	title = nea.1.t
+	desc = nea.1.d
+	picture = GFX_report_event_china_flag
+	trigger ={
+		OR = {
+			tag = GUD
+			tag = PRC
+			tag = GXC
+			tag = SIC
+			tag = SHD
+		}
+		#
+		CHI = { has_war_with = NEA }
+		#CHI = { has_war_with = PRC }
+		NEA = {
+			has_completed_focus = nea_xian_incident
+		}
+		has_global_flag = xian_kmt_refuse
+		NOT = { has_country_flag = joined_xian_war }
+	}
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = { #join
+		name = nea.1.a
+		ai_chance = { 
+		base = 80 	
+		modifier = {
+				factor = 200
+				is_historical_focus_on = yes
+			}
+		}
+		hidden_effect = {
+			set_country_flag = joined_xian_war
+		}
+		every_other_country = {
+			limit = {
+				OR = {
+					tag = PRC
+					tag = NEA
+					tag = CHI
+					tag = SHD
+					tag = GUD
+				}
+				NOT = {
+					tag = ROOT
+				}
+			}
+			country_event = { days = 5 id = nea.2 }
+		}
+	}
+	option = { #not join
+		name = nea.1.b
+		trigger = {
+			NOT = {
+				TAG = PRC
+			}
+		}
+		ai_chance = {
+			base = 20
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						has_global_flag = gud_ready
+						GXC = { has_offensive_war_with = CHI }
+					}
+					AND = {
+						OR = {
+							tag = GUD
+							tag = GXC
+							tag = SIC
+							tag = SHD
+						}
+						is_historical_focus_on = yes
+					}
+				}
+			}
+			modifier = {
+				factor = 100
+				OR = {
+					tag = SHX
+					tag = YUN
+					tag = HPC
+					tag = XIK
+					tag = PLM
+					tag = XSM
+					tag = NXM
+					tag = TNG
+					tag = HMI
+				}
+			}
+		}
+	}
+}
+###join prc fight chiang###
+country_event = {
+	id = nea.2
+	title = nea.2.t
+	desc = nea.2.d
+	picture = GFX_report_event_chinese_soldiers_02
+	is_triggered_only = yes
+	option = {
+		name = nea.2.a
+		trigger = { TAG = PRC }
+		hidden_effect = {
+			if = {
+				limit = {
+					FROM = {
+						is_subject_of = CHI
+					}
+				}
+				CHI = {
+					end_puppet = FROM
+				}
+			}
+		}
+		PRC = {
+			FROM = { add_to_war = { targeted_alliance = PRC enemy = CHI } }
+		}
+	}
+	option = {
+		name = nea.2.b
+		trigger = { TAG = NEA }
+	}
+	option = {
+		name = nea.2.c
+		trigger = { TAG = CHI }
+	}
+}
+####hidden may switch to martial law in the future
+country_event = {
+	id = nea.3
+	title = nea.3.t
+	desc = nea.3.d
+	picture = GFX_report_event_china_flag
+	fire_only_once = yes
+	trigger = {
+		#tag = NEA
+		is_warlord = yes
+		NOT = {
+			has_war_with = CHI
+			is_subject_of = CHI
+		}
+		owns_state = 598
+		#has_country_flag = yang_hucheng_in_charge
+	}
+	option = {
+		name = nea.3.a
+		every_state = {
+			limit = {
+				#is_owned_by = ROOT
+				is_core_of = PRC
+			}
+			add_core_of = ROOT
+		}
+		set_capital = 598
+		hidden_effect = {
+			set_cosmetic_tag = CHI
+			#set_party_name = {
+			#	ideology = neutrality
+			#	long_name = NEA_CHI_neutrality_party_long
+			#	name = NEA_CHI_neutrality_party
+			#}
+		}
+	} 
+}
+#switch back to normal after civ war 
+country_event = {
+	id = nea.4
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		tag = CHI
+		#has_country_flag = im_counter_coup
+		is_legit_china = yes
+		has_civil_war = no
+	}
+	immediate = {
+		clr_country_flag = im_civ_war_exception
+	}
+	option = {
+	} 
+}

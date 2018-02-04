@@ -1,0 +1,18 @@
+state={
+	id=748
+	name="STATE_748"
+	state_category = rural
+	history={
+		owner = TIB
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+		}
+		add_core_of = TIB
+	}
+	provinces={
+		4407 5018 5080 5102 8041 8059 10741 10856 
+	}
+	manpower=832200
+	buildings_max_level_factor=1.000
+}

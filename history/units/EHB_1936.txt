@@ -1,0 +1,52 @@
+﻿division_template = {
+	name = "Bubing Lu"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+	}
+	priority = 3
+}
+
+units = {
+	#Demilitarized Zone Peace Preservation Corps
+	division = {
+		name = "Di Yi Juntuan 'Tongzhou'"
+		location = 900
+		division_template = "Bubing Lu"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Di Er Juntuan 'Tsunhua'"
+		location = 900
+		division_template = "Bubing Lu"
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "Di San Juntuan 'Tongzhou'"
+		location = 900
+		division_template = "Bubing Lu"
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "Xunlian Tuan 'Tongzhou'"
+		location = 900
+		division_template = "Bubing Lu"
+		start_equipment_factor = 0.3
+
+	}
+}
+
+### Starting Equipment ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "MAN"
+		}
+		requested_factories = 1
+		progress = 0.28
+		efficiency = 100
+	}
+}

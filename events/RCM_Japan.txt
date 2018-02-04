@@ -1,0 +1,6142 @@
+﻿###########################
+# Japanese Events
+###########################
+add_namespace = rcmjapan
+# Chinese Refuse Concessions
+country_event = {
+	id = rcmjapan.1
+	title = rcmjapan.1.t
+	desc = rcmjapan.1.d
+	picture = GFX_report_event_chinese_soldiers_01
+
+	is_triggered_only = yes
+	
+	option = {
+		name = rcmjapan.1.a
+	}
+	
+}
+
+# Chinese Concessions
+country_event = {
+	id = rcmjapan.2
+	title = rcmjapan.2.t
+	desc = rcmjapan.2.d
+	picture = GFX_report_event_chinese_soldiers_running
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rcmjapan.2.a
+		hidden_effect = {
+			if = {
+				limit = { has_global_flag = hpc_pro_jap }				
+				country_event = { days = 15 id = news.1302 }
+			}
+			country_event = { days = 5 id = news.1 }
+		}
+		JAP = {
+			give_guarantee = HPC		
+		}
+	}
+	
+}
+
+# Soviets Push Back And Win
+country_event = {
+	id = rcmjapan.3
+	title = rcmjapan.3.t
+	desc = rcmjapan.3.d
+	picture = GFX_report_event_soviet_soldiers_tank
+	
+	is_triggered_only = yes
+	
+	option = {
+		if = {
+			limit = { 
+			714 = { 
+				is_owned_by = JAP 
+				any_neighbor_state = { is_owned_by = SOV } }
+			} 
+			714 = { add_manpower = -30000 }
+		}		
+		if = {
+			limit = {
+				NOT = {
+					714 = {
+						is_owned_by = JAP 
+						any_neighbor_state = { is_owned_by = SOV } 
+					}
+				}
+			}
+			random_owned_state = {
+				limit = { any_neighbor_state = { is_owned_by = SOV } }
+				add_manpower = -30000
+			}
+		}
+
+		army_experience = 5
+		add_tech_bonus = {
+			name = rcmjapan.3.t #test_the_ussr_focus
+			bonus = 0.5
+			uses = 1
+			category = cat_anti_tank
+		}
+		name = rcmjapan.3.a
+		SOV = {
+			country_event = { id = soviet.2 }
+		}
+	}
+}
+# Soviets Push Back And Lose
+country_event = {
+	id = rcmjapan.4
+	title = rcmjapan.4.t
+	desc = rcmjapan.4.d
+	picture = GFX_report_event_japanese_soldiers_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rcmjapan.4.a
+		if = {
+			limit = { 
+			714 = { 
+				is_owned_by = JAP 
+				any_neighbor_state = { is_owned_by = SOV } }
+			} 
+			714 = { add_manpower = -20000 }
+		}		
+		if = {
+			limit = {
+				NOT = {
+					714 = {
+						is_owned_by = JAP 
+						any_neighbor_state = { is_owned_by = SOV } 
+					}
+				}
+			}
+			random_owned_state = {
+				limit = { any_neighbor_state = { is_owned_by = SOV } }
+				add_manpower = -20000
+			}
+		}
+		army_experience = 15
+		add_tech_bonus = {
+			name = rcmjapan.4.t #test_the_ussr_focus
+			bonus = 0.5
+			uses = 1
+			category = cat_grand_battle_plan
+		}		
+		SOV = {
+			country_event = { id = soviet.3 }
+		}
+	}
+}
+
+# Soviets Yield
+country_event = {
+	id = rcmjapan.5
+	title = rcmjapan.5.t
+	desc = rcmjapan.5.d
+	picture = GFX_report_event_soviet_soldiers_tank
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rcmjapan.5.a
+		add_national_unity = 0.05
+		hidden_effect = {
+			country_event = { days = 5 id = news.9 }
+		}
+	}
+}
+
+# French Accept Demands
+country_event = {
+	id = rcmjapan.6
+	title = rcmjapan.6.t
+	desc = rcmjapan.6.d
+	picture = GFX_report_event_japanese_soldiers_02
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rcmjapan.6.a
+		hidden_effect = {
+			news_event = { days = 5 id = news.5 }
+		}
+		JAP = {
+			if = {
+				limit = {
+					286 = {
+						is_owned_by = FRA
+						OR = {
+							is_controlled_by = FRA
+							is_controlled_by = JAP
+						}
+					}
+				}
+				transfer_state = 286
+			}
+			if = {
+				limit = {
+					670 = {
+						is_owned_by = FRA
+						OR = {
+							is_controlled_by = FRA
+							is_controlled_by = JAP
+						}
+					}
+				}
+				transfer_state = 670
+			}
+			if = {
+				limit = {
+					671 = {
+						is_owned_by = FRA
+						OR = {
+							is_controlled_by = FRA
+							is_controlled_by = JAP
+						}
+					}
+				}
+				transfer_state = 671
+			}
+			if = {
+				limit = {
+					741 = {
+						is_owned_by = FRA
+						OR = {
+							is_controlled_by = FRA
+							is_controlled_by = JAP
+						}
+					}
+				}
+				transfer_state = 741
+			}
+			add_named_threat = { threat = 3 name = france.1.t }
+		}
+	}
+}
+
+# French Reject Demands
+country_event = {
+	id = rcmjapan.7
+	title = rcmjapan.7.t
+	desc = rcmjapan.7.d
+	picture = GFX_report_event_japanese_soldiers_03
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rcmjapan.7.a
+		hidden_effect = {
+			country_event = { days = 5 id = news.6 }
+		}
+	}
+}
+
+# Germany Agrees to Withdraw Falkenhausen
+country_event = {
+	id = rcmjapan.8
+	title = rcmjapan.8.t
+	desc = rcmjapan.8.d
+	picture = GFX_report_event_german_detained_china
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rcmjapan.8.a
+	}
+}
+
+# Germany Refuses to Withdraw Falkenhausen
+country_event = {
+	id = rcmjapan.9
+	title = rcmjapan.9.t
+	desc = rcmjapan.9.d
+	picture = GFX_report_event_german_advisors_remain
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rcmjapan.9.a
+	}
+	#option = { # Withdraw from the Anti-Comintern Pact
+	#	name = rcmjapan.9.b
+	#}
+}
+
+# USA condemns our war 
+country_event = {
+	id = rcmjapan.10
+	title = rcmjapan.10.t
+	desc = rcmjapan.10.d
+	picture = GFX_report_event_FDR_speech
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rcmjapan.10.a
+		USA = { 
+			add_opinion_modifier = { target = JAP modifier = condemn_aggression }
+		}
+	}
+}
+
+# Pressure Siam to become a puppet
+country_event = {
+	id = rcmjapan.11
+	title = rcmjapan.11.t
+	desc = rcmjapan.11.d
+	picture = GFX_report_event_japanese_officers
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rcmjapan.11.a
+		SIA = { 
+			country_event = { id = rcmjapan.12 }
+		}
+	}
+
+	option = {
+		name = rcmjapan.11.b
+		ai_chance = { factor = 0 }
+	}
+}
+
+# Siam event from Japan: Become puppet or not
+country_event = {
+	id = rcmjapan.12
+	title = rcmjapan.12.t
+	desc = rcmjapan.12.d
+	picture = GFX_report_event_japanese_officers
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rcmjapan.12.a
+		ai_chance = {
+			factor = 90 
+			modifier = {
+				#If they have a fighting chance, they should stand their ground
+				factor = 0
+				strength_ratio = {
+					tag = JAP
+					ratio > 0.75
+				}
+			}
+		}
+		JAP = { 
+			country_event = { id = rcmjapan.13 }
+			effect_tooltip = { puppet = SIA }
+		}
+	}
+
+	option = {
+		name = rcmjapan.12.b
+		ai_chance = { factor = 10 }
+		JAP = { 
+			country_event = { id = rcmjapan.14 }
+			effect_tooltip = {
+				declare_war_on = {
+					target = SIA
+					type = puppet_wargoal_focus
+				}
+			}
+		}
+	}
+}
+
+# Siam accepts and is puppeted
+country_event = {
+	id = rcmjapan.13
+	title = rcmjapan.13.t
+	desc = rcmjapan.13.d
+	picture = GFX_report_event_japanese_siam_politicians
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rcmjapan.13.a
+		puppet = SIA
+	}
+}
+
+# Siam refuses, nations go to war 
+country_event = {
+	id = rcmjapan.14
+	title = rcmjapan.14.t
+	desc = rcmjapan.14.d
+	picture = GFX_report_event_japanese_chinese_surrender
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rcmjapan.14.a
+		declare_war_on = {
+			target = SIA
+			type = puppet_wargoal_focus
+		}
+	}
+}
+
+# Indian national army 
+country_event = {
+	id = rcmjapan.15
+	title = rcmjapan.15.t
+	desc = rcmjapan.15.d
+	picture = GFX_report_event_indian_soldiers
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rcmjapan.15.a
+		hidden_effect = {
+			load_oob = "JAP_Indian_National_Army_reinforcement"
+		}
+		custom_effect_tooltip = JAP_Indian_National_Army_arrives
+		add_manpower = 10000
+		set_global_flag = indian_national_army_setup
+		RAJ = { 
+			add_national_unity = -0.2
+			add_ideas = RAJ_azad_hind
+		}
+		ENG = {
+			country_event = { id = britain.19 }
+		}
+	}
+}
+
+# China event from Japan: Become puppet or not
+country_event = {
+	id = rcmjapan.16
+	title = rcmjapan.16.t
+	desc = rcmjapan.16.d
+	picture = GFX_report_event_asian_politicians
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rcmjapan.16.a
+		ai_chance = { factor = 60 }
+		JAP = { 
+			country_event = { id = rcmjapan.17 }
+			effect_tooltip = { puppet = CHI }
+		}
+	}
+
+	option = {
+		name = rcmjapan.16.b
+		ai_chance = { factor = 40 }
+		JAP = { 
+			country_event = { id = rcmjapan.18 }
+			effect_tooltip = {
+				create_wargoal = {
+					type = take_state
+					target = CHI
+					generator = owned_states
+				}
+			}
+		}
+	}
+}
+
+# China accepts and is puppeted
+country_event = {
+	id = rcmjapan.17
+	title = rcmjapan.17.t
+	desc = rcmjapan.17.d
+	picture = GFX_report_event_chinese_japanese_handshake
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rcmjapan.17.a
+		puppet = CHI
+		hidden_effect = {
+			news_event = { hours = 6 id = news.210 }
+		}
+	}
+}
+
+# China refuses, gain cb
+country_event = {
+	id = rcmjapan.18
+	title = rcmjapan.18.t
+	desc = rcmjapan.18.d
+	picture = GFX_report_event_chinese_soldiers_02
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rcmjapan.18.a
+		create_wargoal = {
+			type = take_state
+			target = CHI
+			generator = owned_states
+		}
+	}
+}
+# China Bombing Us
+#country_event = {
+#	id = rcmjapan.22
+#	#title = rcmjapan.22.t
+#	desc = rcmjapan.22.d
+#	picture = GFX_report_event_japan_022
+#	is_triggered_only = yes
+#	option = {
+#		name = rcmjapan.22.a
+#		ai_chance = { factor = 100 }
+#		add_national_unity = -0.05
+#	}
+#}
+country_event = {
+	id = rcmjapan.27
+	hidden = yes
+	trigger = {
+		OR = {
+			tag = HPC
+			tag = EHB
+			tag = RFM
+		}
+		has_country_flag = im_rrc_now
+		CHI = { is_puppet_of = JAP }
+	}
+	immediate = {
+		hidden_effect = {
+			annex_country = { target = CHI transfer_troops = yes }
+			annex_country = { target = RFM transfer_troops = yes }
+			annex_country = { target = EHB transfer_troops = yes }
+			if = {
+				limit = {
+					HPC = {
+						is_subject_of = JAP
+						has_country_flag = im_rrc_now
+					}
+				}
+				annex_country = { target = HPC transfer_troops = yes }
+			}
+			set_political_party = { ideology = neutrality popularity = 55 }
+			set_political_party = { ideology = fascism popularity = 45 }
+			set_politics = { ruling_party = neutrality elections_allowed = no }
+			RRC_core = yes
+			JAP = { puppet = ROOT }
+		}
+	}
+	option = {}
+}
+country_event = {
+	id = rcmjapan.28
+	hidden = yes
+	trigger = {
+		tag = MAN
+		608 = { is_controlled_by = MAN }
+	}
+	immediate = {
+		hidden_effect = {
+			JAP = { transfer_state = 608 }
+		}
+	}
+	option = {}
+}
+country_event = {
+	id = rcmjapan.29
+	hidden = yes
+	trigger = {
+		tag = MAN
+		611 = { is_controlled_by = MAN }
+	}
+	immediate = {
+		hidden_effect = {
+			ECA = { transfer_state = 611 }
+		}
+	}
+	option = {}
+}
+country_event = {
+	id = rcmjapan.30
+	hidden = yes
+	trigger = {
+		has_country_flag = im_jnc_now
+		has_global_flag = jnc_exists
+		597 = { is_controlled_by = RFM }
+	}
+	immediate = {
+		hidden_effect = {
+			transfer_state = 597
+		}
+	}
+	option = {}
+}
+country_event = {
+	id = rcmjapan.31
+	hidden = yes
+	trigger = {
+		OR = {
+			AND = {
+				has_country_flag = im_rrc_now
+				tag = EHB
+				597 = { is_owned_by = EHB }
+			}
+			AND = {
+				has_country_flag = im_rrc_now
+				tag = HPC
+				597 = { is_owned_by = HPC }
+			}
+			AND = {
+				has_country_flag = im_rrc_now
+				tag = RFM
+				597 = { is_owned_by = RFM }
+			}
+		}		
+		608 = { is_controlled_by = JAP }
+	}
+	immediate = {
+		hidden_effect = {
+			transfer_state = 608
+		}
+	}
+	option = {}
+}
+###foinjinju
+country_event = {
+	id = rcmjapan.999
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		tag = USA
+		JAP = {
+			has_offensive_war = yes
+			has_war_with = FIC
+		}
+		FIC = {
+			has_defensive_war = yes
+		}
+	}
+	immediate = {
+		country_event = { days = 5 id = rcmjapan.9932 }
+	}
+	option = {}
+}
+#southern expansion (abcd line)(usa)
+country_event = {
+	id = rcmjapan.9932
+	title = rcmjapan.9932.t
+	desc = rcmjapan.9932.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_japanese_soldiers_03
+	immediate = {
+	}
+	option = {
+		name = rcmjapan.9932.a
+		ai_chance = { factor = 100 }
+		add_opinion_modifier = { target = JAP modifier = embargo }
+		set_global_flag = abcd_a
+		ENG = {
+			country_event = {
+				days = 2 id = rcmjapan.9321
+			}
+		}
+		HOL = {
+			country_event = {
+				days = 2 id = rcmjapan.9322
+			}
+		}
+	}
+	option = {
+		name = rcmjapan.9932.b
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+#embargo japan? (britian)
+country_event = {
+	id = rcmjapan.9321
+	title = rcmjapan.9321.t
+	desc = rcmjapan.9321.d
+	is_triggered_only = yes
+	picture = GFX_report_event_japanese_soldiers_03
+	immediate = {
+	}
+	option = {
+		name = rcmjapan.9321.a
+		ai_chance = {
+			factor = 100
+		}
+		add_opinion_modifier = { target = JAP modifier = embargo }
+		set_global_flag = abcd_b
+		USA = { country_event = { days = 1 id = rcmjapan.93211 } }
+		if = {
+			limit = { RAJ = { is_subject_of = ENG } }
+			RAJ = { add_opinion_modifier = { target = JAP modifier = embargo } }
+		}
+		if = {
+			limit = { MAL = { is_subject_of = ENG } }
+			MAL = { add_opinion_modifier = { target = JAP modifier = embargo } }
+		}
+		if = {
+			limit = { SAF = { is_subject_of = ENG } }
+			SAF = { add_opinion_modifier = { target = JAP modifier = embargo } }
+		}
+	}
+	option = {
+		name = rcmjapan.9321.b
+		ai_chance = {
+			factor = 0
+		}
+		USA = { country_event = { days = 1 id = rcmjapan.93212 } }
+	}
+}
+#embargo japan? (dutch)
+country_event = {
+	id = rcmjapan.9322
+	title = rcmjapan.9322.t
+	desc = rcmjapan.9322.d
+	is_triggered_only = yes
+	picture = GFX_report_event_japanese_soldiers_03
+	immediate = {
+	}
+	option = { # agree
+		name = rcmjapan.9322.a
+		ai_chance = {
+			factor = 100
+		}
+		add_opinion_modifier = { target = JAP modifier = embargo }
+		if = {
+			limit = { INS = { is_subject_of = HOL } }
+			INS = { add_opinion_modifier = { target = JAP modifier = embargo } }
+		}
+		set_global_flag = abcd_d
+		USA = { country_event = { days = 1 id = rcmjapan.93221 } }
+	}
+	option = { #refuse
+		name = rcmjapan.9322.b
+		ai_chance = {
+			factor = 0
+		}
+		USA = { country_event = { days = 1 id = rcmjapan.93222 } }
+	}
+}
+#britian accepts
+country_event = {
+	id = rcmjapan.93211
+	title = rcmjapan.93211.t
+	desc = rcmjapan.93211.d
+	is_triggered_only = yes
+	picture = GFX_report_event_hitler_handshake
+	option = {
+		name = rcmjapan.93211.a
+	}
+}
+#britian refused
+country_event = {
+	id = rcmjapan.93212
+	title = rcmjapan.93212.t
+	desc = rcmjapan.93212.d
+	is_triggered_only = yes
+	picture = GFX_report_event_degaulle_churchill
+	option = {
+		name = rcmjapan.93212.a
+	}
+}
+#dutch accept
+country_event = {
+	id = rcmjapan.93221
+	title = rcmjapan.93221.t
+	desc = rcmjapan.93221.d
+	is_triggered_only = yes
+	picture = GFX_report_event_hitler_handshake
+	option = {
+		name = rcmjapan.93221.a
+	}
+}
+#dutch refused
+country_event = {
+	id = rcmjapan.93222
+	title = rcmjapan.93222.t
+	desc = rcmjapan.93222.d
+	is_triggered_only = yes
+	picture = GFX_report_event_french_british_officers
+	option = {
+		name = rcmjapan.93222.a
+	}
+}
+#puppet transfer states<=JAP/not the right ruler
+country_event = {
+	id = rcmjapan.33
+	hidden = yes
+	trigger = {
+		OR = {
+			JAP = {
+				has_completed_focus = chinese_war_focus
+			}
+			date > 1939.1.1
+		}
+		OR = { 
+			AND = {#tag = EHB
+				tag = EHB
+				has_global_flag = jnc_exists
+			}
+			AND = {#tag = hpc
+				tag = HPC
+				is_subject_of = JAP
+			}
+			tag = RFM
+			tag = ECA
+		}
+		NOT = { has_country_flag = transfer_state_loop }
+		num_of_controlled_states > 1
+		any_other_country = {
+			has_war_with = ROOT
+			has_war_with = JAP
+			OR = {
+				is_originally_warlord = yes
+				is_legit_china = yes
+			}
+		}
+	}
+	immediate = {
+		every_state = {
+			limit = {
+				OR = {
+					ROOT = {
+						has_full_control_of_state = PREV
+					}
+					JAP = {
+						has_full_control_of_state = PREV
+					}
+					controller = {
+						is_subject_of = JAP
+						has_full_control_of_state = PREV
+					}
+				}
+				NOT = {
+					is_owned_by = ECA
+				}
+				is_core_of = ROOT
+				NOT = {
+					is_forbidden_states_in_puppet_formation = yes
+				}
+			}
+			ROOT = { set_state_controller = PREV }
+			#ROOT = { transfer_state = PREV } #puppet transfer state active
+		}		
+		country_event = { hours = 8 id = rcmjapan.9834 }
+	}
+	option = {
+		set_country_flag = transfer_state_loop
+	}
+}
+country_event = {
+	id = rcmjapan.9834
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		clr_country_flag = transfer_state_loop
+	}
+	option = {
+	}
+}
+#####
+###
+#puppet transfer states#CHI
+country_event = {
+	id = rcmjapan.634
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		clr_country_flag = transfer_state_loop_chi
+		FROM = {
+			country_event = { days = 1 id = rcmjapan.633 }
+		}
+	}
+	option = {
+	}
+}
+country_event = {
+	id = rcmjapan.633
+	hidden = yes
+	trigger = {
+		OR = {
+			is_legit_china = yes
+			is_warlord = yes
+		}
+		NOT = { has_country_flag = transfer_state_loop_chi }
+		num_of_controlled_states > 1
+		has_war_with = JAP
+		any_neighbor_country = {
+			has_war_with = ROOT
+		}
+		any_state = {
+			ROOT = {
+				has_full_control_of_state = PREV
+				NOT = {
+					owns_state = PREV
+				}
+			}
+			owner = {
+				has_war_with = ROOT
+			}
+			OR = {
+				is_claimed_by = ROOT
+				is_core_of = ROOT
+				is_core_of = CHI
+				is_core_of = PRC
+			}
+		}
+	}
+	immediate = {
+		every_state = {
+			limit = {
+				ROOT = {
+					has_full_control_of_state = PREV
+					NOT = {
+						owns_state = PREV
+					}
+				}
+				owner = {
+					has_war_with = ROOT
+				}
+				OR = {
+					is_claimed_by = ROOT
+					is_core_of = ROOT
+				}
+				is_capital_of_japan_puppet = no
+			}
+			if = {#NO COMMIE MILITIA
+				limit = {
+					NOT = { has_state_flag = commie_ridden_states }
+					#is_MAN_state_for_liberation = yes #WIP
+				}
+				#ROOT = { set_state_controller = PREV }
+				#add_core_of = ROOT
+				#else = {
+					ROOT = { transfer_state = PREV }
+				#}
+			}
+			#####PRC LIB
+			if = {#COMMIE MILITIA RAMPANT
+				limit = {
+					has_state_flag = commie_ridden_states
+				}
+				##
+				PRC = { set_state_controller = PREV }
+				ROOT = { set_state_owner = PREV }
+				##
+				PREV = {
+					clr_state_flag = commie_ridden_states
+				}
+				else = {
+					#####suiyuan workaround
+					if = {
+						limit = {
+							OR = {
+								state = 621 #YES need 763, 打回來易主
+								state = 763
+							}
+							country_exists = SHX
+							NOT = {
+								country_exists = PLM
+							}
+						}
+						SHX = { transfer_state = PREV }
+						else = {
+							if = {
+								limit = {
+									OR = {
+										state = 621 #YES need 763, 打回來易主
+										state = 763
+									}
+									country_exists = PLM
+								}
+								PLM = { set_state_owner = PREV }
+								#else = {
+								#	ROOT = { transfer_state = PREV }
+								#}
+							}
+						}
+					}
+				}
+			}
+		}
+		country_event = { days = 1 id = rcmjapan.634 }
+		set_country_flag = transfer_state_loop_chi
+	}
+	option = {
+	}
+}
+####
+###
+#puppet transfer states#JAP
+country_event = {
+	id = rcmjapan.635
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		clr_country_flag = transfer_state_loop_jap
+		country_event = { days = 1 id = rcmjapan.636 }
+	}
+	option = {
+	}
+}
+country_event = {
+	id = rcmjapan.636
+	hidden = yes
+	trigger = {
+		OR = {
+			JAP = {
+				has_completed_focus = chinese_war_focus
+			}
+			date > 1939.1.1
+		}
+		AND = {
+			OR = {
+				country_exists = RFM
+				country_exists = EHB
+				AND = {
+					country_exists = HPC
+					HPC = {
+						is_subject_of = JAP
+					}
+				}
+				has_global_flag = jnc_exists
+			}
+			tag = JAP
+		}
+		NOT = { has_country_flag = transfer_state_loop_jap }
+		num_of_controlled_states > 1
+		has_war_with = CHI
+		NOT = { has_completed_focus = reorganized_chi_puppet }
+	}
+	immediate = {
+		every_state = {
+			limit = {
+				controller = {
+					is_subject_of = JAP
+					has_full_control_of_state = PREV
+				}
+				NOT = {
+					any_country = {
+						is_subject_of = JAP
+						PREV = {
+							OR = {
+								is_claimed_by = PREV
+								is_core_of = PREV
+							}
+						}
+					}
+				}
+			}
+			JAP = { set_state_controller = PREV }	
+		}
+		country_event = { days = 1 id = rcmjapan.635 }
+	}
+	option = {
+		set_country_flag = transfer_state_loop_jap
+	}
+}
+#Expand RRC
+country_event = {
+	id = rcmjapan.34
+	title = rcmjapan.34.t
+	desc = rcmjapan.34.d
+	picture = GFX_report_event_chinese_japanese_handshake
+	trigger = {
+		tag = JAP
+		NOT = { country_exists = CHI }
+		any_other_country = {
+			OR = {
+				is_warlord = yes
+				#TAG = CHI
+				TAG = PRC
+			}
+			NOT = {
+				has_war_with = ROOT
+			}
+		}
+		OR = {
+			AND = {
+				EHB = { has_country_flag = im_rrc_now }
+				country_exists = EHB
+				EHB = { is_neighbor_of = JAP }
+			}
+			AND = {
+				HPC = { is_subject_of = JAP }
+				HPC = { has_country_flag = im_rrc_now }
+				country_exists = HPC
+				HPC = { is_neighbor_of = JAP }
+			}
+			AND = {
+				RFM = { has_country_flag = im_rrc_now }
+				country_exists = RFM
+				RFM = { is_neighbor_of = JAP }
+			}
+			621 = {
+				is_owned_by = JAP
+				is_core_of = ECA
+			}
+		}
+		OR = { #workaround bc any_owned_state doesnt work
+			XIK = {
+				is_neighbor_of = JAP
+			}
+			AND = {
+				TIB = {
+					is_neighbor_of = JAP
+				}
+				441 = { NOT = { is_controlled_by = JAP } }
+				439 = { NOT = { is_controlled_by = JAP } }
+				431 = { NOT = { is_controlled_by = JAP } }
+				434 = { NOT = { is_controlled_by = JAP } }
+				324 = { NOT = { is_controlled_by = JAP } }
+				323 = { NOT = { is_controlled_by = JAP } }
+			}
+			ECA = {
+				is_neighbor_of = JAP
+				NOT = { 330 = { is_controlled_by = JAP }  }
+			}
+			325 = { is_controlled_by = JAP }
+			605 = { is_controlled_by = JAP }
+		}
+		NOT = { has_global_flag = RRC_expand }
+		AND = {
+			NOT = {
+				any_other_country = {
+					OR = {
+						is_warlord = yes
+						TAG = PRC
+					}
+					OR = {
+						JAP = {
+							has_wargoal_against = PREV
+						}
+						JAP = {
+							has_war_with = PREV
+						}
+					}
+				}
+			}
+		}
+	}
+	immediate = {
+		set_global_flag = RRC_expand
+	}
+	option = {
+		name = rcmjapan.34.a
+		ai_chance = { factor = 100 }
+		if = {
+			limit = { NOT = { has_completed_focus = reorganized_chi_puppet } }
+			every_owned_state = {
+				limit = {
+					is_controlled_by = JAP
+					is_core_of = EHB
+					NOT = {
+						HPC = {
+							is_subject_of = JAP
+						}
+					}
+				}
+				EHB = { transfer_state = PREV }
+			}
+			every_owned_state = {
+				limit = {
+					is_controlled_by = JAP
+					HPC = {
+						is_subject_of = JAP
+					}
+					EHB = {
+						NOT = {
+							has_country_flag = im_jnc_now
+						}
+					}
+					is_core_of = HPC
+				}
+				HPC = { transfer_state = PREV }
+			}
+			every_owned_state = {
+				limit = {
+					is_controlled_by = JAP
+					is_core_of = RFM
+				}
+				RFM = { transfer_state = PREV }
+			}
+			else = {
+				if = {
+					limit = {
+						EHB = { has_country_flag = im_rrc_now }
+					}
+					every_owned_state = {
+						limit = {
+							is_controlled_by = JAP
+							is_core_of = EHB
+						}
+						EHB = { transfer_state = PREV }
+					}
+					else = {
+						if = {
+							limit = {
+								HPC = { has_country_flag = im_rrc_now }
+							}
+							every_owned_state = {
+								limit = {
+									is_controlled_by = JAP
+									is_core_of = HPC
+								}
+								HPC = { transfer_state = PREV }
+							}
+							else = {
+								every_owned_state = {
+									limit = {
+										is_controlled_by = JAP
+										is_core_of = RFM
+									}
+									RFM = { transfer_state = PREV }
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		every_owned_state = {
+			limit = {
+				is_controlled_by = JAP
+				OR = {
+					is_core_of = ECA
+					is_claimed_by = ECA
+				}
+			}
+			ECA = { transfer_state = PREV }
+		}
+		country_event = { hours = 3 id = rcmjapan.535 }
+		#ECA = { country_event = { hours = 3 id = rcmjapan.736 } }
+	}
+	option = {
+		name = rcmjapan.34.b
+		ai_chance = { factor = 0 }
+		country_event = { hours = 3 id = rcmjapan.535 }
+	}
+}
+#Est. SIK puppet
+country_event = {
+	id = rcmjapan.35
+	title = rcmjapan.35.t
+	desc = rcmjapan.35.d
+	picture = GFX_report_event_chinese_japanese_handshake
+	trigger = {
+		tag = JAP
+		NOT = { country_exists = SIK }
+		NOT = {
+			any_other_country = {
+				OR = {
+					is_warlord = yes
+					has_war_with = CHI
+					has_war_with = PRC
+				}
+				NOT = {
+					ROOT = {
+						has_war_with = PREV
+					}
+				}
+			}
+		}
+		287 = { is_controlled_by_jap_or_its_puppet = yes }
+		617 = { is_controlled_by_jap_or_its_puppet = yes }
+		618 = { is_controlled_by_jap_or_its_puppet = yes }
+		758 = { is_controlled_by_jap_or_its_puppet = yes }
+		759 = { is_controlled_by_jap_or_its_puppet = yes }
+		619 = { is_controlled_by_jap_or_its_puppet = yes }
+		NOT = { has_global_flag = no_sik_flag }
+	}
+	mean_time_to_happen = {
+		days = 2
+	}
+	option = {
+		name = rcmjapan.35.a
+		ai_chance = { factor = 100 }		
+		SIK = {
+			transfer_state = 287
+			transfer_state = 617
+			transfer_state = 618
+			transfer_state = 619
+			transfer_state = 758
+			transfer_state = 759
+			add_state_core = 287
+			add_state_core = 617
+			add_state_core = 618
+			add_state_core = 619
+			add_state_core = 758
+			add_state_core = 759
+		}
+		puppet = SIK
+		hidden_effect = {
+			SIK = {
+				set_political_party = { ideology = neutrality popularity = 25 }
+				set_political_party = { ideology = fascism popularity = 75 }
+				set_politics = { ruling_party = fascism elections_allowed = no }
+			}
+		}
+	}
+	option = {
+		name = rcmjapan.35.b
+		ai_chance = { factor = 0 }
+		hidden_effect = {
+			set_global_flag = no_sik_flag
+		}
+	}
+}
+country_event = {
+	id = rcmjapan.535
+	title = rcmjapan.535.t
+	desc = rcmjapan.535.d
+	picture = GFX_report_event_chinese_japanese_handshake
+	trigger = {
+		tag = JAP
+		NOT = { country_exists = XSM }
+		NOT = {
+			any_other_country = {
+				OR = {
+					is_warlord = yes
+					has_war_with = CHI
+					has_war_with = PRC
+				}
+				NOT = {
+					ROOT = {
+						has_war_with = PREV
+					}
+				}
+				
+			}
+		}
+		283 = { is_controlled_by_jap_or_its_puppet = yes }
+		760 = { is_controlled_by_jap_or_its_puppet = yes }
+		616 = { is_controlled_by_jap_or_its_puppet = yes }
+		604 = { is_controlled_by_jap_or_its_puppet = yes }
+		NOT = { has_global_flag = no_xsm_flag }
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	immediate = { hidden_effect = { XSM = { set_cosmetic_tag = XSM_HUI } } }
+	option = {
+		name = rcmjapan.535.a
+		ai_chance = { factor = 100 }
+		XSM = {
+			transfer_state = 283
+			transfer_state = 760
+			transfer_state = 616
+			transfer_state = 604
+			add_state_core = 283
+			add_state_core = 760
+			add_state_core = 616
+			add_state_core = 604
+		}
+		puppet = XSM
+		hidden_effect = {
+			XSM = {
+				set_political_party = { ideology = neutrality popularity = 25 }
+				set_political_party = { ideology = fascism popularity = 75 }
+				set_politics = { ruling_party = fascism elections_allowed = no }
+				create_country_leader = {
+					name = "Ma Hongkui"
+					desc = ""
+					picture = "Portrait_Xibei_San_Ma_Ma_Hongkui.dds"
+					expire = "1975.7.1"
+					ideology = collaborationism
+					traits = {
+						#
+					}
+				}
+			}
+			country_event = { hours = 3 id = rcmjapan.35 }
+		}
+	}
+	option = {
+		name = rcmjapan.535.b
+		ai_chance = { factor = 0 }
+		hidden_effect = {
+			set_global_flag = no_xsm_flag
+			country_event = { hours = 3 id = rcmjapan.35 }
+		}
+	}
+}
+#####################################################################
+########################################################
+####1936 election#####
+########################################################
+country_event = {
+	id = rcmjapan.36
+	title = rcmjapan.36.t
+	desc = rcmjapan.36.d
+	picture = GFX_report_event_election_jap
+	is_triggered_only = yes
+	trigger = {
+		tag = JAP
+		date > 1936.1.1
+		date < 1936.5.1
+	}
+	immediate = {
+		hidden_effect = {
+			country_event = { days = 8 id = rcmjapan.39 }
+		}
+	}
+	option = {
+		name = rcmjapan.36.a
+		if = {
+			limit = {
+				is_historical_focus_on = yes
+			}
+			country_event = { days = 2 id = rcmjapan.37 }
+		}
+		if = {
+			limit = {
+				is_historical_focus_on = no
+			}
+			random_list = {
+				60 = { country_event = { days = 2 id = rcmjapan.37 } }
+				40 = { country_event = { days = 2 id = rcmjapan.38 } }
+			}
+		}
+	}
+}
+country_event = {
+	id = rcmjapan.37
+	title = rcmjapan.37.t
+	desc = rcmjapan.37.d
+	picture = GFX_report_event_hitler_handshake
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			set_party_name = {
+				ideology = democratic
+				long_name = JAP_democratic_party_min
+				name = JAP_democratic_party_min
+			}		
+			create_country_leader = {
+				name = "Machida Chuji"
+				desc = ""
+				picture = "Portrait_Japan_Machida_Chuji.dds"
+				expire = "1989.1.1"
+				ideology = liberalism
+				traits = {
+					#
+				}
+			}
+		}
+	}
+	option = {
+		name = rcmjapan.37.a
+		set_country_flag = feb26_is_near
+	}
+}
+country_event = {
+	id = rcmjapan.38
+	title = rcmjapan.38.t
+	desc = rcmjapan.38.d
+	picture = GFX_report_event_hitler_handshake
+	is_triggered_only = yes
+	option = {
+		name = rcmjapan.38.a
+		set_country_flag = feb26_is_near
+	}
+}
+#######226#############
+country_event = {
+	id = rcmjapan.39
+	title = rcmjapan.39.t
+	desc = rcmjapan.39.d
+	picture = GFX_report_event_226
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = JAP
+		date < 1936.2.30
+		#has_country_flag = feb26_is_near
+	}
+	immediate = {
+		hidden_effect ={
+			#news_event = { days = 1 id = news.402 }#226
+		}
+	}
+	option = {#crack down the rebels
+		name = rcmjapan.39.a
+		ai_chance = {
+			base = 70
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		custom_effect_tooltip = crack_down
+		hidden_effect = {
+			country_event = { days = 2 id = rcmjapan.40 }
+			set_country_flag = kodoha_won_event
+			news_event = { days = 1 id = news.402 }
+		}
+	}
+	option = {#reshuffle cabinet
+		name = rcmjapan.39.b
+		ai_chance = {
+			base = 30
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		custom_effect_tooltip = reshuffle_cabinet
+		hidden_effect = {
+			country_event = { days = 3 id = rcmjapan.41 }
+			set_country_flag = kodoha_failed_event			
+			news_event = { days = 2 id = news.401 } #okada assassinated
+			news_event = { days = 1 id = news.9402 }
+		}
+	}
+}
+#tsha wins
+country_event = {
+	id = rcmjapan.40
+	title = rcmjapan.40.t
+	desc = rcmjapan.40.d
+	picture = GFX_report_event_japanese_soldiers_02
+	is_triggered_only = yes
+	option = {
+		name = rcmjapan.40.a
+		create_country_leader = {
+			name = "Koki Hirota"
+			desc = ""
+			picture = "Portrait_Japan_Koki_Hirota.dds"
+			expire = "1989.1.1"
+			ideology = moderatism
+			traits = {
+				#
+			}
+		}
+		hidden_effect ={
+			set_global_flag = kodoha_failed
+		}
+	}
+}
+#kodoha wins
+country_event = {
+	id = rcmjapan.41
+	title = rcmjapan.41.t
+	desc = rcmjapan.41.d
+	picture = GFX_report_event_japanese_transport_soldiers
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			create_country_leader = {
+				name = "Jinzaburo Masaki"
+				desc = ""
+				picture = "Portrait_Japan_Jinzaburo_Masaki.dds"
+				expire = "1989.1.1"
+				ideology = fascism_ideology
+				traits = {
+					#
+				}
+			}
+			set_party_name = {
+				ideology = fascism
+				long_name = JAP_fascism_party_kod
+				name = JAP_fascism_party_kod
+			}
+			set_cosmetic_tag = JAP_KOH
+			set_political_party = { ideology = fascism popularity = 40 }
+			set_politics = { ruling_party = fascism elections_allowed = no }
+		}
+	}
+	option = {
+		name = rcmjapan.41.a
+		hidden_effect ={
+			set_global_flag = kodoha_won			
+		}
+	}
+}
+#indochina released
+country_event = {
+	id = rcmjapan.100
+	hidden = yes
+	trigger = {
+		tag = FRA
+		NOT = { FRA = { controls_state = 16 } }
+		FIC = { is_puppet_of = FRA }
+	}
+	immediate = {
+		hidden_effect = {
+			end_puppet = FIC
+			ENG = {
+				remove_from_faction = FIC
+			}
+			FIC = {
+				set_rule = { can_join_factions = no }
+			}
+			SIA = {
+				annex_country = { target = FIC }
+				release = FIC
+			}
+			FIC = {
+				load_oob = FIC_1939
+				load_oob = FIC_1939
+			}
+		}
+	}
+	option = {
+	}
+}
+country_event = {
+	id = rcmjapan.101
+	title = rcmjapan.101.t
+	desc = rcmjapan.101.d
+	picture = GFX_report_event_chinese_soldiers_running
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rcmjapan.101.a
+		hidden_effect = {
+			country_event = { days = 5 id = news.1 }
+			country_event = { days = 15 id = news.1302 }
+		}
+		JAP = {
+			give_guarantee = HPC		
+		}
+	}
+	
+}
+#the great purge
+country_event = {
+	id = rcmjapan.42
+	title = rcmjapan.42.t
+	desc = rcmjapan.42.d
+	picture = GFX_report_event_japanese_officers
+	is_triggered_only = yes
+	option = {
+		name = rcmjapan.42.a
+	}
+}
+country_event = {
+	id = rcmjapan.43
+	title = rcmjapan.43.t
+	desc = rcmjapan.43.d
+	fire_only_once = yes
+	picture = GFX_report_event_japanese_officers
+	trigger = {
+		tag = JAP
+		NOT = { has_completed_focus = kodoha_purge }
+		focus_progress = {
+			focus = kodoha_purge
+			progress > 0.15
+		}
+	}
+	option = {
+		name = rcmjapan.43.a
+		custom_effect_tooltip = remove_political_advisor
+		show_ideas_tooltip = hideki_tojo		
+		show_ideas_tooltip = hisaichi_terauchi
+		show_ideas_tooltip = makino_nobuaki
+		show_ideas_tooltip = yoshijiro_umezu
+		show_ideas_tooltip = hajime_sugiyama
+		show_ideas_tooltip = osami_nagano
+		show_ideas_tooltip = isoroku_yamamoto		
+		set_country_flag = purged_by_kodoha
+		add_political_power = 150
+		add_national_unity = -0.15
+		add_timed_idea = { days = 450 idea = officer_purged_jap }
+		hidden_effect = {
+			remove_ideas = hideki_tojo
+			remove_ideas = hisaichi_terauchi
+			remove_ideas = makino_nobuaki
+			remove_ideas = yoshijiro_umezu
+			remove_ideas = hajime_sugiyama
+			remove_ideas = osami_nagano
+			remove_ideas = isoroku_yamamoto
+			remove_unit_leader = 2001
+			remove_unit_leader = 2002
+			remove_unit_leader = 2003
+		}
+	}
+}
+#prince trial
+country_event = {
+	id = rcmjapan.44
+	title = rcmjapan.44.t
+	desc = rcmjapan.44.d
+	fire_only_once = yes
+	picture = GFX_report_event_prince
+	trigger = {
+		tag = JAP
+		NOT = { has_completed_focus = kodoha_purge }
+		focus_progress = {
+			focus = kodoha_purge
+			progress > 0.4
+		}
+	}
+	option = {
+		name = rcmjapan.44.a
+		custom_effect_tooltip = remove_political_advisor
+		show_ideas_tooltip = kanin_kotohito
+		custom_effect_tooltip = prince_will_be_purged
+		add_political_power = 200
+		add_national_unity = -0.1
+		add_timed_idea = { days = 350 idea = prince_purged_jap }
+		custom_effect_tooltip = unity_recover_over_time
+		hidden_effect = {
+			set_country_flag = prince_purged_by_kodoha
+			remove_ideas = kanin_kotohito
+		}
+	}
+	option = {
+		name = rcmjapan.44.b
+		custom_effect_tooltip = remove_political_advisor
+		show_ideas_tooltip = kanin_kotohito
+		custom_effect_tooltip = prince_will_be_put_on_house_arrest
+		add_political_power = 120
+		add_national_unity = -0.08
+		hidden_effect = {
+			set_country_flag = house_arrest_prince
+			remove_ideas = kanin_kotohito
+		}
+	}
+	option = {
+		name = rcmjapan.44.c
+		add_political_power = -150
+	}
+}
+country_event = {
+	id = rcmjapan.45
+	title = rcmjapan.45.t
+	desc = rcmjapan.45.d
+	fire_only_once = yes
+	picture = GFX_report_event_last_genro
+	trigger = {
+		tag = JAP
+		NOT = { has_completed_focus = kodoha_purge }
+		focus_progress = {
+			focus = kodoha_purge
+			progress > 0.65
+		}
+	}
+	option = {
+		name = rcmjapan.45.a
+		custom_effect_tooltip = remove_political_advisor
+		show_ideas_tooltip = saionji_kinmochi
+		custom_effect_tooltip = genro_will_be_purged
+		add_political_power = 200
+		add_national_unity = -0.1
+		add_timed_idea = { days = 350 idea = genro_purged_jap }
+		custom_effect_tooltip = unity_recover_over_time
+		hidden_effect = {
+			set_country_flag = genro_purged_by_kodoha
+			remove_ideas = saionji_kinmochi
+		}
+	}
+	option = {
+		name = rcmjapan.45.b
+		custom_effect_tooltip = remove_political_advisor
+		show_ideas_tooltip = saionji_kinmochi
+		custom_effect_tooltip = genro_will_be_put_on_house_arrest
+		add_political_power = 120
+		add_national_unity = -0.08
+		hidden_effect = {
+			set_country_flag = house_arrest_genro
+			remove_ideas = saionji_kinmochi
+		}
+	}
+	option = {
+		name = rcmjapan.45.c
+		add_political_power = -150
+	}
+}
+#showa_refuse
+country_event = {
+	id = rcmjapan.46
+	title = rcmjapan.46.t
+	desc = rcmjapan.46.d
+	picture = GFX_report_event_refused
+	fire_only_once = yes
+	trigger = {
+		tag = JAP
+		NOT = { has_completed_focus = showa_restoration_focus }
+		has_country_flag = emperor_refuses
+		focus_progress = {
+			focus = showa_restoration_focus
+			progress > 0.7
+		}
+	}
+	immediate = {
+		set_country_flag = emperor_refused
+		remove_ideas = showa_restoration
+	}
+	option = {
+		name = rcmjapan.46.a
+		remove_ideas = emperor_showa
+		add_national_unity = -0.35
+		add_political_power = -250		
+	}
+}
+#emperor's mind
+country_event = {
+	id = rcmjapan.47
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		tag = JAP
+		NOT = { has_completed_focus = showa_restoration_focus }
+		focus_progress = {
+			focus = showa_restoration_focus
+			progress > 0.2
+		}
+	}
+	immediate = {
+		#if = {
+		#	limit = {
+		#		OR = {
+		#			is_historical_focus_on = yes
+		#			AND = {
+		#				has_country_flag = genro_purged_by_kodoha
+		#				has_country_flag = prince_purged_by_kodoha
+		#			}
+		#		}
+		#	}
+		#	set_country_flag = emperor_refuses
+		#}
+		if = {
+			limit = {
+				#NOT = { is_historical_focus_on = yes }
+				OR = {
+					has_country_flag = genro_purged_by_kodoha
+					has_country_flag = prince_purged_by_kodoha
+				}
+				NOT = {
+					AND = {
+						has_country_flag = genro_purged_by_kodoha
+						has_country_flag = prince_purged_by_kodoha
+					}
+				}
+				NOT = {
+					OR = {
+						has_idea = saionji_kinmochi
+						has_idea = kanin_kotohito
+					}
+				}
+			}
+			random_list = {
+				75 = { set_country_flag = emperor_refuses }
+				25 = { set_global_flag = nothing_here }
+			}
+		}
+		if = {
+			limit = {
+				#NOT = { is_historical_focus_on = yes }
+				OR = {
+					has_country_flag = genro_purged_by_kodoha
+					has_country_flag = prince_purged_by_kodoha
+				}
+				NOT = {
+					AND = {
+						has_country_flag = genro_purged_by_kodoha
+						has_country_flag = prince_purged_by_kodoha
+					}
+				}
+				OR = {
+					has_idea = saionji_kinmochi
+					has_idea = kanin_kotohito
+				}
+			}
+			random_list = {
+				50 = { set_country_flag = emperor_refuses }
+				50 = { set_global_flag = nothing_here }
+			}
+		}
+		if = {
+			limit = {
+				#NOT = { is_historical_focus_on = yes }
+				NOT = {
+					OR = {
+						has_country_flag = genro_purged_by_kodoha
+						has_country_flag = prince_purged_by_kodoha
+					}
+				}
+				OR = {
+					has_idea = saionji_kinmochi
+					has_idea = kanin_kotohito
+				}
+				NOT = {
+					AND = {
+						has_idea = saionji_kinmochi
+						has_idea = kanin_kotohito
+					}
+				}
+			}
+			random_list = {
+				30 = { set_country_flag = emperor_refuses }
+				70 = { set_global_flag = nothing_here }
+			}
+		}
+		if = {
+			limit = {
+				#NOT = { is_historical_focus_on = yes }
+				NOT = {
+					OR = {
+						has_country_flag = genro_purged_by_kodoha
+						has_country_flag = prince_purged_by_kodoha
+					}
+				}
+				AND = {
+					has_idea = saionji_kinmochi
+					has_idea = kanin_kotohito
+				}
+			}
+			random_list = {
+				0 = { set_country_flag = emperor_refuses }
+				100 = { set_global_flag = nothing_here }
+			}
+		}
+	}
+	option = {
+	}
+}
+#USA befriend
+country_event = {
+	id = rcmjapan.48
+	title = rcmjapan.48.t
+	desc = rcmjapan.48.d
+	picture = GFX_report_event_japanese_officers
+	is_triggered_only = yes
+	option = { #accepts
+		ai_chance = {
+			factor = 100
+		}
+		name = rcmjapan.48.a
+		JAP = { country_event = { days = 5 id = rcmjapan.49 } }
+		USA = { create_faction = trans_pacific_union }
+		USA = {
+			add_to_faction = JAP
+		}
+	}
+	option = { #no
+		name = rcmjapan.48.b
+		ai_chance = {
+			factor = 0
+		}
+		JAP = { country_event = { days = 5 id = rcmjapan.50 } }
+	}
+}
+#usa accepts (jap)
+country_event = {
+	id = rcmjapan.49
+	title = rcmjapan.49.t
+	desc = rcmjapan.49.d
+	picture = GFX_report_event_german_advisors_remain
+	is_triggered_only = yes
+	option = {
+		name = rcmjapan.49.a
+	}
+}
+#usa refuse (jap)
+country_event = {
+	id = rcmjapan.50
+	title = rcmjapan.50.t
+	desc = rcmjapan.50.d
+	picture = GFX_report_event_FDR_speech
+	is_triggered_only = yes
+	option = {
+		name = rcmjapan.50.a
+	}
+}
+#Uk befriend
+country_event = {
+	id = rcmjapan.51
+	title = rcmjapan.51.t
+	desc = rcmjapan.51.d
+	picture = GFX_report_event_japanese_officers
+	is_triggered_only = yes
+	option = { #accepts
+		name = rcmjapan.51.a
+		ai_chance = {
+			factor = 100
+		}
+		JAP = { country_event = { days = 5 id = rcmjapan.52 } }
+		ENG = {
+			add_to_faction = JAP
+		}
+	}
+	option = { #no
+		name = rcmjapan.51.b
+		ai_chance = {
+			factor = 0
+		}
+		JAP = { country_event = { days = 5 id = rcmjapan.53 } }
+	}
+}
+#ENG accepts (jap)
+country_event = {
+	id = rcmjapan.52
+	title = rcmjapan.52.t
+	desc = rcmjapan.52.d
+	picture = GFX_report_event_german_advisors_remain
+	is_triggered_only = yes
+	option = {
+		name = rcmjapan.52.a
+	}
+}
+#ENG refuse (jap)
+country_event = {
+	id = rcmjapan.53
+	title = rcmjapan.53.t
+	desc = rcmjapan.53.d
+	picture = GFX_report_event_degaulle_churchill
+	is_triggered_only = yes
+	option = {
+		name = rcmjapan.53.a
+	}
+}
+#SOV
+country_event = {
+	id = rcmjapan.54
+	title = rcmjapan.54.t
+	desc = rcmjapan.54.d
+	picture = GFX_report_event_japanese_officers
+	is_triggered_only = yes
+	option = { #accepts
+		name = rcmjapan.54.a
+		ai_chance = {
+			factor = 100
+		}
+		JAP = { country_event = { days = 5 id = rcmjapan.52 } }
+		SOV = {
+			add_to_faction = JAP
+		}
+	}
+	option = { #no
+		name = rcmjapan.54.b
+		ai_chance = {
+			factor = 0
+		}
+		JAP = { country_event = { days = 5 id = rcmjapan.53 } }
+	}
+}
+#SOV accepts (jap)
+country_event = {
+	id = rcmjapan.55
+	title = rcmjapan.55.t
+	desc = rcmjapan.55.d
+	picture = GFX_report_event_german_advisors_remain
+	is_triggered_only = yes
+	option = {
+		name = rcmjapan.55.a
+	}
+}
+#SOV refuse (jap)
+country_event = {
+	id = rcmjapan.56
+	title = rcmjapan.56.t
+	desc = rcmjapan.56.d
+	picture = GFX_report_event_degaulle_churchill
+	is_triggered_only = yes
+	option = {
+		name = rcmjapan.56.a
+	}
+}
+#Mao
+country_event = {
+	id = rcmjapan.57
+	title = rcmjapan.57.t
+	desc = rcmjapan.57.d
+	picture = GFX_report_event_japanese_officers
+	is_triggered_only = yes
+	option = { #accepts
+		name = rcmjapan.57.a
+		ai_chance = {
+			factor = 100
+		}
+		JAP = { country_event = { days = 5 id = rcmjapan.52 } }
+		PRC = { create_faction = pan_pacific_communist_front }
+		PRC = {
+			add_to_faction = JAP
+		}
+	}
+	option = { #no
+		name = rcmjapan.57.b
+		ai_chance = {
+			factor = 0
+		}
+		JAP = { country_event = { days = 5 id = rcmjapan.53 } }
+	}
+}
+#PRC accepts (jap)
+country_event = {
+	id = rcmjapan.58
+	title = rcmjapan.58.t
+	desc = rcmjapan.58.d
+	picture = GFX_report_event_german_advisors_remain
+	is_triggered_only = yes
+	option = {
+		name = rcmjapan.58.a
+	}
+}
+#PRC refuse (jap)
+country_event = {
+	id = rcmjapan.59
+	title = rcmjapan.59.t
+	desc = rcmjapan.59.d
+	picture = GFX_report_event_degaulle_churchill
+	is_triggered_only = yes
+	option = {
+		name = rcmjapan.59.a
+	}
+}
+######REVISE HIROTA SANGENSOKU
+##jap->china
+country_event = {
+	id = rcmjapan.60
+	title = rcmjapan.60.t
+	desc = rcmjapan.60.d
+	picture = GFX_report_event_china_flag
+	is_triggered_only = yes
+	option = {#give east hebei
+		name = rcmjapan.60.a
+		ai_chance = {
+			factor = 30
+		}
+		custom_effect_tooltip = pan_asianist_chance
+		custom_effect_tooltip = revise_ehb
+		set_global_flag = revise_ehb_flag
+		CHI = { country_event = { days = 5 id = rcmjapan.61 } }
+		custom_effect_tooltip = if_they_accept_red
+		effect_tooltip = {
+			CHI = {
+				annex_country = { target = EHB transfer_troops = yes }
+				if = {
+					limit = {
+						has_dlc = "Together for Victory"
+					}
+					set_autonomy = {
+						target = HPC
+						autonomous_state = autonomy_integrated_puppet
+					}
+					else = {
+						puppet = HPC
+					}
+				}
+				remove_state_core = 612
+				remove_state_core = 757
+				remove_state_core = 610
+				remove_state_core = 715
+				remove_state_core = 716
+				remove_state_core = 328
+				remove_state_core = 717
+				remove_state_core = 714
+				remove_state_core = 747
+				#add_ideas = sino_japanese_alliance
+				#remove_opinion_modifier = {
+				#	target = JAP
+				#	modifier = hostile_status
+				#}
+				#add_opinion_modifier = { target = JAP modifier = sino_japanese_alliance_opinion }
+			}
+			
+			JAP = {
+				remove_opinion_modifier = {
+					target = CHI
+					modifier = hostile_status
+				}
+				#dismantle_faction = yes
+				create_faction = chi_man_bloc
+				every_country = {
+					limit = {
+						is_puppet_of = JAP
+					}
+					JAP = {
+						add_to_faction = PREV
+					}
+				}
+				add_to_faction = CHI			
+			}
+		}
+		custom_effect_tooltip = if_they_refuse_red
+		effect_tooltip = {
+			add_political_power = -200
+		}
+	}
+	option = {#give taiwan east hebei
+		name = rcmjapan.60.b
+		ai_chance = {
+			factor = 40
+		}
+		custom_effect_tooltip = pan_asianist_chance
+		custom_effect_tooltip = revise_ehb_taiwan
+		set_global_flag = revise_ehb_taiwan_flag
+		CHI = { country_event = { days = 5 id = rcmjapan.62 } }
+		custom_effect_tooltip = if_they_accept_red
+		effect_tooltip = {
+			CHI = {
+				annex_country = { target = EHB transfer_troops = yes }
+				transfer_state = 524
+				if = {
+					limit = {
+						has_dlc = "Together for Victory"
+					}
+					set_autonomy = {
+						target = HPC
+						autonomous_state = autonomy_integrated_puppet
+					}
+					else = {
+						puppet = HPC
+					}
+				}
+				remove_state_core = 612
+				remove_state_core = 757
+				remove_state_core = 610
+				remove_state_core = 715
+				remove_state_core = 716
+				remove_state_core = 328
+				remove_state_core = 717
+				remove_state_core = 714
+				remove_state_core = 747
+				#add_ideas = sino_japanese_alliance
+				#remove_opinion_modifier = {
+				#	target = JAP
+				#	modifier = hostile_status
+				#}
+				#add_opinion_modifier = { target = JAP modifier = sino_japanese_alliance_opinion }
+			}
+			
+			JAP = {
+				remove_opinion_modifier = {
+					target = CHI
+					modifier = hostile_status
+				}
+				#dismantle_faction = yes
+				create_faction = chi_man_bloc
+				every_country = {
+					limit = {
+						is_puppet_of = JAP
+					}
+					JAP = {
+						add_to_faction = PREV
+					}
+				}
+				add_to_faction = CHI	
+			}
+		}
+		custom_effect_tooltip = if_they_refuse_red
+		effect_tooltip = {
+			add_political_power = -200
+		}
+	}
+	option = {#give taiwan east hebei kwangtung
+		name = rcmjapan.60.c
+		ai_chance = {
+			factor = 30
+		}
+		custom_effect_tooltip = pan_asianist_chance
+		custom_effect_tooltip = revise_ehb_taiwan_kt
+		set_global_flag = revise_ehb_taiwan_kt_flag
+		CHI = { country_event = { days = 5 id = rcmjapan.63 } }
+		custom_effect_tooltip = if_they_accept_red
+		effect_tooltip = {
+			CHI = {
+				annex_country = { target = EHB transfer_troops = yes }
+				transfer_state = 524
+				transfer_state = 747
+				if = {
+					limit = {
+						has_dlc = "Together for Victory"
+					}
+					set_autonomy = {
+						target = HPC
+						autonomous_state = autonomy_integrated_puppet
+					}
+					else = {
+						puppet = HPC
+					}
+				}
+				remove_state_core = 612
+				remove_state_core = 757
+				remove_state_core = 610
+				remove_state_core = 715
+				remove_state_core = 716
+				remove_state_core = 328
+				remove_state_core = 717
+				remove_state_core = 714
+				#add_ideas = sino_japanese_alliance
+				#remove_opinion_modifier = {
+				#	target = JAP
+				#	modifier = hostile_status
+				#}
+				#add_opinion_modifier = { target = JAP modifier = sino_japanese_alliance_opinion }
+			}
+			
+			JAP = {
+				remove_opinion_modifier = {
+					target = CHI
+					modifier = hostile_status
+				}
+				#dismantle_faction = yes
+				create_faction = chi_man_bloc
+				every_country = {
+					limit = {
+						is_puppet_of = JAP
+					}
+					JAP = {
+						add_to_faction = PREV
+					}
+				}
+				add_to_faction = CHI		
+			}
+		}
+		custom_effect_tooltip = if_they_refuse_red
+		effect_tooltip = {
+			add_political_power = -200
+		}
+	}
+	option = {#give taiwan east hebei kwangtung eca(to hpc)
+		name = rcmjapan.60.e
+		ai_chance = {
+			factor = 10
+		}
+		custom_effect_tooltip = pan_asianist_chance
+		custom_effect_tooltip = revise_ehb_taiwan_kt_eca
+		set_global_flag = revise_ehb_taiwan_kt_eca_flag
+		CHI = { country_event = { days = 5 id = rcmjapan.64 } }
+		custom_effect_tooltip = if_they_accept_red
+		effect_tooltip = {
+			CHI = {
+				annex_country = { target = EHB transfer_troops = yes }
+				transfer_state = 524
+				transfer_state = 747
+				set_autonomy = {
+					target = HPC
+					autonomous_state = autonomy_integrated_puppet
+				}
+				remove_state_core = 610
+				remove_state_core = 715
+				remove_state_core = 716
+				remove_state_core = 328
+				remove_state_core = 717
+				remove_state_core = 714
+			}
+			if = {
+				limit = { country_exists = ECA }
+				HPC = { annex_country = { target = ECA transfer_troops = no } }
+			}
+			JAP = {
+				remove_opinion_modifier = {
+					target = CHI
+					modifier = hostile_status
+				}
+				#dismantle_faction = yes
+				create_faction = chi_man_bloc
+				every_country = {
+					limit = {
+						is_puppet_of = JAP
+					}
+					JAP = {
+						add_to_faction = PREV
+					}
+				}
+				add_to_faction = CHI		
+			}
+		}
+		custom_effect_tooltip = if_they_refuse_red
+		effect_tooltip = {
+			add_political_power = -200
+		}
+	}
+}
+#give east hebei
+country_event = {
+	id = rcmjapan.61
+	title = rcmjapan.61.t
+	desc = rcmjapan.61.d
+	picture = GFX_report_event_japanese_chinese_surrender
+	is_triggered_only = yes
+	option = { #accept
+		name = rcmjapan.61.a
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 60
+				OR = {
+					CHI = { has_idea = appeasement_policy }
+					JAP = { has_idea = ikki_kita }
+					JAP = { has_idea = kanji_ishiwara }
+				}
+				NOT = {
+					OR = {
+						AND = {
+							CHI = { has_idea = appeasement_policy }
+							JAP = { has_idea = ikki_kita }
+						}
+						AND = {
+							JAP = { has_idea = ikki_kita }
+							JAP = { has_idea = kanji_ishiwara }
+						}
+						AND = {
+							CHI = { has_idea = appeasement_policy }
+							JAP = { has_idea = kanji_ishiwara }
+						}
+					}
+				}
+				NOT = {
+					AND ={
+						CHI = { has_idea = appeasement_policy }
+						JAP = { has_idea = ikki_kita }
+						JAP = { has_idea = kanji_ishiwara }
+					}
+				}
+			}
+			modifier = {
+				factor = 70
+				OR = {
+					AND = {
+						CHI = { has_idea = appeasement_policy }
+						JAP = { has_idea = ikki_kita }
+					}
+					AND = {
+						JAP = { has_idea = ikki_kita }
+						JAP = { has_idea = kanji_ishiwara }
+					}
+					AND = {
+						CHI = { has_idea = appeasement_policy }
+						JAP = { has_idea = kanji_ishiwara }
+					}
+				}
+				NOT = {
+					AND ={
+						CHI = { has_idea = appeasement_policy }
+						JAP = { has_idea = ikki_kita }
+						JAP = { has_idea = kanji_ishiwara }
+					}
+				}
+			}
+			modifier = {
+				factor = 80
+				AND ={
+					CHI = { has_idea = appeasement_policy }
+					JAP = { has_idea = ikki_kita }
+					JAP = { has_idea = kanji_ishiwara }
+				}
+			}
+		}
+		JAP = { country_event = { days = 1 id = rcmjapan.65 } }
+		effect_tooltip = {
+			CHI = {
+				annex_country = { target = EHB transfer_troops = yes }
+				if = {
+					limit = {
+						has_dlc = "Together for Victory"
+					}
+					set_autonomy = {
+						target = HPC
+						autonomous_state = autonomy_integrated_puppet
+					}
+					else = {
+						puppet = HPC
+					}
+				}
+				remove_state_core = 612
+				remove_state_core = 757
+				remove_state_core = 610
+				remove_state_core = 715
+				remove_state_core = 716
+				remove_state_core = 328
+				remove_state_core = 717
+				remove_state_core = 714
+				remove_state_core = 747
+				add_ideas = sino_japanese_alliance
+				remove_opinion_modifier = {
+					target = JAP
+					modifier = hostile_status
+				}
+				add_opinion_modifier = { target = JAP modifier = sino_japanese_alliance_opinion }
+			}
+			
+			JAP = {
+				remove_opinion_modifier = {
+					target = CHI
+					modifier = hostile_status
+				}
+				#dismantle_faction = yes
+				create_faction = chi_man_bloc
+				every_country = {
+					limit = {
+						is_puppet_of = JAP
+					}
+					JAP = {
+						add_to_faction = PREV
+					}
+				}
+				add_to_faction = CHI			
+			}
+		}
+	}
+	option = {
+		name = rcmjapan.61.b
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 40
+				OR = {
+					CHI = { has_idea = appeasement_policy }
+					JAP = { has_idea = ikki_kita }
+					JAP = { has_idea = kanji_ishiwara }
+				}
+				NOT = {
+					OR = {
+						AND = {
+							CHI = { has_idea = appeasement_policy }
+							JAP = { has_idea = ikki_kita }
+						}
+						AND = {
+							JAP = { has_idea = ikki_kita }
+							JAP = { has_idea = kanji_ishiwara }
+						}
+						AND = {
+							CHI = { has_idea = appeasement_policy }
+							JAP = { has_idea = kanji_ishiwara }
+						}
+					}
+				}
+				NOT = {
+					AND ={
+						CHI = { has_idea = appeasement_policy }
+						JAP = { has_idea = ikki_kita }
+						JAP = { has_idea = kanji_ishiwara }
+					}
+				}
+			}
+			modifier = {
+				factor = 30
+				OR = {
+					AND = {
+						CHI = { has_idea = appeasement_policy }
+						JAP = { has_idea = ikki_kita }
+					}
+					AND = {
+						JAP = { has_idea = ikki_kita }
+						JAP = { has_idea = kanji_ishiwara }
+					}
+					AND = {
+						CHI = { has_idea = appeasement_policy }
+						JAP = { has_idea = kanji_ishiwara }
+					}
+				}
+				NOT = {
+					AND ={
+						CHI = { has_idea = appeasement_policy }
+						JAP = { has_idea = ikki_kita }
+						JAP = { has_idea = kanji_ishiwara }
+					}
+				}
+			}
+			modifier = {
+				factor = 20
+				AND ={
+					CHI = { has_idea = appeasement_policy }
+					JAP = { has_idea = ikki_kita }
+					JAP = { has_idea = kanji_ishiwara }
+				}
+			}
+		}
+		JAP = { country_event = { id = rcmjapan.66 } }
+		hidden_effect = {
+			JAP = {
+				set_country_flag = china_refuses
+			}
+		}
+	}
+}
+#give taiwan east hebei
+country_event = {
+	id = rcmjapan.62
+	title = rcmjapan.62.t
+	desc = rcmjapan.62.d
+	picture = GFX_report_event_japanese_chinese_surrender
+	is_triggered_only = yes
+	option = { #accept
+		name = rcmjapan.62.a
+		ai_chance = {
+			base = 60
+			modifier = {
+				factor = 70
+				OR = {
+					CHI = { has_idea = appeasement_policy }
+					JAP = { has_idea = ikki_kita }
+					JAP = { has_idea = kanji_ishiwara }
+				}
+				NOT = {
+					OR = {
+						AND = {
+							CHI = { has_idea = appeasement_policy }
+							JAP = { has_idea = ikki_kita }
+						}
+						AND = {
+							JAP = { has_idea = ikki_kita }
+							JAP = { has_idea = kanji_ishiwara }
+						}
+						AND = {
+							CHI = { has_idea = appeasement_policy }
+							JAP = { has_idea = kanji_ishiwara }
+						}
+					}
+				}
+				NOT = {
+					AND ={
+						CHI = { has_idea = appeasement_policy }
+						JAP = { has_idea = ikki_kita }
+						JAP = { has_idea = kanji_ishiwara }
+					}
+				}
+			}
+			modifier = {
+				factor = 80
+				OR = {
+					AND = {
+						CHI = { has_idea = appeasement_policy }
+						JAP = { has_idea = ikki_kita }
+					}
+					AND = {
+						JAP = { has_idea = ikki_kita }
+						JAP = { has_idea = kanji_ishiwara }
+					}
+					AND = {
+						CHI = { has_idea = appeasement_policy }
+						JAP = { has_idea = kanji_ishiwara }
+					}
+				}
+				NOT = {
+					AND ={
+						CHI = { has_idea = appeasement_policy }
+						JAP = { has_idea = ikki_kita }
+						JAP = { has_idea = kanji_ishiwara }
+					}
+				}
+			}
+			modifier = {
+				factor = 90
+				AND ={
+					CHI = { has_idea = appeasement_policy }
+					JAP = { has_idea = ikki_kita }
+					JAP = { has_idea = kanji_ishiwara }
+				}
+			}
+		}
+		JAP = { country_event = { days = 1 id = rcmjapan.65 } }
+		effect_tooltip = {
+			CHI = {
+				annex_country = { target = EHB transfer_troops = yes }
+				transfer_state = 524
+				if = {
+					limit = {
+						has_dlc = "Together for Victory"
+					}
+					set_autonomy = {
+						target = HPC
+						autonomous_state = autonomy_integrated_puppet
+					}
+					else = {
+						puppet = HPC
+					}
+				}
+				remove_state_core = 612
+				remove_state_core = 757
+				remove_state_core = 610
+				remove_state_core = 715
+				remove_state_core = 716
+				remove_state_core = 328
+				remove_state_core = 717
+				remove_state_core = 714
+				remove_state_core = 747
+				add_ideas = sino_japanese_alliance
+				remove_opinion_modifier = {
+					target = JAP
+					modifier = hostile_status
+				}
+				add_opinion_modifier = { target = JAP modifier = sino_japanese_alliance_opinion }
+			}	
+			JAP = {
+				remove_opinion_modifier = {
+					target = CHI
+					modifier = hostile_status
+				}
+				#dismantle_faction = yes
+				create_faction = chi_man_bloc
+				every_country = {
+					limit = {
+						is_puppet_of = JAP
+					}
+					JAP = {
+						add_to_faction = PREV
+					}
+				}
+				add_to_faction = CHI			
+			}
+		}
+	}
+	option = {
+		name = rcmjapan.62.b
+		ai_chance = {
+			base = 40
+			modifier = {
+				factor = 30
+				OR = {
+					CHI = { has_idea = appeasement_policy }
+					JAP = { has_idea = ikki_kita }
+					JAP = { has_idea = kanji_ishiwara }
+				}
+				NOT = {
+					OR = {
+						AND = {
+							CHI = { has_idea = appeasement_policy }
+							JAP = { has_idea = ikki_kita }
+						}
+						AND = {
+							JAP = { has_idea = ikki_kita }
+							JAP = { has_idea = kanji_ishiwara }
+						}
+						AND = {
+							CHI = { has_idea = appeasement_policy }
+							JAP = { has_idea = kanji_ishiwara }
+						}
+					}
+				}
+				NOT = {
+					AND ={
+						CHI = { has_idea = appeasement_policy }
+						JAP = { has_idea = ikki_kita }
+						JAP = { has_idea = kanji_ishiwara }
+					}
+				}
+			}
+			modifier = {
+				factor = 20
+				OR = {
+					AND = {
+						CHI = { has_idea = appeasement_policy }
+						JAP = { has_idea = ikki_kita }
+					}
+					AND = {
+						JAP = { has_idea = ikki_kita }
+						JAP = { has_idea = kanji_ishiwara }
+					}
+					AND = {
+						CHI = { has_idea = appeasement_policy }
+						JAP = { has_idea = kanji_ishiwara }
+					}
+				}
+				NOT = {
+					AND ={
+						CHI = { has_idea = appeasement_policy }
+						JAP = { has_idea = ikki_kita }
+						JAP = { has_idea = kanji_ishiwara }
+					}
+				}
+			}
+			modifier = {
+				factor = 10
+				AND ={
+					CHI = { has_idea = appeasement_policy }
+					JAP = { has_idea = ikki_kita }
+					JAP = { has_idea = kanji_ishiwara }
+				}
+			}
+		}
+		JAP = { country_event = { id = rcmjapan.66 } }
+		hidden_effect = {
+			JAP = {
+				set_country_flag = china_refuses
+			}
+		}
+	}
+}
+#give taiwan east hebei kt
+country_event = {
+	id = rcmjapan.63
+	title = rcmjapan.63.t
+	desc = rcmjapan.63.d
+	picture = GFX_report_event_japanese_chinese_surrender
+	is_triggered_only = yes
+	option = { #accept
+		name = rcmjapan.63.a
+		ai_chance = {
+			base = 70
+			modifier = {
+				factor = 80
+				OR = {
+					CHI = { has_idea = appeasement_policy }
+					JAP = { has_idea = ikki_kita }
+					JAP = { has_idea = kanji_ishiwara }
+				}
+				NOT = {
+					OR = {
+						AND = {
+							CHI = { has_idea = appeasement_policy }
+							JAP = { has_idea = ikki_kita }
+						}
+						AND = {
+							JAP = { has_idea = ikki_kita }
+							JAP = { has_idea = kanji_ishiwara }
+						}
+						AND = {
+							CHI = { has_idea = appeasement_policy }
+							JAP = { has_idea = kanji_ishiwara }
+						}
+					}
+				}
+				NOT = {
+					AND ={
+						CHI = { has_idea = appeasement_policy }
+						JAP = { has_idea = ikki_kita }
+						JAP = { has_idea = kanji_ishiwara }
+					}
+				}
+			}
+			modifier = {
+				factor = 90
+				OR = {
+					AND = {
+						CHI = { has_idea = appeasement_policy }
+						JAP = { has_idea = ikki_kita }
+					}
+					AND = {
+						JAP = { has_idea = ikki_kita }
+						JAP = { has_idea = kanji_ishiwara }
+					}
+					AND = {
+						CHI = { has_idea = appeasement_policy }
+						JAP = { has_idea = kanji_ishiwara }
+					}
+				}
+				NOT = {
+					AND ={
+						CHI = { has_idea = appeasement_policy }
+						JAP = { has_idea = ikki_kita }
+						JAP = { has_idea = kanji_ishiwara }
+					}
+				}
+			}
+			modifier = {
+				factor = 100
+				AND ={
+					CHI = { has_idea = appeasement_policy }
+					JAP = { has_idea = ikki_kita }
+					JAP = { has_idea = kanji_ishiwara }
+				}
+			}
+		}
+		JAP = { country_event = { days = 1 id = rcmjapan.65 } }
+		effect_tooltip = {
+			CHI = {
+				annex_country = { target = EHB transfer_troops = yes }
+				transfer_state = 524
+				transfer_state = 747
+				if = {
+					limit = {
+						has_dlc = "Together for Victory"
+					}
+					set_autonomy = {
+						target = HPC
+						autonomous_state = autonomy_integrated_puppet
+					}
+					else = {
+						puppet = HPC
+					}
+				}
+				remove_state_core = 612
+				remove_state_core = 757
+				remove_state_core = 610
+				remove_state_core = 715
+				remove_state_core = 716
+				remove_state_core = 328
+				remove_state_core = 717
+				remove_state_core = 714
+				add_ideas = sino_japanese_alliance
+				remove_opinion_modifier = {
+					target = JAP
+					modifier = hostile_status
+				}
+				add_opinion_modifier = { target = JAP modifier = sino_japanese_alliance_opinion }
+			}
+			
+			JAP = {
+				remove_opinion_modifier = {
+					target = CHI
+					modifier = hostile_status
+				}
+				#dismantle_faction = yes
+				create_faction = chi_man_bloc
+				every_country = {
+					limit = {
+						is_puppet_of = JAP
+					}
+					JAP = {
+						add_to_faction = PREV
+					}
+				}
+				add_to_faction = CHI			
+			}
+		}
+	}
+	option = {
+		name = rcmjapan.63.b
+		ai_chance = {
+			base = 30
+			modifier = {
+				factor = 20
+				OR = {
+					CHI = { has_idea = appeasement_policy }
+					JAP = { has_idea = ikki_kita }
+					JAP = { has_idea = kanji_ishiwara }
+				}
+				NOT = {
+					OR = {
+						AND = {
+							CHI = { has_idea = appeasement_policy }
+							JAP = { has_idea = ikki_kita }
+						}
+						AND = {
+							JAP = { has_idea = ikki_kita }
+							JAP = { has_idea = kanji_ishiwara }
+						}
+						AND = {
+							CHI = { has_idea = appeasement_policy }
+							JAP = { has_idea = kanji_ishiwara }
+						}
+					}
+				}
+				NOT = {
+					AND ={
+						CHI = { has_idea = appeasement_policy }
+						JAP = { has_idea = ikki_kita }
+						JAP = { has_idea = kanji_ishiwara }
+					}
+				}
+			}
+			modifier = {
+				factor = 10
+				OR = {
+					AND = {
+						CHI = { has_idea = appeasement_policy }
+						JAP = { has_idea = ikki_kita }
+					}
+					AND = {
+						JAP = { has_idea = ikki_kita }
+						JAP = { has_idea = kanji_ishiwara }
+					}
+					AND = {
+						CHI = { has_idea = appeasement_policy }
+						JAP = { has_idea = kanji_ishiwara }
+					}
+				}
+				NOT = {
+					AND ={
+						CHI = { has_idea = appeasement_policy }
+						JAP = { has_idea = ikki_kita }
+						JAP = { has_idea = kanji_ishiwara }
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				AND ={
+					CHI = { has_idea = appeasement_policy }
+					JAP = { has_idea = ikki_kita }
+					JAP = { has_idea = kanji_ishiwara }
+				}
+			}
+		}
+		JAP = { country_event = { id = rcmjapan.66 } }
+		hidden_effect = {
+			JAP = {
+				set_country_flag = china_refuses
+			}
+		}
+	}
+}
+#give taiwan east hebei kt eca(to hpc)
+country_event = {
+	id = rcmjapan.64
+	title = rcmjapan.64.t
+	desc = rcmjapan.64.d
+	picture = GFX_report_event_japanese_chinese_surrender
+	is_triggered_only = yes
+	option = { #accept
+		name = rcmjapan.64.a
+		ai_chance = {
+			base = 80
+			modifier = {
+				factor = 90
+				OR = {
+					CHI = { has_idea = appeasement_policy }
+					JAP = { has_idea = ikki_kita }
+					JAP = { has_idea = kanji_ishiwara }
+				}
+				NOT = {
+					OR = {
+						AND = {
+							CHI = { has_idea = appeasement_policy }
+							JAP = { has_idea = ikki_kita }
+						}
+						AND = {
+							JAP = { has_idea = ikki_kita }
+							JAP = { has_idea = kanji_ishiwara }
+						}
+						AND = {
+							CHI = { has_idea = appeasement_policy }
+							JAP = { has_idea = kanji_ishiwara }
+						}
+					}
+				}
+				NOT = {
+					AND ={
+						CHI = { has_idea = appeasement_policy }
+						JAP = { has_idea = ikki_kita }
+						JAP = { has_idea = kanji_ishiwara }
+					}
+				}
+			}
+			modifier = {
+				factor = 100
+				OR = {
+					AND = {
+						CHI = { has_idea = appeasement_policy }
+						JAP = { has_idea = ikki_kita }
+					}
+					AND = {
+						JAP = { has_idea = ikki_kita }
+						JAP = { has_idea = kanji_ishiwara }
+					}
+					AND = {
+						CHI = { has_idea = appeasement_policy }
+						JAP = { has_idea = kanji_ishiwara }
+					}
+				}
+			}
+		}
+		JAP = { country_event = { days = 1 id = rcmjapan.65 } }
+		effect_tooltip = {
+			CHI = {
+				annex_country = { target = EHB transfer_troops = yes }
+				transfer_state = 524
+				transfer_state = 747
+				if = {
+					limit = {
+						has_dlc = "Together for Victory"
+					}
+					set_autonomy = {
+						target = HPC
+						autonomous_state = autonomy_integrated_puppet
+					}
+					else = {
+						puppet = HPC
+					}
+				}
+				remove_state_core = 610
+				remove_state_core = 715
+				remove_state_core = 716
+				remove_state_core = 328
+				remove_state_core = 717
+				remove_state_core = 714
+				add_ideas = sino_japanese_alliance
+				remove_opinion_modifier = {
+					target = JAP
+					modifier = hostile_status
+				}
+				add_opinion_modifier = { target = JAP modifier = sino_japanese_alliance_opinion }
+			}
+			if = {
+				limit = { country_exists = ECA }
+				HPC = { annex_country = { target = ECA transfer_troops = no } }
+			}
+			JAP = {
+				remove_opinion_modifier = {
+					target = CHI
+					modifier = hostile_status
+				}
+				#dismantle_faction = yes
+				create_faction = chi_man_bloc
+				every_country = {
+					limit = {
+						is_puppet_of = JAP
+					}
+					JAP = {
+						add_to_faction = PREV
+					}
+				}
+				add_to_faction = CHI			
+			}
+		}
+	}
+	option = {
+		name = rcmjapan.64.b
+		ai_chance = {
+			base = 20
+			modifier = {
+				factor = 10
+				OR = {
+					CHI = { has_idea = appeasement_policy }
+					JAP = { has_idea = ikki_kita }
+					JAP = { has_idea = kanji_ishiwara }
+				}
+				NOT = {
+					OR = {
+						AND = {
+							CHI = { has_idea = appeasement_policy }
+							JAP = { has_idea = ikki_kita }
+						}
+						AND = {
+							JAP = { has_idea = ikki_kita }
+							JAP = { has_idea = kanji_ishiwara }
+						}
+						AND = {
+							CHI = { has_idea = appeasement_policy }
+							JAP = { has_idea = kanji_ishiwara }
+						}
+					}
+				}
+				NOT = {
+					AND ={
+						CHI = { has_idea = appeasement_policy }
+						JAP = { has_idea = ikki_kita }
+						JAP = { has_idea = kanji_ishiwara }
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						CHI = { has_idea = appeasement_policy }
+						JAP = { has_idea = ikki_kita }
+					}
+					AND = {
+						JAP = { has_idea = ikki_kita }
+						JAP = { has_idea = kanji_ishiwara }
+					}
+					AND = {
+						CHI = { has_idea = appeasement_policy }
+						JAP = { has_idea = kanji_ishiwara }
+					}
+				}
+			}
+		}
+		JAP = { country_event = { id = rcmjapan.66 } }
+		hidden_effect = {
+			JAP = {
+				set_country_flag = china_refuses
+			}
+		}
+	}
+}
+#China=>JAP
+country_event = {
+	id = rcmjapan.65
+	title = rcmjapan.65.t
+	desc = rcmjapan.65.d
+	picture = GFX_report_event_japanese_chinese_surrender
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			set_country_flag = jap_revise_hiro_san_flag
+		}
+	}
+	option = {
+		name = rcmjapan.65.a
+		trigger = { has_global_flag = revise_ehb_flag }
+		CHI = {
+			annex_country = { target = EHB transfer_troops = yes }
+			if = {
+				limit = {
+					has_dlc = "Together for Victory"
+				}
+				set_autonomy = {
+					target = HPC
+					autonomous_state = autonomy_integrated_puppet
+				}
+				else = {
+					puppet = HPC
+				}
+			}
+			add_ideas = sino_japanese_alliance
+			remove_opinion_modifier = {
+				target = JAP
+				modifier = hostile_status
+			}
+			add_opinion_modifier = { target = JAP modifier = sino_japanese_alliance_opinion }
+		}
+		hidden_effect = { HPC = { country_event = { id = hpc.3 } } }
+		JAP = {
+			remove_opinion_modifier = {
+				target = CHI
+				modifier = hostile_status
+			}
+			#dismantle_faction = yes
+			create_faction = chi_man_bloc
+			every_country = {
+				limit = {
+					is_puppet_of = JAP
+				}
+				JAP = {
+					add_to_faction = PREV
+				}
+			}
+			add_to_faction = CHI			
+		}
+	}
+	option = {
+		name = rcmjapan.65.b
+		trigger = { has_global_flag = revise_ehb_taiwan_flag }
+		CHI = {
+			annex_country = { target = EHB transfer_troops = yes }
+			transfer_state = 524
+			if = {
+				limit = {
+					has_dlc = "Together for Victory"
+				}
+				set_autonomy = {
+					target = HPC
+					autonomous_state = autonomy_integrated_puppet
+				}
+				else = {
+					puppet = HPC
+				}
+			}
+			add_ideas = sino_japanese_alliance
+			remove_opinion_modifier = {
+				target = JAP
+				modifier = hostile_status
+			}
+			add_opinion_modifier = { target = JAP modifier = sino_japanese_alliance_opinion }
+		}
+		hidden_effect = { HPC = { country_event = { id = hpc.3 } } }
+		JAP = {
+			add_political_power = 50
+			remove_opinion_modifier = {
+				target = CHI
+				modifier = hostile_status
+			}
+			#dismantle_faction = yes
+			create_faction = chi_man_bloc
+			every_country = {
+				limit = {
+					is_puppet_of = JAP
+				}
+				JAP = {
+					add_to_faction = PREV
+				}
+			}
+			add_to_faction = CHI	
+		}
+	}
+	option = {
+		name = rcmjapan.65.c
+		trigger = { has_global_flag = revise_ehb_taiwan_kt_flag }
+		CHI = {
+			annex_country = { target = EHB transfer_troops = yes }
+			transfer_state = 524
+			transfer_state = 747
+			if = {
+				limit = {
+					has_dlc = "Together for Victory"
+				}
+				set_autonomy = {
+					target = HPC
+					autonomous_state = autonomy_integrated_puppet
+				}
+				else = {
+					puppet = HPC
+				}
+			}
+			add_ideas = sino_japanese_alliance
+			remove_opinion_modifier = {
+				target = JAP
+				modifier = hostile_status
+			}
+			add_opinion_modifier = { target = JAP modifier = sino_japanese_alliance_opinion }
+		}
+		hidden_effect = { HPC = { country_event = { id = hpc.3 } } }
+		JAP = {
+			add_political_power = 100
+			remove_opinion_modifier = {
+				target = CHI
+				modifier = hostile_status
+			}
+			#dismantle_faction = yes
+			create_faction = chi_man_bloc
+			every_country = {
+				limit = {
+					is_puppet_of = JAP
+				}
+				JAP = {
+					add_to_faction = PREV
+				}
+			}
+			add_to_faction = CHI			
+		}
+	}
+	option = {
+		name = rcmjapan.65.e
+		trigger = { has_global_flag = revise_ehb_taiwan_kt_eca_flag }
+		CHI = {
+			annex_country = { target = EHB transfer_troops = yes }
+			transfer_state = 524
+			transfer_state = 747
+			if = {
+				limit = {
+					has_dlc = "Together for Victory"
+				}
+				set_autonomy = {
+					target = HPC
+					autonomous_state = autonomy_integrated_puppet
+				}
+				else = {
+					puppet = HPC
+				}
+			}
+			add_ideas = sino_japanese_alliance
+			remove_opinion_modifier = {
+				target = JAP
+				modifier = hostile_status
+			}
+			add_opinion_modifier = { target = JAP modifier = sino_japanese_alliance_opinion }
+		}
+		hidden_effect = { HPC = { country_event = { id = hpc.3 } } }
+		if = {
+			limit = { country_exists = ECA }
+			HPC = { annex_country = { target = ECA } }
+		}
+		JAP = {
+			add_political_power = 200
+			remove_opinion_modifier = {
+				target = CHI
+				modifier = hostile_status
+			}
+			#dismantle_faction = yes
+			create_faction = chi_man_bloc
+			every_country = {
+				limit = {
+					is_puppet_of = JAP
+				}
+				JAP = {
+					add_to_faction = PREV
+				}
+			}
+			add_to_faction = CHI			
+		}
+	}
+}
+country_event = {
+	id = rcmjapan.66
+	title = rcmjapan.66.t
+	desc = rcmjapan.66.d
+	picture = GFX_report_event_japanese_parade
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			set_country_flag = china_refuse
+			unlock_national_focus = aggressive_china_politics
+			#complete_national_focus
+		}
+	}
+	option = {
+		name = rcmjapan.66.a
+		add_political_power = -200
+	}
+}
+country_event = {
+	id = rcmjapan.67
+	title = rcmjapan.67.t
+	desc = rcmjapan.67.d
+	picture = GFX_report_event_japanese_chinese_surrender
+	trigger = {
+		tag = JAP
+		NOT = { has_country_flag = united_china }
+		has_global_flag = unite_china_jap_flag
+		has_completed_focus = unite_china
+		NOT = {
+			OR = {
+				has_war_with = PRC
+				AND = {
+					has_war_with = SIK
+					SIK = { has_war_with = CHI }
+				}
+				has_war_with = GUD
+				has_war_with = GXC
+				has_war_with = SIK
+				has_war_with = SIC
+				has_war_with = SHX
+				has_war_with = HPC
+				has_war_with = XSM
+				has_war_with = XIK
+				has_war_with = YUN
+			}
+		}
+		any_owned_state	= {
+			NOT = { has_state_flag = jap_starting_land }
+			is_owned_by_jap_or_its_puppet = yes
+			NOT = { is_core_of = MAN }
+			NOT = { is_core_of = ECA }
+			NOT = { is_core_of = EHB }
+			OR = {
+				region = 152
+				region = 143
+				region = 164
+				region = 165
+				region = 145
+				region = 146
+			}
+			NOT = {
+				region = 144
+				region = 76
+			}
+			OR = {
+				is_core_of = CHI
+				is_claimed_by = CHI
+			}
+		}	
+	}
+	immediate = {
+		set_global_flag = united_china
+	}
+	option = {
+		name = rcmjapan.67.a
+		every_state = {
+			limit = {
+				OR = {
+					is_core_of = CHI
+					is_claimed_by = JAP
+				}
+				is_controlled_by_jap_or_its_puppet = yes
+				NOT = { has_state_flag = jap_starting_land }
+				NOT = { is_core_of = MAN }
+				NOT = { is_core_of = ECA }
+				NOT = { is_core_of = EHB }
+			}
+			CHI = { transfer_state = PREV }
+		}
+		hidden_effect = {
+			country_event = { days = 2 id = rcmjapan.69 }
+		}
+	}
+}
+country_event = {
+	id = rcmjapan.68
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		tag = JAP
+	}
+	immediate = {
+		every_state = {
+			limit = {
+				is_owned_by_jap_or_its_puppet = yes				
+			}
+			PREV = { set_state_flag = jap_starting_land }
+		}
+	}
+	option = {
+	}
+}
+country_event = {
+	id = rcmjapan.69
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		clr_global_flag = united_china
+	}
+	option = {
+	}
+}
+#JUNEAU CONFERENCE
+country_event = {
+	id = rcmjapan.70
+	title = rcmjapan.70.t
+	desc = rcmjapan.70.d
+	picture = GFX_report_event_asian_politicians
+	is_triggered_only = yes
+	option = {#accept
+		name = rcmjapan.70.a
+		ai_chance = {
+			factor = 60
+		}
+		JAP = { country_event = { days = 10 id = rcmjapan.71 } }
+		USA = {
+			remove_opinion_modifier = {
+				target = JAP
+				modifier = embargo
+			}
+			add_opinion_modifier = {
+				target = JAP
+				modifier = juneau_conference_modifier
+			}
+		}
+		JAP = {
+			add_opinion_modifier = {
+				target = USA
+				modifier = juneau_conference_modifier
+			}
+		}
+		hidden_effect = {
+			news_event = { days = 11 id = news.412 }
+		}
+	}
+	option = {
+		name = rcmjapan.70.b
+		ai_chance = {
+			factor = 40
+		}
+		JAP = { country_event = { days = 10 id = rcmjapan.72 } }
+	}
+}
+#acc
+country_event = {
+	id = rcmjapan.71
+	title = rcmjapan.71.t
+	desc = rcmjapan.71.d
+	picture = GFX_report_event_canada_patriation
+	is_triggered_only = yes
+	option = {#accept
+		name = rcmjapan.71.a
+		effect_tooltip = {
+			USA = {
+				remove_opinion_modifier = {
+					target = JAP
+					modifier = embargo
+				}
+				add_opinion_modifier = {
+					target = JAP
+					modifier = juneau_conference_modifier
+				}
+			}
+			JAP = {
+				add_opinion_modifier = {
+					target = USA
+					modifier = juneau_conference_modifier
+				}
+			}
+		}
+	}
+}
+#refuesed
+country_event = {
+	id = rcmjapan.72
+	title = rcmjapan.72.t
+	desc = rcmjapan.72.d
+	picture = GFX_report_event_FDR_speech
+	is_triggered_only = yes
+	picture = G
+	immediate = {
+		hidden_effect = {
+			set_global_flag = usa_refused
+			unlock_national_focus = tojo_cabinet_focus
+		}
+	}
+	option = {
+		name = rcmjapan.72.a
+	}
+}
+#HULL-NOM PACT
+country_event = {
+	id = rcmjapan.73
+	title = rcmjapan.73.t
+	desc = rcmjapan.73.d
+	picture = GFX_report_event_japan_japanese_pact
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { #accept
+		name = rcmjapan.73.a
+		ai_chance = {
+			base = 70
+			modifier = {
+				factor = 60
+				is_historical_focus_on = yes
+			}
+		}
+		JAP = {
+			add_timed_idea = { days = 1200 idea = jap_usa_pact }
+			add_opinion_modifier = { target = USA modifier = jap_usa_pact_opinion }
+			add_opinion_modifier = { target = USA modifier = jap_usa_pact_opinion_trade }
+			set_global_flag = jap_usa_pact_flag
+			diplomatic_relation = {
+				country = USA
+				relation = non_aggression_pact
+				active = yes
+			}
+		}
+		add_opinion_modifier = { target = JAP modifier = jap_usa_pact_opinion }
+		hidden_effect = { JAP = { country_event = { days = 2 id = rcmjapan.74 } } }
+	}
+	
+	option = { #refuse
+		name = rcmjapan.73.a
+		ai_chance = {
+			base = 30
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		JAP = { country_event = { days = 2 id = rcmjapan.1005 } }
+	}
+}
+country_event = {
+	id = rcmjapan.74
+	title = rcmjapan.74.t
+	desc = rcmjapan.74.d
+	picture = GFX_report_event_generic_sign_treaty2
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { #accept
+		name = rcmjapan.74.a
+	}
+}
+country_event = {
+	id = rcmjapan.75
+	title = rcmjapan.75.t
+	desc = rcmjapan.75.d
+	picture = GFX_report_event_japan_purge_trial
+	fire_only_once = yes
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			unlock_national_focus = tojo_cabinet_focus
+		}
+	}
+	option = { #refuse
+		name = rcmjapan.1005.a
+	}
+}
+country_event = { #drop pact with jap
+	id = rcmjapan.76
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		tag = JAP
+		has_global_flag = jap_usa_pact_flag
+		NOT = { has_idea = jap_usa_pact }
+	}
+	immediate = {
+		USA = { remove_opinion_modifier = { target = JAP modifier = jap_usa_pact_opinion } }
+		remove_opinion_modifier = { target = USA modifier = jap_usa_pact_opinion }
+		USA = { remove_opinion_modifier = { target = JAP modifier = jap_usa_pact_opinion_trade } }
+		remove_opinion_modifier = { target = USA modifier = jap_usa_pact_opinion_trade }
+		diplomatic_relation = {
+			country = USA
+			relation = non_aggression_pact
+			active = no
+		}
+	}
+	option = {
+	}
+}
+country_event = { #renew the pact 1
+	id = rcmjapan.77
+	hidden = yes
+	trigger = {
+		tag = JAP
+		has_idea = jap_usa_pact
+		NOT = { has_global_flag = renew_pact_usa }
+	}
+	mean_time_to_happen = {
+		days = 180
+	}
+	immediate = {
+		diplomatic_relation = {
+			country = USA
+			relation = non_aggression_pact
+			active = no
+		}
+		diplomatic_relation = {
+			country = USA
+			relation = non_aggression_pact
+			active = yes
+		}
+		set_global_flag = renew_pact_usa
+	}
+	option = {
+	}
+}
+country_event = { #renew the pact 2
+	id = rcmjapan.78
+	hidden = yes
+	trigger = {
+		tag = JAP
+		has_idea = jap_usa_pact
+		has_global_flag = renew_pact_usa
+	}
+	mean_time_to_happen = {
+		days = 180
+	}
+	immediate = {
+		diplomatic_relation = {
+			country = USA
+			relation = non_aggression_pact
+			active = no
+		}
+		diplomatic_relation = {
+			country = USA
+			relation = non_aggression_pact
+			active = yes
+		}
+		clr_global_flag = renew_pact_usa
+	}
+	option = {
+	}
+}
+country_event = {
+	id = rcmjapan.79
+	title = rcmjapan.79.t
+	desc = rcmjapan.79.d
+	picture = GFX_report_event_chinese_japanese_handshake
+	is_triggered_only = yes
+	option = {
+		name = rcmjapan.79.a
+		add_timed_idea = { days = 500 idea = japanese_industrial_aid }
+		add_opinion_modifier = { target = JAP modifier = japanese_industrial_aid }
+		add_opinion_modifier = { target = JAP modifier = japanese_industrial_aid_trade }
+		JAP = {
+			add_political_power = 100
+		}
+	}
+}
+country_event = {
+	id = rcmjapan.80
+	hidden = yes
+	is_triggered_only = yes
+	option = {
+		set_rule = { can_puppet = yes }
+	}
+}
+# SOV Agrees to Withdraw SOV advisors
+country_event = {
+	id = rcmjapan.81
+	title = rcmjapan.81.t
+	desc = rcmjapan.81.d
+	picture = GFX_report_event_german_detained_china
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rcmjapan.81.a
+	}
+}
+# SOV Refuses to Withdraw SOV advisors
+country_event = {
+	id = rcmjapan.82
+	title = rcmjapan.82.t
+	desc = rcmjapan.82.d
+	picture = GFX_report_event_german_advisors_remain
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rcmjapan.82.a
+	}
+	#option = { # Withdraw from the Anti-Comintern Pact
+	#	name = rcmjapan.82.b
+	#}
+}
+###################
+#puppet for the mongols(from Jap focus to PLM)
+country_event = {
+	id = rcmjapan.83
+	title = rcmjapan.83.t
+	desc = rcmjapan.83.d
+	picture = GFX_report_event_japanese_officers
+	
+	is_triggered_only = yes
+	
+	option = {# yes
+		name = rcmjapan.83.a
+		ai_chance = {
+			factor = 100
+		}
+		JAP = {
+			country_event = {
+				id = rcmjapan.84
+			}
+		}		
+		hidden_effect = {
+			ECA = {
+				country_event = {
+					id = rcmjapan.84
+				}
+			}
+			CHI = {
+				country_event = {
+					days = 1 id = rcmjapan.84
+				}
+			}
+			SHX = {
+				country_event = {
+					days = 1 id = rcmjapan.84
+				}
+			}
+			if = {
+				limit = {
+					PLM = {
+						is_ai = no
+					}
+				}
+				ECA = {
+					change_tag_from = PLM
+				}
+			}
+			set_global_flag = MEN_puppet_form
+		}
+		###
+		effect_tooltip = {
+			MEN = {
+				add_state_core = 612
+				#add_state_core = 611
+				add_state_core = 621
+				add_state_core = 763
+				add_state_core = 330
+			}
+		}
+		custom_effect_tooltip = merge_eca_plm_tt
+		custom_effect_tooltip = jap_puppet_tt
+		custom_effect_tooltip = political_parties_reset_tt
+		custom_effect_tooltip = some_progress_reset_tt
+		hidden_effect = {
+			ECA = {
+				set_global_flag = men_exists
+				add_state_core = 612
+				#add_state_core = 611
+				add_state_core = 621
+				add_state_core = 763
+				add_state_core = 330
+			}
+			ECA = {
+				country_event = {
+					hours = 2 id = rcmjapan.984
+				}
+			}
+			
+		}
+	}
+	option = {# no #turn to the chinese
+		name = rcmjapan.83.b
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			NOT = {
+				has_war_with = CHI
+			}
+		}
+		JAP = {
+			country_event = {
+				id = rcmjapan.85
+			}
+		}
+		SHX = {
+			country_event = {
+				id = rcmjapan.985
+			}
+		}
+		effect_tooltip = {
+			ECA = {
+				add_state_core = 612
+				#add_state_core = 611
+				add_state_core = 621
+				add_state_core = 763
+			}
+		}		
+		custom_effect_tooltip = kmt_subject_tt
+		custom_effect_tooltip = political_parties_reset_tt
+		custom_effect_tooltip = de_wang_will_defect_tt
+		hidden_effect = {
+			JAP = {
+				country_event = {
+					days = 12 id = rcmjapan.884
+				}
+			}
+			ECA = {
+				country_event = {
+					days = 12 id = rcmjapan.884
+				}
+			}
+			CHI = {
+				country_event = {
+					days = 12 id = rcmjapan.884
+				}
+			}
+			PLM = {
+				country_event = {
+					days = 12 id = rcmjapan.884
+				}
+			}
+		}
+	}
+}
+#I have wars with PLM
+country_event = {
+	id = rcmjapan.983
+	hidden = yes
+	trigger = {
+		OR = {
+			tag = CHI
+			tag = SHX
+		}
+		has_war_with = PLM
+		NOT = {
+			has_country_flag = had_war_with_PLM
+		}
+	}
+	immediate = {
+		set_country_flag = had_war_with_PLM
+	}
+	option = {
+	}
+}
+#the creation of MEN (ACCEPT, 1st time)
+country_event = {
+	id = rcmjapan.984
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		annex_country = {
+			target = PLM
+			transfer_troops = yes
+		}
+		MEN_CREATION = yes
+	}
+	option = {
+	}
+}
+
+#PLM joined JAP (from PLM focus to JAP, ECA, CHI)
+country_event = {
+	id = rcmjapan.84
+	title = rcmjapan.84.t
+	desc = rcmjapan.84.d
+	picture = GFX_report_mongol_gov
+	
+	is_triggered_only = yes
+	
+	option = {# JAP&ECA hell yeah!
+		name = rcmjapan.84.a
+		trigger = {
+			NOT = {
+				OR = {
+					TAG = CHI
+					TAG = SHX
+				}
+			}
+		}
+	}
+	option = {# CHI ooh no!
+		name = rcmjapan.84.b
+		trigger = {
+			OR = {
+				TAG = CHI
+				TAG = SHX
+			}
+			NOT = { has_country_flag = had_war_with_PLM }
+		}
+	}
+	option = {# CHI ooh no! we should back off
+		name = rcmjapan.84.c
+		trigger = {
+			OR = {
+				TAG = CHI
+				TAG = SHX
+			}
+			NOT = {
+				AND = {
+					TAG = SHX
+					CHI = {
+						has_country_flag = had_war_with_PLM
+					}
+				}
+			}
+			has_country_flag = had_war_with_PLM
+		}
+		ai_chance = {
+			base = 100
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 50
+			}
+		}
+		hidden_effect = {
+			ECA = {
+				country_event = {
+					days = 2 id = rcmjapan.86
+				}
+			}
+			JAP = {
+				country_event = {
+					id = rcmjapan.86
+				}
+			}
+		}
+	}
+	option = {# CHI ooh no! we should continue our invasion!
+		name = rcmjapan.84.e
+		trigger = {
+			OR = {
+				TAG = CHI
+				TAG = SHX
+			}
+			NOT = {
+				AND = {
+					TAG = SHX
+					CHI = {
+						has_country_flag = had_war_with_PLM
+					}
+				}
+			}
+			has_country_flag = had_war_with_PLM
+		}
+		ai_chance = {
+			base = 0
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 50
+			}
+		}
+		declare_war_on = {
+			target = ECA
+			type = annex_everything
+		}
+		custom_effect_tooltip = this_will_lead_to_war_jap_tt
+		ECA = {
+			country_event = {
+				id = rcmjapan.87
+			}
+		}
+		JAP = {
+			country_event = {
+				id = rcmjapan.87
+			}
+		}
+	}
+}
+#De wang defect join JAP (to JAP,ECA,CHI,SHX,shx's PLM)
+country_event = {
+	id = rcmjapan.884
+	title = rcmjapan.884.t
+	desc = rcmjapan.884.d
+	picture = GFX_report_prince_de
+	immediate = {
+		hidden_effect = {
+			set_global_flag = de_wang_defect_flag
+			CHI = {
+				remove_opinion_modifier = {
+					target = PLM
+					modifier = hostile_status
+				}
+			}
+			SHX = {
+				remove_opinion_modifier = {
+					target = PLM
+					modifier = hostile_status
+				}
+			}
+			PLM = {
+				remove_opinion_modifier = {
+					target = CHI
+					modifier = hostile_status
+				}
+				remove_opinion_modifier = {
+					target = SHX
+					modifier = hostile_status
+				}
+			}
+		}
+	}
+	is_triggered_only = yes
+	
+	option = {# oh YEAH! to jap
+		name = rcmjapan.884.a
+		trigger = {
+			TAG = JAP	
+		}
+		effect_tooltip = {
+			ECA = {
+				transfer_state = 612
+				set_capital = 612
+				create_country_leader = {
+					name = "Prince Demchugdongrub"
+					desc = "POLITICS_DEMCHUGDONGRUB_DESC"
+					picture = "Portrait_Mengkukuo_Prince_Demchugdongrub.dds"
+					expire = "1966.4.23"
+					ideology = fascism_ideology
+					traits = {
+						spirit_of_genghis
+					}
+				}
+				army_experience = 50
+			}			
+		}
+		custom_effect_tooltip = MEN_will_be_established_tt
+	}
+	option = {# oh YEAH! to eca
+		name = rcmjapan.884.b
+		trigger = {
+			TAG = ECA
+		}		 
+		transfer_state = 612
+		set_capital = 612
+		create_country_leader = {
+			name = "Prince Demchugdongrub"
+			desc = "POLITICS_DEMCHUGDONGRUB_DESC"
+			picture = "Portrait_Mengkukuo_Prince_Demchugdongrub.dds"
+			expire = "1966.4.23"
+			ideology = fascism_ideology
+			traits = {
+				spirit_of_genghis
+			}
+		}
+		custom_effect_tooltip = MEN_will_be_established_tt
+		hidden_effect = {
+			set_cosmetic_tag = MEN
+			set_global_flag = MEN_puppet_form
+			set_global_flag = men_exists			
+		}
+	}
+	option = {# oh NAH! to CHI
+		name = rcmjapan.884.c
+		trigger = {
+			TAG = CHI
+		}		 
+		effect_tooltip = {
+			ECA = {
+				transfer_state = 612
+			}
+			PLM = {				
+				create_country_leader = {
+					name = "Yun Jixian"
+					desc = "POLITICS_YUN_JIXIAN_DESC"
+					picture = "Portrait_Yun_Jixian.dds"
+					expire = "1966.4.23"
+					ideology = despotism
+					traits = {
+					}
+				}
+			}
+		}
+	}
+	option = {# oh NAH! to CHI
+		name = rcmjapan.884.f
+		trigger = {
+			TAG = SHX
+		}		 
+		effect_tooltip = {
+			ECA = {
+				transfer_state = 612
+			}
+			PLM = {				
+				create_country_leader = {
+					name = "Yun Jixian"
+					desc = "POLITICS_YUN_JIXIAN_DESC"
+					picture = "Portrait_Yun_Jixian.dds"
+					expire = "1966.4.23"
+					ideology = despotism
+					traits = {
+					}
+				}
+			}
+		}
+	}
+	option = {# oh NAH! to PLM
+		name = rcmjapan.884.e
+		trigger = {
+			TAG = PLM
+		}	
+		hidden_effect = {
+			retire_country_leader = yes
+		}
+		create_country_leader = {
+			name = "Yun Jixian"
+			desc = "POLITICS_YUN_JIXIAN_DESC"
+			picture = "Portrait_Yun_Jixian.dds"
+			expire = "1966.4.23"
+			ideology = despotism
+			traits = {
+			}
+		}
+		effect_tooltip = {
+			ECA = {
+				transfer_state = 612
+				set_capital = 612
+				create_country_leader = {
+					name = "Prince Demchugdongrub"
+					desc = "POLITICS_DEMCHUGDONGRUB_DESC"
+					picture = "Portrait_Mengkukuo_Prince_Demchugdongrub.dds"
+					expire = "1966.4.23"
+					ideology = fascism_ideology
+					traits = {
+						spirit_of_genghis
+					}
+				}
+			}
+		}
+		
+	}
+}
+#PLM not join JAP (to JAP)
+country_event = {
+	id = rcmjapan.85
+	title = rcmjapan.85.t
+	desc = rcmjapan.85.d
+	picture = GFX_report_prince_de
+	
+	is_triggered_only = yes
+	
+	option = {# oh no!
+		name = rcmjapan.85.a
+		ECA = {
+			add_state_core = 612
+			#add_state_core = 611
+			add_state_core = 621
+			add_state_core = 763
+		}
+		#JAP = {
+		#	create_wargoal = {
+		#		target = PLM
+		#		type = annex_everything
+		#	}
+		#}
+		hidden_effect = {
+			set_global_flag = PLM_didnt_join_jap
+		}
+	}
+}
+#PLM not join JAP (to KMT)
+country_event = {
+	id = rcmjapan.985
+	title = rcmjapan.985.t
+	desc = rcmjapan.985.d
+	picture = GFX_report_prince_de
+	
+	is_triggered_only = yes
+	
+	option = {# huh
+		name = rcmjapan.985.a
+		set_autonomy = {
+			target = PLM
+			autonomous_state = autonomy_integrated_puppet
+		}
+		hidden_effect = {
+			PLM = {
+				set_politics = {
+					ruling_party = neutrality
+					elections_allowed = no
+				}
+				set_political_party = {
+					ideology = neutrality
+					popularity = 100
+				}
+				set_political_party = {
+					ideology = n_socialism
+					popularity = 0
+				}
+				set_political_party = {
+					ideology = communism
+					popularity = 0
+				}
+				set_political_party = {
+					ideology = fascism
+					popularity = 0
+				}
+			}
+		}
+		add_political_power = -50
+	}
+}
+#china backed off (to ECA)
+country_event = {
+	id = rcmjapan.86
+	title = rcmjapan.86.t
+	desc = rcmjapan.86.d
+	picture = GFX_report_event_HHK_failure
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rcmjapan.86.a
+	}
+}
+#china continues attack (to JAP&ECA)
+country_event = {
+	id = rcmjapan.87
+	title = rcmjapan.87.t
+	desc = rcmjapan.87.d
+	picture = GFX_report_event_chiang_speech
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rcmjapan.87.a
+	}
+}
+
+#####MUA focus (to ECA)
+country_event = {
+	id = rcmjapan.88
+	title = rcmjapan.88.t
+	desc = rcmjapan.88.d
+	picture = GFX_report_event_mengjiang_puppet_02
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rcmjapan.88.a
+		custom_effect_tooltip = MUA_reform
+		add_political_power = 100
+		hidden_effect = {
+			set_cosmetic_tag = MUA
+			set_global_flag = mua_exists
+		}
+	}
+}
+
+#####Yondonwangchug dies
+country_event = {
+	id = rcmjapan.89
+	title = rcmjapan.89.t
+	desc = rcmjapan.89.d
+	picture = GFX_report_yong_pass
+	fire_only_once = yes
+	trigger = {
+		country_exists = ECA
+		NOT = {
+			has_global_flag = de_is_in_charge
+		}
+		tag = ECA
+		has_global_flag = mua_exists
+		date > 1938.3.18
+		date < 1939.3.18
+	}
+	option = {
+		name = rcmjapan.89.a
+		hidden_effect = {
+			kill_country_leader = yes
+			create_country_leader = {
+				name = "Prince Demchugdongrub"
+				desc = "POLITICS_DEMCHUGDONGRUB_DESC"
+				picture = "Portrait_Mengkukuo_Prince_Demchugdongrub.dds"
+				expire = "1966.4.23"
+				ideology = fascism_ideology
+				traits = {
+					spirit_of_genghis
+				}
+			}
+			set_global_flag = de_is_in_charge
+		}
+		custom_effect_tooltip = Demchugdongrub_new_leader
+	}
+}
+#####ECA_MAF_fascism focus (to ECA)
+country_event = {
+	id = rcmjapan.736
+	title = rcmjapan.736.t
+	desc = rcmjapan.736.d
+	picture = GFX_report_mongol_gov
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rcmjapan.736.a
+		custom_effect_tooltip = ECA_MAF_reform
+		add_political_power = 100
+		hidden_effect = {
+			#drop_cosmetic_tag = yes
+			set_cosmetic_tag = MAF
+			set_global_flag = ECA_MAF_exist
+		}
+	}
+}
+####PUPPET CAPITULATE
+country_event = {
+	id = rcmjapan.1000
+	title = rcmjapan.1000.t
+	desc = rcmjapan.1000.d
+	picture = GFX_report_event_japanese_chinese_surrender
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rcmjapan.1000.a
+		custom_effect_tooltip = reclaim_capital_tt
+	}
+}
+######################
+####PUPPET REBUILD####
+######################
+#	OR = {#THESE ARE ALL CAPITALS, and Im here for reference
+#		AND = {
+#			state = 328
+#			country_exists = MAN
+#		}
+#		AND = {
+#			state = 608
+#			country_exists = EHB
+#			has_country_flag = im_jnc_now
+#		}
+#		AND = {
+#			state = 609
+#			country_exists = EHB
+#			NOT = {
+#				has_country_flag = im_jnc_now
+#			}
+#		}
+#		AND = {
+#			state = 611
+#			OR = {
+#				country_exists = SCG
+#				AND = {
+#					country_exists = ECA
+#					has_global_flag = mej_exists
+#				}
+#			}
+#		}
+#		AND = {
+#			state = 757
+#			country_exists = ECA
+#			NOT = {
+#				has_global_flag = mua_exists
+#			}
+#		}
+#		AND = {
+#			state = 612
+#			country_exists = ECA
+#			NOT = {
+#				has_global_flag = mej_exists
+#			}
+#		}
+#		AND = {
+#			state = 762
+#			country_exists = NSG
+#		}
+#	} 
+#MAN rebuild #MAN
+country_event = {
+	id = rcmjapan.1002
+	title = rcmjapan.1002.t
+	desc = rcmjapan.1002.d
+	picture = GFX_report_event_MAN_official
+	
+	trigger = {
+		tag = JAP
+		328 = {
+			is_controlled_by_jap_or_its_puppet = yes
+		}
+		NOT = {
+			country_exists = MAN
+		}
+		NOT = {
+			has_global_flag = MAN_no_more
+		}
+	}
+	option = {#YES
+		name = rcmjapan.1002.a
+		ai_chance = {
+			factor = 100
+		}
+		
+		MAN = {
+			transfer_state = 328
+			add_state_core = 714
+			add_state_core = 715
+			add_state_core = 716
+			add_state_core = 717
+			add_state_core = 610
+			add_state_core = 328
+			army_experience = 25
+		}
+		puppet = MAN
+		hidden_effect = {
+			MAN = {
+				set_politics = {
+					ruling_party = fascism
+					elections_allowed = no
+				}
+				set_political_party = {
+					ideology = neutrality
+					popularity = 30
+				}
+				set_political_party = {
+					ideology = n_socialism
+					popularity = 0
+				}
+				set_political_party = {
+					ideology = communism
+					popularity = 0
+				}
+				set_political_party = {
+					ideology = fascism
+					popularity = 70
+				}
+			}
+			if = {
+				limit = {
+					has_war_with = CHI
+				}
+				MAN = {
+					add_to_war = {
+						targeted_alliance = JAP
+						enemy = CHI
+					}
+				}
+			}
+		}
+	}
+	#option = {#NO
+	#	name = rcmjapan.1002.b	
+	#}
+	option = {#NO FOREVER
+		name = rcmjapan.1002.b
+		ai_chance = {
+			factor = 0
+		}
+		set_country_flag = no_rebuild_MAN
+	}
+}
+#EHB rebuild #EHB
+country_event = {
+	id = rcmjapan.1003
+	title = rcmjapan.1003.t
+	desc = rcmjapan.1003.d
+	picture = GFX_report_event_EHB_council
+	
+	trigger = {
+		tag = JAP
+		609 = {
+			is_controlled_by_jap_or_its_puppet = yes
+		}
+		NOT = {#got sabotaged
+			country_exists = EHB
+		}
+		NOT = {#I don't want event pops-up
+			has_country_flag = no_rebuild_EHB
+		}
+		NOT = {#has not transformed into prov gov yet
+			has_global_flag = jnc_exists
+		}
+	}
+	option = {#YES
+		name = rcmjapan.1003.a
+		ai_chance = {
+			factor = 100
+		}
+		EHB = {
+			transfer_state = 609
+		}
+		
+		puppet = EHB
+		hidden_effect = {
+			EHB = {
+				set_politics = {
+					ruling_party = fascism
+					elections_allowed = no
+				}
+				set_political_party = {
+					ideology = neutrality
+					popularity = 30
+				}
+				set_political_party = {
+					ideology = n_socialism
+					popularity = 0
+				}
+				set_political_party = {
+					ideology = communism
+					popularity = 0
+				}
+				set_political_party = {
+					ideology = fascism
+					popularity = 70
+				}
+			}
+			if = {
+				limit = {
+					has_war_with = CHI
+				}
+				EHB = {
+					add_to_war = {
+						targeted_alliance = JAP
+						enemy = CHI
+					}
+				}
+			}
+		}
+	}
+	#option = {#NO
+	#	name = rcmjapan.1003.b	
+	#}
+	option = {#NO FOREVER
+		name = rcmjapan.1003.b
+		ai_chance = {
+			factor = 0
+		}
+		set_country_flag = no_rebuild_EHB
+	}
+}
+#EHB rebuild #JNC
+country_event = {
+	id = rcmjapan.1004
+	title = rcmjapan.1004.t
+	desc = rcmjapan.1004.d
+	picture = GFX_report_event_PROV_GOV
+	
+	trigger = {
+		tag = JAP
+		608 = {
+			is_controlled_by_jap_or_its_puppet = yes
+		}
+		NOT = {
+			country_exists = EHB
+		}
+		NOT = {
+			has_country_flag = no_rebuild_JNC
+		}
+		#EHB has transformed
+		has_global_flag = jnc_exists
+	}
+	option = {#YES
+		name = rcmjapan.1004.a
+		ai_chance = {
+			factor = 100
+		}
+		EHB = {
+			JNC_CREATION = yes
+		}	
+	}
+	#option = {#NO
+	#	name = rcmjapan.1004.b	
+	#}
+	option = {#NO FOREVER
+		name = rcmjapan.1004.b
+		ai_chance = {
+			factor = 0
+		}
+		set_country_flag = no_rebuild_JNC
+	}
+}
+#RFM rebuild #RRC
+country_event = {
+	id = rcmjapan.1005
+	title = rcmjapan.1005.t
+	desc = rcmjapan.1005.d
+	picture = GFX_report_event_new_reorganized_national_government
+	
+	trigger = {
+		tag = JAP
+		598 = {
+			is_controlled_by_jap_or_its_puppet = yes
+		}
+		NOT = {
+			any_country = {
+				is_rrc = yes
+			}
+		}
+		NOT = {
+			has_country_flag = no_rebuild_RRC
+		}
+		has_global_flag = rrc_exists
+	}
+	option = {#YES
+		name = rcmjapan.1005.a
+		ai_chance = {
+			factor = 100
+		}
+		custom_effect_tooltip = RRC_annex
+		hidden_effect = {
+			RFM = {
+				RRC_CREATION = yes
+			}
+		}
+	}
+	#option = {#NO
+	#	name = rcmjapan.1005.b	
+	#}
+	option = {#NO FOREVER
+		name = rcmjapan.1005.b
+		ai_chance = {
+			factor = 0
+		}
+		set_country_flag = no_rebuild_RRC
+	}
+}
+#RFM rebuild #RFM
+country_event = {
+	id = rcmjapan.1006
+	title = rcmjapan.1006.t
+	desc = rcmjapan.1006.d
+	picture = GFX_report_event_rfm
+	
+	trigger = {
+		tag = JAP
+		598 = {
+			is_controlled_by_jap_or_its_puppet = yes
+		}
+		NOT = {
+			country_exists = RFM
+		}
+		NOT = {
+			has_country_flag = no_rebuild_RFM
+		}
+		NOT = {
+			has_global_flag = rrc_exists
+		}
+		has_global_flag = rfm_exists
+	}
+	option = {#YES
+		name = rcmjapan.1006.a
+		ai_chance = {
+			factor = 100
+		}
+		RFM_CREATION = yes
+	}
+	#option = {#NO
+	#	name = rcmjapan.1006.b
+	#	
+	#}
+	option = {#NO FOREVER
+		name = rcmjapan.1006.b
+		ai_chance = {
+			factor = 0
+		}
+		set_country_flag = no_rebuild_RFM
+	}
+}
+#CCP rebuild #CCP
+country_event = {
+	id = rcmjapan.1007
+	title = rcmjapan.1007.t
+	desc = rcmjapan.1007.d
+	picture = GFX_report_event_great_way
+	
+	trigger = {
+		tag = JAP
+		613 = {
+			is_controlled_by_jap_or_its_puppet = yes
+		}
+		NOT = {
+			country_exists = CCP
+		}
+		NOT = {
+			country_exists = RFM
+		}
+		NOT = {
+			any_country = {
+				is_rrc = yes
+			}
+		}
+		NOT = {
+			has_country_flag = no_rebuild_CCP
+		}
+		NOT = {
+			OR = {
+				has_global_flag = rrc_exists
+				has_global_flag = rfm_exists
+			}
+		}
+	}
+	option = {#YES
+		name = rcmjapan.1007.a
+		ai_chance = {
+			factor = 100
+		}
+		CCP = {
+			transfer_state = 613
+			add_state_core = 613
+		}
+		puppet = CCP
+		hidden_effect = {
+			CCP = {
+				set_politics = {
+					ruling_party = fascism
+					elections_allowed = no
+				}
+				set_political_party = {
+					ideology = neutrality
+					popularity = 30
+				}
+				set_political_party = {
+					ideology = n_socialism
+					popularity = 0
+				}
+				set_political_party = {
+					ideology = communism
+					popularity = 0
+				}
+				set_political_party = {
+					ideology = fascism
+					popularity = 70
+				}
+			}
+			if = {
+				limit = {
+					has_war_with = CHI
+				}
+				CCP = {
+					add_to_war = {
+						targeted_alliance = JAP
+						enemy = CHI
+					}
+				}
+			}
+		}
+	}
+	#option = {#NO
+	#	name = rcmjapan.1007.b
+	#	
+	#}
+	option = {#NO FOREVER
+		name = rcmjapan.1007.b
+		ai_chance = {
+			factor = 0
+		}
+		set_country_flag = no_rebuild_CCP
+	}
+}
+#ECA rebuild #ECA
+country_event = {
+	id = rcmjapan.1008
+	title = rcmjapan.1008.t
+	desc = rcmjapan.1008.d
+	picture = GFX_report_mongol_gov
+	
+	trigger = {
+		tag = JAP
+		757 = {
+			is_controlled_by_jap_or_its_puppet = yes
+		}
+		NOT = {
+			country_exists = ECA
+		}
+		NOT = {
+			has_country_flag = no_rebuild_ECA
+		}
+		NOT = {
+			OR = {
+				has_global_flag = men_exists
+				has_global_flag = mua_exists
+				has_global_flag = mej_exists
+			}
+		}
+	}
+	option = {#YES
+		name = rcmjapan.1008.a
+		ai_chance = {
+			factor = 100
+		}
+		ECA = {
+			transfer_state = 757
+			add_state_core = 757
+		}
+		puppet = ECA
+		hidden_effect = {
+			if = {
+				limit = {
+					has_war_with = CHI
+				}
+				ECA = {
+					add_to_war = {
+						targeted_alliance = JAP
+						enemy = CHI
+					}
+				}
+			}
+			ECA = {
+				set_politics = {
+					ruling_party = fascism
+					elections_allowed = no
+				}
+				set_political_party = {
+					ideology = neutrality
+					popularity = 30
+				}
+				set_political_party = {
+					ideology = n_socialism
+					popularity = 0
+				}
+				set_political_party = {
+					ideology = communism
+					popularity = 0
+				}
+				set_political_party = {
+					ideology = fascism
+					popularity = 70
+				}
+			}
+		}
+	}
+	#option = {#NO
+	#	name = rcmjapan.1008.b
+	#	
+	#}
+	option = {#NO FOREVER
+		name = rcmjapan.1008.b
+		ai_chance = {
+			factor = 0
+		}
+		set_country_flag = no_rebuild_ECA
+	}
+}
+#ECA rebuild #MEN
+country_event = {
+	id = rcmjapan.1009
+	title = rcmjapan.1009.t
+	desc = rcmjapan.1009.d
+	picture = GFX_report_mongol_gov
+	
+	trigger = {
+		tag = JAP
+		612 = {
+			is_controlled_by_jap_or_its_puppet = yes
+		}
+		NOT = {
+			country_exists = ECA
+		}
+		NOT = {
+			has_country_flag = no_rebuild_MEN
+		}
+		has_global_flag = men_exists
+		NOT = {
+			OR = {
+				has_global_flag = mua_exists
+				has_global_flag = mej_exists
+			}
+		}
+	}
+	option = {#YES
+		name = rcmjapan.1009.a
+		ai_chance = {
+			factor = 100
+		}
+		effect_tooltip = {
+			MEN = {
+				transfer_state = 612
+				add_state_core = 612
+				add_state_core = 763
+				add_state_core = 757
+				add_state_core = 621
+			}
+			puppet = MEN
+		}
+		hidden_effect = {
+			ECA = {
+				transfer_state = 612
+				add_state_core = 612
+				add_state_core = 763
+				add_state_core = 757
+				add_state_core = 621
+			}
+			MEN_CREATION = yes
+			if = {
+				limit = {
+					has_war_with = CHI
+				}
+				ECA = {
+					add_to_war = {
+						targeted_alliance = JAP
+						enemy = CHI
+					}
+				}
+			}
+		}
+	}
+	#option = {#NO
+	#	name = rcmjapan.1009.b
+	#	
+	#}
+	option = {#NO FOREVER
+		name = rcmjapan.1009.b
+		ai_chance = {
+			factor = 0
+		}
+		set_country_flag = no_rebuild_MEN
+	}
+}
+#ECA rebuild #MUA
+country_event = {
+	id = rcmjapan.1010
+	title = rcmjapan.1010.t
+	desc = rcmjapan.1010.d
+	picture = GFX_report_mongol_gov
+	trigger = {
+		tag = JAP
+		612 = {
+			is_controlled_by_jap_or_its_puppet = yes
+		}
+		NOT = {
+			country_exists = ECA
+		}
+		NOT = {
+			has_country_flag = no_rebuild_MUA
+		}
+		has_global_flag = men_exists
+		has_global_flag = mua_exists
+		NOT = {
+			has_global_flag = mej_exists
+		}
+	}
+	option = {#YES
+		name = rcmjapan.1010.a
+		ai_chance = {
+			factor = 100
+		}
+		effect_tooltip = {
+			MUA = {
+				transfer_state = 612
+				add_state_core = 612
+				add_state_core = 763
+				add_state_core = 757
+				add_state_core = 621
+			}
+			puppet = MUA
+		}
+		hidden_effect = {
+			ECA = {
+				transfer_state = 612
+				add_state_core = 612
+				add_state_core = 763
+				add_state_core = 757
+				add_state_core = 621
+				set_cosmetic_tag = MUA
+			}
+			puppet = ECA	
+			if = {
+				limit = {
+					has_war_with = CHI
+				}
+				ECA = {
+					add_to_war = {
+						targeted_alliance = JAP
+						enemy = CHI
+					}
+				}
+			}
+			ECA = {
+				set_politics = {
+					ruling_party = fascism
+					elections_allowed = no
+				}
+				set_political_party = {
+					ideology = neutrality
+					popularity = 30
+				}
+				set_political_party = {
+					ideology = n_socialism
+					popularity = 0
+				}
+				set_political_party = {
+					ideology = communism
+					popularity = 0
+				}
+				set_political_party = {
+					ideology = fascism
+					popularity = 70
+				}
+			}
+		}
+	}
+	#option = {#NO
+	#	name = rcmjapan.1010.b
+	#	
+	#}
+	option = {#NO FOREVER
+		name = rcmjapan.1010.b
+		ai_chance = {
+			factor = 0
+		}
+		set_country_flag = no_rebuild_MUA
+	}
+}
+#ECA rebuild #MEJ
+country_event = {
+	id = rcmjapan.1011
+	title = rcmjapan.1011.t
+	desc = rcmjapan.1011.d
+	picture = GFX_report_mongol_gov
+	trigger = {
+		tag = JAP
+		611 = {
+			is_controlled_by_jap_or_its_puppet = yes
+		}
+		NOT = {
+			country_exists = ECA
+		}
+		NOT = {
+			has_country_flag = no_rebuild_MEJ
+		}
+		has_global_flag = men_exists
+		has_global_flag = mua_exists
+		has_global_flag = mej_exists
+	}
+	option = {#YES
+		name = rcmjapan.1011.a
+		ai_chance = {
+			factor = 100
+		}
+		effect_tooltip = {
+			MEJ = {
+				transfer_state = 611
+				add_state_core = 611
+				add_state_core = 612
+				add_state_core = 763
+				add_state_core = 762
+				add_state_core = 757
+				add_state_core = 621
+				add_state_core = 330
+			}
+			puppet = MEJ
+		}
+		hidden_effect = {
+			ECA = {
+				transfer_state = 611
+				add_state_core = 611
+				add_state_core = 612
+				add_state_core = 763
+				add_state_core = 762
+				add_state_core = 757
+				add_state_core = 621
+				add_state_core = 330
+				set_cosmetic_tag = MEJ
+			}
+			puppet = ECA
+			if = {
+				limit = {
+					has_war_with = CHI
+				}
+				ECA = {
+					add_to_war = {
+						targeted_alliance = JAP
+						enemy = CHI
+					}
+				}
+			}
+			ECA = {
+				set_politics = {
+					ruling_party = fascism
+					elections_allowed = no
+				}
+				set_political_party = {
+					ideology = neutrality
+					popularity = 30
+				}
+				set_political_party = {
+					ideology = n_socialism
+					popularity = 0
+				}
+				set_political_party = {
+					ideology = communism
+					popularity = 0
+				}
+				set_political_party = {
+					ideology = fascism
+					popularity = 70
+				}
+			}			
+		}
+	}
+	#option = {#NO
+	#	name = rcmjapan.1011.b
+	#}
+	option = {#NO FOREVER
+		name = rcmjapan.1011.b
+		ai_chance = {
+			factor = 0
+		}
+		set_country_flag = no_rebuild_MEJ
+	}
+}
+#NSG rebuild #NSG
+country_event = {
+	id = rcmjapan.1012
+	title = rcmjapan.1012.t
+	desc = rcmjapan.1012.d
+	picture = GFX_report_event_NSG
+	trigger = {
+		tag = JAP
+		762 = {
+			is_controlled_by_jap_or_its_puppet = yes
+		}
+		NOT = {
+			country_exists = NSG
+		}
+		NOT = {
+			has_country_flag = no_rebuild_NSG
+		}
+		has_global_flag = nsg_exists
+	}
+	option = {#YES
+		name = rcmjapan.1012.a
+		ai_chance = {
+			factor = 100
+		}
+		custom_effect_tooltip = NSG_establish_tt
+		hidden_effect = {
+			#set_global_flag = nsg_exists
+			NSG = {
+				transfer_state = 762
+				add_state_core = 762
+			}
+			JAP = {
+				set_autonomy = {
+					target = NSG
+					autonomous_state = autonomy_integrated_puppet					
+				}
+			}
+			NSG = {
+				set_politics = { ruling_party = fascism elections_allowed = no }
+				set_political_party = { ideology = neutrality popularity = 35 }
+				set_political_party = { ideology = fascism popularity = 65 }
+				set_political_party = { ideology = communism popularity = 0 }
+				set_political_party = { ideology = democratic popularity = 0 }
+				set_political_party = { ideology = n_socialism popularity = 0 }
+			}
+			
+		}
+	}
+	#option = {#NO
+	#	name = rcmjapan.1012.b	
+	#}
+	option = {#NO FOREVER
+		name = rcmjapan.1012.b
+		ai_chance = {
+			factor = 0
+		}
+		set_country_flag = no_rebuild_MEJ
+	}
+}
+#SCG rebuild #SCG
+country_event = {
+	id = rcmjapan.1013
+	title = rcmjapan.1013.t
+	desc = rcmjapan.1013.d
+	picture = GFX_report_event_SCG
+	trigger = {
+		tag = JAP
+		611 = {
+			is_controlled_by_jap_or_its_puppet = yes
+		}
+		NOT = {
+			country_exists = SCG
+		}
+		NOT = {
+			has_country_flag = no_rebuild_SCG
+		}
+		has_global_flag = scg_exists
+	}
+	option = {#YES
+		name = rcmjapan.1013.a
+		ai_chance = {
+			factor = 100
+		}
+		custom_effect_tooltip = SCG_establish_tt
+		hidden_effect = {
+			set_global_flag = scg_exists
+			SCG = {
+				transfer_state = 611
+				add_state_core = 611
+			}
+			JAP = {
+				set_autonomy = {
+					target = SCG
+					autonomous_state = autonomy_integrated_puppet					
+				}
+			}
+			SCG = {
+				set_politics = { ruling_party = fascism elections_allowed = no }
+				set_political_party = { ideology = neutrality popularity = 35 }
+				set_political_party = { ideology = fascism popularity = 65 }
+				set_political_party = { ideology = communism popularity = 0 }
+				set_political_party = { ideology = democratic popularity = 0 }
+				set_political_party = { ideology = n_socialism popularity = 0 }
+			}
+			
+		}
+	}
+	#option = {#NO
+	#	name = rcmjapan.1013.b
+	#	
+	#}
+	option = {#NO FOREVER
+		name = rcmjapan.1013.b
+		ai_chance = {
+			factor = 0
+		}
+		set_country_flag = no_rebuild_MEJ
+	}
+}
+######################
+####creat MENJIANG####
+######################
+country_event = {
+	id = rcmjapan.90
+	title = rcmjapan.90.t
+	desc = rcmjapan.90.d
+	picture = GFX_report_event_mengjiang_puppet_02
+	
+	is_triggered_only = yes
+	
+	option = {#BOTH EXIST
+		name = rcmjapan.90.a
+		trigger = {
+			country_exists = NSG
+			country_exists = SCG
+		}
+		SCG = {
+			country_event = {
+				hours = 1 id = rcmjapan.91
+			}
+		}
+		NSG = {
+			country_event = {
+				hours = 5 id = rcmjapan.92
+			}
+		}
+		create_mengjiang = yes
+	}
+	option = {#ONE EXIST
+		name = rcmjapan.90.b
+		trigger = {
+			OR = {
+				country_exists = NSG
+				country_exists = SCG
+			}
+			NOT = {
+				country_exists = NSG
+				country_exists = SCG
+			}
+		}
+		
+		if = {
+			limit = {
+				country_exists = SCG
+			}
+			transfer_state = 762
+			create_mengjiang = yes
+			SCG = {
+				country_event = {
+					hours = 1 id = rcmjapan.91
+				}
+			}
+		}
+		if = {
+			limit = {
+				country_exists = NSG
+			}
+			transfer_state = 611
+			create_mengjiang = yes
+			NSG = {
+				country_event = {
+					hours = 5 id = rcmjapan.92
+				}
+			}
+		}
+	}
+	option = {#NONE EXIST
+		name = rcmjapan.90.c
+		trigger = {
+			NOT = {
+				OR = {
+					country_exists = NSG
+					country_exists = SCG
+				}
+			}
+		}
+		transfer_state = 762
+		transfer_state = 611
+		create_mengjiang = yes
+	}
+}
+country_event = { #to south chahar
+	id = rcmjapan.91
+	title = rcmjapan.91.t
+	desc = rcmjapan.91.d
+	picture = GFX_report_mongol_gov
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rcmjapan.91.a
+		ai_chance = {
+			factor = 100
+		}
+		trigger = {
+			country_exists = NSG
+		}
+		if = {
+			limit = {
+				OR = {
+					has_global_flag = NSG_yes_mengjiang
+					has_global_flag = NSG_no_mengjiang
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = NSG_yes_mengjiang
+				}
+				ECA = {
+					country_event = {
+						hours = 5 id = rcmjapan.93
+					}
+				}
+				custom_effect_tooltip = country_switch_to_mej_tt
+				hidden_effect = {
+					ECA = {
+						change_tag_from = SCG
+					}
+				}
+				
+				effect_tooltip = {
+					ECA = {
+						annex_country = {
+							target = ROOT transfer_troops = yes
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = NSG_no_mengjiang
+				}
+				ECA = {
+					country_event = {
+						hours = 5 id = rcmjapan.95
+					}
+				}
+				custom_effect_tooltip = country_switch_to_mej_tt
+				hidden_effect = {
+					ECA = {
+						change_tag_from = SCG
+					}
+				}
+				effect_tooltip = {
+					ECA = {
+						annex_country = {
+							target = ROOT transfer_troops = yes
+						}
+					}
+				}
+			}
+			else = {
+				custom_effect_tooltip = country_switch_to_mej_tt
+				hidden_effect = {
+					ECA = {
+						change_tag_from = SCG
+					}
+				}
+				effect_tooltip = {
+					ECA = {
+						annex_country = {
+							target = ROOT transfer_troops = yes
+						}
+					}
+				}
+				set_global_flag = SCG_yes_mengjiang
+			}
+		}
+	}
+	option = {
+		name = rcmjapan.91.b
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			country_exists = NSG
+		}
+		if = {
+			limit = {
+				OR = {
+					has_global_flag = NSG_yes_mengjiang
+					has_global_flag = NSG_no_mengjiang
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = NSG_yes_mengjiang
+				}
+				ECA = {
+					country_event = {
+						hours = 3 id = rcmjapan.94
+					}
+				}
+				effect_tooltip = {
+					ECA = {
+						puppet = ROOT
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = NSG_no_mengjiang
+				}
+				ECA = {
+					country_event = {
+						hours = 3 id = rcmjapan.96
+					}
+				}
+				effect_tooltip = {
+					ECA = {
+						puppet = ROOT
+					}
+				}
+			}
+			else = {
+				effect_tooltip = {
+					ECA = {
+						puppet = ROOT
+					}
+				}
+				set_global_flag = SCG_no_mengjiang
+			}
+		}
+	}
+	option = { #ONE YES
+		name = rcmjapan.91.c
+		trigger = {
+			NOT = {
+				country_exists = NSG
+			}
+		}
+		ECA = {
+			country_event = {
+				hours = 3 id = rcmjapan.97
+			}
+		}
+	}
+	option = { #ONE NO
+		name = rcmjapan.91.e
+		trigger = {
+			NOT = {
+				country_exists = NSG
+			}
+		}
+		ECA = {
+			country_event = {
+				hours = 3 id = rcmjapan.98
+			}
+		}
+	}
+}
+country_event = { #to north shanxi
+	id = rcmjapan.92
+	title = rcmjapan.92.t
+	desc = rcmjapan.92.d
+	picture = GFX_report_mongol_gov
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rcmjapan.92.a
+		ai_chance = {
+			factor = 100
+		}
+		trigger = {
+			country_exists = SCG
+		}
+		if = {
+			limit = {
+				OR = {
+					has_global_flag = SCG_yes_mengjiang
+					has_global_flag = SCG_no_mengjiang
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = SCG_yes_mengjiang
+				}
+				ECA = {
+					country_event = {
+						hours = 5 id = rcmjapan.93
+					}
+				}
+				custom_effect_tooltip = country_switch_to_mej_tt
+				hidden_effect = {
+					ECA = {
+						change_tag_from = NSG
+					}
+				}
+				effect_tooltip = {
+					ECA = {
+						annex_country = {
+							target = ROOT transfer_troops = yes
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = SCG_no_mengjiang
+				}
+				ECA = {
+					country_event = {
+						hours = 5 id = rcmjapan.94
+					}
+				}
+				custom_effect_tooltip = country_switch_to_mej_tt
+				hidden_effect = {
+					ECA = {
+						change_tag_from = NSG
+					}
+				}
+				effect_tooltip = {
+					ECA = {
+						annex_country = {
+							target = ROOT transfer_troops = yes
+						}
+					}
+				}
+			}
+			else = {
+				set_global_flag = NSG_yes_mengjiang
+				custom_effect_tooltip = country_switch_to_mej_tt
+				hidden_effect = {
+					ECA = {
+						change_tag_from = NSG
+					}
+				}
+				effect_tooltip = {
+					ECA = {
+						annex_country = {
+							target = ROOT transfer_troops = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = rcmjapan.92.b
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			country_exists = SCG
+		}
+		if = {
+			limit = {
+				OR = {
+					has_global_flag = SCG_yes_mengjiang
+					has_global_flag = SCG_no_mengjiang
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = SCG_yes_mengjiang
+				}
+				ECA = {
+					country_event = {
+						hours = 5 id = rcmjapan.95
+					}
+				}
+				effect_tooltip = {
+					ECA = {
+						puppet = ROOT
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = SCG_no_mengjiang
+				}
+				ECA = {
+					country_event = {
+						hours = 5 id = rcmjapan.96
+					}
+				}
+				effect_tooltip = {
+					ECA = {
+						puppet = ROOT
+					}
+				}
+			}
+			else = {
+				effect_tooltip = {
+					ECA = {
+						puppet = ROOT
+					}
+				}
+				set_global_flag = NSG_no_mengjiang
+			}
+		}
+	}
+	option = {
+		name = rcmjapan.92.c
+		trigger = {
+			NOT = {
+				country_exists = SCG
+			}
+		}
+		ECA = {
+			country_event = {
+				hours = 3 id = rcmjapan.97
+			}
+		}
+	}
+	option = {
+		name = rcmjapan.92.e
+		trigger = {
+			NOT = {
+				country_exists = SCG
+			}
+		}
+		ECA = {
+			country_event = {
+				hours = 3 id = rcmjapan.98
+			}
+		}
+	}
+}
+#BOTH
+country_event = {
+	id = rcmjapan.93
+	title = rcmjapan.93.t
+	desc = rcmjapan.93.d
+	picture = GFX_report_mongol_gov
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rcmjapan.93.a
+		effect_tooltip = {
+			annex_country = {
+				target = NSG transfer_troops = yes
+			}
+			annex_country = {
+				target = SCG transfer_troops = yes
+			}
+		}
+		hidden_effect = {
+			JAP = {
+				annex_country = {
+				target = NSG transfer_troops = yes
+				}
+				annex_country = {
+					target = SCG transfer_troops = yes
+				}
+			}
+			clr_global_flag = scg_exists
+			clr_global_flag = nsg_exists
+			transfer_state = 762
+			transfer_state = 611
+		}
+		set_capital = 611
+	}
+}
+#SC no
+country_event = {
+	id = rcmjapan.94
+	title = rcmjapan.94.t
+	desc = rcmjapan.94.d
+	picture = GFX_report_mongol_gov
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rcmjapan.94.a
+		effect_tooltip = {
+			annex_country = {
+				target = NSG transfer_troops = yes
+			}
+			puppet = SCG
+		}
+		hidden_effect = {
+			clr_global_flag = nsg_exists
+			end_puppet = SCG
+			puppet = SCG
+			SCG = {
+				set_politics = {
+					ruling_party = fascism
+					elections_allowed = no
+				}
+				set_political_party = {
+					ideology = neutrality
+					popularity = 30
+				}
+				set_political_party = {
+					ideology = n_socialism
+					popularity = 0
+				}
+				set_political_party = {
+					ideology = communism
+					popularity = 0
+				}
+				set_political_party = {
+					ideology = fascism
+					popularity = 70
+				}
+			}
+			JAP = {
+				annex_country = {
+				target = NSG transfer_troops = yes
+				}
+			}
+			transfer_state = 762
+		}
+	}
+}
+#NS no
+country_event = {
+	id = rcmjapan.95
+	title = rcmjapan.95.t
+	desc = rcmjapan.95.d
+	picture = GFX_report_mongol_gov
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rcmjapan.95.a
+		effect_tooltip = {
+			annex_country = {
+				target = SCG transfer_troops = yes
+			}
+			puppet = NSG
+		}
+		hidden_effect = {
+			clr_global_flag = scg_exists
+			end_puppet = NSG
+			puppet = NSG
+			NSG = {
+				set_politics = {
+					ruling_party = fascism
+					elections_allowed = no
+				}
+				set_political_party = {
+					ideology = neutrality
+					popularity = 30
+				}
+				set_political_party = {
+					ideology = n_socialism
+					popularity = 0
+				}
+				set_political_party = {
+					ideology = communism
+					popularity = 0
+				}
+				set_political_party = {
+					ideology = fascism
+					popularity = 70
+				}
+			}
+			JAP = {
+				annex_country = {
+					target = SCG transfer_troops = yes
+				}
+			}
+			transfer_state = 611
+		}
+		set_capital = 611
+	}
+}
+#BOTH no
+country_event = {
+	id = rcmjapan.96
+	title = rcmjapan.96.t
+	desc = rcmjapan.96.d
+	picture = GFX_report_mongol_gov
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rcmjapan.96.a
+		effect_tooltip = {
+			puppet = SCG
+			puppet = NSG
+		}
+		hidden_effect = {
+			end_puppet = NSG
+			puppet = NSG
+			end_puppet = SCG
+			puppet = SCG
+			NSG = {
+				set_politics = {
+					ruling_party = fascism
+					elections_allowed = no
+				}
+				set_political_party = {
+					ideology = neutrality
+					popularity = 30
+				}
+				set_political_party = {
+					ideology = n_socialism
+					popularity = 0
+				}
+				set_political_party = {
+					ideology = communism
+					popularity = 0
+				}
+				set_political_party = {
+					ideology = fascism
+					popularity = 70
+				}
+			}
+			SCG = {
+				set_politics = {
+					ruling_party = fascism
+					elections_allowed = no
+				}
+				set_political_party = {
+					ideology = neutrality
+					popularity = 30
+				}
+				set_political_party = {
+					ideology = n_socialism
+					popularity = 0
+				}
+				set_political_party = {
+					ideology = communism
+					popularity = 0
+				}
+				set_political_party = {
+					ideology = fascism
+					popularity = 70
+				}
+			}
+		}
+	}
+}
+#ONE yes
+country_event = {
+	id = rcmjapan.97
+	title = rcmjapan.97.t
+	desc = rcmjapan.97.d
+	picture = GFX_report_mongol_gov
+	is_triggered_only = yes	
+	option = {
+		name = rcmjapan.97.a
+		effect_tooltip = {
+			annex_country = {
+				target = FROM transfer_troops = yes
+			}
+		}
+		hidden_effect = {
+			JAP = {
+				annex_country = {
+				target = FROM transfer_troops = yes
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						owns_state = 762
+					}
+				}
+				transfer_state = 762
+			}
+			if = {
+				limit = {
+					NOT = {
+						owns_state = 611
+					}
+				}
+				transfer_state = 611
+			}
+		}
+		set_capital = 611
+	}
+}
+#ONE NO
+country_event = {
+	id = rcmjapan.98
+	title = rcmjapan.98.t
+	desc = rcmjapan.98.d
+	picture = GFX_report_mongol_gov
+	is_triggered_only = yes	
+	option = {
+		name = rcmjapan.98.a
+		effect_tooltip = {
+			annex_country = {
+				target = FROM transfer_troops = yes
+			}
+		}
+		hidden_effect = {
+			end_puppet = FROM
+			puppet = FROM
+			FROM = {
+				set_politics = {
+					ruling_party = fascism
+					elections_allowed = no
+				}
+				set_political_party = {
+					ideology = neutrality
+					popularity = 30
+				}
+				set_political_party = {
+					ideology = n_socialism
+					popularity = 0
+				}
+				set_political_party = {
+					ideology = communism
+					popularity = 0
+				}
+				set_political_party = {
+					ideology = fascism
+					popularity = 70
+				}
+			}
+			
+		}
+		if = {
+			limit = {
+				owns_state = 611
+			}
+			set_capital = 611
+		}
+	}
+}
+###########NSG & SCG CREATION
+#NSG
+country_event = {
+	id = rcmjapan.99
+	title = rcmjapan.99.t
+	desc = rcmjapan.99.d
+	picture = GFX_report_event_NSG
+	fire_only_once = yes
+	trigger = {
+		tag = JAP
+		has_war_with = CHI
+		NOT = {
+			OR = {
+				has_global_flag = mej_exists
+				country_exists = NSG
+			}
+		}
+		762 = {
+			is_controlled_by_jap_or_its_puppet = yes
+		}
+	}
+	option = {
+		name = rcmjapan.99.a
+		custom_effect_tooltip = NSG_establish_tt
+		hidden_effect = {
+			set_global_flag = nsg_exists
+			NSG = {
+				transfer_state = 762
+				add_state_core = 762
+			}
+			JAP = {
+				set_autonomy = {
+					target = NSG
+					autonomous_state = autonomy_integrated_puppet					
+				}
+			}
+			NSG = {
+				set_politics = { ruling_party = fascism elections_allowed = no }
+				set_political_party = { ideology = neutrality popularity = 35 }
+				set_political_party = { ideology = fascism popularity = 65 }
+				set_political_party = { ideology = communism popularity = 0 }
+				set_political_party = { ideology = democratic popularity = 0 }
+				set_political_party = { ideology = n_socialism popularity = 0 }
+			}
+			
+		}
+	}
+}
+#SCG
+country_event = {
+	id = rcmjapan.103
+	title = rcmjapan.103.t
+	desc = rcmjapan.103.d
+	picture = GFX_report_event_SCG
+	fire_only_once = yes
+	trigger = {
+		tag = JAP
+		has_war_with = CHI
+		NOT = {
+			OR = {
+				has_global_flag = mej_exists
+				country_exists = SCG
+			}
+		}
+		611 = {
+			is_controlled_by_jap_or_its_puppet = yes
+		}
+	}
+	option = {
+		name = rcmjapan.103.a
+		custom_effect_tooltip = SCG_establish_tt
+		hidden_effect = {
+			set_global_flag = scg_exists
+			SCG = {
+				transfer_state = 611
+				add_state_core = 611
+			}
+			JAP = {
+				set_autonomy = {
+					target = SCG
+					autonomous_state = autonomy_integrated_puppet					
+				}
+			}
+			SCG = {
+				set_politics = { ruling_party = fascism elections_allowed = no }
+				set_political_party = { ideology = neutrality popularity = 35 }
+				set_political_party = { ideology = fascism popularity = 65 }
+				set_political_party = { ideology = communism popularity = 0 }
+				set_political_party = { ideology = democratic popularity = 0 }
+				set_political_party = { ideology = n_socialism popularity = 0 }
+			}
+			
+		}
+	}
+}
+#JAP PROP
+country_event = {
+	id = rcmjapan.104
+	title = rcmjapan.104.t
+	desc = rcmjapan.104.d
+	picture = GFX_report_event_jap_prop
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = rcmjapan.104.a
+		add_timed_idea = {
+			days = 350 idea = JAP_expansionist_propaganda
+		}
+	}
+}
+#JAP CRUSH COM MILITIA
+country_event = {
+	id = rcmjapan.105
+	title = rcmjapan.105.t
+	desc = rcmjapan.105.d
+	picture = GFX_report_event_japan_army_mountainside
+	trigger = {
+		NOT = {
+			country_exists = PRC
+		}
+		OR = {
+			is_subject_of = JAP
+			tag = JAP
+		}
+		any_owned_state = {
+			has_state_flag = commie_ridden_states
+		}
+	}
+	mean_time_to_happen = {
+		days = 2
+	}
+	option = {
+		name = rcmjapan.105.a
+		add_political_power = -100
+		add_national_unity = 0.05
+		every_owned_state = {
+			limit = {
+				has_state_flag = commie_ridden_states
+			}
+			custom_effect_tooltip = remove_com_par_act_tt
+			clr_state_flag = commie_ridden_states
+		}
+		hidden_effect = {
+			set_country_flag = i_cracked_down_on_you
+			
+		}
+	}
+}

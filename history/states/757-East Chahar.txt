@@ -1,0 +1,24 @@
+state={
+	id=757
+	name="STATE_757"
+	history={
+		owner = ECA
+		add_core_of = ECA
+		add_core_of = CHI
+		add_core_of = PRC
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+			arms_factory = 1
+		}
+		victory_points = {
+			4495 2
+		}
+	}
+	provinces={
+		1811 1871 4555 7578 7648 10363 12348 12554 4495 7674
+	}
+	manpower=227455
+	buildings_max_level_factor = 1.500
+	state_category = town
+}
