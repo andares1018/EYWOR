@@ -52,7 +52,7 @@ create_field_marshal = {
 	name = "Han Fuju"
 	portrait_path = "gfx/leaders/SHD/Portrait_Han_Fuju.dds"
 	traits = { offensive_doctrine }
-	id = 3008
+	id = 3009
 	skill = 3
 }
 

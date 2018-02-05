@@ -135,7 +135,7 @@ focus_tree = {
 	focus = {
 		id = jap_placate_military_focus
 		icon = GFX_goal_rhineland
-		cost = 7.00
+		cost = 70.00
 		mutually_exclusive = {
 			focus = jap_gov_focus
 		}
@@ -2210,7 +2210,7 @@ focus_tree = {
 	focus = {#reinforce the border
 		id = aggressive_china_politics
 		icon = GFX_goal_generic_construct_military
-		cost = 10.00
+		cost = 5.72
 		prerequisite = {
 			focus = jap_placate_military_focus
 		}
@@ -2382,7 +2382,7 @@ focus_tree = {
 	focus = {
 		id = chinese_war_focus
 		icon = GFX_goal_generic_major_war
-		cost = 7.00
+		cost = 10.00
 		prerequisite = {
 			focus = test_the_chinese_focus
 			focus = aggressive_china_politics
@@ -2404,7 +2404,7 @@ focus_tree = {
 						is_major = yes
 					}
 					has_war_with_amount > 3
-					date < 1937.5.1
+					date < 1937.4.1
 				}
 			}
 		}
@@ -2439,10 +2439,18 @@ focus_tree = {
 			}
 			
 			set_global_flag = jap_war_chi
-			CHI = {
+			random_other_country = {
+				limit = {
+					is_legit_china = yes
+					NOT = { has_country_flag = nineteen_thirtynine_start }
+				}
 				news_event = {
 					hours = 1
 					id = news.1303
+				}
+				country_event = {
+					days = 2
+					id = rcmchina.100
 				}
 			}
 		}

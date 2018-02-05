@@ -349,7 +349,7 @@ create_mengjiang = {
 				elections_allowed = no
 			}
 		}
-		set_global_flag = mej_exists
+		set_global_flag = mej_exists 
 	}
 }
 #HUGE
@@ -558,6 +558,7 @@ JNC_CREATION = {
 			ideology = collaborationism
 		}
 		army_experience = 50
+		set_global_flag = jnc_exists
 	}
 	effect_tooltip = {
 		JNC = {
@@ -733,6 +734,7 @@ CCP_CREATION = {
 }
 
 MEN_CREATION = {
+	set_global_flag = men_exists
 	JAP = {
 		set_autonomy = {
 			target = ECA
@@ -775,7 +777,25 @@ MEN_CREATION = {
 		set_capital = 612
 	}
 }
-
+puppet_reclaim_land = {
+	every_state = {
+		limit = {
+			OR = {
+				JAP = {
+					has_full_control_of_state = PREV
+				}
+				any_other_country = {
+					is_subject_of = JAP
+					has_full_control_of_state = PREV
+				}
+			}
+			is_core_of = ROOT
+		}
+		ROOT = {
+			transfer_state = PREV
+		}
+	}
+}
 set_commie_rebels = {	
 	if = {
 		limit = {

@@ -1328,7 +1328,13 @@ focus_tree = {
 				is_owned_and_controlled_by = ROOT
 				industrial_complex > 1
 			}
-			has_war = yes
+			any_other_country = {
+				has_war_with = ROOT
+				OR = {
+					is_major = yes
+					num_of_factories > 50
+				}
+			}
 			605 = {
 				controller = {
 					OR = {

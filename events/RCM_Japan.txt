@@ -543,7 +543,7 @@ country_event = {
 	}
 	immediate = {
 		hidden_effect = {
-			JAP = { transfer_state = 608 }
+			JAP = { set_state_controller = 608 }
 		}
 	}
 	option = {}
@@ -560,7 +560,7 @@ country_event = {
 	}
 	immediate = {
 		hidden_effect = {
-			ECA = { transfer_state = 611 }
+			ECA = { set_state_controller = 611 }
 		}
 	}
 	option = {}
@@ -578,7 +578,7 @@ country_event = {
 	}
 	immediate = {
 		hidden_effect = {
-			transfer_state = 597
+			set_state_controller = 597
 		}
 	}
 	option = {}
@@ -611,7 +611,7 @@ country_event = {
 	}
 	immediate = {
 		hidden_effect = {
-			transfer_state = 608
+			set_state_controller = 608
 		}
 	}
 	option = {}
@@ -4495,6 +4495,7 @@ country_event = {
 			add_state_core = 610
 			add_state_core = 328
 			army_experience = 25
+			puppet_reclaim_land = yes
 		}
 		puppet = MAN
 		hidden_effect = {
@@ -4576,6 +4577,7 @@ country_event = {
 		}
 		EHB = {
 			transfer_state = 609
+			add_state_core = 609
 		}
 		
 		puppet = EHB
@@ -4999,8 +5001,10 @@ country_event = {
 				add_state_core = 763
 				add_state_core = 757
 				add_state_core = 621
+				puppet_reclaim_land = yes
 			}
 			MEN_CREATION = yes
+			
 			if = {
 				limit = {
 					has_war_with = CHI
@@ -5075,6 +5079,7 @@ country_event = {
 				add_state_core = 757
 				add_state_core = 621
 				set_cosmetic_tag = MUA
+				puppet_reclaim_land = yes
 			}
 			puppet = ECA	
 			if = {
@@ -5177,6 +5182,7 @@ country_event = {
 				add_state_core = 621
 				add_state_core = 330
 				set_cosmetic_tag = MEJ
+				puppet_reclaim_land = yes
 			}
 			puppet = ECA
 			if = {

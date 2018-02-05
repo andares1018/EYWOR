@@ -3629,12 +3629,6 @@ country_event = {
 					owner = PLM
 				}
 			}
-			random_owned_controlled_state = {
-				create_unit = { 
-					division = "name = \"5th Jongyang Bubing Shi\" division_template = \"Bubing Shi\" start_experience_factor = 0.4" 
-					owner = PLM
-				}
-			}
 			else = {
 				random_owned_controlled_state = {
 					create_unit = { 
@@ -3663,6 +3657,36 @@ country_event = {
 				random_owned_controlled_state = {
 					create_unit = { 
 						division = "name = \"5th Jongyang Bubing Shi\" division_template = \"Bubing Shi\" start_experience_factor = 0.4" 
+						owner = SHX
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = { 
+						division = "name = \"6th Jongyang Bubing Shi\" division_template = \"Bubing Shi\" start_experience_factor = 0.4" 
+						owner = SHX
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = { 
+						division = "name = \"7th Jongyang Bubing Shi\" division_template = \"Bubing Shi\" start_experience_factor = 0.4" 
+						owner = SHX
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = { 
+						division = "name = \"8th Jongyang Bubing Shi\" division_template = \"Bubing Shi\" start_experience_factor = 0.4" 
+						owner = SHX
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = { 
+						division = "name = \"9th Jongyang Bubing Shi\" division_template = \"Bubing Shi\" start_experience_factor = 0.4" 
+						owner = SHX
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = { 
+						division = "name = \"10th Jongyang Bubing Shi\" division_template = \"Bubing Shi\" start_experience_factor = 0.4" 
 						owner = SHX
 					}
 				}

@@ -66,7 +66,7 @@ less_trucks_4_u_JAP = {
 		id = artillery
 		value = 20 #10 to 20
 	}
-}					   
+}					  
 southern_expansion = {
 	enable = {
 		tag = JAP

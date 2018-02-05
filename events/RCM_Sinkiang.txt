@@ -1684,11 +1684,36 @@ country_event = {
 	option = {
 		ai_chance = { factor = 5 }
 		name = Sinkiang.55.c
-		remove_unit_leader = 2890
-		remove_unit_leader = 2891
-		remove_unit_leader = 2892
-		remove_unit_leader = 2893
-		remove_unit_leader = 2894
+		if = {
+			limit = {
+				has_unit_leader = 2890
+			}
+			remove_unit_leader = 2890
+		}
+		if = {
+			limit = {
+				has_unit_leader = 2891
+			}
+			remove_unit_leader = 2891
+		}
+		if = {
+			limit = {
+				has_unit_leader = 2892
+			}
+			remove_unit_leader = 2892
+		}
+		if = {
+			limit = {
+				has_unit_leader = 2893
+			}
+			remove_unit_leader = 2893
+		}
+		if = {
+			limit = {
+				has_unit_leader = 2894
+			}
+			remove_unit_leader = 2894
+		}
 		add_popularity = {
 			ideology = communism
 			popularity = -0.2
@@ -2695,12 +2720,42 @@ country_event = {
 				value = 400
 			}
 		}
-		remove_unit_leader = 2890
-		remove_unit_leader = 2891
-		remove_unit_leader = 2892
-		remove_unit_leader = 2893
-		remove_unit_leader = 2894
-		remove_unit_leader = 2895
+		if = {
+			limit = {
+				has_unit_leader = 2890
+			}
+			remove_unit_leader = 2890
+		}
+		if = {
+			limit = {
+				has_unit_leader = 2891
+			}
+			remove_unit_leader = 2891
+		}
+		if = {
+			limit = {
+				has_unit_leader = 2892
+			}
+			remove_unit_leader = 2892
+		}
+		if = {
+			limit = {
+				has_unit_leader = 2893
+			}
+			remove_unit_leader = 2893
+		}
+		if = {
+			limit = {
+				has_unit_leader = 2894
+			}
+			remove_unit_leader = 2894
+		}
+		if = {
+			limit = {
+				has_unit_leader = 2895
+			}
+			remove_unit_leader = 2895
+		}
 		hidden_effect = {
 			news_event = { hours = 6 id = news.1039 }
 		}
