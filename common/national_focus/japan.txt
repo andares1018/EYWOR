@@ -135,7 +135,7 @@ focus_tree = {
 	focus = {
 		id = jap_placate_military_focus
 		icon = GFX_goal_rhineland
-		cost = 70.00
+		cost = 7.00
 		mutually_exclusive = {
 			focus = jap_gov_focus
 		}
@@ -2210,7 +2210,7 @@ focus_tree = {
 	focus = {#reinforce the border
 		id = aggressive_china_politics
 		icon = GFX_goal_generic_construct_military
-		cost = 5.72
+		cost = 10
 		prerequisite = {
 			focus = jap_placate_military_focus
 		}
@@ -2415,8 +2415,15 @@ focus_tree = {
 				limit = {
 					HPC = {
 						NOT = {
-							is_puppet_of = JAP
+							OR = {
+								is_puppet_of = JAP
+								any_other_country = {
+									is_legit_china = yes
+									has_war_with = HPC
+								}
+							}
 						}
+						owns_state = 608
 					}
 				}
 				create_wargoal = {
@@ -3067,7 +3074,7 @@ focus_tree = {
 	focus = {
 		id = pressure_pm_focus
 		icon = GFX_goal_demand_sudetenland
-		cost = 5.00
+		cost = 7.00
 		prerequisite = {
 			focus = jap_placate_military_focus
 		}
@@ -3099,7 +3106,7 @@ focus_tree = {
 	focus = {
 		id = konoe_cabinet
 		icon = GFX_goal_generic_cavalry
-		cost = 5.00
+		cost = 10.00
 		prerequisite = {
 			focus = pressure_pm_focus
 		}

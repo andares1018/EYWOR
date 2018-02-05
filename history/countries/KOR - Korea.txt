@@ -63,7 +63,18 @@ create_country_leader = {
 	desc = ""
 	picture = "gfx/leaders/KOR/Portrait_Lyuh_Woon_hyung.dds"
 	expire = "1965.1.1"
-	ideology = moderatism
+	ideology = n_socialism_ideology
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Lyuh Woon-hyung"
+	desc = ""
+	picture = "gfx/leaders/KOR/Portrait_Lyuh_Woon_hyung.dds"
+	expire = "1965.1.1"
+	ideology = despotism
 	traits = {
 		#
 	}

@@ -41,8 +41,46 @@ country_event = {
 
 country_event = {
 	id = hpc.2
-	title = hpc.2.t
-	desc = hpc.2.d
+	title = {
+		text = hpc.2.t
+		trigger = {
+			NOT = {
+				any_other_country = {
+					has_war_with = HPC
+					is_legit_china = yes
+				}
+			}
+		}
+	}
+	title = {
+		text = hpc.2.t_war
+		trigger = {
+			any_other_country = {
+				has_war_with = HPC
+				is_legit_china = yes
+			}
+		}
+	}
+	desc = {
+		text = hpc.2.d
+		trigger = {
+			NOT = {
+				any_other_country = {
+					has_war_with = HPC
+					is_legit_china = yes
+				}
+			}
+		}
+	}
+	desc = {
+		text = hpc.2.d_war
+		trigger = {
+			any_other_country = {
+				has_war_with = HPC
+				is_legit_china = yes
+			}
+		}
+	}
 	picture = GFX_report_event_chinese_soldiers_running
 	
 	is_triggered_only = yes
@@ -53,7 +91,13 @@ country_event = {
 			base = 80
 			modifier = {
 				factor = 100
-				is_historical_focus_on = yes
+				OR = {
+					is_historical_focus_on = yes
+					any_other_country = {
+						has_war_with = HPC
+						is_legit_china = yes
+					}
+				}
 			}
 		}
 		set_global_flag = hpc_pro_jap
@@ -73,7 +117,13 @@ country_event = {
 			base = 5
 			modifier = {
 				factor = 0
-				is_historical_focus_on = yes
+				OR = {
+					is_historical_focus_on = yes
+					any_other_country = {
+						has_war_with = HPC
+						is_legit_china = yes
+					}
+				}
 			}
 		}
 		JAP = {
@@ -90,5 +140,28 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = hpc.3.a
+	}
+}
+#CHI & HPC at war, trigger hpc.2
+country_event = {
+	id = hpc.4
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		tag = HPC
+		any_other_country = {
+			has_war_with = ROOT
+			is_legit_china = yes
+		}
+		NOT = {
+			is_subject_of = JAP
+		}
+	}
+	immediate = {
+		country_event = {
+			id = hpc.2
+		}
+	}
+	option = {
 	}
 }

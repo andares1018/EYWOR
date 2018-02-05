@@ -1400,7 +1400,7 @@ focus_tree = {
 				is_controlled_by = CHI
 				OR = {
 					any_neighbor_state = {
-						is_controlled_by_jap_or_its_puppet = no
+						is_controlled_by_jap_or_its_puppet = yes
 					}
 					CHI = {
 						surrender_progress > 0.5

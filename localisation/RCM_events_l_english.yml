@@ -76,7 +76,9 @@
  gud.5.c:0 "What a scum Chiang is!"
  ####hpc
  hpc.2.t:0 "Chiang Allows Our Independence under Japanese Pressure"
+ hpc.2.t_war:0 "Turn to Japan?"
  hpc.2.d:0 "Forced by Japan, Chiang has agreed to let us declare independence. We can now either declare our independence and work with the Japanese, or stick with Chiang and his regime against the Japanese."
+ hpc.2.d_war:0 "Since Nanking has initiated its "expedition" against our regional sovereignty, the Japanese Empire seems like a reliable authority to turn to. Should we keep resisting Nanking's aggression on our own, or turn to Japan to reclaim our regional dominance?"
  hpc.2.a:0 "Japan is more reliable."
  hpc.2.b:0 "Rather die in battlefield than live as a traitor."
  hpc.3.t:0 "Sino-Japanese Alliance"

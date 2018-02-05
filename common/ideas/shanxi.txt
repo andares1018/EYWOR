@@ -161,7 +161,9 @@ ideas = {
 				factor = 0
 				modifier = {
 					add = 50
-					has_idea = MEN_nanking_aid
+					ECA = {
+						has_completed_focus = MEN_grand_han_righteous
+					}
 				}
 			}
 		}
@@ -177,7 +179,7 @@ ideas = {
 			traits = { army_logistics_2 }
 			
 			ai_will_do = {
-				factor = 1
+				factor = 10
 			}
 		}
 

@@ -3588,6 +3588,7 @@ country_event = {
 			factor = 100
 		}
 		custom_effect_tooltip = a_few_divisions_recuited_tt
+		set_country_flag = china_sui_help
 		division_template = {
 			name = "Bubing Shi"		
 			regiments = {
@@ -3708,6 +3709,7 @@ country_event = {
 		ai_chance = {
 			factor = 100
 		}
+		set_country_flag = china_sui_help
 		add_timed_idea = {
 			idea = MEN_nanking_aid days = 200
 		}
