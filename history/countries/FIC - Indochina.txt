@@ -115,6 +115,7 @@ FRA = {
 		autonomous_state = autonomy_colony
 		freedom_level = 0.35
 	}
+	
 }
 
 set_politics = {

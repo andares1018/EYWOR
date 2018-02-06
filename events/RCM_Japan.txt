@@ -571,7 +571,7 @@ country_event = {
 	trigger = {
 		has_country_flag = im_jnc_now
 		has_global_flag = jnc_exists
-		597 = { is_controlled_by = RFM }
+		RFM = { has_full_control_of_state = 597 }
 	}
 	mean_time_to_happen = {
 		days = 2
@@ -604,7 +604,9 @@ country_event = {
 				597 = { is_owned_by = RFM }
 			}
 		}		
-		608 = { is_controlled_by = JAP }
+		JAP = {
+			has_full_control_of_state = 608
+		}
 	}
 	mean_time_to_happen = {
 		days = 2

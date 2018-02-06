@@ -46,7 +46,10 @@ country_event = {
 		trigger = {
 			NOT = {
 				any_other_country = {
-					has_war_with = HPC
+					OR = {
+						has_war_with = HPC
+						has_completed_focus = chi_conquer_focus
+					}
 					is_legit_china = yes
 				}
 			}
@@ -56,7 +59,10 @@ country_event = {
 		text = hpc.2.t_war
 		trigger = {
 			any_other_country = {
-				has_war_with = HPC
+				OR = {
+					has_war_with = HPC
+					has_completed_focus = chi_conquer_focus
+				}
 				is_legit_china = yes
 			}
 		}
@@ -66,7 +72,10 @@ country_event = {
 		trigger = {
 			NOT = {
 				any_other_country = {
-					has_war_with = HPC
+					OR = {
+						has_war_with = HPC
+						has_completed_focus = chi_conquer_focus
+					}
 					is_legit_china = yes
 				}
 			}
@@ -76,7 +85,10 @@ country_event = {
 		text = hpc.2.d_war
 		trigger = {
 			any_other_country = {
-				has_war_with = HPC
+				OR = {
+					has_war_with = HPC
+					has_completed_focus = chi_conquer_focus
+				}
 				is_legit_china = yes
 			}
 		}
@@ -94,7 +106,10 @@ country_event = {
 				OR = {
 					is_historical_focus_on = yes
 					any_other_country = {
-						has_war_with = HPC
+						OR = {
+							has_war_with = HPC
+							has_completed_focus = chi_conquer_focus
+						}
 						is_legit_china = yes
 					}
 				}
@@ -120,7 +135,10 @@ country_event = {
 				OR = {
 					is_historical_focus_on = yes
 					any_other_country = {
-						has_war_with = HPC
+						OR = {
+							has_war_with = HPC
+							has_completed_focus = chi_conquer_focus
+						}
 						is_legit_china = yes
 					}
 				}

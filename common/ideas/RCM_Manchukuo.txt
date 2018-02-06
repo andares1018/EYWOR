@@ -717,7 +717,7 @@ ideas = {
 			traits = { refinery_concern }
 		}
 	}
-		materiel_manufacturer = {
+	materiel_manufacturer = {
 		
 		designer = yes
 		
@@ -789,8 +789,7 @@ ideas = {
 			allowed = {
 				original_tag = MAN
 			}
-			available =
-			{
+			available = {
 				SOV = { has_completed_focus = SOV_far_east_fortification }
 			}
 			cost = 250

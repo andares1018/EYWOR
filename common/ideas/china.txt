@@ -1353,11 +1353,15 @@ ideas = {
 			equipment_bonus = {
 				tac_bomber_equipment = {
 					air_attack = 0.05 instant = yes
+				}
+				tac_bomber_equipment = {
 					air_defence = 0.05 instant = yes
 				}
 				fighter_equipment = {
 					air_attack = 0.05 instant = yes
-					air_defence = 0.05 instant = yes
+				}
+				fighter_equipment = {
+					air_defence = 0.05  instant = yes
 				}
 			}
 		}
@@ -1508,7 +1512,8 @@ ideas = {
 				army_defence_factor = 0.05
 			}
 		}
-		chi_inch_blood = {
+		############CHI INCH
+		chi_inch_blood_1 = {
 			picture = idea_generic_reserve_divisions			
 			allowed = {
 				always = no
@@ -1524,9 +1529,200 @@ ideas = {
 			
 			modifier = {
 				army_morale_factor = 0.05
-				conscription = 0.02
+				army_core_defence_factor = 0.05
+				army_core_attack_factor = 0.025
+				conscription = 0.005
 			}
 		}
+		chi_inch_blood_2 = {
+			picture = idea_generic_reserve_divisions			
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = {
+					OR = {
+						has_government = communism
+					}
+				}
+			}
+			removal_cost = -1
+			
+			modifier = {
+				army_morale_factor = 0.1
+				army_core_defence_factor = 0.1
+				army_core_attack_factor = 0.05
+				conscription = 0.01
+			}
+		}
+		chi_inch_blood_3 = {
+			picture = idea_generic_reserve_divisions			
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = {
+					OR = {
+						has_government = communism
+					}
+				}
+			}
+			removal_cost = -1
+			
+			modifier = {
+				army_morale_factor = 0.15
+				army_core_defence_factor = 0.15
+				army_core_attack_factor = 0.075
+				conscription = 0.015
+			}
+		}
+		chi_inch_blood_4 = {
+			picture = idea_generic_reserve_divisions			
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = {
+					OR = {
+						has_government = communism
+					}
+				}
+			}
+			removal_cost = -1
+			
+			modifier = {
+				army_morale_factor = 0.20
+				army_core_defence_factor = 0.20
+				army_core_attack_factor = 0.1
+				conscription = 0.020
+			}
+		}
+		chi_inch_blood_5 = {
+			picture = idea_generic_reserve_divisions			
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = {
+					OR = {
+						has_government = communism
+					}
+				}
+			}
+			removal_cost = -1
+			
+			modifier = {
+				army_morale_factor = 0.25
+				army_core_defence_factor = 0.25
+				army_core_attack_factor = 0.125
+				conscription = 0.025
+			}
+		}
+		chi_inch_blood_6 = {
+			picture = idea_generic_reserve_divisions			
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = {
+					OR = {
+						has_government = communism
+					}
+				}
+			}
+			removal_cost = -1
+			
+			modifier = {
+				army_morale_factor = 0.3
+				army_core_defence_factor = 0.3
+				conscription = 0.03
+			}
+		}
+		chi_inch_blood_7 = {
+			picture = idea_generic_reserve_divisions			
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = {
+					OR = {
+						has_government = communism
+					}
+				}
+			}
+			removal_cost = -1
+			
+			modifier = {
+				army_morale_factor = 0.35
+				army_core_defence_factor = 0.35
+				army_core_attack_factor = 0.175
+				conscription = 0.035
+			}
+		}
+		chi_inch_blood_8 = {
+			picture = idea_generic_reserve_divisions			
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = {
+					OR = {
+						has_government = communism
+					}
+				}
+			}
+			removal_cost = -1
+			
+			modifier = {
+				army_morale_factor = 0.4
+				army_core_defence_factor = 0.4
+				army_core_attack_factor = 0.2
+				conscription = 0.04
+			}
+		}
+		chi_inch_blood_9 = {
+			picture = idea_generic_reserve_divisions			
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = {
+					OR = {
+						has_government = communism
+					}
+				}
+			}
+			removal_cost = -1
+			
+			modifier = {
+				army_morale_factor = 0.45
+				army_core_defence_factor = 0.45
+				army_core_attack_factor = 0.25
+				conscription = 0.045
+			}
+		}
+		chi_inch_blood_10 = {
+			picture = idea_generic_reserve_divisions			
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = {
+					OR = {
+						has_government = communism
+					}
+				}
+			}
+			removal_cost = -1
+			
+			modifier = {
+				army_morale_factor = 0.5
+				army_core_defence_factor = 0.5
+				army_core_attack_factor = 0.25
+				conscription = 0.05
+			}
+		}
+		#########################
 	}
 	political_advisor = {
 		dai_li = {
@@ -2416,7 +2612,7 @@ ideas = {
 			}
 			equipment_bonus = {
 				motorized_equipment = {
-					build_cost_ic = -0.1 
+					build_cost_ic = -0.1 instant = yes
 				}
 			}	
 			traits = { motorized_equipment_manufacturer }
@@ -2434,8 +2630,12 @@ ideas = {
 			
 			research_bonus = {
 				motorized_equipment = 0.05
-				motorized_speed_factor = 0.1
 			}
+			equipment_bonus = {
+				motorized_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}	
 			
 			traits = { motorized_equipment_manufacturer }
 		}

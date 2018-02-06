@@ -156,7 +156,6 @@ RRC_core = {
 	add_state_core = 593
 	add_state_core = 594
 	add_state_core = 601
-	add_state_core = 591
 	add_state_core = 729
 	add_state_core = 728
 	add_state_core = 329
@@ -418,31 +417,8 @@ RRC_CREATION = {
 				is_owned_by_CHI_PRC_WARLORD_SIK = yes
 				is_owned_by = JAP
 			}
-			#OR = {
-			#	is_claimed_by = PREV
-				is_core_of = PREV
-			#}
-			AND = {
-				is_controlled_by_jap_or_its_puppet = yes
-				NOT = {
-					any_neighbor_state = {
-						OR = {
-							CHI = {
-								has_full_control_of_state = PREV
-							}
-							SHX = {
-								has_full_control_of_state = PREV
-							}
-							XSM = {
-								has_full_control_of_state = PREV
-							}
-							PRC = {
-								has_full_control_of_state = PREV
-							}
-						}
-					}
-				}
-			}
+			is_core_of = PREV
+			JAP_or_its_puppet_has_full_control_over_prev_states = yes
 		}
 		PREV = {
 			set_state_controller = PREV
@@ -523,16 +499,6 @@ JNC_CREATION = {
 				#transfer_state = PREV #puppet transfer state active
 			}
 		}
-		every_state = {
-			limit = {
-				is_controlled_by_jap_or_its_puppet = yes
-				is_core_of = PREV
-			}
-			PREV = {
-				set_state_controller = PREV
-				#set_state_owner = PREV #puppet transfer state active
-			}
-		}
 		load_oob = JNC_prov_focus
 		set_capital = 608
 		set_cosmetic_tag = JNC
@@ -558,7 +524,6 @@ JNC_CREATION = {
 			ideology = collaborationism
 		}
 		army_experience = 50
-		set_global_flag = jnc_exists
 	}
 	effect_tooltip = {
 		JNC = {
@@ -587,23 +552,6 @@ RFM_CREATION = {
 				puppet = RFM
 			}
 			army_experience = 50
-			every_state = {
-				limit = {
-					is_controlled_by_jap_or_its_puppet = yes
-					OR = {
-						state = 598
-						state = 606
-						state = 756
-						state = 596
-						state = 746
-						state = 744
-					}
-				}
-				RFM = {
-					set_state_controller = PREV
-					#set_state_owner = PREV #puppet transfer state active
-				}
-			}
 			every_state = {
 				limit = {
 					JAP_or_its_puppet_has_full_control_over_prev_states = yes

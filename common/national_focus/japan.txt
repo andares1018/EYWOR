@@ -135,7 +135,7 @@ focus_tree = {
 	focus = {
 		id = jap_placate_military_focus
 		icon = GFX_goal_rhineland
-		cost = 7.00
+		cost = 5.00
 		mutually_exclusive = {
 			focus = jap_gov_focus
 		}
@@ -3029,7 +3029,7 @@ focus_tree = {
 	focus = {
 		id = purge_military_focus
 		icon = GFX_goal_demand_sudetenland
-		cost = 5.00
+		cost = 7.00
 		prerequisite = {
 			focus = jap_placate_military_focus
 		}

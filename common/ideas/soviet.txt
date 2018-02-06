@@ -647,8 +647,7 @@ ideas = {
 			allowed = {
 				original_tag = "SOV"
 			}
-			available = 
-			{
+			available = {
 				NOT = { has_country_flag = purged_kalinin }
 				NOT = { has_country_flag = counter_purge }
 			}
@@ -666,8 +665,7 @@ ideas = {
 				original_tag = SOV
 			}
 
-			available = 
-			{
+			available = {
 				custom_trigger_tooltip = {
 					tooltip =  SOV_beria_idea
 					has_country_flag = purge_2_group_a
@@ -710,8 +708,7 @@ ideas = {
 				original_tag = SOV
 			}
 
-			available = 
-			{
+			available = {
 				NOT = { has_country_flag = counter_purge }
 				NOT = { has_country_flag = purge_2_group_a }
 			}
@@ -727,8 +724,7 @@ ideas = {
 			allowed = {
 				original_tag = "SOV"
 			}
-			available = 
-			{
+			available = {
 				NOT = { has_country_flag = purged_khrushchev }
 				NOT = { has_country_flag = counter_purge }
 			}
@@ -784,8 +780,7 @@ ideas = {
 			allowed = {
 				original_tag = "SOV"
 			}
-			available = 
-			{
+			available = {
 				NOT = { has_country_flag = counter_purge }
 			}
 			
@@ -818,8 +813,7 @@ ideas = {
 			allowed = {
 				original_tag = SOV
 			}
-			available = 
-			{
+			available = {
 				NOT = { has_country_flag = purge_1_group_b }
 				hidden_trigger = {
 					NOT = { 
@@ -847,8 +841,7 @@ ideas = {
 			allowed = {
 				original_tag = SOV
 			}
-			available = 
-			{
+			available = {
 				NOT = { has_country_flag = purge_1_group_b }
 				hidden_trigger = {
 					NOT = { 
@@ -876,8 +869,7 @@ ideas = {
 			allowed = {
 				original_tag = SOV
 			}
-			available = 
-			{
+			available = {
 				NOT = { has_country_flag = purge_1_group_a }
 			}
 			
@@ -898,8 +890,7 @@ ideas = {
 				original_tag = SOV
 
 			}
-			available = 
-			{
+			available = {
 				NOT = { has_country_flag = purge_1_group_a }
 			}
 			
@@ -922,8 +913,7 @@ ideas = {
 				original_tag = SOV
 
 			}
-			available = 
-			{
+			available = {
 				NOT = { has_country_flag = purge_1_group_a }
 			}
 			
@@ -944,8 +934,7 @@ ideas = {
 				original_tag = SOV
 
 			}
-			available = 
-			{
+			available = {
 				NOT = { has_country_flag = purge_1_group_a }
 			}
 			
@@ -966,8 +955,7 @@ ideas = {
 				original_tag = SOV
 
 			}
-			available = 
-			{
+			available = {
 				NOT = { has_country_flag = purge_2_group_b }
 			}
 			
@@ -988,8 +976,7 @@ ideas = {
 				original_tag = SOV
 
 			}
-			available = 
-			{
+			available = {
 				NOT = { has_country_flag = purge_1_group_b }
 			}
 			
@@ -1012,8 +999,7 @@ ideas = {
 				original_tag = SOV
 
 			}
-			available = 
-			{
+			available = {
 				NOT = { has_country_flag = purge_2_group_a }
 			}
 			
@@ -1034,8 +1020,7 @@ ideas = {
 				original_tag = SOV
 
 			}
-			available = 
-			{
+			available = {
 				NOT = { has_country_flag = purge_2_group_b }
 			}
 			
@@ -1055,8 +1040,7 @@ ideas = {
 				original_tag = SOV
 
 			}
-			available = 
-			{
+			available = {
 				NOT = { has_country_flag = purge_2_group_a }
 			}
 			
@@ -1077,8 +1061,7 @@ ideas = {
 				original_tag = SOV
 
 			}
-			available = 
-			{
+			available = {
 				#MODDED=========VVV
 				OR = {
 					CHI = {
@@ -1111,8 +1094,7 @@ ideas = {
 			allowed = {
 				original_tag = SOV
 			}
-			available = 
-			{
+			available = {
 				NOT = { has_country_flag = counter_purge }
 				custom_trigger_tooltip = {
 				tooltip = SOV_konev_civil_war
@@ -1143,8 +1125,7 @@ ideas = {
 				original_tag = SOV
 
 			}
-			available = 
-			{
+			available = {
 				NOT = { has_country_flag = purge_2_group_b }
 				hidden_trigger = {
 					NOT = { 
@@ -1181,8 +1162,7 @@ ideas = {
 					}
 				}
 			}
-			available = 
-			{
+			available = {
 				NOT = { has_country_flag = purge_1_group_b }
 				has_completed_focus = SOV_positive_heroism
 			}
@@ -1204,8 +1184,7 @@ ideas = {
 				original_tag = SOV
 
 			}
-			available = 
-			{
+			available = {
 				NOT = { has_country_flag = counter_purge }
 				#MODDED=========VVV
 				OR = {
@@ -1234,8 +1213,7 @@ ideas = {
 				original_tag = SOV
 
 			}
-			available = 
-			{
+			available = {
 				NOT = { has_country_flag = purge_2_group_b }
 			}
 			
@@ -1256,8 +1234,7 @@ ideas = {
 				original_tag = SOV
 
 			}
-			available = 
-			{
+			available = {
 				NOT = { has_country_flag = counter_purge }
 			}
 			
@@ -1277,8 +1254,7 @@ ideas = {
 				original_tag = SOV
 
 			}
-			available = 
-			{
+			available = {
 				NOT = { has_country_flag = purge_1_group_b }
 				hidden_trigger = {
 					NOT = { 
@@ -1307,8 +1283,7 @@ ideas = {
 				original_tag = SOV
 
 			}
-			available = 
-			{
+			available = {
 				NOT = { has_country_flag = purge_2_group_a }
 				hidden_trigger = {
 					NOT = { 
@@ -1338,8 +1313,7 @@ ideas = {
 				original_tag = SOV
 
 			}
-			available = 
-			{
+			available = {
 				NOT = { has_country_flag = counter_purge }
 				hidden_trigger = {
 					NOT = { 
@@ -1646,8 +1620,7 @@ ideas = {
 				original_tag = SOV
 
 			}
-			available = 
-			{
+			available = {
 				NOT = { has_country_flag = purge_1_group_a }
 			}
 			
@@ -1684,8 +1657,7 @@ ideas = {
 				original_tag = SOV # Unlocked via focus
 
 			}
-			available = 
-			{
+			available = {
 				NOT = { has_country_flag = counter_purge }
 			}
 			available = {
@@ -1708,8 +1680,7 @@ ideas = {
 				original_tag = SOV
 
 			}
-			available = 
-			{
+			available = {
 				NOT = { has_country_flag = counter_purge }
 			}
 			
@@ -1745,8 +1716,7 @@ ideas = {
 				original_tag = SOV
 
 			}
-			available = 
-			{
+			available = {
 				NOT = { has_country_flag = counter_purge }
 			}
 			

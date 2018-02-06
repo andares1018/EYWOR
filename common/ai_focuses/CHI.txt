@@ -1,6 +1,8 @@
 
 ai_historical_focus_list_CHI = {
 	ai_national_focuses = {
+		an_inch_of_mountain_an_inch_of_blood
+		peace_with_japan
 		chi_split_plm_focus
 		monetary_reform
 		chi_foreign_help_focus

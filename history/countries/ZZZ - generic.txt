@@ -287,3 +287,445 @@ every_country = {
 		}
 	}
 }
+
+########THIS SECTION IS FOR NON ASIAN COUNTRIE'S HISTORY
+NEP = {
+	create_country_leader = {
+		name = "Juddha Rana"
+		desc = "POLITICS_JUDDHA_RANA_DESC"
+		picture = "gfx/leaders/NEP/Portrait_Nepal_Juddha_Rana.dds"
+		expire = "1965.1.1"
+		ideology = despotism
+		traits = {
+			#
+		}
+	}
+}
+
+NOR = {
+	set_politics = {
+
+		parties = {
+			democratic = { 
+				popularity = 48
+			}
+			n_socialism = { 
+				popularity = 52
+			}
+			fascism = {
+				popularity = 2
+			}
+			
+			communism = {
+				popularity = 2
+			}
+		}
+		
+		ruling_party = n_socialism
+		last_election = "1933.10.16"
+		election_frequency = 36
+		elections_allowed = yes
+	}
+
+	
+
+	create_country_leader = {
+		name = "Johan Nygaardsvold"
+		desc = "POLITICS_JOHAN_NYGAARDSVOLD_DESC"
+		picture = "Portrait_Norway_Johan_Nygaardsvold.dds"
+		expire = "1965.1.1"
+		ideology = n_socialism_ideology
+		traits = {
+			#
+		}
+	}
+	create_country_leader = {
+		name = "Johan Ludwig Mowinckel"
+		desc = "POLITICS_JOHAN_LUDWIG_MOWINCKEL_DESC"
+		picture = "gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
+		expire = "1965.1.1"
+		ideology = liberalism
+		traits = {
+			#
+		}
+	}
+}
+RAJ = {
+	remove_ideas = RAJ_agrarian_society
+}
+
+
+ENG = {
+	if = {
+		limit = {
+			has_dlc = "Together for Victory"
+		}
+		set_autonomy = {
+			target = SST
+			autonomous_state = autonomy_integrated_puppet
+		}
+		set_autonomy = {
+			target = BUR
+			autonomous_state = autonomy_integrated_puppet
+		}
+		else = {
+			puppet = MAL
+			puppet = SST
+			puppet = RAJ
+			puppet = BUR	  
+		}
+	}
+	
+	set_politics = {
+
+		parties = {
+			democratic = { 
+				popularity = 60
+			}
+
+			fascism = {
+				popularity = 2
+			}
+			n_socialism = {
+				popularity = 40
+			}
+			communism = {
+				popularity = 1
+			}
+		}
+		
+		ruling_party = democratic
+		last_election = "1935.11.14"
+		election_frequency = 48
+		elections_allowed = yes ##suspended through duration of war, which is handled via event
+	}
+	add_to_faction = SST
+	create_country_leader = {
+		name = "Clement Attlee"
+		desc = ""
+		picture = "Portrait_Britain_Clement_Attlee.dds"
+		expire = "1965.1.1"
+		ideology = n_socialism_ideology
+		traits = {
+			
+		}
+	}
+}
+DEN = {
+	set_politics = {
+
+		parties = {
+			democratic = { 
+				popularity = 42
+			}
+			
+			n_socialism = { 
+				popularity = 55
+			}
+			fascism = {
+				popularity = 1
+			}
+			
+			communism = {
+				popularity = 2
+			}
+		}
+		
+		ruling_party = n_socialism
+		last_election = "1935.10.22"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+
+	
+
+	
+
+	create_country_leader = {
+		name = "Thorvald Stauning"
+		desc = "POLITICS_THORVALD_STAUNING_DESC"
+		picture = "Portrait_Denmark_Thorvald_Stauning.dds"
+		expire = "1965.1.1"
+		ideology = n_socialism_ideology
+		traits = {
+			#
+		}
+	}
+	create_country_leader = {
+		name = "Thomas Madsen-Mygdal"
+		desc = ""
+		picture = "Portrait_Denmark_Thomas_Madsen-Mygdal.dds"
+		expire = "1965.1.1"
+		ideology = conservatism
+		traits = {
+			#
+		}
+	}
+}
+NZL = {
+	set_politics = {
+
+		parties = {
+			democratic = { 
+				popularity = 45
+			}
+
+			fascism = {
+				popularity = 0
+			}
+			n_socialism = { 
+				popularity = 55
+			}
+			communism = {
+				popularity = 0
+				#banned = no #default is no
+			}
+		}
+		
+		ruling_party = n_socialism
+		last_election = "1935.11.27"
+		election_frequency = 36
+		elections_allowed = yes
+	}
+
+	create_country_leader = {
+		name = "Michael Joseph Savage"
+		desc = "POLITICS_MICHAEL_JOSEPH_SAVAGE_DESC"
+		picture = "GFX_NZL_michael_joseph_savage"
+		expire = "1965.1.1"
+		ideology = n_socialism_ideology
+		traits = {
+			#
+		}
+	}
+
+	create_country_leader = {
+		name = "Sidney Holland"
+		desc = "POLITICS_SIDNEY_HOLLAND_DESC"
+		picture = "GFX_NZL_sidney_holland"
+		expire = "1965.1.1"
+		ideology = conservatism
+		traits = {
+			#
+		}
+	}
+
+
+
+	
+}
+AST = {
+	set_politics = {
+
+		parties = {
+			democratic = { 
+				popularity = 40
+			}
+			n_socialism = { 
+				popularity = 60
+			}
+			fascism = {
+				popularity = 0
+			}
+			
+			communism = {
+				popularity = 2
+				#banned = no #default is no
+			}
+		}
+		
+		ruling_party = n_socialism
+		last_election = "1934.9.15"
+		election_frequency = 36
+		elections_allowed = yes
+	}
+
+	create_country_leader = {
+		name = "John Curtin"
+		desc = "POLITICS_JOHN_CURTIN_DESC"
+		picture = "Portrait_Australia_John_Curtin.dds"
+		expire = "1965.1.1"
+		ideology = n_socialism_ideology
+		traits = {
+			#
+		}
+	}
+
+	create_country_leader = {
+		name = "Joseph Lyons"
+		desc = ""
+		picture = "GFX_AST_earle_page"
+		expire = "1965.1.1"
+		ideology = conservatism
+		traits = {
+			#
+		}
+	}
+	create_country_leader = {
+		name = "Joseph Lyons"
+		desc = "POLITICS_EARLE_PAGE_DESC"
+		picture = "Portrait_Australia_Joseph_Lyons.dds"
+		expire = "1965.1.1"
+		ideology = centrism
+		traits = {
+			#
+		}
+	}
+}
+FRA = {
+	set_politics = {
+
+		parties = {
+			democratic = { 
+				popularity = 38
+			}
+
+			fascism = {
+				popularity = 1
+			}
+			n_socialism = {
+				popularity = 48
+			}
+			communism = {
+				popularity = 20
+			}
+		}
+		
+		ruling_party = democratic
+		last_election = "1932.5.1"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+	create_country_leader = {
+		name = "Léon Blum"
+		desc = ""
+		picture = "Portrait_Leon_Blum.dds"
+		expire = "1965.1.1"
+		ideology = n_socialism_ideology
+		traits = {
+			
+		}
+	}
+
+	create_country_leader = {
+		name = "Philippe Pétain"
+		desc = "POLITICS_PHILIPPE_PÉTAIN_DESC"
+		picture = "Portrait_France_Philippe_Petain.dds"
+		expire = "1965.1.1"
+		ideology = collaborationism
+		traits = {
+			
+		}
+	}
+}
+########1939.1.1
+1939.1.1 = {
+	NOR = {
+		set_politics = {
+
+			parties = {
+				democratic = { 
+					popularity = 48
+				}
+
+				fascism = {
+					popularity = 2
+				}
+				n_socialism = { 
+					popularity = 52
+				}
+				communism = {
+					popularity = 2
+				}
+
+				neutrality = {
+					popularity = 12
+				}
+			}
+			
+			ruling_party = n_socialism
+			last_election = "1936.10.19"
+			election_frequency = 36
+			elections_allowed = yes
+		}
+	}
+	NZL = {
+		set_politics = {
+
+			parties = {
+				democratic = { 
+					popularity = 45
+				}
+
+				fascism = {
+					popularity = 0
+				}
+				n_socialism = { 
+					popularity = 55
+				}
+				communism = {
+					popularity = 0
+					#banned = no #default is no
+				}
+			}
+			
+			ruling_party = democratic
+			last_election = "1938.10.15"
+			election_frequency = 60
+			elections_allowed = yes
+		}
+
+		# Didn't take office until '40, added for flavor
+		create_country_leader = {
+			name = "Peter Fraser"
+			desc = "POLITICS_PETER_FRASER_DESC"
+			picture = "Portrait_NewZealand_Peter_Fraser.dds"
+			expire = "1965.1.1"
+			ideology = n_socialism_ideology
+			traits = {
+				#
+			}
+		}
+
+	}
+	DEN = {
+		set_politics = {
+
+			parties = {
+				democratic = { 
+					popularity = 42
+				}
+				n_socialism = {
+					popularity = 55
+				}
+				fascism = {
+					popularity = 1
+				}
+				
+				communism = {
+					popularity = 2
+				}
+			}
+			
+			ruling_party = n_socialism
+			last_election = "1939.4.3"
+			election_frequency = 48
+			elections_allowed = yes
+		}
+	}
+	ENG = {
+		if = {
+			limit = {
+				has_dlc = "Together for Victory"
+			}
+				set_autonomy = {
+				target = BUR
+				autonomous_state = autonomy_colony
+				freedom_level = 0.35
+				}
+			else = {
+				puppet = BUR
+			}
+		}
+	}
+}

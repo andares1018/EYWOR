@@ -571,7 +571,35 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/jap_usa_pact.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_chi_inch_blood"
+		name = "GFX_idea_chi_inch_blood_1"
+		texturefile = "gfx/interface/ideas/chi_inch_blood.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_chi_inch_blood_2"
+		texturefile = "gfx/interface/ideas/chi_inch_blood.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_chi_inch_blood_3"
+		texturefile = "gfx/interface/ideas/chi_inch_blood.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_chi_inch_blood_4"
+		texturefile = "gfx/interface/ideas/chi_inch_blood.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_chi_inch_blood_5"
+		texturefile = "gfx/interface/ideas/chi_inch_blood.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_chi_inch_blood_6"
+		texturefile = "gfx/interface/ideas/chi_inch_blood.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_chi_inch_blood_7"
+		texturefile = "gfx/interface/ideas/chi_inch_blood.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_chi_inch_blood_8"
 		texturefile = "gfx/interface/ideas/chi_inch_blood.dds"
 	}
 	spriteType = {

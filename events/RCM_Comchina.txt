@@ -129,7 +129,11 @@ country_event = {
 			}
 			white_peace = PRC
 		}
-		diplomatic_relation = { country = CHI relation = non_aggression_pact }
+		if = {
+			limit = { country_exists = CHI }
+			diplomatic_relation = { country = CHI relation = non_aggression_pact }
+		}
+		
 		hidden_effect = {
 				CHI = {
 				white_peace = SOV

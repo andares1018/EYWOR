@@ -22,7 +22,6 @@ country_event = {
 	}
 	option = {
 		name = rcmchina.210.a
-		ai_chance = { factor = 100 }
 		607 = { add_manpower = -7000000 }
 		622 = { add_manpower = 4000000 }
 		hidden_effect = {
@@ -361,7 +360,6 @@ country_event = {
 	
 	option = {
 		name = rcmchina.1000.a
-		ai_chance = { factor = 100 }
 		GER =  {
 			country_event = { days = 5 id = rcmgermany.2000 }
 		}
@@ -378,7 +376,6 @@ country_event = {
 	
 	option = {
 		name = rcmchina.1001.a
-		ai_chance = { factor = 100 }
 		add_tech_bonus = {
 			name = industrial_bonus
 			bonus = 0.5
@@ -2471,10 +2468,13 @@ country_event = {
 	is_triggered_only = yes
 	immediate = {
 		hidden_effect = {
-			diplomatic_relation = {
-				country = PLM
-				relation = guarantee
-				active = no
+			if = {
+				limit = { country_exists = PLM }
+				diplomatic_relation = {
+					country = PLM
+					relation = guarantee
+					active = no
+				}
 			}
 		}
 	}

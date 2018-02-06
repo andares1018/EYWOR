@@ -644,7 +644,7 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			add_ideas = chi_inch_blood
+			add_ideas = chi_inch_blood_1
 		}
 		available = {
 			has_war_with = JAP
@@ -784,6 +784,11 @@ focus_tree = {
 							type = annex_everything
 							target = PREV
 						}
+					}
+				}
+				HPC = {
+					country_event = {
+						id = hpc.2
 					}
 				}
 			}
