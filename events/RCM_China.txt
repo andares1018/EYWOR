@@ -95,7 +95,8 @@ country_event = {
 		}
 	}
 	mean_time_to_happen = {
-		days = 2 
+		days = 0
+
 	}
 	option = {
 		name = rcmchina.867.a
@@ -136,7 +137,8 @@ country_event = {
 		NOT = { has_war_with = JAP }
 	}
 	mean_time_to_happen = {
-		days = 2 
+		days = 0
+
 	}
 	option = {
 		name = rcmchina.869.a
@@ -266,7 +268,8 @@ country_event = {
 		}
 	}
 	mean_time_to_happen = {
-		days = 2 
+		days = 0
+
 	}
 	immediate = {
 		hidden_effect = {
@@ -2174,7 +2177,8 @@ country_event = {
 		}
 	}
 	mean_time_to_happen = {
-		days = 2 
+		days = 0
+
 	}
 	option = {
 		name = rcmchina.2058.a	
@@ -2381,7 +2385,7 @@ country_event = {
 		}
 	}
 	mean_time_to_happen = {
-		days = 2
+		days = 0
 	}
 	immediate = {
 		remove_ideas = nanking_decade
@@ -2953,7 +2957,7 @@ country_event = {
 		has_global_flag = tacit_truce_flag
 		#date > 1936.8.10
 		#date < 1937.11.15
-		has_war_with = PRC
+		#has_war_with = PRC
 		NOT = { has_war_with = JAP }
 	}
 	immediate = {

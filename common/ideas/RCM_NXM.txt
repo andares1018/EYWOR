@@ -78,7 +78,7 @@ ideas = {
 			}
 		}
 		NXM_zhang_bojun = { ai_will_do = { factor = 0 }
-			picture = idea_zhang_bojun
+			
 			allowed = {
 				original_tag = NXM
 			}

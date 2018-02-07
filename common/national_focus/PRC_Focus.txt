@@ -922,31 +922,46 @@ focus_tree = {
 			factor = 5
 		}
 		select_effect = {
-			country_event = {
-				id = EFM_Comchina.211
-			}
-			country_event = {
-				days = 70
-				id = EFM_Comchina.2117
-			}
-			country_event = {
-				days = 70
-				id = EFM_Comchina.2119
-			}
-			country_event = {
-				days = 70
-				id = EFM_Comchina.2120
+			if = {
+				limit = {
+					country_exists = NXM
+				}
+				country_event = {
+					id = EFM_Comchina.211
+				}
+				country_event = {
+					days = 70
+					id = EFM_Comchina.2117
+				}
+				country_event = {
+					days = 70
+					id = EFM_Comchina.2119
+				}
+				country_event = {
+					days = 70
+					id = EFM_Comchina.2120
+				}
 			}
 		}
 		completion_reward = {
 			for_tracking_ten_comp_foc = yes
-			custom_effect_tooltip = a_war_will_be_declared_at_start_of_focus_NXM_2_tt
-			custom_effect_tooltip = PRC_open_suppy_tt
-			custom_effect_tooltip = if_successful_tt
-			effect_tooltip = {
-				add_ideas = PRC_Victory_in_the_west
-				add_national_unity = 0.05
-				add_political_power = 100
+			if = {
+				limit = {
+					country_exists = NXM
+				}
+				custom_effect_tooltip = a_war_will_be_declared_at_start_of_focus_NXM_2_tt
+				custom_effect_tooltip = PRC_open_suppy_tt
+				custom_effect_tooltip = if_successful_tt
+				effect_tooltip = {
+					add_ideas = PRC_Victory_in_the_west
+					add_national_unity = 0.05
+					add_political_power = 100
+				}
+				else = {
+					add_ideas = PRC_Victory_in_the_west
+					add_national_unity = 0.05
+					add_political_power = 100
+				}
 			}
 		}
 		available = {
@@ -956,7 +971,12 @@ focus_tree = {
 			NOT = {
 				has_country_flag = no_PRC_west_expedition_victory
 			}
-			has_country_flag = PRC_west_expedition_victory
+			OR = {
+				has_country_flag = PRC_west_expedition_victory
+				NOT = {
+					country_exists = NXM
+				}
+			}
 		}
 	}
 	focus = {
@@ -2221,10 +2241,10 @@ focus_tree = {
 			#	ai_cont_foc_prc = yes
 			#}
 			has_war_with = JAP
-			any_other_country = {
-				is_neighbor_of = PRC
-				has_war_with = PRC
-			}
+			#any_other_country = { #player ROC OP, this will render PRC useless. Revisit when properly balanced
+			#	is_neighbor_of = PRC
+			#	has_war_with = PRC
+			#}
 		}
 		bypass = {
 			date > 1940.1.1

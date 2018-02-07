@@ -1,5 +1,53 @@
 ideas = {
 	hidden_ideas = {
+		training_program_marker_1 = {
+			available = {
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			}
+		}
+		training_program_marker_2 = {
+			available = {
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			}
+		}
+		training_program_marker_3 = {
+			available = {
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			}
+		}
+		training_program_marker_4 = {
+			available = {
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			}
+		}
 		idea_continuous_recover_from_the_long_march = {
 			available = {
 				#OR = {
@@ -123,7 +171,6 @@ ideas = {
 					is_in_faction_with = CHI
 					is_in_faction_with = SOV
 					is_neighbor_of = SOV
-					is_neighbor_of = SIK
 					has_full_control_of_state = 621
 					#no need for 763
 				}

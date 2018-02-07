@@ -51,11 +51,9 @@ ideas = {
 			}	
 		}
 	}
-	economy = { 
+	economy = {
 		law = yes
 		unstable_economy = {
-			
-			
 			allowed = {
 				always = no
 			}
@@ -443,8 +441,5 @@ ideas = {
 				factor = 0
 			}
 		}
-		
-
-		
 	}
 }

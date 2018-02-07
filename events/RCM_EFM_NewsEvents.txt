@@ -600,7 +600,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 2
+		days = 0
 	}
 	
 	option = {
@@ -712,7 +712,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 2
+		days = 0
 	}
 	
 	option = {
@@ -768,7 +768,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 2
+		days = 0
 	}
 	
 	option = {
@@ -811,7 +811,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 2
+		days = 0
 	}
 	
 	option = {

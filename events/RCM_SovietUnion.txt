@@ -756,7 +756,7 @@ country_event = {
 		has_opinion = { target = CHI value < -20 }
 	}
 	mean_time_to_happen = {
-		days = 2
+		days = 0
 	}	
 	immediate = {
 		set_global_flag = CHI_SOV_ties_severed
@@ -790,7 +790,7 @@ country_event = {
 		has_war_with = CHI
 	}
 	mean_time_to_happen = {
-		days = 2
+		days = 0
 	}	
 	immediate = {
 		CHI = { remove_ideas = CHI_pavel_zhigarev }

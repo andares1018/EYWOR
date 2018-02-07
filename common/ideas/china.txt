@@ -1401,8 +1401,10 @@ ideas = {
 		# Communist uprisings may cause states to defect to PRC
 		CHI_communist_uprisings = {
 			picture = FRA_scw_intervention_republicans_focus
-			
 			allowed = {
+				always = no
+			}
+			available = {
 				country_exists = PRC
 			}
 			allowed_civil_war = {

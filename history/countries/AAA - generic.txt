@@ -39,38 +39,6 @@ SHX = {
 	give_military_access = CHI
 }
 1939.1.1 = {
-	CHI = {
-		set_autonomy = {
-			target = YUN
-			autonomous_state = autonomy_dominion
-			freedom_level = 0.1
-		}
-		set_autonomy = {
-			target = XSM
-			autonomous_state = autonomy_dominion
-			freedom_level = 0.1
-		}
-		set_autonomy = {
-			target = NXM
-			autonomous_state = autonomy_dominion
-			freedom_level = 0.1
-		}
-		set_autonomy = {
-			target = XIK
-			autonomous_state = autonomy_dominion
-			freedom_level = 0.1
-		}
-		set_autonomy = {
-			target = SHX
-			autonomous_state = autonomy_dominion
-			freedom_level = 0.1
-		}
-		set_autonomy = {
-			target = GXC
-			autonomous_state = autonomy_dominion
-			freedom_level = 0.1
-		}
-	}
 	every_country = {
 		limit = {
 			is_warlord = yes

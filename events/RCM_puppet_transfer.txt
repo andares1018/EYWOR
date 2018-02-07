@@ -40,12 +40,12 @@ country_event = {
 						}
 					}
 					country_event = {
-						days = 5 id = prc.7 #oh no!
+						days = 1 id = prc.7 #oh no!
 					}
 				}
 			}
 			country_event = {
-				days = 5 id = prc.6 #Kill THE HANJIAN!
+				id = prc.6 #Kill THE HANJIAN!
 			}
 		}
 	}

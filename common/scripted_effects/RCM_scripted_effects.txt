@@ -170,11 +170,27 @@ RRC_core = {
 	add_state_claim = 757
 }
 peace_with_japan_land_partition = {
-	white_peace = JAP
-	JAP = {
-		white_peace = NEA
+	effect_tooltip = {
+		white_peace = JAP
 	}
 	hidden_effect = {
+		every_country = {
+			limit = {
+				has_war_together_with = ROOT
+				has_war_with = JAP
+			}
+			white_peace = JAP
+		}
+		every_country = {
+			limit = {
+				has_war_together_with = JAP
+				has_war_with = ROOT
+			}
+			white_peace = ROOT
+		}
+		JAP = {
+			white_peace = NEA
+		}
 		annex_country = { target = MAN transfer_troops = no } 
 		annex_country = { target = EHB transfer_troops = no }
 		if = {

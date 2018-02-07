@@ -113,7 +113,7 @@ country_event = {
 	fire_only_once = yes
 
 	mean_time_to_happen = {
-		days = 2
+		days = 0
 	}
 
 	trigger = {
@@ -747,27 +747,15 @@ country_event = {
 		set_country_flag = china101_fired
 	}
 	mean_time_to_happen = {
-		days = 2
+		days = 0
 	}
-	option = {#join united front (default)
+	option = {#join united front (Sichuan)
 		name = rcmchina.101.a
 		ai_chance = {
-			base = 100
+			base = 0
 			modifier = {
-				factor = 0
-				OR = {
-					tag = HPC
-					tag = HMI
-					tag = TNG
-					tag = SHD
-					any_other_country = {
-						is_legit_china = yes
-						OR = {
-							has_government = n_socialism
-							has_government = communism
-						}
-					}
-				}
+				factor = 100
+				tag = SIC
 			}
 		}
 		random_other_country = {
@@ -813,18 +801,19 @@ country_event = {
 			}
 		}
 	}
-	option = {#join united front (no puppet)
+	option = {#join united front (no puppet, default)
 		name = rcmchina.101.g
 		ai_chance = {
-			base = 0
+			base = 100
 			modifier = {
-				factor = 100
-				any_other_country = {
-					is_legit_china = yes
-					OR = {
-						has_government = n_socialism
-						has_government = communism
-					}
+				factor = 0
+				OR = {
+					tag = HPC
+					tag = HMI
+					tag = TNG
+					tag = SHD
+					tag = NEA
+					tag = SIC
 				}
 			}
 		}
@@ -867,14 +856,14 @@ country_event = {
 	option = {
 		name = rcmchina.101.b
 		trigger = { 
-			NOT = { TAG = HPC } 
 			NOT = { TAG = SHD } 
+			NOT = { TAG = HPC } 
 		}
 		ai_chance = {
 			base = 0
 			modifier = {
 				factor = 100
-				tag = SHD
+				tag = NEA
 			}
 		}
 		custom_effect_tooltip = GAME_OVER_TT
@@ -3619,7 +3608,7 @@ country_event = {
 	picture = GFX_report_event_generic_sign_treaty1
 
 	mean_time_to_happen = {
-		days = 2
+		days = 0
 	}
 
 	trigger = {

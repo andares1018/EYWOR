@@ -78,6 +78,15 @@ country_event = {
 		NOT = {
 			has_idea = Chinese_Red_Army
 		}
+		any_other_country = {
+			is_legit_china = yes
+			NOT = {
+				OR = {
+					has_government = n_socialism
+					has_government = communism
+				}
+			}
+		}
 	}
 	fire_only_once = yes
 	option = { #join

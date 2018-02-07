@@ -78,7 +78,7 @@ ideas = {
 			}
 		}
 		RRC_zhang_bojun = { ai_will_do = { factor = 0 }
-			picture = idea_zhang_bojun
+			
 			allowed = {
 				is_rrc = yes
 			}

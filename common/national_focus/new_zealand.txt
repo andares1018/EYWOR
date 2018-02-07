@@ -1132,11 +1132,11 @@ focus_tree = {
 			}
 		}
 
-		available {
+		available = {
 
 		}
 
-		bypass = 1
+		bypass = {
 
 		}
 

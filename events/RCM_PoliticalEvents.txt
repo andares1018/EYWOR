@@ -613,7 +613,7 @@ country_event = {
 	}
 
 	mean_time_to_happen = {
-		days = 2
+		days = 0
 	}
 
 	immediate = {
@@ -689,7 +689,7 @@ country_event = {
 	}
 
 	mean_time_to_happen = {
-		days = 2
+		days = 0
 	}
 
 	option = {
@@ -707,7 +707,7 @@ country_event = {
 		NOT = { has_idea = socialist_like_commies }
 	}
 	mean_time_to_happen = {
-		days = 2
+		days = 0
 	}
 	immediate = {
 		add_ideas = socialist_like_commies
@@ -724,7 +724,7 @@ country_event = {
 		has_idea = socialist_like_commies
 	}
 	mean_time_to_happen = {
-		days = 2
+		days = 0
 	}
 	immediate = {
 		remove_ideas = socialist_like_commies
@@ -741,7 +741,7 @@ country_event = {
 		NOT = { has_idea = commies_like_socialist }
 	}
 	mean_time_to_happen = {
-		days = 2
+		days = 0
 	}
 	immediate = {
 		add_ideas = commies_like_socialist
@@ -761,7 +761,7 @@ country_event = {
 		remove_ideas = commies_like_socialist
 	}
 	mean_time_to_happen = {
-		days = 2
+		days = 0
 	}
 	option = {
 	}
@@ -775,7 +775,7 @@ country_event = {
 		NOT = { has_idea = democratic_dont_hate_socialist }
 	}
 	mean_time_to_happen = {
-		days = 2
+		days = 0
 	}
 	immediate = {
 		add_ideas = democratic_dont_hate_socialist
@@ -792,7 +792,7 @@ country_event = {
 		has_idea = democratic_dont_hate_socialist
 	}
 	mean_time_to_happen = {
-		days = 2
+		days = 0
 	}
 	immediate = {
 		remove_ideas = democratic_dont_hate_socialist
@@ -809,7 +809,7 @@ country_event = {
 		NOT = { has_idea = socialist_dont_hate_democratic }
 	}
 	mean_time_to_happen = {
-		days = 2
+		days = 0
 	}
 	immediate = {
 		add_ideas = socialist_dont_hate_democratic
@@ -826,7 +826,7 @@ country_event = {
 		has_idea = socialist_dont_hate_democratic
 	}
 	mean_time_to_happen = {
-		days = 2
+		days = 0
 	}
 	immediate = {
 		remove_ideas = socialist_dont_hate_democratic

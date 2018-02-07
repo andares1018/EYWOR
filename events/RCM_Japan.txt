@@ -506,7 +506,7 @@ country_event = {
 		CHI = { is_puppet_of = JAP }
 	}
 	mean_time_to_happen = {
-		days = 2
+		days = 0
 	}
 	immediate = {
 		hidden_effect = {
@@ -539,7 +539,7 @@ country_event = {
 		608 = { is_controlled_by = MAN }
 	}
 	mean_time_to_happen = {
-		days = 2
+		days = 0
 	}
 	immediate = {
 		hidden_effect = {
@@ -556,7 +556,7 @@ country_event = {
 		611 = { is_controlled_by = MAN }
 	}
 	mean_time_to_happen = {
-		days = 2
+		days = 0
 	}
 	immediate = {
 		hidden_effect = {
@@ -574,7 +574,7 @@ country_event = {
 		RFM = { has_full_control_of_state = 597 }
 	}
 	mean_time_to_happen = {
-		days = 2
+		days = 0
 	}
 	immediate = {
 		hidden_effect = {
@@ -609,7 +609,7 @@ country_event = {
 		}
 	}
 	mean_time_to_happen = {
-		days = 2
+		days = 0
 	}
 	immediate = {
 		hidden_effect = {
@@ -818,7 +818,7 @@ country_event = {
 		}
 	}
 	mean_time_to_happen = {
-		days = 2
+		days = 0
 	}
 	immediate = {
 		every_state = {
@@ -911,7 +911,7 @@ country_event = {
 		}
 	}
 	mean_time_to_happen = {
-		days = 2
+		days = 0
 	}
 	immediate = {
 		every_state = {
@@ -1037,7 +1037,7 @@ country_event = {
 		NOT = { has_completed_focus = reorganized_chi_puppet }
 	}
 	mean_time_to_happen = {
-		days = 2
+		days = 0
 	}
 	immediate = {
 		every_state = {
@@ -1153,7 +1153,7 @@ country_event = {
 		set_global_flag = RRC_expand
 	}
 	mean_time_to_happen = {
-		days = 2
+		days = 0
 	}
 	option = {
 		name = rcmjapan.34.a
@@ -1283,7 +1283,7 @@ country_event = {
 		NOT = { has_global_flag = no_sik_flag }
 	}
 	mean_time_to_happen = {
-		days = 2
+		days = 0
 	}
 	option = {
 		name = rcmjapan.35.a
@@ -1349,7 +1349,7 @@ country_event = {
 		NOT = { has_global_flag = no_xsm_flag }
 	}
 	mean_time_to_happen = {
-		days = 2
+		days = 0
 	}
 	immediate = { hidden_effect = { XSM = { set_cosmetic_tag = XSM_HUI } } }
 	option = {
@@ -1596,7 +1596,7 @@ country_event = {
 		FIC = { is_puppet_of = FRA }
 	}
 	mean_time_to_happen = {
-		days = 2
+		days = 0
 	}
 	immediate = {
 		hidden_effect = {
@@ -3435,7 +3435,7 @@ country_event = {
 		}	
 	}
 	mean_time_to_happen = {
-		days = 2
+		days = 0
 	}
 	immediate = {
 		set_global_flag = united_china
@@ -3929,7 +3929,7 @@ country_event = {
 		}
 	}
 	mean_time_to_happen = {
-		days = 2
+		days = 0
 	}
 	immediate = {
 		set_country_flag = had_war_with_PLM
@@ -4480,7 +4480,7 @@ country_event = {
 		}
 	}
 	mean_time_to_happen = {
-		days = 2
+		days = 0
 	}
 	option = {#YES
 		name = rcmjapan.1002.a
@@ -4570,7 +4570,7 @@ country_event = {
 		}
 	}
 	mean_time_to_happen = {
-		days = 2
+		days = 0
 	}
 	option = {#YES
 		name = rcmjapan.1003.a
@@ -4652,7 +4652,7 @@ country_event = {
 		has_global_flag = jnc_exists
 	}
 	mean_time_to_happen = {
-		days = 2
+		days = 0
 	}
 	option = {#YES
 		name = rcmjapan.1004.a
@@ -4697,7 +4697,7 @@ country_event = {
 		has_global_flag = rrc_exists
 	}
 	mean_time_to_happen = {
-		days = 2
+		days = 0
 	}
 	option = {#YES
 		name = rcmjapan.1005.a
@@ -4746,7 +4746,7 @@ country_event = {
 		has_global_flag = rfm_exists
 	}
 	mean_time_to_happen = {
-		days = 2
+		days = 0
 	}
 	option = {#YES
 		name = rcmjapan.1006.a
@@ -4802,7 +4802,7 @@ country_event = {
 		has_global_flag = ccp_exists
 	}
 	mean_time_to_happen = {
-		days = 2
+		days = 0
 	}
 	option = {#YES
 		name = rcmjapan.1007.a
@@ -4889,7 +4889,7 @@ country_event = {
 		}
 	}
 	mean_time_to_happen = {
-		days = 2
+		days = 0
 	}
 	option = {#YES
 		name = rcmjapan.1008.a
@@ -4938,7 +4938,7 @@ country_event = {
 		}
 	}
 	mean_time_to_happen = {
-		days = 2
+		days = 0
 	}
 	#option = {#NO
 	#	name = rcmjapan.1008.b
@@ -4979,7 +4979,7 @@ country_event = {
 		}
 	}
 	mean_time_to_happen = {
-		days = 2
+		days = 0
 	}
 	option = {#YES
 		name = rcmjapan.1009.a
@@ -5056,7 +5056,7 @@ country_event = {
 		}
 	}
 	mean_time_to_happen = {
-		days = 2
+		days = 0
 	}
 	option = {#YES
 		name = rcmjapan.1010.a
@@ -5153,7 +5153,7 @@ country_event = {
 		has_global_flag = mej_exists
 	}
 	mean_time_to_happen = {
-		days = 2
+		days = 0
 	}
 	option = {#YES
 		name = rcmjapan.1011.a
@@ -5253,7 +5253,7 @@ country_event = {
 		has_global_flag = nsg_exists
 	}
 	mean_time_to_happen = {
-		days = 2
+		days = 0
 	}
 	option = {#YES
 		name = rcmjapan.1012.a
@@ -5315,7 +5315,7 @@ country_event = {
 		has_global_flag = scg_exists
 	}
 	mean_time_to_happen = {
-		days = 2
+		days = 0
 	}
 	option = {#YES
 		name = rcmjapan.1013.a
@@ -6205,7 +6205,7 @@ country_event = {
 		}
 	}
 	mean_time_to_happen = {
-		days = 2
+		days = 0
 	}
 	option = {
 		name = rcmjapan.105.a

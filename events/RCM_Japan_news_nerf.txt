@@ -9,7 +9,7 @@ news_event = {
 		surrender_progress > 0.25
 	}
 	mean_time_to_happen = {
-		days = 2
+		days = 0
 	} 
 	immediate = {
 		swap_ideas = {
@@ -28,7 +28,7 @@ news_event = {
 		surrender_progress > 0.35
 	}
 	mean_time_to_happen = {
-		days = 2
+		days = 0
 	} 
 	immediate = {
 		swap_ideas = {
@@ -47,7 +47,7 @@ news_event = {
 		surrender_progress > 0.4
 	}
 	mean_time_to_happen = {
-		days = 2
+		days = 0
 	} 
 	immediate = {
 		swap_ideas = {
@@ -66,7 +66,7 @@ news_event = {
 		surrender_progress > 0.45
 	}
 	mean_time_to_happen = {
-		days = 2
+		days = 0
 	} 
 	immediate = {
 		swap_ideas = {
@@ -85,7 +85,7 @@ news_event = {
 		surrender_progress > 0.5
 	}
 	mean_time_to_happen = {
-		days = 2
+		days = 0
 	} 
 	immediate = {
 		swap_ideas = {
@@ -104,7 +104,7 @@ news_event = {
 		surrender_progress > 0.55
 	}
 	mean_time_to_happen = {
-		days = 2
+		days = 0
 	} 
 	immediate = {
 		swap_ideas = {
@@ -123,7 +123,7 @@ news_event = {
 		surrender_progress > 0.6
 	}
 	mean_time_to_happen = {
-		days = 2
+		days = 0
 	} 
 	immediate = {
 		swap_ideas = {
@@ -134,7 +134,84 @@ news_event = {
 	option = {
 	}
 }
+news_event = {
+	id = newsnerf.15
+	hidden = yes
+	trigger = {
+		has_idea = chi_inch_blood_8
+		surrender_progress > 0.65
+	}
+	mean_time_to_happen = {
+		days = 0
+	} 
+	immediate = {
+		swap_ideas = {
+			remove_idea = chi_inch_blood_8
+			add_idea = chi_inch_blood_9
+		}
+	}
+	option = {
+	}
+}
+news_event = {
+	id = newsnerf.16
+	hidden = yes
+	trigger = {
+		has_idea = chi_inch_blood_9
+		surrender_progress > 0.7
+	}
+	mean_time_to_happen = {
+		days = 0
+	} 
+	immediate = {
+		swap_ideas = {
+			remove_idea = chi_inch_blood_9
+			add_idea = chi_inch_blood_10
+		}
+	}
+	option = {
+	}
+}
 #perk decreases
+news_event = {
+	id = newsnerf.17
+	hidden = yes
+	trigger = {
+		has_idea = chi_inch_blood_10
+		surrender_progress < 0.7
+	}
+	mean_time_to_happen = {
+		days = 0
+	} 
+	immediate = {
+		swap_ideas = {
+			remove_idea = chi_inch_blood_10
+			add_idea = chi_inch_blood_9
+		}
+	}
+	option = {
+	}
+}
+news_event = {
+	id = newsnerf.18
+	hidden = yes
+	trigger = {
+		has_idea = chi_inch_blood_9
+		surrender_progress < 0.65
+	}
+	mean_time_to_happen = {
+		days = 0
+	} 
+	immediate = {
+		swap_ideas = {
+			remove_idea = chi_inch_blood_9
+			add_idea = chi_inch_blood_8
+		}
+	}
+	option = {
+	}
+}
+
 news_event = {
 	id = newsnerf.8
 	hidden = yes
@@ -143,7 +220,7 @@ news_event = {
 		surrender_progress < 0.6
 	}
 	mean_time_to_happen = {
-		days = 2
+		days = 0
 	} 
 	immediate = {
 		swap_ideas = {
@@ -162,7 +239,7 @@ news_event = {
 		surrender_progress < 0.55
 	}
 	mean_time_to_happen = {
-		days = 2
+		days = 0
 	} 
 	immediate = {
 		swap_ideas = {
@@ -181,7 +258,7 @@ news_event = {
 		surrender_progress < 0.5
 	}
 	mean_time_to_happen = {
-		days = 2
+		days = 0
 	} 
 	immediate = {
 		swap_ideas = {
@@ -200,7 +277,7 @@ news_event = {
 		surrender_progress < 0.45
 	}
 	mean_time_to_happen = {
-		days = 2
+		days = 0
 	} 
 	immediate = {
 		swap_ideas = {
@@ -219,7 +296,7 @@ news_event = {
 		surrender_progress < 0.4
 	}
 	mean_time_to_happen = {
-		days = 2
+		days = 0
 	} 
 	immediate = {
 		swap_ideas = {
@@ -238,7 +315,7 @@ news_event = {
 		surrender_progress < 0.35
 	}
 	mean_time_to_happen = {
-		days = 2
+		days = 0
 	} 
 	immediate = {
 		swap_ideas = {
@@ -257,7 +334,7 @@ news_event = {
 		surrender_progress < 0.25
 	}
 	mean_time_to_happen = {
-		days = 2
+		days = 0
 	} 
 	immediate = {
 		swap_ideas = {
