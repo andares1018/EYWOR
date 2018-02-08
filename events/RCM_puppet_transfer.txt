@@ -83,3 +83,18 @@ country_event = {
 	option = {
 	}
 }
+#subject capped
+country_event = {
+	id = puppet_transfer.5
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		JAP = {
+			country_event = {
+				id = rcmjapan.1000
+			}
+		}
+	}
+	option = {
+	}
+}

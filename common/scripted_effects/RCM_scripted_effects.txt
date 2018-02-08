@@ -176,14 +176,20 @@ peace_with_japan_land_partition = {
 	hidden_effect = {
 		every_country = {
 			limit = {
-				has_war_together_with = ROOT
+				OR = {
+					tag = ROOT
+					has_war_together_with = ROOT
+				}
 				has_war_with = JAP
 			}
 			white_peace = JAP
 		}
 		every_country = {
 			limit = {
-				has_war_together_with = JAP
+				OR = {
+					tag = JAP
+					has_war_together_with = JAP
+				}
 				has_war_with = ROOT
 			}
 			white_peace = ROOT
@@ -798,10 +804,18 @@ set_commie_rebels = {
 capture_collaborators = {
 	hidden_effect = {
 		FROM = {
-			JAP = {
-				country_event = {
-					id = rcmjapan.1000
+			if = {
+				limit = {
+					is_subject_of = JAP
 				}
+				country_event = {
+					id = puppet_transfer.5
+				}
+				#JAP = {
+				#	country_event = {
+				#		id = rcmjapan.1000
+				#	}
+				#}
 			}
 		}
 		every_state = {
