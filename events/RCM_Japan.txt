@@ -536,7 +536,7 @@ country_event = {
 	hidden = yes
 	trigger = {
 		tag = MAN
-		608 = { is_controlled_by = MAN }
+		has_full_control_of_state = 608
 	}
 	mean_time_to_happen = {
 		days = 0
@@ -553,7 +553,7 @@ country_event = {
 	hidden = yes
 	trigger = {
 		tag = MAN
-		611 = { is_controlled_by = MAN }
+		has_full_control_of_state = 611
 	}
 	mean_time_to_happen = {
 		days = 0
@@ -4474,6 +4474,9 @@ country_event = {
 		}
 		NOT = {
 			country_exists = MAN
+		}
+		NOT = {#I don't want event pops-up
+			has_country_flag = no_rebuild_MAN
 		}
 		NOT = {
 			has_global_flag = MAN_no_more

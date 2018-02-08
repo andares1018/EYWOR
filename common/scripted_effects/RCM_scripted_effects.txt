@@ -753,9 +753,9 @@ puppet_reclaim_land = {
 					has_full_control_of_state = PREV
 				}
 			}
-			is_core_of = ROOT
+			is_core_of = PREV
 		}
-		ROOT = {
+		PREV = {
 			transfer_state = PREV
 		}
 	}
@@ -813,6 +813,7 @@ capture_collaborators = {
 		random_country = {
 			limit = {
 				tag = FROM
+				is_subject_of = JAP
 				NOT = {
 					OR = {
 						tag = PRC
@@ -837,7 +838,10 @@ capture_collaborators = {
 				if = {
 					limit = {
 						NOT = {
-							tag = JAP
+							OR = {
+								tag = JAP
+								has_war_together_with = JAP
+							}
 						}
 					}
 					transfer_state = PREV

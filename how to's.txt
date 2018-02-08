@@ -63,11 +63,11 @@ all_XXX = { <= All means All, no exception, so this trigger will be hard to use
 ------------------------------------
 #NO NUMBERS IN A FLAG(the command, not the national flags)
 ============================================================
-#DMZ LOOP (LOOP COUNTRY should NOT own the TARGET STATE)
+#DMZ LOOP (LOOP COUNTRY should NOT own the TARGET STATE) 
 *LOOP COUNTRY = a 3rd party country to run the code/loop
 *TARGET STATE = the state you wanna set up your dmz in
 ============================================================
-	CREATE AN DMZ:
+	CREATE AN DMZ:(EYWOR EXCLUSIVE)
 		TARGET_STATE_ID = { set_demilitarized_zone = yes }
 		TARGET_STATE_ID = { set_state_flag = I_choose_this_state_to_DMZ }
 		LOOP_COUNTRY_TAG = {
@@ -76,7 +76,7 @@ all_XXX = { <= All means All, no exception, so this trigger will be hard to use
 			}
 		}
 ------------------------------------
-	END AN DMZ:
+	END AN DMZ:(EYWOR EXCLUSIVE)
 		TARGET_STATE_ID = { set_demilitarized_zone = no }
 		LOOP_COUNTRY_TAG = {
 			country_event = { 
@@ -86,3 +86,6 @@ all_XXX = { <= All means All, no exception, so this trigger will be hard to use
 ====================================
 #base-factor error:
 	NO mtth along with is_triggered_only
+====================================
+#RANDOM INITIALIZING CRASH
+	CHECK country Ideas' allowed brasket (national spirit), it should always be always no

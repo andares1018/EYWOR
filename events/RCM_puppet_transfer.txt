@@ -71,12 +71,12 @@ country_event = {
 	immediate = {
 		FROM = {
 			country_event = {
-				days = 5 id = prc.7 #oh no!
+				days = 1 id = prc.7 #oh no!
 			}
 		}
 		PRC = {
 			country_event = {
-				days = 5 id = prc.8 #Kill THE HANJIAN!(Remotely cuz I can)
+				hours = 4 id = prc.8 #Kill THE HANJIAN!(Remotely cuz I can)
 			}
 		}
 	}

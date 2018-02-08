@@ -220,6 +220,12 @@ country_event = {
 	picture = GFX_report_event_chinese_soldiers_02
 	is_triggered_only = yes
 	trigger = {
+		NOT = {
+			OR = {
+				tag = JAP
+				has_war_together_with = JAP
+			}
+		}
 		any_state = {
 			owner = {
 				has_war_with = ROOT
@@ -298,6 +304,12 @@ country_event = {
 	picture = GFX_report_event_chinese_soldiers_02
 	is_triggered_only = yes
 	trigger = {
+		NOT = {
+			OR = {
+				tag = JAP
+				has_war_together_with = JAP
+			}
+		}
 		any_state = {
 			owner = {
 				has_war_with = ROOT
@@ -474,7 +486,9 @@ country_event = {
 	option = { #OH NO!
 		name = prc.10.b
 		trigger = {
-			TAG = CHI
+			NOT = {
+				TAG = PRC
+			}
 		}
 	}
 }
@@ -815,6 +829,16 @@ country_event = {
 				has_state_flag = commie_ridden_states
 			}
 			clr_state_flag = commie_ridden_states
+			if = {
+				limit = {
+					PRC = {
+						controls_state = PREV
+					}
+				}
+				ROOT = {
+					set_state_controller = PREV
+				}
+			}
 			custom_effect_tooltip = remove_com_par_act_tt
 		}
 		hidden_effect = {
