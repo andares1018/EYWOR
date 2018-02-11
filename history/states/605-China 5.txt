@@ -13,13 +13,10 @@ state={
 		add_core_of = PRC
 		buildings = {
 			infrastructure = 5
-			industrial_complex = 3
-			arms_factory = 2
+			industrial_complex = 2
+			arms_factory = 1
 			air_base = 2
 
-		}
-		victory_points = {
-			4925 20 
 		}
 		victory_points = {
 			6999 30 
@@ -28,10 +25,10 @@ state={
 			remove_core_of = SIC
 			owner = CHI
 			buildings = {
-				industrial_complex = 4
+				industrial_complex = 3
 				infrastructure = 6
 				air_base = 3
-				arms_factory = 3
+				arms_factory = 2
 
 			}
 
@@ -40,9 +37,9 @@ state={
 	}
 
 	provinces={
-		531 1257 1367 1395 1893 2030 2045 2091 4041 4141 4375 4403 4431 4925 5048 5193 6999 7240 7256 7948 8026 9966 10132 10144 10304 10787 10822 11865 11972 12141 12274 12705 12767 12819 
+		1893 4041 4141 4431 5048 6999 7948 10144 10304 10822 11865
 	}
-	manpower=52963300
+	manpower=32963300
 	buildings_max_level_factor=1.000
-	state_category=large_city
+	state_category=megalopolis
 }

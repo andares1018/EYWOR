@@ -137,7 +137,7 @@ guiTypes = {
 				
 				iconType = {
 					name = "our_opinion_left_flag"
-					quadTextureSprite ="GFX_flag_small"
+					quadTextureSprite ="GFX_flag_small"###
 					position = { x = 38 y = 9 }
 					allwaystransparent = yes
 				}
@@ -154,7 +154,7 @@ guiTypes = {
 				
 				iconType = {
 					name = "their_opinion_left_flag"
-					quadTextureSprite ="GFX_flag_small"
+					quadTextureSprite ="GFX_flag_small"###
 					position = { x = 74 y = 21 }
 					allwaystransparent = yes
 				}

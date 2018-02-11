@@ -1637,6 +1637,7 @@ ideas = {
 			modifier = {
 				army_morale_factor = 0.3
 				army_core_defence_factor = 0.3
+				army_core_attack_factor = 0.15
 				conscription = 0.03
 			}
 		}
@@ -2456,7 +2457,8 @@ ideas = {
 				original_tag = CHI				
 			}
 			available = {
-				controls_state = 595
+				#controls_state = 595
+				controls_state = 764
 			}
 			cost = 150
 			removal_cost = 10

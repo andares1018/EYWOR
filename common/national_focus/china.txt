@@ -246,8 +246,11 @@ focus_tree = {
 		available = {
 			NOT = {
 				has_war_with = JAP
-			}				
-			has_idea = kung_hsiang_hsi
+			}
+			OR = {
+				has_idea = kung_hsiang_hsi
+				has_idea = agrarian_reform_idea
+			}
 		}
 		#has_idea = weng_wenhao
 		completion_reward = {
@@ -1050,7 +1053,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			597 = {
+			766 = {
 				add_building_construction = {
 					type = coastal_bunker
 					level = 2
@@ -1096,13 +1099,15 @@ focus_tree = {
 				add_building_construction = {
 					type = coastal_bunker
 					level = 2
-					province = 4196
+					province = 7071
 					instant_build = yes
 				}
+			}
+			764 = {
 				add_building_construction = {
 					type = coastal_bunker
 					level = 2
-					province = 7071
+					province = 4196
 					instant_build = yes
 				}
 			}
@@ -1402,15 +1407,21 @@ focus_tree = {
 		y = 9
 		available = {
 			605 = {
-				is_controlled_by = CHI
+				is_controlled_by = ROOT
 				OR = {
 					any_neighbor_state = {
 						is_controlled_by_jap_or_its_puppet = yes
 					}
-					CHI = {
+					ROOT = {
 						surrender_progress > 0.5
 					}
 				}
+			}
+			769 = {
+				is_controlled_by = ROOT
+			}
+			770 = {
+				is_controlled_by = ROOT
 			}
 		}
 		ai_will_do = {
@@ -1424,41 +1435,39 @@ focus_tree = {
 					level = 3
 					province = 6999
 					instant_build = yes
-				}
-				add_building_construction = {
-					type = bunker
-					level = 3
-					province = 7240
-					instant_build = yes
-				}
+				}#605
+			}
+			769 = {
 				add_building_construction = {
 					type = bunker
 					level = 3
 					province = 8026
 					instant_build = yes
-				}
+				}#769
 				add_building_construction = {
 					type = bunker
 					level = 3
 					province = 12767
 					instant_build = yes
-				}
+				}#769
 				add_building_construction = {
 					type = bunker
 					level = 3
 					province = 2045
 					instant_build = yes
-				}
+				}#769
 				add_building_construction = {
 					type = bunker
 					level = 3
 					province = 5193
 					instant_build = yes
-				}
+				}#769
+			}
+			770 = {
 				add_building_construction = {
 					type = bunker
 					level = 3
-					province = 3259
+					province = 7240
 					instant_build = yes
 				}
 				add_building_construction = {
@@ -4950,7 +4959,7 @@ focus_tree = {
 				uses = 1
 				category = synth_resources
 			}
-			597 = {
+			766 = {
 				add_building_construction = {
 					type = synthetic_refinery
 					level = 1
@@ -4963,7 +4972,7 @@ focus_tree = {
 				tooltip = industry_balanced_enough
 				has_completed_focus = chi_nationalize_industry_iii_focus
 			}
-			owns_state = 597
+			owns_state = 766
 		}
 	}
 	focus = {
@@ -5289,6 +5298,9 @@ focus_tree = {
 			615 = {
 				level_3_infra = yes
 			}
+			767 = {
+				level_3_infra = yes
+			}
 			762 = {
 				level_3_infra = yes
 			}
@@ -5376,6 +5388,9 @@ focus_tree = {
 				level_6_infra = yes
 			}
 			615 = {
+				level_6_infra = yes
+			}
+			767 = {
 				level_6_infra = yes
 			}
 			622 = {
@@ -5515,13 +5530,22 @@ focus_tree = {
 			606 = {
 				level_3_infra = yes
 			}
+			768 = {
+				level_3_infra = yes
+			}
 			596 = {
 				level_3_infra = yes
 			}
 			597 = {
 				level_3_infra = yes
 			}
+			766 = {
+				level_3_infra = yes
+			}
 			598 = {
+				level_3_infra = yes
+			}
+			765 = {
 				level_3_infra = yes
 			}
 			613 = {
@@ -5598,13 +5622,22 @@ focus_tree = {
 			606 = {
 				level_6_infra = yes
 			}
+			768 = {
+				level_6_infra = yes
+			}
 			596 = {
 				level_6_infra = yes
 			}
 			597 = {
 				level_6_infra = yes
 			}
+			766 = {
+				level_6_infra = yes
+			}
 			598 = {
+				level_6_infra = yes
+			}
+			765 = {
 				level_6_infra = yes
 			}
 			613 = {
@@ -5717,7 +5750,16 @@ focus_tree = {
 			325 = {
 				level_3_infra = yes
 			}
+			771 = {
+				level_3_infra = yes
+			}
+			772 = {
+				level_3_infra = yes
+			}
 			599 = {
+				level_3_infra = yes
+			}
+			773 = {
 				level_3_infra = yes
 			}
 			592 = {
@@ -5733,6 +5775,9 @@ focus_tree = {
 				level_3_infra = yes
 			}
 			595 = {
+				level_3_infra = yes
+			}
+			764 = {
 				level_3_infra = yes
 			}
 		}
@@ -5788,7 +5833,16 @@ focus_tree = {
 			325 = {
 				level_6_infra = yes
 			}
+			771 = {
+				level_6_infra = yes
+			}
+			772 = {
+				level_6_infra = yes
+			}
 			599 = {
+				level_6_infra = yes
+			}
+			773 = {
 				level_6_infra = yes
 			}
 			592 = {
@@ -5804,6 +5858,9 @@ focus_tree = {
 				level_6_infra = yes
 			}
 			595 = {
+				level_6_infra = yes
+			}
+			764 = {
 				level_6_infra = yes
 			}
 		}
@@ -5910,9 +5967,12 @@ focus_tree = {
 				any_state = {
 					OR = {
 						state = 598
+						state = 765
 						state = 606
+						state = 768
 						state = 596
 						state = 597
+						state = 766
 						state = 613
 						state = 328
 						state = 609
@@ -6047,6 +6107,9 @@ focus_tree = {
 				max_infra_trigger = yes
 			}
 			606 = {
+				max_infra_trigger = yes
+			}
+			768 = {
 				max_infra_trigger = yes
 			}
 			614 = {
@@ -6480,6 +6543,12 @@ focus_tree = {
 			605 = {
 				level_3_infra = yes
 			}
+			769 = {
+				level_3_infra = yes
+			}
+			770 = {
+				level_3_infra = yes
+			}
 			743 = {
 				level_3_infra = yes
 			}
@@ -6546,6 +6615,12 @@ focus_tree = {
 				level_6_infra = yes
 			}
 			605 = {
+				level_6_infra = yes
+			}
+			769 = {
+				level_6_infra = yes
+			}
+			770 = {
 				level_6_infra = yes
 			}
 			743 = {

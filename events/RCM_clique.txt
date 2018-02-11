@@ -202,6 +202,7 @@ country_event = {
 		}
 		any_other_country = {
 			is_legit_china = yes
+			tag = CHI
 			is_ai = yes
 			has_war_together_with = ROOT
 			is_faction_leader = yes
@@ -213,22 +214,10 @@ country_event = {
 		days = 7
 	}
 	immediate = {
-		random_other_country = {
-			limit = {
-				is_legit_china = yes
-				is_ai = yes
-				has_war_together_with = ROOT
-				is_faction_leader = yes
-				is_in_faction_with = ROOT
-				has_war_with = JAP
-			}
-			ROOT = {
-				send_equipment = {
-					target = PREV
-					type = infantry_equipment
-					amount = 200
-				}
-			}
+		send_equipment = {
+			target = CHI
+			type = infantry_equipment
+			amount = 200
 		}
 	}
 	option = {

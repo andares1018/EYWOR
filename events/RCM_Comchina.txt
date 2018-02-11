@@ -532,7 +532,10 @@ country_event = {
 			tag = PRC
 			AND = {
 				NOT = {
-					tag = JAP
+					OR = {
+						tag = JAP
+						has_war_together_with = JAP
+					}
 				}
 				any_owned_state = {
 					has_state_flag = this_state_amass_support
@@ -561,7 +564,10 @@ country_event = {
 				if = {
 					limit = {
 						NOT = {
-							tag = JAP
+							OR = {
+								tag = JAP
+								has_war_together_with = JAP
+							}
 						}
 					}
 					set_state_owner = PREV

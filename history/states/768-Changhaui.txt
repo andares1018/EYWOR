@@ -1,0 +1,29 @@
+state={
+	id=768
+	name="STATE_768"
+	history={
+		owner = CHI
+		add_core_of = CHI
+		add_core_of = PRC
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+		}
+		1939.1.1 = {
+			owner = CHI
+			controller = RFM
+			add_core_of = RFM
+			buildings = {
+				industrial_complex = 1
+				infrastructure = 3
+				arms_factory = 1
+			}
+		}
+	}
+	provinces={
+		1146 4079 4158 4203 7094 7222 9937 10008 10017 10040 10064 10079 11916 11994 12036 
+	}
+	manpower=8935400
+	state_category=town
+	buildings_max_level_factor=1.000
+}

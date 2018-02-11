@@ -19,7 +19,9 @@ country_event = { #NORTH CHINA
 	immediate = {
 		hidden_effect = {
 			597 = {	set_commie_rebels = yes }
+			766 = {	set_commie_rebels = yes }
 			615 = {	set_commie_rebels = yes }
+			767 = {	set_commie_rebels = yes }
 			614 = {	set_commie_rebels = yes }
 			608 = {	set_commie_rebels = yes }
 			609 = {	set_commie_rebels = yes }
@@ -39,8 +41,10 @@ country_event = { #NORTH CHINA
 	is_triggered_only = yes
 	immediate = {
 		hidden_effect = {
+			766 = {	set_commie_rebels = yes }
 			597 = {	set_commie_rebels = yes }
 			615 = {	set_commie_rebels = yes }
+			767 = {	set_commie_rebels = yes }
 			614 = {	set_commie_rebels = yes }
 			608 = {	set_commie_rebels = yes }
 			609 = {	set_commie_rebels = yes }

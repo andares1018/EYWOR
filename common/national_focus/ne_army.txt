@@ -1811,7 +1811,15 @@ focus_tree = {
 			country_exists = PRC
 		}
 		bypass = {
-			#NOT = { CHI = { has_idea = appeasement_policy } }		
+			CHI = {
+				OR = {
+					has_completed_focus = peace_with_japan
+					NOT = {
+						is_legit_china = yes
+					}
+					has_war_with = JAP
+				}
+			}
 		}
 		x = 16
 		y = 1

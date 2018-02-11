@@ -1,0 +1,41 @@
+state={
+	id=766
+	name="STATE_766"
+	history={
+		owner = SHD
+		add_core_of = PRC
+		add_core_of = CHI
+		victory_points = {
+			10000 4 
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 2
+			10000 = {
+				naval_base = 5
+				coastal_bunker = 1
+				bunker = 1
+
+			}
+			4205 = {
+				naval_base = 2
+				coastal_bunker = 1
+				bunker = 1
+
+			}
+
+		}
+		1938.10.25 = {
+			owner = EHB
+			add_core_of = EHB
+
+		}
+
+	}
+	provinces={
+		1104 1184 1200 4157 4186 4205 7089 7105 10000 10018 12074 
+	}
+	manpower=24898400
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

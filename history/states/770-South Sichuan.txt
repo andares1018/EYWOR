@@ -1,0 +1,32 @@
+state={
+	id=770
+	name="STATE_770"
+	history={
+		owner = SIC
+		add_core_of = SIC
+		add_core_of = CHI
+		add_core_of = PRC
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		1939.1.1 = {
+			remove_core_of = SIC
+			owner = CHI
+			buildings = {
+				industrial_complex = 1
+				infrastructure = 5
+				arms_factory = 1
+
+			}
+
+		}
+
+	}
+	provinces={
+		1395 7240 11972 12141 12705 12819 
+	}
+	manpower=6387200
+	buildings_max_level_factor=1.000
+	state_category=town
+}

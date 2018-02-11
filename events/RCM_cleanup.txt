@@ -43,7 +43,7 @@ country_event = {
 						330 = { controller = { is_puppet_of = JAP } }
 					}
 				}
-				MON = { transfer_state = 330 }
+				ECA = { transfer_state = 330 }
 			}
 			if = {
 				limit = {
@@ -52,7 +52,7 @@ country_event = {
 						611 = { controller = { is_puppet_of = JAP } }
 					}
 				}
-				MON = { transfer_state = 611 }
+				ECA = { transfer_state = 611 }
 			}
 			if = {
 				limit = {
@@ -61,7 +61,7 @@ country_event = {
 						612 = { controller = { is_puppet_of = JAP } }
 					}
 				}
-				MON = { transfer_state = 612 }
+				ECA = { transfer_state = 612 }
 			}
 			if = {
 				limit = {
@@ -70,7 +70,7 @@ country_event = {
 						621 = { controller = { is_puppet_of = JAP } }
 					}
 				}
-				MON = { transfer_state = 621 }
+				ECA = { transfer_state = 621 }
 			}
 			if = {
 				limit = {
@@ -79,7 +79,7 @@ country_event = {
 						763 = { controller = { is_puppet_of = JAP } }
 					}
 				}
-				MON = { transfer_state = 763 }
+				ECA = { transfer_state = 763 }
 			}
 			if = {
 				limit = {
@@ -88,7 +88,7 @@ country_event = {
 						616 = { controller = { is_puppet_of = JAP } }
 					}
 				}
-				MON = { transfer_state = 616 }
+				ECA = { transfer_state = 616 }
 			}
 			if = {
 				limit = {
@@ -97,7 +97,7 @@ country_event = {
 						618 = { controller = { is_puppet_of = JAP } }
 					}
 				}
-				MON = { transfer_state = 618 }
+				ECA = { transfer_state = 618 }
 			}
 			set_province_name = { id = 4801 name = "Urga" }
 		}

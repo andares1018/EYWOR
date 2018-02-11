@@ -125,54 +125,9 @@ country_event = {
             }
 			white_peace = CHI
         }
-		hidden_effect = {
-			605 = {
-				if = {
-					limit = { is_border_conflict = yes }
-					set_border_war = no
-				}
-			}
-			620 = {
-				if = {
-					limit = { is_border_conflict = yes }
-					set_border_war = no
-				}
-			}
-			607 = {
-				if = {
-					limit = { is_border_conflict = yes }
-					set_border_war = no
-				}
-			}
-			622 = {
-				if = {
-					limit = { is_border_conflict = yes }
-					set_border_war = no
-				}
-			}
-			743 = {
-				if = {
-					limit = { is_border_conflict = yes }
-					set_border_war = no
-				}
-			}
-			761 = {
-				if = {
-					limit = { is_border_conflict = yes }
-					set_border_war = no
-				}
-			}
+		NEA = { 
+			country_event = { id = rcmsoviet.21 days = 1 }
 		}
-		NEA = { country_event = { id = rcmsoviet.21 days = 1 } }
-  
-
-					  
-		   
-					
-											 
-											  
-							
-											 
 	}
 }
 
@@ -199,7 +154,7 @@ country_event = {
 		CHI = {
 			start_civil_war = {
 				ideology = neutrality size = 0.2
-				#states = { 603 602 600 595 596 745 744 613 598 606 597 }
+				#states = { 603 602 600 595 764 596 745 744 613 598 765 606 768 597 766 }
 				states = { 607 620 746 }
 			}
 			kill_country_leader = yes
@@ -349,7 +304,7 @@ country_event = {
 		CHI = {
 			start_civil_war = {
 				ideology = neutrality size = 0.4
-				#states = { 603 602 600 595 596 745 744 613 598 606 597 }
+				#states = { 603 602 600 595 764 596 745 744 613 598 765 606 768 597 766 }
 				states = { 607 620 746 756 }
 			}
 			kill_country_leader = yes

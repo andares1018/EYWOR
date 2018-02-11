@@ -603,6 +603,14 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/chi_inch_blood.dds"
 	}
 	spriteType = {
+		name = "GFX_idea_chi_inch_blood_9"
+		texturefile = "gfx/interface/ideas/chi_inch_blood.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_chi_inch_blood_10"
+		texturefile = "gfx/interface/ideas/chi_inch_blood.dds"
+	}
+	spriteType = {
 		name = "GFX_idea_unstable_economy"
 		texturefile = "gfx/interface/ideas/unstable_economy.dds"
 	}

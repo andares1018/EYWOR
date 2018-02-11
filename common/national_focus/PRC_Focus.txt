@@ -2221,7 +2221,9 @@ focus_tree = {
 					id = borderwar.1
 				} 
 				597 = {	set_border_war = yes }
+				766 = {	set_border_war = yes }
 				615 = {	set_border_war = yes }
+				767 = {	set_border_war = yes }
 				614 = {	set_border_war = yes }
 				608 = {	set_border_war = yes }
 				609 = {	set_border_war = yes }
@@ -4006,6 +4008,9 @@ focus_tree = {
 			606 = {
 				max_infra_trigger = yes
 			}
+			768 = {
+				max_infra_trigger = yes
+			}
 			614 = {
 				max_infra_trigger = yes
 			}
@@ -4097,7 +4102,8 @@ focus_tree = {
 			add_resource = {
 				type = oil
 				amount = 30
-				state = 605
+				state = 769
+				#no 770
 			}
 		}
 		available = {
@@ -4111,7 +4117,8 @@ focus_tree = {
 			has_war = no
 			has_tech = construction4
 			has_tech = excavation4
-			controls_state = 605
+			controls_state = 769
+			#no 770
 		}
 	}
 	focus = {
@@ -4526,7 +4533,7 @@ focus_tree = {
 				uses = 1
 				category = synth_resources
 			}
-			597 = {
+			766 = {
 				add_building_construction = {
 					type = synthetic_refinery
 					level = 1
@@ -4542,7 +4549,7 @@ focus_tree = {
 				tooltip = industry_balanced_enough
 				has_completed_focus = PRC_chi_nationalize_industry_iii_focus
 			}
-			owns_state = 597
+			owns_state = 766
 		}
 	}
 	focus = {
@@ -4889,6 +4896,9 @@ focus_tree = {
 			615 = {
 				level_3_infra = yes
 			}
+			767 = {
+				level_3_infra = yes
+			}
 			762 = {
 				level_3_infra = yes
 			}
@@ -4977,6 +4987,9 @@ focus_tree = {
 				level_6_infra = yes
 			}
 			615 = {
+				level_6_infra = yes
+			}
+			767 = {
 				level_6_infra = yes
 			}
 			762 = {
@@ -5127,13 +5140,22 @@ focus_tree = {
 			606 = {
 				level_3_infra = yes
 			}
+			768 = {
+				level_3_infra = yes
+			}
 			596 = {
 				level_3_infra = yes
 			}
 			597 = {
 				level_3_infra = yes
 			}
+			766 = {
+				level_3_infra = yes
+			}
 			598 = {
+				level_3_infra = yes
+			}
+			765 = {
 				level_3_infra = yes
 			}
 			613 = {
@@ -5214,13 +5236,22 @@ focus_tree = {
 			606 = {
 				level_6_infra = yes
 			}
+			768 = {
+				level_6_infra = yes
+			}
 			596 = {
 				level_6_infra = yes
 			}
 			597 = {
 				level_6_infra = yes
 			}
+			766 = {
+				level_6_infra = yes
+			}
 			598 = {
+				level_6_infra = yes
+			}
+			765 = {
 				level_6_infra = yes
 			}
 			613 = {
@@ -5341,7 +5372,16 @@ focus_tree = {
 			325 = {
 				level_3_infra = yes
 			}
+			771 = {
+				level_3_infra = yes
+			}
+			772 = {
+				level_3_infra = yes
+			}
 			599 = {
+				level_3_infra = yes
+			}
+			773 = {
 				level_3_infra = yes
 			}
 			592 = {
@@ -5357,6 +5397,9 @@ focus_tree = {
 				level_3_infra = yes
 			}
 			595 = {
+				level_3_infra = yes
+			}
+			764 = {
 				level_3_infra = yes
 			}
 		}
@@ -5416,7 +5459,16 @@ focus_tree = {
 			325 = {
 				level_6_infra = yes
 			}
+			771 = {
+				level_6_infra = yes
+			}
+			772 = {
+				level_6_infra = yes
+			}
 			599 = {
+				level_6_infra = yes
+			}
+			773 = {
 				level_6_infra = yes
 			}
 			592 = {
@@ -5432,6 +5484,9 @@ focus_tree = {
 				level_6_infra = yes
 			}
 			595 = {
+				level_6_infra = yes
+			}
+			764 = {
 				level_6_infra = yes
 			}
 		}
@@ -5558,6 +5613,8 @@ focus_tree = {
 				controls_state = 600
 				controls_state = 613
 				controls_state = 605
+				controls_state = 769
+				controls_state = 770
 				controls_state = 608
 			}
 			is_subject = no
@@ -6782,6 +6839,12 @@ focus_tree = {
 			605 = {
 				level_3_infra = yes
 			}
+			769 = {
+				level_3_infra = yes
+			}
+			770 = {
+				level_3_infra = yes
+			}
 			743 = {
 				level_3_infra = yes
 			}
@@ -6852,6 +6915,12 @@ focus_tree = {
 				level_6_infra = yes
 			}
 			605 = {
+				level_6_infra = yes
+			}
+			769 = {
+				level_6_infra = yes
+			}
+			770 = {
 				level_6_infra = yes
 			}
 			743 = {

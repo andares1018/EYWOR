@@ -39,6 +39,9 @@ country_event = {
 			effect_tooltip = {
 				transfer_state = 608
 				transfer_state = 597
+				###MODDED###vvv
+				transfer_state = 766
+				###MODDED###^^^
 				transfer_state = 614
 			}
 			###MODDED###vvv

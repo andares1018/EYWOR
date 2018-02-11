@@ -571,14 +571,28 @@ country_event = {
 	trigger = {
 		has_country_flag = im_jnc_now
 		has_global_flag = jnc_exists
-		RFM = { has_full_control_of_state = 597 }
+		OR = {
+			RFM = { has_full_control_of_state = 597 }
+			RFM = { has_full_control_of_state = 766 }
+		}
 	}
 	mean_time_to_happen = {
 		days = 0
 	}
 	immediate = {
 		hidden_effect = {
-			set_state_controller = 597
+			if = {
+				limit = {
+					RFM = { has_full_control_of_state = 597 }
+				}
+				set_state_controller = 597
+			}
+			if = {
+				limit = {
+					RFM = { has_full_control_of_state = 766 }
+				}
+				set_state_controller = 766
+			}
 		}
 	}
 	option = {}
@@ -6089,7 +6103,17 @@ country_event = {
 	fire_only_once = yes
 	trigger = {
 		tag = JAP
-		has_war_with = CHI
+		OR = {
+			any_country = {
+				is_legit_china = yes
+				has_war_with = ROOT
+			}
+			NOT = {
+				any_country = {
+					is_legit_china = yes
+				}
+			}
+		}
 		NOT = {
 			OR = {
 				has_global_flag = mej_exists
@@ -6136,7 +6160,17 @@ country_event = {
 	fire_only_once = yes
 	trigger = {
 		tag = JAP
-		has_war_with = CHI
+		OR = {
+			any_country = {
+				is_legit_china = yes
+				has_war_with = ROOT
+			}
+			NOT = {
+				any_country = {
+					is_legit_china = yes
+				}
+			}
+		}
 		NOT = {
 			OR = {
 				has_global_flag = mej_exists

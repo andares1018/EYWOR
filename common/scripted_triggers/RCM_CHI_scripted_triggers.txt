@@ -28,12 +28,16 @@ is_northeast_china_state = {
 is_south_china_state = {
 	OR = {
 		state = 325
+		state = 771
+		state = 772
 		state = 599
+		state = 773
 		state = 592
 		state = 603
 		state = 602
 		state = 600
 		state = 595
+		state = 764
 	}
 }
 is_east_china_state = {
@@ -45,9 +49,12 @@ is_east_china_state = {
 		state = 745
 		state = 744
 		state = 606
+		state = 768
 		state = 596
 		state = 597
+		state = 766
 		state = 598
+		state = 765
 		state = 613
 	}
 }
@@ -60,6 +67,7 @@ is_north_china_state = {
 		state = 621
 		state = 763
 		state = 615
+		state = 767
 		state = 762
 		state = 622
 		state = 616
@@ -74,6 +82,8 @@ is_west_china_state = {
 		state = 283
 		state = 601
 		state = 605
+		state = 769
+		state = 770
 		state = 743
 		state = 761
 	}
@@ -198,7 +208,9 @@ is_originally_warlord = { #Does not include sinkiang
 is_north_china_state_for_liberation = {
 	OR = {
 		state = 597
+		state = 766
 		state = 615
+		state = 767
 		state = 614
 		state = 608
 		state = 609

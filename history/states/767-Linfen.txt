@@ -1,0 +1,31 @@
+state={
+	id=767
+	name="STATE_767"
+	history={
+		owner = SHX
+		add_core_of = SHX
+		add_core_of = CHI
+		add_core_of = PRC
+		buildings = {
+			infrastructure = 5
+			arms_factory = 2
+			industrial_complex = 2
+		}
+		1939.1.1 = {
+			add_core_of = PRC
+			add_core_of = EHB
+			owner = EHB
+			controller = EHB
+			PRC = {
+				set_province_controller = 1034
+				set_province_controller = 1531
+			}
+		}
+	}
+	provinces={
+		1034 1180 1531 1575 4634 7571 10421 
+	}
+	manpower=3121000
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

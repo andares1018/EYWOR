@@ -1,0 +1,29 @@
+state={
+	id=772
+	name="STATE_772"
+	
+	history={
+		owner = YUN
+		add_core_of = YUN
+		add_core_of = CHI
+		add_core_of = PRC
+		victory_points = {
+			7965 3 
+		}
+		buildings = {
+			infrastructure = 2
+
+		}
+		1939.1.1 = {
+			owner = YUN
+
+		}
+
+	}
+	provinces={
+		4559 4937 5009 7965 7976 8023 8126 10413 10776 10863 12262 12789 12898 
+	}
+	manpower= 2445600
+	state_category=rural
+	buildings_max_level_factor=1.000
+}

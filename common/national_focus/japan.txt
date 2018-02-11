@@ -374,7 +374,12 @@ focus_tree = {
 				}
 			}
 			is_puppet = no
-			has_war_with = CHI
+			OR = {
+				has_war_with = CHI
+				NOT = {
+					country_exists = CHI
+				}
+			}
 			ECA = {
 				controls_state = 757
 				controls_state = 612
@@ -2514,6 +2519,7 @@ focus_tree = {
 				every_country = {
 					limit = {
 						is_warlord = yes
+						is_subject = no
 					}
 					if = {
 						limit = {
@@ -2549,6 +2555,7 @@ focus_tree = {
 			}
 			any_country = {
 				is_warlord = yes
+				is_subject = no
 			}
 		}
 		bypass = {
@@ -2670,12 +2677,7 @@ focus_tree = {
 			}
 		}
 		bypass = {
-			OR = {
-				NOT = {
-					country_exists = CHI
-				}
-				country_exists = RFM
-			}
+			country_exists = RFM
 		}
 	}
 	focus = {
@@ -2745,9 +2747,11 @@ focus_tree = {
 				JNC = {
 					add_state_core = 614
 					add_state_core = 615
+					add_state_core = 767
 					add_state_core = 608
 					add_state_core = 609
 					add_state_core = 597
+					add_state_core = 766
 					add_state_core = 607
 				}
 			}
@@ -2771,14 +2775,9 @@ focus_tree = {
 			}
 		}
 		bypass = {
-			OR = {
-				custom_trigger_tooltip = {
-					tooltip = EHB_reform_trigger
-					has_global_flag = jnc_exists
-				}
-				NOT = {
-					country_exists = CHI
-				}
+			custom_trigger_tooltip = {
+				tooltip = EHB_reform_trigger
+				has_global_flag = jnc_exists
 			}
 		}
 	}
@@ -2918,6 +2917,12 @@ focus_tree = {
 				}
 			}
 			custom_trigger_tooltip = {
+				tooltip = JD_puppet_trigger
+				766 = {
+					is_controlled_by_jap_or_its_puppet = yes
+				}
+			}
+			custom_trigger_tooltip = {
 				tooltip = N_puppet_trigger
 				613 = {
 					is_controlled_by_jap_or_its_puppet = yes
@@ -2925,8 +2930,8 @@ focus_tree = {
 			}
 		}
 		bypass = {
-			CHI = {
-				is_puppet = yes
+			any_country = {
+				is_rrc = yes
 			}
 		}
 	}

@@ -304,7 +304,10 @@ chi_jap_war = {
 fuck_comintern_mao_do_it_alone = {
 	enable = {
 		tag = PRC
-		has_war_with = CHI
+		NOT = {
+			has_war_with = JAP
+		}
+		date > 1938.1.1
 	}
 	abort = {
 		AND = {
@@ -323,25 +326,12 @@ fuck_comintern_mao_do_it_alone = {
 ger_actually_love_china = {
 	enable = {
 		tag = GER
-		OR = {
-			JAP = {
-				has_war_with = CHI
+		any_country = {
+			OR = {
+				is_legit_china = yes
+				is_warlord = yes
 			}
-			JAP = {
-				has_war_with = PRC
-			}
-			JAP = {
-				has_war_with = XSM
-			}
-			JAP = {
-				has_war_with = SHX
-			}
-			JAP = {
-				has_war_with = GXC
-			}
-			JAP = {
-				has_war_with = YUN
-			}
+			has_war_with = JAP
 		}
 	}
 	abort = {
@@ -349,19 +339,20 @@ ger_actually_love_china = {
 			NOT = { has_idea = german_advisors }
 			JAP = { has_war_with = ENG }
 			NOT = {
-				country_exists = CHI
-				country_exists = PRC
-				country_exists = GXC
-				country_exists = XSM
-				country_exists = YUN
-				country_exists = SHX
+				any_country = {
+					OR = {
+						is_legit_china = yes
+						is_warlord = yes
+					}
+				}
 			}
-			has_war_with = CHI
-			has_war_with = PRC
-			has_war_with = XSM
-			has_war_with = GXC
-			has_war_with = SHX
-			has_war_with = YUN
+			any_country = {
+				OR = {
+					is_legit_china = yes
+					is_warlord = yes
+				}
+				has_war_with = GER
+			}
 		}
 	}
 	
