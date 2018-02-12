@@ -1837,6 +1837,9 @@ ideas = {
 					has_government = n_socialism
 				}
 			}
+			ai_will_do = {
+				factor = 0
+			}
 			
 		}
 		

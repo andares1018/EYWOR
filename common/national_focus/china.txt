@@ -4085,7 +4085,7 @@ focus_tree = {
 	}
 	focus = {
 		id = chi_academy_rf_focus
-		icon = GFX_focus_research
+		icon = GFX_goal_academia_reform
 		cost = 10.00
 		prerequisite = {
 			focus = kmt_compulsory_education_chi
@@ -4280,7 +4280,7 @@ focus_tree = {
 	}
 	focus = {
 		id = chi_academy_ex_focus
-		icon = GFX_focus_research
+		icon = GFX_goal_academia_expand
 		cost = 10.00
 		prerequisite = {
 			focus = chi_academy_rf_focus

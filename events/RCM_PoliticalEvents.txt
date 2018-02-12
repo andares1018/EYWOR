@@ -65,6 +65,16 @@ country_event = {
 				set_political_party = { ideology = n_socialism popularity = 0.3 }
 				add_ideas = zhang_bojun
 				country_event = { id = prc.3 }
+				create_country_leader = {
+					name = "Zhang Lan"
+					desc = "POLITICS_ZHANG_LAN_DESC"
+					picture = "Portrait_China_Zhang_Lan.dds"
+					expire = "1965.1.1"
+					ideology = n_socialism_ideology
+					traits = {
+						#
+					}
+				}
 			}
 		}
 	}

@@ -605,9 +605,9 @@ focus_tree = {
 			set_country_flag = PRC_United_front_was_established
 		}
 		available = {
-			hidden_trigger = {
-				ai_cont_foc_prc = yes
-			}
+			#hidden_trigger = {
+			#	ai_cont_foc_prc = yes
+			#}
 			any_other_country = {
 				custom_trigger_tooltip = {
 					tooltip = is_central_government_of_china_tt

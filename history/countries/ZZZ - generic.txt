@@ -355,62 +355,6 @@ RAJ = {
 }
 
 
-ENG = {
-	if = {
-		limit = {
-			has_dlc = "Together for Victory"
-		}
-		set_autonomy = {
-			target = SST
-			autonomous_state = autonomy_integrated_puppet
-		}
-		set_autonomy = {
-			target = BUR
-			autonomous_state = autonomy_integrated_puppet
-		}
-		else = {
-			puppet = MAL
-			puppet = SST
-			puppet = RAJ
-			puppet = BUR	  
-		}
-	}
-	
-	set_politics = {
-
-		parties = {
-			democratic = { 
-				popularity = 60
-			}
-
-			fascism = {
-				popularity = 2
-			}
-			n_socialism = {
-				popularity = 40
-			}
-			communism = {
-				popularity = 1
-			}
-		}
-		
-		ruling_party = democratic
-		last_election = "1935.11.14"
-		election_frequency = 48
-		elections_allowed = yes ##suspended through duration of war, which is handled via event
-	}
-	add_to_faction = SST
-	create_country_leader = {
-		name = "Clement Attlee"
-		desc = ""
-		picture = "Portrait_Britain_Clement_Attlee.dds"
-		expire = "1965.1.1"
-		ideology = n_socialism_ideology
-		traits = {
-			
-		}
-	}
-}
 DEN = {
 	set_politics = {
 
@@ -618,6 +562,39 @@ FRA = {
 		}
 	}
 }
+ENG = {
+	set_autonomy = {
+		target = RAJ
+		autonomous_state = autonomy_colony
+	}
+}
+RAJ = {
+	set_politics = {
+
+		parties = {
+			democratic = { 
+				popularity = 17
+			}
+
+			fascism = {
+				popularity = 2
+			}
+			
+			communism = {
+				popularity = 1
+			}
+
+			neutrality = {
+				popularity = 80
+			}
+		}
+		
+		ruling_party = neutrality
+		last_election = "1935.11.14"
+		election_frequency = 48
+		elections_allowed = no
+	}
+}
 ########1939.1.1
 1939.1.1 = {
 	NOR = {
@@ -718,11 +695,11 @@ FRA = {
 			limit = {
 				has_dlc = "Together for Victory"
 			}
-				set_autonomy = {
+			set_autonomy = {
 				target = BUR
 				autonomous_state = autonomy_colony
 				freedom_level = 0.35
-				}
+			}
 			else = {
 				puppet = BUR
 			}

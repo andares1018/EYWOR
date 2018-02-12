@@ -70,6 +70,14 @@ country_event = {
 	is_triggered_only = yes
 	immediate = {
 		FROM = {
+			if = {
+				limit = {
+					OR = {
+						is_originally_warlord = yes
+						is_legit_china = yes
+					}
+				}
+			}
 			country_event = {
 				days = 1 id = prc.7 #oh no!
 			}

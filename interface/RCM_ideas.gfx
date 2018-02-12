@@ -256,6 +256,10 @@ spriteTypes = {
 		name = "GFX_idea_kokutai_gensoku"
 		texturefile = "gfx/interface/ideas/kokutai_gensoku.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_PRC_Isolated_status"
+		texturefile = "gfx/interface/ideas/no_way_out.dds"
+	}
 	###########jap####################
 	spriteType = {
 		name = "GFX_idea_chiune_sugihara"

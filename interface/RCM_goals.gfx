@@ -160,5 +160,13 @@ spriteTypes = {
 		name = "GFX_goal_continuous_counter_insurgency"
 		texturefile = "gfx/interface/goals/goal_continuous_counter_insurgency.dds"				
 	}
+	SpriteType = {
+		name = "GFX_goal_academia_reform"
+		texturefile = "gfx/interface/goals/goal_academia_reform.dds"				
+	}
+	SpriteType = {
+		name = "GFX_goal_academia_expand"
+		texturefile = "gfx/interface/goals/goal_academia_expand.dds"				
+	}
 	
 }

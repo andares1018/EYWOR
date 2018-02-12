@@ -1319,7 +1319,9 @@ ideas = {
 			allowed = {
 				original_tag = PRC
 			}
-			
+			ai_will_do = {
+				factor = 1
+			}
 			traits = { armaments_organizer }
 		}
 
@@ -1330,7 +1332,9 @@ ideas = {
 			allowed = {
 				original_tag = PRC
 			}
-			
+			ai_will_do = {
+				factor = 1
+			}
 			traits = { ideological_crusader }
 		}
 
@@ -1341,7 +1345,9 @@ ideas = {
 			allowed = {
 				original_tag = PRC
 			}
-			
+			ai_will_do = {
+				factor = 1
+			}
 			traits = { captain_of_industry }
 		}
 	}	

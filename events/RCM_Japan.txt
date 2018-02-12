@@ -4659,8 +4659,18 @@ country_event = {
 		608 = {
 			is_controlled_by_jap_or_its_puppet = yes
 		}
-		NOT = {
-			country_exists = EHB
+		OR = {
+			NOT = {
+				country_exists = EHB
+			}
+			AND = {
+				country_exists = EHB
+				EHB = {
+					NOT = {
+						owns_state = 608
+					}
+				}
+			}
 		}
 		NOT = {
 			has_country_flag = no_rebuild_JNC

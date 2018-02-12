@@ -221,7 +221,7 @@ ideas = {
 			}
 
 			modifier = {
-				army_org_factor = -0.5
+				army_org_factor = -0.15
 			}
 		} 
 		democracy_reclaimed = {
@@ -431,7 +431,8 @@ ideas = {
 			
 			modifier = {
 				conscription = 0.025
-				army_org_factor = 0.1
+				army_org_factor = 0.25
+				army_morale_factor = 0.15
 			}
 		}
 
@@ -481,8 +482,8 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				unity_factor = 0.15
-				army_morale_factor = 0.25
+				unity_factor = 0.10
+				army_morale_factor = 0.1
 			}			
 		}
 		

@@ -26,8 +26,8 @@ continent = {
 	political = {
 		#MODDEDv
 		n_socialism = {
-				male = { 
-					"gfx/leaders/Europe/Portrait_Europe_Generic_2.dds" 
+			male = { 
+				"gfx/leaders/Europe/Portrait_Europe_Generic_2.dds" 
 			}
 		}
 		#MODDED^
@@ -54,8 +54,8 @@ continent = {
 	political = {
 		#MODDEDv
 		n_socialism = {
-				male = { 
-					"gfx/leaders/South America/Portrait_South_America_Generic_2.dds" 
+			male = { 
+				"gfx/leaders/South America/Portrait_South_America_Generic_2.dds" 
 			}
 		}
 		#MODDED^
@@ -83,7 +83,7 @@ continent = {
 	political = {
 		#MODDEDv
 		n_socialism	= {
-				male = { 
+			male = { 
 					"gfx/leaders/Africa/Portrait_Africa_Generic_2.dds"
 					"gfx/leaders/SAF/Portrait_South_Africa_Political_Leader_Generic.dds"
 					"gfx/leaders/SAF/Portrait_South_Africa_Political_Leader_Generic_2.dds"
@@ -121,6 +121,39 @@ continent = {
 	}
 }
 
+
+every_country = {
+	limit = {
+		OR = { 
+			AND = {
+				capital_scope = { is_on_continent = asia }
+				is_puppet = no
+			}
+			is_subject_of = JAP
+			is_warlord = yes
+			tag = HPC
+			tag = GUD
+			tag = XIK
+			tag = SIC
+			tag = EHB
+			tag = ECA
+			tag = RFM
+			tag = PLM
+			tag = NEA
+			tag = SCG
+			tag = NSG
+		}
+	}
+	political = {
+		#MODDEDv
+		n_socialism = {
+				male = { 
+					"gfx/leaders/Asia/Portrait_Asia_Generic_2.dds" 
+			}
+		}
+		#MODDED^
+	}
+}
 		#MODDEDv
 FIC = {
 	army = {

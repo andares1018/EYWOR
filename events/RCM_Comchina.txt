@@ -119,6 +119,16 @@ country_event = {
 			add_national_unity = 0.10
 			set_political_party = { ideology = n_socialism popularity = 30 }
 			add_ideas = zhang_bojun
+			create_country_leader = {
+				name = "Zhang Lan"
+				desc = "POLITICS_ZHANG_LAN_DESC"
+				picture = "Portrait_China_Zhang_Lan.dds"
+				expire = "1965.1.1"
+				ideology = n_socialism_ideology
+				traits = {
+					#
+				}
+			}
 		}
 	}
 }
