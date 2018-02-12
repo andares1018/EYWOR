@@ -139,7 +139,49 @@ is_legit_china_raw = {
 		AND = {
 			has_global_flag = xian_kmt_refuse
 			has_war_with = CHI
-			TAG = NEA
+			tag = NEA
+		}
+		AND = {
+			NOT = {
+				any_other_country = {
+					is_legit_china_second_trigger = yes
+				}
+			}
+			original_tag = CHI
+		}
+	}
+}
+is_legit_china_second_trigger = {
+	OR = {
+		has_country_flag = im_legit_now
+		AND =  {
+			OR = {
+				owns_state = 598
+				AND = {
+					owns_state = 605
+					is_faction_leader = yes
+				}
+				any_other_country = {
+					OR = {
+						owns_state = 598
+						owns_state = 605
+					}
+					is_subject_of = ROOT
+				}
+			}
+			NOT = {
+				has_war_with = NEA
+			}
+			OR = {
+				is_warlord = yes
+				tag = CHI
+				tag = PRC
+			}
+		}
+		AND = {
+			has_global_flag = xian_kmt_refuse
+			has_war_with = CHI
+			tag = NEA
 		}
 	}
 }

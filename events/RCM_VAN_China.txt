@@ -3756,7 +3756,7 @@ country_event = {
 			country_exists = CHI
 		}
 		OR = {
-			owns_state = 608 #Beijing
+			owns_state = 608 #Beiping
 			owns_state = 613 #Nanjing
 		}
 	}
@@ -3765,7 +3765,7 @@ country_event = {
 		days = 10
 	}
 
-	#Move to Beijing
+	#Move to Beiping
 	option = {
 		name = rcmchina.204.a
 		ai_chance = {

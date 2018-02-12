@@ -444,7 +444,7 @@ units = {
 ### Air Forces ###
 air_wings = {
 # Roughly 300 fighters, 21 tac bombers, but only 200 aircraft total were serviceable in 1937 due to neglect
-	# Beijing
+	# Beiping
 	608 = { 
 		fighter_equipment_0 = { owner = "CHI" amount = 30 }				# 3rd PG - Fiat CR.32
 	}
