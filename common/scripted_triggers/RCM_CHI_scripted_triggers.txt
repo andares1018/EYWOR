@@ -330,7 +330,7 @@ infra_bypass_2_tr = {
 		infra_bypass_2 = yes 
 	} 
 }
-###
+### 
 infra_bypass_3 = {
 	free_building_slots = {
 		building = infrastructure
@@ -338,6 +338,7 @@ infra_bypass_3 = {
 	}
 	is_controlled_by = ROOT
 }
+
 infra_bypass_3_tr = {
 	custom_trigger_tooltip = {
 		tooltip = infra_bypass_3_tt
