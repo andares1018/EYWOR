@@ -317,3 +317,21 @@ is_owned_by_jap_or_its_puppet = {
 		}
 	}
 }
+is_manchuria_state = {
+	OR = {
+		state = 714
+		state = 715
+		state = 716
+		state = 717
+		state = 610
+		state = 328
+		state = 774
+		state = 775
+		state = 776
+		state = 777
+		state = 778
+		state = 779
+		state = 780
+		state = 781
+	}
+}

@@ -783,20 +783,6 @@ focus_tree = {
 						}
 						set_state_flag = man_infra_flag
 					}
-					random_owned_controlled_state = {
-						limit = {
-							infrastructure < 5
-							NOT = {
-								has_state_flag = man_infra_flag
-							}
-						}
-						add_building_construction = {
-							type = infrastructure
-							level = 3
-							instant_build = yes
-						}
-						set_state_flag = man_infra_flag
-					}
 				}
 				else = {
 					if = {
@@ -841,20 +827,6 @@ focus_tree = {
 							}
 							set_state_flag = man_infra_flag
 						}
-					}
-					random_owned_controlled_state = {
-						limit = {
-							infrastructure < 5
-							NOT = {
-								has_state_flag = man_infra_flag
-							}
-						}
-						add_building_construction = {
-							type = infrastructure
-							level = 3
-							instant_build = yes
-						}
-						set_state_flag = man_infra_flag
 					}
 					random_owned_controlled_state = {
 						limit = {
@@ -953,23 +925,11 @@ focus_tree = {
 			}
 		}
 		available = {
-			OR = {
-				MAN = {
-					is_puppet_of = JAP
-					owns_state = 714
-					owns_state = 715
-					owns_state = 716
-					owns_state = 717
-					owns_state = 610
-					owns_state = 328
-				}
-				AND = {
-					owns_state = 714
-					owns_state = 715
-					owns_state = 716
-					owns_state = 717
-					owns_state = 610
-					owns_state = 328
+			count_trigger = {
+				amount = 3
+				any_state = {
+					is_manchuria_state = yes
+					is_controlled_by_jap_or_its_puppet = yes
 				}
 			}
 		}
@@ -1176,23 +1136,11 @@ focus_tree = {
 			}
 		}
 		available = {
-			OR = {
-				MAN = {
-					is_puppet_of = JAP
-					owns_state = 714
-					owns_state = 715
-					owns_state = 716
-					owns_state = 717
-					owns_state = 610
-					owns_state = 328
-				}
-				AND = {
-					owns_state = 714
-					owns_state = 715
-					owns_state = 716
-					owns_state = 717
-					owns_state = 610
-					owns_state = 328
+			count_trigger = {
+				amount = 3
+				any_state = {
+					is_manchuria_state = yes
+					is_controlled_by_jap_or_its_puppet = yes
 				}
 			}
 		}
@@ -1399,23 +1347,11 @@ focus_tree = {
 			}
 		}
 		available = {
-			OR = {
-				MAN = {
-					is_puppet_of = JAP
-					owns_state = 714
-					owns_state = 715
-					owns_state = 716
-					owns_state = 717
-					owns_state = 610
-					owns_state = 328
-				}
-				AND = {
-					owns_state = 714
-					owns_state = 715
-					owns_state = 716
-					owns_state = 717
-					owns_state = 610
-					owns_state = 328
+			count_trigger = {
+				amount = 3
+				any_state = {
+					is_manchuria_state = yes
+					is_controlled_by_jap_or_its_puppet = yes
 				}
 			}
 		}
@@ -1433,17 +1369,14 @@ focus_tree = {
 			factor = 75
 		}
 		available = {
-			OR = {
-				MAN = {
-					is_puppet_of = JAP
-					owns_state = 715
-					owns_state = 716
-					owns_state = 610
-				}
-				AND = {
-					owns_state = 715
-					owns_state = 716
-					owns_state = 610
+			NOT = {
+				any_state = {
+					OR = {
+						state = 716
+						state = 715
+						state = 610
+					}
+					is_controlled_by_jap_or_its_puppet = no
 				}
 			}
 		}
@@ -1488,17 +1421,14 @@ focus_tree = {
 			factor = 75
 		}
 		available = {
-			OR = {
-				MAN = {
-					is_puppet_of = JAP
-					owns_state = 716
-					owns_state = 717
-					owns_state = 328
-				}
-				AND = {
-					owns_state = 716
-					owns_state = 717
-					owns_state = 328
+			NOT = {
+				any_state = {
+					OR = {
+						state = 716
+						state = 717
+						state = 328
+					}
+					is_controlled_by_jap_or_its_puppet = no
 				}
 			}
 		}
@@ -1548,25 +1478,11 @@ focus_tree = {
 		completion_reward = {
 			add_research_slot = 1
 		}
-		available = {
-			OR = {
-				MAN = {
-					is_puppet_of = JAP
-					owns_state = 714
-					owns_state = 715
-					owns_state = 716
-					owns_state = 717
-					owns_state = 610
-					owns_state = 328
-				}
-				AND = {
-					owns_state = 714
-					owns_state = 715
-					owns_state = 716
-					owns_state = 717
-					owns_state = 610
-					owns_state = 328
-				}
+		count_trigger = {
+			amount = 3
+			any_state = {
+				is_manchuria_state = yes
+				is_controlled_by_jap_or_its_puppet = yes
 			}
 		}
 	}
@@ -1583,183 +1499,173 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			MAN = {
-				328 = {
-					add_building_construction = {
-						type = bunker
-						level = 2
-						province = 3944
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						level = 2
-						province = 6806
-						instant_build = yes
-					}
+			776 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 3944
+					instant_build = yes
 				}
-				717 = {
-					add_building_construction = {
-						type = bunker
-						level = 2
-						province = 783
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						level = 2
-						province = 810
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						level = 2
-						province = 3843
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						level = 2
-						province = 5427
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						level = 2
-						province = 9798
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						level = 2
-						province = 12500
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						level = 2
-						province = 7569
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						level = 2
-						province = 10521
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						level = 2
-						province = 4551
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						level = 2
-						province = 10368
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						level = 2
-						province = 1732
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						level = 2
-						province = 10698
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						level = 2
-						province = 1693
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						level = 2
-						province = 12548
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						level = 2
-						province = 7832
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						level = 2
-						province = 1675
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						level = 2
-						province = 7848
-						instant_build = yes
-					}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 6806
+					instant_build = yes
 				}
-				714 = {
-					add_building_construction = {
-						type = bunker
-						level = 2
-						province = 10541
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						level = 2
-						province = 12537
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						level = 2
-						province = 7697
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						level = 2
-						province = 7743
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						level = 2
-						province = 10612
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						level = 2
-						province = 12690
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						level = 2
-						province = 4745
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						level = 2
-						province = 10638
-						instant_build = yes
-					}
-				}
+			}
+			779 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 10698
+					instant_build = yes
+				}#779
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 3913
+					instant_build = yes
+				}#779
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 1693
+					instant_build = yes
+				}#779
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 12548
+					instant_build = yes
+				}#779
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 7848
+					instant_build = yes
+				}#779
+			}
+			780 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 7569
+					instant_build = yes
+				}#780
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 10521
+					instant_build = yes
+				}#780
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 4551
+					instant_build = yes
+				}#780
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 10368
+					instant_build = yes
+				}#780
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 1732
+					instant_build = yes
+				}#780
+			}
+			781 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 783
+					instant_build = yes
+				}#781
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 5427
+					instant_build = yes
+				}#781
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 9798
+					instant_build = yes
+				}#781
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 12500
+					instant_build = yes
+				}#781
+			}
+			714 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 10541
+					instant_build = yes
+				}#714
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 12537
+					instant_build = yes
+				}#714
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 7697
+					instant_build = yes
+				}#714
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 7743
+					instant_build = yes
+				}#714
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 10612
+					instant_build = yes
+				}#714
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 12690
+					instant_build = yes
+				}#714
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 4745
+					instant_build = yes
+				}#714
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 10638
+					instant_build = yes
+				}#714
 			}
 		}
 		available = {
-			MAN = {
-				is_puppet_of = JAP
-				owns_state = 714
-				owns_state = 717
-				owns_state = 328
+			NOT = {
+				any_state = {
+					OR = {
+						state = 714
+						state = 776
+						state = 779
+						state = 780
+						state = 781
+					}
+					is_controlled_by_jap_or_its_puppet = no
+				}
 			}
 		}
 	}
@@ -2176,24 +2082,9 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					CHI = {
-						OR = {
-							has_war_with = PRC
-							has_war_with = SIK
-							has_war_with = GUD
-							has_war_with = GXC
-							has_war_with = SIK
-							has_war_with = SIC
-							has_war_with = SHX
-							has_war_with = NXM
-							has_war_with = NEA
-							has_war_with = HMI
-							has_war_with = TNG
-							has_war_with = HPC
-							has_war_with = XSM
-							has_war_with = XIK
-							has_war_with = YUN
-						}
+					any_country = {
+						is_warlord = yes
+						has_war_with = CHI
 					}
 				}
 				custom_effect_tooltip = help_china_war

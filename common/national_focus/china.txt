@@ -309,6 +309,14 @@ focus_tree = {
 				remove_state_core = 715
 				remove_state_core = 716
 				remove_state_core = 328
+				remove_state_core = 774
+				remove_state_core = 775
+				remove_state_core = 776
+				remove_state_core = 777
+				remove_state_core = 778
+				remove_state_core = 779
+				remove_state_core = 780
+				remove_state_core = 781
 				remove_state_core = 717
 				remove_state_core = 714
 				remove_state_core = 747
@@ -5044,6 +5052,30 @@ focus_tree = {
 			328 = {
 				level_3_infra = yes
 			}
+			774 = {
+				level_3_infra = yes
+			}
+			775 = {
+				level_3_infra = yes
+			}
+			776 = {
+				level_3_infra = yes
+			}
+			777 = {
+				level_3_infra = yes
+			}
+			778 = {
+				level_3_infra = yes
+			}
+			779 = {
+				level_3_infra = yes
+			}
+			780 = {
+				level_3_infra = yes
+			}
+			781 = {
+				level_3_infra = yes
+			}
 			610 = {
 				level_3_infra = yes
 			}
@@ -5116,6 +5148,30 @@ focus_tree = {
 				level_6_infra = yes
 			}
 			328 = {
+				level_6_infra = yes
+			}
+			774 = {
+				level_6_infra = yes
+			}
+			775 = {
+				level_6_infra = yes
+			}
+			776 = {
+				level_6_infra = yes
+			}
+			777 = {
+				level_6_infra = yes
+			}
+			778 = {
+				level_6_infra = yes
+			}
+			779 = {
+				level_6_infra = yes
+			}
+			780 = {
+				level_6_infra = yes
+			}
+			781 = {
 				level_6_infra = yes
 			}
 			610 = {
@@ -5975,6 +6031,14 @@ focus_tree = {
 						state = 766
 						state = 613
 						state = 328
+						state = 774
+						state = 775
+						state = 776
+						state = 777
+						state = 778
+						state = 779
+						state = 780
+						state = 781
 						state = 609
 						state = 610
 						state = 611
