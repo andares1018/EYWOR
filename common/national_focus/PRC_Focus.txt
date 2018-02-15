@@ -4626,6 +4626,30 @@ focus_tree = {
 			328 = {
 				level_3_infra = yes
 			}
+			774 = {
+				level_3_infra = yes
+			}
+			775 = {
+				level_3_infra = yes
+			}
+			776 = {
+				level_3_infra = yes
+			}
+			777 = {
+				level_3_infra = yes
+			}
+			778 = {
+				level_3_infra = yes
+			}
+			779 = {
+				level_3_infra = yes
+			}
+			780 = {
+				level_3_infra = yes
+			}
+			781 = {
+				level_3_infra = yes
+			}
 			610 = {
 				level_3_infra = yes
 			}
@@ -4702,6 +4726,30 @@ focus_tree = {
 				level_6_infra = yes
 			}
 			328 = {
+				level_6_infra = yes
+			}
+			774 = {
+				level_6_infra = yes
+			}
+			775 = {
+				level_6_infra = yes
+			}
+			776 = {
+				level_6_infra = yes
+			}
+			777 = {
+				level_6_infra = yes
+			}
+			778 = {
+				level_6_infra = yes
+			}
+			779 = {
+				level_6_infra = yes
+			}
+			780 = {
+				level_6_infra = yes
+			}
+			781 = {
 				level_6_infra = yes
 			}
 			610 = {

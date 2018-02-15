@@ -79,6 +79,14 @@ country_event = { #MAN
 			716 = {	set_commie_rebels = yes }
 			717 = {	set_commie_rebels = yes }
 			328 = {	set_commie_rebels = yes }
+			774 = {	set_commie_rebels = yes }
+			775 = {	set_commie_rebels = yes }
+			776 = {	set_commie_rebels = yes }
+			777 = {	set_commie_rebels = yes }
+			778 = {	set_commie_rebels = yes }
+			779 = {	set_commie_rebels = yes }
+			780 = {	set_commie_rebels = yes }
+			781 = {	set_commie_rebels = yes }
 			610 = {	set_commie_rebels = yes }
 			757 = {	set_commie_rebels = yes }
 			747 = {	set_commie_rebels = yes }
@@ -102,6 +110,14 @@ country_event = { #MAN
 			716 = {	set_commie_rebels = yes }
 			717 = {	set_commie_rebels = yes }
 			328 = {	set_commie_rebels = yes }
+			774 = {	set_commie_rebels = yes }
+			775 = {	set_commie_rebels = yes }
+			776 = {	set_commie_rebels = yes }
+			777 = {	set_commie_rebels = yes }
+			778 = {	set_commie_rebels = yes }
+			779 = {	set_commie_rebels = yes }
+			780 = {	set_commie_rebels = yes }
+			781 = {	set_commie_rebels = yes }
 			610 = {	set_commie_rebels = yes }
 			757 = {	set_commie_rebels = yes }
 			747 = {	set_commie_rebels = yes }

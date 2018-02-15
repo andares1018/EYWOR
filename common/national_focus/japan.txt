@@ -925,12 +925,10 @@ focus_tree = {
 			}
 		}
 		available = {
-			count_trigger = {
+			count_triggers = {
 				amount = 3
-				any_state = {
-					is_manchuria_state = yes
-					is_controlled_by_jap_or_its_puppet = yes
-				}
+				is_manchuria_state = yes
+				is_controlled_by_jap_or_its_puppet = yes
 			}
 		}
 	}
@@ -1136,12 +1134,10 @@ focus_tree = {
 			}
 		}
 		available = {
-			count_trigger = {
+			count_triggers = {
 				amount = 3
-				any_state = {
-					is_manchuria_state = yes
-					is_controlled_by_jap_or_its_puppet = yes
-				}
+				is_manchuria_state = yes
+				is_controlled_by_jap_or_its_puppet = yes
 			}
 		}
 	}
@@ -1347,12 +1343,10 @@ focus_tree = {
 			}
 		}
 		available = {
-			count_trigger = {
+			count_triggers = {
 				amount = 3
-				any_state = {
-					is_manchuria_state = yes
-					is_controlled_by_jap_or_its_puppet = yes
-				}
+				is_manchuria_state = yes
+				is_controlled_by_jap_or_its_puppet = yes
 			}
 		}
 	}
@@ -1478,9 +1472,9 @@ focus_tree = {
 		completion_reward = {
 			add_research_slot = 1
 		}
-		count_trigger = {
-			amount = 3
-			any_state = {
+		available = {
+			count_triggers = {
+				amount = 3
 				is_manchuria_state = yes
 				is_controlled_by_jap_or_its_puppet = yes
 			}
@@ -2041,33 +2035,19 @@ focus_tree = {
 			hidden_effect = {
 				if = {
 					limit = {
-						CHI = {
+						any_country = {
 							OR = {
-								has_war_with = PRC
-								has_war_with = SIK
-								has_war_with = GUD
-								has_war_with = GXC
-								has_war_with = SIK
-								has_war_with = SIC
-								has_war_with = SHX
-								has_war_with = NXM
-								has_war_with = NEA
-								has_war_with = HMI
-								has_war_with = TNG
-								has_war_with = HPC
-								has_war_with = XSM
-								has_war_with = XIK
-								has_war_with = YUN
+								is_warlord = yes
+								tag = PRC
 							}
+							has_war_with = CHI
 						}
 					}
 					every_country = {
 						limit = {
-							AND = {
-								is_independent_china_or_warlord = yes
-								NOT = {
-									original_tag = CHI
-								}
+							OR = {
+								is_warlord = yes
+								tag = PRC
 							}
 							has_war_with = CHI
 						}
@@ -2083,7 +2063,10 @@ focus_tree = {
 			if = {
 				limit = {
 					any_country = {
-						is_warlord = yes
+						OR = {
+							is_warlord = yes
+							tag = PRC
+						}
 						has_war_with = CHI
 					}
 				}

@@ -351,7 +351,697 @@ country_event = {
 		name =  rcmchina.875.a
 	}
 }
+#################
 
+# China and Japan no longer at war - Break up faction and Mao claims his part of China
+country_event = {
+	id = rcmchina.8107
+	title = rcmchina.8107.t
+	desc = {
+		text = rcmchina.8107.d_PRC_joined
+		trigger = { 
+			PRC = { 
+				has_country_flag = PRC_joined_CHI_against_JAP 
+			} 
+		} 
+	}
+	desc = {
+		text = rcmchina.8107.d_PRC_refused
+		trigger = { 
+			PRC = { 
+				NOT = { has_country_flag = PRC_joined_CHI_against_JAP } 
+			} 
+		}
+	}
+
+	picture = GFX_report_event_generic_sign_treaty1
+
+	fire_only_once = yes
+
+	trigger = {
+		country_exists = PRC
+		tag = CHI
+		has_global_flag = CHI_unite
+		HPC = { NOT = { has_war_with = JAP } }
+		SHX = { NOT = { has_war_with = JAP } }
+		NOT = { has_war_with = JAP }
+		PRC = { NOT = { has_war_with = CHI } }
+		#is_faction_leader = yes
+	}
+	
+	mean_time_to_happen = {
+		days = 40
+	}
+
+	option = {
+		name = rcmchina.8107.a
+		CHI = { country_event = { id = rcmchina.867 } }
+		if = {
+			limit = { NOT = { PRC = { has_country_flag = PRC_joined_CHI_against_JAP } } }
+			PRC = { remove_opinion_modifier = { target = CHI modifier = unstable_alliance } }
+			CHI = { remove_opinion_modifier = { target = PRC modifier = unstable_alliance } }	
+		}
+		if = {
+			limit = {
+				PRC = { has_country_flag = PRC_joined_CHI_against_JAP }
+			}
+			custom_effect_tooltip = rcmchina.8107_tt
+			effect_tooltip = {
+				PRC = { remove_opinion_modifier = { target = CHI modifier = unstable_alliance } }
+				CHI = { remove_opinion_modifier = { target = PRC modifier = unstable_alliance } }				
+			}
+		}
+		dismantle_faction = yes
+		every_country = {
+			limit = {
+				is_subject_of = CHI
+				is_warlord = yes
+				OR = {
+				has_autonomy_state = autonomy_dominion
+				has_autonomy_state = autonomy_puppet
+				}
+			}
+			end_puppet = PREV
+		}
+		hidden_effect = {
+			PRC = { country_event = { id = rcmchina.8105 } }
+			PRC = { country_event = { id = rcmchina.8111 } }
+			PRC = { country_event = { id = rcmchina.8108 days = 90 } }
+		}
+	}
+}
+# China and Japan no longer at war - Break up faction and Mao claims his part of China
+country_event = {
+	id = rcmchina.18107
+	title = rcmchina.18107.t
+	desc = rcmchina.18107.d
+
+	picture = GFX_report_event_generic_sign_treaty1
+
+	fire_only_once = yes
+
+	trigger = {
+		country_exists = PRC
+		is_legit_china = yes
+		NOT = {
+			tag = NEA
+		}
+		has_global_flag = CHI_unite
+		HPC = { NOT = { has_war_with = JAP } }
+		SHX = { NOT = { has_war_with = JAP } }
+		NOT = { has_war_with = JAP }
+		PRC = { NOT = { has_war_with = CHI } }
+		is_faction_leader = yes
+	}
+	immediate = {
+		hidden_effect = {
+			clr_global_flag = dongbei_turned_red
+			clr_global_flag = inner_mong_turned_red
+			clr_global_flag = north_china_turned_red
+		}
+	}
+	option = {
+		name = rcmchina.18107.a
+		every_country = {
+			limit = {
+				is_warlord = yes
+			}
+			ROOT = {
+				end_puppet = PREV
+			}
+		}
+	}
+}
+# Restart Chinese civil war - Communist supporters reinforces the PRC army
+country_event = {
+	id = rcmchina.8108
+	title = rcmchina.8108.t
+	desc = rcmchina.8108.d
+	picture = GFX_report_event_chinese_army_training
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = rcmchina.8108.a
+		custom_effect_tooltip = rcmchina.8108_PRC_SOV_reinforcements_2
+		hidden_effect = {
+			load_oob = "PRC_SOV_reinforcements_2"
+			set_global_flag = PRC_restart_CHI_war
+			set_global_flag = chinese_civil_war
+		}
+	}
+}
+
+# Restart Chinese civil war
+country_event = {
+	id = rcmchina.8109
+	title = rcmchina.8109.t
+	desc = rcmchina.8109.d
+	picture = GFX_report_event_chinese_soldiers
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = PRC
+		has_global_flag = PRC_restart_CHI_war
+		CHI = {
+			NOT = {
+				has_country_flag = mao_is_greatest
+			}
+			NOT = { has_war_with = PRC }
+		}
+	}
+
+	mean_time_to_happen = { days = 160 }
+	
+
+	option = {
+		name = rcmchina.8109.a
+		custom_effect_tooltip = rcmchina.8109_tt		
+		CHI = { country_event = { id = rcmchina.8110 } }
+		CHI = { country_event = { id = rcmchina.867 } }
+		effect_tooltip = {
+			create_wargoal = { target = CHI type = annex_everything }
+		}
+	}
+}
+country_event = {
+	id = rcmchina.8110
+	title = rcmchina.8110.t
+	desc = rcmchina.8110.d
+	picture = GFX_report_event_chinese_soldiers
+
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			PRC = { create_wargoal = { target = CHI type = annex_everything } }
+		}
+	}
+
+	option = {
+		name = rcmchina.8110.a
+		add_timed_idea = { idea = CHI_civil_war_deserters days = 180 }
+	}
+
+}
+
+# China and Japan no longer at war - Break up faction and Mao claims his part of China
+country_event = {
+	id = rcmchina.8111
+	title = rcmchina.8111.t
+	desc = rcmchina.8111.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+
+	option = {
+		name = rcmchina.8111.a
+		CHI = {
+			hidden_effect = {
+				remove_opinion_modifier = { target = PRC modifier = unstable_alliance }
+			}
+		}
+		hidden_effect = {
+			PRC = { remove_opinion_modifier = { target = CHI modifier = unstable_alliance } }
+		}
+		custom_effect_tooltip = rcmchina.8107_tt
+		hidden_effect = {
+			set_cosmetic_tag = PRC_LBZ
+			set_global_flag = china_split
+			every_state = {
+				limit = {
+					NOT = { is_owned_by = JAP }
+					NOT = { is_owned_by = SHX }
+					OR = {
+						owner = {
+							is_puppet = no
+							original_tag = CHI
+						}
+						owner = {
+							is_puppet_of = CHI
+						}
+					}
+					is_core_of = PRC
+					OR = {
+						region = 152
+						region = 144
+						region = 143
+						region = 155
+					}
+					NOT = { state = 616 }
+					NOT = { state = 760 }
+					NOT = { state = 330 }
+					NOT = { state = 525 }
+					NOT = { state = 527 }	
+					NOT = { state = 283 }
+					NOT = { state = 743 }
+					NOT = { state = 761 }					
+					NOT = { state = 607 }
+				}
+				#ROOT = { transfer_state = PREV }
+			}
+			if = {
+				limit = {
+					MAN = { is_puppet_of = SOV }
+				}
+				PRC = { country_event = { id = rcmchina.2016 } }
+			}
+		}
+	}
+}
+
+# PRC annexs SHX (puppet option for player)
+country_event = {
+	id = rcmchina.8105
+	title = rcmchina.8105.t
+	desc = rcmchina.8105.d
+	picture = GFX_report_event_chinese_soldiers
+
+	is_triggered_only = yes
+
+	option = {
+		ai_chance = { factor = 100 }
+		name = rcmchina.8105.a
+		PRC = { declare_war_on = { target = SHX type = annex_everything } }
+	}
+}
+
+# SOV Demand Peace 2
+country_event = {
+	id = rcmchina.1870
+	title = rcmchina.1870.t
+	desc = rcmchina.1870.d
+	picture = GFX_report_event_japanese_pow2
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = rcmchina.1870.a
+		trigger = {
+			NOT = {
+				any_other_country = {
+					is_independent_china_or_warlord = yes
+					NOT = { original_tag = CHI }
+					has_war_together_with = CHI
+				}
+			}
+		}
+		ai_chance = { factor = 75 }
+		add_political_power = 100
+		custom_effect_tooltip = back_to_old_borders
+		hidden_effect = {# Take all
+			news_event = { days = 5 id = news.1010 }
+			if = {
+				limit = {
+					SIK = {
+						has_war_with = CHI
+					}
+				}
+				set_global_flag = sik_war_chi
+			}
+			CHI = {
+				white_peace = SOV
+				white_peace = PRC
+				white_peace = MON
+				white_peace = TAN
+				white_peace = SIK
+			}
+			if = {
+				limit = { country_exists = PRC }
+				CHI = {
+					annex_country = { target = PRC transfer_troops = no }
+				}
+			}
+			every_country = {
+				limit = {
+                    is_in_faction_with = CHI
+					capital_scope = { is_on_continent = asia }
+                    NOT = { tag = CHI }
+                }
+				if = {
+					limit = { CHI = { is_faction_leader = yes } }
+					white_peace = SOV
+					white_peace = PRC
+					white_peace = MON
+					white_peace = TAN
+					white_peace = SIK
+					else = {
+						every_country = {
+							limit = {
+								is_faction_leader = yes
+								is_in_faction_with = CHI
+							}
+							set_country_flag = peace_sov_@ROOT
+							remove_from_faction = CHI
+						}					
+					}
+				}
+				
+            }
+			every_country = {
+				limit = {
+                    is_in_faction_with = SOV
+                    NOT = { tag = SOV }
+                }
+				white_peace = CHI               
+            }
+			every_country = {
+				limit = {
+                   has_country_flag = peace_sov_@ROOT
+                }
+				add_to_faction = CHI              
+            }
+			if = {
+				limit = { 
+				country_exists = MON 
+				MON = { is_in_faction_with = SOV }
+				}
+				annex_country = { target = MON transfer_troops = yes }
+			}
+			if = {
+				limit = { 
+				country_exists = SIK 
+				SIK = { is_in_faction_with = SOV }
+				}
+				annex_country = { target = SIK transfer_troops = yes }
+			}
+			if = {
+				limit = { country_exists = PRC }
+				annex_country = { target = PRC transfer_troops = yes }
+			}
+			if = {
+				limit = { country_exists = TAN }
+				annex_country = { target = TAN transfer_troops = yes }
+			}
+			CHI = {
+				add_state_core = 409
+				add_state_core = 657
+				add_state_core = 408
+				add_state_core = 560
+				add_state_core = 655
+				add_state_core = 329
+				add_state_core = 618
+				add_state_core = 619
+				add_state_core = 330
+				add_state_core = 617
+				add_state_core = 287
+				add_state_core = 537
+			}
+			CHI = {
+				annex_country = {
+					target = MON transfer_troops = no
+				}
+				annex_country = {
+					target = TAN transfer_troops = no
+				}
+				annex_country = {
+					target = PRC transfer_troops = no
+				}
+				if = {
+					limit = {
+						has_global_flag = sik_war_chi 
+					}
+					annex_country = { target = SIK transfer_troops = no }
+				}		
+				every_state = {
+					limit = {
+						AND = {
+							OR = {
+							is_owned_by = SOV
+							is_owned_by = PRC
+							}
+							OR = {
+								is_controlled_by = CHI
+								is_controlled_by = SOV
+								is_controlled_by = MON
+							}
+						}
+						is_core_of = CHI
+					}
+					CHI = {
+						transfer_state = PREV
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = rcmchina.1870.b
+		ai_chance = { factor = 75 }
+		add_political_power = 120
+		custom_effect_tooltip = back_to_old_borders_mon
+		hidden_effect = { # Puppet Mongolia
+			news_event = { days = 5 id = news.1010 }
+			MON = {
+				transfer_state = 330
+				add_opinion_modifier = { target = CHI modifier = liberator }
+				if = {
+					limit =  { CHI = { has_government = democratic }
+				}
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = yes
+					}
+				}
+				if = {
+					limit =  { CHI = { has_government = communism }
+				}
+				set_politics = {
+					ruling_party = communism
+					elections_allowed = no
+					}
+				}
+				if = {
+					limit =  { CHI = { has_government = fascism }
+				}
+				set_politics = {
+					ruling_party = fascism
+					elections_allowed = no
+					}
+				}
+				if = {
+					limit =  { CHI = { has_government = neutrality }
+				}
+				set_politics = {
+					ruling_party = neutrality
+					elections_allowed = no
+					}
+				}
+				CHI = {
+					puppet = MON
+				}
+ 			}
+			CHI = {
+				white_peace = SOV
+				white_peace = PRC
+				white_peace = MON
+				white_peace = TAN
+				white_peace = SIK
+			}
+			MON = { white_peace = SOV }
+			if = {
+				limit = { country_exists = PRC }
+				CHI = {
+				annex_country = { target = PRC }
+				}
+			}
+			every_country = {
+				limit = {
+                    is_in_faction_with = CHI
+					capital_scope = { is_on_continent = asia }
+                    NOT = { tag = CHI }
+                }
+				if = {
+					limit = { CHI = { is_faction_leader = yes } }
+					white_peace = SOV
+					white_peace = PRC
+					white_peace = MON
+					white_peace = TAN
+					white_peace = SIK
+					else = {
+						every_country = {
+							limit = {
+								is_faction_leader = yes
+								is_in_faction_with = CHI
+							}
+							set_country_flag = peace_sov_@ROOT
+							remove_from_faction = CHI
+						}					
+					}
+				}
+				
+            }
+			every_country = {
+				limit = {
+                    is_in_faction_with = SOV
+                    NOT = { tag = SOV }
+                }
+				white_peace = CHI               
+            }
+			every_country = {
+				limit = {
+                   has_country_flag = peace_sov_@ROOT
+                }
+				add_to_faction = CHI              
+            }
+			if = {
+				limit = { 
+				country_exists = SIK 
+				SIK = { is_in_faction_with = SOV }
+				}
+				annex_country = { target = SIK transfer_troops = no }
+			}
+			if = {
+				limit = { country_exists = PRC }
+				annex_country = { target = PRC transfer_troops = no }
+			}
+			if = {
+				limit = { country_exists = TAN }
+				annex_country = { target = TAN transfer_troops = no }
+			}
+			CHI = {
+				add_state_core = 409
+				add_state_core = 657
+				add_state_core = 408
+				add_state_core = 560
+				add_state_core = 655
+				add_state_core = 329
+				add_state_core = 618
+				add_state_core = 619
+				add_state_core = 617
+				add_state_core = 287
+				add_state_core = 537
+			}
+			CHI = {
+				every_state = {
+					limit = {
+						AND = {
+							OR = {
+							is_owned_by = SOV
+							is_owned_by = PRC
+							}
+							OR = {
+								is_controlled_by = CHI
+								is_controlled_by = SOV
+								is_controlled_by = MON
+							}
+						}
+						is_core_of = CHI
+					}
+					CHI = {
+						transfer_state = PREV
+					}
+				}
+			}
+		}	
+	} 
+	option = {
+		name = rcmchina.1870.c
+		ai_chance = { factor = 25 }
+	}
+}
+# SOV Demand Peace 1
+country_event = {
+	id = rcmchina.8112
+	title = rcmchina.8112.t
+	desc = rcmchina.8112.d
+	picture = GFX_report_event_japanese_pow
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = rcmchina.8112.a
+		ai_chance = { factor = 50 }
+		add_political_power = 50
+		hidden_effect = {# Liberate
+			news_event = { days = 5 id = news.2010 }
+			CHI = {
+				white_peace = SOV
+				white_peace = PRC
+				white_peace = MON
+				white_peace = TAN
+				white_peace = SIK
+			}
+			if = {
+				limit = { country_exists = PRC }
+				CHI = {
+				annex_country = { target = PRC }
+				}
+			}
+			every_country = {
+				limit = {
+                    is_in_faction_with = CHI
+					capital_scope = { is_on_continent = asia }
+                    NOT = { tag = CHI }
+                }
+				if = {
+					limit = { CHI = { is_faction_leader = yes } }
+					white_peace = SOV
+					white_peace = PRC
+					white_peace = MON
+					white_peace = TAN
+					white_peace = SIK
+					else = {
+						every_country = {
+							limit = {
+								is_faction_leader = yes
+								is_in_faction_with = CHI
+							}
+							set_country_flag = peace_sov_@ROOT
+							remove_from_faction = CHI
+						}					
+					}
+				}
+				
+            }
+			every_country = {
+				limit = {
+                    is_in_faction_with = SOV
+                    NOT = { tag = SOV }
+                }
+				white_peace = CHI               
+            }
+			every_country = {
+				limit = {
+                   has_country_flag = peace_sov_@ROOT
+                }
+				add_to_faction = CHI              
+            }
+
+			every_state = {
+				limit = {
+					AND = {
+						OR = {
+						is_owned_by = SOV
+						is_owned_by = PRC
+						}
+						OR = {
+							is_controlled_by = CHI
+							is_controlled_by = SOV
+							is_controlled_by = MON
+						}
+					}
+					is_core_of = CHI
+				}
+				CHI = {
+					transfer_state = PREV
+				}
+			}
+		}
+	}
+	option = {
+		name = rcmchina.8112.b
+		ai_chance = { factor = 50 }
+	}
+}
+
+##################
 #HHK to berlin
 country_event = {
 	id = rcmchina.1000
@@ -1124,16 +1814,14 @@ country_event = {
 			remove_opinion_modifier = { target = CHI modifier = hostile_status }
 		}
 		CHI = {
-			remove_opinion_modifier = { target = JAP modifier = hostile_status }
-			remove_state_core = 612
-			remove_state_core = 610
-			remove_state_core = 609
-			remove_state_core = 715
-			remove_state_core = 716
-			remove_state_core = 328
-			remove_state_core = 717
-			remove_state_core = 714
-			remove_state_core = 747
+			remove_opinion_modifier = { target = JAP modifier = hostile_status }	
+		}
+		every_state = {
+			limit = {
+				is_core_of = CHI
+				is_manchuria_state = yes
+			}
+			remove_core_of = CHI
 		}
 		hidden_effect = {
 			CHI = {

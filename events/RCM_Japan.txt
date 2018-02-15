@@ -2170,15 +2170,20 @@ country_event = {
 						puppet = HPC
 					}
 				}
-				remove_state_core = 612
-				remove_state_core = 757
-				remove_state_core = 610
-				remove_state_core = 715
-				remove_state_core = 716
-				remove_state_core = 328
-				remove_state_core = 717
-				remove_state_core = 714
-				remove_state_core = 747
+				every_state = {
+					limit = {
+						is_core_of = CHI
+						OR = {
+							state = 612
+							state = 757
+							state = 747
+							is_manchuria_state = yes
+						}
+					}
+					CHI = {
+						remove_state_core = PREV
+					}
+				}
 				#add_ideas = sino_japanese_alliance
 				#remove_opinion_modifier = {
 				#	target = JAP
@@ -2236,15 +2241,20 @@ country_event = {
 						puppet = HPC
 					}
 				}
-				remove_state_core = 612
-				remove_state_core = 757
-				remove_state_core = 610
-				remove_state_core = 715
-				remove_state_core = 716
-				remove_state_core = 328
-				remove_state_core = 717
-				remove_state_core = 714
-				remove_state_core = 747
+				every_state = {
+					limit = {
+						is_core_of = CHI
+						OR = {
+							state = 612
+							state = 757
+							state = 747
+							is_manchuria_state = yes
+						}
+					}
+					CHI = {
+						remove_state_core = PREV
+					}
+				}
 				#add_ideas = sino_japanese_alliance
 				#remove_opinion_modifier = {
 				#	target = JAP
@@ -2303,14 +2313,20 @@ country_event = {
 						puppet = HPC
 					}
 				}
-				remove_state_core = 612
-				remove_state_core = 757
-				remove_state_core = 610
-				remove_state_core = 715
-				remove_state_core = 716
-				remove_state_core = 328
-				remove_state_core = 717
-				remove_state_core = 714
+				every_state = {
+					limit = {
+						is_core_of = CHI
+						OR = {
+							state = 612
+							state = 757
+							state = 747
+							is_manchuria_state = yes
+						}
+					}
+					CHI = {
+						remove_state_core = PREV
+					}
+				}
 				#add_ideas = sino_japanese_alliance
 				#remove_opinion_modifier = {
 				#	target = JAP
@@ -2361,12 +2377,20 @@ country_event = {
 					target = HPC
 					autonomous_state = autonomy_integrated_puppet
 				}
-				remove_state_core = 610
-				remove_state_core = 715
-				remove_state_core = 716
-				remove_state_core = 328
-				remove_state_core = 717
-				remove_state_core = 714
+				every_state = {
+					limit = {
+						is_core_of = CHI
+						OR = {
+							state = 612
+							state = 757
+							state = 747
+							is_manchuria_state = yes
+						}
+					}
+					CHI = {
+						remove_state_core = PREV
+					}
+				}
 			}
 			if = {
 				limit = { country_exists = ECA }
@@ -2487,15 +2511,20 @@ country_event = {
 						puppet = HPC
 					}
 				}
-				remove_state_core = 612
-				remove_state_core = 757
-				remove_state_core = 610
-				remove_state_core = 715
-				remove_state_core = 716
-				remove_state_core = 328
-				remove_state_core = 717
-				remove_state_core = 714
-				remove_state_core = 747
+				every_state = {
+					limit = {
+						is_core_of = CHI
+						OR = {
+							state = 612
+							state = 757
+							state = 747
+							is_manchuria_state = yes
+						}
+					}
+					CHI = {
+						remove_state_core = PREV
+					}
+				}
 				add_ideas = sino_japanese_alliance
 				remove_opinion_modifier = {
 					target = JAP
@@ -2691,15 +2720,20 @@ country_event = {
 						puppet = HPC
 					}
 				}
-				remove_state_core = 612
-				remove_state_core = 757
-				remove_state_core = 610
-				remove_state_core = 715
-				remove_state_core = 716
-				remove_state_core = 328
-				remove_state_core = 717
-				remove_state_core = 714
-				remove_state_core = 747
+				every_state = {
+					limit = {
+						is_core_of = CHI
+						OR = {
+							state = 612
+							state = 757
+							state = 747
+							is_manchuria_state = yes
+						}
+					}
+					CHI = {
+						remove_state_core = PREV
+					}
+				}
 				add_ideas = sino_japanese_alliance
 				remove_opinion_modifier = {
 					target = JAP
@@ -2895,14 +2929,20 @@ country_event = {
 						puppet = HPC
 					}
 				}
-				remove_state_core = 612
-				remove_state_core = 757
-				remove_state_core = 610
-				remove_state_core = 715
-				remove_state_core = 716
-				remove_state_core = 328
-				remove_state_core = 717
-				remove_state_core = 714
+				every_state = {
+					limit = {
+						is_core_of = CHI
+						OR = {
+							state = 612
+							state = 757
+							state = 747
+							is_manchuria_state = yes
+						}
+					}
+					CHI = {
+						remove_state_core = PREV
+					}
+				}
 				add_ideas = sino_japanese_alliance
 				remove_opinion_modifier = {
 					target = JAP
@@ -3084,12 +3124,20 @@ country_event = {
 						puppet = HPC
 					}
 				}
-				remove_state_core = 610
-				remove_state_core = 715
-				remove_state_core = 716
-				remove_state_core = 328
-				remove_state_core = 717
-				remove_state_core = 714
+				every_state = {
+					limit = {
+						is_core_of = CHI
+						OR = {
+							state = 612
+							state = 757
+							state = 747
+							is_manchuria_state = yes
+						}
+					}
+					CHI = {
+						remove_state_core = PREV
+					}
+				}
 				add_ideas = sino_japanese_alliance
 				remove_opinion_modifier = {
 					target = JAP
@@ -4507,12 +4555,12 @@ country_event = {
 		
 		MAN = {
 			transfer_state = 328
-			add_state_core = 714
-			add_state_core = 715
-			add_state_core = 716
-			add_state_core = 717
-			add_state_core = 610
-			add_state_core = 328
+			every_state = {
+				limit = {
+					is_manchuria_state = yes
+				}
+				add_core_of = MAN
+			}
 			army_experience = 25
 			puppet_reclaim_land = yes
 		}
