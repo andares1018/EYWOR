@@ -65,6 +65,7 @@ news_event = {
 				set_country_flag = zhang_bojun_available
 				add_ideas = zhang_bojun
 				remove_ideas = zhang_bojun
+				
 				create_country_leader = {
 					name = "Zhang Lan"
 					desc = "POLITICS_ZHANG_LAN_DESC"

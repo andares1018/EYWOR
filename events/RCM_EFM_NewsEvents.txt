@@ -542,16 +542,10 @@ news_event = {
 	option = {
 		name = efm_news.1016.b
 		trigger = {
-				TAG = CHI
-				TAG = GXC
-				TAG = SHX
-				TAG = YUN
-				TAG = XSM
-				TAG = SIK
-				TAG = GUD
-				TAG = SIC
-				TAG = HPC
-				TAG = SHD
+			OR = {
+				is_legit_china = yes
+				is_warlord = yes
+			}
 		}
 	}
 	option = {
@@ -1075,23 +1069,23 @@ news_event = {
 		name = efm_news.1028.a
 		trigger = { 
 			NOT = {
-				TAG = CHI
-				TAG = SHX
-				TAG = GXC
+				original_tag = CHI
+				original_tag = SHX
+				original_tag = GXC
 			}
 		}
 	}
 	option = {
 		name = efm_news.1028.b
-		trigger = { TAG = CHI }
+		trigger = { original_tag = CHI }
 	}
 	option = {
 		name = efm_news.1028.c
-		trigger = { TAG = SHX }
+		trigger = { original_tag = SHX }
 	}
 	option = {
 		name = efm_news.1028.e
-		trigger = { TAG = GXC }
+		trigger = { original_tag = GXC }
 	}
 }
 

@@ -555,7 +555,7 @@
  tacit_agreement:0 "Tacit agreement"
  ###SIC LIU XIANG
  rcmchina.2089.t:0 "The Death of Liu Xiang"
- rcmchina.2089.d:0 "After being hospitalized in Hankow for a few months, The leader of the Sichuan Clique Liu Xiang is suddenly found dead in the hospital. Rumors say that he died out of fear upon knowing Han Fuju's arrest, while others claim that [CHI.GetLeader] is behind his demise. However, this also means that there's currently a power vacuum in Sichuan. Which next step should we take?"
+ rcmchina.2089.d:0 "After being hospitalized for a few months, The leader of the Sichuan Clique Liu Xiang is suddenly found dead in the hospital. Rumors say that he died out of fear upon knowing Han Fuju's arrest, while others claim that [CHI.GetLeader] is behind his demise. However, this also means that there's currently a power vacuum in Sichuan. Which next step should we take?"
  rcmchina.2089.a:0 "Submit to the Central Government."
  rcmchina.2089.b:0 "Request the Central Government for a new governor in Sichuan."
  rcmchina.3021.t:0 "Sichuan Demands a New Governor After Liu Xiang's Death"
@@ -569,10 +569,12 @@
  rcmchina.3023.d:0 "Despite our last effort to retain Sichuan's autonomy, the central goverment still decides to integrate Sichuan into Central Government."
  rcmchina.3023.a:0 "Reunified, at long last."
  rcmchina.3024.t:0 "Sichuan Army Submits After the Death of Liu Xiang"
+ rcmchina.3024.t_surrender:0 "Sichuan Army Surrendered After the Death of Liu Xiang"
  rcmchina.3024.d:0 "After being hospitalized in Hankow for a few months, The leader of the Sichuan Clique Liu Xiang is suddenly found dead in the hospital. And Now his followers in Sichuan subsequently submits to the Central Government. This is a great advancement towards a reunified China."
  rcmchina.3024.a:0 "For China!"
  rcmchina.3025.t:0 "Liu Xiang Hospitalized"
  rcmchina.3025.d:0 "The leader of Sichuan, Liu Xiang was reported to be sick and went to receive treatment in a Hospital in Hankow, Wuhan. If anything bad happen to him the autonomy of Sichuan would be in serious jeopardy. It is a dangerous time for Sichuan."
+ rcmchina.3025.d_war:0 "The leader of Sichuan, Liu Xiang was reported to be sick and went to receive treatment in a Hospital in Chengdu, Sichuan. If anything bad happen to him the autonomy of Sichuan would be in serious jeopardy. It is a dangerous time for Sichuan."
  rcmchina.3025.a:0 "Worrying."
  ##########SUIYUAN MPC
  de_wang_defect_flag:0 "§YPrince Demchugdongrub Defected§!"
@@ -604,4 +606,8 @@
  rcmchina.3033.t:0 "Aid From Nanking for the Defense of Suiyuan"
  rcmchina.3033.d:0 "After some discussions within the inner circle in Nanking, they decided to send some officers and troops here and give us some military aid. They should help a great deal in defending Suiyuan."
  rcmchina.3033.a:0 "Great!"
+ ####Liuxiang came
+ rcmchina.3034.t:0 "Liu Xiang Hospitalized"
+ rcmchina.3034.d:0 "The leader of Sichuan, Liu Xiang was reported to be sick and went to receive treatment in a Hospital in Hankow, Wuhan. If anything bad happen to him, it may be a good opportunity for us to integrate Sichuan back to the central goverment. We shall wait and see."
+ rcmchina.3034.a:0 "Interesting."
  

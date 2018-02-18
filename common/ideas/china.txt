@@ -2259,7 +2259,7 @@ ideas = {
 			}
 			
 			
-			traits = { air_chief_ground_support_2 }
+			traits = { air_chief_all_weather_2 }
 			
 			ai_will_do = {
 				factor = 1
@@ -2280,7 +2280,21 @@ ideas = {
 				factor = 1
 			}
 		}
-		
+		CHI_huang_guangrei = {
+			picture = generic_air_asia_3
+			
+			allowed = {
+				original_tag = CHI
+				has_country_flag = haung_guangrei_defects
+			}
+			
+			
+			traits = { air_chief_ground_support_3 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
 	}
 	
 	navy_chief = {

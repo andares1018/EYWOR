@@ -251,6 +251,7 @@ peace_with_japan_land_partition = {
 					}
 				}
 				is_owned_by = ROOT
+				state = 524
 			}
 			OR = {
 				is_core_of = ROOT

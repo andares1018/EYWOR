@@ -273,7 +273,7 @@
  industry_balanced_enough:0 "§MHas an industry that is balanced enough to complete the focus§!"
  unlock_focus_right:0 "§MThe industry will be balanced enough to handle§! §Yall the national focuses§! §Rto the right in the same row.§!"
  leader_hospitalized:0 "Leader Hospitalized"
- leader_hospitalized_desc:0 "Liu Xiang is Hospitalized in Hankow, Wuhan. §RShould anything happen to him the autonomy of Sichuan would be in serious jeopardy§!. However, §Mswitching the leader by shifting political ideology can prevent that from happening§!."
+ leader_hospitalized_desc:0 "Liu Xiang, the leader of the Sichuan Clique, is Hospitalized. §RShould anything happen to him the autonomy of Sichuan would be in serious jeopardy§!. However, §Mswitching the leader by shifting political ideology can prevent that from happening§!."
  MODIFIERS_spirit_of_genghis:0 "Spirit of Genghis"
  Demchugdongrub_new_leader:0 "\n§YPrince Demchugdongrub§! will become the new leader of [Root.GetName]."
  MEN_nanking_aid:0 "Military Aid from Nanking"
@@ -349,6 +349,7 @@
  CHI_song_zheyuan:0 "Song Zheyuan"
  CHI_gui_yongqing:0 "Gui Yongqing"
  kung_hsiang_hsi:0 "Kung Hsiang Hsi"
+ CHI_huang_guangrei:0 "Huang Guangrei"
  #JAP
  emperor_showa:0 "Emperor Hirohito"  
  emperor_showa_desc:0 "As the ruler of the Showa Era in the Empire of Japan, the Emperor is revered by both the military and the general public."

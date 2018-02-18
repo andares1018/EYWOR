@@ -98,7 +98,7 @@ country_event = {
 		remove_ideas = pro_com_demo
 		clr_country_flag = cdl_founded
 		add_opinion_modifier = { target = PRC modifier = communist_sympathizer }
-		PRC = { add_opinion_modifier = { target = CHI modifier = communist_sympathizer } }
+		PRC = { add_opinion_modifier = { target = CHI modifier = communist_sympathizer} }
 		effect_tooltip = {
 			if = {
 				limit = { has_war_with = SOV }
@@ -109,7 +109,8 @@ country_event = {
 		}
 		hidden_effect = {	
 			PRC = { country_event = { id = prc.4 } }
-		}	
+		}
+		unlock_national_focus = zhang_lan_doctrine
 		add_national_unity = -0.05
 	}
 

@@ -126,21 +126,22 @@ country_event = {
 	}
 	option = {
 		name = gud.4.a
-		trigger = { TAG = CHI }
+		trigger = { original_tag = CHI }
 		annex_country = { target = GUD transfer_troops = yes }
-		#add_ideas = huang_guangrei
+		add_ideas = CHI_huang_guangrei
+		set_country_flag = haung_guangrei_defects
 	}
 	option = {
 		name = gud.4.b
 		trigger = { 
-			NOT = { TAG = CHI } 
-			NOT = { TAG = GXC } 
+			NOT = { original_tag = CHI } 
+			NOT = { original_tag = GXC } 
 		}
 	}
 	option = {
 		name = gud.4.c
 		trigger = { 
-			TAG = GXC
+			original_tag = GXC
 		}
 		ai_chance = { 
 		base = 50 	
@@ -154,7 +155,7 @@ country_event = {
 	option = {
 		name = gud.4.e
 		trigger = { 
-			TAG = GXC 
+			original_tag = GXC 
 		}
 		ai_chance = { 
 		base = 50 	
@@ -174,11 +175,11 @@ country_event = {
 	picture = GFX_report_event_huang_2g_bribed
 	desc = { 
 		text = gud.5.d_chi
-		trigger = { TAG = CHI }
+		trigger = { original_tag = CHI }
 	}
 	desc = { 
 		text = gud.5.d
-		trigger = { NOT = { TAG = CHI } }
+		trigger = { NOT = { original_tag = CHI } }
 	}
 	is_triggered_only = yes
 	option = {
@@ -188,8 +189,8 @@ country_event = {
 	option = {
 		name = gud.5.b
 		trigger = { 
-			NOT = { TAG = CHI } 
-			NOT = { TAG = GXC }
+			NOT = { original_tag = CHI } 
+			NOT = { original_tag = GXC }
 		}	
 	}
 	option = {

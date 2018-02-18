@@ -16,7 +16,7 @@ focus_tree = {
 			focus = chi_peace_com
 		}
 		x = 6
-		y = 0
+		y = 0 
 		ai_will_do = {
 			factor = 30
 			modifier = {
@@ -2277,7 +2277,7 @@ focus_tree = {
 	}
 	focus = {
 		id = one_party_tutelage
-		icon = GFX_goal_demand_sudetenland
+		icon = GFX_goal_one_party
 		cost = 8.00
 		prerequisite = {
 			focus = reinforce_new_life_movement
@@ -2545,7 +2545,7 @@ focus_tree = {
 	}
 	focus = {
 		id = chi_axis_help_diplo_focus
-		icon = GFX_goal_molotov_ribbentrop_pact
+		icon = GFX_goal_sino_german_coop
 		cost = 7.00
 		prerequisite = {
 			focus = chi_axis_help_focus
@@ -2885,25 +2885,37 @@ focus_tree = {
 			}
 			custom_effect_tooltip = if_they_accept_green
 			effect_tooltip = {
+				add_ace = { name = "Edward" surname = "Rector" callsign = "Ed" type = fighter_genius is_female = no }
+				add_ace = { name = "Robert" surname = "Smith" callsign = "R.T." type = fighter_genius is_female = no }
 				USA = {
 					send_equipment = {
 						target = CHI
-						type = fighter_equipment_2
-						amount = 250
+						type = fighter_equipment_1
+						amount = 150
 					}
 					send_equipment = {
 						target = CHI
-						type = tac_bomber_equipment_2
-						amount = 350
+						type = tac_bomber_equipment_1
+						amount = 250
 					}
 				}
 			}
 		}
 		available = {
+			605 = {
+				controller = {
+					OR = {
+						tag = ROOT
+						has_war_together_with = ROOT
+					}
+				}
+			}
 			NOT = {
 				has_idea = chi_sov_pact
 			}
 			USA = {
+				has_tech = fighter1
+				has_tech = tactical_bomber1
 				has_war_with = JAP
 			}
 			has_idea = claire_lee_chennault_chi
@@ -5090,7 +5102,7 @@ focus_tree = {
 			NOT = {
 				any_state = {
 					is_northeast_china_state = yes
-					infra_bypass_1_tr = no
+					NOT = { infra_bypass_1_tr = yes } 
 				}
 			}
 		}
@@ -5188,7 +5200,7 @@ focus_tree = {
 			NOT = {
 				any_state = {
 					is_northeast_china_state = yes
-					infra_bypass_2_tr = no
+					NOT = { infra_bypass_2_tr = yes } 
 				}
 			}
 		}
@@ -5200,7 +5212,7 @@ focus_tree = {
 			NOT = {
 				any_state = {
 					is_northeast_china_state = yes
-					infra_ava_2_tr = no
+					NOT = { infra_ava_2_tr = yes } 
 				}
 			}
 		}
@@ -5243,7 +5255,7 @@ focus_tree = {
 			NOT = {
 				any_state = {
 					is_northeast_china_state = yes
-					infra_bypass_3_tr = no
+					NOT = { infra_bypass_3_tr = yes } 
 				}
 			}
 		}
@@ -5255,7 +5267,7 @@ focus_tree = {
 			NOT = {
 				any_state = {
 					is_northeast_china_state = yes
-					infra_ava_3_tr = no
+					NOT = { infra_ava_3_tr = yes } 
 				}
 			}
 		}
@@ -5377,7 +5389,7 @@ focus_tree = {
 			NOT = {
 				any_state = {
 					is_north_china_state = yes
-					infra_bypass_1_tr = no
+					NOT = { infra_bypass_1_tr = yes } 
 				}
 			}
 		}
@@ -5466,7 +5478,7 @@ focus_tree = {
 			NOT = {
 				any_state = {
 					is_north_china_state = yes
-					infra_bypass_2_tr = no
+					NOT = { infra_bypass_2_tr = yes } 
 				}
 			}
 		}
@@ -5478,7 +5490,7 @@ focus_tree = {
 			NOT = {
 				any_state = {
 					is_north_china_state = yes
-					infra_ava_2_tr = no
+					NOT = { infra_ava_2_tr = yes } 
 				}
 			}
 		}
@@ -5522,7 +5534,7 @@ focus_tree = {
 			NOT = {
 				any_state = {
 					is_north_china_state = yes
-					infra_bypass_3_tr = no
+					NOT = { infra_bypass_3_tr = yes } 
 				}
 			}
 		}
@@ -5534,7 +5546,7 @@ focus_tree = {
 			NOT = {
 				any_state = {
 					is_north_china_state = yes
-					infra_ava_3_tr = no
+					NOT = { infra_ava_3_tr = yes } 
 				}
 			}
 		}
@@ -5612,7 +5624,7 @@ focus_tree = {
 			NOT = {
 				any_state = {
 					is_east_china_state = yes
-					infra_bypass_1_tr = no
+					NOT = { infra_bypass_1_tr = yes } 
 				}
 			}
 		}
@@ -5704,7 +5716,7 @@ focus_tree = {
 			NOT = {
 				any_state = {
 					is_east_china_state = yes
-					infra_bypass_2_tr = no
+					NOT = { infra_bypass_2_tr = yes } 
 				}
 			}
 		}
@@ -5716,7 +5728,7 @@ focus_tree = {
 			NOT = {
 				any_state = {
 					is_east_china_state = yes
-					infra_ava_2_tr = no
+					NOT = { infra_ava_2_tr = yes } 
 				}
 			}
 		}
@@ -5760,7 +5772,7 @@ focus_tree = {
 			NOT = {
 				any_state = {
 					is_east_china_state = yes
-					infra_bypass_3_tr = no
+					NOT = { infra_bypass_3_tr = yes } 
 				}
 			}
 		}
@@ -5772,7 +5784,7 @@ focus_tree = {
 			NOT = {
 				any_state = {
 					is_east_china_state = yes
-					infra_ava_3_tr = no
+					NOT = { infra_ava_3_tr = yes } 
 				}
 			}
 		}
@@ -5841,7 +5853,7 @@ focus_tree = {
 			NOT = {
 				any_state = {
 					is_south_china_state = yes
-					infra_bypass_1_tr = no
+					NOT = { infra_bypass_1_tr = yes } 
 				}
 			}
 		}
@@ -5924,7 +5936,7 @@ focus_tree = {
 			NOT = {
 				any_state = {
 					is_south_china_state = yes
-					infra_bypass_2_tr = no
+					NOT = { infra_bypass_2_tr = yes } 
 				}
 			}
 		}
@@ -5936,7 +5948,7 @@ focus_tree = {
 			NOT = {
 				any_state = {
 					is_south_china_state = yes
-					infra_ava_2_tr = no
+					NOT = { infra_ava_2_tr = yes } 
 				}
 			}
 		}
@@ -5979,7 +5991,7 @@ focus_tree = {
 			NOT = {
 				any_state = {
 					is_south_china_state = yes
-					infra_bypass_3_tr = no
+					NOT = { infra_bypass_3_tr = yes } 
 				}
 			}
 		}
@@ -5991,7 +6003,7 @@ focus_tree = {
 			NOT = {
 				any_state = {
 					is_south_china_state = yes
-					infra_ava_3_tr = no
+					NOT = { infra_ava_3_tr = yes } 
 				}
 			}
 		}
@@ -6379,7 +6391,7 @@ focus_tree = {
 	}
 	focus = {
 		id = yi_dang_zhi_guo
-		icon = GFX_goal_generic_cavalry
+		icon = GFX_goal_dangguo
 		cost = 10.00
 		prerequisite = {
 			focus = political_indoctrination
@@ -6416,7 +6428,7 @@ focus_tree = {
 	}
 	focus = {
 		id = strengthen_the_kmt
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_goal_strengthen_kmt
 		cost = 10.00
 		prerequisite = {
 			focus = found_cbis
@@ -6624,7 +6636,7 @@ focus_tree = {
 			NOT = {
 				any_state = {
 					is_south_china_state = yes
-					infra_bypass_1_tr = no
+					NOT = { infra_bypass_1_tr = yes } 
 				}
 			}
 		}
@@ -6698,7 +6710,7 @@ focus_tree = {
 			NOT = {
 				any_state = {
 					is_west_china_state = yes
-					infra_bypass_2_tr = no
+					NOT = { infra_bypass_2_tr = yes } 
 				}
 			}
 		}
@@ -6710,7 +6722,7 @@ focus_tree = {
 			NOT = {
 				any_state = {
 					is_west_china_state = yes
-					infra_ava_2_tr = no
+					NOT = { infra_ava_2_tr = yes } 
 				}
 			}
 		}
@@ -6755,7 +6767,7 @@ focus_tree = {
 			NOT = {
 				any_state = {
 					is_west_china_state = yes
-					infra_bypass_3_tr = no
+					NOT = { infra_bypass_3_tr = yes } 
 				}
 			}
 		}
@@ -6767,7 +6779,7 @@ focus_tree = {
 			NOT = {
 				any_state = {
 					is_west_china_state = yes
-					infra_ava_3_tr = no
+					NOT = { infra_ava_3_tr = yes } 
 				}
 			}
 		}

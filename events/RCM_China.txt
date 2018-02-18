@@ -390,7 +390,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 40
+		days = 50
 	}
 
 	option = {
@@ -2423,19 +2423,12 @@ country_event = {
 				factor = 100
 				is_historical_focus_on = yes
 			}
-			modifier = {
-				factor = 0
-				has_equipment = {
-					fighter_equipment_2 < 250
-				}
-				has_equipment = {
-					tac_bomber_equipment_2 < 350
-				}
-			}
 		}
 		add_political_power = 50
 		CHI = { country_event = { id = rcmchina.2047 } }
 		effect_tooltip = {
+			add_ace = { name = "Edward" surname = "Rector" callsign = "Ed" type = fighter_genius is_female = no }
+			add_ace = { name = "Robert" surname = "Smith" callsign = "R.T." type = fighter_genius is_female = no }
 			USA = {
 				send_equipment = { target = CHI type = fighter_equipment_1 amount = 150 }
 				send_equipment = { target = CHI type = tac_bomber_equipment_2 amount = 250 }
@@ -2450,15 +2443,6 @@ country_event = {
 				factor = 0
 				is_historical_focus_on = yes
 			}
-			modifier = {
-				factor = 100
-				has_equipment = {
-					fighter_equipment_2 < 250
-				}
-				has_equipment = {
-					tac_bomber_equipment_2 < 350
-				}
-			}
 		}
 		CHI = { country_event = { id = rcmchina.2048 } }
 	}
@@ -2472,14 +2456,27 @@ country_event = {
 	option = {
 		name = rcmchina.2047.a	
 		ai_chance = { factor = 100 }
+		
 		effect_tooltip = {
-			USA = {
+			random_other_country = {
+				limit = {
+					controls_state = 605
+				}
+				add_ace = { name = "Edward" surname = "Rector" callsign = "Ed" type = fighter_genius is_female = no }
+				add_ace = { name = "Robert" surname = "Smith" callsign = "R.T." type = fighter_genius is_female = no }
 				send_equipment = { target = CHI type = fighter_equipment_1 amount = 150 }
-				send_equipment = { target = CHI type = tac_bomber_equipment_2 amount = 250 }
+				send_equipment = { target = CHI type = tac_bomber_equipment_1 amount = 250 }
 			}
 		}
 		hidden_effect = {
-			load_oob = CHI_flying_tiger
+			random_other_country = {
+				limit = {
+					controls_state = 605
+				}
+				add_ace = { name = "Edward" surname = "Rector" callsign = "Ed" type = fighter_genius is_female = no }
+				add_ace = { name = "Robert" surname = "Smith" callsign = "R.T." type = fighter_genius is_female = no }
+				load_oob = CHI_flying_tiger
+			}
 		}
 	}
 }
@@ -3791,6 +3788,12 @@ country_event = {
 		name = rcmchina.2089.b
 		trigger = {
 			TAG = SIC
+			NOT = {
+				any_other_country = {
+					is_legit_china = yes
+					has_war_with = ROOT
+				}
+			}
 		}
 		ai_chance = {
 			factor = 50
@@ -3922,10 +3925,23 @@ country_event = {
 	}
 }
 
-# SIC submit volunteerily
+# SIC submit voluntarily
 country_event = {
 	id = rcmchina.3024
-	title = rcmchina.3024.t
+	title = {
+		text = rcmchina.3024.t
+		trigger = {
+			has_war_with = FROM
+		}
+	}
+	title = {
+		text = rcmchina.3024.t_surrender
+		trigger = {
+			NOT = {
+				has_war_with = FROM
+			}
+		}
+	}
 	desc = rcmchina.3024.d
 	picture = GFX_report_event_china_flag
 	is_triggered_only = yes
@@ -3943,7 +3959,26 @@ country_event = {
 country_event = {
 	id = rcmchina.3025
 	title = rcmchina.3025.t
-	desc = rcmchina.3025.d
+	desc = {
+		text = rcmchina.3025.d
+		trigger = {
+			NOT = {
+				any_other_country = {
+					is_legit_china = yes
+					has_war_with = ROOT
+				}
+			}
+		}
+	}
+	desc = {
+		text = rcmchina.3025.d_war
+		trigger = {
+			any_other_country = {
+				is_legit_china = yes
+				has_war_with = ROOT
+			}
+		}
+	}
 	picture = GFX_report_liu_xiang
 	fire_only_once = yes
 	trigger = {
@@ -3955,6 +3990,16 @@ country_event = {
 		}
 	}
 	immediate = {
+		hidden_effect = {
+			random_other_country = {
+				limit = {
+					is_legit_china = yes
+				}
+				country_event = {
+					days = 2 id = rcmchina.3034
+				}
+			}
+		}
 	}
 	option = {
 		name = rcmchina.3025.a
@@ -3962,6 +4007,9 @@ country_event = {
 			factor = 100
 		}
 		add_ideas = leader_hospitalized
+		effect_tooltip = {
+			
+		}
 	}
 }
 
@@ -4405,4 +4453,21 @@ country_event = {
 		add_manpower = 2000
 	}
 }
-##########PLM NOT EXIST 
+
+##########
+#liuxiang hosp. (to CHI)
+#########
+country_event = {
+	id = rcmchina.3034
+	title = rcmchina.3034.t
+	desc = rcmchina.3034.d
+	picture = GFX_report_liu_xiang
+	is_triggered_only = yes
+	immediate = {
+	}
+	option = {
+		name = rcmchina.3034.a
+	}
+}
+#####
+#Emergency peace when Japan declare on us but we have a civil war

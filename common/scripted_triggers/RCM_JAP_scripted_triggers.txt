@@ -71,7 +71,6 @@ is_forbidden_states_in_puppet_formation = {
 		state = 743
 		state = 761
 		state = 599
-		#state = 773
 		state = 621
 		state = 763
 		state = 762
@@ -145,20 +144,6 @@ is_a_state_that_is_ready_for_puppet_formation = {
 			is_controlled_by_jap_or_its_puppet = yes
 			NOT = {
 				any_neighbor_state = {
-					#OR = {
-					#	CHI = {
-					#		has_full_control_of_state = PREV
-					#	}
-					#	SHX = {
-					#		has_full_control_of_state = PREV
-					#	}
-					#	XSM = {
-					#		has_full_control_of_state = PREV
-					#	}
-					#	PRC = {
-					#		has_full_control_of_state = PREV
-					#	}
-					#}
 					controller = {
 						is_warlord = yes
 						has_war_with = JAP
@@ -310,18 +295,24 @@ is_capital_of_japan_puppet = {
 	}
 }
 is_controlled_by_jap_or_its_puppet = {
-	controller = {
-		OR = {
-			is_puppet_of = JAP
-			TAG = JAP
+	custom_trigger_tooltip = {
+		tooltip = is_controlled_by_jap_or_its_puppet_tt
+		controller = {
+			OR = {
+				is_puppet_of = JAP
+				TAG = JAP
+			}
 		}
 	}
 }
 is_owned_by_jap_or_its_puppet = {
-	owner = {
-		OR = {
-			is_puppet_of = JAP
-			TAG = JAP
+	custom_trigger_tooltip = {
+		tooltip = is_owned_by_jap_or_its_puppet_tt
+		owner = {
+			OR = {
+				is_puppet_of = JAP
+				TAG = JAP
+			}
 		}
 	}
 }
@@ -341,5 +332,24 @@ is_manchuria_state = {
 		state = 779
 		state = 780
 		state = 781
+	}
+}
+is_manchuria_state_count_triggers = {
+	count_triggers = {
+		amount = 3
+		714 = { is_controlled_by_jap_or_its_puppet = yes }
+		715 = { is_controlled_by_jap_or_its_puppet = yes }
+		716 = { is_controlled_by_jap_or_its_puppet = yes }
+		717 = { is_controlled_by_jap_or_its_puppet = yes }
+		610 = { is_controlled_by_jap_or_its_puppet = yes }
+		328 = { is_controlled_by_jap_or_its_puppet = yes }
+		774 = { is_controlled_by_jap_or_its_puppet = yes }
+		775 = { is_controlled_by_jap_or_its_puppet = yes }
+		776 = { is_controlled_by_jap_or_its_puppet = yes }
+		777 = { is_controlled_by_jap_or_its_puppet = yes }
+		778 = { is_controlled_by_jap_or_its_puppet = yes }
+		779 = { is_controlled_by_jap_or_its_puppet = yes }
+		780 = { is_controlled_by_jap_or_its_puppet = yes }
+		781 = { is_controlled_by_jap_or_its_puppet = yes }
 	}
 }

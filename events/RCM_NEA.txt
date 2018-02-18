@@ -17,9 +17,7 @@ country_event = {
 			tag = SIC
 			tag = SHD
 		}
-		#
 		CHI = { has_war_with = NEA }
-		#CHI = { has_war_with = PRC }
 		NEA = {
 			has_completed_focus = nea_xian_incident
 		}
@@ -32,8 +30,8 @@ country_event = {
 	option = { #join
 		name = nea.1.a
 		ai_chance = { 
-		base = 80 	
-		modifier = {
+			base = 80 	
+			modifier = {
 				factor = 200
 				is_historical_focus_on = yes
 			}
@@ -46,7 +44,12 @@ country_event = {
 				OR = {
 					tag = PRC
 					tag = NEA
-					tag = CHI
+					AND = {
+						tag = CHI
+						ROOT = {
+							tag = PRC
+						}
+					}
 					tag = SHD
 					tag = GUD
 				}

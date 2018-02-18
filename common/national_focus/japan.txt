@@ -925,11 +925,7 @@ focus_tree = {
 			}
 		}
 		available = {
-			count_triggers = {
-				amount = 3
-				is_manchuria_state = yes
-				is_controlled_by_jap_or_its_puppet = yes
-			}
+			is_manchuria_state_count_triggers = yes
 		}
 	}
 	focus = {
@@ -1134,11 +1130,7 @@ focus_tree = {
 			}
 		}
 		available = {
-			count_triggers = {
-				amount = 3
-				is_manchuria_state = yes
-				is_controlled_by_jap_or_its_puppet = yes
-			}
+			is_manchuria_state_count_triggers = yes
 		}
 	}
 	focus = {
@@ -1343,11 +1335,7 @@ focus_tree = {
 			}
 		}
 		available = {
-			count_triggers = {
-				amount = 3
-				is_manchuria_state = yes
-				is_controlled_by_jap_or_its_puppet = yes
-			}
+			is_manchuria_state_count_triggers = yes
 		}
 	}
 	focus = {
@@ -1473,11 +1461,7 @@ focus_tree = {
 			add_research_slot = 1
 		}
 		available = {
-			count_triggers = {
-				amount = 3
-				is_manchuria_state = yes
-				is_controlled_by_jap_or_its_puppet = yes
-			}
+			is_manchuria_state_count_triggers = yes
 		}
 	}
 	focus = {
@@ -2323,7 +2307,33 @@ focus_tree = {
 					}
 				}
 			}
-			
+			if = {
+				limit = {
+					any_country = {
+						is_warlord = yes
+						has_war_with = CHI
+					}
+				}
+				every_country = {
+					limit = {
+						OR = {
+							tag = PRC
+							is_warlord = yes
+						}
+						OR = {
+							is_faction_leader = yes
+							is_in_faction = no
+						}
+						has_war_with = CHI
+					}
+					ROOT = {
+						create_wargoal = {
+							target = PREV
+							type = puppet_wargoal_focus
+						}
+					}
+				}
+			}
 			set_global_flag = jap_war_chi
 			random_other_country = {
 				limit = {
@@ -2335,7 +2345,6 @@ focus_tree = {
 					id = news.1303
 				}
 				country_event = {
-					days = 2
 					id = rcmchina.100
 				}
 			}

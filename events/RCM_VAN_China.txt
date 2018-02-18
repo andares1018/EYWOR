@@ -674,17 +674,31 @@ country_event = {
 
 
 	option = {
-		ai_chance = { factor = 100 }
 		name = rcmchina.100.a
 		if = {
 			limit = {
-				is_in_faction = NO
+				NOT = { is_in_faction = yes }
 			}
 			create_faction = chinese_united_front
 		}
-		add_to_faction = HPC 
-		add_to_war = { targeted_alliance = HPC enemy = JAP }
-		set_global_flag = CHI_unite
+		if = {
+			limit = {
+				NOT = {
+					HPC = {
+						is_subject_of = JAP
+					}
+				}
+			}
+			add_to_faction = HPC 
+			add_to_war = { targeted_alliance = HPC enemy = JAP }
+		}
+		set_global_flag = CHI_unite	
+		#every_country = {
+		#	limit = {
+		#		is_warlord = yes
+		#	}
+		#	country_event = { id = rcmchina.101 }
+		#}
 	}
 }
 
@@ -694,6 +708,7 @@ country_event = {
 	title = rcmchina.101.t
 	desc = rcmchina.101.d
 	picture = GFX_report_event_chinese_officers
+	#is_triggered_only = yes
 	trigger = {
 		is_warlord = yes
 		NOT = {
@@ -790,8 +805,7 @@ country_event = {
 			}
 		}
 		custom_effect_tooltip = stop_subject_war_end_tt
-		add_to_war = { targeted_alliance = CHI enemy = JAP }
-		#614 = { set_demilitarized_zone = no }		
+		add_to_war = { targeted_alliance = CHI enemy = JAP }	
 		hidden_effect = {
 			random_other_country = {
 				limit = {
@@ -842,8 +856,7 @@ country_event = {
 			#	freedom_level = 0.1
 			#}
 			add_to_war = { targeted_alliance = HPC enemy = JAP }
-		}
-		#614 = { set_demilitarized_zone = no }		
+		}	
 		hidden_effect = {
 			random_other_country = {
 				limit = {

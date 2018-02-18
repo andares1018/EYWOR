@@ -7,7 +7,7 @@ soviets_no_more = {
 		}
 	}
 }
-same_ieology_with_tuva = {
+same_ideology_with_tuva = {
 	OR = {
 		AND = {
 			TAN = {

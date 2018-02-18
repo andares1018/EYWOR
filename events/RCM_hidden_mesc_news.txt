@@ -1,0 +1,29 @@
+﻿###########################
+# Chinese Events BORDER WARS ADDED SOUTHERN SHAANXI #ID = 743#
+###########################
+
+add_namespace = news_mesc
+
+# puppet_transfer on annex
+
+country_event = {
+	id = news_mesc.1
+	hidden = yes
+	trigger = {
+		NOT = {
+			has_country_flag = Ive_fought_jap
+		}
+		OR = {
+			is_legit_china = yes
+		}
+		has_war_with = JAP
+	}
+	mean_time_to_happen = {
+		days = 0
+	}
+	immediate = {
+		set_country_flag = Ive_fought_jap
+	}
+	option = {
+	}
+}

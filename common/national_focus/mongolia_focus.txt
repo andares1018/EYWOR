@@ -1410,8 +1410,8 @@ focus_tree = {
 		}
 		available = {
 			custom_trigger_tooltip = {
-				tooltip = same_ieology_with_tuva_tt
-				same_ieology_with_tuva = yes
+				tooltip = same_ideology_with_tuva_tt
+				same_ideology_with_tuva = yes
 			}
 		}
 

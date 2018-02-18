@@ -180,7 +180,7 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = gxc.11.a
-		trigger = { TAG = GXC }
+		trigger = { original_tag = GXC }
 		GXC = {
 			add_to_faction = FROM
 			FROM = { add_to_war = { targeted_alliance = GXC enemy = CHI } }
@@ -188,7 +188,7 @@ country_event = {
 	}
 	option = {
 		name = gxc.11.b
-		trigger = { TAG = CHI }
+		trigger = { original_tag = CHI }
 	}
 }
 country_event = {
@@ -198,8 +198,8 @@ country_event = {
 	picture = GFX_report_event_chinese_soldiers_02
 	trigger = {
 		OR = {
-			tag = CHI
-			tag = GXC
+			original_tag = CHI
+			original_tag = GXC
 		}
 		has_global_flag = gud_ready
 		GXC = { has_offensive_war_with = CHI }
@@ -207,7 +207,7 @@ country_event = {
 	fire_only_once = yes
 	option = {
 		name = gxc.12.a
-		trigger = { TAG = GXC }
+		trigger = { original_tag = GXC }
 		if = {
 			limit = { GXC = { is_faction_leader = no } }
 				set_rule = { can_create_factions = yes }
@@ -301,24 +301,24 @@ country_event = {
 	picture = GFX_report_event_bai_not_bribed
 	desc = {
 		text = gxc.15.d_chi
-		trigger = { TAG = CHI }
+		trigger = { original_tag = CHI }
 	}
 	desc = {
 		text = gxc.15.d
-		trigger = { NOT = { TAG = CHI } }
+		trigger = { NOT = { original_tag = CHI } }
 	}
 	is_triggered_only = yes
 	option = {
 		name = gxc.15.a
-		trigger = { TAG = CHI }
+		trigger = { original_tag = CHI }
 	}
 	option = {
 		name = gxc.15.b
 		trigger = {
-			NOT = { TAG = CHI }
+			NOT = { original_tag = CHI }
 		}
 		if = {#war!!!
-			limit = { TAG = GXC }
+			limit = { original_tag = GXC }
 			effect_tooltip = {
 				create_wargoal = {
 					type = annex_everything

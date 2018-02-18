@@ -99,97 +99,90 @@ is_west_china_state = {
 has_long_march_idea = {
 	custom_trigger_tooltip = {
 		tooltip = not_affected_by_longmarch_tt
-		has_long_march_idea_raw = yes
+		OR = {
+			has_idea = Long_March_1
+			has_idea = Long_March_2
+			has_idea = Long_March_3
+			has_idea = Long_March_4
+			has_idea = Long_March_5
+		}
 	}
 }
-has_long_march_idea_raw = {
-	OR = {
-		has_idea = Long_March_1
-		has_idea = Long_March_2
-		has_idea = Long_March_3
-		has_idea = Long_March_4
-		has_idea = Long_March_5
-	}
-}
+
 is_legit_china = {
 	custom_trigger_tooltip = {
 		tooltip = is_legit_china_tt
-		is_legit_china_raw = yes
-	}
-}
-is_legit_china_raw = {
-	OR = {
-		has_country_flag = im_legit_now
-		AND =  {
+		OR = {
+			is_warlord = yes
+			tag = CHI
+			tag = PRC
+		}
+		OR = {
+			AND = {
+				NOT = {
+					any_country = {
+						is_legit_china_second_trigger = yes
+					}
+				}
+				original_tag = CHI
+			}
+			has_country_flag = im_legit_now
 			OR = {
 				owns_state = 598
 				AND = {
 					owns_state = 605
 					is_faction_leader = yes
 				}
-				any_other_country = {
-					OR = {
-						owns_state = 598
-						owns_state = 605
+				OR = {
+					598 = {
+						owner = {
+							is_subject_of = ROOT
+						}
 					}
-					is_subject_of = ROOT
+					605 = {
+						owner = {
+							is_subject_of = ROOT
+						}
+					}
 				}
 			}
-			NOT = {
-				has_war_with = NEA
+			AND = {
+				tag = NEA
+				has_war_with = CHI
 			}
-			OR = {
-				is_warlord = yes
-				tag = CHI
-				tag = PRC
-			}
-		}
-		AND = {
-			has_global_flag = xian_kmt_refuse
-			has_war_with = CHI
-			tag = NEA
-		}
-		AND = {
-			NOT = {
-				any_other_country = {
-					is_legit_china_second_trigger = yes
-				}
-			}
-			original_tag = CHI
 		}
 	}
 }
 is_legit_china_second_trigger = {
 	OR = {
+		is_warlord = yes
+		tag = CHI
+		tag = PRC
+	}
+	OR = {
 		has_country_flag = im_legit_now
-		AND =  {
+		OR = {
+			owns_state = 598
+			AND = {
+				owns_state = 605
+				is_faction_leader = yes
+			}
 			OR = {
-				owns_state = 598
-				AND = {
-					owns_state = 605
-					is_faction_leader = yes
-				}
-				any_other_country = {
-					OR = {
-						owns_state = 598
-						owns_state = 605
+				598 = {
+					owner = {
+						is_subject_of = ROOT
 					}
-					is_subject_of = ROOT
 				}
-			}
-			NOT = {
-				has_war_with = NEA
-			}
-			OR = {
-				is_warlord = yes
-				tag = CHI
-				tag = PRC
+				605 = {
+					owner = {
+						is_subject_of = ROOT
+					}
+				}
 			}
 		}
 		AND = {
-			has_global_flag = xian_kmt_refuse
-			has_war_with = CHI
 			tag = NEA
+			has_war_with = CHI
 		}
 	}
 }
@@ -217,25 +210,22 @@ is_independent_china_or_warlord = { #Does not include sinkiang
 is_warlord = {
 	custom_trigger_tooltip = {
 		tooltip = is_warlord_tt
-		is_warlord_raw = yes
-	}
-}
-is_warlord_raw = { #Does not include sinkiang
-	OR = {
-		has_country_flag = im_warlord_now
-		tag = GXC
-		tag = YUN
-		tag = SHX
-		tag = XSM
-		tag = XIK
-		tag = SIC
-		tag = GUD
-		tag = HPC
-		tag = NEA
-		tag = SHD
-		tag = NXM
-		tag = HMI
-		tag = TNG
+		OR = {
+			has_country_flag = im_warlord_now
+			tag = GXC
+			tag = YUN
+			tag = SHX
+			tag = XSM
+			tag = XIK
+			tag = SIC
+			tag = GUD
+			tag = HPC
+			tag = NEA
+			tag = SHD
+			tag = NXM
+			tag = HMI
+			tag = TNG
+		}
 	}
 }
 is_originally_warlord = { #Does not include sinkiang
@@ -290,75 +280,64 @@ is_MAN_state_for_liberation = {
 	}
 }
 ###
-infra_ava_2 = {
-	free_building_slots = {
-		building = infrastructure
-		size < 8
-	}
-	is_controlled_by = ROOT
-}
+
 infra_ava_2_tr = {
 	custom_trigger_tooltip = {
 		tooltip = infra_ava_2_tt
-		infra_ava_2 = yes 
+		free_building_slots = {
+			building = infrastructure
+			size < 8
+		}
+		is_controlled_by = ROOT
 	} 
 }
 ###
-infra_ava_3 = {
-	free_building_slots = {
-		building = infrastructure
-		size < 5
-	}
-	is_controlled_by = ROOT
-}
+
 infra_ava_3_tr = {
 	custom_trigger_tooltip = {
 		tooltip = infra_ava_3_tt
-		infra_ava_3 = yes 
+		free_building_slots = {
+			building = infrastructure
+			size < 5
+		}
+		is_controlled_by = ROOT
 	} 
 }
 ###
-infra_bypass_1 = {
-	free_building_slots = {
-		building = infrastructure
-		size < 8
-	}
-	is_controlled_by = ROOT
-}
+
 infra_bypass_1_tr = {
 	custom_trigger_tooltip = {
 		tooltip = infra_bypass_1_tt
-		infra_bypass_1 = yes 
+		free_building_slots = {
+			building = infrastructure
+			size < 8
+		}
+		is_controlled_by = ROOT
 	} 
 }
 
 ###
-infra_bypass_2 = {
-	free_building_slots = {
-		building = infrastructure
-		size < 5
-	}
-	is_controlled_by = ROOT
-}
+
 infra_bypass_2_tr = {
 	custom_trigger_tooltip = {
 		tooltip = infra_bypass_2_tt
-		infra_bypass_2 = yes 
+		free_building_slots = {
+			building = infrastructure
+			size < 5
+		}
+		is_controlled_by = ROOT
 	} 
 }
 ### 
-infra_bypass_3 = {
-	free_building_slots = {
-		building = infrastructure
-		size < 1
-	}
-	is_controlled_by = ROOT
-}
 
 infra_bypass_3_tr = {
 	custom_trigger_tooltip = {
 		tooltip = infra_bypass_3_tt
-		infra_bypass_3 = yes 
+		free_building_slots = {
+			building = infrastructure
+			size < 1
+		}
+		is_controlled_by = ROOT
 	} 
 }
 ###
