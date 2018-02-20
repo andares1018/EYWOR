@@ -1,5 +1,6 @@
 ideas = {
 	hidden_ideas = {
+		#not limited to CHI
 		idea_continuous_counter_insurgency = {
 			available = {
 			}
@@ -11,7 +12,9 @@ ideas = {
 		}
 	}
 	country = {
-		nanking_decade = {
+		
+		##CHINA IDEAS
+		CHI_nanking_decade_idea = {
 			picture = generic_exploit_mines
 			
 			allowed = {
@@ -29,7 +32,7 @@ ideas = {
 				production_factory_max_efficiency_factor = 0.1
 			}
 		}
-		whampoa_spirit = {
+		CHI_whampoa_spirit_idea = {
 			picture = FRA_national_mobilization_focus
 			
 			allowed = {
@@ -50,7 +53,7 @@ ideas = {
 				unity_factor = 0.1
 			}
 		}
-		german_style_training = {
+		CHI_german_style_training_idea = {
 			picture = FRA_national_mobilization_focus
 			
 			allowed = {
@@ -70,7 +73,7 @@ ideas = {
 				training_time_army_factor = -0.1
 			}
 		}
-		diplomatic_effort = {
+		CHI_diplomatic_effort_idea = {
 			allowed = {
 				always = no
 			}
@@ -83,8 +86,8 @@ ideas = {
 				opinion_gain_monthly_same_ideology_factor = 0.15
 			}
 		}
-		civilianism = {
-			picture = civilianism
+		CHI_civilianism_idea = {
+			picture = CHI_civilianism_idea
 			allowed = {
 				always = no
 			}
@@ -101,8 +104,8 @@ ideas = {
 				unity_factor = 0.1
 			}
 		}
-		civilianism2 = {
-			picture = civilianism
+		CHI_civilianism_idea2 = {
+			picture = CHI_civilianism_idea
 			allowed = {
 				always = no
 			}
@@ -120,8 +123,8 @@ ideas = {
 				unity_factor = 0.1
 			}
 		}
-		civilianism3 = {
-			picture = civilianism
+		CHI_civilianism_idea3 = {
+			picture = CHI_civilianism_idea
 			allowed = {
 				always = no
 			}
@@ -140,7 +143,7 @@ ideas = {
 				unity_factor = 0.1
 			}
 		}
-		for_china = {
+		CHI_for_china_idea = {
 			allowed = {
 				always = no
 			}
@@ -193,7 +196,7 @@ ideas = {
 				unity_factor = 0.1
 			}
 		}
-		chi_sov_pact = {
+		CHI_sov_pact = {
 			allowed = {
 				always = no
 			}
@@ -390,6 +393,7 @@ ideas = {
 			modifier = {
 				enemy_partisan_effect = -0.25
 				political_power_factor = 0.025
+				
 			}
 		}
 		NBIS_esp = {
@@ -941,7 +945,7 @@ ideas = {
 				unity_factor = -0.15
 			}			
 		}		
-		chi_sunfall_sea	= {
+		CHI_sunfall_sea	= {
 			allowed = {
 				always = no
 			}
@@ -958,7 +962,7 @@ ideas = {
 				amphibious_invasion_defence = 0.05
 			}
 		}
-		chi_navy_reorganization = {
+		CHI_navy_reorganized = {
 			picture = generic_navy_bonus
 			
 			allowed = {
@@ -982,7 +986,7 @@ ideas = {
 			
 		}
 		
-		chi_german_coop = {
+		CHI_german_coop = {
 			allowed = {
 				always = no
 			}
@@ -997,7 +1001,7 @@ ideas = {
 				fascism_acceptance = 80
 			}
 		}
-		chi_reorganized_army_focus = {
+		CHI_reorganized_army_focus = {
 			allowed = {
 				always = no
 			}
@@ -1012,7 +1016,7 @@ ideas = {
 				army_attack_factor = 0.1
 			}
 		}
-		chi_new_equal_treaty = {
+		CHI_new_equal_treaty = {
 			allowed = {
 				always = no
 			}
@@ -1250,7 +1254,7 @@ ideas = {
 				communism_drift = 0.02
 			}		
 		}
-		chi_kmt = {
+		CHI_kmt = {
 			allowed = {
 				always = no
 			}
@@ -1266,7 +1270,7 @@ ideas = {
 				communism_acceptance = 25
 			}
 		}
-		chi_nationalize_industry_1_focus = {
+		CHI_nationalize_industry_1_focus = {
 			allowed = {
 				always = no
 			}
@@ -1275,7 +1279,7 @@ ideas = {
 					has_government = communism
 				}
 			}		
-			picture = chi_nationalize_industry_1_focus
+			picture = CHI_nationalize_industry_1_focus
 			removal_cost = -1
 			modifier = {
 				production_factory_efficiency_gain_factor = 0.02
@@ -1284,7 +1288,7 @@ ideas = {
 				consumer_goods_factor = -0.01
 			}
 		}
-		chi_nationalize_industry_2_focus = {
+		CHI_nationalize_industry_2_focus = {
 			allowed = {
 				always = no
 			}
@@ -1293,7 +1297,7 @@ ideas = {
 					has_government = communism
 				}
 			}			
-			picture = chi_nationalize_industry_2_focus
+			picture = CHI_nationalize_industry_2_focus
 			removal_cost = -1
 			modifier = {
 				production_factory_efficiency_gain_factor = 0.4
@@ -1302,7 +1306,7 @@ ideas = {
 				consumer_goods_factor = -0.02
 			}
 		}
-		chi_nationalize_industry_3_focus = {
+		CHI_nationalize_industry_3_focus = {
 			allowed = {
 				always = no
 			}
@@ -1311,7 +1315,7 @@ ideas = {
 					has_government = communism
 				}
 			}		
-			picture = chi_nationalize_industry_3_focus
+			picture = CHI_nationalize_industry_3_focus
 			removal_cost = -1
 			modifier = {
 				production_factory_efficiency_gain_factor = 0.6
@@ -1320,7 +1324,7 @@ ideas = {
 				consumer_goods_factor = -0.03
 			}
 		}
-		chi_arc = {
+		CHI_arc = {
 			allowed = {
 				always = no
 			}
@@ -1341,7 +1345,7 @@ ideas = {
 				}
 			}
 		}
-		chi_air_reorganisation = {
+		CHI_air_reorganisation = {
 			allowed = {
 				always = no
 			}
@@ -1365,7 +1369,7 @@ ideas = {
 				}
 			}
 		}
-		chi_air_mercenaries = {
+		CHI_air_mercenaries = {
 			allowed = {
 				always = no
 			}
@@ -1417,7 +1421,7 @@ ideas = {
 			modifier = {
 			}
 		}
-		air_chi_coast_focus = {
+		CHI_coast_focus_idea = {
 			allowed = {
 				always = no
 			}
@@ -1434,7 +1438,7 @@ ideas = {
 				}
 			}
 		}
-		air_chi_land_focus = {
+		CHI_land_focus_idea = {
 			allowed = {
 				always = no
 			}
@@ -1451,7 +1455,7 @@ ideas = {
 				}
 			}
 		}
-		chi_collectivism = {
+		CHI_collectivism = {
 			allowed = {
 				always = no
 			}
@@ -1462,7 +1466,7 @@ ideas = {
 				drift_defence_factor = -0.10
 			}
 		}
-		chi_collectivism_good = {
+		CHI_collectivism_good = {
 			allowed = {
 				always = no
 			}
@@ -1515,7 +1519,7 @@ ideas = {
 			}
 		}
 		############CHI INCH
-		chi_inch_blood_1 = {
+		CHI_inch_blood_1 = {
 			picture = idea_generic_reserve_divisions			
 			allowed = {
 				always = no
@@ -1536,7 +1540,7 @@ ideas = {
 				conscription = 0.005
 			}
 		}
-		chi_inch_blood_2 = {
+		CHI_inch_blood_2 = {
 			picture = idea_generic_reserve_divisions			
 			allowed = {
 				always = no
@@ -1557,7 +1561,7 @@ ideas = {
 				conscription = 0.01
 			}
 		}
-		chi_inch_blood_3 = {
+		CHI_inch_blood_3 = {
 			picture = idea_generic_reserve_divisions			
 			allowed = {
 				always = no
@@ -1578,7 +1582,7 @@ ideas = {
 				conscription = 0.015
 			}
 		}
-		chi_inch_blood_4 = {
+		CHI_inch_blood_4 = {
 			picture = idea_generic_reserve_divisions			
 			allowed = {
 				always = no
@@ -1599,7 +1603,7 @@ ideas = {
 				conscription = 0.020
 			}
 		}
-		chi_inch_blood_5 = {
+		CHI_inch_blood_5 = {
 			picture = idea_generic_reserve_divisions			
 			allowed = {
 				always = no
@@ -1620,7 +1624,7 @@ ideas = {
 				conscription = 0.025
 			}
 		}
-		chi_inch_blood_6 = {
+		CHI_inch_blood_6 = {
 			picture = idea_generic_reserve_divisions			
 			allowed = {
 				always = no
@@ -1641,7 +1645,7 @@ ideas = {
 				conscription = 0.03
 			}
 		}
-		chi_inch_blood_7 = {
+		CHI_inch_blood_7 = {
 			picture = idea_generic_reserve_divisions			
 			allowed = {
 				always = no
@@ -1662,7 +1666,7 @@ ideas = {
 				conscription = 0.035
 			}
 		}
-		chi_inch_blood_8 = {
+		CHI_inch_blood_8 = {
 			picture = idea_generic_reserve_divisions			
 			allowed = {
 				always = no
@@ -1683,7 +1687,7 @@ ideas = {
 				conscription = 0.04
 			}
 		}
-		chi_inch_blood_9 = {
+		CHI_inch_blood_9 = {
 			picture = idea_generic_reserve_divisions			
 			allowed = {
 				always = no
@@ -1704,7 +1708,7 @@ ideas = {
 				conscription = 0.045
 			}
 		}
-		chi_inch_blood_10 = {
+		CHI_inch_blood_10 = {
 			picture = idea_generic_reserve_divisions			
 			allowed = {
 				always = no
@@ -1786,7 +1790,7 @@ ideas = {
 			traits = { fascist_demagogue }
 			
 			on_add = {
-				set_country_flag = chi_no_fascist
+				set_country_flag = CHI_no_fascist
 			}
 			
 			do_effect = {
@@ -1808,7 +1812,7 @@ ideas = {
 			
 			
 			on_add = {
-				set_country_flag = chi_no_demo
+				set_country_flag = CHI_no_demo
 			}		
 			
 			do_effect = {
@@ -1829,7 +1833,7 @@ ideas = {
 			
 			
 			on_add = {
-				set_country_flag = chi_no_demo
+				set_country_flag = CHI_no_demo
 			}		
 			
 			do_effect = {

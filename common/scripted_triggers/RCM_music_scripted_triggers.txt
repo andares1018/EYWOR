@@ -1,0 +1,31 @@
+#	Example:
+# 
+#	example_trigger = {
+#		tag = GER
+#		is_ai = no
+#	}
+#
+#
+#	In a script file:
+#
+#	trigger = {
+#		example_trigger = yes
+#	}
+# 
+#	THIS FILE IS FOR TRIGGERS SPECIFICALLY FOR THE CHI TAG
+is_kmt = {
+	OR = {
+		tag = CHI
+		is_legit_china = yes
+		is_warlord = yes
+	}
+	NOT = {
+		OR = {
+			tag = HMI
+			has_government = n_socialism
+			has_government = communism
+		}
+	}	
+	NOT = { is_subject_of = JAP }
+	#has_war = yes
+}

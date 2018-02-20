@@ -661,7 +661,7 @@ country_event = {
 		NOT = { has_government = democratic }
 		NOT = { has_country_flag = democracy_government_support }
 		###MODDED#####vvv
-		NOT = { has_country_flag = chi_no_demo }
+		NOT = { has_country_flag = CHI_no_demo }
 		###MODDED#####^^^
 	}
 	

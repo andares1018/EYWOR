@@ -10,7 +10,7 @@
 
 opinion_modifiers = {
 
-	chi_promise_focus = {
+	CHI_promise_focus = {
 		value = 60
 	}
 	ger_support_chi = {
@@ -26,7 +26,7 @@ opinion_modifiers = {
 		decay = 0.5
 		max_trust = 0
 	}
-	chi_german_coop = {
+	CHI_german_coop = {
 		value = 40
 		decay = 0.25
 		max_trust = 200
@@ -55,10 +55,10 @@ opinion_modifiers = {
 		trade = yes
 		value = 20
 	}
-	chi_sov_pact_opinion = {
+	CHI_sov_pact_opinion = {
 		value = 50
 	}
-	chi_sov_pact_opinion_trade = {
+	CHI_sov_pact_opinion_trade = {
 		trade = yes
 		value = 20
 	}

@@ -107,7 +107,7 @@ country_event = {
 	}
 }
 
-#chi_buy_gud succ
+#CHI_buy_gud succ
 country_event = {
 	id = gud.4
 	title = gud.4.t
@@ -168,7 +168,7 @@ country_event = {
 		CHI = { country_event = { days = 5 id = rcmchina.1014 } }
 	}
 }
-#chi_buy_gud fail
+#CHI_buy_gud fail
 country_event = {
 	id = gud.5
 	title = gud.5.t

@@ -40,10 +40,10 @@ country_event = {#second united front
 	option = {
 		name = EFM_China.2000.a
 		add_opinion_modifier = {
-			target = CHI modifier = chi_prc_pact
+			target = CHI modifier = CHI_prc_pact
 		}
 		reverse_add_opinion_modifier = {
-			target = CHI modifier = chi_prc_pact
+			target = CHI modifier = CHI_prc_pact
 		}
 		diplomatic_relation = { country = CHI relation = non_aggression_pact }
 		hidden_effect = {
@@ -90,10 +90,10 @@ country_event = {#second united front #PRC acce
 		name = EFM_China.2001.a
 		effect_tooltip = {
 			add_opinion_modifier = {
-				target = PRC modifier = chi_prc_pact
+				target = PRC modifier = CHI_prc_pact
 			}
 			reverse_add_opinion_modifier = {
-				target = PRC modifier = chi_prc_pact
+				target = PRC modifier = CHI_prc_pact
 			}
 			diplomatic_relation = { country = PRC relation = non_aggression_pact }
 		}
@@ -114,10 +114,10 @@ country_event = {#second united front #PRC ref
 		if = {
 			limit = {
 				NOT = {
-					has_completed_focus = chi_attack_com
+					has_completed_focus = CHI_attack_com
 				}
 			}
-			complete_national_focus = chi_attack_com
+			complete_national_focus = CHI_attack_com
 			else = {
 				create_wargoal = {
 					type = annex_everything target = FROM

@@ -1087,7 +1087,7 @@ country_event = {
 			ideology = fascism
 			popularity = 0.05
 		}
-		add_ideas = chi_german_coop	
+		add_ideas = CHI_german_coop	
 	}
 }
 #HHK to berlin fail
@@ -1604,7 +1604,7 @@ country_event = {
 		has_global_flag = rise_of_nationalism
 	}
 	immediate = {
-		unlock_national_focus = chi_allies_help_politics_focus
+		unlock_national_focus = CHI_allies_help_politics_focus
 	}
 }
 country_event = {
@@ -1798,7 +1798,7 @@ country_event = {
 		name = rcmchina.2026.a	
 		ai_chance = { factor = 100 }		
 		JAP = {
-			create_faction = chi_man_bloc
+			create_faction = CHI_man_bloc
 			every_country = {
 				limit = {
 					is_puppet_of = JAP
@@ -1830,7 +1830,7 @@ country_event = {
 			}
 			country_event = { days = 150 id = rcmchina.2060 }
 			news_event = { id = news.413 }
-			set_global_flag = chi_accept_san_hiro
+			set_global_flag = CHI_accept_san_hiro
 		}
 	}
 }
@@ -2185,7 +2185,7 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			set_global_flag = SOV_recalled_advisors
-			remove_ideas = chi_sov_pact
+			remove_ideas = CHI_sov_pact
 			CHI = { remove_ideas = CHI_pavel_zhigarev }
 			CHI = { remove_ideas = CHI_gregory_thor }
 			CHI = { remove_ideas = CHI_petr_anisimov }
@@ -2322,7 +2322,7 @@ country_event = {
 	option = {
 		ai_chance = { factor = 100 }
 		name = rcmchina.2041.a
-		add_ideas = chi_new_equal_treaty
+		add_ideas = CHI_new_equal_treaty
 	}
 }
 #uk refuse
@@ -2855,7 +2855,7 @@ country_event = {
 	picture = GFX_report_event_chiang_speech
 	trigger = {
 		tag = JAP
-		has_global_flag = chi_accept_san_hiro
+		has_global_flag = CHI_accept_san_hiro
 		CHI = {
 			has_completed_focus = ack_hiro_sen_focus
 			NOT = { is_in_faction_with = JAP }
@@ -3064,7 +3064,7 @@ country_event = {
 	hidden = yes
 	trigger = {
 		tag = CHI
-		has_idea = nanking_decade
+		has_idea = CHI_nanking_decade_idea
 		AND = {	
 			has_defensive_war = yes
 		}
@@ -3073,7 +3073,7 @@ country_event = {
 		days = 0
 	}
 	immediate = {
-		remove_ideas = nanking_decade
+		remove_ideas = CHI_nanking_decade_idea
 	}
 	option = {
 	}

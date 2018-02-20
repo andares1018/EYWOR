@@ -12,22 +12,22 @@ opinion_modifiers = {
 	### Chinese focus tree ###
 											   
 
-	chi_jap_diplomacy_focus = { value = 50 }
-	chi_jap_2nd_diplomacy_focus = { value = 50 }
-	chi_sov_nice_pact = { value = 80 }
-	chi_recognition_of_the_state = { value = 20 }
-	chi_close_to_allies = { value = 30 }
-	chi_isolationism_in_war = { value = -30 }
+	CHI_jap_diplomacy_focus = { value = 50 }
+	CHI_jap_2nd_diplomacy_focus = { value = 50 }
+	CHI_sov_nice_pact = { value = 80 }
+	CHI_recognition_of_the_state = { value = 20 }
+	CHI_close_to_allies = { value = 30 }
+	CHI_isolationism_in_war = { value = -30 }
 	
-	chi_close_to_axis = { value = 30 }
+	CHI_close_to_axis = { value = 30 }
 
 	### Chinese events ###
 
-	chi_prc_reconciliation = { value = 50 }
-	chi_prc_pact = { value = 80 }
+	CHI_prc_reconciliation = { value = 50 }
+	CHI_prc_pact = { value = 80 }
 	refused_to_union = { value = -30 }
-	chi_jap_refused_the_return = { value = -10 }
-	chi_jap_the_return = { value = -20 }
+	CHI_jap_refused_the_return = { value = -10 }
+	CHI_jap_the_return = { value = -20 }
 
 	### Clique events ###
 	shx_prc_unstable_al = { value = 10 }
@@ -39,21 +39,21 @@ opinion_modifiers = {
 	Nations_estrangement = { value = -30 }
 	### Chinese focus tree ###
 
-	chi_jap_diplomacy_focus = { value = 50 }
-	chi_jap_2nd_diplomacy_focus = { value = 50 }
-	chi_sov_nice_pact = { value = 80 }
-	chi_recognition_of_the_state = { value = 20 }
-	chi_close_to_allies = { value = 30 }
-	chi_isolationism_in_war = { value = -30 }
-	chi_close_to_axis = { value = 30 }
+	CHI_jap_diplomacy_focus = { value = 50 }
+	CHI_jap_2nd_diplomacy_focus = { value = 50 }
+	CHI_sov_nice_pact = { value = 80 }
+	CHI_recognition_of_the_state = { value = 20 }
+	CHI_close_to_allies = { value = 30 }
+	CHI_isolationism_in_war = { value = -30 }
+	CHI_close_to_axis = { value = 30 }
 
 	### Chinese events ###
 
-	chi_prc_reconciliation = { value = 50 }
-	chi_prc_pact = { value = 80 }
+	CHI_prc_reconciliation = { value = 50 }
+	CHI_prc_pact = { value = 80 }
 	refused_to_union = { value = -30 }
-	chi_jap_refused_the_return = { value = -10 }
-	chi_jap_the_return = { value = -20 }
+	CHI_jap_refused_the_return = { value = -10 }
+	CHI_jap_the_return = { value = -20 }
 	
 	nations_of_hostile_status = { #special used for civil wars that are on hold and blocks faction stuff
 		value = -100
@@ -66,7 +66,7 @@ opinion_modifiers = {
 	### Clique events ###
 	shx_prc_unstable_al = { value = 10 }
 	shx_prc_good_al = { value = 30 }
-	chi_ger_cooperation = { value = 30 }
+	CHI_ger_cooperation = { value = 30 }
 	
 	### Nations events ###
 	Nations_friendly = { value = 30 }

@@ -233,7 +233,7 @@ on_actions = {
 									AND = {
 										NOT = {
 											JAP = {
-												has_completed_focus = reorganized_chi_puppet
+												has_completed_focus = reorganized_CHI_puppet
 											}
 										}
 										OR = {

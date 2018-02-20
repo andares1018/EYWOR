@@ -48,7 +48,7 @@ country_event = {
 				any_other_country = {
 					OR = {
 						has_war_with = HPC
-						has_completed_focus = chi_conquer_focus
+						has_completed_focus = CHI_conquer_focus
 					}
 					is_legit_china = yes
 				}
@@ -61,7 +61,7 @@ country_event = {
 			any_other_country = {
 				OR = {
 					has_war_with = HPC
-					has_completed_focus = chi_conquer_focus
+					has_completed_focus = CHI_conquer_focus
 				}
 				is_legit_china = yes
 			}
@@ -74,7 +74,7 @@ country_event = {
 				any_other_country = {
 					OR = {
 						has_war_with = HPC
-						has_completed_focus = chi_conquer_focus
+						has_completed_focus = CHI_conquer_focus
 					}
 					is_legit_china = yes
 				}
@@ -87,7 +87,7 @@ country_event = {
 			any_other_country = {
 				OR = {
 					has_war_with = HPC
-					has_completed_focus = chi_conquer_focus
+					has_completed_focus = CHI_conquer_focus
 				}
 				is_legit_china = yes
 			}
@@ -108,7 +108,7 @@ country_event = {
 					any_other_country = {
 						OR = {
 							has_war_with = HPC
-							has_completed_focus = chi_conquer_focus
+							has_completed_focus = CHI_conquer_focus
 						}
 						is_legit_china = yes
 					}
@@ -137,7 +137,7 @@ country_event = {
 					any_other_country = {
 						OR = {
 							has_war_with = HPC
-							has_completed_focus = chi_conquer_focus
+							has_completed_focus = CHI_conquer_focus
 						}
 						is_legit_china = yes
 					}

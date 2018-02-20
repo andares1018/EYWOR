@@ -145,7 +145,7 @@ country_event = {
 		always = no
 		tag = CHI
 		NOT = { has_country_flag = nineteen_thirtynine_start }
-		NOT = { has_global_flag = chi_attack_comm }
+		NOT = { has_global_flag = CHI_attack_comm }
 		NOT = { has_war_with = PRC }
 		any_neighbor_country = {
 			tag = PRC
@@ -455,7 +455,7 @@ country_event = {
 
 	trigger = {
 		always = no
-		NOT = { has_global_flag = chi_attack_com }
+		NOT = { has_global_flag = CHI_attack_com }
 		has_country_flag = CCW_offensive_executed
 		has_opinion_modifier = hostile_status
 		OR = {

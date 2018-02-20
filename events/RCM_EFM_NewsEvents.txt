@@ -1062,7 +1062,7 @@ news_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		set_global_flag = chi_2nd_central_plains_war
+		set_global_flag = CHI_2nd_central_plains_war
 	}
 	
 	option = {
@@ -1136,7 +1136,7 @@ news_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		clr_global_flag = chi_2nd_central_plains_war
+		clr_global_flag = CHI_2nd_central_plains_war
 	}
 	
 	option = {

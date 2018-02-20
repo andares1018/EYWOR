@@ -1804,7 +1804,7 @@ focus_tree = {
 			CHI = {
 				has_opinion_modifier = hostile_status
 				NOT = { has_war_with = GXC }
-				NOT = { has_global_flag = chi_truce_com }
+				NOT = { has_global_flag = CHI_truce_com }
 				NOT = { is_in_faction_with = JAP }
 			}
 			has_global_flag = chiang_in_xian

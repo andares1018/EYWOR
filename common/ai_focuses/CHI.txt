@@ -3,30 +3,30 @@ ai_historical_focus_list_CHI = {
 	ai_national_focuses = {
 		an_inch_of_mountain_an_inch_of_blood
 		peace_with_japan
-		chi_split_plm_focus
+		CHI_split_plm_focus
 		monetary_reform
-		chi_foreign_help_focus
-		chi_inst_reform_focus
+		CHI_foreign_help_focus
+		CHI_inst_reform_focus
 		kmt_reorganize_nra
-		chi_attack_com
-		chi_fight_focus
-		chi_unite_focus
-		chi_lushan_focus
+		CHI_attack_com
+		CHI_fight_focus
+		CHI_unite_focus
+		CHI_lushan_focus
 		big_rear_plan
 		reinforce_new_life_movement
-		chi_coast_infra_focus
-		chi_defend_river_focus
-		chi_sov_pact_focus
-		chi_industry_focus
+		CHI_coast_infra_focus
+		CHI_defend_river_focus
+		CHI_sov_pact_focus
+		CHI_industry_focus
 		last-ditch_effort
-		chi_pressure_xinjiang
-		#chi_offer_xinjiang
+		CHI_pressure_xinjiang
+		#CHI_offer_xinjiang
 		national_poltical_council
 		constit_draft_focus
 		assembly_of_the_constutients
-		chi_nationalize_industry_focus
-		chi_nationalize_industry_ii_focus
-		chi_nationalize_industry_iii_focus
+		CHI_nationalize_industry_focus
+		CHI_nationalize_industry_ii_focus
+		CHI_nationalize_industry_iii_focus
 	}
 }
 

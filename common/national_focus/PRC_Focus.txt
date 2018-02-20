@@ -338,7 +338,7 @@ focus_tree = {
 				has_global_flag = zhang_refuses_tacit_truce
 			}
 			NOT = {
-				has_opinion_modifier = chi_prc_reconciliation
+				has_opinion_modifier = CHI_prc_reconciliation
 			}
 		}
 		will_lead_to_war_with = CHI
@@ -478,7 +478,7 @@ focus_tree = {
 			has_full_control_of_state = 622
 		}
 		bypass = {
-			has_opinion_modifier = chi_prc_reconciliation
+			has_opinion_modifier = CHI_prc_reconciliation
 		}
 		cancel = {
 			has_global_flag = zhang_refuses_tacit_truce
@@ -3409,7 +3409,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = PRC_chi_nationalize_industry_focus
+		id = PRC_CHI_nationalize_industry_focus
 		icon = GFX_goal_generic_construct_civ_factory
 		cost = 8.00
 		prerequisite = {
@@ -3454,11 +3454,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = PRC_chi_nationalize_industry_ii_focus
+		id = PRC_CHI_nationalize_industry_ii_focus
 		icon = GFX_goal_generic_construct_civ_factory
 		cost = 9.00
 		prerequisite = {
-			focus = PRC_chi_nationalize_industry_focus
+			focus = PRC_CHI_nationalize_industry_focus
 		}
 		x = 43
 		y = 2
@@ -3499,11 +3499,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = PRC_chi_nationalize_industry_iii_focus
+		id = PRC_CHI_nationalize_industry_iii_focus
 		icon = GFX_goal_generic_construct_civ_factory
 		cost = 10.00
 		prerequisite = {
-			focus = PRC_chi_nationalize_industry_ii_focus
+			focus = PRC_CHI_nationalize_industry_ii_focus
 		}
 		x = 43
 		y = 3
@@ -3548,7 +3548,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_civilian
 		cost = 14.29
 		prerequisite = {
-			focus = PRC_chi_nationalize_industry_iii_focus
+			focus = PRC_CHI_nationalize_industry_iii_focus
 		}
 		x = 43
 		y = 4
@@ -3646,7 +3646,7 @@ focus_tree = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = industry_balanced_enough
-				has_completed_focus = PRC_chi_nationalize_industry_focus
+				has_completed_focus = PRC_CHI_nationalize_industry_focus
 			}
 		}
 	}
@@ -3718,7 +3718,7 @@ focus_tree = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = industry_balanced_enough
-				has_completed_focus = PRC_chi_nationalize_industry_ii_focus
+				has_completed_focus = PRC_CHI_nationalize_industry_ii_focus
 			}
 			has_war = no
 			608 = {
@@ -3778,7 +3778,7 @@ focus_tree = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = industry_balanced_enough
-				has_completed_focus = PRC_chi_nationalize_industry_iii_focus
+				has_completed_focus = PRC_CHI_nationalize_industry_iii_focus
 			}
 			has_tech = excavation3
 			756 = {
@@ -3826,7 +3826,7 @@ focus_tree = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = industry_balanced_enough
-				has_completed_focus = PRC_chi_nationalize_industry_iii_focus
+				has_completed_focus = PRC_CHI_nationalize_industry_iii_focus
 			}
 			has_tech = excavation3
 			716 = {
@@ -4041,7 +4041,7 @@ focus_tree = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = industry_balanced_enough
-				has_completed_focus = PRC_chi_nationalize_industry_ii_focus
+				has_completed_focus = PRC_CHI_nationalize_industry_ii_focus
 			}
 			is_puppet = no
 		}
@@ -4061,7 +4061,7 @@ focus_tree = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = industry_balanced_enough
-				has_completed_focus = PRC_chi_nationalize_industry_iii_focus
+				has_completed_focus = PRC_CHI_nationalize_industry_iii_focus
 			}
 			has_tech = excavation3
 			is_puppet = no
@@ -4200,7 +4200,7 @@ focus_tree = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = industry_balanced_enough
-				has_completed_focus = PRC_chi_nationalize_industry_iii_focus
+				has_completed_focus = PRC_CHI_nationalize_industry_iii_focus
 			}
 			has_tech = excavation3
 			607 = {
@@ -4382,7 +4382,7 @@ focus_tree = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = industry_balanced_enough
-				has_completed_focus = PRC_chi_nationalize_industry_iii_focus
+				has_completed_focus = PRC_CHI_nationalize_industry_iii_focus
 			}
 			has_tech = excavation3
 			600 = {
@@ -4547,7 +4547,7 @@ focus_tree = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = industry_balanced_enough
-				has_completed_focus = PRC_chi_nationalize_industry_iii_focus
+				has_completed_focus = PRC_CHI_nationalize_industry_iii_focus
 			}
 			owns_state = 766
 		}
@@ -4674,7 +4674,7 @@ focus_tree = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = industry_balanced_enough
-				has_completed_focus = PRC_chi_nationalize_industry_focus
+				has_completed_focus = PRC_CHI_nationalize_industry_focus
 			}
 			NOT = {
 				any_state = {
@@ -4776,7 +4776,7 @@ focus_tree = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = industry_balanced_enough
-				has_completed_focus = PRC_chi_nationalize_industry_ii_focus
+				has_completed_focus = PRC_CHI_nationalize_industry_ii_focus
 			}
 			NOT = {
 				any_state = {
@@ -4835,7 +4835,7 @@ focus_tree = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = industry_balanced_enough
-				has_completed_focus = PRC_chi_nationalize_industry_iii_focus
+				has_completed_focus = PRC_CHI_nationalize_industry_iii_focus
 			}
 			NOT = {
 				any_state = {
@@ -4977,7 +4977,7 @@ focus_tree = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = industry_balanced_enough
-				has_completed_focus = PRC_chi_nationalize_industry_focus
+				has_completed_focus = PRC_CHI_nationalize_industry_focus
 			}
 			NOT = {
 				any_state = {
@@ -5070,7 +5070,7 @@ focus_tree = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = industry_balanced_enough
-				has_completed_focus = PRC_chi_nationalize_industry_ii_focus
+				has_completed_focus = PRC_CHI_nationalize_industry_ii_focus
 			}
 			NOT = {
 				any_state = {
@@ -5130,7 +5130,7 @@ focus_tree = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = industry_balanced_enough
-				has_completed_focus = PRC_chi_nationalize_industry_iii_focus
+				has_completed_focus = PRC_CHI_nationalize_industry_iii_focus
 			}
 			NOT = {
 				any_state = {
@@ -5224,7 +5224,7 @@ focus_tree = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = industry_balanced_enough
-				has_completed_focus = PRC_chi_nationalize_industry_focus
+				has_completed_focus = PRC_CHI_nationalize_industry_focus
 			}
 			NOT = {
 				any_state = {
@@ -5320,7 +5320,7 @@ focus_tree = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = industry_balanced_enough
-				has_completed_focus = PRC_chi_nationalize_industry_ii_focus
+				has_completed_focus = PRC_CHI_nationalize_industry_ii_focus
 			}
 			NOT = {
 				any_state = {
@@ -5380,7 +5380,7 @@ focus_tree = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = industry_balanced_enough
-				has_completed_focus = PRC_chi_nationalize_industry_iii_focus
+				has_completed_focus = PRC_CHI_nationalize_industry_iii_focus
 			}
 			NOT = {
 				any_state = {
@@ -5465,7 +5465,7 @@ focus_tree = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = industry_balanced_enough
-				has_completed_focus = PRC_chi_nationalize_industry_focus
+				has_completed_focus = PRC_CHI_nationalize_industry_focus
 			}
 			NOT = {
 				any_state = {
@@ -5552,7 +5552,7 @@ focus_tree = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = industry_balanced_enough
-				has_completed_focus = PRC_chi_nationalize_industry_ii_focus
+				has_completed_focus = PRC_CHI_nationalize_industry_ii_focus
 			}
 			NOT = {
 				any_state = {
@@ -5611,7 +5611,7 @@ focus_tree = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = industry_balanced_enough
-				has_completed_focus = PRC_chi_nationalize_industry_iii_focus
+				has_completed_focus = PRC_CHI_nationalize_industry_iii_focus
 			}
 			NOT = {
 				any_state = {
@@ -6805,7 +6805,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = PRC_For_china
+		id = PRC_for_china
 		icon = GFX_goal_generic_political_pressure
 		cost = 10.00
 		prerequisite = {
@@ -6914,7 +6914,7 @@ focus_tree = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = industry_balanced_enough
-				has_completed_focus = PRC_chi_nationalize_industry_focus
+				has_completed_focus = PRC_CHI_nationalize_industry_focus
 			}
 			NOT = {
 				any_state = {
@@ -6992,7 +6992,7 @@ focus_tree = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = industry_balanced_enough
-				has_completed_focus = PRC_chi_nationalize_industry_ii_focus
+				has_completed_focus = PRC_CHI_nationalize_industry_ii_focus
 			}
 			NOT = {
 				any_state = {
@@ -7053,7 +7053,7 @@ focus_tree = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = industry_balanced_enough
-				has_completed_focus = PRC_chi_nationalize_industry_iii_focus
+				has_completed_focus = PRC_CHI_nationalize_industry_iii_focus
 			}
 			NOT = {
 				any_state = {

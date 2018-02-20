@@ -49,7 +49,7 @@ news_event = {
 		}
 		OR = {
 			date > 1941.3.18
-			has_global_flag = chi_zhang_lan_doctrine
+			has_global_flag = CHI_zhang_lan_doctrine
 		}
 	}
 	

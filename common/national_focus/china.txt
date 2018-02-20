@@ -9,11 +9,11 @@ focus_tree = {
 	}
 	default = yes
 	focus = {
-		id = chi_attack_com
+		id = CHI_attack_com
 		icon = GFX_goal_anti_comintern_pact
 		cost = 5
 		mutually_exclusive = {
-			focus = chi_peace_com
+			focus = CHI_peace_com
 		}
 		x = 6
 		y = 0 
@@ -34,7 +34,7 @@ focus_tree = {
 			}
 			add_political_power = 120
 			hidden_effect = {
-				set_global_flag = chi_attack_comm
+				set_global_flag = CHI_attack_comm
 				if = {
 					limit = {
 						is_ai = yes
@@ -67,11 +67,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = chi_peace_com
+		id = CHI_peace_com
 		icon = GFX_goal_tripartite_pact
 		cost = 5.00
 		mutually_exclusive = {
-			focus = chi_attack_com
+			focus = CHI_attack_com
 		}
 		x = 8
 		y = 0
@@ -94,7 +94,7 @@ focus_tree = {
 				PRC = {
 					dismantle_faction = yes
 				}
-				set_global_flag = chi_truce_com
+				set_global_flag = CHI_truce_com
 			}
 		}
 		bypass = {
@@ -105,7 +105,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = chi_industry_focus
+		id = CHI_industry_focus
 		icon = GFX_goal_generic_construct_infrastructure
 		cost = 7.00
 		x = 53
@@ -123,7 +123,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = chi_inst_reform_focus
+		id = CHI_inst_reform_focus
 		icon = GFX_goal_generic_cavalry
 		cost = 5.00
 		x = 29
@@ -136,7 +136,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = chi_split_plm_focus
+		id = CHI_split_plm_focus
 		icon = GFX_split_plm_focus
 		cost = 3.57
 		x = 11
@@ -168,7 +168,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = chi_foreign_help_focus
+		id = CHI_foreign_help_focus
 		icon = GFX_goal_generic_improve_relations
 		cost = 5.00
 		x = 29
@@ -178,7 +178,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_timed_idea = {
-				idea = diplomatic_effort
+				idea = CHI_diplomatic_effort_idea
 				days = 365
 			}
 		}
@@ -198,7 +198,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = chi_lushan_focus
+		id = CHI_lushan_focus
 		icon = GFX_goal_generic_propaganda
 		cost = 2.00
 		x = 5
@@ -207,7 +207,7 @@ focus_tree = {
 			factor = 100
 		}
 		completion_reward = {
-			#remove_ideas = chi_kmt
+			#remove_ideas = CHI_kmt
 			remove_ideas = appeasement_policy
 			hidden_effect = {
 				remove_ideas = appeasement_policy_0
@@ -265,10 +265,10 @@ focus_tree = {
 		icon = GFX_goal_generic_forceful_treaty
 		cost = 7.15
 		prerequisite = {
-			focus = chi_attack_com
+			focus = CHI_attack_com
 		}
 		mutually_exclusive = {
-			focus = chi_fight_focus
+			focus = CHI_fight_focus
 		}
 		x = 5
 		y = 1
@@ -583,13 +583,13 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			remove_ideas = chi_kmt
+			remove_ideas = CHI_kmt
 		}
 		available = {
 		}
 		bypass = {
 			NOT = {
-				has_idea = chi_kmt
+				has_idea = CHI_kmt
 			}
 		}
 	}
@@ -647,7 +647,7 @@ focus_tree = {
 		icon = GFX_focus_generic_little_entente
 		cost = 10.00
 		prerequisite = {
-			focus = chi_lushan_focus
+			focus = CHI_lushan_focus
 		}
 		x = 5
 		y = 7
@@ -655,7 +655,7 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			add_ideas = chi_inch_blood_1
+			add_ideas = CHI_inch_blood_1
 		}
 		available = {
 			has_war_with = JAP
@@ -664,7 +664,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = chi_air_arc_focus
+		id = CHI_air_arc_focus
 		icon = GFX_goal_generic_CAS
 		cost = 20.00
 		prerequisite = {
@@ -672,7 +672,7 @@ focus_tree = {
 		}
 		mutually_exclusive = {
 			focus = peace_with_japan
-			focus = chi_navy_sunfall_focus
+			focus = CHI_navy_sunfall_focus
 		}
 		x = 3
 		y = 8
@@ -680,7 +680,7 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			add_ideas = chi_arc
+			add_ideas = CHI_arc
 			news_event = {
 				id = efm_news.1026
 			}
@@ -720,12 +720,12 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = chi_fight_focus
+		id = CHI_fight_focus
 		icon = GFX_goal_generic_construct_military
 		cost = 7.15
 		prerequisite = {
-			focus = chi_peace_com
-			focus = chi_attack_com
+			focus = CHI_peace_com
+			focus = CHI_attack_com
 		}
 		mutually_exclusive = {
 			focus = ack_hiro_sen_focus
@@ -756,15 +756,15 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = chi_conquer_focus
+		id = CHI_conquer_focus
 		icon = GFX_goal_generic_major_war
 		cost = 14.29
 		prerequisite = {
 			focus = ack_hiro_sen_focus
-			focus = chi_fight_focus
+			focus = CHI_fight_focus
 		}
 		prerequisite = {
-			focus = chi_attack_com
+			focus = CHI_attack_com
 		}
 		x = 6
 		y = 2
@@ -824,7 +824,7 @@ focus_tree = {
 		icon = GFX_goal_generic_more_territorial_claims
 		cost = 5.00
 		prerequisite = {
-			focus = chi_conquer_focus
+			focus = CHI_conquer_focus
 		}
 		mutually_exclusive = {
 			focus = two_fronts_war
@@ -873,10 +873,10 @@ focus_tree = {
 		icon = GFX_goal_generic_fortify_city
 		cost = 5.00
 		prerequisite = {
-			focus = chi_conquer_focus
+			focus = CHI_conquer_focus
 		}
 		prerequisite = {
-			focus = chi_fight_focus
+			focus = CHI_fight_focus
 		}
 		mutually_exclusive = {
 			focus = delaying_tactics
@@ -898,14 +898,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = chi_navy_sunfall_focus
+		id = CHI_navy_sunfall_focus
 		icon = GFX_goal_generic_navy_anti_submarine
 		cost = 20.00
 		prerequisite = {
 			focus = an_inch_of_mountain_an_inch_of_blood
 		}
 		mutually_exclusive = {
-			focus = chi_air_arc_focus
+			focus = CHI_air_arc_focus
 			focus = peace_with_japan
 		}
 		x = 7
@@ -914,7 +914,7 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			add_ideas = chi_sunfall_sea
+			add_ideas = CHI_sunfall_sea
 			news_event = {
 				id = efm_news.1026
 			}
@@ -955,14 +955,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = chi_unite_focus
+		id = CHI_unite_focus
 		icon = GFX_goal_generic_military_deal
 		cost = 7.15
 		prerequisite = {
-			focus = chi_peace_com
+			focus = CHI_peace_com
 		}
 		prerequisite = {
-			focus = chi_fight_focus
+			focus = CHI_fight_focus
 		}
 		x = 8
 		y = 2
@@ -979,11 +979,11 @@ focus_tree = {
 			effect_tooltip = {
 				add_opinion_modifier = {
 					target = PRC
-					modifier = chi_prc_pact
+					modifier = CHI_prc_pact
 				}
 				reverse_add_opinion_modifier = {
 					target = PRC
-					modifier = chi_prc_pact
+					modifier = CHI_prc_pact
 				}
 				diplomatic_relation = {
 					country = PRC
@@ -1036,11 +1036,11 @@ focus_tree = {
 	
 	
 	focus = {
-		id = chi_coast_infra_focus
+		id = CHI_coast_infra_focus
 		icon = GFX_focus_generic_coastal_fort
 		cost = 7.15
 		prerequisite = {
-			focus = chi_unite_focus
+			focus = CHI_unite_focus
 			focus = united_and_ready
 			focus = two_fronts_war
 		}
@@ -1146,11 +1146,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = chi_defend_river_focus
+		id = CHI_defend_river_focus
 		icon = GFX_goal_generic_construct_military
 		cost = 7.15
 		prerequisite = {
-			focus = chi_coast_infra_focus
+			focus = CHI_coast_infra_focus
 		}
 		x = 8
 		y = 6
@@ -1292,8 +1292,8 @@ focus_tree = {
 		icon = GFX_goal_anti_comintern_pact
 		cost = 10
 		prerequisite = {
-			focus = chi_lushan_focus
-			focus = chi_defend_river_focus
+			focus = CHI_lushan_focus
+			focus = CHI_defend_river_focus
 		}
 		x = 7
 		y = 7
@@ -1316,8 +1316,8 @@ focus_tree = {
 		icon = GFX_goal_generic_military_sphere
 		cost = 10.00
 		prerequisite = {
-			focus = chi_defend_river_focus
-			focus = chi_lushan_focus
+			focus = CHI_defend_river_focus
+			focus = CHI_lushan_focus
 		}
 		x = 9
 		y = 7
@@ -1331,6 +1331,7 @@ focus_tree = {
 			}
 		}
 		cancel_if_invalid = no
+		continue_if_invalid = yes
 		available = {
 			613 = {
 				is_owned_and_controlled_by = ROOT
@@ -1494,14 +1495,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = chi_pressure_xinjiang
+		id = CHI_pressure_xinjiang
 		icon = GFX_goal_generic_political_pressure
 		cost = 5.00
 		prerequisite = {
-			focus = chi_unite_focus
+			focus = CHI_unite_focus
 		}
 		prerequisite = {
-			focus = chi_split_plm_focus
+			focus = CHI_split_plm_focus
 		}
 		x = 11
 		y = 3
@@ -1529,14 +1530,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = chi_war_xinjiang
+		id = CHI_war_xinjiang
 		icon = GFX_goal_generic_major_war
 		cost = 8.00
 		prerequisite = {
-			focus = chi_pressure_xinjiang
+			focus = CHI_pressure_xinjiang
 		}
 		mutually_exclusive = {
-			focus = chi_offer_xinjiang
+			focus = CHI_offer_xinjiang
 		}
 		x = 10
 		y = 4
@@ -1588,14 +1589,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = chi_offer_xinjiang
+		id = CHI_offer_xinjiang
 		icon = GFX_goal_generic_forceful_treaty
 		cost = 8.00
 		prerequisite = {
-			focus = chi_pressure_xinjiang
+			focus = CHI_pressure_xinjiang
 		}
 		mutually_exclusive = {
-			focus = chi_war_xinjiang
+			focus = CHI_war_xinjiang
 		}
 		x = 12
 		y = 4
@@ -1633,15 +1634,15 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = chi_war_xibei
+		id = CHI_war_xibei
 		icon = GFX_goal_generic_major_war
 		cost = 10.00
 		prerequisite = {
-			focus = chi_offer_xinjiang
-			focus = chi_war_xinjiang
+			focus = CHI_offer_xinjiang
+			focus = CHI_war_xinjiang
 		}
 		mutually_exclusive = {
-			focus = chi_unite_xibei
+			focus = CHI_unite_xibei
 		}
 		x = 10
 		y = 5
@@ -1716,15 +1717,15 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = chi_unite_xibei
+		id = CHI_unite_xibei
 		icon = GFX_goal_generic_dangerous_deal
 		cost = 10.00
 		prerequisite = {
-			focus = chi_offer_xinjiang
-			focus = chi_war_xinjiang
+			focus = CHI_offer_xinjiang
+			focus = CHI_war_xinjiang
 		}
 		mutually_exclusive = {
-			focus = chi_war_xibei
+			focus = CHI_war_xibei
 		}
 		x = 12
 		y = 5
@@ -1792,10 +1793,10 @@ focus_tree = {
 		icon = GFX_goal_generic_improve_relations
 		cost = 5.00
 		prerequisite = {
-			focus = chi_peace_com
+			focus = CHI_peace_com
 		}
 		prerequisite = {
-			focus = chi_inst_reform_focus
+			focus = CHI_inst_reform_focus
 		}
 		x = 15
 		y = 1
@@ -1824,7 +1825,7 @@ focus_tree = {
 			NOT = {
 				is_in_faction_with = JAP
 			}
-			has_opinion_modifier = chi_prc_pact
+			has_opinion_modifier = CHI_prc_pact
 		}
 		bypass = {
 		}
@@ -1834,10 +1835,10 @@ focus_tree = {
 		icon = GFX_goal_tripartite_pact
 		cost = 5.00
 		prerequisite = {
-			focus = chi_peace_com
+			focus = CHI_peace_com
 		}
 		prerequisite = {
-			focus = chi_inst_reform_focus
+			focus = CHI_inst_reform_focus
 		}
 		mutually_exclusive = {
 			focus = reinforce_new_life_movement
@@ -1856,7 +1857,7 @@ focus_tree = {
 			NOT = {
 				is_in_faction_with = JAP
 			}
-			has_opinion_modifier = chi_prc_pact
+			has_opinion_modifier = CHI_prc_pact
 		}
 		bypass = {
 		}
@@ -1898,7 +1899,7 @@ focus_tree = {
 			factor = 2
 		}
 		select_effect = {
-			set_global_flag = chi_zhang_lan_doctrine
+			set_global_flag = CHI_zhang_lan_doctrine
 		}
 		completion_reward = {
 			news_event = {
@@ -1950,7 +1951,7 @@ focus_tree = {
 			factor = 2
 		}
 		completion_reward = {
-			add_ideas = chi_collectivism
+			add_ideas = CHI_collectivism
 		}
 		available = {
 			NOT = {
@@ -2117,8 +2118,8 @@ focus_tree = {
 			remove_ideas = chiang3
 			remove_ideas = { left_wing_rhetoric }
 			swap_ideas = {
-				remove_idea = chi_collectivism
-				add_idea = chi_collectivism_good
+				remove_idea = CHI_collectivism
+				add_idea = CHI_collectivism_good
 			}
 			add_national_unity = 0.05
 			custom_effect_tooltip = cacnl_tt
@@ -2165,7 +2166,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = chi_workers_culture
+		id = CHI_workers_culture
 		icon = GFX_focus_YUG_pan_slavic_congress
 		cost = 10.00
 		prerequisite = {
@@ -2256,7 +2257,7 @@ focus_tree = {
 		icon = GFX_goal_generic_propaganda
 		cost = 7.00
 		prerequisite = {
-			focus = chi_inst_reform_focus
+			focus = CHI_inst_reform_focus
 		}
 		mutually_exclusive = {
 			focus = recognize_their_government
@@ -2364,13 +2365,13 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			remove_ideas = chi_kmt
+			remove_ideas = CHI_kmt
 		}
 		available = {
 		}
 		bypass = {
 			not = {
-				has_idea = chi_kmt
+				has_idea = CHI_kmt
 			}
 		}
 	}
@@ -2427,7 +2428,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = chi_axis_help_party_focus
+		id = CHI_axis_help_party_focus
 		icon = GFX_goal_demand_sudetenland
 		cost = 10.00
 		prerequisite = {
@@ -2492,11 +2493,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = chi_axis_help_focus
+		id = CHI_axis_help_focus
 		icon = GFX_goal_generic_military_deal
 		cost = 7.00
 		prerequisite = {
-			focus = chi_foreign_help_focus
+			focus = CHI_foreign_help_focus
 			focus = reinforce_new_life_movement
 		}
 		x = 27
@@ -2544,14 +2545,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = chi_axis_help_diplo_focus
+		id = CHI_axis_help_diplo_focus
 		icon = GFX_goal_sino_german_coop
 		cost = 7.00
 		prerequisite = {
-			focus = chi_axis_help_focus
+			focus = CHI_axis_help_focus
 		}
 		mutually_exclusive = {
-			focus = chi_sov_pact_focus
+			focus = CHI_sov_pact_focus
 		}
 		x = 27
 		y = 4
@@ -2584,7 +2585,7 @@ focus_tree = {
 		icon = GFX_focus_generic_military_mission
 		cost = 10.00
 		prerequisite = {
-			focus = chi_axis_help_diplo_focus
+			focus = CHI_axis_help_diplo_focus
 		}
 		x = 27
 		y = 5
@@ -2592,7 +2593,7 @@ focus_tree = {
 			factor = 20
 		}
 		completion_reward = {
-			add_ideas = german_style_training
+			add_ideas = CHI_german_style_training_idea
 		}
 		available = {
 			NOT = {
@@ -2603,11 +2604,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = chi_join_axis
+		id = CHI_join_axis
 		icon = GFX_goal_generic_territory_or_war
 		cost = 10.00
 		prerequisite = {
-			focus = chi_axis_help_party_focus
+			focus = CHI_axis_help_party_focus
 		}
 		prerequisite = {
 			focus = german_training_method
@@ -2658,18 +2659,18 @@ focus_tree = {
 				has_idea = neutrality_idea
 			}
 			is_in_faction = no
-			has_idea = chi_german_coop
+			has_idea = CHI_german_coop
 		}
 		bypass = {
 			is_in_faction_with = GER
 		}
 	}
 	focus = {
-		id = chi_comintern_help_focus
+		id = CHI_comintern_help_focus
 		icon = GFX_goal_generic_dangerous_deal
 		cost = 7.00
 		prerequisite = {
-			focus = chi_foreign_help_focus
+			focus = CHI_foreign_help_focus
 		}
 		x = 29
 		y = 3
@@ -2708,14 +2709,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = chi_sov_pact_focus
+		id = CHI_sov_pact_focus
 		icon = GFX_goal_befriend_soviet
 		cost = 7.00
 		prerequisite = {
-			focus = chi_comintern_help_focus
+			focus = CHI_comintern_help_focus
 		}
 		mutually_exclusive = {
-			focus = chi_axis_help_diplo_focus
+			focus = CHI_axis_help_diplo_focus
 		}
 		x = 29
 		y = 4
@@ -2742,7 +2743,7 @@ focus_tree = {
 		icon = GFX_goal_generic_air_bomber
 		cost = 10.00
 		prerequisite = {
-			focus = chi_sov_pact_focus
+			focus = CHI_sov_pact_focus
 		}
 		x = 29
 		y = 5
@@ -2777,7 +2778,7 @@ focus_tree = {
 			NOT = {
 				has_war_with = SOV
 			}
-			has_idea = chi_sov_pact
+			has_idea = CHI_sov_pact
 		}
 		bypass = {
 		}
@@ -2787,7 +2788,7 @@ focus_tree = {
 		icon = GFX_goal_generic_demand_territory
 		cost = 7.00
 		prerequisite = {
-			focus = chi_inst_reform_focus
+			focus = CHI_inst_reform_focus
 		}
 		mutually_exclusive = {
 			focus = recognize_their_government
@@ -2807,11 +2808,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = chi_allies_help_focus
+		id = CHI_allies_help_focus
 		icon = GFX_goal_generic_major_alliance
 		cost = 7.00
 		prerequisite = {
-			focus = chi_foreign_help_focus
+			focus = CHI_foreign_help_focus
 			focus = revive_new_culture_movement
 		}
 		x = 31
@@ -2870,7 +2871,7 @@ focus_tree = {
 		icon = GFX_goal_generic_air_fighter
 		cost = 7.00
 		prerequisite = {
-			focus = chi_allies_help_focus
+			focus = CHI_allies_help_focus
 		}
 		x = 31
 		y = 4
@@ -2911,7 +2912,7 @@ focus_tree = {
 				}
 			}
 			NOT = {
-				has_idea = chi_sov_pact
+				has_idea = CHI_sov_pact
 			}
 			USA = {
 				has_tech = fighter1
@@ -2924,7 +2925,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = chi_allies_help_diplo_focus
+		id = CHI_allies_help_diplo_focus
 		icon = GFX_goal_generic_positive_trade_relations
 		cost = 10.00
 		prerequisite = {
@@ -2966,7 +2967,7 @@ focus_tree = {
 		cost = 10.00
 		prerequisite = {
 			focus = german_training_method
-			focus = chi_allies_help_diplo_focus
+			focus = CHI_allies_help_diplo_focus
 			focus = sov_volunteer_group
 		}
 		mutually_exclusive = {
@@ -2992,7 +2993,7 @@ focus_tree = {
 		icon = GFX_goal_generic_political_pressure
 		cost = 10.00
 		prerequisite = {
-			focus = chi_allies_help_diplo_focus
+			focus = CHI_allies_help_diplo_focus
 			focus = sov_volunteer_group
 			focus = german_training_method
 		}
@@ -3018,8 +3019,8 @@ focus_tree = {
 			focus = interventionism_chi
 		}
 		mutually_exclusive = {
-			focus = chi_join_axis
-			focus = chi_join_allies
+			focus = CHI_join_axis
+			focus = CHI_join_allies
 		}
 		x = 29
 		y = 7
@@ -3061,7 +3062,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = civilianism_focus
+		id = CHI_civilianism_idea_focus
 		icon = GFX_goal_generic_consumer_goods
 		cost = 8.00
 		prerequisite = {
@@ -3073,7 +3074,7 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			add_ideas = civilianism
+			add_ideas = CHI_civilianism_idea
 		}
 		available = {
 		}
@@ -3085,7 +3086,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_civ_factory
 		cost = 8.00
 		prerequisite = {
-			focus = civilianism_focus
+			focus = CHI_civilianism_idea_focus
 		}
 		x = 33
 		y = 4
@@ -3094,8 +3095,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			swap_ideas = {
-				add_idea = civilianism2
-				remove_idea = civilianism
+				add_idea = CHI_civilianism_idea2
+				remove_idea = CHI_civilianism_idea
 			}
 		}
 		available = {
@@ -3117,8 +3118,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			swap_ideas = {
-				add_idea = civilianism3
-				remove_idea = civilianism2
+				add_idea = CHI_civilianism_idea3
+				remove_idea = CHI_civilianism_idea2
 			}
 		}
 		available = {
@@ -3162,7 +3163,7 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			add_ideas = for_china
+			add_ideas = CHI_for_china_idea
 		}
 		available = {
 			NOT = {
@@ -3173,14 +3174,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = chi_liberty_ethos
+		id = CHI_liberty_ethos
 		icon = GFX_goal_support_democracy
 		cost = 10.00
 		prerequisite = {
 			focus = democratism_focus
 		}
 		prerequisite = {
-			focus = civilianism_focus
+			focus = CHI_civilianism_idea_focus
 		}
 		prerequisite = {
 			focus = ethnicism_focus
@@ -3207,7 +3208,7 @@ focus_tree = {
 		y = 4
 		completion_reward = {
 			add_political_power = -150
-			remove_ideas = chi_kmt
+			remove_ideas = CHI_kmt
 			hidden_effect = {
 				news_event = {
 					days = 3
@@ -3224,7 +3225,7 @@ focus_tree = {
 		icon = GFX_goal_generic_intelligence_exchange
 		cost = 6.00
 		prerequisite = {
-			focus = chi_inst_reform_focus
+			focus = CHI_inst_reform_focus
 		}
 		x = 39
 		y = 2
@@ -3309,11 +3310,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = chi_constitution_focus
+		id = CHI_constitution_focus
 		icon = GFX_constitution_focus
 		cost = 20.00
 		prerequisite = {
-			focus = chi_liberty_ethos
+			focus = CHI_liberty_ethos
 		}
 		prerequisite = {
 			focus = assembly_of_the_constutients
@@ -3378,7 +3379,7 @@ focus_tree = {
 				uses = 2
 				category = land_doctrine
 			}
-			add_ideas = whampoa_spirit
+			add_ideas = CHI_whampoa_spirit_idea
 			hidden_effect = {
 				news_event = {
 					days = 3
@@ -3555,7 +3556,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = chi_army_reorganisation_focus
+		id = CHI_army_reorganisation_focus
 		icon = GFX_focus_generic_little_entente
 		cost = 10.00
 		prerequisite = {
@@ -3567,11 +3568,11 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			add_ideas = chi_reorganized_army_focus
+			add_ideas = CHI_reorganized_army_focus
 		}
 	}
 	focus = {
-		id = chi_technical_school_focus
+		id = CHI_technical_school_focus
 		icon = GFX_focus_CZE_military_aeronautical_institute
 		cost = 10.00
 		prerequisite = {
@@ -3642,11 +3643,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = chi_internal_air_focus
+		id = CHI_internal_air_focus
 		icon = GFX_goal_generic_air_production
 		cost = 10.00
 		prerequisite = {
-			focus = chi_technical_school_focus
+			focus = CHI_technical_school_focus
 		}
 		x = 45
 		y = 3
@@ -3714,44 +3715,44 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = chi_land_focus
+		id = CHI_land_focus
 		icon = GFX_goal_generic_air_fighter
 		cost = 10.00
 		prerequisite = {
-			focus = chi_internal_air_focus
+			focus = CHI_internal_air_focus
 		}
 		mutually_exclusive = {
-			focus = chi_coast_focus
+			focus = CHI_coast_focus
 		}
 		x = 44
 		y = 4
 		completion_reward = {
-			add_ideas = air_chi_land_focus
+			add_ideas = CHI_land_focus_idea
 		}
 	}
 	focus = {
-		id = chi_coast_focus
+		id = CHI_coast_focus
 		icon = GFX_goal_generic_air_naval_bomber
 		cost = 10.00
 		prerequisite = {
-			focus = chi_internal_air_focus
+			focus = CHI_internal_air_focus
 		}
 		mutually_exclusive = {
-			focus = chi_land_focus
+			focus = CHI_land_focus
 		}
 		x = 46
 		y = 4
 		completion_reward = {
-			add_ideas = air_chi_coast_focus
+			add_ideas = CHI_coast_focus_idea
 		}
 	}
 	focus = {
-		id = chi_air_orga_focus
+		id = CHI_air_orga_focus
 		icon = GFX_focus_YUG_ikarus
 		cost = 10.00
 		prerequisite = {
-			focus = chi_land_focus
-			focus = chi_coast_focus
+			focus = CHI_land_focus
+			focus = CHI_coast_focus
 		}
 		x = 45
 		y = 5
@@ -3759,11 +3760,11 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			add_ideas = chi_air_reorganisation
+			add_ideas = CHI_air_reorganisation
 		}
 	}
 	focus = {
-		id = chi_study_foreign_ship
+		id = CHI_study_foreign_ship
 		icon = GFX_goal_generic_navy_cruiser
 		cost = 10.00
 		prerequisite = {
@@ -3822,11 +3823,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = chi_taiwan_navy
+		id = CHI_taiwan_navy
 		icon = GFX_goal_generic_construct_naval_dockyard
 		cost = 10.00
 		prerequisite = {
-			focus = chi_study_foreign_ship
+			focus = CHI_study_foreign_ship
 		}
 		x = 47
 		y = 3
@@ -3872,7 +3873,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_naval_dockyard
 		cost = 10.00
 		prerequisite = {
-			focus = chi_study_foreign_ship
+			focus = CHI_study_foreign_ship
 		}
 		x = 49
 		y = 3
@@ -3896,14 +3897,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = chi_pacific_fleet
+		id = CHI_pacific_fleet
 		icon = GFX_goal_generic_navy_carrier
 		cost = 10.00
 		prerequisite = {
 			focus = shanghai_navy
 		}
 		prerequisite = {
-			focus = chi_taiwan_navy
+			focus = CHI_taiwan_navy
 		}
 		x = 48
 		y = 4
@@ -3924,11 +3925,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = chi_navy_reorganization
+		id = CHI_navy_reorganization
 		icon = GFX_goal_generic_navy_doctrines_tactics
 		cost = 10.00
 		prerequisite = {
-			focus = chi_pacific_fleet
+			focus = CHI_pacific_fleet
 		}
 		x = 47
 		y = 5
@@ -3936,7 +3937,7 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-			add_ideas = chi_navy_reorganization
+			add_ideas = CHI_navy_reorganized
 		}
 		available = {
 			NOT = {
@@ -3949,13 +3950,13 @@ focus_tree = {
 		icon = GFX_focus_research
 		cost = 10.00
 		prerequisite = {
-			focus = chi_army_reorganisation_focus
+			focus = CHI_army_reorganisation_focus
 		}
 		prerequisite = {
-			focus = chi_air_orga_focus
+			focus = CHI_air_orga_focus
 		}
 		prerequisite = {
-			focus = chi_navy_reorganization
+			focus = CHI_navy_reorganization
 		}
 		x = 45
 		y = 6
@@ -3970,11 +3971,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = chi_internal_navy_focus
+		id = CHI_internal_navy_focus
 		icon = GFX_goal_generic_navy_battleship
 		cost = 10.00
 		prerequisite = {
-			focus = chi_pacific_fleet
+			focus = CHI_pacific_fleet
 		}
 		x = 48
 		y = 6
@@ -4049,7 +4050,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_naval_dockyard
 		cost = 10.00
 		prerequisite = {
-			focus = chi_internal_navy_focus
+			focus = CHI_internal_navy_focus
 		}
 		x = 48
 		y = 7
@@ -4104,7 +4105,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = chi_academy_rf_focus
+		id = CHI_academy_rf_focus
 		icon = GFX_goal_academia_reform
 		cost = 10.00
 		prerequisite = {
@@ -4124,7 +4125,7 @@ focus_tree = {
 		icon = GFX_focus_research
 		cost = 10.00
 		prerequisite = {
-			focus = chi_academy_rf_focus
+			focus = CHI_academy_rf_focus
 		}
 		x = 51
 		y = 4
@@ -4138,11 +4139,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = chi_nationalize_industry_focus
+		id = CHI_nationalize_industry_focus
 		icon = GFX_goal_generic_construct_civ_factory
 		cost = 8.00
 		prerequisite = {
-			focus = chi_industry_focus
+			focus = CHI_industry_focus
 		}
 		x = 53
 		y = 1
@@ -4150,7 +4151,7 @@ focus_tree = {
 			factor = 50
 		}
 		completion_reward = {
-			add_ideas = chi_nationalize_industry_1_focus
+			add_ideas = CHI_nationalize_industry_1_focus
 			custom_effect_tooltip = blank_line
 			swap_ideas = {
 				remove_idea = unbalanced_industry
@@ -4181,11 +4182,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = chi_nationalize_industry_ii_focus
+		id = CHI_nationalize_industry_ii_focus
 		icon = GFX_goal_generic_construct_civ_factory
 		cost = 9.00
 		prerequisite = {
-			focus = chi_nationalize_industry_focus
+			focus = CHI_nationalize_industry_focus
 		}
 		x = 53
 		y = 2
@@ -4194,8 +4195,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			swap_ideas = {
-				remove_idea = chi_nationalize_industry_1_focus
-				add_idea = chi_nationalize_industry_2_focus
+				remove_idea = CHI_nationalize_industry_1_focus
+				add_idea = CHI_nationalize_industry_2_focus
 			}
 			custom_effect_tooltip = blank_line
 			swap_ideas = {
@@ -4227,11 +4228,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = chi_nationalize_industry_iii_focus
+		id = CHI_nationalize_industry_iii_focus
 		icon = GFX_goal_generic_construct_civ_factory
 		cost = 10.00
 		prerequisite = {
-			focus = chi_nationalize_industry_ii_focus
+			focus = CHI_nationalize_industry_ii_focus
 		}
 		x = 53
 		y = 3
@@ -4240,8 +4241,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			swap_ideas = {
-				remove_idea = chi_nationalize_industry_2_focus
-				add_idea = chi_nationalize_industry_3_focus
+				remove_idea = CHI_nationalize_industry_2_focus
+				add_idea = CHI_nationalize_industry_3_focus
 			}
 			custom_effect_tooltip = blank_line
 			swap_ideas = {
@@ -4277,7 +4278,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_civilian
 		cost = 14.29
 		prerequisite = {
-			focus = chi_nationalize_industry_iii_focus
+			focus = CHI_nationalize_industry_iii_focus
 		}
 		x = 53
 		y = 4
@@ -4299,11 +4300,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = chi_academy_ex_focus
+		id = CHI_academy_ex_focus
 		icon = GFX_goal_academia_expand
 		cost = 10.00
 		prerequisite = {
-			focus = chi_academy_rf_focus
+			focus = CHI_academy_rf_focus
 		}
 		prerequisite = {
 			focus = kmt_modern_industrialization
@@ -4322,7 +4323,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_mil_factory
 		cost = 10.00
 		prerequisite = {
-			focus = chi_industry_focus
+			focus = CHI_industry_focus
 		}
 		x = 58
 		y = 1
@@ -4335,7 +4336,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = industry_balanced_enough
-				has_completed_focus = chi_nationalize_industry_focus
+				has_completed_focus = CHI_nationalize_industry_focus
 			}
 		}
 	}
@@ -4403,7 +4404,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = industry_balanced_enough
-				has_completed_focus = chi_nationalize_industry_ii_focus
+				has_completed_focus = CHI_nationalize_industry_ii_focus
 			}
 			has_war = no
 			608 = {
@@ -4438,7 +4439,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = industry_balanced_enough
-				has_completed_focus = chi_nationalize_industry_ii_focus
+				has_completed_focus = CHI_nationalize_industry_ii_focus
 			}
 			is_puppet = no
 		}
@@ -4482,7 +4483,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = industry_balanced_enough
-				has_completed_focus = chi_nationalize_industry_iii_focus
+				has_completed_focus = CHI_nationalize_industry_iii_focus
 			}
 			has_tech = excavation3
 			716 = {
@@ -4529,7 +4530,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = industry_balanced_enough
-				has_completed_focus = chi_nationalize_industry_iii_focus
+				has_completed_focus = CHI_nationalize_industry_iii_focus
 			}
 			has_tech = excavation3
 			756 = {
@@ -4667,7 +4668,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = industry_balanced_enough
-				has_completed_focus = chi_nationalize_industry_iii_focus
+				has_completed_focus = CHI_nationalize_industry_iii_focus
 			}
 			has_tech = excavation3
 			607 = {
@@ -4837,7 +4838,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = industry_balanced_enough
-				has_completed_focus = chi_nationalize_industry_iii_focus
+				has_completed_focus = CHI_nationalize_industry_iii_focus
 			}
 			has_tech = excavation3
 			600 = {
@@ -4990,7 +4991,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = industry_balanced_enough
-				has_completed_focus = chi_nationalize_industry_iii_focus
+				has_completed_focus = CHI_nationalize_industry_iii_focus
 			}
 			owns_state = 766
 		}
@@ -5028,7 +5029,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_infrastructure
 		cost = 8.00
 		prerequisite = {
-			focus = chi_industry_focus
+			focus = CHI_industry_focus
 		}
 		x = 65
 		y = 1
@@ -5109,7 +5110,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = industry_balanced_enough
-				has_completed_focus = chi_nationalize_industry_focus
+				has_completed_focus = CHI_nationalize_industry_focus
 			}
 			NOT = {
 				any_state = {
@@ -5207,7 +5208,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = industry_balanced_enough
-				has_completed_focus = chi_nationalize_industry_ii_focus
+				has_completed_focus = CHI_nationalize_industry_ii_focus
 			}
 			NOT = {
 				any_state = {
@@ -5262,7 +5263,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = industry_balanced_enough
-				has_completed_focus = chi_nationalize_industry_iii_focus
+				has_completed_focus = CHI_nationalize_industry_iii_focus
 			}
 			NOT = {
 				any_state = {
@@ -5324,7 +5325,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_infrastructure
 		cost = 8.00
 		prerequisite = {
-			focus = chi_industry_focus
+			focus = CHI_industry_focus
 		}
 		x = 67
 		y = 1
@@ -5396,7 +5397,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = industry_balanced_enough
-				has_completed_focus = chi_nationalize_industry_focus
+				has_completed_focus = CHI_nationalize_industry_focus
 			}
 			NOT = {
 				any_state = {
@@ -5485,7 +5486,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = industry_balanced_enough
-				has_completed_focus = chi_nationalize_industry_ii_focus
+				has_completed_focus = CHI_nationalize_industry_ii_focus
 			}
 			NOT = {
 				any_state = {
@@ -5541,7 +5542,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = industry_balanced_enough
-				has_completed_focus = chi_nationalize_industry_iii_focus
+				has_completed_focus = CHI_nationalize_industry_iii_focus
 			}
 			NOT = {
 				any_state = {
@@ -5556,7 +5557,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_infrastructure
 		cost = 8.00
 		prerequisite = {
-			focus = chi_industry_focus
+			focus = CHI_industry_focus
 		}
 		x = 69
 		y = 1
@@ -5631,7 +5632,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = industry_balanced_enough
-				has_completed_focus = chi_nationalize_industry_focus
+				has_completed_focus = CHI_nationalize_industry_focus
 			}
 			NOT = {
 				any_state = {
@@ -5723,7 +5724,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = industry_balanced_enough
-				has_completed_focus = chi_nationalize_industry_ii_focus
+				has_completed_focus = CHI_nationalize_industry_ii_focus
 			}
 			NOT = {
 				any_state = {
@@ -5779,7 +5780,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = industry_balanced_enough
-				has_completed_focus = chi_nationalize_industry_iii_focus
+				has_completed_focus = CHI_nationalize_industry_iii_focus
 			}
 			NOT = {
 				any_state = {
@@ -5794,7 +5795,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_infrastructure
 		cost = 8.00
 		prerequisite = {
-			focus = chi_industry_focus
+			focus = CHI_industry_focus
 		}
 		x = 71
 		y = 1
@@ -5860,7 +5861,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = industry_balanced_enough
-				has_completed_focus = chi_nationalize_industry_focus
+				has_completed_focus = CHI_nationalize_industry_focus
 			}
 			NOT = {
 				any_state = {
@@ -5943,7 +5944,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = industry_balanced_enough
-				has_completed_focus = chi_nationalize_industry_ii_focus
+				has_completed_focus = CHI_nationalize_industry_ii_focus
 			}
 			NOT = {
 				any_state = {
@@ -5998,7 +5999,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = industry_balanced_enough
-				has_completed_focus = chi_nationalize_industry_iii_focus
+				has_completed_focus = CHI_nationalize_industry_iii_focus
 			}
 			NOT = {
 				any_state = {
@@ -6016,8 +6017,8 @@ focus_tree = {
 			focus = an_inch_of_mountain_an_inch_of_blood
 		}
 		mutually_exclusive = {
-			focus = chi_air_arc_focus
-			focus = chi_navy_sunfall_focus
+			focus = CHI_air_arc_focus
+			focus = CHI_navy_sunfall_focus
 		}
 		x = 5
 		y = 8
@@ -6083,11 +6084,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = chi_academy_mp_focus
+		id = CHI_academy_mp_focus
 		icon = GFX_focus_wonderweapons
 		cost = 10.00
 		prerequisite = {
-			focus = chi_academy_ex_focus
+			focus = CHI_academy_ex_focus
 		}
 		x = 52
 		y = 6
@@ -6204,9 +6205,9 @@ focus_tree = {
 		icon = GFX_goal_generic_war_with_comintern
 		cost = 10.00
 		prerequisite = {
-			focus = chi_air_arc_focus
+			focus = CHI_air_arc_focus
 			focus = peace_with_japan
-			focus = chi_navy_sunfall_focus
+			focus = CHI_navy_sunfall_focus
 			focus = last-ditch_effort
 		}
 		x = 5
@@ -6233,11 +6234,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = chi_allies_help_party_focus
+		id = CHI_allies_help_party_focus
 		icon = GFX_goal_generic_air_doctrine
 		cost = 10.00
 		prerequisite = {
-			focus = chi_constitution_focus
+			focus = CHI_constitution_focus
 		}
 		x = 36
 		y = 6
@@ -6273,14 +6274,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = chi_join_allies
+		id = CHI_join_allies
 		icon = GFX_goal_generic_alliance
 		cost = 10.00
 		prerequisite = {
-			focus = chi_allies_help_party_focus
+			focus = CHI_allies_help_party_focus
 		}
 		prerequisite = {
-			focus = chi_allies_help_diplo_focus
+			focus = CHI_allies_help_diplo_focus
 		}
 		mutually_exclusive = {
 			focus = asian_non-aligned_movement
@@ -6325,7 +6326,7 @@ focus_tree = {
 				has_idea = neutrality_idea
 			}
 			is_in_faction = no
-			has_idea = chi_new_equal_treaty
+			has_idea = CHI_new_equal_treaty
 		}
 		bypass = {
 			is_in_faction_with = ENG
@@ -6400,7 +6401,7 @@ focus_tree = {
 			focus = strengthen_the_kmt
 		}
 		mutually_exclusive = {
-			focus = chi_axis_help_party_focus
+			focus = CHI_axis_help_party_focus
 		}
 		x = 21
 		y = 6
@@ -6586,7 +6587,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_infrastructure
 		cost = 8.00
 		prerequisite = {
-			focus = chi_industry_focus
+			focus = CHI_industry_focus
 		}
 		x = 73
 		y = 1
@@ -6643,7 +6644,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = industry_balanced_enough
-				has_completed_focus = chi_nationalize_industry_focus
+				has_completed_focus = CHI_nationalize_industry_focus
 			}
 			NOT = {
 				any_state = {
@@ -6717,7 +6718,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = industry_balanced_enough
-				has_completed_focus = chi_nationalize_industry_ii_focus
+				has_completed_focus = CHI_nationalize_industry_ii_focus
 			}
 			NOT = {
 				any_state = {
@@ -6774,7 +6775,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = industry_balanced_enough
-				has_completed_focus = chi_nationalize_industry_iii_focus
+				has_completed_focus = CHI_nationalize_industry_iii_focus
 			}
 			NOT = {
 				any_state = {

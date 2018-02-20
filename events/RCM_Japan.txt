@@ -1048,7 +1048,7 @@ country_event = {
 		NOT = { has_country_flag = transfer_state_loop_jap }
 		num_of_controlled_states > 1
 		has_war_with = CHI
-		NOT = { has_completed_focus = reorganized_chi_puppet }
+		NOT = { has_completed_focus = reorganized_CHI_puppet }
 	}
 	mean_time_to_happen = {
 		days = 0
@@ -1173,7 +1173,7 @@ country_event = {
 		name = rcmjapan.34.a
 		ai_chance = { factor = 100 }
 		if = {
-			limit = { NOT = { has_completed_focus = reorganized_chi_puppet } }
+			limit = { NOT = { has_completed_focus = reorganized_CHI_puppet } }
 			every_owned_state = {
 				limit = {
 					is_controlled_by = JAP
@@ -2198,7 +2198,7 @@ country_event = {
 					modifier = hostile_status
 				}
 				#dismantle_faction = yes
-				create_faction = chi_man_bloc
+				create_faction = CHI_man_bloc
 				every_country = {
 					limit = {
 						is_puppet_of = JAP
@@ -2269,7 +2269,7 @@ country_event = {
 					modifier = hostile_status
 				}
 				#dismantle_faction = yes
-				create_faction = chi_man_bloc
+				create_faction = CHI_man_bloc
 				every_country = {
 					limit = {
 						is_puppet_of = JAP
@@ -2341,7 +2341,7 @@ country_event = {
 					modifier = hostile_status
 				}
 				#dismantle_faction = yes
-				create_faction = chi_man_bloc
+				create_faction = CHI_man_bloc
 				every_country = {
 					limit = {
 						is_puppet_of = JAP
@@ -2402,7 +2402,7 @@ country_event = {
 					modifier = hostile_status
 				}
 				#dismantle_faction = yes
-				create_faction = chi_man_bloc
+				create_faction = CHI_man_bloc
 				every_country = {
 					limit = {
 						is_puppet_of = JAP
@@ -2539,7 +2539,7 @@ country_event = {
 					modifier = hostile_status
 				}
 				#dismantle_faction = yes
-				create_faction = chi_man_bloc
+				create_faction = CHI_man_bloc
 				every_country = {
 					limit = {
 						is_puppet_of = JAP
@@ -2747,7 +2747,7 @@ country_event = {
 					modifier = hostile_status
 				}
 				#dismantle_faction = yes
-				create_faction = chi_man_bloc
+				create_faction = CHI_man_bloc
 				every_country = {
 					limit = {
 						is_puppet_of = JAP
@@ -2957,7 +2957,7 @@ country_event = {
 					modifier = hostile_status
 				}
 				#dismantle_faction = yes
-				create_faction = chi_man_bloc
+				create_faction = CHI_man_bloc
 				every_country = {
 					limit = {
 						is_puppet_of = JAP
@@ -3155,7 +3155,7 @@ country_event = {
 					modifier = hostile_status
 				}
 				#dismantle_faction = yes
-				create_faction = chi_man_bloc
+				create_faction = CHI_man_bloc
 				every_country = {
 					limit = {
 						is_puppet_of = JAP
@@ -3272,7 +3272,7 @@ country_event = {
 				modifier = hostile_status
 			}
 			#dismantle_faction = yes
-			create_faction = chi_man_bloc
+			create_faction = CHI_man_bloc
 			every_country = {
 				limit = {
 					is_puppet_of = JAP
@@ -3317,7 +3317,7 @@ country_event = {
 				modifier = hostile_status
 			}
 			#dismantle_faction = yes
-			create_faction = chi_man_bloc
+			create_faction = CHI_man_bloc
 			every_country = {
 				limit = {
 					is_puppet_of = JAP
@@ -3363,7 +3363,7 @@ country_event = {
 				modifier = hostile_status
 			}
 			#dismantle_faction = yes
-			create_faction = chi_man_bloc
+			create_faction = CHI_man_bloc
 			every_country = {
 				limit = {
 					is_puppet_of = JAP
@@ -3413,7 +3413,7 @@ country_event = {
 				modifier = hostile_status
 			}
 			#dismantle_faction = yes
-			create_faction = chi_man_bloc
+			create_faction = CHI_man_bloc
 			every_country = {
 				limit = {
 					is_puppet_of = JAP

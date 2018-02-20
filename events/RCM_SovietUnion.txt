@@ -105,7 +105,7 @@ country_event = {
 			remove_opinion_modifier = { target = PRC modifier = hostile_status }
 		}
 		set_global_flag = second_unite_bypass
-		CHI = { unlock_national_focus = chi_peace_com }
+		CHI = { unlock_national_focus = CHI_peace_com }
 		CHI = {
 			white_peace = PRC
 		}
@@ -892,17 +892,17 @@ country_event = {
 			}
 		}
 		CHI = {
-			add_timed_idea = { days = 1200 idea = chi_sov_pact }
-			add_opinion_modifier = { target = SOV modifier = chi_sov_pact_opinion }
-			add_opinion_modifier = { target = SOV modifier = chi_sov_pact_opinion_trade }
-			set_global_flag = chi_sov_pact_flag
+			add_timed_idea = { days = 1200 idea = CHI_sov_pact }
+			add_opinion_modifier = { target = SOV modifier = CHI_sov_pact_opinion }
+			add_opinion_modifier = { target = SOV modifier = CHI_sov_pact_opinion_trade }
+			set_global_flag = CHI_sov_pact_flag
 			diplomatic_relation = {
 				country = SOV
 				relation = non_aggression_pact
 				active = yes
 			}
 		}
-		add_opinion_modifier = { target = CHI modifier = chi_sov_pact_opinion }
+		add_opinion_modifier = { target = CHI modifier = CHI_sov_pact_opinion }
 		hidden_effect = { CHI = { country_event = { days = 2 id = rcmsoviet.1024 } } }
 	}
 	
@@ -948,14 +948,14 @@ country_event = { #drop pact with chi
 	fire_only_once = yes
 	trigger = {
 		tag = CHI 
-		has_global_flag = chi_sov_pact_flag
-		NOT = { has_idea = chi_sov_pact }
+		has_global_flag = CHI_sov_pact_flag
+		NOT = { has_idea = CHI_sov_pact }
 	}
 	immediate = {
-		SOV = { remove_opinion_modifier = { target = CHI modifier = chi_sov_pact_opinion } }
-		remove_opinion_modifier = { target = SOV modifier = chi_sov_pact_opinion }
-		SOV = { remove_opinion_modifier = { target = CHI modifier = chi_sov_pact_opinion_trade } }
-		remove_opinion_modifier = { target = SOV modifier = chi_sov_pact_opinion_trade }
+		SOV = { remove_opinion_modifier = { target = CHI modifier = CHI_sov_pact_opinion } }
+		remove_opinion_modifier = { target = SOV modifier = CHI_sov_pact_opinion }
+		SOV = { remove_opinion_modifier = { target = CHI modifier = CHI_sov_pact_opinion_trade } }
+		remove_opinion_modifier = { target = SOV modifier = CHI_sov_pact_opinion_trade }
 		diplomatic_relation = {
 			country = SOV
 			relation = non_aggression_pact
@@ -971,7 +971,7 @@ country_event = { #renew the pact 1
 	hidden = yes
 	trigger = {
 		tag = CHI 
-		has_idea = chi_sov_pact
+		has_idea = CHI_sov_pact
 		NOT = { has_global_flag = renew_pact_sino_soviet }
 	}
 	mean_time_to_happen = {
@@ -998,7 +998,7 @@ country_event = { #renew the pact 2
 	hidden = yes
 	trigger = {
 		tag = CHI 
-		has_idea = chi_sov_pact
+		has_idea = CHI_sov_pact
 		has_global_flag = renew_pact_sino_soviet
 	}
 	mean_time_to_happen = {

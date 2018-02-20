@@ -23,21 +23,35 @@ JAP_MON_alliance = {
 	enable = {
 		tag = JAP
 		country_exists = MON
+		NOT = {
+			has_government = communism
+		}
+		MON = {
+			NOT = {
+				has_government = communism
+			}
+		}
 	}
 	abort = {
 		NOT = {
 			country_exists = MON
+			MON = {
+				has_government = communism
+			}
+		}
+		MON = {
+			has_government = communism
 		}
 	}
 	ai_strategy = {
 		type = befriend
 		id = "MON"			
-		value = 200
+		value = 100
 	}
 	ai_strategy = {
 		type = alliance
 		id = "MON"		
-		value = 200
+		value = 100
 	}	
 }
 

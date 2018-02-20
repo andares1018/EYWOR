@@ -18,7 +18,7 @@ set_technology = {
 add_ideas = {
 	german_advisors
 	#CHI_communist_uprisings
-	chi_kmt
+	CHI_kmt
 	appeasement_policy
 	chiang
 	incompetent_heavy_industry
@@ -27,7 +27,7 @@ add_ideas = {
 	no_proper_equipment_design
 	the_blueshirts
 	central_club
-	nanking_decade
+	CHI_nanking_decade_idea
 	unstable_economy
 	#internationalism
 	#fascist_influence
@@ -45,27 +45,27 @@ set_convoys = 40
 	set_country_flag = mbf_ed
 	set_country_flag = nineteen_thirtynine_start
 	set_global_flag = flying_tiger
-	remove_ideas = nanking_decade
+	remove_ideas = CHI_nanking_decade_idea
 	remove_ideas = german_advisors
 	add_political_power = 1198
 	set_global_flag = hpc_joins_chi
 	set_country_flag = severed_ties_with_GER
-	complete_national_focus = chi_fight_focus
-	complete_national_focus = chi_unite_focus
-	complete_national_focus = chi_pressure_xinjiang
-	complete_national_focus = chi_industry_focus
-	complete_national_focus = chi_nationalize_industry_focus
-	complete_national_focus = chi_nationalize_industry_ii_focus
-	unlock_national_focus  = chi_attack_com
+	complete_national_focus = CHI_fight_focus
+	complete_national_focus = CHI_unite_focus
+	complete_national_focus = CHI_pressure_xinjiang
+	complete_national_focus = CHI_industry_focus
+	complete_national_focus = CHI_nationalize_industry_focus
+	complete_national_focus = CHI_nationalize_industry_ii_focus
+	unlock_national_focus  = CHI_attack_com
 	complete_national_focus	= reinforce_new_life_movement
 	complete_national_focus = big_rear_plan
-	complete_national_focus = chi_lushan_focus
-	complete_national_focus = chi_inst_reform_focus
-	unlock_national_focus = chi_foreign_help_focus
+	complete_national_focus = CHI_lushan_focus
+	complete_national_focus = CHI_inst_reform_focus
+	unlock_national_focus = CHI_foreign_help_focus
 	complete_national_focus = one_party_tutelage
-	complete_national_focus = chi_axis_help_focus
-	complete_national_focus = chi_comintern_help_focus
-	complete_national_focus = chi_allies_help_focus
+	complete_national_focus = CHI_axis_help_focus
+	complete_national_focus = CHI_comintern_help_focus
+	complete_national_focus = CHI_allies_help_focus
 	complete_national_focus = kmt_reorganize_nra
 	complete_national_focus = monetary_reform
 	complete_national_focus = streamlined_industry

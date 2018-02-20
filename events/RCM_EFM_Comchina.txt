@@ -1817,13 +1817,13 @@ country_event = {
 		ai_chance = { factor = 100 }
 		set_global_flag = CHI_unite_PRC
 		add_opinion_modifier = {
-			target = FROM modifier = chi_prc_reconciliation
+			target = FROM modifier = CHI_prc_reconciliation
 		}
 		reverse_add_opinion_modifier = {
-			target = FROM modifier = chi_prc_reconciliation
+			target = FROM modifier = CHI_prc_reconciliation
 		}
 		hidden_effect = {
-			FROM = { unlock_national_focus = chi_peace_com }
+			FROM = { unlock_national_focus = CHI_peace_com }
 		}
 		FROM = {
 			white_peace = PRC
@@ -1870,7 +1870,7 @@ country_event = {  #PRC refuse (to KMT)
 			limit = {
 				TAG = CHI
 			}
-			complete_national_focus = chi_attack_com
+			complete_national_focus = CHI_attack_com
 			else = {
 				create_wargoal = {
 					type = annex_everything target = FROM

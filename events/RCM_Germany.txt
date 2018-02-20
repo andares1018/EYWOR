@@ -14,7 +14,7 @@ country_event = {
 		add_political_power = 100
 		set_global_flag = ger_support_chi
 		GER = {
-				add_opinion_modifier = { target = CHI modifier = chi_promise_focus }
+				add_opinion_modifier = { target = CHI modifier = CHI_promise_focus }
 			}
 		JAP = {
 				add_opinion_modifier = { target = GER modifier = ger_support_chi }

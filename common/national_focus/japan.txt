@@ -1740,7 +1740,7 @@ focus_tree = {
 			hidden_trigger = {
 				has_country_flag = jap_revise_hiro_san_flag
 			}
-			has_global_flag = chi_accept_san_hiro
+			has_global_flag = CHI_accept_san_hiro
 		}
 		available = {
 			NOT = {
@@ -2351,7 +2351,7 @@ focus_tree = {
 		}
 		available = {
 			NOT = {
-				has_global_flag = chi_accept_san_hiro
+				has_global_flag = CHI_accept_san_hiro
 				has_idea = peace_talk_with_china
 			}
 		}
@@ -2680,7 +2680,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = reorganized_chi_puppet
+		id = reorganized_CHI_puppet
 		icon = GFX_goal_puppet_rrc
 		cost = 10.00
 		prerequisite = {
@@ -3912,7 +3912,7 @@ focus_tree = {
 		available = {
 			CHI = {
 				NOT = {
-					has_idea = chi_german_coop
+					has_idea = CHI_german_coop
 				}
 			}
 			613 = {
@@ -3925,7 +3925,7 @@ focus_tree = {
 					country_exists = CHI
 				}
 				CHI = {
-					has_idea = chi_german_coop
+					has_idea = CHI_german_coop
 				}
 			}
 		}
@@ -4118,7 +4118,7 @@ focus_tree = {
 			country_exists = GER
 			NOT = {
 				CHI = {
-					has_idea = chi_german_coop
+					has_idea = CHI_german_coop
 				}
 			}
 		}
@@ -5421,7 +5421,7 @@ focus_tree = {
 		available = {			
 			CHI = {
 				surrender_progress > 0.4
-				has_completed_focus = chi_sov_pact_focus
+				has_completed_focus = CHI_sov_pact_focus
 			}
 			NOT = {
 				has_war_with = SOV

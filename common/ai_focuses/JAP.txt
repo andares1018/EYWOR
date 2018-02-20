@@ -11,13 +11,13 @@ ai_historical_focus_list_JAP = {
 		pressure_pm_focus
 		konoe_cabinet
 		aggressive_china_politics
-		chi_war_focus
+		CHI_war_focus
 		subdue_warlords_focus
 		spiritual_mobilization_focus		
 		great_way_gov_focus
 		provisional_gov_focus
 		reform_shanghai_puppet_focus
-		reorganized_chi_puppet
+		reorganized_CHI_puppet
 		tojo_cabinet_focus
 		strike_usa_focus
 	}

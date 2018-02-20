@@ -4,11 +4,11 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/german_migrants.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_chi_reorganized_army_focus"
+		name = "GFX_idea_CHI_reorganized_army_focus"
 		texturefile = "gfx/interface/ideas/chi_reorganized_army_focus.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_chi_kmt"
+		name = "GFX_idea_CHI_kmt"
 		texturefile = "gfx/interface/ideas/chi_kmt.dds"
 	}
 	spriteType = {
@@ -20,12 +20,12 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/prc_long.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_air_chi_land_focus"
-		texturefile = "gfx/interface/ideas/air_chi_land_focus.dds"
+		name = "GFX_idea_CHI_land_focus_idea"
+		texturefile = "gfx/interface/ideas/CHI_land_focus_idea.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_air_chi_coast_focus"
-		texturefile = "gfx/interface/ideas/air_chi_coast_focus.dds"
+		name = "GFX_idea_CHI_coast_focus_idea"
+		texturefile = "gfx/interface/ideas/CHI_coast_focus_idea.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_china_american_advisors"
@@ -67,35 +67,35 @@ spriteTypes = {
 ###### CHINA REWORK #####
 	
 	spriteType = {
-		name = "GFX_idea_chi_nationalize_industry_1_focus"
+		name = "GFX_idea_CHI_nationalize_industry_1_focus"
 		texturefile = "gfx/interface/ideas/chi_nationalize_industry_1_focus.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_chi_nationalize_industry_2_focus"
+		name = "GFX_idea_CHI_nationalize_industry_2_focus"
 		texturefile = "gfx/interface/ideas/chi_nationalize_industry_2_focus.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_chi_nationalize_industry_3_focus"
+		name = "GFX_idea_CHI_nationalize_industry_3_focus"
 		texturefile = "gfx/interface/ideas/chi_nationalize_industry_3_focus.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_chi_navy_reorganization"
+		name = "GFX_idea_CHI_navy_reorganization"
 		texturefile = "gfx/interface/ideas/chi_navy_reorganization.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_chi_sunfall_sea"
+		name = "GFX_idea_CHI_sunfall_sea"
 		texturefile = "gfx/interface/ideas/chi_sunfall_sea.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_chi_arc"
+		name = "GFX_idea_CHI_arc"
 		texturefile = "gfx/interface/ideas/chi_arc.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_chi_german_coop"
+		name = "GFX_idea_CHI_german_coop"
 		texturefile = "gfx/interface/ideas/chi_german_coop.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_chi_new_equal_treaty"
+		name = "GFX_idea_CHI_new_equal_treaty"
 		texturefile = "gfx/interface/ideas/chi_new_equal_treaty.dds"
 	}
 	spriteType = {
@@ -468,16 +468,21 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/central_club.dds"
 	}
 	spriteType = {
+		name = "GFX_idea_CHI_civilianism_idea"
+		texturefile = "gfx/interface/ideas/civilianism.dds"
+	}
+	
+	spriteType = {
 		name = "GFX_idea_dangguo_system"
 		texturefile = "gfx/interface/ideas/dangguo_system.dds"
 	}
 	####
 	spriteType = {
-		name = "GFX_idea_diplomatic_effort"
+		name = "GFX_idea_CHI_diplomatic_effort_idea"
 		texturefile = "gfx/interface/ideas/diplomatic_effort.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_for_china"
+		name = "GFX_idea_CHI_for_china_idea"
 		texturefile = "gfx/interface/ideas/for_china.dds"
 	}
 	spriteType = {
@@ -489,7 +494,7 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/new_life.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_chi_soviet_pact"
+		name = "GFX_idea_CHI_soviet_pact"
 		texturefile = "gfx/interface/ideas/chi_soviet_pact.dds"
 	}
 	###### companies
@@ -563,11 +568,11 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/idea_pavel_rychagov.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_chi_sov_pact"
+		name = "GFX_idea_CHI_sov_pact"
 		texturefile = "gfx/interface/ideas/chi_soviet_pact.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_german_style_training"
+		name = "GFX_idea_CHI_german_style_training_idea"
 		texturefile = "gfx/interface/ideas/german_style_training.dds"
 	}
 	spriteType = {
@@ -575,43 +580,43 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/jap_usa_pact.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_chi_inch_blood_1"
+		name = "GFX_idea_CHI_inch_blood_1"
 		texturefile = "gfx/interface/ideas/chi_inch_blood.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_chi_inch_blood_2"
+		name = "GFX_idea_CHI_inch_blood_2"
 		texturefile = "gfx/interface/ideas/chi_inch_blood.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_chi_inch_blood_3"
+		name = "GFX_idea_CHI_inch_blood_3"
 		texturefile = "gfx/interface/ideas/chi_inch_blood.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_chi_inch_blood_4"
+		name = "GFX_idea_CHI_inch_blood_4"
 		texturefile = "gfx/interface/ideas/chi_inch_blood.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_chi_inch_blood_5"
+		name = "GFX_idea_CHI_inch_blood_5"
 		texturefile = "gfx/interface/ideas/chi_inch_blood.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_chi_inch_blood_6"
+		name = "GFX_idea_CHI_inch_blood_6"
 		texturefile = "gfx/interface/ideas/chi_inch_blood.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_chi_inch_blood_7"
+		name = "GFX_idea_CHI_inch_blood_7"
 		texturefile = "gfx/interface/ideas/chi_inch_blood.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_chi_inch_blood_8"
+		name = "GFX_idea_CHI_inch_blood_8"
 		texturefile = "gfx/interface/ideas/chi_inch_blood.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_chi_inch_blood_9"
+		name = "GFX_idea_CHI_inch_blood_9"
 		texturefile = "gfx/interface/ideas/chi_inch_blood.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_chi_inch_blood_10"
+		name = "GFX_idea_CHI_inch_blood_10"
 		texturefile = "gfx/interface/ideas/chi_inch_blood.dds"
 	}
 	spriteType = {

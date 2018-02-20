@@ -258,7 +258,7 @@ country_event = {
 	}
 }
 
-#chi_buy_gxc succ
+#CHI_buy_gxc succ
 country_event = {
 	id = gxc.14
 	title = gxc.14.t
@@ -294,7 +294,7 @@ country_event = {
 		dismantle_faction = yes
 	}
 }
-#chi_buy_gxc fail
+#CHI_buy_gxc fail
 country_event = {
 	id = gxc.15
 	title = gxc.15.t

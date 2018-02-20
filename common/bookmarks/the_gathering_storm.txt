@@ -96,7 +96,7 @@ bookmarks = {
 			ideas = {
 				chiang
 				incompetent_heavy_industry
-				nanking_decade
+				CHI_nanking_decade_idea
 			}
 			focuses = {
 				strengthen_chiangs_rule

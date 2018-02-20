@@ -170,7 +170,7 @@ natchi_war_production = {
     }
 }
 	
-	chi_armor_production = {
+	CHI_armor_production = {
 	enable = {
 		tag = CHI
 		num_of_military_factories > 80
@@ -273,10 +273,10 @@ more_naval_focused_chi = {
 	}
 }
 
-chi_jap_war = {
+CHI_jap_war = {
 	enable = {
 		tag = CHI
-		has_completed_focus = chi_fight_focus
+		has_completed_focus = CHI_fight_focus
 	}
 	abort = {
 		OR = {
@@ -419,7 +419,7 @@ CCP_tacit_truce = {
 		OR = {
 			NOT = { country_exists = NEA }
 			NOT = { country_exists = CHI }
-			has_opinion_modifier = chi_prc_reconciliation
+			has_opinion_modifier = CHI_prc_reconciliation
 			JAP = {
 				has_completed_focus = chinese_war_focus
 				NOT = {
@@ -450,7 +450,7 @@ NEA_tacit_truce = {
 			NOT = { country_exists = PRC }
 			NOT = { country_exists = CHI }
 			PRC = {
-				has_opinion_modifier = chi_prc_reconciliation
+				has_opinion_modifier = CHI_prc_reconciliation
 			}
 			JAP = {
 				has_completed_focus = chinese_war_focus
