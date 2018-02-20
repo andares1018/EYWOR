@@ -1,3 +1,4 @@
 ﻿l_english:
  is_owned_by_jap_or_its_puppet_tt:0"Is owned by @JAP§Y[JAP.GetName]§! or its §YSubjects§!.\n"
  is_controlled_by_jap_or_its_puppet_tt:0"Is controlled by @JAP§Y[JAP.GetName]§! or its §YSubjects§!.\n"
+ is_manchuria_state_count_triggers_tt:0"At least 3 states in the §YManchuria Region§! are controlled by @JAP§Y[JAP.GetName]§! or its §YSubjects§!.\n"

@@ -335,21 +335,25 @@ is_manchuria_state = {
 	}
 }
 is_manchuria_state_count_triggers = {
-	count_triggers = {
-		amount = 3
-		714 = { is_controlled_by_jap_or_its_puppet = yes }
-		715 = { is_controlled_by_jap_or_its_puppet = yes }
-		716 = { is_controlled_by_jap_or_its_puppet = yes }
-		717 = { is_controlled_by_jap_or_its_puppet = yes }
-		610 = { is_controlled_by_jap_or_its_puppet = yes }
-		328 = { is_controlled_by_jap_or_its_puppet = yes }
-		774 = { is_controlled_by_jap_or_its_puppet = yes }
-		775 = { is_controlled_by_jap_or_its_puppet = yes }
-		776 = { is_controlled_by_jap_or_its_puppet = yes }
-		777 = { is_controlled_by_jap_or_its_puppet = yes }
-		778 = { is_controlled_by_jap_or_its_puppet = yes }
-		779 = { is_controlled_by_jap_or_its_puppet = yes }
-		780 = { is_controlled_by_jap_or_its_puppet = yes }
-		781 = { is_controlled_by_jap_or_its_puppet = yes }
+	custom_trigger_tooltip = {
+		tooltip = is_manchuria_state_count_triggers_tt
+		count_triggers = {
+			amount = 3
+			714 = { is_controlled_by_jap_or_its_puppet = yes }
+			715 = { is_controlled_by_jap_or_its_puppet = yes }
+			716 = { is_controlled_by_jap_or_its_puppet = yes }
+			717 = { is_controlled_by_jap_or_its_puppet = yes }
+			610 = { is_controlled_by_jap_or_its_puppet = yes }
+			328 = { is_controlled_by_jap_or_its_puppet = yes }
+			774 = { is_controlled_by_jap_or_its_puppet = yes }
+			775 = { is_controlled_by_jap_or_its_puppet = yes }
+			776 = { is_controlled_by_jap_or_its_puppet = yes }
+			777 = { is_controlled_by_jap_or_its_puppet = yes }
+			778 = { is_controlled_by_jap_or_its_puppet = yes }
+			779 = { is_controlled_by_jap_or_its_puppet = yes }
+			780 = { is_controlled_by_jap_or_its_puppet = yes }
+			781 = { is_controlled_by_jap_or_its_puppet = yes }
+		}
 	}
+	
 }
