@@ -2314,6 +2314,18 @@ focus_tree = {
 						has_war_with = CHI
 					}
 				}
+				random_other_country = {
+					limit = {
+						is_legit_china = yes
+						controls_state = 598
+					}
+					ROOT = {
+						create_wargoal = {
+							target = PREV
+							type = puppet_wargoal_focus
+						}
+					}
+				}
 				every_country = {
 					limit = {
 						OR = {
@@ -2344,8 +2356,21 @@ focus_tree = {
 					hours = 1
 					id = news.1303
 				}
-				country_event = {
-					id = rcmchina.100
+				if = {
+					limit = {
+						any_country = {
+							is_warlord = yes
+							has_war_with = CHI
+						}
+					}
+					country_event = {
+						id = rcmchina.3035
+					}
+					else = {
+						country_event = {
+							id = rcmchina.100
+						}
+					}
 				}
 			}
 		}
@@ -2965,7 +2990,7 @@ focus_tree = {
 				remove_ideas = kohei_kashii
 				remove_ideas = sadao_araki
 				remove_ideas = yoshiyuki_kawashima
-				remove_unit_leader = 2002
+				remove_unit_leader = 2003
 			}
 			add_political_power = 150
 			add_national_unity = -0.1

@@ -21,7 +21,7 @@ country_event = {
 			}
 		CHI = {
 				add_opinion_modifier = { target = GER modifier = ger_accept_chi }
-				country_event = { days = 5 id = rcmchina.1001 }
+				country_event = { days = 5 id = rcmchina.229 }
 		}
 	}
 	
@@ -30,7 +30,7 @@ country_event = {
 		ai_chance = { factor = 0 }
 		CHI =  { 
 				add_opinion_modifier = { target = GER modifier = ger_refuse_chi } 
-				country_event = { days = 5 id = rcmchina.1002 }
+				country_event = { days = 5 id = rcmchina.230 }
 		}
 	}
 }

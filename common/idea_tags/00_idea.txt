@@ -15,9 +15,9 @@ idea_categories = {
 	}
 	
 	cabinet = {
-		slot = political_advisor
-		slot = political_advisor
-		slot = political_advisor
+		slot = ideology_advisor
+		slot = partisan_advisor
+		slot = partisan_advisor
 		slot = political_advisor
 		slot = political_advisor
 		slot = political_advisor		

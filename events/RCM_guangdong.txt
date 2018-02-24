@@ -57,7 +57,7 @@ country_event = {
 		name = gud.2.a
 		ai_chance = { factor = 50 } 
 		CHI = {
-			country_event = { days = 5 id = rcmchina.1007 }
+			country_event = { days = 5 id = rcmchina.235 }
 		}
 		add_political_power = 50
 		GXC = { 
@@ -69,7 +69,7 @@ country_event = {
 		name = gud.2.b
 		ai_chance = { factor = 50 } 
 		CHI = {
-			country_event = { days = 5 id = rcmchina.1008 }
+			country_event = { days = 5 id = rcmchina.236 }
 		}
 	}
 }
@@ -150,7 +150,7 @@ country_event = {
 				is_historical_focus_on = yes
 			}
 		}
-		CHI = { country_event = { days = 10 id = rcmchina.1005 } }
+		CHI = { country_event = { days = 10 id = rcmchina.233 } }
 	}
 	option = {
 		name = gud.4.e
@@ -199,7 +199,7 @@ country_event = {
 			TAG = GXC
 		}
 		hidden_effect = {
-			CHI = { country_event = { days = 10 id = rcmchina.1005 } }
+			CHI = { country_event = { days = 10 id = rcmchina.233 } }
 		}
 	}
 }

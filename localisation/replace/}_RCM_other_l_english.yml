@@ -18,6 +18,6 @@
  BORDER_WAR_NOT_OURS:0 "§HThere is Communist Partisan Activities in this state.§!"
  BORDER_WAR_POWER_DESC:0 "Combat values are defined by Divisions' Combat Strength and their Country's Doctrine Level"
  EFFECT_ADD_ACE:0 "$NAME|Y$ '$CALLSIGN|Y$' $SURNAME|Y$ becomes a flying Ace.\n"
- 
+ political_advisor:0 "Cabinet Ministers"
  
  

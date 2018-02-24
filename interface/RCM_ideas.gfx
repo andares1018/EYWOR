@@ -27,14 +27,6 @@ spriteTypes = {
 		name = "GFX_idea_CHI_coast_focus_idea"
 		texturefile = "gfx/interface/ideas/CHI_coast_focus_idea.dds"
 	}
-	spriteType = {
-		name = "GFX_idea_china_american_advisors"
-		texturefile = "gfx/interface/ideas/china_american_advisors.dds"
-	}
-	spriteType = {
-		name = "GFX_idea_china_italian_advisors"
-		texturefile = "gfx/interface/ideas/china_italian_advisors.dds"
-	}
 	##SOME JAP ADV
 	spriteType = {
 		name = "GFX_idea_yoshiyuki_kawashima"

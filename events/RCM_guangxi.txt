@@ -76,7 +76,7 @@ country_event = {
 			}
 		}
 		CHI = {
-			country_event = { days = 5 id = rcmchina.1009 }#GXC accept peace
+			country_event = { days = 5 id = rcmchina.237 }#GXC accept peace
 			add_political_power = 50
 		}
 		GUD = { country_event = { id = gxc.6 } }
@@ -249,7 +249,7 @@ country_event = {
 		create_faction = "anti_jap_salv_army"
 		add_to_faction = GUD
 		CHI = {
-			country_event = { days = 10 id = rcmchina.1006 }
+			country_event = { days = 10 id = rcmchina.234 }
 		}
 	}
 	option = {

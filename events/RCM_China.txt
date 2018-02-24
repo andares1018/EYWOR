@@ -32,44 +32,11 @@ country_event = {
 }
 ##########################China reworked
 
-#remove Lzr ctj lx and chiang after turning commie
-country_event = {
-	id = rcmchina.861
-	hidden = yes
-	
-	mean_time_to_happen = { days = 5 }
-	
-	fire_only_once = yes
-	
-	trigger = {
-		tag = CHI
-		CHI = {
-			has_government = communism
-		}
-	}
-	
-	immediate = {
-	}
-	option = {}
-}
-#LX join army
-country_event = {
-	id = rcmchina.865
-	hidden = yes
-	
-	fire_only_once = yes
-	
-	immediate = {
-		set_country_flag = lx_ed
-	}
-	option = {}
-}
-
 # Civil war warlords joins China
 country_event = {
-	id = rcmchina.867
-	title = rcmchina.867.t
-	desc = rcmchina.867.d
+	id = rcmchina.211
+	title = rcmchina.211.t
+	desc = rcmchina.211.d
 	picture = GFX_report_event_chinese_army_training
 	trigger = {
 		is_warlord = yes
@@ -99,7 +66,7 @@ country_event = {
 
 	}
 	option = {
-		name = rcmchina.867.a
+		name = rcmchina.211.a
 		ai_chance = {
 			factor = 100
 			modifier = {
@@ -111,7 +78,7 @@ country_event = {
 		hidden_effect = { CHI = { annex_country = { target = ROOT transfer_troops = yes } } }
 	}
 	option ={
-		name = rcmchina.867.b
+		name = rcmchina.211.b
 		ai_chance = {
 			factor = 0
 			modifier = {
@@ -124,9 +91,9 @@ country_event = {
 }
 # Civil war xsm gxc yun joins PRC (annex)
 country_event = {
-	id = rcmchina.869
-	title = rcmchina.869.t
-	desc = rcmchina.869.d
+	id = rcmchina.212
+	title = rcmchina.212.t
+	desc = rcmchina.212.d
 	picture = GFX_report_event_chinese_army_training
 	trigger = {
 		is_warlord = yes
@@ -141,20 +108,20 @@ country_event = {
 
 	}
 	option = {
-		name = rcmchina.869.a
+		name = rcmchina.212.a
 		ai_chance = { factor = 100 }
-		PRC = { country_event = { id =  rcmchina.875 } }
+		PRC = { country_event = { id =  rcmchina.218 } }
 	}
 	option = {
-		name = rcmchina.869.b
+		name = rcmchina.212.b
 		ai_chance = { factor = 0 }
 	}
 }
 # Civil war YUN joins PRC (annex)
 country_event = {
-	id =  rcmchina.870
-	title =  rcmchina.870.t
-	desc =  rcmchina.870.d
+	id =  rcmchina.213
+	title =  rcmchina.213.t
+	desc =  rcmchina.213.d
 	picture = GFX_report_event_chinese_army_training
 	
 	fire_only_once = yes
@@ -176,18 +143,18 @@ country_event = {
 		}
 	}
 	option = {
-		name =  rcmchina.870.a
+		name =  rcmchina.213.a
 		ai_chance = {
 			factor = 100
 		}
 		custom_effect_tooltip = GAME_OVER_TT
 		hidden_effect = {
-			PRC = { country_event = { id =  rcmchina.874 } }
+			PRC = { country_event = { id =  rcmchina.217 } }
 			PRC = { annex_country = { target = YUN transfer_troops = yes } }		
 		}
 	}
 	option = {
-		name =  rcmchina.870.b
+		name =  rcmchina.213.b
 		ai_chance = {
 			factor = 0
 		}
@@ -195,9 +162,9 @@ country_event = {
 }
 # Civil war XIK joins PRC (annex)
 country_event = {
-	id =  rcmchina.871
-	title =  rcmchina.871.t
-	desc =  rcmchina.871.d
+	id =  rcmchina.214
+	title =  rcmchina.214.t
+	desc =  rcmchina.214.d
 	picture = GFX_report_event_chinese_army_training	
 	fire_only_once = yes	
 	trigger = {
@@ -222,18 +189,18 @@ country_event = {
 		}
 	}
 	option = {
-		name =  rcmchina.871.a
+		name =  rcmchina.214.a
 		ai_chance = {
 			factor = 100
 		}
 		custom_effect_tooltip = GAME_OVER_TT
 		hidden_effect = {
-			PRC = { country_event = { id =  rcmchina.874 } }
+			PRC = { country_event = { id =  rcmchina.217 } }
 			PRC = { annex_country = { target = XIK transfer_troops = yes } }		
 		}
 	}
 	option = {
-		name =  rcmchina.871.b
+		name =  rcmchina.214.b
 		ai_chance = {
 			factor = 0
 		}
@@ -241,9 +208,9 @@ country_event = {
 }
 #china reunite
 country_event = {
-	id =  rcmchina.872
-	title =  rcmchina.872.t
-	desc =  rcmchina.872.d
+	id =  rcmchina.215
+	title =  rcmchina.215.t
+	desc =  rcmchina.215.d
 	picture = GFX_report_event_chinese_army_training	
 	trigger = {
 		OR = {
@@ -286,7 +253,7 @@ country_event = {
 		}
 	}
 	option = {
-		name =  rcmchina.872.a
+		name =  rcmchina.215.a
 		ai_chance ={
 			factor = 0			
 		}
@@ -295,10 +262,10 @@ country_event = {
 		effect_tooltip = {
 			CHI = { annex_country = { target = ROOT transfer_troops = yes }	}	
 		}
-		hidden_effect = { CHI = { country_event = { days = 2 id =  rcmchina.873 } } }
+		hidden_effect = { CHI = { country_event = { days = 2 id =  rcmchina.214 } } }
 	}
 	option = {
-		name =  rcmchina.872.b
+		name =  rcmchina.215.b
 		ai_chance ={
 			factor = 100
 			modifier = {
@@ -309,7 +276,7 @@ country_event = {
 		add_to_war = { targeted_alliance = CHI enemy = PRC }
 	}
 	option = {
-		name =  rcmchina.872.c
+		name =  rcmchina.215.c
 		ai_chance = {
 			factor = 0
 			modifier = {
@@ -321,44 +288,44 @@ country_event = {
 }
 #warlords joins chi aft com died
 country_event = {
-	id =  rcmchina.873
-	title =  rcmchina.873.t
-	desc =  rcmchina.873.d
+	id =  rcmchina.216
+	title =  rcmchina.216.t
+	desc =  rcmchina.216.d
 	picture = GFX_report_event_chinese_army_training
 	is_triggered_only = yes
 	option = {
-		name =  rcmchina.873.a
+		name =  rcmchina.216.a
 	}
 }
 #warlords joins com aft chi died
 country_event = {
-	id =  rcmchina.874
-	title =  rcmchina.874.t
-	desc =  rcmchina.874.d
+	id =  rcmchina.217
+	title =  rcmchina.217.t
+	desc =  rcmchina.217.d
 	picture = GFX_report_event_chinese_army_training
 	is_triggered_only = yes
 	option = {
-		name =  rcmchina.874.a
+		name =  rcmchina.217.a
 	}
 }
 country_event = {
-	id =  rcmchina.875
-	title =  rcmchina.875.t
-	desc =  rcmchina.875.d
+	id =  rcmchina.218
+	title =  rcmchina.218.t
+	desc =  rcmchina.218.d
 	picture = GFX_report_event_chinese_army_training
 	is_triggered_only = yes
 	option = {
-		name =  rcmchina.875.a
+		name =  rcmchina.218.a
 	}
 }
 #################
 
 # China and Japan no longer at war - Break up faction and Mao claims his part of China
 country_event = {
-	id = rcmchina.8107
-	title = rcmchina.8107.t
+	id = rcmchina.219
+	title = rcmchina.219.t
 	desc = {
-		text = rcmchina.8107.d_PRC_joined
+		text = rcmchina.219.d_PRC_joined
 		trigger = { 
 			PRC = { 
 				has_country_flag = PRC_joined_CHI_against_JAP 
@@ -366,7 +333,7 @@ country_event = {
 		} 
 	}
 	desc = {
-		text = rcmchina.8107.d_PRC_refused
+		text = rcmchina.219.d_PRC_refused
 		trigger = { 
 			PRC = { 
 				NOT = { has_country_flag = PRC_joined_CHI_against_JAP } 
@@ -394,8 +361,8 @@ country_event = {
 	}
 
 	option = {
-		name = rcmchina.8107.a
-		CHI = { country_event = { id = rcmchina.867 } }
+		name = rcmchina.219.a
+		CHI = { country_event = { id = rcmchina.211 } }
 		if = {
 			limit = { NOT = { PRC = { has_country_flag = PRC_joined_CHI_against_JAP } } }
 			PRC = { remove_opinion_modifier = { target = CHI modifier = unstable_alliance } }
@@ -424,17 +391,17 @@ country_event = {
 			end_puppet = PREV
 		}
 		hidden_effect = {
-			PRC = { country_event = { id = rcmchina.8105 } }
-			PRC = { country_event = { id = rcmchina.8111 } }
-			PRC = { country_event = { id = rcmchina.8108 days = 90 } }
+			PRC = { country_event = { id = rcmchina.225 } }
+			PRC = { country_event = { id = rcmchina.224 } }
+			PRC = { country_event = { id = rcmchina.221 days = 90 } }
 		}
 	}
 }
 # China and Japan no longer at war - Break up faction and Mao claims his part of China
 country_event = {
-	id = rcmchina.18107
-	title = rcmchina.18107.t
-	desc = rcmchina.18107.d
+	id = rcmchina.220
+	title = rcmchina.220.t
+	desc = rcmchina.220.d
 
 	picture = GFX_report_event_generic_sign_treaty1
 
@@ -461,7 +428,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = rcmchina.18107.a
+		name = rcmchina.220.a
 		every_country = {
 			limit = {
 				is_warlord = yes
@@ -474,15 +441,15 @@ country_event = {
 }
 # Restart Chinese civil war - Communist supporters reinforces the PRC army
 country_event = {
-	id = rcmchina.8108
-	title = rcmchina.8108.t
-	desc = rcmchina.8108.d
+	id = rcmchina.221
+	title = rcmchina.221.t
+	desc = rcmchina.221.d
 	picture = GFX_report_event_chinese_army_training
 	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
-		name = rcmchina.8108.a
+		name = rcmchina.221.a
 		custom_effect_tooltip = rcmchina.8108_PRC_SOV_reinforcements_2
 		hidden_effect = {
 			load_oob = "PRC_SOV_reinforcements_2"
@@ -494,9 +461,9 @@ country_event = {
 
 # Restart Chinese civil war
 country_event = {
-	id = rcmchina.8109
-	title = rcmchina.8109.t
-	desc = rcmchina.8109.d
+	id = rcmchina.222
+	title = rcmchina.222.t
+	desc = rcmchina.222.d
 	picture = GFX_report_event_chinese_soldiers
 
 	fire_only_once = yes
@@ -516,19 +483,19 @@ country_event = {
 	
 
 	option = {
-		name = rcmchina.8109.a
+		name = rcmchina.222.a
 		custom_effect_tooltip = rcmchina.8109_tt		
-		CHI = { country_event = { id = rcmchina.8110 } }
-		CHI = { country_event = { id = rcmchina.867 } }
+		CHI = { country_event = { id = rcmchina.223 } }
+		CHI = { country_event = { id = rcmchina.211 } }
 		effect_tooltip = {
 			create_wargoal = { target = CHI type = annex_everything }
 		}
 	}
 }
 country_event = {
-	id = rcmchina.8110
-	title = rcmchina.8110.t
-	desc = rcmchina.8110.d
+	id = rcmchina.223
+	title = rcmchina.223.t
+	desc = rcmchina.223.d
 	picture = GFX_report_event_chinese_soldiers
 
 	is_triggered_only = yes
@@ -540,7 +507,7 @@ country_event = {
 	}
 
 	option = {
-		name = rcmchina.8110.a
+		name = rcmchina.223.a
 		add_timed_idea = { idea = CHI_civil_war_deserters days = 180 }
 	}
 
@@ -548,9 +515,9 @@ country_event = {
 
 # China and Japan no longer at war - Break up faction and Mao claims his part of China
 country_event = {
-	id = rcmchina.8111
-	title = rcmchina.8111.t
-	desc = rcmchina.8111.d
+	id = rcmchina.224
+	title = rcmchina.224.t
+	desc = rcmchina.224.d
 	picture = GFX_report_event_generic_sign_treaty1
 
 	is_triggered_only = yes
@@ -559,7 +526,7 @@ country_event = {
 
 
 	option = {
-		name = rcmchina.8111.a
+		name = rcmchina.224.a
 		CHI = {
 			hidden_effect = {
 				remove_opinion_modifier = { target = PRC modifier = unstable_alliance }
@@ -616,32 +583,32 @@ country_event = {
 
 # PRC annexs SHX (puppet option for player)
 country_event = {
-	id = rcmchina.8105
-	title = rcmchina.8105.t
-	desc = rcmchina.8105.d
+	id = rcmchina.225
+	title = rcmchina.225.t
+	desc = rcmchina.225.d
 	picture = GFX_report_event_chinese_soldiers
 
 	is_triggered_only = yes
 
 	option = {
 		ai_chance = { factor = 100 }
-		name = rcmchina.8105.a
+		name = rcmchina.225.a
 		PRC = { declare_war_on = { target = SHX type = annex_everything } }
 	}
 }
 
 # SOV Demand Peace 2
 country_event = {
-	id = rcmchina.1870
-	title = rcmchina.1870.t
-	desc = rcmchina.1870.d
+	id = rcmchina.226
+	title = rcmchina.226.t
+	desc = rcmchina.226.d
 	picture = GFX_report_event_japanese_pow2
 
 	fire_only_once = yes
 	is_triggered_only = yes
 	
 	option = {
-		name = rcmchina.1870.a
+		name = rcmchina.226.a
 		trigger = {
 			NOT = {
 				any_other_country = {
@@ -791,7 +758,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = rcmchina.1870.b
+		name = rcmchina.226.b
 		ai_chance = { factor = 75 }
 		add_political_power = 120
 		custom_effect_tooltip = back_to_old_borders_mon
@@ -941,22 +908,22 @@ country_event = {
 		}	
 	} 
 	option = {
-		name = rcmchina.1870.c
+		name = rcmchina.226.c
 		ai_chance = { factor = 25 }
 	}
 }
 # SOV Demand Peace 1
 country_event = {
-	id = rcmchina.8112
-	title = rcmchina.8112.t
-	desc = rcmchina.8112.d
+	id = rcmchina.227
+	title = rcmchina.227.t
+	desc = rcmchina.227.d
 	picture = GFX_report_event_japanese_pow
 
 	fire_only_once = yes
 	is_triggered_only = yes
 	
 	option = {
-		name = rcmchina.8112.a
+		name = rcmchina.227.a
 		ai_chance = { factor = 50 }
 		add_political_power = 50
 		hidden_effect = {# Liberate
@@ -1036,7 +1003,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = rcmchina.8112.b
+		name = rcmchina.227.b
 		ai_chance = { factor = 50 }
 	}
 }
@@ -1044,15 +1011,15 @@ country_event = {
 ##################
 #HHK to berlin
 country_event = {
-	id = rcmchina.1000
-	title = rcmchina.1000.t
-	desc = rcmchina.1000.d
+	id = rcmchina.228
+	title = rcmchina.228.t
+	desc = rcmchina.228.d
 	picture = GFX_report_event_HHK_berlin
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = rcmchina.1000.a
+		name = rcmchina.228.a
 		GER =  {
 			country_event = { days = 5 id = rcmgermany.2000 }
 		}
@@ -1060,15 +1027,15 @@ country_event = {
 }
 #HHK to berlin succ
 country_event = {
-	id = rcmchina.1001
-	title = rcmchina.1001.t
-	desc = rcmchina.1001.d
+	id = rcmchina.229
+	title = rcmchina.229.t
+	desc = rcmchina.229.d
 	picture = GFX_report_event_HHK_success
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = rcmchina.1001.a
+		name = rcmchina.229.a
 		add_tech_bonus = {
 			name = industrial_bonus
 			bonus = 0.5
@@ -1092,41 +1059,43 @@ country_event = {
 }
 #HHK to berlin fail
 country_event = {
-	id = rcmchina.1002
-	title = rcmchina.1002.t
-	desc = rcmchina.1002.d
+	id = rcmchina.230
+	title = rcmchina.230.t
+	desc = rcmchina.230.d
 	picture = GFX_report_event_HHK_failure
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = rcmchina.1002.a
+		name = rcmchina.230.a
 	}
 }
 #####XINJIANG####
 country_event = {
-	id = rcmchina.1003
-	title = rcmchina.1003.t
-	desc = rcmchina.1003.d
+	id = rcmchina.231
+	title = rcmchina.231.t
+	desc = rcmchina.231.d
 	picture = GFX_report_event_chinese_army_training
 	is_triggered_only = yes
 	
 	option = {
-		name = rcmchina.1003.a
+		name = rcmchina.231.a
 		CHI = { add_to_faction = SIK }
-		SIK = { add_to_war = { targeted_alliance = CHI enemy = JAP } }
+		SIK = { 
+			add_to_war = { targeted_alliance = CHI enemy = JAP }
+		}
 	}
 }
 ##XIBEI UNITE
 country_event = {
-	id = rcmchina.1004
-	title = rcmchina.1004.t
-	desc = rcmchina.1004.d
+	id = rcmchina.232
+	title = rcmchina.232.t
+	desc = rcmchina.232.d
 	picture = GFX_report_event_chinese_army_training
 	is_triggered_only = yes
 	
 	option = {
-		name = rcmchina.1004.a
+		name = rcmchina.232.a
 		ai_chance = { factor = 100 }
 		if = {
 			limit = {
@@ -1225,14 +1194,14 @@ country_event = {
 }
 #2g GXC rebel
 country_event = {
-	id = rcmchina.1005
-	title = rcmchina.1005.t
-	desc = rcmchina.1005.d
+	id = rcmchina.233
+	title = rcmchina.233.t
+	desc = rcmchina.233.d
 	picture = GFX_report_event_chinese_soldiers_running
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = { #buy
-		name = rcmchina.1005.a
+		name = rcmchina.233.a
 		ai_chance = {
 			base = 40 	
 			modifier = {
@@ -1314,7 +1283,7 @@ country_event = {
 		}
 	}
 	option = { #peace
-		name = rcmchina.1005.b
+		name = rcmchina.233.b
 		ai_chance = {
 			base = 75 	
 			modifier = {
@@ -1327,7 +1296,7 @@ country_event = {
 		GXC = { country_event = { days = 15 id = gxc.4 } }
 	}
 	option = { #war
-		name = rcmchina.1005.c
+		name = rcmchina.233.c
 		ai_chance = {
 			base = 20 	
 			modifier = {
@@ -1340,9 +1309,9 @@ country_event = {
 }
 #2g GUD rebel
 country_event = {
-	id = rcmchina.1006
-	title = rcmchina.1006.t
-	desc = rcmchina.1006.d
+	id = rcmchina.234
+	title = rcmchina.234.t
+	desc = rcmchina.234.d
 	picture = GFX_report_event_chinese_soldiers_running
 	is_triggered_only = yes
 	
@@ -1352,7 +1321,7 @@ country_event = {
 		#}
 	
 	option = { #buy
-		name = rcmchina.1006.a
+		name = rcmchina.234.a
 		ai_chance = {
 			base = 50 	
 			modifier = {
@@ -1418,7 +1387,7 @@ country_event = {
 		}
 	}
 	option = { #peace
-		name = rcmchina.1006.b
+		name = rcmchina.234.b
 		ai_chance = {
 			base = 40 	
 			modifier = {
@@ -1434,11 +1403,11 @@ country_event = {
 		add_political_power = -75
 		GUD = { country_event = { id = gud.2 } }
 		hidden_effect = {
-			country_event = { days = 8 id = rcmchina.1005 }
+			country_event = { days = 8 id = rcmchina.233 }
 		}
 	}
 	option = { #war
-		name = rcmchina.1006.c
+		name = rcmchina.234.c
 		ai_chance = {
 			base = 20 	
 			modifier = {
@@ -1448,15 +1417,15 @@ country_event = {
 		}
 		GUD = { country_event = { id = gud.3 } }
 		hidden_effect = {
-			country_event = { days = 8 id = rcmchina.1005 }
+			country_event = { days = 8 id = rcmchina.233 }
 		}
 	}
 }
 #2g GUD accept peace
 country_event = {
-	id = rcmchina.1007
-	title = rcmchina.1007.t
-	desc = rcmchina.1007.d
+	id = rcmchina.235
+	title = rcmchina.235.t
+	desc = rcmchina.235.d
 	picture = GFX_report_event_japanese_chinese_surrender
 	is_triggered_only = yes
 	
@@ -1465,27 +1434,27 @@ country_event = {
 		#}
 	
 	option = {
-		name = rcmchina.1007.a
+		name = rcmchina.235.a
 	}
 }
 #2g GUD ref peace
 country_event = {
-	id = rcmchina.1008
-	title = rcmchina.1008.t
-	desc = rcmchina.1008.d
+	id = rcmchina.236
+	title = rcmchina.236.t
+	desc = rcmchina.236.d
 	picture = GFX_report_event_chinese_soldiers_02
 	is_triggered_only = yes
 	option = {
-		name = rcmchina.1008.a
+		name = rcmchina.236.a
 		ai_chance = { factor = 100 }
 		GUD = { set_global_flag = gud_ready }
 	}
 }
 #2g GXC accept peace
 country_event = {
-	id = rcmchina.1009
-	title = rcmchina.1009.t
-	desc = rcmchina.1009.d
+	id = rcmchina.237
+	title = rcmchina.237.t
+	desc = rcmchina.237.d
 	picture = GFX_report_event_japanese_chinese_surrender
 	is_triggered_only = yes
 	
@@ -1494,7 +1463,7 @@ country_event = {
 		#}
 	
 	option = {
-		name = rcmchina.1009.a
+		name = rcmchina.237.a
 	}
 }
 #2g GXC ref peace
@@ -1712,7 +1681,7 @@ country_event = {
 				is_historical_focus_on = yes
 			}
 		}
-		CHI = { country_event = { days = 5 id = rcmchina.1003 } }
+		CHI = { country_event = { days = 5 id = rcmchina.231 } }
 		effect_tooltip = {
 			CHI = {
 				add_to_faction = SIK
@@ -1760,13 +1729,13 @@ country_event = {
 	option = {
 		name = rcmchina.2024.a
 		ai_chance = { factor = 80 }
-		CHI = { country_event = { id = rcmchina.1004 } }
+		CHI = { country_event = { id = rcmchina.232 } }
 		custom_effect_tooltip = GAME_OVER_TT
 	}	
 	option = {
 		name = rcmchina.2024.b
 		ai_chance = { factor = 20 }
-		CHI = { country_event = { id = rcmchina.1004 } }
+		CHI = { country_event = { id = rcmchina.232 } }
 		effect_tooltip = {
 			CHI = {
 				add_opinion_modifier = { target = SIK modifier = hostile_status }
@@ -3629,7 +3598,7 @@ country_event = {
 }
 ########################END OF PAILINGMIAO
 ####XIAN INCIDENT
-#chiang to shanxi
+#chiang to XIAN
 country_event = {
 	id = rcmchina.2084
 	title = rcmchina.2084.t
@@ -3644,6 +3613,7 @@ country_event = {
 		#date < 1937.11.15
 		#has_war_with = PRC
 		NOT = { has_war_with = JAP }
+		NOT = { has_war_with = NEA }
 	}
 	immediate = {
 		hidden_effect = {
@@ -4471,3 +4441,37 @@ country_event = {
 }
 #####
 #Emergency peace when Japan declare on us but we have a civil war
+country_event = {
+	id = rcmchina.3035
+	title = rcmchina.3035.t
+	desc = rcmchina.3035.d
+	picture = GFX_report_liu_xiang
+	is_triggered_only = yes
+	immediate = {
+	}
+	option = {#emergency peace!
+		name = rcmchina.3035.a
+	}
+	option = {
+		name = rcmchina.3035.a
+	}
+}
+#other warlords
+country_event = {
+	id = rcmchina.3036
+	title = rcmchina.3036.t
+	desc = rcmchina.3036.d
+	picture = GFX_report_liu_xiang
+	is_triggered_only = yes
+	immediate = {
+	}
+	option = {
+		name = rcmchina.3036.a
+	}
+	option = {
+		name = rcmchina.3036.a
+	}
+	option = {
+		name = rcmchina.3036.a
+	}
+}

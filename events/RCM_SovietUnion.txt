@@ -457,7 +457,7 @@ country_event = {
 		name = rcmsoviet.1000.a
 		ai_chance = { factor = 80 }
 		CHI = {
-			country_event = { days = 5 id = rcmchina.8112 }
+			country_event = { days = 5 id = rcmchina.227 }
 		}
 		hidden_effect = {
 			set_global_flag = retreat_from_CHI
@@ -502,7 +502,7 @@ country_event = {
 		name = rcmsoviet.1001.a
 		ai_chance = { factor = 100 }
 		CHI = {
-			country_event = { days = 5 id = rcmchina.1870 }
+			country_event = { days = 5 id = rcmchina.226 }
 		}
 		hidden_effect = {
 			set_global_flag = retreat_from_CHI

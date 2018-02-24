@@ -2559,7 +2559,7 @@ focus_tree = {
 		completion_reward = {
 			country_event = {
 				days = 1
-				id = rcmchina.1000
+				id = rcmchina.228
 			}
 		}
 		available = {

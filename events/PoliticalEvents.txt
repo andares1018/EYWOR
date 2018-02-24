@@ -22,7 +22,12 @@ country_event = {
 		name = political.1.a
 		trigger = {
 		#=====v#####MODDED#####
-			AND = { NOT = { has_idea = chiang } NOT = { has_idea = chiang1 } NOT = { has_idea = chiang2 } NOT = { has_idea = chiang3 } }
+			AND = {
+				NOT = { has_idea = chiang }
+				NOT = { has_idea = chiang1 }
+				NOT = { has_idea = chiang2 }
+				NOT = { has_idea = chiang3 }
+			}
 			#OR = {
 			#	NOT = { tag = CHI }
 			#	AND = {
@@ -91,7 +96,12 @@ country_event = {
 		is_major = no
 		is_puppet = no
 		#===v#####MODDED#####
-		AND = { NOT = { has_idea = chiang } NOT = { has_idea = chiang1 } NOT = { has_idea = chiang2 } NOT = { has_idea = chiang3 } }		  
+		AND = {
+			NOT = { has_idea = chiang }
+			NOT = { has_idea = chiang1 }
+			NOT = { has_idea = chiang2 }
+			NOT = { has_idea = chiang3 }
+		}		  
 		#OR = {
 		#	NOT = { tag = CHI }
 		#	AND = {
@@ -760,7 +770,12 @@ country_event = {
 		has_country_flag = democracy_government_support
 		is_puppet = no
 		###MODDED#####vvv
-		AND = { NOT = { has_idea = chiang } NOT = { has_idea = chiang1 } NOT = { has_idea = chiang2 } NOT = { has_idea = chiang3 } }
+		AND = {
+			NOT = { has_idea = chiang }
+			NOT = { has_idea = chiang1 }
+			NOT = { has_idea = chiang2 }
+			NOT = { has_idea = chiang3 }
+		}
 		###MODDED#####^^^
 	}
 	
@@ -806,7 +821,12 @@ country_event = {
 		NOT = { has_idea = reign_of_terror }
 		is_puppet = no
 		###MODDED#####vvv
-		AND = { NOT = { has_idea = chiang } NOT = { has_idea = chiang1 } NOT = { has_idea = chiang2 } NOT = { has_idea = chiang3 } }
+		AND = {
+			NOT = { has_idea = chiang }
+			NOT = { has_idea = chiang1 }
+			NOT = { has_idea = chiang2 }
+			NOT = { has_idea = chiang3 }
+		}
 		###MODDED####^^
 	}
 
@@ -956,7 +976,12 @@ country_event = {
 		name = political.20.c
 		####MODDED#####vvv
 		trigger = {
-			AND = { NOT = { has_idea = chiang } NOT = { has_idea = chiang1 } NOT = { has_idea = chiang2 } NOT = { has_idea = chiang3 } }
+			AND = {
+				NOT = { has_idea = chiang }
+				NOT = { has_idea = chiang1 }
+				NOT = { has_idea = chiang2 }
+				NOT = { has_idea = chiang3 }
+			}
 			OR = {
 				AND = { 
 					tag = JAP
@@ -1192,7 +1217,12 @@ country_event = {
 		has_idea = democratic_revolutionaries
 		#Special case CHI PRC
 		####MODDED#####vvv
-		AND = { NOT = { has_idea = chiang } NOT = { has_idea = chiang1 } NOT = { has_idea = chiang2 } NOT = { has_idea = chiang3 } }
+		AND = {
+			NOT = { has_idea = chiang }
+			NOT = { has_idea = chiang1 }
+			NOT = { has_idea = chiang2 }
+			NOT = { has_idea = chiang3 }
+		}
 		OR = {
 			AND = { 
 				tag = JAP

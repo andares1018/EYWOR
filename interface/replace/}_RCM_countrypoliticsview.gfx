@@ -4,7 +4,14 @@ spriteTypes = {
 		name = "GFX_idea_slot_foreign_advisor"
 		texturefile = "gfx/interface/ideas/idea_slot_foreign_advisor.dds"
 	}
-	
+	spriteType = {
+		name = "GFX_idea_slot_ideology_advisor"
+		texturefile = "gfx/interface/ideas/idea_slot_ideological_adivors.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_slot_partisan_advisor"
+		texturefile = "gfx/interface/ideas/idea_slot_partisan_adivors.dds"
+	}
 	#MODDED#v
 	spriteType = {
 		name = "GFX_ideology_n_socialism_group"

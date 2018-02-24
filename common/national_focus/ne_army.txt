@@ -1813,6 +1813,7 @@ focus_tree = {
 		bypass = {
 			CHI = {
 				OR = {
+					has_war_with = ROOT
 					has_completed_focus = peace_with_japan
 					NOT = {
 						is_legit_china = yes

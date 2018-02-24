@@ -324,18 +324,11 @@ fascist_peace = {
 			factor = 0
 			FROM = {
 				OR = {
-					tag = PRC
-					tag = GXC
-					tag = YUN
-					tag = SHX
-					tag = XSM
-					tag = SIK
+					##MODDEDv
 					original_tag = PRC
-					original_tag = GXC
-					original_tag = YUN
-					original_tag = SHX
-					original_tag = XSM
-					original_tag = SIK					
+					is_originally_warlord = yes
+					original_tag = SIK
+					#MODDED^
 				}
 			}
 		}
@@ -558,25 +551,16 @@ fascist_peace = {
 			NOT = { 
 				FROM = { 
 					owner = { 
-						OR = {
-							tag = GXC
-							tag = PRC
-							tag = YUN
-							tag = SHX
-							tag = XSM
-						}
+						#MODDEDv
+						is_warlord = yes
+						#MODDED^
 					} 
 				} 
 			}
 			NOT = {
-				OR = {
-					tag = CHI
-					tag = PRC
-					tag = GXC
-					tag = YUN
-					tag = SHX
-					tag = XSM
-				}
+				#MODDEDv
+				is_warlord = yes
+				#MODDED^
 			}
 
 			#Fascist versions of these countries can take Chinese land

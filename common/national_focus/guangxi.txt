@@ -1782,11 +1782,10 @@ focus_tree = {
 			}
 		}
 		bypass = {
-			#NOT = { CHI = { has_idea = appeasement_policy } }
-			PRC = {
-				has_completed_focus = PRC_Anti_Japanese_and_Chiang
+			any_other_country = {
+				is_legit_china = yes
+				has_war_with = ROOT
 			}
-			is_in_faction_with = PRC
 		}
 		x = 16
 		y = 1
