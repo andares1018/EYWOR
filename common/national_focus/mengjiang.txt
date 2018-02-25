@@ -1715,12 +1715,12 @@ focus_tree = {
 		select_effect = {
 			SHX = { #they get notified
 				country_event = {
-					days = 15 id = rcmchina.3030
+					days = 15 id = rcmchina.326
 				}
 			}
 			PLM = { #they get notified
 				country_event = {
-					days = 15 id = rcmchina.3030
+					days = 15 id = rcmchina.326
 				}
 			}
 		}

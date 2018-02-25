@@ -148,7 +148,7 @@ focus_tree = {
 			custom_effect_tooltip = failed_to_do_this_focus_in_time_can_lead_to_a_complete_defection_of_inner_mongolia_tt
 			PLM = {
 				country_event = {
-					id = rcmchina.2067
+					id = rcmchina.294
 				}
 			}
 		}
@@ -283,7 +283,7 @@ focus_tree = {
 			JAP = {
 				country_event = {
 					days = 2
-					id = rcmchina.2026
+					id = rcmchina.253
 				}
 			}
 			effect_tooltip = {
@@ -837,7 +837,7 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = -50
 			country_event = {
-				id = rcmchina.2051
+				id = rcmchina.276
 			}
 			custom_effect_tooltip = if_they_accept_red
 			effect_tooltip = {
@@ -1618,7 +1618,7 @@ focus_tree = {
 			add_political_power = -50
 			SIK = {
 				country_event = {
-					id = rcmchina.2022
+					id = rcmchina.249
 				}
 			}
 		}
@@ -1739,17 +1739,17 @@ focus_tree = {
 		completion_reward = {
 			SIK = {
 				country_event = {
-					id = rcmchina.2024
+					id = rcmchina.251
 				}
 			}
 			XSM = {
 				country_event = {
-					id = rcmchina.2024
+					id = rcmchina.251
 				}
 			}
 			NXM = {
 				country_event = {
-					id = rcmchina.2024
+					id = rcmchina.251
 				}
 			}
 			if = {
@@ -1758,7 +1758,7 @@ focus_tree = {
 				}
 				TNG = {
 					country_event = {
-						id = rcmchina.2024
+						id = rcmchina.251
 					}
 				}
 			}
@@ -1768,7 +1768,7 @@ focus_tree = {
 				}
 				HMI = {
 					country_event = {
-						id = rcmchina.2024
+						id = rcmchina.251
 					}
 				}
 			}
@@ -2233,7 +2233,7 @@ focus_tree = {
 		completion_reward = {
 			SOV = {
 				country_event = {
-					id = rcmchina.2061
+					id = rcmchina.288
 				}
 			}
 		}
@@ -2511,7 +2511,7 @@ focus_tree = {
 		completion_reward = {
 			GER = {
 				country_event = {
-					id = rcmchina.2027
+					id = rcmchina.254
 				}
 			}
 			custom_effect_tooltip = if_they_accept
@@ -2636,7 +2636,7 @@ focus_tree = {
 		completion_reward = {
 			GER = {
 				country_event = {
-					id = rcmchina.2064
+					id = rcmchina.291
 				}
 			}
 		}
@@ -2686,7 +2686,7 @@ focus_tree = {
 		completion_reward = {
 			SOV = {
 				country_event = {
-					id = rcmchina.2030
+					id = rcmchina.257
 				}
 			}
 			custom_effect_tooltip = if_they_accept
@@ -2829,7 +2829,7 @@ focus_tree = {
 		completion_reward = {
 			ENG = {
 				country_event = {
-					id = rcmchina.2033
+					id = rcmchina.260
 				}
 			}
 			custom_effect_tooltip = if_they_accept
@@ -2881,7 +2881,7 @@ focus_tree = {
 		completion_reward = {
 			USA = {
 				country_event = {
-					id = rcmchina.2046
+					id = rcmchina.273
 				}
 			}
 			custom_effect_tooltip = if_they_accept_green
@@ -2939,12 +2939,12 @@ focus_tree = {
 		completion_reward = {
 			ENG = {
 				country_event = {
-					id = rcmchina.2039
+					id = rcmchina.266
 				}
 			}
 			USA = {
 				country_event = {
-					id = rcmchina.2040
+					id = rcmchina.267
 				}
 			}
 		}
@@ -6071,7 +6071,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			country_event = {
-				id = rcmchina.2055
+				id = rcmchina.282
 			}
 		}
 		bypass = {

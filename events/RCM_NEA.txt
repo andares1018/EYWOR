@@ -19,6 +19,7 @@ country_event = {
 		}
 		CHI = { has_war_with = NEA }
 		NEA = {
+			is_faction_leader = yes
 			has_completed_focus = nea_xian_incident
 		}
 		has_global_flag = xian_kmt_refuse
@@ -57,7 +58,7 @@ country_event = {
 					tag = ROOT
 				}
 			}
-			country_event = { days = 5 id = nea.2 }
+			country_event = { days = 3 id = nea.2 }
 		}
 	}
 	option = { #not join
@@ -127,12 +128,17 @@ country_event = {
 			}
 		}
 		PRC = {
-			FROM = { add_to_war = { targeted_alliance = PRC enemy = CHI } }
+			FROM = {
+				add_to_war = { targeted_alliance = PRC enemy = CHI }
+			}
 		}
 	}
 	option = {
 		name = nea.2.b
 		trigger = { TAG = NEA }
+		NEA = {
+			add_to_faction = FROM
+		}
 	}
 	option = {
 		name = nea.2.c

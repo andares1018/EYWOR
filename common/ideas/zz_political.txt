@@ -1,6 +1,6 @@
 ideas = {
 
-	ideology_advisor = {
+	political_advisor = {
 		# POLITICAL			
 		generic_communist_revolutionary = {
 			

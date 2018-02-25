@@ -394,7 +394,7 @@ ai_cont_foc_prc = { #this is for AI to do continue focus
 						has_long_march_idea = yes
 					}
 					AND = { #amass
-						has_completed_focus = PRC_Develop_surrounding_area
+						has_completed_focus = PRC_North_China_Uprisings
 						any_state = {
 							custom_trigger_tooltip = {
 								tooltip = commie_ridden_states_tt
@@ -412,7 +412,7 @@ ai_cont_foc_prc = { #this is for AI to do continue focus
 						}
 					}
 					AND = { #stage
-						has_completed_focus = PRC_Develop_surrounding_area
+						has_completed_focus = PRC_North_China_Uprisings
 						any_state = {
 							custom_trigger_tooltip = {
 								tooltip = commie_ridden_states_tt

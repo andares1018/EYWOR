@@ -271,7 +271,7 @@ country_event = {
 		hidden_effect = {
 			CHI = {
 				country_event = {
-					days = 70 id = rcmchina.2084
+					days = 70 id = rcmchina.311
 				}
 			}
 			

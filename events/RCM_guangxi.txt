@@ -87,7 +87,7 @@ country_event = {
 		name = gxc.4.b
 		ai_chance = { factor = 30 }
 		CHI = {
-			country_event = { days = 5 id = rcmchina.1010 }
+			country_event = { days = 5 id = rcmchina.238 }
 		}
 	}
 }
@@ -201,10 +201,13 @@ country_event = {
 			original_tag = CHI
 			original_tag = GXC
 		}
+		NOT = { has_country_flag = liangguang_faction }
 		has_global_flag = gud_ready
 		GXC = { has_offensive_war_with = CHI }
 	}
-	fire_only_once = yes
+	mean_time_to_happen = {
+		days = 0
+	}
 	option = {
 		name = gxc.12.a
 		trigger = { original_tag = GXC }
@@ -220,10 +223,12 @@ country_event = {
 				add_to_faction = GUD
 				GUD = { add_to_war = { targeted_alliance = GXC enemy = CHI } }
 		}
+		set_country_flag = liangguang_faction
 	}
 	option = {
 		name = gxc.12.b
 		trigger = { TAG = CHI }
+		set_country_flag = liangguang_faction
 	}
 }
 #form anti_jap_salv_army#

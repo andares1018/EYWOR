@@ -1121,27 +1121,14 @@ country_event = {
 				is_core_of = ECA
 			}
 		}
-		OR = { #workaround bc any_owned_state doesnt work
-			XIK = {
-				is_neighbor_of = JAP
-			}
-			AND = {
-				TIB = {
-					is_neighbor_of = JAP
+		any_country = {
+			is_subject_of = ROOT
+			any_state = {
+				owner = {
+					tag = ROOT
 				}
-				441 = { NOT = { is_controlled_by = JAP } }
-				439 = { NOT = { is_controlled_by = JAP } }
-				431 = { NOT = { is_controlled_by = JAP } }
-				434 = { NOT = { is_controlled_by = JAP } }
-				324 = { NOT = { is_controlled_by = JAP } }
-				323 = { NOT = { is_controlled_by = JAP } }
+				is_core_of = PREV
 			}
-			ECA = {
-				is_neighbor_of = JAP
-				NOT = { 330 = { is_controlled_by = JAP }  }
-			}
-			325 = { is_controlled_by = JAP }
-			605 = { is_controlled_by = JAP }
 		}
 		NOT = { has_global_flag = RRC_expand }
 		AND = {

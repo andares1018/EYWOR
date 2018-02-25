@@ -1055,7 +1055,7 @@ ideas = {
 			}
 		}
 		
-		PRC_Develop_surrounding_area = {
+		PRC_North_China_Uprisings = {
 		
 			picture = FRA_scw_intervention_republicans_focus
 

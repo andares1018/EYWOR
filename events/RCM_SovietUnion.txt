@@ -147,7 +147,7 @@ country_event = {
 		hidden_effect = {
 			CHI = {
 				set_country_flag = im_civ_war_exception
-				#country_event = { days = 1 id = rcmchina.2087 }
+				#country_event = { days = 1 id = rcmchina.314 }
 			}
 			#country_event = { hours = 5 id = nea.3 }
 		}
@@ -189,6 +189,9 @@ country_event = {
 				remove_ideas = chiang_better
 			}
 		}
+		country_event = {
+			id = rcmchina.338
+		}
 		hidden_effect = {
 			random_other_country = {
 				limit = {
@@ -213,6 +216,7 @@ country_event = {
 				type = annex_everything
 			}
 			NEA = {
+				
 				add_to_war = {
 					targeted_alliance = PRC
 					enemy = CHI
@@ -222,7 +226,7 @@ country_event = {
 		}
 		hidden_effect = {
 			CHI = {
-				country_event = { days = 1 id = rcmchina.2088 }
+				country_event = { days = 1 id = rcmchina.315 }
 			}
 			set_global_flag = xian_kmt_refuse
 		}
@@ -271,7 +275,7 @@ country_event = {
 		}
 		hidden_effect = {
 			CHI = {
-				country_event = { days = 1 id = rcmchina.2086 }
+				country_event = { days = 1 id = rcmchina.313 }
 			}
 		}
 	}
@@ -290,7 +294,7 @@ country_event = {
 		hidden_effect = {
 			CHI = {
 				set_country_flag = im_civ_war_exception
-				country_event = { days = 1 id = rcmchina.2087 }
+				country_event = { days = 1 id = rcmchina.314 }
 			}
 			#country_event = { hours = 5 id = nea.3 }
 		}
@@ -338,6 +342,9 @@ country_event = {
 				remove_ideas = chiang3
 				remove_ideas = chiang_better
 			}
+		}
+		country_event = {
+			id = rcmchina.338
 		}
 		hidden_effect = {
 			random_other_country = {
@@ -676,7 +683,7 @@ country_event = {
 			country_event = { days = 1 id = rcmjapan.81 }
 		}
 		CHI = {
-			country_event = { days = 1 id = rcmchina.2036 }
+			country_event = { days = 1 id = rcmchina.263 }
 			custom_effect_tooltip = remove_soviet_advisors
 		}
 	}
@@ -720,7 +727,7 @@ country_event = {
 	option = {
 		name = rcmsoviet.1010.a
 		CHI = {
-			country_event = { id = rcmchina.2037 }
+			country_event = { id = rcmchina.264 }
 		}
 	}
 }
@@ -757,7 +764,7 @@ country_event = {
 	option = {
 		name = rcmsoviet.1011.a
 		CHI = {
-			country_event = { id = rcmchina.2038 }
+			country_event = { id = rcmchina.265 }
 		}
 	}
 }

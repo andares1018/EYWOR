@@ -144,7 +144,7 @@ country_event = {
 			original_tag = GXC
 		}
 		ai_chance = { 
-		base = 50 	
+			base = 50 	
 			modifier = {
 				factor = 100
 				is_historical_focus_on = yes
@@ -158,14 +158,14 @@ country_event = {
 			original_tag = GXC 
 		}
 		ai_chance = { 
-		base = 50 	
+			base = 50 	
 			modifier = {
 				factor = 0
 				is_historical_focus_on = yes
 			}
 		}
 		dismantle_faction = yes
-		CHI = { country_event = { days = 5 id = rcmchina.1014 } }
+		CHI = { country_event = { days = 5 id = rcmchina.242 } }
 	}
 }
 #CHI_buy_gud fail

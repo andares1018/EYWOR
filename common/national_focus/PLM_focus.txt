@@ -1635,7 +1635,7 @@ focus_tree = {
 			add_political_power = 120
 			SHX = {
 				country_event = {
-					days = 1 id = rcmchina.3026
+					days = 1 id = rcmchina.322
 				}
 			}
 		}
