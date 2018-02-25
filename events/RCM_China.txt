@@ -4671,10 +4671,11 @@ country_event = {
 	}
 	option = {
 		name = rcmchina.338.a
+		set_rule = { can_create_factions = yes }
 		create_faction = "Northwest Anti-Japanese United Army"
 		every_state = {
 			limit = {
-				is_core_of = CHI
+				is_core_of = PRC
 			}
 			ROOT = {
 				add_state_core = PREV
