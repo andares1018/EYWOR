@@ -4,7 +4,7 @@ state=
 	name="STATE_622" # Northern Shaanxi
 	manpower = 5597300
 	
-	state_category = city
+	state_category = large_city
 	buildings_max_level_factor=1.500
 	resources={
 		steel=5
@@ -21,8 +21,8 @@ state=
 			7659 2
 		}
 			buildings = {
-			infrastructure = 2
-			arms_factory = 2
+			infrastructure = 5
+			arms_factory = 3
 			industrial_complex = 3
 			517 = {
 				bunker = 8
