@@ -1744,7 +1744,7 @@ country_event = {
 		}
 	}
 }
-# Goverment Reorganization
+# Government Reorganization
 country_event = {
 	id = Sinkiang.56
 	title = Sinkiang.56.t
@@ -2328,7 +2328,7 @@ country_event = {
 			has_idea = SIK_Weakened_ussr_influence
 			has_idea = SIK_Soviet_supports_armed_groups
 		}
-		has_global_flag = SIK_Goverment_win_three_areas_revolution
+		has_global_flag = SIK_Government_win_three_areas_revolution
 	}
 	
 	mean_time_to_happen = {
@@ -2572,7 +2572,7 @@ country_event = {
 		set_country_flag = SIK_Sinkiang_stable_political_situation
 	}
 }
-# Win the civil war (Goverment)
+# Win the civil war (Government)
 country_event = {
 	id = Sinkiang.101
 	title = Sinkiang.101.t
@@ -2613,7 +2613,7 @@ country_event = {
 		hidden_effect = {
 			news_event = { hours = 6 id = news.1037 }
 		}
-		set_global_flag = SIK_Goverment_win_three_areas_revolution
+		set_global_flag = SIK_Government_win_three_areas_revolution
 	}
 }
 # Win the civil war (Rebel army)
@@ -2762,7 +2762,7 @@ country_event = {
 		set_global_flag = SIK_Eastern_turkistan
 	}
 }
-# Eastern turkistan goverment
+# Eastern turkistan government
 country_event = {
 	id = Sinkiang.104
 	title = Sinkiang.104.t

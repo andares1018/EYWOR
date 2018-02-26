@@ -6,7 +6,7 @@ state=
 	resources={
 		steel=10
 	}
-	state_category = town
+	state_category = city
 	history=
 	{
 		owner = JAP

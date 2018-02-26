@@ -4,6 +4,10 @@ spriteTypes = {
 		name = "GFX_goal_puppet_jnc"
 		texturefile = "gfx/interface/goals/goal_puppet_jnc.dds"				
 	}
+	SpriteType = {
+		name = "GFX_goal_reorg_JAP"
+		texturefile = "gfx/interface/goals/goal_reorg_JAP.dds"				
+	}
 	
 	SpriteType = {
 		name = "GFX_goal_puppet_mej"

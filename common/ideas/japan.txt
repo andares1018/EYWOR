@@ -1,6 +1,113 @@
 ideas = {
 
 	country = {
+		JAP_reorganized_japanese_militarism_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = {
+					OR = {
+						has_government = democratic
+						has_government = communism
+						has_government = n_socialism
+					}
+				}
+			}			
+			removal_cost = -1
+			modifier = {
+				army_morale_factor = 0.15
+				conscription = 0.02
+			}		
+		}
+		JAP_military_is_the_government_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = {
+					OR = {
+						has_government = democratic
+						has_government = communism
+						has_government = n_socialism
+					}
+				}
+			}			
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.10
+				unity_factor = -0.5
+				army_morale_factor = 0.10
+				army_org_factor = -0.075
+				research_time_factor = 0.01
+			}		
+		}
+		JAP_military_outweighs_the_government_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = {
+					OR = {
+						has_government = democratic
+						has_government = communism
+						has_government = n_socialism
+					}
+				}
+			}			
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.25 
+				unity_factor = -0.1
+				army_morale_factor = 0.05
+				army_org_factor = -0.15
+				research_time_factor = 0.025
+			}		
+		}
+		JAP_military_outweighs_the_government_idea_good = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = {
+					OR = {
+						has_government = democratic
+						has_government = communism
+						has_government = n_socialism
+					}
+				}
+			}			
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.2
+				unity_factor = -0.05
+				army_morale_factor = 0.075
+				army_org_factor = -0.10
+				research_time_factor = 0.01
+			}		
+		}
+		JAP_military_outweighs_the_government_idea_bad = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = {
+					OR = {
+						has_government = democratic
+						has_government = communism
+						has_government = n_socialism
+					}
+				}
+			}			
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.3 
+				unity_factor = -0.15
+				army_morale_factor = 0.05
+				army_org_factor = -0.20
+				research_time_factor = 0.03
+			}		
+		}
 		JAP_expansionist_propaganda = {
 			picture = jap_prop_idea
 			allowed = {
@@ -8,7 +115,11 @@ ideas = {
 			}
 			allowed_civil_war = {
 				NOT = {
-					
+					OR = {
+						has_government = democratic
+						has_government = communism
+						has_government = n_socialism
+					}
 				}
 			}			
 			removal_cost = -1
@@ -24,7 +135,11 @@ ideas = {
 			}
 			allowed_civil_war = {
 				NOT = {
-					has_government = democratic
+					OR = {
+						has_government = democratic
+						has_government = communism
+						has_government = n_socialism
+					}
 				}
 			}			
 			removal_cost = -1
@@ -431,8 +546,11 @@ ideas = {
 			
 			modifier = {
 				conscription = 0.025
-				army_org_factor = 0.25
-				army_morale_factor = 0.15
+				army_org_factor = 0.05
+				army_morale_factor = 0.05
+				consumer_goods_factor = -0.05
+				industrial_capacity_factory = -0.05
+				unity_factor = 0.05
 			}
 		}
 

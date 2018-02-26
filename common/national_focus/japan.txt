@@ -147,6 +147,15 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = active_duty_generals_only
 			add_ideas = hisaichi_terauchi
+			if = {
+				limit = {
+					has_idea = JAP_military_outweighs_the_government_idea
+				}
+				swap_ideas = {
+					add_idea = JAP_military_outweighs_the_government_idea_bad
+					remove_idea = JAP_military_outweighs_the_government_idea
+				}
+			}
 		}
 		available = {
 			has_global_flag = kodoha_failed
@@ -171,7 +180,12 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 500
 			add_ideas = reformed_government
-			#remove_ideas = military_fanaticism
+			if = {
+				limit = {
+					has_idea = JAP_military_outweighs_the_government_idea
+				}
+				remove_ideas = JAP_military_outweighs_the_government_idea
+			}
 			custom_effect_tooltip = assassinate_possibility
 		}
 		available = {
@@ -3196,6 +3210,24 @@ focus_tree = {
 			hidden_effect = {
 				remove_ideas = for_the_shintaisei
 			}
+			if = {
+				limit = {
+					has_idea = JAP_military_outweighs_the_government_idea_bad
+				}
+				swap_ideas = {
+					add_idea = JAP_military_outweighs_the_government_idea_good
+					remove_idea = JAP_military_outweighs_the_government_idea_bad
+				}
+			}
+			if = {
+				limit = {
+					has_idea = JAP_military_outweighs_the_government_idea
+				}
+				swap_ideas = {
+					add_idea = JAP_military_outweighs_the_government_idea_good
+					remove_idea = JAP_military_outweighs_the_government_idea
+				}
+			}
 		}
 	}
 	focus = {
@@ -4017,6 +4049,50 @@ focus_tree = {
 		}
 		available = {
 			has_war = yes
+		}
+	}
+	focus = {
+		id = jap_reorganize_the_military
+		icon = GFX_goal_reorg_JAP
+		cost = 10.00
+		prerequisite = {
+			focus = found_own_faction_focus
+			focus = axis_leanings_focus
+		}
+		x = 25
+		y = 9
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_ideas = imperial_glory_idea
+		}
+		available = {
+			NOT = {
+				any_other_country = {
+					is_legit_china = yes
+					has_war_with = ROOT
+				}
+			}
+		}
+	}
+	focus = {
+		id = jap_reform_militarism
+		icon = GFX_focus_generic_japanese_imperial_glory
+		cost = 10.00
+		prerequisite = {
+			focus = jap_reorganize_the_military
+		}
+		x = 25
+		y = 10
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_ideas = imperial_glory_idea
+		}
+		available = {
+			has_war = no
 		}
 	}
 	focus = {

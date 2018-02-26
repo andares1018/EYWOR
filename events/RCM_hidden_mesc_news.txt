@@ -37,10 +37,10 @@ news_event = {
 		NOT = {
 			OR = {
 				743 = {
-					is_controlled_by_jap_or_its_puppet = yes
+					is_controlled_by = NEA
 				}
 				761 = {
-					is_controlled_by_jap_or_its_puppet = yes
+					is_controlled_by = NEA
 				}
 			}
 		}

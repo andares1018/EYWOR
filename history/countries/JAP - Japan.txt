@@ -13,6 +13,7 @@ add_ideas = {
 	limited_conscription
 	partial_economic_mobilisation
 	emperor_showa
+	JAP_military_outweighs_the_government_idea
 }
 every_state = {
 	limit = {
@@ -24,7 +25,6 @@ every_state = {
 set_technology = {
 	infantry_weapons = 1
 	infantry_weapons1 = 1
-	support_weapons = 1
 	tech_support = 1
 	tech_recon = 1
 	tech_engineers = 1
@@ -32,9 +32,7 @@ set_technology = {
 	marines  = 1
 	gw_artillery = 1
 	gwtank = 1
-	basic_light_tank = 1
-	basic_heavy_tank = 1  # PLACEHOLDER
-	basic_medium_tank = 1 # PLACEHOLDER
+	basic_light_tank = 1`
 	cv_early_fighter = 1
 	cv_CAS1 = 1
 	cv_naval_bomber1 = 1
@@ -57,7 +55,6 @@ set_technology = {
 	transport = 1
 	trench_warfare = 1
 	base_strike = 1
-	synth_oil_experiments = 1
 }
 
 create_import = {
@@ -91,6 +88,7 @@ add_opinion_modifier = { target = CHI modifier = hostile_status }
 		tot_economic_mobilisation
 		service_by_requirement
 		closed_economy
+		JAP_military_outweighs_the_government_idea_bad
 	}
 	remove_ideas = fumimaro_konoe
 	complete_national_focus = jap_placate_military_focus

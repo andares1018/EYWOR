@@ -197,6 +197,27 @@ spriteTypes = {
 	}
 ######################natspi#############
 	spriteType = {
+		name = "GFX_idea_JAP_reorganized_japanese_militarism_idea"
+		texturefile = "gfx/interface/ideas/JAP_reorganized_japanese_militarism_idea.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_JAP_military_outweighs_the_government_idea"
+		texturefile = "gfx/interface/ideas/JAP_military_outweighs_the_government_idea.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_JAP_military_is_the_government_idea"
+		texturefile = "gfx/interface/ideas/JAP_military_is_the_government_idea.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_JAP_military_outweighs_the_government_idea_good"
+		texturefile = "gfx/interface/ideas/JAP_military_outweighs_the_government_idea.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_JAP_military_outweighs_the_government_idea_bad"
+		texturefile = "gfx/interface/ideas/JAP_military_outweighs_the_government_idea.dds"
+	}
+	###
+	spriteType = {
 		name = "GFX_idea_generic_socialism_drift_bonus"
 		texturefile = "gfx/interface/ideas/generic_socialism_drift_bonus.dds"
 	}
