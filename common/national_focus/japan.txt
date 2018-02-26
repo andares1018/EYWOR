@@ -4065,7 +4065,34 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			add_ideas = imperial_glory_idea
+			if = {
+				limit = {
+					has_idea = JAP_military_outweighs_the_government_idea_bad
+				}
+				swap_ideas = {
+					add_idea = JAP_military_is_the_government_idea
+					remove_idea = JAP_military_outweighs_the_government_idea_bad
+				}
+			}
+			if = {
+				limit = {
+					has_idea = JAP_military_outweighs_the_government_idea_good
+				}
+				swap_ideas = {
+					add_idea = JAP_military_is_the_government_idea
+					remove_idea = JAP_military_outweighs_the_government_idea_good
+				}
+			}
+			if = {
+				limit = {
+					has_idea = JAP_military_outweighs_the_government_idea
+				}
+				swap_ideas = {
+					add_idea = JAP_military_is_the_government_idea
+					remove_idea = JAP_military_outweighs_the_government_idea
+				}
+			}
+			
 		}
 		available = {
 			NOT = {
@@ -4089,7 +4116,10 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			add_ideas = imperial_glory_idea
+			swap_ideas = {
+				add_idea = JAP_reorganized_japanese_militarism_idea
+				remove_idea = JAP_military_is_the_government_idea
+			}
 		}
 		available = {
 			has_war = no
