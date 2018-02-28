@@ -10,6 +10,7 @@ ai_historical_focus_list_JAP = {
 		purge_military_focus	
 		pressure_pm_focus
 		konoe_cabinet
+		infra_effort_focus
 		aggressive_china_politics
 		CHI_war_focus
 		subdue_warlords_focus

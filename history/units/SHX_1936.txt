@@ -101,6 +101,48 @@ units = {
 		start_equipment_factor = 0.9
 	}
 	division = {
+		name = "Di 7 Jingsui Bubing Shi"
+		location = 7158
+		division_template = "Bubing Shi"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "Di 8 Jingsui Bubing Shi"
+		location = 7158
+		division_template = "Bubing Shi"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "Di 9 Jingsui Bubing Shi"
+		location = 7158
+		division_template = "Bubing Shi"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "Di 10 Jingsui Bubing Shi"
+		location = 1034
+		start_experience_factor = 0.3
+		division_template = "Bubing Shi"
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Di 11 Jingsui Bubing Shi"
+		location = 1034
+		start_experience_factor = 0.3
+		division_template = "Bubing Shi"
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Di 12 Jingsui Bubing Shi"
+		location = 1034
+		start_experience_factor = 0.3
+		division_template = "Bubing Shi"
+		start_equipment_factor = 1
+	}
+	division = {
 		name = "Di 1 Jibing Shi"
 		location = 1519
 		division_template = "Jibing Shi"
@@ -114,21 +156,6 @@ units = {
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.8
 	}
-	division = {
-		name = "Di 3 Jibing Shi"
-		location = 4960
-		division_template = "Jibing Shi"
-		start_experience_factor = 0.2
-		start_equipment_factor = 0.8
-	}
-	division = {
-		name = "Di 4 Jibing Shi"
-		location = 4960
-		start_experience_factor = 0.2
-		division_template = "Jibing Shi"
-		start_equipment_factor = 1
-	}
-
 }
 ### STARTING PRODUCTION ###
 instant_effect = {
@@ -137,7 +164,7 @@ instant_effect = {
 			type = infantry_equipment_0
 			creator = "SHX"
 		}
-		requested_factories = 1
+		requested_factories = 4
 		progress = 0.78
 		efficiency = 100
 	}

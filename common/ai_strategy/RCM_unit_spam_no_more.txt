@@ -1,6 +1,5 @@
 # Written by Henrik "Groogy" Hansson
 # Modified by Daniel "Da9L" Sjöberg
-
 # befriend
 # conquer
 # antagonize
@@ -29,39 +28,44 @@ production_unit_0_ratios = {
 		}
 	}
 	abort = {
-		always = no
+		NOT = {
+			NOT = {
+				OR = {
+					tag = JAP
+					is_legit_china = yes
+				}
+			}
+			AND = {
+				num_of_factories < 0
+				num_divisions > 0
+			}
+		}
 	}
-	
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = marines
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = armor
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
 		value = -9999
 	}
-	
 }
 production_unit_5_ratios = {
 	enable = {
@@ -77,39 +81,44 @@ production_unit_5_ratios = {
 		}
 	}
 	abort = {
-		always = no
+		NOT = {
+			NOT = {
+				OR = {
+					tag = JAP
+					is_legit_china = yes
+				}
+			}
+			AND = {
+				num_of_factories < 5
+				num_divisions > 5
+			}
+		}
 	}
-	
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = marines
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = armor
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
 		value = -9999
 	}
-	
 }
 production_unit_10_ratios = {
 	enable = {
@@ -125,39 +134,44 @@ production_unit_10_ratios = {
 		}
 	}
 	abort = {
-		always = no
+		NOT = {
+			NOT = {
+				OR = {
+					tag = JAP
+					is_legit_china = yes
+				}
+			}
+			AND = {
+				num_of_factories < 10
+				num_divisions > 10
+			}
+		}
 	}
-	
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = marines
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = armor
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
 		value = -9999
 	}
-	
 }
 production_unit_15_ratios = {
 	enable = {
@@ -173,39 +187,44 @@ production_unit_15_ratios = {
 		}
 	}
 	abort = {
-		always = no
+		NOT = {
+			NOT = {
+				OR = {
+					tag = JAP
+					is_legit_china = yes
+				}
+			}
+			AND = {
+				num_of_factories < 15
+				num_divisions > 15
+			}
+		}
 	}
-	
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = marines
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = armor
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
 		value = -9999
 	}
-	
 }
 production_unit_20_ratios = {
 	enable = {
@@ -221,39 +240,44 @@ production_unit_20_ratios = {
 		}
 	}
 	abort = {
-		always = no
+		NOT = {
+			NOT = {
+				OR = {
+					tag = JAP
+					is_legit_china = yes
+				}
+			}
+			AND = {
+				num_of_factories < 20
+				num_divisions > 20
+			}
+		}
 	}
-	
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = marines
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = armor
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
 		value = -9999
 	}
-	
 }
 production_unit_25_ratios = {
 	enable = {
@@ -269,39 +293,44 @@ production_unit_25_ratios = {
 		}
 	}
 	abort = {
-		always = no
+		NOT = {
+			NOT = {
+				OR = {
+					tag = JAP
+					is_legit_china = yes
+				}
+			}
+			AND = {
+				num_of_factories < 25
+				num_divisions > 25
+			}
+		}
 	}
-	
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = marines
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = armor
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
 		value = -9999
 	}
-	
 }
 production_unit_30_ratios = {
 	enable = {
@@ -317,39 +346,44 @@ production_unit_30_ratios = {
 		}
 	}
 	abort = {
-		always = no
+		NOT = {
+			NOT = {
+				OR = {
+					tag = JAP
+					is_legit_china = yes
+				}
+			}
+			AND = {
+				num_of_factories < 30
+				num_divisions > 30
+			}
+		}
 	}
-	
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = marines
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = armor
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
 		value = -9999
 	}
-	
 }
 production_unit_35_ratios = {
 	enable = {
@@ -365,39 +399,44 @@ production_unit_35_ratios = {
 		}
 	}
 	abort = {
-		always = no
+		NOT = {
+			NOT = {
+				OR = {
+					tag = JAP
+					is_legit_china = yes
+				}
+			}
+			AND = {
+				num_of_factories < 35
+				num_divisions > 35
+			}
+		}
 	}
-	
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = marines
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = armor
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
 		value = -9999
 	}
-	
 }
 production_unit_40_ratios = {
 	enable = {
@@ -413,39 +452,44 @@ production_unit_40_ratios = {
 		}
 	}
 	abort = {
-		always = no
+		NOT = {
+			NOT = {
+				OR = {
+					tag = JAP
+					is_legit_china = yes
+				}
+			}
+			AND = {
+				num_of_factories < 40
+				num_divisions > 40
+			}
+		}
 	}
-	
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = marines
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = armor
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
 		value = -9999
 	}
-	
 }
 production_unit_45_ratios = {
 	enable = {
@@ -461,39 +505,44 @@ production_unit_45_ratios = {
 		}
 	}
 	abort = {
-		always = no
+		NOT = {
+			NOT = {
+				OR = {
+					tag = JAP
+					is_legit_china = yes
+				}
+			}
+			AND = {
+				num_of_factories < 45
+				num_divisions > 45
+			}
+		}
 	}
-	
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = marines
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = armor
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
 		value = -9999
 	}
-	
 }
 production_unit_50_ratios = {
 	enable = {
@@ -509,39 +558,44 @@ production_unit_50_ratios = {
 		}
 	}
 	abort = {
-		always = no
+		NOT = {
+			NOT = {
+				OR = {
+					tag = JAP
+					is_legit_china = yes
+				}
+			}
+			AND = {
+				num_of_factories < 50
+				num_divisions > 50
+			}
+		}
 	}
-	
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = marines
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = armor
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
 		value = -9999
 	}
-	
 }
 production_unit_55_ratios = {
 	enable = {
@@ -557,39 +611,44 @@ production_unit_55_ratios = {
 		}
 	}
 	abort = {
-		always = no
+		NOT = {
+			NOT = {
+				OR = {
+					tag = JAP
+					is_legit_china = yes
+				}
+			}
+			AND = {
+				num_of_factories < 55
+				num_divisions > 55
+			}
+		}
 	}
-	
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = marines
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = armor
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
 		value = -9999
 	}
-	
 }
 production_unit_60_ratios = {
 	enable = {
@@ -605,39 +664,44 @@ production_unit_60_ratios = {
 		}
 	}
 	abort = {
-		always = no
+		NOT = {
+			NOT = {
+				OR = {
+					tag = JAP
+					is_legit_china = yes
+				}
+			}
+			AND = {
+				num_of_factories < 60
+				num_divisions > 60
+			}
+		}
 	}
-	
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = marines
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = armor
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
 		value = -9999
 	}
-	
 }
 production_unit_65_ratios = {
 	enable = {
@@ -653,39 +717,44 @@ production_unit_65_ratios = {
 		}
 	}
 	abort = {
-		always = no
+		NOT = {
+			NOT = {
+				OR = {
+					tag = JAP
+					is_legit_china = yes
+				}
+			}
+			AND = {
+				num_of_factories < 65
+				num_divisions > 65
+			}
+		}
 	}
-	
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = marines
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = armor
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
 		value = -9999
 	}
-	
 }
 production_unit_70_ratios = {
 	enable = {
@@ -701,39 +770,44 @@ production_unit_70_ratios = {
 		}
 	}
 	abort = {
-		always = no
+		NOT = {
+			NOT = {
+				OR = {
+					tag = JAP
+					is_legit_china = yes
+				}
+			}
+			AND = {
+				num_of_factories < 70
+				num_divisions > 70
+			}
+		}
 	}
-	
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = marines
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = armor
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
 		value = -9999
 	}
-	
 }
 production_unit_75_ratios = {
 	enable = {
@@ -749,39 +823,44 @@ production_unit_75_ratios = {
 		}
 	}
 	abort = {
-		always = no
+		NOT = {
+			NOT = {
+				OR = {
+					tag = JAP
+					is_legit_china = yes
+				}
+			}
+			AND = {
+				num_of_factories < 75
+				num_divisions > 75
+			}
+		}
 	}
-	
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = marines
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = armor
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
 		value = -9999
 	}
-	
 }
 production_unit_80_ratios = {
 	enable = {
@@ -797,39 +876,44 @@ production_unit_80_ratios = {
 		}
 	}
 	abort = {
-		always = no
+		NOT = {
+			NOT = {
+				OR = {
+					tag = JAP
+					is_legit_china = yes
+				}
+			}
+			AND = {
+				num_of_factories < 80
+				num_divisions > 80
+			}
+		}
 	}
-	
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = marines
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = armor
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
 		value = -9999
 	}
-	
 }
 production_unit_85_ratios = {
 	enable = {
@@ -845,39 +929,44 @@ production_unit_85_ratios = {
 		}
 	}
 	abort = {
-		always = no
+		NOT = {
+			NOT = {
+				OR = {
+					tag = JAP
+					is_legit_china = yes
+				}
+			}
+			AND = {
+				num_of_factories < 85
+				num_divisions > 85
+			}
+		}
 	}
-	
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = marines
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = armor
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
 		value = -9999
 	}
-	
 }
 production_unit_90_ratios = {
 	enable = {
@@ -893,39 +982,44 @@ production_unit_90_ratios = {
 		}
 	}
 	abort = {
-		always = no
+		NOT = {
+			NOT = {
+				OR = {
+					tag = JAP
+					is_legit_china = yes
+				}
+			}
+			AND = {
+				num_of_factories < 90
+				num_divisions > 90
+			}
+		}
 	}
-	
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = marines
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = armor
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
 		value = -9999
 	}
-	
 }
 production_unit_95_ratios = {
 	enable = {
@@ -941,39 +1035,44 @@ production_unit_95_ratios = {
 		}
 	}
 	abort = {
-		always = no
+		NOT = {
+			NOT = {
+				OR = {
+					tag = JAP
+					is_legit_china = yes
+				}
+			}
+			AND = {
+				num_of_factories < 95
+				num_divisions > 95
+			}
+		}
 	}
-	
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = marines
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = armor
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
 		value = -9999
 	}
-	
 }
 production_unit_100_ratios = {
 	enable = {
@@ -989,39 +1088,44 @@ production_unit_100_ratios = {
 		}
 	}
 	abort = {
-		always = no
+		NOT = {
+			NOT = {
+				OR = {
+					tag = JAP
+					is_legit_china = yes
+				}
+			}
+			AND = {
+				num_of_factories < 100
+				num_divisions > 100
+			}
+		}
 	}
-	
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = marines
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = armor
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
 		value = -9999
 	}
-	
 }
 production_unit_105_ratios = {
 	enable = {
@@ -1037,39 +1141,44 @@ production_unit_105_ratios = {
 		}
 	}
 	abort = {
-		always = no
+		NOT = {
+			NOT = {
+				OR = {
+					tag = JAP
+					is_legit_china = yes
+				}
+			}
+			AND = {
+				num_of_factories < 105
+				num_divisions > 105
+			}
+		}
 	}
-	
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = marines
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = armor
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
 		value = -9999
 	}
-	
 }
 production_unit_110_ratios = {
 	enable = {
@@ -1085,39 +1194,44 @@ production_unit_110_ratios = {
 		}
 	}
 	abort = {
-		always = no
+		NOT = {
+			NOT = {
+				OR = {
+					tag = JAP
+					is_legit_china = yes
+				}
+			}
+			AND = {
+				num_of_factories < 110
+				num_divisions > 110
+			}
+		}
 	}
-	
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = marines
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = armor
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
 		value = -9999
 	}
-	
 }
 production_unit_115_ratios = {
 	enable = {
@@ -1133,39 +1247,44 @@ production_unit_115_ratios = {
 		}
 	}
 	abort = {
-		always = no
+		NOT = {
+			NOT = {
+				OR = {
+					tag = JAP
+					is_legit_china = yes
+				}
+			}
+			AND = {
+				num_of_factories < 115
+				num_divisions > 115
+			}
+		}
 	}
-	
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = marines
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = armor
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
 		value = -9999
 	}
-	
 }
 production_unit_120_ratios = {
 	enable = {
@@ -1181,39 +1300,44 @@ production_unit_120_ratios = {
 		}
 	}
 	abort = {
-		always = no
+		NOT = {
+			NOT = {
+				OR = {
+					tag = JAP
+					is_legit_china = yes
+				}
+			}
+			AND = {
+				num_of_factories < 120
+				num_divisions > 120
+			}
+		}
 	}
-	
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = marines
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = armor
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
 		value = -9999
 	}
-	
 }
 production_unit_125_ratios = {
 	enable = {
@@ -1229,39 +1353,44 @@ production_unit_125_ratios = {
 		}
 	}
 	abort = {
-		always = no
+		NOT = {
+			NOT = {
+				OR = {
+					tag = JAP
+					is_legit_china = yes
+				}
+			}
+			AND = {
+				num_of_factories < 125
+				num_divisions > 125
+			}
+		}
 	}
-	
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = marines
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = armor
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
 		value = -9999
 	}
-	
 }
 production_unit_130_ratios = {
 	enable = {
@@ -1277,39 +1406,44 @@ production_unit_130_ratios = {
 		}
 	}
 	abort = {
-		always = no
+		NOT = {
+			NOT = {
+				OR = {
+					tag = JAP
+					is_legit_china = yes
+				}
+			}
+			AND = {
+				num_of_factories < 130
+				num_divisions > 130
+			}
+		}
 	}
-	
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = marines
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = armor
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
 		value = -9999
 	}
-	
 }
 production_unit_135_ratios = {
 	enable = {
@@ -1325,39 +1459,44 @@ production_unit_135_ratios = {
 		}
 	}
 	abort = {
-		always = no
+		NOT = {
+			NOT = {
+				OR = {
+					tag = JAP
+					is_legit_china = yes
+				}
+			}
+			AND = {
+				num_of_factories < 135
+				num_divisions > 135
+			}
+		}
 	}
-	
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = marines
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = armor
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
 		value = -9999
 	}
-	
 }
 production_unit_140_ratios = {
 	enable = {
@@ -1373,39 +1512,44 @@ production_unit_140_ratios = {
 		}
 	}
 	abort = {
-		always = no
+		NOT = {
+			NOT = {
+				OR = {
+					tag = JAP
+					is_legit_china = yes
+				}
+			}
+			AND = {
+				num_of_factories < 140
+				num_divisions > 140
+			}
+		}
 	}
-	
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = marines
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = armor
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
 		value = -9999
 	}
-	
 }
 production_unit_145_ratios = {
 	enable = {
@@ -1421,39 +1565,44 @@ production_unit_145_ratios = {
 		}
 	}
 	abort = {
-		always = no
+		NOT = {
+			NOT = {
+				OR = {
+					tag = JAP
+					is_legit_china = yes
+				}
+			}
+			AND = {
+				num_of_factories < 145
+				num_divisions > 145
+			}
+		}
 	}
-	
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = marines
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = armor
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
 		value = -9999
 	}
-	
 }
 production_unit_150_ratios = {
 	enable = {
@@ -1469,39 +1618,44 @@ production_unit_150_ratios = {
 		}
 	}
 	abort = {
-		always = no
+		NOT = {
+			NOT = {
+				OR = {
+					tag = JAP
+					is_legit_china = yes
+				}
+			}
+			AND = {
+				num_of_factories < 150
+				num_divisions > 150
+			}
+		}
 	}
-	
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = marines
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = armor
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
 		value = -9999
 	}
-	
 }
 production_unit_155_ratios = {
 	enable = {
@@ -1517,39 +1671,44 @@ production_unit_155_ratios = {
 		}
 	}
 	abort = {
-		always = no
+		NOT = {
+			NOT = {
+				OR = {
+					tag = JAP
+					is_legit_china = yes
+				}
+			}
+			AND = {
+				num_of_factories < 155
+				num_divisions > 155
+			}
+		}
 	}
-	
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = marines
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = armor
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
 		value = -9999
 	}
-	
 }
 production_unit_160_ratios = {
 	enable = {
@@ -1565,39 +1724,44 @@ production_unit_160_ratios = {
 		}
 	}
 	abort = {
-		always = no
+		NOT = {
+			NOT = {
+				OR = {
+					tag = JAP
+					is_legit_china = yes
+				}
+			}
+			AND = {
+				num_of_factories < 160
+				num_divisions > 160
+			}
+		}
 	}
-	
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = marines
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = armor
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
 		value = -9999
 	}
-	
 }
 production_unit_165_ratios = {
 	enable = {
@@ -1613,39 +1777,44 @@ production_unit_165_ratios = {
 		}
 	}
 	abort = {
-		always = no
+		NOT = {
+			NOT = {
+				OR = {
+					tag = JAP
+					is_legit_china = yes
+				}
+			}
+			AND = {
+				num_of_factories < 165
+				num_divisions > 165
+			}
+		}
 	}
-	
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = marines
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = armor
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
 		value = -9999
 	}
-	
 }
 production_unit_170_ratios = {
 	enable = {
@@ -1661,39 +1830,44 @@ production_unit_170_ratios = {
 		}
 	}
 	abort = {
-		always = no
+		NOT = {
+			NOT = {
+				OR = {
+					tag = JAP
+					is_legit_china = yes
+				}
+			}
+			AND = {
+				num_of_factories < 170
+				num_divisions > 170
+			}
+		}
 	}
-	
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = marines
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = armor
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
 		value = -9999
 	}
-	
 }
 production_unit_175_ratios = {
 	enable = {
@@ -1709,39 +1883,44 @@ production_unit_175_ratios = {
 		}
 	}
 	abort = {
-		always = no
+		NOT = {
+			NOT = {
+				OR = {
+					tag = JAP
+					is_legit_china = yes
+				}
+			}
+			AND = {
+				num_of_factories < 175
+				num_divisions > 175
+			}
+		}
 	}
-	
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = marines
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = armor
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
 		value = -9999
 	}
-	
 }
 production_unit_180_ratios = {
 	enable = {
@@ -1757,39 +1936,44 @@ production_unit_180_ratios = {
 		}
 	}
 	abort = {
-		always = no
+		NOT = {
+			NOT = {
+				OR = {
+					tag = JAP
+					is_legit_china = yes
+				}
+			}
+			AND = {
+				num_of_factories < 180
+				num_divisions > 180
+			}
+		}
 	}
-	
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = marines
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = armor
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
 		value = -9999
 	}
-	
 }
 production_unit_185_ratios = {
 	enable = {
@@ -1805,39 +1989,44 @@ production_unit_185_ratios = {
 		}
 	}
 	abort = {
-		always = no
+		NOT = {
+			NOT = {
+				OR = {
+					tag = JAP
+					is_legit_china = yes
+				}
+			}
+			AND = {
+				num_of_factories < 185
+				num_divisions > 185
+			}
+		}
 	}
-	
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = marines
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = armor
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
 		value = -9999
 	}
-	
 }
 production_unit_190_ratios = {
 	enable = {
@@ -1853,39 +2042,44 @@ production_unit_190_ratios = {
 		}
 	}
 	abort = {
-		always = no
+		NOT = {
+			NOT = {
+				OR = {
+					tag = JAP
+					is_legit_china = yes
+				}
+			}
+			AND = {
+				num_of_factories < 190
+				num_divisions > 190
+			}
+		}
 	}
-	
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = marines
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = armor
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
 		value = -9999
 	}
-	
 }
 production_unit_195_ratios = {
 	enable = {
@@ -1901,39 +2095,44 @@ production_unit_195_ratios = {
 		}
 	}
 	abort = {
-		always = no
+		NOT = {
+			NOT = {
+				OR = {
+					tag = JAP
+					is_legit_china = yes
+				}
+			}
+			AND = {
+				num_of_factories < 195
+				num_divisions > 195
+			}
+		}
 	}
-	
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = marines
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = armor
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
 		value = -9999
 	}
-	
 }
 production_unit_200_ratios = {
 	enable = {
@@ -1949,39 +2148,44 @@ production_unit_200_ratios = {
 		}
 	}
 	abort = {
-		always = no
+		NOT = {
+			NOT = {
+				OR = {
+					tag = JAP
+					is_legit_china = yes
+				}
+			}
+			AND = {
+				num_of_factories < 200
+				num_divisions > 200
+			}
+		}
 	}
-	
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = marines
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = armor
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
 		value = -9999
 	}
-	
 }
 production_unit_205_ratios = {
 	enable = {
@@ -1997,39 +2201,44 @@ production_unit_205_ratios = {
 		}
 	}
 	abort = {
-		always = no
+		NOT = {
+			NOT = {
+				OR = {
+					tag = JAP
+					is_legit_china = yes
+				}
+			}
+			AND = {
+				num_of_factories < 205
+				num_divisions > 205
+			}
+		}
 	}
-	
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = marines
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = armor
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
 		value = -9999
 	}
-	
 }
 production_unit_210_ratios = {
 	enable = {
@@ -2045,39 +2254,44 @@ production_unit_210_ratios = {
 		}
 	}
 	abort = {
-		always = no
+		NOT = {
+			NOT = {
+				OR = {
+					tag = JAP
+					is_legit_china = yes
+				}
+			}
+			AND = {
+				num_of_factories < 210
+				num_divisions > 210
+			}
+		}
 	}
-	
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = marines
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = armor
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
 		value = -9999
 	}
-	
 }
 production_unit_215_ratios = {
 	enable = {
@@ -2093,39 +2307,44 @@ production_unit_215_ratios = {
 		}
 	}
 	abort = {
-		always = no
+		NOT = {
+			NOT = {
+				OR = {
+					tag = JAP
+					is_legit_china = yes
+				}
+			}
+			AND = {
+				num_of_factories < 215
+				num_divisions > 215
+			}
+		}
 	}
-	
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = marines
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = armor
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
 		value = -9999
 	}
-	
 }
 production_unit_220_ratios = {
 	enable = {
@@ -2141,39 +2360,44 @@ production_unit_220_ratios = {
 		}
 	}
 	abort = {
-		always = no
+		NOT = {
+			NOT = {
+				OR = {
+					tag = JAP
+					is_legit_china = yes
+				}
+			}
+			AND = {
+				num_of_factories < 220
+				num_divisions > 220
+			}
+		}
 	}
-	
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = marines
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = armor
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
 		value = -9999
 	}
-	
 }
 production_unit_225_ratios = {
 	enable = {
@@ -2189,39 +2413,44 @@ production_unit_225_ratios = {
 		}
 	}
 	abort = {
-		always = no
+		NOT = {
+			NOT = {
+				OR = {
+					tag = JAP
+					is_legit_china = yes
+				}
+			}
+			AND = {
+				num_of_factories < 225
+				num_divisions > 225
+			}
+		}
 	}
-	
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = marines
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = armor
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
 		value = -9999
 	}
-	
 }
 production_unit_230_ratios = {
 	enable = {
@@ -2237,39 +2466,44 @@ production_unit_230_ratios = {
 		}
 	}
 	abort = {
-		always = no
+		NOT = {
+			NOT = {
+				OR = {
+					tag = JAP
+					is_legit_china = yes
+				}
+			}
+			AND = {
+				num_of_factories < 230
+				num_divisions > 230
+			}
+		}
 	}
-	
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = marines
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = armor
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
 		value = -9999
 	}
-	
 }
 production_unit_235_ratios = {
 	enable = {
@@ -2285,39 +2519,44 @@ production_unit_235_ratios = {
 		}
 	}
 	abort = {
-		always = no
+		NOT = {
+			NOT = {
+				OR = {
+					tag = JAP
+					is_legit_china = yes
+				}
+			}
+			AND = {
+				num_of_factories < 235
+				num_divisions > 235
+			}
+		}
 	}
-	
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = marines
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = armor
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
 		value = -9999
 	}
-	
 }
 production_unit_240_ratios = {
 	enable = {
@@ -2333,39 +2572,44 @@ production_unit_240_ratios = {
 		}
 	}
 	abort = {
-		always = no
+		NOT = {
+			NOT = {
+				OR = {
+					tag = JAP
+					is_legit_china = yes
+				}
+			}
+			AND = {
+				num_of_factories < 240
+				num_divisions > 240
+			}
+		}
 	}
-	
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = marines
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = armor
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
 		value = -9999
 	}
-	
 }
 production_unit_245_ratios = {
 	enable = {
@@ -2381,39 +2625,44 @@ production_unit_245_ratios = {
 		}
 	}
 	abort = {
-		always = no
+		NOT = {
+			NOT = {
+				OR = {
+					tag = JAP
+					is_legit_china = yes
+				}
+			}
+			AND = {
+				num_of_factories < 245
+				num_divisions > 245
+			}
+		}
 	}
-	
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = marines
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = armor
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
 		value = -9999
 	}
-	
 }
 production_unit_250_ratios = {
 	enable = {
@@ -2429,39 +2678,44 @@ production_unit_250_ratios = {
 		}
 	}
 	abort = {
-		always = no
+		NOT = {
+			NOT = {
+				OR = {
+					tag = JAP
+					is_legit_china = yes
+				}
+			}
+			AND = {
+				num_of_factories < 250
+				num_divisions > 250
+			}
+		}
 	}
-	
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = marines
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = armor
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
 		value = -9999
 	}
-	
 }
 production_unit_255_ratios = {
 	enable = {
@@ -2477,39 +2731,44 @@ production_unit_255_ratios = {
 		}
 	}
 	abort = {
-		always = no
+		NOT = {
+			NOT = {
+				OR = {
+					tag = JAP
+					is_legit_china = yes
+				}
+			}
+			AND = {
+				num_of_factories < 255
+				num_divisions > 255
+			}
+		}
 	}
-	
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = marines
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = armor
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
 		value = -9999
 	}
-	
 }
 production_unit_260_ratios = {
 	enable = {
@@ -2525,39 +2784,44 @@ production_unit_260_ratios = {
 		}
 	}
 	abort = {
-		always = no
+		NOT = {
+			NOT = {
+				OR = {
+					tag = JAP
+					is_legit_china = yes
+				}
+			}
+			AND = {
+				num_of_factories < 260
+				num_divisions > 260
+			}
+		}
 	}
-	
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = marines
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = armor
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
 		value = -9999
 	}
-	
 }
 production_unit_265_ratios = {
 	enable = {
@@ -2573,39 +2837,44 @@ production_unit_265_ratios = {
 		}
 	}
 	abort = {
-		always = no
+		NOT = {
+			NOT = {
+				OR = {
+					tag = JAP
+					is_legit_china = yes
+				}
+			}
+			AND = {
+				num_of_factories < 265
+				num_divisions > 265
+			}
+		}
 	}
-	
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = marines
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = armor
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
 		value = -9999
 	}
-	
 }
 production_unit_270_ratios = {
 	enable = {
@@ -2621,39 +2890,44 @@ production_unit_270_ratios = {
 		}
 	}
 	abort = {
-		always = no
+		NOT = {
+			NOT = {
+				OR = {
+					tag = JAP
+					is_legit_china = yes
+				}
+			}
+			AND = {
+				num_of_factories < 270
+				num_divisions > 270
+			}
+		}
 	}
-	
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = marines
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = armor
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
 		value = -9999
 	}
-	
 }
 production_unit_275_ratios = {
 	enable = {
@@ -2669,39 +2943,44 @@ production_unit_275_ratios = {
 		}
 	}
 	abort = {
-		always = no
+		NOT = {
+			NOT = {
+				OR = {
+					tag = JAP
+					is_legit_china = yes
+				}
+			}
+			AND = {
+				num_of_factories < 275
+				num_divisions > 275
+			}
+		}
 	}
-	
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = marines
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = armor
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
 		value = -9999
 	}
-	
 }
 production_unit_280_ratios = {
 	enable = {
@@ -2717,39 +2996,44 @@ production_unit_280_ratios = {
 		}
 	}
 	abort = {
-		always = no
+		NOT = {
+			NOT = {
+				OR = {
+					tag = JAP
+					is_legit_china = yes
+				}
+			}
+			AND = {
+				num_of_factories < 280
+				num_divisions > 280
+			}
+		}
 	}
-	
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = marines
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = armor
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
 		value = -9999
 	}
-	
 }
 production_unit_285_ratios = {
 	enable = {
@@ -2765,39 +3049,44 @@ production_unit_285_ratios = {
 		}
 	}
 	abort = {
-		always = no
+		NOT = {
+			NOT = {
+				OR = {
+					tag = JAP
+					is_legit_china = yes
+				}
+			}
+			AND = {
+				num_of_factories < 285
+				num_divisions > 285
+			}
+		}
 	}
-	
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = marines
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = armor
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
 		value = -9999
 	}
-	
 }
 production_unit_290_ratios = {
 	enable = {
@@ -2813,39 +3102,44 @@ production_unit_290_ratios = {
 		}
 	}
 	abort = {
-		always = no
+		NOT = {
+			NOT = {
+				OR = {
+					tag = JAP
+					is_legit_china = yes
+				}
+			}
+			AND = {
+				num_of_factories < 290
+				num_divisions > 290
+			}
+		}
 	}
-	
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = marines
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = armor
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
 		value = -9999
 	}
-	
 }
 production_unit_295_ratios = {
 	enable = {
@@ -2861,56 +3155,58 @@ production_unit_295_ratios = {
 		}
 	}
 	abort = {
-		always = no
+		NOT = {
+			NOT = {
+				OR = {
+					tag = JAP
+					is_legit_china = yes
+				}
+			}
+			AND = {
+				num_of_factories < 295
+				num_divisions > 295
+			}
+		}
 	}
-	
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = marines
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = armor
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
 		value = -9999
 	}
-	
 }
 stockpile_management = {
 	enable = {
 		num_divisions > 150
 	}
-
 	abort = {
 		num_divisions < 130
 	}
-
 	ai_strategy = {
 		type = equipment_stockpile
 		value = 35 # double base stockpile #from 25 to 35
 	}
 }
 do_not_waste_pp_if_saving_for_manpower_laws = {
-
 	enable = {
 		manpower_per_military_factory < 500
 		has_war = yes
@@ -2921,13 +3217,11 @@ do_not_waste_pp_if_saving_for_manpower_laws = {
 			has_war = no
 		}
 	}
-
 	ai_strategy = {
 		type = pp_spend_priority
 		id = relation
 		value = -9999
 	}
-
 	ai_strategy = {
 		type = pp_spend_priority
 		id = guarantee

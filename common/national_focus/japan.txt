@@ -215,6 +215,15 @@ focus_tree = {
 				days = 583
 				idea = reign_of_terror
 			}
+			if = {
+				limit = {
+					has_idea = JAP_military_outweighs_the_government_idea
+				}
+				swap_ideas = {
+					add_idea = JAP_military_outweighs_the_government_idea_bad
+					remove_idea = JAP_military_outweighs_the_government_idea
+				}
+			}
 		}
 		available = {
 			has_global_flag = kodoha_won
@@ -654,6 +663,24 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_ideas = imperial_glory_idea
+			if = {
+				limit = {
+					has_idea = JAP_military_outweighs_the_government_idea_bad
+				}
+				swap_ideas = {
+					add_idea = JAP_military_outweighs_the_government_idea_good
+					remove_idea = JAP_military_outweighs_the_government_idea_bad
+				}
+			}
+			if = {
+				limit = {
+					has_idea = JAP_military_outweighs_the_government_idea
+				}
+				swap_ideas = {
+					add_idea = JAP_military_outweighs_the_government_idea_good
+					remove_idea = JAP_military_outweighs_the_government_idea
+				}
+			}
 		}
 		available = {
 		}
@@ -2100,7 +2127,7 @@ focus_tree = {
 			factor = 100
 			modifier = {
 				factor = 0
-				date < 1937.2.10
+				date < 1937.4.1
 			}
 		}
 		completion_reward = {
@@ -2187,6 +2214,76 @@ focus_tree = {
 		}
 		available = {
 			is_in_faction_with = CHI
+		}
+	}
+	focus = {
+		id = jap_reorganize_the_military_kodoha
+		icon = GFX_goal_reorg_JAP
+		cost = 10.00
+		prerequisite = {
+			focus = asia_united
+			focus = join_axis
+		}
+		x = 2
+		y = 8
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = JAP_military_outweighs_the_government_idea_bad
+				}
+				swap_ideas = {
+					add_idea = JAP_military_is_the_government_idea
+					remove_idea = JAP_military_outweighs_the_government_idea_bad
+				}
+			}
+			if = {
+				limit = {
+					has_idea = JAP_military_outweighs_the_government_idea_good
+				}
+				swap_ideas = {
+					add_idea = JAP_military_is_the_government_idea
+					remove_idea = JAP_military_outweighs_the_government_idea_good
+				}
+			}
+			if = {
+				limit = {
+					has_idea = JAP_military_outweighs_the_government_idea
+				}
+				swap_ideas = {
+					add_idea = JAP_military_is_the_government_idea
+					remove_idea = JAP_military_outweighs_the_government_idea
+				}
+			}
+			
+		}
+		available = {
+			has_national_unity > 80
+			num_of_factories > 150
+		}
+	}
+	focus = {
+		id = jap_reform_militarism_kodoha
+		icon = GFX_focus_generic_japanese_imperial_glory
+		cost = 10.00
+		prerequisite = {
+			focus = jap_reorganize_the_military_kodoha
+		}
+		x = 2
+		y = 9
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			swap_ideas = {
+				add_idea = JAP_reorganized_japanese_militarism_idea
+				remove_idea = JAP_military_is_the_government_idea
+			}
+		}
+		available = {
+			has_war = no
 		}
 	}
 	focus = {

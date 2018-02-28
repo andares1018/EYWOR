@@ -28,40 +28,53 @@ units = {
 		name = "81 Juntuán"
 		location = 1647
 		division_template = "Juntuán"
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
 
 	}
 	division = {
 		name = "82 Juntuán"
 		location = 1933
 		division_template = "Juntuán"
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
 
 	}
 	division = {
 		name = "Ningxia Jingbei"
 		location = 8081
 		division_template = "Juntuán"		# Provincial militia unit (poor equipment and training)
-		start_equipment_factor = 0.3
-		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+		start_experience_factor = 0.2
 	}
 	division = {
 		name = "1 Ma Qibing Jun"
 		location = 1630
 		division_template = "Qibing Jun"
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.5
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
 
 	}
 	division = {
 		name = "2 Ma Qibing Jun"
 		location = 1630
 		division_template = "Qibing Jun"
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.5
-
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "3 Ma Qibing Jun"
+		location = 1630
+		division_template = "Qibing Jun"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "4 Ma Qibing Jun"
+		location = 1630
+		division_template = "Qibing Jun"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
 	}
 }
 
@@ -70,9 +83,9 @@ instant_effect = {
 	add_equipment_production = {
 		equipment = {
 			type = infantry_equipment_0
-			creator = "XSM"
+			creator = "NXM"
 		}
-		requested_factories = 1
+		requested_factories = 2
 		progress = 0.74
 		efficiency = 100
 	}

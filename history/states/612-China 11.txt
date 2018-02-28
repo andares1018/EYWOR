@@ -12,6 +12,18 @@ state = {
 			infrastructure = 1
 			arms_factory = 1
 			industrial_complex = 1
+			4655 = {
+				bunker = 4
+			}	
+			4612 = {
+				bunker = 4
+			}	
+			7545 = {
+				bunker = 4
+			}	
+			12448 = {
+				bunker = 4
+			}	
 		}
 		1939.1.1 = {
 			owner = ECA

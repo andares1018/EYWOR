@@ -22,7 +22,7 @@ state={
 			add_core_of = EHB
 		}
 		victory_points = { 4093 5 }
-		victory_points = { 1169 3 }
+		victory_points = { 1169 5 }
 	}
 
 	provinces={
