@@ -68,6 +68,7 @@ ideas = {
 				OR = {
 					has_war_with = ECA
 					has_war_with = MON
+					has_global_flag = trw_compat
 				}
 			}
 		}

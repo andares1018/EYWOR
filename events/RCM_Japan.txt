@@ -6264,7 +6264,7 @@ country_event = {
 	option = {
 		name = rcmjapan.104.a
 		add_timed_idea = {
-			days = 350 idea = JAP_expansionist_propaganda
+			days = 420 idea = JAP_expansionist_propaganda
 		}
 	}
 }

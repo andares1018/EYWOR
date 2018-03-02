@@ -9,7 +9,7 @@
 # garrison
 # protect
 # influence
- default_CHI_unit_production = {
+default_CHI_unit_production = {
         enable = {
             tag = CHI
         }
@@ -120,57 +120,11 @@
 		id = infantry
 		value = 50
 	}
-    }
-	
-natchi_war_production = {
-    enable = {
-        tag = CHI
-    }
-    abort = {
-        date > 1940.1.1
-    }
-
-    ai_strategy = {
-        type = unit_ratio
-        id = mountaineers
-        value = -100
-    }
-    ai_strategy = {
-        type = unit_ratio
-        id = marines
-        value = 30
-    }
-    ai_strategy = {
-        type = unit_ratio
-        id = infantry
-        value = 100
-    }
-    ai_strategy = {
-        type = unit_ratio
-        id = armor
-        value = -100
-    }
-	
-    ai_strategy = {
-        type = unit_ratio
-        id = anti_tank
-        value = -100
-    }
-
-    ai_strategy = {
-        type = unit_ratio
-        id = motorized
-        value = -100
-    }
-	
-    ai_strategy = {
-        type = unit_ratio
-        id = mechanized
-        value = -100
-    }
 }
 	
-	CHI_armor_production = {
+
+	
+CHI_armor_production = {
 	enable = {
 		tag = CHI
 		num_of_military_factories > 80
@@ -484,5 +438,196 @@ sheng_hate_tng_and_hmi = {
 		type = antagonize
 		id = "TNG"
 		value = 2000
+	}
+}
+warlord_production = {
+	enable = {
+		is_warlord = yes
+	}
+	abort = {
+		is_warlord = no
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = infantry
+		value = 1000 
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = armor
+		value = -9999  
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = motorized
+		value = -9999 
+	}
+
+
+	ai_strategy = {
+		type = unit_ratio
+		id = artillery
+		value = -9999       
+	}
+	
+	ai_strategy = {
+		type = unit_ratio
+		id = marines
+		value = -9999 
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = mountaineers
+		value = -9999 
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = paratroopers
+		value = -9999 
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = mechanized
+		value = -9999 
+	}
+	
+	ai_strategy = {
+		type = equipment_production_factor
+		id = anti_tank
+		value = -9999
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = anti_air
+		value = -9999
+	}
+	
+	ai_strategy = {
+		type = equipment_production_factor
+		id = artillery
+		value = -9999
+	}
+}
+natchi_war_production = {
+    enable = {
+        tag = CHI
+		is_warlord = yes
+    }
+    abort = {
+        date > 1941.1.1
+		has_war = no
+    }
+
+    ai_strategy = {
+		type = unit_ratio
+		id = infantry
+		value = 9999 
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = armor
+		value = -9999
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = motorized
+		value = -9999 
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = cavalry
+		value = 0        
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = artillery
+		value = -9999       
+	}
+	
+	ai_strategy = {
+		type = unit_ratio
+		id = marines
+		value = -9999 
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = mountaineers
+		value = -9999 
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = paratroopers
+		value = -9999 
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = mechanized
+		value = -9999 
+	}
+	
+	ai_strategy = {
+		type = equipment_production_factor
+		id = anti_tank
+		value = -9999
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = anti_air
+		value = -9999
+	}
+	
+	ai_strategy = {
+		type = equipment_production_factor
+		id = artillery
+		value = -9999
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = fighter
+		value = -9999 # From 70 to 75
+	}	
+	# These values are used only by when evaluating for producing factories
+	ai_strategy = {
+		type = unit_ratio
+		id = capital_ship
+		value = -9999
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = submarine
+		value = -9999
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = screen_ship
+		value = -9999
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = convoy
+		value = 500
+	}
+	
+	ai_strategy = {
+		type = equipment_production_factor
+		id = infantry
+		value = 9999
 	}
 }

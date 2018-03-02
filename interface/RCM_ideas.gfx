@@ -731,6 +731,9 @@ spriteTypes = {
 		name = "GFX_idea_generic_robber_baron_south_america"
 		texturefile = "gfx/interface/ideas/idea_generic_robber_baron_south_america.dds"
 	}
-	
-	
+	###
+	spriteType = {
+		name = "GFX_idea_MEN_limited_war"
+		texturefile = "gfx/interface/ideas/MEN_limited_war.dds"
+	}
 }

@@ -59,3 +59,39 @@ news_event = {
 	option = {
 	}
 }
+#jiangsu transfer control state
+news_event = {
+	id = news_mesc.3
+	hidden = yes
+	trigger = {
+		is_subject_of = JAP
+		has_war = yes
+		owns_state = 598
+		765 = {
+			controller = {
+				tag = JAP
+				has_war = yes
+			}
+			NOT = {
+				any_neighbor_state = {
+					NOT = {
+						OR = {
+							controller = {
+								has_war_together_with = JAP
+							}
+							state = 746
+						}
+					}
+				}
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 0
+	}
+	immediate = {
+		set_state_controller = 765
+	}
+	option = {
+	}
+}

@@ -5,6 +5,7 @@ ai_historical_focus_list_CHI = {
 		peace_with_japan
 		CHI_split_plm_focus
 		monetary_reform
+		big_rear_plan
 		CHI_foreign_help_focus
 		CHI_inst_reform_focus
 		kmt_reorganize_nra
@@ -12,7 +13,6 @@ ai_historical_focus_list_CHI = {
 		CHI_fight_focus
 		CHI_unite_focus
 		CHI_lushan_focus
-		big_rear_plan
 		reinforce_new_life_movement
 		CHI_coast_infra_focus
 		CHI_defend_river_focus
@@ -32,6 +32,7 @@ ai_historical_focus_list_CHI = {
 
 ai_focus_defense_CHI = {
 	research = {
+		infantry_weapons = -9999
 		defensive = 5.0	
 		radar_tech = 1.0
 		construction_tech = 2.0

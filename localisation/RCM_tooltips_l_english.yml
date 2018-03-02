@@ -66,5 +66,6 @@
  kodoha_won:0 "Kōdōha successfully staged a coup.\n§Y(Mutually exclusive with §!§RPlacate the Military§!§Y and §!§RStrengthen the Government§!§Y, choices are decided in an event)§!"
  purge_political_advisor:0 "The following advisor(s) will be purged:\n"
  force_political_advisor:0 "The following advisors will be forced to retire:\n"
+ justifying_on_china:0 "A §YMajor§! is justifying wargoal on us."
  
  

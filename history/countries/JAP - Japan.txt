@@ -59,7 +59,7 @@ set_technology = {
 
 create_import = {
 		resource = oil
-		factories = 2
+		factories = 5
 		exporter = USA
 }
 add_opinion_modifier = { target = SIK modifier = hostile_status }

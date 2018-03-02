@@ -10,6 +10,25 @@ on_actions = {
 			100 = rcmelection.18
 		}
 	}
+	on_justifying_wargoal_pulse = {
+		effect = {
+			if = {
+				limit = {
+					FROM = {
+						tag = CHI
+					}
+					OR = {
+						num_of_factories > 50
+						is_major = yes
+					}
+					NOT = {
+						has_global_flag = justifying_on_china
+					}
+				}
+				set_global_flag = justifying_on_china
+			}
+		}
+	}
 	#FROM is war target
 	on_declare_war = {
 		effect = {
@@ -199,8 +218,9 @@ on_actions = {
 					}
 				}
 			}
-			if = {
+			every_country = {
 				limit = {
+					tag = ROOT
 					OR = {
 						original_tag = CHI
 						is_originally_warlord = yes
@@ -209,6 +229,37 @@ on_actions = {
 						original_tag = TNG
 					}
 					FROM = { original_tag = JAP }
+				}
+				if = {
+					limit = {
+						616 = {
+							controller = {
+								OR = {
+									tag = JAP
+									is_subject_of = JAP
+								}
+							}
+						}
+						country_exists = ECA
+					}
+					ECA = {
+						transfer_state = 616
+					}
+				}
+				random_other_country = {
+					limit = {
+						760 = {
+							controller = {
+								OR = {
+									tag = JAP
+									is_subject_of = JAP
+								}
+							}
+						}
+						owns_state = 608
+						is_subject_of = JAP
+					}
+					transfer_state = 760
 				}
 				JAP = {
 					if = {
@@ -343,8 +394,10 @@ on_actions = {
 					if = {#no puppets, only smol EHB
 						limit = {
 							NOT = {
-								country_exists = CCP
-								country_exists = RFM
+								AND = {
+									country_exists = CCP
+									country_exists = RFM
+								}
 							}
 							EHB = {
 								NOT = {

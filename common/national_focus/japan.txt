@@ -2136,7 +2136,7 @@ focus_tree = {
 			}
 			effect_tooltip = {
 				add_timed_idea = {
-					days = 350 idea = JAP_expansionist_propaganda
+					days = 420 idea = JAP_expansionist_propaganda
 				}
 			}
 			add_named_threat = {
@@ -2384,6 +2384,9 @@ focus_tree = {
 		}
 		will_lead_to_war_with = CHI
 		will_lead_to_war_with = HPC
+		select_effect = {
+			set_global_flag = justifying_on_china
+		}
 		completion_reward = {
 			if = {
 				limit = {
@@ -2404,17 +2407,21 @@ focus_tree = {
 					target = HPC
 					type = puppet_wargoal_focus
 				}
-				else = {
-					random_other_country = {
-						limit = {
-							is_legit_china = yes
-						}
-						ROOT = {
-							create_wargoal = {
-								target = PREV
-								type = puppet_wargoal_focus
-							}
-						}
+				#else = {
+					
+				#}
+			}
+			random_other_country = {
+				limit = {
+					is_legit_china = yes
+					NOT = {
+						is_in_faction_with = ROOT
+					}
+				}
+				ROOT = {
+					create_wargoal = {
+						target = PREV
+						type = puppet_wargoal_focus
 					}
 				}
 			}
@@ -2425,18 +2432,18 @@ focus_tree = {
 						has_war_with = CHI
 					}
 				}
-				random_other_country = {
-					limit = {
-						is_legit_china = yes
-						controls_state = 598
-					}
-					ROOT = {
-						create_wargoal = {
-							target = PREV
-							type = puppet_wargoal_focus
-						}
-					}
-				}
+				#random_other_country = {
+				#	limit = {
+				#		is_legit_china = yes
+				#		controls_state = 598
+				#	}
+				#	ROOT = {
+				#		create_wargoal = {
+				##			target = PREV
+				#			type = puppet_wargoal_focus
+				#		}
+				#	}
+				#}
 				every_country = {
 					limit = {
 						OR = {

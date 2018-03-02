@@ -1,7 +1,6 @@
 
 ai_historical_focus_list_JAP = {
 	ai_national_focuses = {
-		found_own_faction_focus
 		mengjiang_puppet_focus
 		industrial_effort_focus2
 		jap_placate_military_focus
@@ -21,6 +20,7 @@ ai_historical_focus_list_JAP = {
 		reorganized_CHI_puppet
 		tojo_cabinet_focus
 		strike_usa_focus
+		found_own_faction_focus
 	}
 }
 

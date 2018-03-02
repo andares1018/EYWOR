@@ -1322,13 +1322,7 @@ focus_tree = {
 		x = 9
 		y = 7
 		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 0
-				NOT = {
-					has_war_with = JAP
-				}
-			}
+			factor = 100
 		}
 		cancel_if_invalid = no
 		continue_if_invalid = yes
@@ -1347,17 +1341,12 @@ focus_tree = {
 				is_owned_and_controlled_by = ROOT
 				industrial_complex > 1
 			}
-			any_other_country = {
-				has_war_with = ROOT
-				OR = {
-					is_major = yes
-					num_of_factories > 50
-				}
-			}
+			has_global_flag = justifying_on_china
 			605 = {
 				controller = {
 					OR = {
 						is_subject_of = ROOT
+						has_idea = leader_hospitalized
 						tag = ROOT
 					}
 				}
