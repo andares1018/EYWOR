@@ -124,9 +124,9 @@ ideas = {
 			}			
 			removal_cost = -1
 			modifier = {
-				army_org_factor = 0.25
-				army_morale_factor = 0.35
-				political_power_factor = 0.1
+				army_org_factor = 0.30
+				army_morale_factor = 0.40
+				political_power_factor = 0.25
 			}		
 		}
 		new_order = {
@@ -546,8 +546,8 @@ ideas = {
 			
 			modifier = {
 				conscription = 0.025
-				army_org_factor = 0.05
-				army_morale_factor = 0.05
+				army_org_factor = 0.15
+				army_morale_factor = 0.15
 				consumer_goods_factor = -0.05
 				industrial_capacity_factory = 0.05
 				unity_factor = 0.05

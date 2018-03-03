@@ -227,33 +227,6 @@ more_naval_focused_chi = {
 	}
 }
 
-CHI_jap_war = {
-	enable = {
-		tag = CHI
-		has_completed_focus = CHI_fight_focus
-	}
-	abort = {
-		OR = {
-			NOT = { country_exists = JAP }
-		}
-	}
-	
-	ai_strategy = {
-		type = garrison
-		id = "JAP"
-		value = 500
-	}
-	ai_strategy = {
-		type = garrison
-		id = "MAN"
-		value = 500
-	}
-	ai_strategy = {
-		type = garrison
-		id = "HPC"
-		value = 500
-	}
-}
 
 fuck_comintern_mao_do_it_alone = {
 	enable = {
@@ -273,7 +246,7 @@ fuck_comintern_mao_do_it_alone = {
 	ai_strategy = {
 		type = alliance
 		id = "SOV"
-		value = -500
+		value = -9999
 	}
 }
 
@@ -344,7 +317,7 @@ dont_die_in_mountains_sweden = {
 	ai_strategy = {
 		type = ignore
 		id = "SWE"
-		value = 100
+		value = 9999
 	}
 }
 
@@ -513,6 +486,7 @@ warlord_production = {
 		id = artillery
 		value = -9999
 	}
+	
 }
 natchi_war_production = {
     enable = {

@@ -107,21 +107,21 @@ create_country_leader = {
 }
 create_country_leader = {
 	name = "Wang Lingji"
-	desc = "POLITICS_LIU_XIANG_DESC"
+	desc = "#"
 	picture = "Portrait_Sichuan_Wang_Lingji.dds"
 	expire = "1938.1.20"
 	ideology = fascism_ideology
 }
 create_country_leader = {
 	name = "Deng Xihou"
-	desc = "POLITICS_LIU_XIANG_DESC"
+	desc = "#"
 	picture = "Portrait_Sichuan_Deng_Xihou.dds"
 	expire = "1938.1.20"
 	ideology = marxism
 }
 create_country_leader = {
 	name = "Xiong Kewu"
-	desc = "POLITICS_LIU_XIANG_DESC"
+	desc = "#"
 	picture = "Portrait_Sichuan_Xiong_Kewu.dds"
 	expire = "1938.1.20"
 	ideology = conservatism

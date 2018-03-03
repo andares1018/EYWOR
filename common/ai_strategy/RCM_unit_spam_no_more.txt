@@ -20,6 +20,7 @@ production_unit_0_ratios = {
 			OR = {
 				tag = JAP
 				is_legit_china = yes
+				tag = CHI
 			}
 		}
 		AND = {
@@ -33,6 +34,7 @@ production_unit_0_ratios = {
 				OR = {
 					tag = JAP
 					is_legit_china = yes
+					tag = CHI
 				}
 			}
 			AND = {
@@ -73,6 +75,7 @@ production_unit_5_ratios = {
 			OR = {
 				tag = JAP
 				is_legit_china = yes
+				tag = CHI
 			}
 		}
 		AND = {
@@ -86,6 +89,7 @@ production_unit_5_ratios = {
 				OR = {
 					tag = JAP
 					is_legit_china = yes
+					tag = CHI
 				}
 			}
 			AND = {
@@ -126,6 +130,7 @@ production_unit_10_ratios = {
 			OR = {
 				tag = JAP
 				is_legit_china = yes
+				tag = CHI
 			}
 		}
 		AND = {
@@ -139,6 +144,7 @@ production_unit_10_ratios = {
 				OR = {
 					tag = JAP
 					is_legit_china = yes
+					tag = CHI
 				}
 			}
 			AND = {
@@ -179,6 +185,7 @@ production_unit_15_ratios = {
 			OR = {
 				tag = JAP
 				is_legit_china = yes
+				tag = CHI
 			}
 		}
 		AND = {
@@ -192,6 +199,7 @@ production_unit_15_ratios = {
 				OR = {
 					tag = JAP
 					is_legit_china = yes
+					tag = CHI
 				}
 			}
 			AND = {
@@ -232,6 +240,7 @@ production_unit_20_ratios = {
 			OR = {
 				tag = JAP
 				is_legit_china = yes
+				tag = CHI
 			}
 		}
 		AND = {
@@ -245,6 +254,7 @@ production_unit_20_ratios = {
 				OR = {
 					tag = JAP
 					is_legit_china = yes
+					tag = CHI
 				}
 			}
 			AND = {
@@ -285,6 +295,7 @@ production_unit_25_ratios = {
 			OR = {
 				tag = JAP
 				is_legit_china = yes
+				tag = CHI
 			}
 		}
 		AND = {
@@ -298,6 +309,7 @@ production_unit_25_ratios = {
 				OR = {
 					tag = JAP
 					is_legit_china = yes
+					tag = CHI
 				}
 			}
 			AND = {
@@ -338,6 +350,7 @@ production_unit_30_ratios = {
 			OR = {
 				tag = JAP
 				is_legit_china = yes
+				tag = CHI
 			}
 		}
 		AND = {
@@ -351,6 +364,7 @@ production_unit_30_ratios = {
 				OR = {
 					tag = JAP
 					is_legit_china = yes
+					tag = CHI
 				}
 			}
 			AND = {
@@ -391,6 +405,7 @@ production_unit_35_ratios = {
 			OR = {
 				tag = JAP
 				is_legit_china = yes
+				tag = CHI
 			}
 		}
 		AND = {
@@ -404,6 +419,7 @@ production_unit_35_ratios = {
 				OR = {
 					tag = JAP
 					is_legit_china = yes
+					tag = CHI
 				}
 			}
 			AND = {
@@ -444,6 +460,7 @@ production_unit_40_ratios = {
 			OR = {
 				tag = JAP
 				is_legit_china = yes
+				tag = CHI
 			}
 		}
 		AND = {
@@ -457,6 +474,7 @@ production_unit_40_ratios = {
 				OR = {
 					tag = JAP
 					is_legit_china = yes
+					tag = CHI
 				}
 			}
 			AND = {
@@ -497,6 +515,7 @@ production_unit_45_ratios = {
 			OR = {
 				tag = JAP
 				is_legit_china = yes
+				tag = CHI
 			}
 		}
 		AND = {
@@ -510,6 +529,7 @@ production_unit_45_ratios = {
 				OR = {
 					tag = JAP
 					is_legit_china = yes
+					tag = CHI
 				}
 			}
 			AND = {
@@ -550,6 +570,7 @@ production_unit_50_ratios = {
 			OR = {
 				tag = JAP
 				is_legit_china = yes
+				tag = CHI
 			}
 		}
 		AND = {
@@ -563,6 +584,7 @@ production_unit_50_ratios = {
 				OR = {
 					tag = JAP
 					is_legit_china = yes
+					tag = CHI
 				}
 			}
 			AND = {
@@ -603,6 +625,7 @@ production_unit_55_ratios = {
 			OR = {
 				tag = JAP
 				is_legit_china = yes
+				tag = CHI
 			}
 		}
 		AND = {
@@ -616,6 +639,7 @@ production_unit_55_ratios = {
 				OR = {
 					tag = JAP
 					is_legit_china = yes
+					tag = CHI
 				}
 			}
 			AND = {
@@ -656,6 +680,7 @@ production_unit_60_ratios = {
 			OR = {
 				tag = JAP
 				is_legit_china = yes
+				tag = CHI
 			}
 		}
 		AND = {
@@ -669,6 +694,7 @@ production_unit_60_ratios = {
 				OR = {
 					tag = JAP
 					is_legit_china = yes
+					tag = CHI
 				}
 			}
 			AND = {
@@ -709,6 +735,7 @@ production_unit_65_ratios = {
 			OR = {
 				tag = JAP
 				is_legit_china = yes
+				tag = CHI
 			}
 		}
 		AND = {
@@ -722,6 +749,7 @@ production_unit_65_ratios = {
 				OR = {
 					tag = JAP
 					is_legit_china = yes
+					tag = CHI
 				}
 			}
 			AND = {
@@ -762,6 +790,7 @@ production_unit_70_ratios = {
 			OR = {
 				tag = JAP
 				is_legit_china = yes
+				tag = CHI
 			}
 		}
 		AND = {
@@ -775,6 +804,7 @@ production_unit_70_ratios = {
 				OR = {
 					tag = JAP
 					is_legit_china = yes
+					tag = CHI
 				}
 			}
 			AND = {
@@ -815,6 +845,7 @@ production_unit_75_ratios = {
 			OR = {
 				tag = JAP
 				is_legit_china = yes
+				tag = CHI
 			}
 		}
 		AND = {
@@ -828,6 +859,7 @@ production_unit_75_ratios = {
 				OR = {
 					tag = JAP
 					is_legit_china = yes
+					tag = CHI
 				}
 			}
 			AND = {
@@ -868,6 +900,7 @@ production_unit_80_ratios = {
 			OR = {
 				tag = JAP
 				is_legit_china = yes
+				tag = CHI
 			}
 		}
 		AND = {
@@ -881,6 +914,7 @@ production_unit_80_ratios = {
 				OR = {
 					tag = JAP
 					is_legit_china = yes
+					tag = CHI
 				}
 			}
 			AND = {
@@ -921,6 +955,7 @@ production_unit_85_ratios = {
 			OR = {
 				tag = JAP
 				is_legit_china = yes
+				tag = CHI
 			}
 		}
 		AND = {
@@ -934,6 +969,7 @@ production_unit_85_ratios = {
 				OR = {
 					tag = JAP
 					is_legit_china = yes
+					tag = CHI
 				}
 			}
 			AND = {
@@ -974,6 +1010,7 @@ production_unit_90_ratios = {
 			OR = {
 				tag = JAP
 				is_legit_china = yes
+				tag = CHI
 			}
 		}
 		AND = {
@@ -987,6 +1024,7 @@ production_unit_90_ratios = {
 				OR = {
 					tag = JAP
 					is_legit_china = yes
+					tag = CHI
 				}
 			}
 			AND = {
@@ -1027,6 +1065,7 @@ production_unit_95_ratios = {
 			OR = {
 				tag = JAP
 				is_legit_china = yes
+				tag = CHI
 			}
 		}
 		AND = {
@@ -1040,6 +1079,7 @@ production_unit_95_ratios = {
 				OR = {
 					tag = JAP
 					is_legit_china = yes
+					tag = CHI
 				}
 			}
 			AND = {
@@ -1080,6 +1120,7 @@ production_unit_100_ratios = {
 			OR = {
 				tag = JAP
 				is_legit_china = yes
+				tag = CHI
 			}
 		}
 		AND = {
@@ -1093,6 +1134,7 @@ production_unit_100_ratios = {
 				OR = {
 					tag = JAP
 					is_legit_china = yes
+					tag = CHI
 				}
 			}
 			AND = {
@@ -1133,6 +1175,7 @@ production_unit_105_ratios = {
 			OR = {
 				tag = JAP
 				is_legit_china = yes
+				tag = CHI
 			}
 		}
 		AND = {
@@ -1146,6 +1189,7 @@ production_unit_105_ratios = {
 				OR = {
 					tag = JAP
 					is_legit_china = yes
+					tag = CHI
 				}
 			}
 			AND = {
@@ -1186,6 +1230,7 @@ production_unit_110_ratios = {
 			OR = {
 				tag = JAP
 				is_legit_china = yes
+				tag = CHI
 			}
 		}
 		AND = {
@@ -1199,6 +1244,7 @@ production_unit_110_ratios = {
 				OR = {
 					tag = JAP
 					is_legit_china = yes
+					tag = CHI
 				}
 			}
 			AND = {
@@ -1239,6 +1285,7 @@ production_unit_115_ratios = {
 			OR = {
 				tag = JAP
 				is_legit_china = yes
+				tag = CHI
 			}
 		}
 		AND = {
@@ -1252,6 +1299,7 @@ production_unit_115_ratios = {
 				OR = {
 					tag = JAP
 					is_legit_china = yes
+					tag = CHI
 				}
 			}
 			AND = {
@@ -1292,6 +1340,7 @@ production_unit_120_ratios = {
 			OR = {
 				tag = JAP
 				is_legit_china = yes
+				tag = CHI
 			}
 		}
 		AND = {
@@ -1305,6 +1354,7 @@ production_unit_120_ratios = {
 				OR = {
 					tag = JAP
 					is_legit_china = yes
+					tag = CHI
 				}
 			}
 			AND = {
@@ -1345,6 +1395,7 @@ production_unit_125_ratios = {
 			OR = {
 				tag = JAP
 				is_legit_china = yes
+				tag = CHI
 			}
 		}
 		AND = {
@@ -1358,6 +1409,7 @@ production_unit_125_ratios = {
 				OR = {
 					tag = JAP
 					is_legit_china = yes
+					tag = CHI
 				}
 			}
 			AND = {
@@ -1398,6 +1450,7 @@ production_unit_130_ratios = {
 			OR = {
 				tag = JAP
 				is_legit_china = yes
+				tag = CHI
 			}
 		}
 		AND = {
@@ -1411,6 +1464,7 @@ production_unit_130_ratios = {
 				OR = {
 					tag = JAP
 					is_legit_china = yes
+					tag = CHI
 				}
 			}
 			AND = {
@@ -1451,6 +1505,7 @@ production_unit_135_ratios = {
 			OR = {
 				tag = JAP
 				is_legit_china = yes
+				tag = CHI
 			}
 		}
 		AND = {
@@ -1464,6 +1519,7 @@ production_unit_135_ratios = {
 				OR = {
 					tag = JAP
 					is_legit_china = yes
+					tag = CHI
 				}
 			}
 			AND = {
@@ -1504,6 +1560,7 @@ production_unit_140_ratios = {
 			OR = {
 				tag = JAP
 				is_legit_china = yes
+				tag = CHI
 			}
 		}
 		AND = {
@@ -1517,6 +1574,7 @@ production_unit_140_ratios = {
 				OR = {
 					tag = JAP
 					is_legit_china = yes
+					tag = CHI
 				}
 			}
 			AND = {
@@ -1557,6 +1615,7 @@ production_unit_145_ratios = {
 			OR = {
 				tag = JAP
 				is_legit_china = yes
+				tag = CHI
 			}
 		}
 		AND = {
@@ -1570,6 +1629,7 @@ production_unit_145_ratios = {
 				OR = {
 					tag = JAP
 					is_legit_china = yes
+					tag = CHI
 				}
 			}
 			AND = {
@@ -1610,6 +1670,7 @@ production_unit_150_ratios = {
 			OR = {
 				tag = JAP
 				is_legit_china = yes
+				tag = CHI
 			}
 		}
 		AND = {
@@ -1623,6 +1684,7 @@ production_unit_150_ratios = {
 				OR = {
 					tag = JAP
 					is_legit_china = yes
+					tag = CHI
 				}
 			}
 			AND = {
@@ -1663,6 +1725,7 @@ production_unit_155_ratios = {
 			OR = {
 				tag = JAP
 				is_legit_china = yes
+				tag = CHI
 			}
 		}
 		AND = {
@@ -1676,6 +1739,7 @@ production_unit_155_ratios = {
 				OR = {
 					tag = JAP
 					is_legit_china = yes
+					tag = CHI
 				}
 			}
 			AND = {
@@ -1716,6 +1780,7 @@ production_unit_160_ratios = {
 			OR = {
 				tag = JAP
 				is_legit_china = yes
+				tag = CHI
 			}
 		}
 		AND = {
@@ -1729,6 +1794,7 @@ production_unit_160_ratios = {
 				OR = {
 					tag = JAP
 					is_legit_china = yes
+					tag = CHI
 				}
 			}
 			AND = {
@@ -1769,6 +1835,7 @@ production_unit_165_ratios = {
 			OR = {
 				tag = JAP
 				is_legit_china = yes
+				tag = CHI
 			}
 		}
 		AND = {
@@ -1782,6 +1849,7 @@ production_unit_165_ratios = {
 				OR = {
 					tag = JAP
 					is_legit_china = yes
+					tag = CHI
 				}
 			}
 			AND = {
@@ -1822,6 +1890,7 @@ production_unit_170_ratios = {
 			OR = {
 				tag = JAP
 				is_legit_china = yes
+				tag = CHI
 			}
 		}
 		AND = {
@@ -1835,6 +1904,7 @@ production_unit_170_ratios = {
 				OR = {
 					tag = JAP
 					is_legit_china = yes
+					tag = CHI
 				}
 			}
 			AND = {
@@ -1875,6 +1945,7 @@ production_unit_175_ratios = {
 			OR = {
 				tag = JAP
 				is_legit_china = yes
+				tag = CHI
 			}
 		}
 		AND = {
@@ -1888,6 +1959,7 @@ production_unit_175_ratios = {
 				OR = {
 					tag = JAP
 					is_legit_china = yes
+					tag = CHI
 				}
 			}
 			AND = {
@@ -1928,6 +2000,7 @@ production_unit_180_ratios = {
 			OR = {
 				tag = JAP
 				is_legit_china = yes
+				tag = CHI
 			}
 		}
 		AND = {
@@ -1941,6 +2014,7 @@ production_unit_180_ratios = {
 				OR = {
 					tag = JAP
 					is_legit_china = yes
+					tag = CHI
 				}
 			}
 			AND = {
@@ -1981,6 +2055,7 @@ production_unit_185_ratios = {
 			OR = {
 				tag = JAP
 				is_legit_china = yes
+				tag = CHI
 			}
 		}
 		AND = {
@@ -1994,6 +2069,7 @@ production_unit_185_ratios = {
 				OR = {
 					tag = JAP
 					is_legit_china = yes
+					tag = CHI
 				}
 			}
 			AND = {
@@ -2034,6 +2110,7 @@ production_unit_190_ratios = {
 			OR = {
 				tag = JAP
 				is_legit_china = yes
+				tag = CHI
 			}
 		}
 		AND = {
@@ -2047,6 +2124,7 @@ production_unit_190_ratios = {
 				OR = {
 					tag = JAP
 					is_legit_china = yes
+					tag = CHI
 				}
 			}
 			AND = {
@@ -2087,6 +2165,7 @@ production_unit_195_ratios = {
 			OR = {
 				tag = JAP
 				is_legit_china = yes
+				tag = CHI
 			}
 		}
 		AND = {
@@ -2100,6 +2179,7 @@ production_unit_195_ratios = {
 				OR = {
 					tag = JAP
 					is_legit_china = yes
+					tag = CHI
 				}
 			}
 			AND = {
@@ -2140,6 +2220,7 @@ production_unit_200_ratios = {
 			OR = {
 				tag = JAP
 				is_legit_china = yes
+				tag = CHI
 			}
 		}
 		AND = {
@@ -2153,6 +2234,7 @@ production_unit_200_ratios = {
 				OR = {
 					tag = JAP
 					is_legit_china = yes
+					tag = CHI
 				}
 			}
 			AND = {
@@ -2193,6 +2275,7 @@ production_unit_205_ratios = {
 			OR = {
 				tag = JAP
 				is_legit_china = yes
+				tag = CHI
 			}
 		}
 		AND = {
@@ -2206,6 +2289,7 @@ production_unit_205_ratios = {
 				OR = {
 					tag = JAP
 					is_legit_china = yes
+					tag = CHI
 				}
 			}
 			AND = {
@@ -2246,6 +2330,7 @@ production_unit_210_ratios = {
 			OR = {
 				tag = JAP
 				is_legit_china = yes
+				tag = CHI
 			}
 		}
 		AND = {
@@ -2259,6 +2344,7 @@ production_unit_210_ratios = {
 				OR = {
 					tag = JAP
 					is_legit_china = yes
+					tag = CHI
 				}
 			}
 			AND = {
@@ -2299,6 +2385,7 @@ production_unit_215_ratios = {
 			OR = {
 				tag = JAP
 				is_legit_china = yes
+				tag = CHI
 			}
 		}
 		AND = {
@@ -2312,6 +2399,7 @@ production_unit_215_ratios = {
 				OR = {
 					tag = JAP
 					is_legit_china = yes
+					tag = CHI
 				}
 			}
 			AND = {
@@ -2352,6 +2440,7 @@ production_unit_220_ratios = {
 			OR = {
 				tag = JAP
 				is_legit_china = yes
+				tag = CHI
 			}
 		}
 		AND = {
@@ -2365,6 +2454,7 @@ production_unit_220_ratios = {
 				OR = {
 					tag = JAP
 					is_legit_china = yes
+					tag = CHI
 				}
 			}
 			AND = {
@@ -2405,6 +2495,7 @@ production_unit_225_ratios = {
 			OR = {
 				tag = JAP
 				is_legit_china = yes
+				tag = CHI
 			}
 		}
 		AND = {
@@ -2418,6 +2509,7 @@ production_unit_225_ratios = {
 				OR = {
 					tag = JAP
 					is_legit_china = yes
+					tag = CHI
 				}
 			}
 			AND = {
@@ -2458,6 +2550,7 @@ production_unit_230_ratios = {
 			OR = {
 				tag = JAP
 				is_legit_china = yes
+				tag = CHI
 			}
 		}
 		AND = {
@@ -2471,6 +2564,7 @@ production_unit_230_ratios = {
 				OR = {
 					tag = JAP
 					is_legit_china = yes
+					tag = CHI
 				}
 			}
 			AND = {
@@ -2511,6 +2605,7 @@ production_unit_235_ratios = {
 			OR = {
 				tag = JAP
 				is_legit_china = yes
+				tag = CHI
 			}
 		}
 		AND = {
@@ -2524,6 +2619,7 @@ production_unit_235_ratios = {
 				OR = {
 					tag = JAP
 					is_legit_china = yes
+					tag = CHI
 				}
 			}
 			AND = {
@@ -2564,6 +2660,7 @@ production_unit_240_ratios = {
 			OR = {
 				tag = JAP
 				is_legit_china = yes
+				tag = CHI
 			}
 		}
 		AND = {
@@ -2577,6 +2674,7 @@ production_unit_240_ratios = {
 				OR = {
 					tag = JAP
 					is_legit_china = yes
+					tag = CHI
 				}
 			}
 			AND = {
@@ -2617,6 +2715,7 @@ production_unit_245_ratios = {
 			OR = {
 				tag = JAP
 				is_legit_china = yes
+				tag = CHI
 			}
 		}
 		AND = {
@@ -2630,6 +2729,7 @@ production_unit_245_ratios = {
 				OR = {
 					tag = JAP
 					is_legit_china = yes
+					tag = CHI
 				}
 			}
 			AND = {
@@ -2670,6 +2770,7 @@ production_unit_250_ratios = {
 			OR = {
 				tag = JAP
 				is_legit_china = yes
+				tag = CHI
 			}
 		}
 		AND = {
@@ -2683,6 +2784,7 @@ production_unit_250_ratios = {
 				OR = {
 					tag = JAP
 					is_legit_china = yes
+					tag = CHI
 				}
 			}
 			AND = {
@@ -2723,6 +2825,7 @@ production_unit_255_ratios = {
 			OR = {
 				tag = JAP
 				is_legit_china = yes
+				tag = CHI
 			}
 		}
 		AND = {
@@ -2736,6 +2839,7 @@ production_unit_255_ratios = {
 				OR = {
 					tag = JAP
 					is_legit_china = yes
+					tag = CHI
 				}
 			}
 			AND = {
@@ -2776,6 +2880,7 @@ production_unit_260_ratios = {
 			OR = {
 				tag = JAP
 				is_legit_china = yes
+				tag = CHI
 			}
 		}
 		AND = {
@@ -2789,6 +2894,7 @@ production_unit_260_ratios = {
 				OR = {
 					tag = JAP
 					is_legit_china = yes
+					tag = CHI
 				}
 			}
 			AND = {
@@ -2829,6 +2935,7 @@ production_unit_265_ratios = {
 			OR = {
 				tag = JAP
 				is_legit_china = yes
+				tag = CHI
 			}
 		}
 		AND = {
@@ -2842,6 +2949,7 @@ production_unit_265_ratios = {
 				OR = {
 					tag = JAP
 					is_legit_china = yes
+					tag = CHI
 				}
 			}
 			AND = {
@@ -2882,6 +2990,7 @@ production_unit_270_ratios = {
 			OR = {
 				tag = JAP
 				is_legit_china = yes
+				tag = CHI
 			}
 		}
 		AND = {
@@ -2895,6 +3004,7 @@ production_unit_270_ratios = {
 				OR = {
 					tag = JAP
 					is_legit_china = yes
+					tag = CHI
 				}
 			}
 			AND = {
@@ -2935,6 +3045,7 @@ production_unit_275_ratios = {
 			OR = {
 				tag = JAP
 				is_legit_china = yes
+				tag = CHI
 			}
 		}
 		AND = {
@@ -2948,6 +3059,7 @@ production_unit_275_ratios = {
 				OR = {
 					tag = JAP
 					is_legit_china = yes
+					tag = CHI
 				}
 			}
 			AND = {
@@ -2988,6 +3100,7 @@ production_unit_280_ratios = {
 			OR = {
 				tag = JAP
 				is_legit_china = yes
+				tag = CHI
 			}
 		}
 		AND = {
@@ -3001,6 +3114,7 @@ production_unit_280_ratios = {
 				OR = {
 					tag = JAP
 					is_legit_china = yes
+					tag = CHI
 				}
 			}
 			AND = {
@@ -3041,6 +3155,7 @@ production_unit_285_ratios = {
 			OR = {
 				tag = JAP
 				is_legit_china = yes
+				tag = CHI
 			}
 		}
 		AND = {
@@ -3054,6 +3169,7 @@ production_unit_285_ratios = {
 				OR = {
 					tag = JAP
 					is_legit_china = yes
+					tag = CHI
 				}
 			}
 			AND = {
@@ -3094,6 +3210,7 @@ production_unit_290_ratios = {
 			OR = {
 				tag = JAP
 				is_legit_china = yes
+				tag = CHI
 			}
 		}
 		AND = {
@@ -3107,6 +3224,7 @@ production_unit_290_ratios = {
 				OR = {
 					tag = JAP
 					is_legit_china = yes
+					tag = CHI
 				}
 			}
 			AND = {
@@ -3147,6 +3265,7 @@ production_unit_295_ratios = {
 			OR = {
 				tag = JAP
 				is_legit_china = yes
+				tag = CHI
 			}
 		}
 		AND = {
@@ -3160,6 +3279,7 @@ production_unit_295_ratios = {
 				OR = {
 					tag = JAP
 					is_legit_china = yes
+					tag = CHI
 				}
 			}
 			AND = {

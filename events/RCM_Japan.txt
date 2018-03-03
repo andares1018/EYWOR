@@ -5457,8 +5457,10 @@ country_event = {
 				country_exists = SCG
 			}
 			NOT = {
-				country_exists = NSG
-				country_exists = SCG
+				AND = {
+					country_exists = NSG
+					country_exists = SCG
+				}
 			}
 		}
 		
@@ -5652,6 +5654,9 @@ country_event = { #to south chahar
 				country_exists = NSG
 			}
 		}
+		ai_chance = {
+			factor = 100
+		}
 		ECA = {
 			country_event = {
 				hours = 3 id = rcmjapan.97
@@ -5664,6 +5669,9 @@ country_event = { #to south chahar
 			NOT = {
 				country_exists = NSG
 			}
+		}
+		ai_chance = {
+			factor = 0
 		}
 		ECA = {
 			country_event = {
@@ -5821,6 +5829,9 @@ country_event = { #to north shanxi
 				country_exists = SCG
 			}
 		}
+		ai_chance = {
+			factor = 100
+		}
 		ECA = {
 			country_event = {
 				hours = 3 id = rcmjapan.97
@@ -5833,6 +5844,9 @@ country_event = { #to north shanxi
 			NOT = {
 				country_exists = SCG
 			}
+		}
+		ai_chance = {
+			factor = 0
 		}
 		ECA = {
 			country_event = {

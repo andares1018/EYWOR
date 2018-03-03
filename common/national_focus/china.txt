@@ -1346,7 +1346,7 @@ focus_tree = {
 				controller = {
 					OR = {
 						is_subject_of = ROOT
-						has_idea = leader_hospitalized
+						has_country_leader = {ruling_only = yes name = "Liu Xiang" }
 						tag = ROOT
 					}
 				}
