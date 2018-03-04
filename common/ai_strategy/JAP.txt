@@ -46,7 +46,7 @@ less_trucks_4_u_JAP = {
 	ai_strategy = {
 		type = template_prio
 		id = infantry
-		value = 100
+		value = 9999
 	}
 	
 		ai_strategy = {

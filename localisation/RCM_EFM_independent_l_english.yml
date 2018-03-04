@@ -5,7 +5,7 @@
  EMF_china.1936.a:0 "Very good!"
  ### ###
  
- ### New chinese government events ###
+ ### New chinese government events FROM EAST FOCUS###
  EFM_independent.1.t:0 "[From.GetName] Would Like to Join our Faction"
  EFM_independent.1.d:0 "[From.GetName] has issued an formal request to join our coalition, what measures should we take in response?"
  EFM_independent.1.a:0 "We'll accept them."

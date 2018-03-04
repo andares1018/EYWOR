@@ -29,6 +29,7 @@
  tacit_agreement:0 "Tacit agreement"
  de_wang_defect_flag:0 "§YPrince Demchugdongrub Defected§!"
  a_few_divisions_recuited_tt:0 "§YA few divisions from the central government will be recruited.§!\n"
+ stop_subject_war_end_tt:0 "§MYou will stop being a subject of [CHI.GetNameDef] when the war ends.§!\n"
  ###JAP
  no_sever_ties_tt:0 "Japan has not sever Sino-German ties"
  N_puppet_trigger:0 "State §YShanghai§! is controlled by Japan or its puppet"

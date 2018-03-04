@@ -1,7 +1,7 @@
 CCP = "countries/The Great Way Governmment.txt"
 EHB = "countries/East Hebei.txt"
 GUD = "countries/Guangdong.txt"
-JPS = "countries/Japanese Pacific States.txt"
+#JPS = "countries/Japanese Pacific States.txt"
 SIC = "countries/Sichuan.txt"
 RRC = "countries/Reorganized Republic of China.txt"
 JNC = "countries/provgov.txt"

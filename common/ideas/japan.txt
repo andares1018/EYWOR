@@ -18,6 +18,7 @@ ideas = {
 			modifier = {
 				army_morale_factor = 0.15
 				conscription = 0.02
+				ai_join_ally_desire_factor = -10000
 			}		
 		}
 		JAP_military_is_the_government_idea = {
@@ -38,8 +39,9 @@ ideas = {
 				political_power_gain = -0.10
 				unity_factor = -0.05
 				army_morale_factor = 0.10
-				army_org_factor = -0.1
+				army_org_factor = -0.5
 				research_time_factor = 0.01
+				ai_join_ally_desire_factor = -10000
 			}		
 		}
 		JAP_military_outweighs_the_government_idea = {
@@ -60,8 +62,9 @@ ideas = {
 				political_power_gain = -0.25 
 				unity_factor = -0.1
 				army_morale_factor = 0.05
-				army_org_factor = -0.20
+				army_org_factor = -0.15
 				research_time_factor = 0.025
+				ai_join_ally_desire_factor = -10000
 			}		
 		}
 		JAP_military_outweighs_the_government_idea_good = {
@@ -82,8 +85,9 @@ ideas = {
 				political_power_gain = -0.2
 				unity_factor = -0.05
 				army_morale_factor = 0.075
-				army_org_factor = -0.15
+				army_org_factor = -0.10
 				research_time_factor = 0.01
+				ai_join_ally_desire_factor = -10000
 			}		
 		}
 		JAP_military_outweighs_the_government_idea_bad = {
@@ -104,8 +108,9 @@ ideas = {
 				political_power_gain = -0.3 
 				unity_factor = -0.15
 				army_morale_factor = 0.05
-				army_org_factor = -0.25
+				army_org_factor = -0.20
 				research_time_factor = 0.03
+				ai_join_ally_desire_factor = -10000
 			}		
 		}
 		JAP_expansionist_propaganda = {
@@ -124,8 +129,8 @@ ideas = {
 			}			
 			removal_cost = -1
 			modifier = {
-				army_org_factor = 0.30
-				army_morale_factor = 0.40
+				army_org_factor = 0.35
+				army_morale_factor = 0.45
 				political_power_factor = 0.25
 			}		
 		}
@@ -244,7 +249,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				amphibious_invasion = 0.15       #兩棲登陸速度 +100%
+				amphibious_invasion = 0.15      
 				invasion_preparation = -0.15  
 			}		
 		}
@@ -279,6 +284,7 @@ ideas = {
 			modifier = {
 				unity_factor = 0.15
 				political_power_gain = 0.05
+				
 			}
 		}
 		jap_sov_pact = {
