@@ -3408,7 +3408,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = artillery_effort_chi
+		id = CHI_artillery_effort_focus
 		icon = GFX_goal_generic_army_artillery2
 		cost = 10.00
 		prerequisite = {
@@ -3437,7 +3437,7 @@ focus_tree = {
 		icon = GFX_goal_generic_army_motorized
 		cost = 10.00
 		prerequisite = {
-			focus = artillery_effort_chi
+			focus = CHI_artillery_effort_focus
 		}
 		prerequisite = {
 			focus = kmt_whampoa_rifle
@@ -4614,7 +4614,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = kmt_henan_aluminium
+		id = CHI_aluminium_effort_i_focus
 		icon = GFX_goal_aluminium
 		cost = 10.00
 		prerequisite = {
@@ -4672,11 +4672,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = kmt_shanxi_aluminium
+		id = CHI_aluminium_effort_ii_focus
 		icon = GFX_goal_aluminium
 		cost = 15.00
 		prerequisite = {
-			focus = kmt_henan_aluminium
+			focus = CHI_aluminium_effort_i_focus
 		}
 		x = 59
 		y = 4
@@ -4730,11 +4730,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = kmt_guizou_aluminium
+		id = CHI_aluminium_effort_iii_focus
 		icon = GFX_goal_aluminium
 		cost = 20.00
 		prerequisite = {
-			focus = kmt_shanxi_aluminium
+			focus = CHI_aluminium_effort_ii_focus
 		}
 		x = 59
 		y = 5
@@ -4784,7 +4784,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = jiangxi_tungsten
+		id = CHI_tungsten_effort_i_focus
 		icon = GFX_goal_tungsten
 		cost = 10.00
 		prerequisite = {
@@ -4842,11 +4842,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = guangdong_tungsten
+		id = CHI_tungsten_effort_ii_focus
 		icon = GFX_goal_tungsten
 		cost = 15.00
 		prerequisite = {
-			focus = jiangxi_tungsten
+			focus = CHI_tungsten_effort_i_focus
 		}
 		x = 61
 		y = 4
@@ -4900,11 +4900,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = hunan_tungsten
+		id = CHI_tungsten_effort_iii_focus
 		icon = GFX_goal_tungsten
 		cost = 20.00
 		prerequisite = {
-			focus = guangdong_tungsten
+			focus = CHI_tungsten_effort_ii_focus
 		}
 		x = 61
 		y = 5

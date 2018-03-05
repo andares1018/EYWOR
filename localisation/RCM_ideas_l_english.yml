@@ -313,6 +313,14 @@
  goodyear_tires_idea:0 "Goodyear Tires"
  CHI_krupp:0 "Krupp"
  ####PEOPLE#####
+ ###Generic
+ SIC_generic_fascist_demagogue:0 "Lin Longliang"
+ SIC_generic_democratic_reformer:0 "Li Zhaohan"
+ SIC_generic_communist_revolutionary:0 "Xi lingfong"
+ XIK_generic_fascist_demagogue:0 "Liang Chonggui"
+ XIK_generic_democratic_reformer:0 "Guo Qingnian"
+ XIK_generic_communist_revolutionary:0 "Zhuang Guochang"
+ ####
  hugh_dalton:0 "Hugh Dalton"
  anthony_eden:0 "Anthony Eden"
  GXC_yu_zuobuo:0 "Yu Zuobuo"

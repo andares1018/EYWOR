@@ -4153,7 +4153,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = PRC_kmt_henan_aluminium
+		id = PRC_CHI_aluminium_effort_i_focus
 		icon = GFX_goal_aluminium
 		cost = 10.00
 		prerequisite = {
@@ -4215,11 +4215,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = PRC_kmt_shanxi_aluminium
+		id = PRC_CHI_aluminium_effort_ii_focus
 		icon = GFX_goal_aluminium
 		cost = 15.00
 		prerequisite = {
-			focus = PRC_kmt_henan_aluminium
+			focus = PRC_CHI_aluminium_effort_i_focus
 		}
 		x = 51
 		y = 4
@@ -4277,11 +4277,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = PRC_kmt_guizou_aluminium
+		id = PRC_CHI_aluminium_effort_iii_focus
 		icon = GFX_goal_aluminium
 		cost = 20.00
 		prerequisite = {
-			focus = PRC_kmt_shanxi_aluminium
+			focus = PRC_CHI_aluminium_effort_ii_focus
 		}
 		x = 51
 		y = 5
@@ -4335,7 +4335,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = PRC_jiangxi_tungsten
+		id = PRC_CHI_tungsten_effort_i_focus
 		icon = GFX_goal_tungsten
 		cost = 10.00
 		prerequisite = {
@@ -4397,11 +4397,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = PRC_guangdong_tungsten
+		id = PRC_CHI_tungsten_effort_ii_focus
 		icon = GFX_goal_tungsten
 		cost = 15.00
 		prerequisite = {
-			focus = PRC_jiangxi_tungsten
+			focus = PRC_CHI_tungsten_effort_i_focus
 		}
 		x = 53
 		y = 4
@@ -4459,11 +4459,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = PRC_hunan_tungsten
+		id = PRC_CHI_tungsten_effort_iii_focus
 		icon = GFX_goal_tungsten
 		cost = 20.00
 		prerequisite = {
-			focus = PRC_guangdong_tungsten
+			focus = PRC_CHI_tungsten_effort_ii_focus
 		}
 		x = 53
 		y = 5
