@@ -5,8 +5,8 @@ state={
 	manpower = 6774200
 	state_category = town
 	resources={
-		steel=30
-		tungsten=52
+		steel=20
+		tungsten=32
 	}
 
 	history={
@@ -15,6 +15,9 @@ state={
 			infrastructure = 3
 			air_base = 6
 			industrial_complex = 1
+			6928 = {
+				naval_base = 8
+			}
 		}
 		
 		victory_points = {

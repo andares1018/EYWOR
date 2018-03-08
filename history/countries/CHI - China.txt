@@ -66,9 +66,9 @@ set_convoys = 40
 	complete_national_focus = CHI_axis_help_focus
 	complete_national_focus = CHI_comintern_help_focus
 	complete_national_focus = CHI_allies_help_focus
-	complete_national_focus = kmt_reorganize_nra
+	complete_national_focus = CHI_reorganize_nra
 	complete_national_focus = monetary_reform
-	complete_national_focus = streamlined_industry
+	complete_national_focus = CHI_streamlined_industry
 	add_ideas = {
 		#laws
 		tot_economic_mobilisation

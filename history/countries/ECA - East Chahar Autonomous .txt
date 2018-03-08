@@ -15,7 +15,7 @@ if = {
 	limit = {
 		has_global_flag = trw_compat
 	}
-	add_ideas = MEN_limited_war
+	#add_ideas = MEN_limited_war
 }
 1939.1.1 = {
 	add_to_war = {

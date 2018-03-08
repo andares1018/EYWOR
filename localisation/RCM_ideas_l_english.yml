@@ -222,11 +222,6 @@
  henan_famine_flag:0 "Famine in Henan"
  communist_sympathizer:0 "Communist Sympathizer"
  china_split:0 "Communist and Nationalist China break up"
- robber_baron:0 "Robber Baron"
- revolutionary_syndicalist:0 "Revolutionary Syndicalist"
- progressive_activist:0 "Progressive Activist"
- staunch_patriot:0 "Staunch Nationalist"
- wartime_propagantist:0 "Wartime Propagantist"
  left_wing_rhetoric:0 "Left-wing Rhetoric"
  CHI_collectivism:0 "Collectivism"
  agrarian_reform_idea:0 "Agrarian Reform"
@@ -249,6 +244,8 @@
  ger_refuse_chi:0 "German refusal"
  west_friend:0 "Befriend the West"
  sov_friend:0 "Befriend the Soviet"
+ CHI_nanking_decade_idea:0 "Nanking Decade"
+ CHI_nanking_decade_idea_desc:0 "China has been developing steadily ever since the Northern Expedition. It will be interrupted when China is under attack."
  FRA_front_populaire:0 "Front Populaire"
  FRA_front_populaire_desc:0 "The Popular Front, composed of the French Section of the Workers' International (SFIO), the Radical-Socialists, the French Section of the Communist International (SFIC), and miscellaneous leftists, won power from the broad Republican coalitions that had governed since the 6 February 1934 crisis."
  NBIS_esp:0 "National Bureau of Investigation and Statistics"
@@ -320,6 +317,11 @@
  XIK_generic_fascist_demagogue:0 "Liang Chonggui"
  XIK_generic_democratic_reformer:0 "Guo Qingnian"
  XIK_generic_communist_revolutionary:0 "Zhuang Guochang"
+ robber_baron:0 "Robber Baron"
+ revolutionary_syndicalist:0 "Revolutionary Syndicalist"
+ progressive_activist:0 "Progressive Activist"
+ staunch_patriot:0 "Staunch Nationalist"
+ wartime_propagantist:0 "Wartime Propagantist"
  ####
  hugh_dalton:0 "Hugh Dalton"
  anthony_eden:0 "Anthony Eden"
@@ -393,7 +395,6 @@
  shigeru_honjo:0 "Shigeru Honjo"
  jotaro_watanabe:0 "Jotaro Watanabe"
  saionji_kinmochi:0 "Saionji Kinmochi"
- 
  ###commie stuff
  
  

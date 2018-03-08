@@ -1,4 +1,7 @@
 ﻿capital = 1
+####TRW COMPAT
+
+######
 CHI = {
 	set_autonomy = {
 		target = NEA
@@ -78,7 +81,7 @@ ENG = {
 			puppet = BUR
 		}
 	}
-			
+	
 	set_politics = {
 
 		parties = {

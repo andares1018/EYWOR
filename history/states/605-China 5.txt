@@ -41,5 +41,5 @@ state={
 	}
 	manpower=32963300
 	buildings_max_level_factor=1.000
-	state_category=megalopolis
+	state_category=metropolis
 }

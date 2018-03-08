@@ -184,7 +184,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = kmt_reorganize_nra
+		id = CHI_reorganize_nra
 		icon = GFX_focus_NRA
 		cost = 8.00
 		x = 45
@@ -2427,7 +2427,7 @@ focus_tree = {
 			focus = espionage_network
 		}
 		mutually_exclusive = {
-			focus = yi_dang_zhi_guo
+			focus = CHI_yi_dang_zhi_guo_focus
 		}
 		x = 23
 		y = 6
@@ -3187,7 +3187,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = kmt_unification_decree
+		id = CHI_unification_decree
 		icon = GFX_goal_generic_cavalry
 		cost = 10.00
 		prerequisite = {
@@ -3326,7 +3326,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = public_school_program
+		id = CHI_public_school_program_focus
 		icon = GFX_goal_generic_construct_civ_factory
 		cost = 10.00
 		prerequisite = {
@@ -3349,14 +3349,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = kmt_reform_military_academy
+		id = CHI_reform_military_academy
 		icon = GFX_goal_generic_army_doctrines
 		cost = 10.00
 		prerequisite = {
-			focus = kmt_reorganize_nra
+			focus = CHI_reorganize_nra
 		}
 		prerequisite = {
-			focus = public_school_program
+			focus = CHI_public_school_program_focus
 		}
 		x = 42
 		y = 2
@@ -3381,11 +3381,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = kmt_whampoa_rifle
+		id = CHI_whampoa_rifle
 		icon = GFX_focus_secret_rearmament
 		cost = 10.00
 		prerequisite = {
-			focus = kmt_reform_military_academy
+			focus = CHI_reform_military_academy
 		}
 		x = 41
 		y = 3
@@ -3412,7 +3412,7 @@ focus_tree = {
 		icon = GFX_goal_generic_army_artillery2
 		cost = 10.00
 		prerequisite = {
-			focus = kmt_reform_military_academy
+			focus = CHI_reform_military_academy
 		}
 		x = 43
 		y = 3
@@ -3433,14 +3433,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = motorize_effort
+		id = CHI_motorize_effort_focus
 		icon = GFX_goal_generic_army_motorized
 		cost = 10.00
 		prerequisite = {
 			focus = CHI_artillery_effort_focus
 		}
 		prerequisite = {
-			focus = kmt_whampoa_rifle
+			focus = CHI_whampoa_rifle
 		}
 		x = 42
 		y = 4
@@ -3461,11 +3461,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = learn_foreign_tank_design
+		id = CHI_learn_foreign_tank_design_focus
 		icon = GFX_goal_generic_army_tanks
 		cost = 10.00
 		prerequisite = {
-			focus = motorize_effort
+			focus = CHI_motorize_effort_focus
 		}
 		x = 42
 		y = 6
@@ -3520,11 +3520,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = china_first_tank
+		id = CHI_china_first_tank_focus
 		icon = GFX_goal_generic_army_tanks
 		cost = 10.00
 		prerequisite = {
-			focus = learn_foreign_tank_design
+			focus = CHI_learn_foreign_tank_design_focus
 		}
 		x = 42
 		y = 7
@@ -3549,7 +3549,7 @@ focus_tree = {
 		icon = GFX_focus_generic_little_entente
 		cost = 10.00
 		prerequisite = {
-			focus = motorize_effort
+			focus = CHI_motorize_effort_focus
 		}
 		x = 43
 		y = 5
@@ -3565,10 +3565,10 @@ focus_tree = {
 		icon = GFX_focus_CZE_military_aeronautical_institute
 		cost = 10.00
 		prerequisite = {
-			focus = public_school_program
+			focus = CHI_public_school_program_focus
 		}
 		prerequisite = {
-			focus = kmt_reorganize_nra
+			focus = CHI_reorganize_nra
 		}
 		x = 45
 		y = 2
@@ -3757,10 +3757,10 @@ focus_tree = {
 		icon = GFX_goal_generic_navy_cruiser
 		cost = 10.00
 		prerequisite = {
-			focus = public_school_program
+			focus = CHI_public_school_program_focus
 		}
 		prerequisite = {
-			focus = kmt_reorganize_nra
+			focus = CHI_reorganize_nra
 		}
 		x = 48
 		y = 2
@@ -4035,7 +4035,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = kmt_expand_jiangnan_shipyard
+		id = CHI_expand_jiangnan_shipyard
 		icon = GFX_goal_generic_construct_naval_dockyard
 		cost = 10.00
 		prerequisite = {
@@ -4077,11 +4077,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = kmt_compulsory_education_chi
+		id = CHI_compulsory_education_chi
 		icon = GFX_goal_generic_propaganda
 		cost = 10.00
 		prerequisite = {
-			focus = public_school_program
+			focus = CHI_public_school_program_focus
 		}
 		x = 51
 		y = 2
@@ -4098,7 +4098,7 @@ focus_tree = {
 		icon = GFX_goal_academia_reform
 		cost = 10.00
 		prerequisite = {
-			focus = kmt_compulsory_education_chi
+			focus = CHI_compulsory_education_chi
 		}
 		x = 51
 		y = 3
@@ -4110,7 +4110,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = kmt_modern_university
+		id = CHI_modern_university
 		icon = GFX_focus_research
 		cost = 10.00
 		prerequisite = {
@@ -4263,7 +4263,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = kmt_modern_industrialization
+		id = CHI_modern_industrialization
 		icon = GFX_goal_generic_construct_civilian
 		cost = 14.29
 		prerequisite = {
@@ -4296,7 +4296,7 @@ focus_tree = {
 			focus = CHI_academy_rf_focus
 		}
 		prerequisite = {
-			focus = kmt_modern_industrialization
+			focus = CHI_modern_industrialization
 		}
 		x = 52
 		y = 5
@@ -4308,7 +4308,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = streamlined_industry
+		id = CHI_streamlined_industry
 		icon = GFX_goal_generic_construct_mil_factory
 		cost = 10.00
 		prerequisite = {
@@ -4330,11 +4330,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = kmt_rejuvenate_heavy_industry
+		id = CHI_rejuvenate_heavy_industry
 		icon = GFX_goal_generic_construct_mil_factory
 		cost = 25.00
 		prerequisite = {
-			focus = streamlined_industry
+			focus = CHI_streamlined_industry
 		}
 		x = 56
 		y = 2
@@ -4414,11 +4414,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = kmt_national_resource_exploration
+		id = CHI_national_resource_exploration
 		icon = GFX_goal_generic_oil_refinery
 		cost = 10.00
 		prerequisite = {
-			focus = streamlined_industry
+			focus = CHI_streamlined_industry
 		}
 		x = 60
 		y = 2
@@ -4434,14 +4434,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = anshan_steelwork
+		id = CHI_anshan_steelwork_focus
 		icon = GFX_goal_steelwork
 		cost = 12.00
 		prerequisite = {
-			focus = kmt_national_resource_exploration
+			focus = CHI_national_resource_exploration
 		}
 		prerequisite = {
-			focus = kmt_rejuvenate_heavy_industry
+			focus = CHI_rejuvenate_heavy_industry
 		}
 		x = 57
 		y = 3
@@ -4481,14 +4481,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = revive_hanyang_steel
+		id = CHI_revive_hanyang_steelwork_focus
 		icon = GFX_goal_steelwork
 		cost = 10.00
 		prerequisite = {
-			focus = kmt_national_resource_exploration
+			focus = CHI_national_resource_exploration
 		}
 		prerequisite = {
-			focus = kmt_rejuvenate_heavy_industry
+			focus = CHI_rejuvenate_heavy_industry
 		}
 		x = 55
 		y = 3
@@ -4528,14 +4528,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = national_steelwork
+		id = CHI_national_steelwork_focus
 		icon = GFX_goal_generic_construct_civ_factory
 		cost = 25.00
 		prerequisite = {
-			focus = anshan_steelwork
+			focus = CHI_anshan_steelwork_focus
 		}
 		prerequisite = {
-			focus = revive_hanyang_steel
+			focus = CHI_revive_hanyang_steelwork_focus
 		}
 		x = 56
 		y = 4
@@ -4591,7 +4591,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = industry_balanced_enough
-				has_completed_focus = kmt_modern_industrialization
+				has_completed_focus = CHI_modern_industrialization
 			}
 			has_war = no
 			has_tech = construction4
@@ -4618,7 +4618,7 @@ focus_tree = {
 		icon = GFX_goal_aluminium
 		cost = 10.00
 		prerequisite = {
-			focus = kmt_national_resource_exploration
+			focus = CHI_national_resource_exploration
 		}
 		x = 59
 		y = 3
@@ -4715,7 +4715,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = industry_balanced_enough
-				has_completed_focus = kmt_modern_industrialization
+				has_completed_focus = CHI_modern_industrialization
 			}
 			has_tech = excavation4
 			607 = {
@@ -4788,7 +4788,7 @@ focus_tree = {
 		icon = GFX_goal_tungsten
 		cost = 10.00
 		prerequisite = {
-			focus = kmt_national_resource_exploration
+			focus = CHI_national_resource_exploration
 		}
 		x = 61
 		y = 3
@@ -4885,7 +4885,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = industry_balanced_enough
-				has_completed_focus = kmt_modern_industrialization
+				has_completed_focus = CHI_modern_industrialization
 			}
 			has_tech = excavation4
 			600 = {
@@ -4954,11 +4954,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = kmt_refinery_technology_german
+		id = CHI_refinery_technology_german
 		icon = GFX_goal_generic_oil_refinery
 		cost = 10.00
 		prerequisite = {
-			focus = kmt_national_resource_exploration
+			focus = CHI_national_resource_exploration
 		}
 		x = 63
 		y = 3
@@ -4986,11 +4986,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = kmt_hainan_plantation
+		id = CHI_hainan_plantation
 		icon = GFX_goal_generic_production
 		cost = 10.00
 		prerequisite = {
-			focus = kmt_refinery_technology_german
+			focus = CHI_refinery_technology_german
 		}
 		x = 63
 		y = 4
@@ -5006,7 +5006,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = industry_balanced_enough
-				has_completed_focus = kmt_modern_industrialization
+				has_completed_focus = CHI_modern_industrialization
 			}
 			591 = {
 				hainan_trigger = yes
@@ -5263,14 +5263,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = kmt_daqing_oil_field
+		id = CHI_daqing_oil_field
 		icon = GFX_goal_generic_oil_refinery
 		cost = 10.00
 		prerequisite = {
 			focus = northeast_infra_focus_iii
 		}
 		prerequisite = {
-			focus = kmt_refinery_technology_german
+			focus = CHI_refinery_technology_german
 		}
 		x = 65
 		y = 4
@@ -5301,7 +5301,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = industry_balanced_enough
-				has_completed_focus = kmt_modern_industrialization
+				has_completed_focus = CHI_modern_industrialization
 			}
 			has_tech = improved_oil_plant
 			717 = {
@@ -6093,14 +6093,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = kmt_han_arsenal
+		id = CHI_han_arsenal
 		icon = GFX_goal_generic_small_arms
 		cost = 15.00
 		prerequisite = {
-			focus = national_steelwork
+			focus = CHI_national_steelwork_focus
 		}
 		prerequisite = {
-			focus = kmt_modern_industrialization
+			focus = CHI_modern_industrialization
 		}
 		x = 56
 		y = 5
@@ -6380,7 +6380,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = yi_dang_zhi_guo
+		id = CHI_yi_dang_zhi_guo_focus
 		icon = GFX_goal_dangguo
 		cost = 10.00
 		prerequisite = {

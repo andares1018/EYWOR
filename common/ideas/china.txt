@@ -2502,7 +2502,7 @@ ideas = {
 				original_tag = CHI				
 			}
 			available = {
-				has_completed_focus = motorize_effort
+				has_completed_focus = CHI_motorize_effort_focus
 			}
 			cost = 150
 			removal_cost = 10
@@ -2908,7 +2908,7 @@ ideas = {
 					has_government = democratic
 					has_government = fascism
 				}
-				has_completed_focus = learn_foreign_tank_design
+				has_completed_focus = CHI_learn_foreign_tank_design_focus
 			}	
 			research_bonus = {
 				armor = 0.10

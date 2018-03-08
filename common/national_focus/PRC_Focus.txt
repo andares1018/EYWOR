@@ -3739,7 +3739,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = PRC_revive_hanyang_steel
+		id = PRC_CHI_revive_hanyang_steelwork_focus
 		icon = GFX_goal_steelwork
 		cost = 10.00
 		prerequisite = {
@@ -3787,7 +3787,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = PRC_anshan_steelwork
+		id = PRC_CHI_anshan_steelwork_focus
 		icon = GFX_goal_steelwork
 		cost = 12.00
 		prerequisite = {
@@ -3835,14 +3835,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = PRC_national_steelwork
+		id = PRC_CHI_national_steelwork_focus
 		icon = GFX_goal_generic_construct_civ_factory
 		cost = 25.00
 		prerequisite = {
-			focus = PRC_revive_hanyang_steel
+			focus = PRC_CHI_revive_hanyang_steelwork_focus
 		}
 		prerequisite = {
-			focus = PRC_anshan_steelwork
+			focus = PRC_CHI_anshan_steelwork_focus
 		}
 		x = 46
 		y = 4
@@ -3902,7 +3902,7 @@ focus_tree = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = industry_balanced_enough
-				has_completed_focus = kmt_modern_industrialization
+				has_completed_focus = CHI_modern_industrialization
 			}
 			has_war = no
 			has_tech = construction4
@@ -3929,7 +3929,7 @@ focus_tree = {
 		icon = GFX_goal_generic_small_arms
 		cost = 15.00
 		prerequisite = {
-			focus = PRC_national_steelwork
+			focus = PRC_CHI_national_steelwork_focus
 		}
 		x = 46
 		y = 5
@@ -4112,7 +4112,7 @@ focus_tree = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = industry_balanced_enough
-				has_completed_focus = kmt_modern_industrialization
+				has_completed_focus = CHI_modern_industrialization
 			}
 			has_war = no
 			has_tech = construction4
@@ -4144,7 +4144,7 @@ focus_tree = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = industry_balanced_enough
-				has_completed_focus = kmt_modern_industrialization
+				has_completed_focus = CHI_modern_industrialization
 			}
 			has_war = no
 			has_tech = construction5
@@ -4262,7 +4262,7 @@ focus_tree = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = industry_balanced_enough
-				has_completed_focus = kmt_modern_industrialization
+				has_completed_focus = CHI_modern_industrialization
 			}
 			has_tech = excavation4
 			607 = {
@@ -4444,7 +4444,7 @@ focus_tree = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = industry_balanced_enough
-				has_completed_focus = kmt_modern_industrialization
+				has_completed_focus = CHI_modern_industrialization
 			}
 			has_tech = excavation4
 			600 = {
@@ -4577,7 +4577,7 @@ focus_tree = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = industry_balanced_enough
-				has_completed_focus = kmt_modern_industrialization
+				has_completed_focus = CHI_modern_industrialization
 			}
 			591 = {
 				hainan_trigger = yes
@@ -4888,7 +4888,7 @@ focus_tree = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = industry_balanced_enough
-				has_completed_focus = kmt_modern_industrialization
+				has_completed_focus = CHI_modern_industrialization
 			}
 			has_tech = improved_oil_plant
 			717 = {
