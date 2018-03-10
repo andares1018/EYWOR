@@ -663,7 +663,7 @@ country_event = {
 		set_province_name = { id = 4801 name = "Urga" }
 		set_capital = 330
 		set_cosmetic_tag = MEN_MON
-		add_national_unity = 0.1
+		add_stability = 0.1
 		add_political_power = 100
 		add_autonomy_ratio = {
 			value = 0.5

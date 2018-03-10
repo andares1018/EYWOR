@@ -98,7 +98,7 @@ focus_tree = {
 			factor = 5
 		}
 		completion_reward = {
-			add_national_unity = 0.05
+			add_stability = 0.05
 			add_political_power = 75
 			add_ideas = SIK_Six_major_policies
 		}
@@ -1134,7 +1134,7 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			add_national_unity = 0.1
+			add_stability = 0.1
 			add_political_power = 100
 			retire_country_leader = yes
 			remove_unit_leader = 2897

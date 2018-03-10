@@ -271,13 +271,13 @@ country_event = {
 	option = {
 		name = EFM_independent.18.a
 		ai_chance = { factor = 70 }
-		add_national_unity = 0.05
+		add_stability = 0.05
 		PRC = { country_event = { id = EFM_independent.19 } }
 	}
 	option = {
 		ai_chance = { factor = 30 }
 		name = EFM_independent.18.b
-		add_national_unity = -0.05
+		add_stability = -0.05
 		PRC = { country_event = { id = EFM_independent.20 } }
 		PRC = {
 			transfer_state = 728
@@ -299,7 +299,7 @@ country_event = {
 	option = {
 		ai_chance = { factor = 10 }
 		name = EFM_independent.19.b
-		add_national_unity = -0.05
+		add_stability = -0.05
 	}
 }
 country_event = {
@@ -312,7 +312,7 @@ country_event = {
 	option = {
 		name = EFM_independent.20.a
 		add_political_power = 100
-		add_national_unity = 0.05
+		add_stability = 0.05
 	}
 }
 # China Demand Tibet
@@ -326,7 +326,7 @@ country_event = {
 	option = {
 		name = EFM_independent.21.a
 		ai_chance = { factor = 50 }
-		add_national_unity = 0.1
+		add_stability = 0.1
 		PRC = { country_event = { id = EFM_independent.22 } }
 	}
 	option = {
@@ -468,7 +468,7 @@ country_event = {
 	option = {
 		ai_chance = { factor = 10 }
 		name = EFM_independent.25.b
-		add_national_unity = -0.05
+		add_stability = -0.05
 	}
 }
 country_event = {

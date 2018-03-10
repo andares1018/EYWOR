@@ -42,7 +42,7 @@ country_event = {
 			}
 		}
 		add_political_power = 50
-		add_national_unity = -0.20
+		add_stability = -0.20
 		add_popularity = {
 			ideology = n_socialism
 			popularity = -1
@@ -61,7 +61,7 @@ country_event = {
 		hidden_effect = {
 			PRC = { 
 				add_political_power = 200
-				add_national_unity = 0.10
+				add_stability = 0.10
 				set_political_party = { ideology = n_socialism popularity = 0.3 }
 				add_ideas = zhang_bojun
 				country_event = { id = prc.3 }
@@ -111,7 +111,7 @@ country_event = {
 			PRC = { country_event = { id = prc.4 } }
 		}
 		unlock_national_focus = zhang_lan_doctrine
-		add_national_unity = -0.05
+		add_stability = -0.05
 	}
 
 }
@@ -237,7 +237,7 @@ country_event = {
 			ideology = n_socialism
 			popularity = 0.10
 		}
-		add_national_unity = -0.02
+		add_stability = -0.02
 		set_country_flag = democratic_approach
 		custom_effect_tooltip = rcmpolitical.32.a.tt
 	}
@@ -248,7 +248,7 @@ country_event = {
 			ideology = n_socialism
 			popularity = 0.20
 		}
-		add_national_unity = -0.10
+		add_stability = -0.10
 		set_country_flag = revolutionary_approach
 		custom_effect_tooltip = rcmpolitical.32.b.tt
 		custom_effect_tooltip = rcmpolitical.32.b.tt2
@@ -397,7 +397,7 @@ country_event = {
 			ideology = n_socialism
 			popularity = -0.05
 		}
-		add_national_unity = -0.25
+		add_stability = -0.25
 	}
 }
 
@@ -429,7 +429,7 @@ country_event = {
 			ideology = n_socialism
 			popularity = 0.10
 		}
-		add_national_unity = -0.02
+		add_stability = -0.02
 	}
 }
 
@@ -606,7 +606,7 @@ country_event = {
 				elections_allowed = no
 			}
 		}
-		add_national_unity = -0.05
+		add_stability = -0.05
 	}
 }
 ###revo

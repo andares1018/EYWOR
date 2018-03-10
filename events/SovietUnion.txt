@@ -18,6 +18,7 @@ country_event = {
 		ai_chance = { factor = 75 }
 		add_political_power = -25
 		hidden_effect = {
+		#MODDEDv
 			random_list = {
 				60 = {
 					JAP = {
@@ -30,6 +31,7 @@ country_event = {
 					}
 				}
 			}
+			##MODDED^
 		}
 		effect_tooltip = {
 			random_list = {
@@ -47,9 +49,11 @@ country_event = {
 		ai_chance = { factor = 25 }
 		JAP = {
 			effect_tooltip = {
-				add_national_unity = 0.05
+				add_stability = 0.05
 			}
+			#MODDEDv
 			country_event = { days = 1 id = rcmjapan.5 }
+			#MODDED^
 		}
 	}
 }
@@ -549,17 +553,21 @@ country_event = {
 		date > 1936.11.1
 		tag = CHI
 		has_opinion_modifier = hostile_status
+		NOT = { has_dlc = "Waking the Tiger" }
 	}
 
 	fire_only_once = yes
-	
+
+				   
+						
 	####MODDED#####VVV
 	is_triggered_only = yes
 	#mean_time_to_happen = {
 	#	days = 50
 	#}
 	###############^^^
-	
+				   
+ 
 	
 	# Enter negotiations with Communist China
 	option = {
@@ -626,7 +634,7 @@ country_event = {
 	# Refuse to negotiate
 	option = {
 		name = soviet.19.b
-		country_event = { id = soviet.22 days = 1 }
+		SOV = { country_event = { id = soviet.22 days = 1 } }
 		set_global_flag = CHI_no_national_front_flag
 		ai_chance = { factor = 0 }
 		custom_effect_tooltip = CHI_no_united_front
@@ -727,7 +735,7 @@ country_event = {
 	}
 
 	mean_time_to_happen = {
-		days = 0
+		days = 1
 	}
 
 	option = {
@@ -795,7 +803,7 @@ country_event = {
 	}
 
 	mean_time_to_happen = {
-		days = 0
+		days = 1
 	}
 
 	option = {
@@ -883,7 +891,7 @@ country_event = {
 	}
 
 	mean_time_to_happen = {
-		days = 0
+		days = 1
 	}
 
 	option = {
@@ -1995,7 +2003,7 @@ country_event = {
 	}
 
 	mean_time_to_happen = {
-		days = 0
+		days = 1
 	}
 
 	option = {
@@ -2029,7 +2037,10 @@ country_event = {
 	trigger = {
 		tag = SOV
 		has_global_flag = sov_yes_pact
-		GER = { exists = yes }
+		GER = {
+			exists = yes
+			is_subject = no
+		}
 		NOT =  { has_war_with = GER }
 		OR = {
 			OR = {
@@ -2090,7 +2101,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 0
+		days = 1
 	}
 	
 	option = {

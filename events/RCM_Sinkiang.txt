@@ -455,11 +455,11 @@ country_event = {
 					has_government = neutrality
 				}
 				set_equipment_fraction = 0.5
-				set_national_unity = 0.7
+				set_stability = 0.7
 			}
 		}
 		set_equipment_fraction = 0.5
-		set_national_unity = 0.7
+		set_stability = 0.7
 	}
 	option = {
 		ai_chance = { factor = 10 }
@@ -476,11 +476,11 @@ country_event = {
 					has_government = communism
 				}
 				set_equipment_fraction = 0.5
-				set_national_unity = 0.7
+				set_stability = 0.7
 			}
 		}
 		set_equipment_fraction = 0.5
-		set_national_unity = 0.7
+		set_stability = 0.7
 	}
 }
 # Civil war with against CHI puppet us
@@ -513,12 +513,12 @@ country_event = {
 					has_government = fascism
 				}
 				set_equipment_fraction = 0.5
-				set_national_unity = 0.7
+				set_stability = 0.7
 				set_cosmetic_tag = ETR
 			}
 		}
 		set_equipment_fraction = 0.5
-		set_national_unity = 0.7
+		set_stability = 0.7
 	}
 	option = {
 		ai_chance = { factor = 5 }
@@ -535,11 +535,11 @@ country_event = {
 					has_government = neutrality
 				}
 				set_equipment_fraction = 0.5
-				set_national_unity = 0.7
+				set_stability = 0.7
 			}
 		}
 		set_equipment_fraction = 0.5
-		set_national_unity = 0.7
+		set_stability = 0.7
 		set_cosmetic_tag = ETR
 	}
 	option = {
@@ -557,11 +557,11 @@ country_event = {
 					has_government = neutrality
 				}
 				set_equipment_fraction = 0.5
-				set_national_unity = 0.7
+				set_stability = 0.7
 			}
 		}
 		set_equipment_fraction = 0.5
-		set_national_unity = 0.7
+		set_stability = 0.7
 		set_cosmetic_tag = ETR
 	}
 }
@@ -770,7 +770,7 @@ country_event = {
 					has_government = communism
 				}
 				set_equipment_fraction = 0.5
-				set_national_unity = 0.7
+				set_stability = 0.7
 				create_field_marshal = {
 					name = "Sheng Shicai"
 					portrait_path = "gfx/leaders/SIK/Portrait_Sinkiang_Sheng_Shicai.dds"
@@ -780,7 +780,7 @@ country_event = {
 			}
 		}
 		set_equipment_fraction = 0.5
-		set_national_unity = 0.7
+		set_stability = 0.7
 		add_popularity = {
 			ideology = neutrality
 			popularity = 0.1
@@ -861,7 +861,7 @@ country_event = {
 						has_government = communism
 					}
 					set_equipment_fraction = 0.5
-					set_national_unity = 0.7
+					set_stability = 0.7
 					create_field_marshal = {
 						name = "Sheng Shicai"
 						portrait_path = "gfx/leaders/SIK/Portrait_Sinkiang_Sheng_Shicai.dds"
@@ -871,7 +871,7 @@ country_event = {
 				}
 			}
 			set_equipment_fraction = 0.5
-			set_national_unity = 0.7
+			set_stability = 0.7
 			add_popularity = {
 				ideology = neutrality
 				popularity = 0.1
@@ -895,7 +895,7 @@ country_event = {
 						has_government = communism
 					}
 					set_equipment_fraction = 0.3
-					set_national_unity = 0.5
+					set_stability = 0.5
 					create_field_marshal = {
 						name = "Sheng Shicai"
 						portrait_path = "gfx/leaders/SIK/Portrait_Sinkiang_Sheng_Shicai.dds"
@@ -905,7 +905,7 @@ country_event = {
 				}
 			}
 			set_equipment_fraction = 0.7
-			set_national_unity = 0.8
+			set_stability = 0.8
 			add_popularity = {
 				ideology = neutrality
 				popularity = 0.1
@@ -1239,7 +1239,7 @@ country_event = {
 					has_government = fascism
 				}
 				set_equipment_fraction = 0.8
-				set_national_unity = 0.7
+				set_stability = 0.7
 				set_cosmetic_tag = ETR
 				add_ideas = SIK_For_the_TAR_revolution
 				set_capital = 617
@@ -1306,7 +1306,7 @@ country_event = {
 			}
 		}
 		set_equipment_fraction = 0.8
-		set_national_unity = 0.7
+		set_stability = 0.7
 		add_popularity = {
 			ideology = neutrality
 			popularity = 0.4
@@ -1350,7 +1350,7 @@ country_event = {
 					has_government = neutrality
 				}
 				set_equipment_fraction = 0.8
-				set_national_unity = 0.7
+				set_stability = 0.7
 				set_capital = 617
 				add_popularity = {
 					ideology = neutrality
@@ -1373,7 +1373,7 @@ country_event = {
 			remove_unit_leader = 2898
 		}
 		set_equipment_fraction = 0.8
-		set_national_unity = 0.7
+		set_stability = 0.7
 		add_ideas = SIK_For_the_TAR_revolution
 		add_popularity = {
 			ideology = fascism
@@ -1946,11 +1946,11 @@ country_event = {
 					has_government = communism
 				}
 				set_equipment_fraction = 0.7
-				set_national_unity = 0.7
+				set_stability = 0.7
 			}
 		}
 		set_equipment_fraction = 0.7
-		set_national_unity = 0.7
+		set_stability = 0.7
 	}
 	option = {
 		ai_chance = { factor = 45 }
@@ -2534,12 +2534,12 @@ country_event = {
 					has_government = fascism
 				}
 				set_equipment_fraction = 0.5
-				set_national_unity = 0.7
+				set_stability = 0.7
 				set_cosmetic_tag = ETR
 			}
 		}
 		set_equipment_fraction = 0.5
-		set_national_unity = 0.7
+		set_stability = 0.7
 	}
 }
 # Sinkiang Peace

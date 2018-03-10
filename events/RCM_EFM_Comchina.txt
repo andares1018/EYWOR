@@ -29,7 +29,7 @@ country_event = {
 	option = {
 		name = EFM_Comchina.2.a
 		add_political_power = 50
-		add_national_unity = 0.05
+		add_stability = 0.05
 		add_manpower = -100
 		SHX = { country_event = { id = EFM_Comchina.3 } }
 		white_peace = SHX
@@ -46,7 +46,7 @@ country_event = {
 	option = {
 		name = EFM_Comchina.3.a
 		add_political_power = -50
-		add_national_unity = -0.05
+		add_stability = -0.05
 		add_manpower = -300
 	}
 }
@@ -65,7 +65,7 @@ country_event = {
 	option = {
 		name = EFM_Comchina.4.a
 		add_political_power = -100
-		add_national_unity = -0.05
+		add_stability = -0.05
 		add_manpower = -1000
 		SHX = { country_event = { id = EFM_Comchina.5 } }
 		white_peace = SHX
@@ -82,7 +82,7 @@ country_event = {
 	option = {
 		name = EFM_Comchina.5.a
 		add_political_power = 100
-		add_national_unity = 0.05
+		add_stability = 0.05
 		add_manpower = -100
 	}
 }
@@ -116,7 +116,7 @@ country_event = {
 	option = {#stop and peace
 		name = EFM_Comchina.7.a
 		add_political_power = 50
-		add_national_unity = 0.05
+		add_stability = 0.05
 		add_manpower = -1000
 		if = {
 			limit = {
@@ -134,7 +134,7 @@ country_event = {
 			country_exists = NXM
 		}
 		add_political_power = 50
-		add_national_unity = 0.05
+		add_stability = 0.05
 		add_manpower = -1000
 		if = {
 			limit = {
@@ -160,7 +160,7 @@ country_event = {
 			factor = 100
 		}
 		add_political_power = -50
-		add_national_unity = -0.05
+		add_stability = -0.05
 		add_manpower = -5000
 		#CHI = {
 		#	country_event = { id = EFM_independent.5 }
@@ -179,7 +179,7 @@ country_event = {
 			factor = 0
 		}
 		#add_political_power = -50
-		add_national_unity = -0.025
+		add_stability = -0.025
 		add_manpower = -1000
 		CHI = {
 			country_event = { id = EFM_independent.5 }
@@ -214,7 +214,7 @@ country_event = {
 	option = {
 		name = EFM_Comchina.9.a
 		add_political_power = -100
-		add_national_unity = -0.05
+		add_stability = -0.05
 		add_manpower = -3000
 		NXM = { country_event = { id = EFM_Comchina.10 } }
 		white_peace = NXM
@@ -231,7 +231,7 @@ country_event = {
 	option = {
 		name = EFM_Comchina.10.a
 		add_political_power = 100
-		add_national_unity = 0.05
+		add_stability = 0.05
 		add_manpower = -300
 	}
 }
@@ -266,7 +266,7 @@ country_event = {
 			761 = { set_demilitarized_zone = yes }
 		}
 		add_political_power = 20
-		add_national_unity = 0.05
+		add_stability = 0.05
 		set_global_flag = tacit_truce_flag
 		hidden_effect = {
 			CHI = {
@@ -292,7 +292,7 @@ country_event = {
 		ai_chance = {
 			factor = 0
 		}
-		add_national_unity = -0.05
+		add_stability = -0.05
 		add_political_power = -50
 		PRC = {
 			country_event = {
@@ -314,7 +314,7 @@ country_event = {
 		ai_chance = {
 			factor = 100
 		}
-		add_national_unity = -0.2
+		add_stability = -0.2
 		add_political_power = -10
 		PRC = {
 			country_event = {
@@ -339,7 +339,7 @@ country_event = {
 			factor = 100
 		}
 		add_political_power = 50
-		add_national_unity = 0.05
+		add_stability = 0.05
 		761 = { set_demilitarized_zone = yes }
 		hidden_effect = {
 			761 = { set_state_flag = I_choose_this_state_to_DMZ }
@@ -361,7 +361,7 @@ country_event = {
 			factor = 100
 		}
 		add_political_power = -50
-		add_national_unity = -0.05
+		add_stability = -0.05
 	}
 }
 country_event = { # DMZ loop # SEND THIS TO THE LOOP COUNTRY
@@ -1393,7 +1393,7 @@ country_event = {
 		tag = PRC
 		has_idea = idea_continuous_recover_from_the_long_march
 		has_idea = Long_March_1
-		has_national_unity > 30
+		has_stability > 0.3
 	}
 	option = {
 		name = EFM_Comchina.199.a
@@ -1402,7 +1402,7 @@ country_event = {
 			remove_idea = Long_March_1
 		}
 		hidden_effect = {
-			add_national_unity = -0.1
+			add_stability = -0.1
 		}
 	}
 }
@@ -1419,7 +1419,7 @@ country_event = {
 		tag = PRC
 		has_idea = idea_continuous_recover_from_the_long_march
 		has_idea = Long_March_2
-		has_national_unity > 40
+		has_stability > 0.4
 	}
 	mean_time_to_happen = {
 		days = 0
@@ -1431,7 +1431,7 @@ country_event = {
 			remove_idea = Long_March_2
 		}
 		hidden_effect = {
-			add_national_unity = -0.1
+			add_stability = -0.1
 		}
 	}
 }
@@ -1448,7 +1448,7 @@ country_event = {
 		tag = PRC
 		has_idea = idea_continuous_recover_from_the_long_march
 		has_idea = Long_March_3
-		has_national_unity > 50
+		has_stability > 0.5
 	}
 	mean_time_to_happen = {
 		days = 0
@@ -1460,7 +1460,7 @@ country_event = {
 			remove_idea = Long_March_3
 		}
 		hidden_effect = {
-			add_national_unity = -0.1
+			add_stability = -0.1
 		}
 	}
 }
@@ -1477,7 +1477,7 @@ country_event = {
 		tag = PRC
 		has_idea = idea_continuous_recover_from_the_long_march
 		has_idea = Long_March_4
-		has_national_unity > 60
+		has_stability > 0.6
 	}
 	mean_time_to_happen = {
 		days = 0
@@ -1489,7 +1489,7 @@ country_event = {
 			remove_idea = Long_March_4
 		}
 		hidden_effect = {
-			add_national_unity = -0.1
+			add_stability = -0.1
 		}
 	}
 }
@@ -1506,7 +1506,7 @@ country_event = {
 		tag = PRC
 		has_idea = idea_continuous_recover_from_the_long_march
 		has_idea = Long_March_5
-		has_national_unity > 70
+		has_stability > 0.7
 	}
 	mean_time_to_happen = {
 		days = 0
@@ -1515,7 +1515,7 @@ country_event = {
 		name = EFM_Comchina.203.a
 		remove_ideas = Long_March_5
 		hidden_effect = {
-			add_national_unity = -0.1
+			add_stability = -0.1
 		}
 	}
 }
@@ -1533,7 +1533,7 @@ country_event = {
 		tag = PRC
 		has_idea = idea_continuous_recover_from_the_long_march
 		has_idea = Long_March_5
-		has_national_unity < 60
+		has_stability < 0.6
 	}
 	mean_time_to_happen = {
 		days = 0
@@ -1545,7 +1545,7 @@ country_event = {
 			remove_idea = Long_March_5
 		}
 		hidden_effect = {
-			add_national_unity = -0.1
+			add_stability = -0.1
 		}
 	}
 }
@@ -1562,7 +1562,7 @@ country_event = {
 		tag = PRC
 		has_idea = idea_continuous_recover_from_the_long_march
 		has_idea = Long_March_4
-		has_national_unity < 50
+		has_stability < 0.5
 	}
 	mean_time_to_happen = {
 		days = 0
@@ -1574,7 +1574,7 @@ country_event = {
 			remove_idea = Long_March_4
 		}
 		hidden_effect = {
-			add_national_unity = -0.1
+			add_stability = -0.1
 		}
 	}
 }
@@ -1591,7 +1591,7 @@ country_event = {
 		tag = PRC
 		has_idea = idea_continuous_recover_from_the_long_march
 		has_idea = Long_March_3
-		has_national_unity < 40
+		has_stability < 0.4
 	}
 	mean_time_to_happen = {
 		days = 0
@@ -1603,7 +1603,7 @@ country_event = {
 			remove_idea = Long_March_3
 		}
 		hidden_effect = {
-			add_national_unity = -0.1
+			add_stability = -0.1
 		}
 	}
 }
@@ -1620,7 +1620,7 @@ country_event = {
 		tag = PRC
 		has_idea = idea_continuous_recover_from_the_long_march
 		has_idea = Long_March_2
-		has_national_unity < 30
+		has_stability < 0.3
 	}
 	mean_time_to_happen = {
 		days = 0
@@ -1632,7 +1632,7 @@ country_event = {
 			remove_idea = Long_March_2
 		}
 		hidden_effect = {
-			add_national_unity = -0.1
+			add_stability = -0.1
 		}
 	}
 }
@@ -1714,7 +1714,7 @@ country_event = {  #win (to PRC)
 	option = {
 		name = EFM_Comchina.2117.a
 		add_ideas = PRC_Victory_in_the_west
-		add_national_unity = 0.05
+		add_stability = 0.05
 		add_political_power = 100
 		hidden_effect = {
 			set_country_flag = PRC_west_expedition_victory
@@ -1731,7 +1731,7 @@ country_event = {  #PRC lose (to NXM)
 	is_triggered_only = yes
 	option = {
 		name = EFM_Comchina.2118.a
-		add_national_unity = 0.05
+		add_stability = 0.05
 		add_political_power = 100
 	}
 }
@@ -1754,7 +1754,7 @@ country_event = { #lose completely (to PRC)
 		name = EFM_Comchina.2119.a
 		white_peace = NXM
 		add_political_power = -50
-		add_national_unity = -0.1
+		add_stability = -0.1
 		add_manpower = -10000
 		NXM = { country_event = { id = EFM_Comchina.2118 } }
 		NXM = {
@@ -1782,7 +1782,7 @@ country_event = { #lose stalemate (to PRC)
 		name = EFM_Comchina.2120.a
 		white_peace = NXM
 		add_political_power = -50
-		add_national_unity = -0.1
+		add_stability = -0.1
 		add_manpower = -3000
 		NXM = { country_event = { id = EFM_Comchina.2121 } }
 		hidden_effect = {

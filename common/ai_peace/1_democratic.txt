@@ -108,7 +108,7 @@ democratic_peace = {
 			FROM = {
 				OR = {
 					tag = PRC
-					##
+					##MODDED
 					is_warlord = yes
 					##
 					tag = ECA

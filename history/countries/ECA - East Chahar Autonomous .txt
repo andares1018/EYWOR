@@ -4,7 +4,7 @@ oob = "ECA_1936"
 add_ideas = {
 	MON_nomadic
 }
-set_national_unity = 0.5
+set_stability = 0.5
 set_research_slots = 2
 drop_cosmetic_tag = yes
 set_technology = {
@@ -84,8 +84,8 @@ if = {
 		improved_machine_tools = 1
 		advanced_machine_tools = 1
 		synth_oil_experiments = 1
-		oil_plant = 1
-		improved_oil_plant = 1
+		oil_processing = 1
+		improved_oil_processing = 1
 		construction1 = 1
 		construction2 = 1
 		construction3 = 1

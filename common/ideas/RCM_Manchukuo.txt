@@ -15,7 +15,7 @@ ideas = {
 			picture = kwantung_army
 			
 			modifier = {
-				unity_factor = -0.05
+				war_support_factor = -0.05
 				army_org = -5
 				army_morale_factor = -0.05
 				communism_drift = -0.02
@@ -55,14 +55,6 @@ ideas = {
 			allowed = {
 				always = no
 			}
-			
-			
-			
-			
-			
-			
-			
-			
 			allowed_civil_war = {
 				always = yes
 				
@@ -73,24 +65,13 @@ ideas = {
 			picture = japan_puppet_flag
 			
 			modifier = {
-				unity_factor = -0.10
+				war_support_factor = -0.10
 				research_time_factor = 0.15
 				political_power_cost = 0.25
 				autonomy_gain = -0.1
 			}
 		}
 		MAN_Joint_stock_company = {
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
 			allowed = {
 				always = no
 			}
@@ -376,7 +357,7 @@ ideas = {
 			
 			removal_cost = -1
 			modifier = {
-				unity_factor = 0.05
+				stability_factor = 0.05
 			}
 		}
 		puyi = {
@@ -392,7 +373,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				unity_factor = 0.10
+				stability_factor = 0.10
 			}
 		}
 		kantogun_administration = {
@@ -618,7 +599,7 @@ ideas = {
 			}
 		}
 	}	
-		
+	
 	high_command = {
 		kenkichi_ueda = {
 			picture = generic_army_asia_1
@@ -672,7 +653,7 @@ ideas = {
 			}
 		}
 	}
-		
+	
 	industrial_concern = {
 		
 		south_manchuria_railway = {

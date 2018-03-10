@@ -459,12 +459,12 @@ focus_tree = {
 			effect_tooltip = {
 				761 = { set_demilitarized_zone = yes }
 				add_political_power = 50
-				add_national_unity = 0.05
+				add_stability = 0.05
 			}
 			custom_effect_tooltip = if_they_refuse_tt
 			effect_tooltip = {
 				add_political_power = -50
-				add_national_unity = -0.05
+				add_stability = -0.05
 			}
 			custom_effect_tooltip = switch_to_AJAC_focus
 			custom_effect_tooltip = separate_line_tt
@@ -499,7 +499,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			for_tracking_ten_comp_foc = yes
-			add_national_unity = 0.10
+			add_stability = 0.10
 			swap_ideas = {
 				add_idea = Long_March_2
 				remove_idea = Long_March_1
@@ -954,12 +954,12 @@ focus_tree = {
 				custom_effect_tooltip = if_successful_tt
 				effect_tooltip = {
 					add_ideas = PRC_Victory_in_the_west
-					add_national_unity = 0.05
+					add_stability = 0.05
 					add_political_power = 100
 				}
 				else = {
 					add_ideas = PRC_Victory_in_the_west
-					add_national_unity = 0.05
+					add_stability = 0.05
 					add_political_power = 100
 				}
 			}
@@ -1110,11 +1110,11 @@ focus_tree = {
 							has_government = communism
 						}
 						set_equipment_fraction = 0.7
-						set_national_unity = 0.8
+						set_stability = 0.8
 					}
 				}
 				set_equipment_fraction = 0.7
-				set_national_unity = 0.6
+				set_stability = 0.6
 			}
 			if = {
 				limit = {
@@ -1166,7 +1166,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			for_tracking_ten_comp_foc = yes
-			add_national_unity = 0.05
+			add_stability = 0.05
 			add_ideas = PRC_CPC_First
 			add_opinion_modifier = {
 				target = CHI
@@ -1197,7 +1197,7 @@ focus_tree = {
 		y = 2
 		completion_reward = {
 			for_tracking_ten_comp_foc = yes
-			add_national_unity = 0.05
+			add_stability = 0.05
 			add_opinion_modifier = {
 				target = SOV
 				modifier = Nations_estrangement
@@ -1292,7 +1292,7 @@ focus_tree = {
 		y = 2
 		completion_reward = {
 			for_tracking_ten_comp_foc = yes
-			add_national_unity = -0.05
+			add_stability = -0.05
 			add_opinion_modifier = {
 				target = SOV
 				modifier = Nations_friendly
@@ -1574,7 +1574,7 @@ focus_tree = {
 				}
 			}
 			add_political_power = 60
-			add_national_unity = 0.05
+			add_stability = 0.05
 		}
 		available = {
 			hidden_trigger = {
@@ -2239,7 +2239,7 @@ focus_tree = {
 			}
 		}
 		available = {
-			has_national_unity > 70
+			has_stability > 0.7
 			#hidden_trigger = {
 			#	ai_cont_foc_prc = yes
 			#}
@@ -4890,7 +4890,7 @@ focus_tree = {
 				tooltip = industry_balanced_enough
 				has_completed_focus = CHI_modern_industrialization
 			}
-			has_tech = improved_oil_plant
+			has_tech = improved_oil_processing
 			717 = {
 				alu_tung_trigger = yes
 			}
@@ -6175,7 +6175,7 @@ focus_tree = {
 			custom_effect_tooltip = PRC_a_new_country_tt
 			set_capital = 608
 			add_political_power = 150
-			add_national_unity = 0.05
+			add_stability = 0.05
 			set_country_flag = PRC_Establish_state_or_independent_government
 			custom_effect_tooltip = a_nation_to_be_established_tt
 		}

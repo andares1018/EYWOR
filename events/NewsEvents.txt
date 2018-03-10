@@ -9,6 +9,7 @@ news_event = {
 	id = news.1
 	title = news.1.t
 	desc = news.1.d
+				   
 	####MODDED####vvvv
 	picture = GFX_news_event_song
 	####MODDED####
@@ -1137,7 +1138,7 @@ news_event = {
 			}
 		}
 	}
-	option = {
+	option = { 
 		name = news.33.b
 		trigger = { 
 			NOT = { TAG = SOV } #fix for unholy alliance
@@ -1416,7 +1417,12 @@ news_event = {
 
 	option = {
 		name = news.37.c
-		trigger = { is_in_faction_with = SOV }
+		trigger = {
+			is_in_faction_with = SOV
+			NOT = {
+				tag = SOV
+			} 
+		}
 	}
 }
 
@@ -1430,6 +1436,10 @@ news_event = {
 	major = yes
 	
 	is_triggered_only = yes
+
+	immediate = {
+		set_global_flag = hindenburg_destroyed
+	}
 	
 	option = {
 		name = news.42.a
@@ -1636,12 +1646,16 @@ news_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		date > 1940.8.20
+		date > 1940.8.1
 		country_exists = SOV
 		SOV = {
 			has_government = communism
 			NOT = { has_country_flag = counter_purge }
 		}
+	}
+
+	mean_time_to_happen = {
+		days = 90
 	}
 	
 	immediate = {
@@ -1652,6 +1666,7 @@ news_event = {
 	}
 	
 	option = {
+		name = news.50.a
 	}
 }
 
@@ -1669,6 +1684,13 @@ news_event = {
 		country_exists = GER
 		USA = { has_war = no }
 		GER = { has_war = no }
+		GER = { has_civil_war = no }
+		NOT = { has_global_flag = hindenburg_destroyed }
+		NOT = { has_global_flag = hindenburg_event_in_progress }
+	}
+
+	mean_time_to_happen = {
+		days = 240
 	}
 	
 	immediate = {
@@ -1679,6 +1701,7 @@ news_event = {
 	}
 	
 	option = {
+		name = news.51.a
 	}
 }
 
@@ -1696,6 +1719,7 @@ news_event = {
 		GER = { 
 			has_war_with = ENG 
 			NOT = { has_war_with = SOV }
+			has_government = fascism
 		}
 		has_global_flag = fall_of_france
 		NOT = { has_global_flag = hindenburg_survives }
@@ -1736,6 +1760,7 @@ news_event = {
 	}
 	
 	option = {
+		name = news.52.a
 	}
 }
 
@@ -1806,6 +1831,7 @@ news_event = {
 	}
 	
 	option = {
+		name = news.53.a
 	}
 }
 
@@ -1832,6 +1858,7 @@ news_event = {
 	}
 	
 	option = {
+		name = news.54.a
 	}
 }
 
@@ -2217,7 +2244,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 0
+		days = 2
 	}
 	
 	immediate = {
@@ -2234,6 +2261,7 @@ news_event = {
 	option = {
 		name = news.64.b
 		trigger = { original_tag = SPR }
+		delete_unit_template_and_units = { division_template = "Brigada Legionario" }
 	}
 }
 
@@ -2263,7 +2291,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 0
+		days = 2
 	}
 	
 	immediate = {
@@ -2280,6 +2308,7 @@ news_event = {
 	option = {
 		name = news.64.b
 		trigger = { original_tag = SPR }
+		delete_unit_template_and_units = { division_template = "Brigada Internacionales" }
 	}
 }
 
@@ -2287,7 +2316,18 @@ news_event = {
 news_event = {
 	id = news.66
 	title = news.66.t
-	desc = news.66.d
+	desc = {
+		text = news.66.d
+		trigger = {
+			NOT = { has_global_flag = GER_civil_war_end }
+		}
+	}
+	desc = {
+		text = news.66.d.b
+		trigger = {
+			has_global_flag = GER_civil_war_end
+		}
+	}
 	picture = GFX_news_event_olympics_1940
 	
 	major = yes
@@ -2295,16 +2335,18 @@ news_event = {
 	trigger = {
 		date > 1936.8.15
 		NOT = { has_global_flag = olympics_1936 }
+		NOT = { has_global_flag = civil_war_olympics }
 		country_exists = GER
 		country_exists = USA
 		GER = { has_war = no }
+		GER = { has_civil_war = no }
 		FRA = { has_war = no }
 		ENG = { has_war = no }
 		USA = { has_war = no }
 	}
 	
 	mean_time_to_happen = {
-		days = 0
+		days = 2
 	}
 	
 	immediate = {
@@ -2350,7 +2392,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 0
+		days = 2
 	}
 	
 	immediate = {
@@ -2393,7 +2435,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 0
+		days = 2
 	}
 	
 	immediate = {
@@ -2549,7 +2591,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 0
+		days = 2
 	}
 	
 	option = {
@@ -2592,7 +2634,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 0
+		days = 2
 	}
 	
 	option = {
@@ -2635,7 +2677,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 0
+		days = 2
 	}
 	
 	option = {
@@ -2678,7 +2720,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 0
+		days = 2
 	}
 	
 	option = {
@@ -2721,7 +2763,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 0
+		days = 2
 	}
 	
 	option = {
@@ -2764,7 +2806,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 0
+		days = 2
 	}
 	
 	option = {
@@ -2807,7 +2849,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 0
+		days = 2
 	}
 	
 	option = {
@@ -2850,7 +2892,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 0
+		days = 2
 	}
 	
 	option = {
@@ -2893,7 +2935,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 0
+		days = 2
 	}
 	
 	option = {
@@ -2936,7 +2978,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 0
+		days = 2
 	}
 	
 	option = {
@@ -2979,7 +3021,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 0
+		days = 2
 	}
 	
 	option = {
@@ -3022,7 +3064,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 0
+		days = 2
 	}
 	
 	option = {
@@ -3065,7 +3107,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 0
+		days = 2
 	}
 	
 	option = {
@@ -3108,7 +3150,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 0
+		days = 2
 	}
 	
 	option = {
@@ -3151,7 +3193,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 0
+		days = 2
 	}
 	
 	option = {
@@ -3194,7 +3236,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 0
+		days = 2
 	}
 	
 	option = {
@@ -3237,7 +3279,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 0
+		days = 2
 	}
 	
 	option = {
@@ -3280,7 +3322,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 0
+		days = 2
 	}
 	
 	option = {
@@ -3323,7 +3365,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 0
+		days = 2
 	}
 	
 	option = {
@@ -3366,7 +3408,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 0
+		days = 2
 	}
 	
 	option = {
@@ -3409,7 +3451,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 0
+		days = 2
 	}
 	
 	option = {
@@ -3441,10 +3483,12 @@ news_event = {
 	major = yes
 	
 	trigger = {
+					
 		####MODDED####vvvv
 		598 = { is_controlled_by = JAP }
 		598 = { is_owned_by = CHI }
 		####MODDED####^^^^^
+					 
 		JAP = { has_war_with = CHI }
 		NOT = { has_global_flag = fall_of_nanjing }
 	}
@@ -3454,7 +3498,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 0
+		days = 2
 	}
 	
 	option = {
@@ -3497,7 +3541,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 0
+		days = 2
 	}
 	
 	option = {
@@ -3540,7 +3584,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 0
+		days = 2
 	}
 	
 	option = {
@@ -3583,7 +3627,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 0
+		days = 2
 	}
 	
 	option = {
@@ -3632,7 +3676,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 0
+		days = 2
 	}
 	
 	option = {
@@ -3675,7 +3719,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 0
+		days = 2
 	}
 	
 	option = {
@@ -3718,7 +3762,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 0
+		days = 2
 	}
 	
 	option = {
@@ -3761,7 +3805,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 0
+		days = 2
 	}
 	
 	option = {
@@ -3804,7 +3848,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 0
+		days = 2
 	}
 	
 	option = {
@@ -3847,7 +3891,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 0
+		days = 2
 	}
 	
 	option = {
@@ -3890,7 +3934,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 0
+		days = 2
 	}
 	
 	option = {
@@ -3942,7 +3986,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 0
+		days = 2
 	}
 	
 	option = {
@@ -4005,7 +4049,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 0
+		days = 2
 	}
 	
 	option = {
@@ -4055,7 +4099,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 0
+		days = 2
 	}
 	
 	option = {
@@ -4112,7 +4156,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 0
+		days = 2
 	}
 	
 	option = {
@@ -4162,7 +4206,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 0
+		days = 2
 	}
 	
 	option = {
@@ -4219,7 +4263,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 0
+		days = 2
 	}
 	
 	option = {
@@ -4262,7 +4306,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 0
+		days = 2
 	}
 	
 	option = {
@@ -4305,7 +4349,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 0
+		days = 2
 	}
 	
 	option = {
@@ -4348,7 +4392,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 0
+		days = 2
 	}
 	
 	option = {
@@ -4391,7 +4435,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 0
+		days = 2
 	}
 	
 	option = {
@@ -4434,7 +4478,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 0
+		days = 2
 	}
 	
 	option = {
@@ -4477,7 +4521,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 0
+		days = 2
 	}
 	
 	option = {
@@ -4520,7 +4564,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 0
+		days = 2
 	}
 	
 	option = {
@@ -4563,7 +4607,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 0
+		days = 2
 	}
 	
 	option = {
@@ -4606,7 +4650,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 0
+		days = 2
 	}
 	
 	option = {
@@ -4649,7 +4693,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 0
+		days = 2
 	}
 	
 	option = {
@@ -4692,7 +4736,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 0
+		days = 2
 	}
 	
 	option = {
@@ -4741,7 +4785,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 0
+		days = 2
 	}
 	
 	option = {
@@ -4890,7 +4934,7 @@ news_event = {
 	}
 
 	mean_time_to_happen = {
-		days = 0
+		days = 2
 	}
 
 	immediate = {
@@ -4949,7 +4993,7 @@ news_event = {
 	}
 
 	mean_time_to_happen = {
-		days = 0
+		days = 2
 	}
 
 	immediate = {
@@ -5020,7 +5064,7 @@ news_event = {
 	
 
 	mean_time_to_happen = {
-		days = 0
+		days = 2
 	}
 	
 	option = {
@@ -5050,12 +5094,15 @@ news_event = {
 	}
 
 	mean_time_to_happen = {
-		days = 0
+		days = 2
 	}
 	
 	option = {
 		name = news.156.a
+		add_stability = -0.01
 		custom_effect_tooltip = news.156.a.tt
+		add_stability = 0.01
+		custom_effect_tooltip = news.156.a.2.tt
 	}
 }
 
@@ -5180,6 +5227,7 @@ news_event = {
 				NOT = { has_completed_focus = GER_rhineland }
 			}
 			has_defensive_war = yes
+			NOT = { has_civil_war = yes }
 		}
 		42 = {
 			is_demilitarized_zone = no
@@ -5192,7 +5240,7 @@ news_event = {
 	
 
 	mean_time_to_happen = {
-		days = 0
+		days = 2
 	}
 	
 	option = {
@@ -5262,7 +5310,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 0
+		days = 2
 	}
 	
 	immediate = {
@@ -6117,7 +6165,7 @@ news_event = {
 
 	#A dark day for the old allies.
 	option = {
-		name = news.176.b
+		name = news.176.c
 		trigger = {
 			NOT = {
 				OR = {
@@ -6773,7 +6821,7 @@ news_event = {
 
 	#We will have what we were promised!
 	option = {
-		name = news.189.c
+		name = news.189.b
 		trigger = {
 			tag = ITA
 		}
@@ -7826,6 +7874,7 @@ news_event = {
 		trigger = {
 			NOT = {
 				has_government = fascism
+				has_government = communism
 				is_in_faction_with = USA
 				is_in_faction_with = SOV
 			}
@@ -9104,8 +9153,9 @@ news_event = {
 					tag = GER
 					tag = ENG
 				}				
-			}
-			is_in_faction_with = GER
+	
+			is_in_faction_with = GER		
+			}	
 		}
 	}
 }
@@ -9353,6 +9403,12 @@ news_event = {
 		name = news.233.b
 		trigger = {
 			has_war_with = GER
+			NOT = {
+				OR = {
+					tag = DEN
+					tag = NOR
+				}
+			}
 		}
 	}
 
@@ -9385,8 +9441,10 @@ news_event = {
 	option = {
 		name = news.234.a
 		trigger = {
-			tag = BEL
-			tag = LUX
+			OR = {
+				tag = BEL
+				tag = LUX
+			}
 		}
 	}
 
@@ -10022,6 +10080,9 @@ news_event = {
 			NOT = {
 				tag = ENG
 			}
+			NOT = {
+				original_tag = CAN
+			}
 		}
 	}
 	# Is in a faction "competing" with ENG's
@@ -10402,10 +10463,12 @@ news_event = {
 	option = {
 		name = news.264.a
 		trigger = {
-			Tag = ENG
-			TAG = BEL
-			TAG = POR
-			TAG = FRA
+			OR = {
+				Tag = ENG
+				TAG = BEL
+				TAG = POR
+				TAG = FRA
+			}
 		}
 	}
 	option = {
@@ -10426,7 +10489,7 @@ news_event = {
 		}
 	}
 	option = {
-		name = news.264.e
+		name = news.264.d
 		trigger = { TAG = SOV }
 	}
 
@@ -10464,7 +10527,7 @@ news_event = {
 		}
 	}
 	option = {
-		name = news.265.e
+		name = news.265.d
 		trigger = { TAG = SOV }
 	}
 
@@ -10634,7 +10697,7 @@ news_event = {
 	}
 
 	option = {
-		name = news.280.e
+		name = news.280.d
 		trigger = { 
 			OR = {
 				TAG = ENG
@@ -10688,7 +10751,7 @@ news_event = {
 	}
 
 	option = {
-		name = news.281.e
+		name = news.281.d
 		trigger = { 
 			OR = {
 				TAG = ENG
@@ -10919,8 +10982,10 @@ news_event = {
 	option = {
 		name = news.288.a
 		trigger = {
-			TAG = CHI
-			TAG = PRC
+			OR = {
+				TAG = CHI
+				TAG = PRC
+			}
 		}
 	}
 	option = { 
@@ -11922,7 +11987,10 @@ news_event = {
 	option = {
 		name = news.311.b
 		trigger = { 
-			TAG = CZE
+			OR = {
+				TAG = CZE
+				TAG = SLO
+			}
 		}
 	}
 	option = {
@@ -11931,6 +11999,7 @@ news_event = {
 			NOT = {
 				TAG = HUN
 				TAG = CZE
+				TAG = SLO
 			}
 		}
 	}
@@ -12751,5 +12820,116 @@ news_event = {
 			}
 		}
 	}
-}						 
+}
+
+#Icelandic Independence
+news_event = {
+	id = news.331
+	title = news.331.t
+	desc = news.331.desc
+	picture = GFX_news_event_generic_sign_treaty3
 	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.331.a
+	}
+}
+
+#Mers-El-Kebir - French Surrender
+news_event = {
+	id = news.332
+	title = news.332.t
+	desc = news.332.desc
+	picture = GFX_news_event_generic_sign_treaty3
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.332.a
+		trigger = {
+			is_in_faction_with = ENG
+			NOT = { original_tag = FRA }
+		}
+	}
+	option = {
+		name = news.332.b
+		trigger = {
+			is_in_faction_with = ENG
+			original_tag = FRA
+		}
+	}
+	option = {
+		name = news.332.c
+		trigger = {
+			is_in_faction_with = GER
+			NOT = { original_tag = FRA }
+		}
+	}
+	option = {
+		name = news.332.d
+		trigger = {
+			is_in_faction_with = GER
+			original_tag = FRA
+		}
+	}
+	option = {
+		name = news.332.e
+		trigger = {
+			NOT = { is_in_faction_with = ENG }
+			NOT = { is_in_faction_with = GER }
+		}
+	}
+}
+
+#Mers-El-Kebir - Attack
+news_event = {
+	id = news.333
+	title = news.333.t
+	desc = news.333.desc
+	picture = GFX_news_event_generic_sign_treaty3
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.333.a
+		trigger = {
+			is_in_faction_with = ENG
+			NOT = { original_tag = FRA }
+		}
+	}
+	option = {
+		name = news.333.b
+		trigger = {
+			is_in_faction_with = ENG
+			original_tag = FRA
+		}
+	}
+	option = {
+		name = news.333.c
+		trigger = {
+			is_in_faction_with = GER
+			NOT = { original_tag = FRA }
+		}
+	}
+	option = {
+		name = news.333.d
+		trigger = {
+			is_in_faction_with = GER
+			original_tag = FRA
+		}
+	}
+	option = {
+		name = news.333.e
+		trigger = {
+			NOT = { is_in_faction_with = ENG }
+			NOT = { is_in_faction_with = GER }
+		}
+	}
+}

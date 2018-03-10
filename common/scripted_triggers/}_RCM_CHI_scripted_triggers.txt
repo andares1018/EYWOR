@@ -1,0 +1,185 @@
+#	Example:
+# 
+#	example_trigger = {
+#		tag = GER
+#		is_ai = no
+#	}
+#
+#
+#	In a script file:
+#
+#	trigger = {
+#		example_trigger = yes
+#	}
+# 
+#	THIS FILE IS FOR TRIGGERS SPECIFICALLY FOR THE CHI TAG
+is_potentially_communist_china = {
+	OR = {
+		is_originally_warlord = yes
+		original_tag = SIK
+	}
+}
+is_independent_china_or_warlord = { #
+	OR = {
+		is_originally_warlord = yes
+		original_tag = SIK
+	}
+	is_puppet = no
+}
+is_literally_china = {
+	OR = {
+		original_tag = PRC
+		original_tag = CHI
+		is_legit_china = yes
+		is_originally_warlord = yes
+	}
+}
+is_chinese_warlord = {
+	OR = {		
+		is_originally_warlord = yes
+		original_tag = SIK
+	}
+}
+check_has_focus_tree_to_switch_to_fascism = {
+	NOT = { tag = JAP }
+	NOT = { tag = GER }
+	NOT = { tag = MAN }
+	NOT = { tag = ITA }
+	NOT = { tag = CHI }
+	NOT = {
+		AND = {
+			tag = SAF
+			has_dlc = "Together for Victory"
+		}
+	}
+	NOT = {
+		AND = {
+			tag = RAJ
+			has_dlc = "Together for Victory"
+		}
+	}
+}
+
+check_has_focus_tree_to_switch_to_democratic = {
+	AND = {
+		NOT = { has_idea = chiang }
+		NOT = { has_idea = chiang1 }
+		NOT = { has_idea = chiang2 }
+		NOT = { has_idea = chiang3 }
+	}
+	NOT = { tag = MAN }
+	NOT = { tag = FRA }
+	NOT = { tag = USA }
+	NOT = { tag = ENG }
+	NOT = { tag = CAN }
+	NOT = { tag = SAF }
+	NOT = { tag = AUS }
+	NOT = { tag = NZL }
+	NOT = { tag = RAJ }
+	NOT = { tag = CZE }
+	NOT = { tag = CHI }
+	NOT = {
+		AND = {
+			tag = HUN
+			has_dlc = "Death or Dishonor"
+		}
+	}
+	NOT = { tag = JAP }
+	NOT = {
+		AND = {
+			tag = GER
+			has_dlc = "Waking the Tiger"
+		}
+	}
+	NOT = {
+		AND = {
+			tag = YUN
+			has_dlc = "Waking the Tiger"
+			NOT = { has_focus_tree = china_nationalist_focus }
+		}
+	}
+	NOT = {
+		AND = {
+			tag = GXC
+			has_dlc = "Waking the Tiger"
+			NOT = { has_focus_tree = china_nationalist_focus }
+		}
+	}
+	NOT = {
+		AND = {
+			tag = XSM
+			has_dlc = "Waking the Tiger"
+			NOT = { has_focus_tree = china_nationalist_focus }
+		}
+	}
+	NOT = {
+		AND = {
+			tag = SHX
+			has_dlc = "Waking the Tiger"
+			NOT = { has_focus_tree = china_nationalist_focus }
+		}
+	}
+	NOT = {
+		AND = {
+			tag = SIK
+			has_dlc = "Waking the Tiger"
+			NOT = { has_focus_tree = china_nationalist_focus }
+		}
+	}
+}
+
+check_has_focus_tree_to_switch_to_communism = {
+	AND = {
+		NOT = { has_idea = chiang }
+		NOT = { has_idea = chiang1 }
+		NOT = { has_idea = chiang2 }
+		NOT = { has_idea = chiang3 }
+	}
+	NOT = { tag = PRC }
+	NOT = { tag = SIK }
+	NOT = { tag = MAN }
+	NOT = { tag = SOV }
+	NOT = { tag = CHI }
+	NOT = {
+		AND = {
+			tag = RAJ
+			has_dlc = "Together for Victory"
+		}
+	}
+	NOT = { tag = JAP }
+	NOT = {
+		AND = {
+			tag = YUN
+			has_dlc = "Waking the Tiger"
+		}
+	}
+	NOT = {
+		AND = {
+			tag = GXC
+			has_dlc = "Waking the Tiger"
+		}
+	}
+	NOT = {
+		AND = {
+			tag = XSM
+			has_dlc = "Waking the Tiger"
+		}
+	}
+	NOT = {
+		AND = {
+			tag = SHX
+			has_dlc = "Waking the Tiger"
+		}
+	}
+}
+
+check_has_focus_tree_to_switch_to_n_socialism = {
+	AND = {
+		NOT = { has_idea = chiang }
+		NOT = { has_idea = chiang1 }
+		NOT = { has_idea = chiang2 }
+		NOT = { has_idea = chiang3 }
+	}
+	NOT = { tag = JAP }
+	NOT = { tag = CHI }
+}

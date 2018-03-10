@@ -57,7 +57,7 @@ ideas = {
 				always = yes
 			}
 			modifier = {
-				unity_factor = -0.1
+				stability_factor = -0.1
 			}
 		}
 		SIK_New_currency = {

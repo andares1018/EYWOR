@@ -145,7 +145,7 @@ country_event = {
 	
 	option = {
 		name = rcmjapan.5.a
-		add_national_unity = 0.05
+		add_stability = 0.05
 		hidden_effect = {
 			country_event = { days = 5 id = news.9 }
 		}
@@ -401,7 +401,7 @@ country_event = {
 		add_manpower = 10000
 		set_global_flag = indian_national_army_setup
 		RAJ = { 
-			add_national_unity = -0.2
+			add_stability = -0.2
 			add_ideas = RAJ_azad_hind
 		}
 		ENG = {
@@ -490,7 +490,7 @@ country_event = {
 #	option = {
 #		name = rcmjapan.22.a
 #		ai_chance = { factor = 100 }
-#		add_national_unity = -0.05
+#		add_stability = -0.05
 #	}
 #}
 country_event = {
@@ -1678,7 +1678,7 @@ country_event = {
 		show_ideas_tooltip = isoroku_yamamoto		
 		set_country_flag = purged_by_kodoha
 		add_political_power = 150
-		add_national_unity = -0.15
+		add_stability = -0.15
 		add_timed_idea = { days = 450 idea = officer_purged_jap }
 		hidden_effect = {
 			remove_ideas = hideki_tojo
@@ -1715,7 +1715,7 @@ country_event = {
 		show_ideas_tooltip = kanin_kotohito
 		custom_effect_tooltip = prince_will_be_purged
 		add_political_power = 200
-		add_national_unity = -0.1
+		add_stability = -0.1
 		add_timed_idea = { days = 350 idea = prince_purged_jap }
 		custom_effect_tooltip = unity_recover_over_time
 		hidden_effect = {
@@ -1729,7 +1729,7 @@ country_event = {
 		show_ideas_tooltip = kanin_kotohito
 		custom_effect_tooltip = prince_will_be_put_on_house_arrest
 		add_political_power = 120
-		add_national_unity = -0.08
+		add_stability = -0.08
 		hidden_effect = {
 			set_country_flag = house_arrest_prince
 			remove_ideas = kanin_kotohito
@@ -1760,7 +1760,7 @@ country_event = {
 		show_ideas_tooltip = saionji_kinmochi
 		custom_effect_tooltip = genro_will_be_purged
 		add_political_power = 200
-		add_national_unity = -0.1
+		add_stability = -0.1
 		add_timed_idea = { days = 350 idea = genro_purged_jap }
 		custom_effect_tooltip = unity_recover_over_time
 		hidden_effect = {
@@ -1774,7 +1774,7 @@ country_event = {
 		show_ideas_tooltip = saionji_kinmochi
 		custom_effect_tooltip = genro_will_be_put_on_house_arrest
 		add_political_power = 120
-		add_national_unity = -0.08
+		add_stability = -0.08
 		hidden_effect = {
 			set_country_flag = house_arrest_genro
 			remove_ideas = saionji_kinmochi
@@ -1808,7 +1808,7 @@ country_event = {
 	option = {
 		name = rcmjapan.46.a
 		remove_ideas = emperor_showa
-		add_national_unity = -0.35
+		add_stability = -0.35
 		add_political_power = -250		
 	}
 }
@@ -6306,7 +6306,7 @@ country_event = {
 	option = {
 		name = rcmjapan.105.a
 		add_political_power = -100
-		add_national_unity = 0.05
+		add_stability = 0.05
 		every_owned_state = {
 			limit = {
 				has_state_flag = commie_ridden_states

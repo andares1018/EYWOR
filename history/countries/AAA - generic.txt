@@ -204,4 +204,13 @@ every_country = {
 		}
 	}
 }
-
+every_country = {
+	limit = {
+		is_warlord = yes
+		has_dlc = "Waking the Tiger"
+	}
+	add_ideas = {
+		PRC_government_corruption
+		CHI_ineffective_bureaucracy_warlord
+	}
+}

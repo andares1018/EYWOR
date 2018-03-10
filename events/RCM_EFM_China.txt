@@ -97,7 +97,7 @@ country_event = {#second united front #PRC acce
 			}
 			diplomatic_relation = { country = PRC relation = non_aggression_pact }
 		}
-		add_national_unity = 0.05
+		add_stability = 0.05
 		add_political_power = -30
 	}
 }

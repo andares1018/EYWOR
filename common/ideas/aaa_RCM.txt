@@ -176,7 +176,7 @@ ideas = {
 			picture = generic_socialism_drift_bonus
 			
 			modifier = {
-				unity_factor = -0.1
+				stability_factor = -0.1
 			}
 		}
 		socialist_influence = {

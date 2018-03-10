@@ -12,7 +12,7 @@ add_timed_idea = { idea = Chinese_Red_Army days = 295 }
 
 drop_cosmetic_tag = yes
 set_cosmetic_tag = PRC_CSR
-
+save_global_event_target_as = WTT_communist_china
 1939.1.1 = {
 	set_country_flag = j_focus_completed
 	set_country_flag = nineteen_thirtynine_start
@@ -85,8 +85,8 @@ set_cosmetic_tag = PRC_CSR
 		improved_machine_tools = 1
 		advanced_machine_tools = 1
 		synth_oil_experiments = 1
-		oil_plant = 1
-		improved_oil_plant = 1
+		oil_processing = 1
+		improved_oil_processing = 1
 		construction1 = 1
 		construction2 = 1
 		construction3 = 1

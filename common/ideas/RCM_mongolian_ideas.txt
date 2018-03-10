@@ -302,7 +302,7 @@ ideas = {
 				political_power_factor = -0.25
 				research_time_factor = 0.10
 				industrial_capacity_factory = -0.10
-				unity_factor = -0.1
+				stability_factor = -0.1
 			}
 		}
 		MON_provisional_government = {

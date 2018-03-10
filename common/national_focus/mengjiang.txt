@@ -1636,7 +1636,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_political_power = 85
-			add_national_unity = 0.05
+			add_stability = 0.05
 		}
 	}
 	
@@ -2273,7 +2273,7 @@ focus_tree = {
 		completion_reward = {
 			remove_country_leader_trait = spirit_of_genghis
 			add_country_leader_trait = spirit_of_genghis_improved
-			add_national_unity = 0.15
+			add_stability = 0.15
 			add_state_core = 563
 			add_state_core = 564
 			add_state_core = 566

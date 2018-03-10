@@ -973,7 +973,7 @@ country_event = {
 		name = MON.30.b
 		trigger = { NOT = { has_government = democratic } }
 		add_manpower = -3000
-		add_national_unity = -0.05
+		add_stability = -0.05
 		hidden_effect = {
 			country_event = { id = MON.31 days = 65 } 
 		}
@@ -1062,7 +1062,7 @@ country_event = {
 	option = {
 		name = MON.32.b
 		add_political_power = -300
-		add_national_unity = -0.15
+		add_stability = -0.15
 	}
 }
 #Ìèãðàíòû ïðèíîñÿò äåìîêðàòèþ
@@ -1293,7 +1293,7 @@ country_event = {
 	desc = MON.45.d
 	option = {
 		name = MON.45.a
-		add_national_unity = -0.15
+		add_stability = -0.15
 		add_manpower = -5000
 		hidden_effect = {
 			country_event = { days = 5 id = MON_news.2 }

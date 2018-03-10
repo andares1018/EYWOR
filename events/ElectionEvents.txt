@@ -2,6 +2,10 @@
 # Election Events
 ###########################
 ####MODDED FOR 1936 FRA ELECTION AND SOCIALISM
+###########################
+# Election Events
+###########################
+
 add_namespace = election
 
 # Test Election Event
@@ -67,7 +71,8 @@ country_event = {
 				can_lose_unity = yes
 			}
 		}
-		add_national_unity = -0.05
+		add_stability = -0.05
+		add_war_support = -0.05
 	}
 }
 
@@ -138,6 +143,7 @@ country_event = {
 			limit = { has_idea = disarmed_nation }
 			add_ideas = volunteer_only
 		}
+		add_war_support = 0.05
 	}
 
 	option = {
@@ -145,7 +151,7 @@ country_event = {
 		ai_chance = {
 			base = 0
 		}
-		add_national_unity = -0.05
+		add_stability = -0.05
 	}
 }
 
@@ -203,7 +209,7 @@ country_event = {
 				can_lose_unity = yes
 			}
 		}
-		add_national_unity = -0.05
+		add_stability = -0.05
 		add_popularity = {
 			ideology = democratic
 			popularity = 0.03
@@ -288,7 +294,7 @@ country_event = {
 				}
 			}
 		}
-		add_national_unity = -0.05
+		add_stability = -0.05
 		add_popularity = {
 			ideology = democratic
 			popularity = 0.03
@@ -460,7 +466,7 @@ country_event = {
 				can_lose_unity = no
 			}
 		}
-		add_national_unity = -0.05
+		add_stability = -0.05
 		add_popularity = {
 			ideology = democratic
 			popularity = 0.03
@@ -537,7 +543,7 @@ country_event = {
 				can_lose_unity = no
 			}
 		}
-		add_national_unity = -0.05
+		add_stability = -0.05
 		add_popularity = {
 			ideology = democratic
 			popularity = 0.03
@@ -704,7 +710,7 @@ country_event = {
 				can_lose_unity = yes
 			}
 		}
-		add_national_unity = 0.05
+		add_stability = -0.05
 	}
 
 	option = {
@@ -721,7 +727,7 @@ country_event = {
 		}
 		name = election.14.b
 		add_political_power = 20
-		add_national_unity = -0.05
+		add_stability = 0.05
 		add_popularity = {
 			ideology = communism
 			popularity = 0.05
@@ -765,7 +771,7 @@ country_event = {
 		}
 		name = election.15.a
 		add_political_power = -50
-		add_national_unity = -0.05
+		add_stability = -0.05
 	}
 
 	option = {
@@ -782,7 +788,7 @@ country_event = {
 			}
 		}
 		add_political_power = 25
-		add_national_unity = 0.05
+		add_stability = 0.05
 		add_popularity = {
 			ideology = communism
 			popularity = 0.07
@@ -797,8 +803,14 @@ country_event = {
 			popularity = 0.07
 		}
 		####MODDED####
+				   
+					
+						 
+					
 	}
+				
 }
+ 
 
 # Election in Fascist Country (Supports Government)
 country_event = {
@@ -823,7 +835,7 @@ country_event = {
 	
 	option = {
 		name = election.16.a
-		add_national_unity = 0.05
+		add_stability = 0.05
 	}
 }
 
@@ -850,6 +862,6 @@ country_event = {
 	
 	option = {
 		name = election.17.a
-		add_national_unity = -0.05
+		add_stability = -0.05
 	}
 }

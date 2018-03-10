@@ -1,0 +1,12 @@
+socialism_on_the_rise = {
+	icon = generic_communism
+
+	allowed = {
+		always = yes
+	}
+	
+	#visible = {
+	#	NOT = { has_government = democratic }
+	#	has_idea_with_trait = democratic_reformer
+	#}
+}

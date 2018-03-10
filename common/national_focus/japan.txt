@@ -448,7 +448,7 @@ focus_tree = {
 					add_state_core = 330
 				}
 			}
-			add_national_unity = 0.03
+			add_stability = 0.03
 			effect_tooltip = {
 				MUA = {
 					country_event = {
@@ -527,7 +527,7 @@ focus_tree = {
 			add_ideas = for_the_emperor_idea
 			custom_effect_tooltip = emperor_may_refuse
 			effect_tooltip = {
-				add_national_unity = -0.35
+				add_stability = -0.35
 				add_political_power = -250
 			}
 			custom_effect_tooltip = blank_line
@@ -645,7 +645,7 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			add_national_unity = 0.05
+			add_stability = 0.05
 			add_ideas = warrior_traditions_idea
 		}
 	}
@@ -2210,7 +2210,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_political_power = 150
-			add_national_unity = 0.05
+			add_stability = 0.05
 		}
 		available = {
 			is_in_faction_with = CHI
@@ -2260,7 +2260,7 @@ focus_tree = {
 			
 		}
 		available = {
-			has_national_unity > 80
+			has_stability > 80
 			num_of_factories > 150
 		}
 	}
@@ -2377,7 +2377,7 @@ focus_tree = {
 						has_war_with = ROOT
 						is_major = yes
 					}
-					has_war_with_amount > 3
+					#has_war_with_amount > 3
 					date < 1937.4.1
 				}
 			}
@@ -2517,13 +2517,13 @@ focus_tree = {
 			factor = 1
 			modifier = {
 				factor = 0
-				OR = {
+				#OR = {
 					any_country = {
 						has_war_with = ROOT
 						is_major = yes
 					}
-					has_war_with_amount > 2
-				}
+					#has_war_with_amount > 2
+				#}
 			}
 		}
 		will_lead_to_war_with = PRC
@@ -2635,7 +2635,7 @@ focus_tree = {
 			factor = 90
 		}
 		completion_reward = {
-			add_national_unity = 0.03
+			add_stability = 0.03
 			CCP_CREATION = yes
 			#custom_effect_tooltip = partisan_effect_neglected
 		}
@@ -2694,7 +2694,7 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			add_national_unity = 0.03
+			add_stability = 0.03
 			RFM_CREATION = yes
 			#custom_effect_tooltip = partisan_effect_neglected
 		}
@@ -2763,7 +2763,7 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			add_national_unity = 0.03
+			add_stability = 0.03
 			hidden_effect = {
 				####CREATE
 				if = {
@@ -2870,7 +2870,7 @@ focus_tree = {
 				}
 			}
 			add_political_power = 100
-			add_national_unity = 0.05
+			add_stability = 0.05
 			hidden_effect = {
 				random_other_country = {
 					###DETERMINE
@@ -3033,13 +3033,13 @@ focus_tree = {
 			}
 			modifier = {
 				factor = 0
-				OR = {
+				#OR = {
 					any_other_country = {
 						has_war_with = ROOT
 						is_major = yes
 					}
-					has_war_with_amount > 1
-				}
+					#has_war_with_amount > 1
+				#}
 			}
 			modifier = {
 				factor = 0
@@ -3112,7 +3112,7 @@ focus_tree = {
 				remove_unit_leader = 2003
 			}
 			add_political_power = 150
-			add_national_unity = -0.1
+			add_stability = -0.1
 		}
 		available = {
 			has_idea = hisaichi_terauchi
@@ -3399,7 +3399,7 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			add_national_unity = 0.05
+			add_stability = 0.05
 			add_ideas = warrior_traditions_idea
 		}
 	}
@@ -3420,7 +3420,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_ideas = democratic_influence
-			add_national_unity = 0.05
+			add_stability = 0.05
 		}
 		available = {
 		}
@@ -3449,7 +3449,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_ideas = democracy_reclaimed
-			add_national_unity = 0.05
+			add_stability = 0.05
 			set_politics = {
 				ruling_party = democratic
 				elections_allowed = yes
@@ -3740,7 +3740,7 @@ focus_tree = {
 			add_ideas = neutrality_idea
 			add_ideas = deterrence
 			add_political_power = 120
-			add_national_unity = 0.1
+			add_stability = 0.1
 		}
 	}
 	focus = {
@@ -4124,7 +4124,7 @@ focus_tree = {
 			}
 			create_faction = "daitoa_kyoeiken"
 			add_political_power = 150
-			add_national_unity = 0.05
+			add_stability = 0.05
 			hidden_effect = {
 				news_event = {
 					hours = 6

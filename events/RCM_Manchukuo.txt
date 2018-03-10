@@ -14,13 +14,13 @@ country_event = {
 				name = Manchukuo.1.a
 				ai_chance = { factor = 85 }
 				add_manpower = 50000
-				add_national_unity = -0.1
+				add_stability = -0.1
 			}
 		option = {
 				name = Manchukuo.1.b
 				ai_chance = { factor = 10 }
 				add_manpower = 25000
-				add_national_unity = -0.05
+				add_stability = -0.05
 				add_political_power = 25
 			}
 			
@@ -46,7 +46,7 @@ country_event = {
 				name = Manchukuo.2.a
 				ai_chance = { factor = 85 }
 				add_manpower = 60000
-				add_national_unity = -0.1
+				add_stability = -0.1
 					add_autonomy_ratio = {
 					value = -0.05
 					localization = MAN_Improve_autonomy
@@ -56,7 +56,7 @@ country_event = {
 				name = Manchukuo.2.b
 				ai_chance = { factor = 10 }
 				add_manpower = 30000
-				add_national_unity = -0.05
+				add_stability = -0.05
 				add_political_power = 25
 					add_autonomy_ratio = {
 					value = -0.1
@@ -96,7 +96,7 @@ country_event = {
 					}
 				}
 				add_ideas = state_shintoism
-				add_national_unity = -0.05
+				add_stability = -0.05
 					add_autonomy_ratio = {
 					value = -0.05
 					localization = MAN_Improve_autonomy
@@ -111,7 +111,7 @@ country_event = {
 					}
 				}
 				add_ideas = Manchukuo_state_shintoism
-				add_national_unity = 0.05
+				add_stability = 0.05
 					add_autonomy_ratio = {
 					value = 0.05
 					localization = MAN_Improve_autonomy
@@ -146,12 +146,12 @@ country_event = {
                         enemy = JAP
                     }
 				}
-					add_national_unity = 0.1
+					add_stability = 0.1
 			}
 		option = {
 				name = Manchukuo.4.b
 				ai_chance = { factor = 10 }
-					add_national_unity = 0.2
+					add_stability = 0.2
 			}
 }
 
@@ -205,7 +205,7 @@ country_event = {
 		option = {
 				name = Manchukuo.7.b
 				ai_chance = { factor = 50 }
-				add_national_unity = -0.1
+				add_stability = -0.1
 					JAP = {
 						country_event = {
                         id = Manchukuo.8
@@ -232,7 +232,7 @@ country_event = {
 		option = {
 				name = Manchukuo.8.b
 				ai_chance = { factor = 10 }
-				add_national_unity = -0.05
+				add_stability = -0.05
 					MAN = {
 						add_autonomy_ratio = {
 						value = 0.5

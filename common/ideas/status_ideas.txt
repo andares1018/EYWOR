@@ -14,7 +14,7 @@ ideas = {
 			
 			modifier = {
 				political_power_factor = 0.1
-				unity_factor = 0.05
+				stability_factor = 0.05
 			}
 		}
 		STATUS_a_nation_devided_idea = {
@@ -30,7 +30,7 @@ ideas = {
 			
 			modifier = {
 				political_power_factor = 0.1
-				unity_factor = -0.05
+				stability_factor = -0.05
 			}
 		}
 		##WARLORD
