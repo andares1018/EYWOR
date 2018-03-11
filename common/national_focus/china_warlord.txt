@@ -805,7 +805,7 @@ focus_tree = {
 				limit = {
 					tag = NEA
 				}
-				unlock_decision_tooltip = CHI_xian_incident
+				unlock_decision_category_tooltip = CHI_instigate_xian_incident
 			}
 			
 		}
@@ -1194,7 +1194,7 @@ focus_tree = {
 				limit = {
 					tag = GXC
 				}
-				unlock_decision_tooltip = CHI_liangguang_incident
+				unlock_decision_category_tooltip = liangguang_incident
 			}
 		}
 		

@@ -19,5 +19,7 @@
  BORDER_WAR_POWER_DESC:0 "Combat values are defined by Divisions' Combat Strength and their Country's Doctrine Level"
  EFFECT_ADD_ACE:0 "$NAME|Y$ '$CALLSIGN|Y$' $SURNAME|Y$ becomes a flying Ace.\n"
  political_advisor:0 "Cabinet Ministers"
- 
- 
+ EFFECT_UNLOCK_DECISION:0 "Unlocks £decision_icon_small §HDecision§!: $NAME|H$$EFFECT$"
+ EFFECT_UNLOCK_DECISION_CATEGORY:0 "Unlocks £decision_icon_small $NAME|H$ Decisions."
+ CHI_instigate_xian_incident:0 "Stage Xi'an Incident"
+ CHI_instigate_xian_incident_desc:0 "Despite our constant pleading, [CHI.GetLeader] still wouldn't prioritize fending off the Japanese over eradicating the communists. It's time to try something new."

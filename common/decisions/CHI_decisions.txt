@@ -2725,7 +2725,7 @@ political_actions = {
 CHI_xian_incident = {
 	CHI_instigate_xian_incident = {
 		icon = generic_political_discourse
-		available = {			
+		available = {
 			NOT ={
 				PRC = {
 					has_completed_focus = PRC_Anti_Japanese_and_Chiang
@@ -2742,7 +2742,6 @@ CHI_xian_incident = {
 				NOT = { has_global_flag = CHI_truce_com }
 				NOT = { is_in_faction_with = JAP }
 			}
-			NOT = { has_}
 			has_global_flag = chiang_in_xian
 			country_exists = PRC
 			NOT = {

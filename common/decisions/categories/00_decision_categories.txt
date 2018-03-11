@@ -123,3 +123,11 @@ special_projects = {
 		has_dlc = "Waking the Tiger"
 	}
 }
+liangguang_incident = {
+	
+	icon = generic_crisis
+
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
