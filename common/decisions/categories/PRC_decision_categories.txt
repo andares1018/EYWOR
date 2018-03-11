@@ -33,7 +33,7 @@ PRC_anti_japanese_expedition = {
 					NOT = { has_war_with = ROOT }
 					OR = {
 						original_tag = MAN
-						original_tag = MEN
+						original_tag = ECA
 						original_tag = JAP
 					}
 				}
