@@ -2658,9 +2658,41 @@ ideas = {
 				factor = 1
 			}
 		}
+		CHI_soong_mei_ling = {
+
+			picture = GFX_idea_chi_soong_mei_ling
+			
+			available = {
+				has_country_leader = { ruling_only = yes name = "Chiang Kai-shek" }
+				has_completed_focus = reinforce_new_life_movement
+			}
+
+			allowed = {
+				original_tag = CHI
+				#has_dlc = "Waking the Tiger"
+			}
+			
+			traits = { first_lady }
+		}
+
+		CHI_t_v_soong = {
+
+			picture = GFX_idea_chi_t_v_soong
+
+			available = {
+				#has_completed_focus = CHI_financial_policy
+			}
+			
+			allowed = {
+				original_tag = CHI
+				#has_dlc = "Waking the Tiger"
+			}
+			
+			traits = { financial_expert }
+		}
 	}
 	
-	foreign_advisor = {		
+	foreign_advisor = {
 		claire_lee_chennault_chi = {
 			picture = idea_claire_lee_chennault
 			

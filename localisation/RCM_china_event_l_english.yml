@@ -484,7 +484,7 @@
  rcmchina.309.d:0 "[SHX.GetLeader] has decided to take military action against our local government. It's time to defend ourselves."
  rcmchina.309.a:0 "War is on!"
  rcmchina.310.t:0 "[SHX.GetName] and the Central Government Has Declared War on Us"
- rcmchina.310.d:0 "[SHX.GetLeader] and Chiang Kai-Shek has decided to take military action against our local government. It's time to defend ourselves."
+ rcmchina.310.d:0 "[SHX.GetLeader] and Chiang Kai-shek has decided to take military action against our local government. It's time to defend ourselves."
  rcmchina.310.a:0 "War is on!"
  ###########XIAN INCIDENT
  rcmchina.311.t:0 "Alleged Truce between Zhang and the Communists"
@@ -495,7 +495,7 @@
  rcmchina.312.a:0 "Huh, maybe we can do something about this..."
  ##
  rcmchina.313.t:0 "Zhang Xueliang and Yang Hucheng Surrendered"
- rcmchina.313.d:0 "After the bloody Xi'an incident and a major shift in policies, Zhang and Yang decided to surrender and release Chiang Kai-Shek. They will now be held responsible for what they've done."
+ rcmchina.313.d:0 "After the bloody Xi'an incident and a major shift in policies, Zhang and Yang decided to surrender and release Chiang Kai-shek. They will now be held responsible for what they've done."
  rcmchina.313.a:0 "Arrest them, at long last."
  ##
  rcmchina.314.t:0 "Chiang Executed Despite Our Concession to the Communists"
@@ -591,7 +591,7 @@
  rcmchina.338.d:0 "Our coup has now become a full scale civil war. [CHI.GetLeader] needs to be stopped. Here wel will form the Northwest Anti-Japan United Army as an legitimate opposition to the people in Nanking. A new China will be born soon."
  rcmchina.338.a:0 "For China!"
  nea.1.t:0 "The Xi'an Incident"
- nea.1.d:0 "Disagreements within Kuomintang's inner circle have led to a precarious situation. Chiang Kai-Shek has been executed by general Zhang Xueliang and general Yang Hucheng in an effort to force them to accept a truce with us to unite China against foreign enemies. However, the situation is going out of hand after Chiang's Death and is developing into a full-scale civil war. What meansures should we take in response?"
+ nea.1.d:0 "Disagreements within Kuomintang's inner circle have led to a precarious situation. Chiang Kai-shek has been executed by general Zhang Xueliang and general Yang Hucheng in an effort to force them to accept a truce with us to unite China against foreign enemies. However, the situation is going out of hand after Chiang's Death and is developing into a full-scale civil war. What meansures should we take in response?"
  nea.1.a:0 "We shall help the Northeastern Army."
  nea.1.b:0 "We should stay out of this."
  nea.2.t:0 "[From.GetNameDef] Joins the War against the Central Government"

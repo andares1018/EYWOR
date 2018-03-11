@@ -170,6 +170,14 @@ spriteTypes = {
 		name = "GFX_idea_CHI_yan_xishan"
 		texturefile = "gfx/interface/ideas/idea_yan_xishan.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_CHI_soong_mei_ling"
+		texturefile = "gfx/interface/ideas/idea_chi_soong_mei_ling.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_CHI_t_v_soong"
+		texturefile = "gfx/interface/ideas/idea_chi_t_v_soong.dds"
+	}
 ##################generic socialist advisors#####################
 	spriteType = {
 			name = "GFX_idea_generic_socialist_idealist_western_european_2d"

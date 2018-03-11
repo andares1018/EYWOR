@@ -277,13 +277,15 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 1
+			factor = 30
 			modifier = {
-				factor = 10
+				factor = 0
 				OR = {
+					original_tag = GUD
 					original_tag = GXC
-					original_tag = YUN
-					original_tag = XSM
+					original_tag = NEA
+					original_tag = SIC
+					original_tag = SHD
 				}
 			}
 		}
@@ -734,9 +736,13 @@ focus_tree = {
 			modifier = {
 				factor = 10
 				OR = {
-					original_tag = SHX
+					original_tag = SIC
 					original_tag = SIK
 				}
+			}
+			modifier = {
+				factor = 100
+				original_tag = NEA
 			}
 		}
 

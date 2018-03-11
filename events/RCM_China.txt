@@ -1793,20 +1793,22 @@ country_event = {
 		add_political_power = 50
 		CHI = { 
 			country_event = { days = 2 id = rcmchina.255 } 
-			add_relation_modifier = {
-				target = GER
-				modifier = CHI_license_axis_equipment
-			}
+			#add_relation_modifier = {
+			#	target = GER
+			#	modifier = CHI_license_axis_equipment
+			#}
+			add_offsite_building = { type = industrial_complex level = 1 }
+			add_offsite_building = { type = arms_factory level = 1 }
 			if = {
 				limit = {
 					ITA = {
 						is_in_faction_with = GER
 					}
 				}
-				add_relation_modifier = {
-					target = ITA
-					modifier = CHI_license_axis_equipment
-				}
+				#add_relation_modifier = {
+				#	target = ITA
+				#	modifier = CHI_license_axis_equipment
+				#}
 				
 			}
 			add_tech_bonus = {
@@ -1846,22 +1848,22 @@ country_event = {
 		name = rcmchina.255.a
 		ai_chance = { factor = 100 }
 		effect_tooltip = {
-			add_relation_modifier = {
-				target = GER
-				modifier = CHI_license_axis_equipment
-			}
-			
+			#add_relation_modifier = {
+			#	target = GER
+			#	modifier = CHI_license_axis_equipment
+			#}
+			add_offsite_building = { type = industrial_complex level = 1 }
+			add_offsite_building = { type = arms_factory level = 1 }
 			if = {
 				limit = {
 					ITA = {
 						is_in_faction_with = GER
 					}
 				}
-				add_relation_modifier = {
-					target = ITA
-					modifier = CHI_license_axis_equipment
-				}
-				
+				#add_relation_modifier = {
+				#	target = ITA
+				#	modifier = CHI_license_axis_equipment
+				#}
 			}
 			add_tech_bonus = {
 				name = infantry_equipment_ger
@@ -1915,10 +1917,12 @@ country_event = {
 		add_political_power = 50
 		CHI = { 
 			country_event = { days = 2  id = rcmchina.258 } 
-			add_relation_modifier = {
-				target = SOV
-				modifier = CHI_license_comintern_equipment
-			}
+			#add_relation_modifier = {
+			#	target = SOV
+			#	modifier = CHI_license_comintern_equipment
+			#}
+			add_offsite_building = { type = industrial_complex level = 1 }
+			add_offsite_building = { type = arms_factory level = 1 }
 			add_tech_bonus = {
 				name = land_doc_bonus_sov
 				bonus = 0.5
@@ -1962,10 +1966,12 @@ country_event = {
 		name = rcmchina.258.a	
 		ai_chance = { factor = 100 }
 		effect_tooltip = {
-			add_relation_modifier = {
-				target = SOV
-				modifier = CHI_license_comintern_equipment
-			}
+			#add_relation_modifier = {
+			#	target = SOV
+			#	modifier = CHI_license_comintern_equipment
+			#}
+			add_offsite_building = { type = industrial_complex level = 1 }
+			add_offsite_building = { type = arms_factory level = 1 }
 			add_tech_bonus = {
 				name = land_doc_bonus_sov
 				bonus = 0.5
@@ -2015,20 +2021,22 @@ country_event = {
 		add_political_power = 50
 		CHI = {
 			country_event = { days = 2 id = rcmchina.261 } 
-			add_relation_modifier = {
-				target = ENG
-				modifier = CHI_license_allies_equipment
-			}
+			#add_relation_modifier = {
+			#	target = ENG
+			#	modifier = CHI_license_allies_equipment
+			#}
+			add_offsite_building = { type = industrial_complex level = 1 }
+			add_offsite_building = { type = arms_factory level = 1 }
 			if = {
 				limit = {
 					FRA = {
 						is_in_faction_with = ENG
 					}
 				}
-				add_relation_modifier = {
-					target = FRA
-					modifier = CHI_license_allies_equipment
-				}
+				#add_relation_modifier = {
+				#	target = FRA
+				#	modifier = CHI_license_allies_equipment
+				#}
 			}
 			add_tech_bonus = {
 				name = dd_bonus
@@ -2074,20 +2082,22 @@ country_event = {
 		ai_chance = { factor = 100 }
 		effect_tooltip = {
 			ENG = {
-				add_relation_modifier = {
-					target = ENG
-					modifier = CHI_license_allies_equipment
-				}
+				#add_relation_modifier = {
+				#	target = ENG
+				#	modifier = CHI_license_allies_equipment
+				#}
+				add_offsite_building = { type = industrial_complex level = 1 }
+				add_offsite_building = { type = arms_factory level = 1 }
 				if = {
 					limit = {
 						FRA = {
 							is_in_faction_with = ENG
 						}
 					}
-					add_relation_modifier = {
-						target = FRA
-						modifier = CHI_license_allies_equipment
-					}
+					#add_relation_modifier = {
+					#	target = FRA
+					#	modifier = CHI_license_allies_equipment
+					#}
 				}
 			}
 			add_tech_bonus = {
