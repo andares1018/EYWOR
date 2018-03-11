@@ -155,7 +155,7 @@ add_ideas = {
 	closed_economy
 	extensive_conscription
 	war_economy
-	one_last_stand
+	#one_last_stand
 	#PRC_Mobile_Warfare
 	PRC_Isolated_status
 	Long_March_1

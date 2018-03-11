@@ -6,6 +6,9 @@ ideas = {
 				is_in_faction = no
 				is_subject = no
 			}
+			allowed = {
+				always = no
+			}
 			allowed_civil_war = {
 				always = yes
 			}
@@ -34,6 +37,9 @@ ideas = {
 		}
 		SIK_Weakened_ussr_influence = {
 			picture = generic_deal_with_the_devil
+			allowed = {
+				always = no
+			}
 			available = {
 				communism > 0.3
 			}
@@ -61,8 +67,6 @@ ideas = {
 			}
 		}
 		SIK_New_currency = {
-			
-			
 			allowed = {
 				always = no
 			}
@@ -79,7 +83,9 @@ ideas = {
 			}
 		}
 		SIK_Autocracy = {
-			
+			allowed = {
+				always = no
+			}
 			available = {
 				NOT = {
 					has_government = democratic
@@ -130,7 +136,9 @@ ideas = {
 			}
 		}
 		SIK_Against_sheng_shicai = {
-			
+			allowed = {
+				always = no
+			}
 			available = {
 				has_civil_war = no
 				OR = {
@@ -343,8 +351,11 @@ ideas = {
 		}
 		SIK_Kicking_out_different_nation = {
 			picture = saf_history_of_segregation
-			allowed = {
+			available = {
 				has_government = fascism
+			}
+			allowed = {
+				always = no
 			}
 			allowed_civil_war = {
 				has_government = fascism
@@ -371,11 +382,14 @@ ideas = {
 		}
 		SIK_Turkic_compatriots = {
 			picture = ast_abandon_the_westminster_system
-			allowed = {
+			available = {
 				OR = {
 					has_government = fascism
 					has_government = neutrality
 				}
+			}
+			allowed = {
+				always = no
 			}
 			allowed_civil_war = {
 				NOT = {
@@ -396,6 +410,9 @@ ideas = {
 					is_subject_of = SOV
 				}
 			}
+			allowed = {
+				always = no
+			}
 			allowed_civil_war = {
 				always = yes
 			}
@@ -406,6 +423,9 @@ ideas = {
 			}
 		}
 		SIK_Focus_on_sinkiang = {
+			allowed = {
+				always = no
+			}
 			available = {
 				is_subject = no
 				is_in_faction = no
@@ -477,7 +497,7 @@ ideas = {
 		SIK_Infantry_assault = {
 			picture = generic_war_preparation
 			allowed = {
-				always = yes
+				always = no
 			}
 			allowed_civil_war = {
 				always = yes
@@ -491,7 +511,7 @@ ideas = {
 		SIK_Army_reform = {
 			picture = generic_intel_bonus
 			allowed = {
-				always = yes
+				always = no
 			}
 			allowed_civil_war = {
 				always = yes
@@ -508,6 +528,9 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
+			allowed = {
+				always = no
+			}
 			removal_cost = -1
 			picture = generic_manpower_bonus
 			
@@ -521,6 +544,9 @@ ideas = {
 			}
 			allowed_civil_war = {
 				always = yes
+			}
+			allowed = {
+				always = no
 			}
 			removal_cost = -1
 			picture = generic_manpower_bonus
@@ -536,6 +562,9 @@ ideas = {
 			}
 			allowed_civil_war = {
 				always = yes
+			}
+			allowed = {
+				always = no
 			}
 			removal_cost = -1
 			picture = generic_manpower_bonus
@@ -566,6 +595,9 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
+			allowed = {
+				always = no
+			}
 			modifier = {
 				army_core_defence_factor = 0.1
 				army_morale_factor = 0.05
@@ -580,6 +612,9 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
+			allowed = {
+				always = no
+			}
 			modifier = {
 				army_morale_factor = -0.1
 				army_org = -5
@@ -592,6 +627,9 @@ ideas = {
 			}
 			allowed_civil_war = {
 				always = yes
+			}
+			allowed = {
+				always = no
 			}
 			modifier = {
 				dig_in_speed_factor = 0.15

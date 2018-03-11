@@ -670,7 +670,6 @@ ideas = {
 			}
 
 		}
-
 	}
 
 
@@ -771,10 +770,6 @@ ideas = {
 			
 			traits = { communist_revolutionary }
 	
-			 
-							   
-	
- 
 			do_effect = {
 				NOT = {
 					has_government = communism
@@ -797,10 +792,6 @@ ideas = {
 			
 			traits = { democratic_reformer }
 
-			 
-								
-	
- 
 			do_effect = {
 				NOT = {
 					has_government = democratic
@@ -827,10 +818,6 @@ ideas = {
 			
 			traits = { fascist_demagogue }
 	
-			 
-							   
-	
- 
 			do_effect = {
 				NOT = {
 					has_government = fascism
@@ -1111,25 +1098,10 @@ ideas = {
 				original_tag = SOV
 
 			}
-			available = 
-			{
+			available = {
 				#MODDED=========VVV
-				OR = {
-					CHI = {
-						NOT = { has_completed_focus = sov_volunteer_group }
-					}
-					has_global_flag = SOV_recalled_advisors
-					has_global_flag = term_over_pavel_r
-				}
-				#MODDED=========^^^
-		  
-			
-																									 
-	  
-																  
-															
-	 
-					   
+				pavel_r_in_USSR = yes
+				#MODDED=========^^^		   
 				NOT = { has_country_flag = purge_2_group_a }
 			}
 			
@@ -1246,31 +1218,15 @@ ideas = {
 				original_tag = SOV
 
 			}
-			available = 
-			{
+			available = {
 				NOT = { has_country_flag = counter_purge }
 				#MODDED=========VVV
-				OR = {
-					CHI = {
-						NOT = { has_completed_focus = sov_volunteer_group }
-					}
-					has_global_flag = SOV_recalled_advisors
-					has_global_flag = term_over_pavel_z
-				}
-				#MODDED=========^^^
-					   
-		  
-			
-																									 
+				pavel_z_in_USSR = yes
+				#MODDED=========^^^									 
 			}
 																  
 															
 	 
-					   
-	
-			
-
-			
 			traits = { air_airborne_1 }
 			
 			ai_will_do = {
