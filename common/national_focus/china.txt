@@ -1,5 +1,5 @@
 focus_tree = {
-	id = china_nationalist_focus
+	id = china
 	country = {
 		factor = 0
 		modifier = {
@@ -2898,6 +2898,7 @@ focus_tree = {
 						amount = 250
 					}
 				}
+				unlock_decision_tooltip = CHI_flying_tigers
 			}
 		}
 		available = {

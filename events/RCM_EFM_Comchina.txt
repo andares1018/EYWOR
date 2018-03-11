@@ -1393,7 +1393,7 @@ country_event = {
 		tag = PRC
 		has_idea = idea_continuous_recover_from_the_long_march
 		has_idea = Long_March_1
-		has_stability > 0.3
+		has_war_support > 0.3
 	}
 	option = {
 		name = EFM_Comchina.199.a
@@ -1402,7 +1402,7 @@ country_event = {
 			remove_idea = Long_March_1
 		}
 		hidden_effect = {
-			add_stability = -0.1
+			add_war_support = -0.1
 		}
 	}
 }
@@ -1419,7 +1419,7 @@ country_event = {
 		tag = PRC
 		has_idea = idea_continuous_recover_from_the_long_march
 		has_idea = Long_March_2
-		has_stability > 0.4
+		has_war_support > 0.4
 	}
 	mean_time_to_happen = {
 		days = 0
@@ -1431,7 +1431,7 @@ country_event = {
 			remove_idea = Long_March_2
 		}
 		hidden_effect = {
-			add_stability = -0.1
+			add_war_support = -0.1
 		}
 	}
 }
@@ -1448,7 +1448,7 @@ country_event = {
 		tag = PRC
 		has_idea = idea_continuous_recover_from_the_long_march
 		has_idea = Long_March_3
-		has_stability > 0.5
+		has_war_support > 0.5
 	}
 	mean_time_to_happen = {
 		days = 0
@@ -1460,7 +1460,7 @@ country_event = {
 			remove_idea = Long_March_3
 		}
 		hidden_effect = {
-			add_stability = -0.1
+			add_war_support = -0.1
 		}
 	}
 }
@@ -1477,7 +1477,7 @@ country_event = {
 		tag = PRC
 		has_idea = idea_continuous_recover_from_the_long_march
 		has_idea = Long_March_4
-		has_stability > 0.6
+		has_war_support > 0.6
 	}
 	mean_time_to_happen = {
 		days = 0
@@ -1489,7 +1489,7 @@ country_event = {
 			remove_idea = Long_March_4
 		}
 		hidden_effect = {
-			add_stability = -0.1
+			add_war_support = -0.1
 		}
 	}
 }
@@ -1506,7 +1506,7 @@ country_event = {
 		tag = PRC
 		has_idea = idea_continuous_recover_from_the_long_march
 		has_idea = Long_March_5
-		has_stability > 0.7
+		has_war_support > 0.7
 	}
 	mean_time_to_happen = {
 		days = 0
@@ -1515,7 +1515,7 @@ country_event = {
 		name = EFM_Comchina.203.a
 		remove_ideas = Long_March_5
 		hidden_effect = {
-			add_stability = -0.1
+			add_war_support = -0.1
 		}
 	}
 }
@@ -1533,7 +1533,7 @@ country_event = {
 		tag = PRC
 		has_idea = idea_continuous_recover_from_the_long_march
 		has_idea = Long_March_5
-		has_stability < 0.6
+		has_war_support < 0.6
 	}
 	mean_time_to_happen = {
 		days = 0
@@ -1545,7 +1545,7 @@ country_event = {
 			remove_idea = Long_March_5
 		}
 		hidden_effect = {
-			add_stability = -0.1
+			add_war_support = -0.1
 		}
 	}
 }
@@ -1562,7 +1562,7 @@ country_event = {
 		tag = PRC
 		has_idea = idea_continuous_recover_from_the_long_march
 		has_idea = Long_March_4
-		has_stability < 0.5
+		has_war_support < 0.5
 	}
 	mean_time_to_happen = {
 		days = 0
@@ -1574,7 +1574,7 @@ country_event = {
 			remove_idea = Long_March_4
 		}
 		hidden_effect = {
-			add_stability = -0.1
+			add_war_support = -0.1
 		}
 	}
 }
@@ -1591,7 +1591,7 @@ country_event = {
 		tag = PRC
 		has_idea = idea_continuous_recover_from_the_long_march
 		has_idea = Long_March_3
-		has_stability < 0.4
+		has_war_support < 0.4
 	}
 	mean_time_to_happen = {
 		days = 0
@@ -1603,7 +1603,7 @@ country_event = {
 			remove_idea = Long_March_3
 		}
 		hidden_effect = {
-			add_stability = -0.1
+			add_war_support = -0.1
 		}
 	}
 }
@@ -1620,7 +1620,7 @@ country_event = {
 		tag = PRC
 		has_idea = idea_continuous_recover_from_the_long_march
 		has_idea = Long_March_2
-		has_stability < 0.3
+		has_war_support < 0.3
 	}
 	mean_time_to_happen = {
 		days = 0
@@ -1632,7 +1632,7 @@ country_event = {
 			remove_idea = Long_March_2
 		}
 		hidden_effect = {
-			add_stability = -0.1
+			add_war_support = -0.1
 		}
 	}
 }

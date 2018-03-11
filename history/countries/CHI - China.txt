@@ -278,7 +278,7 @@ create_field_marshal = {
 	traits = { offensive_doctrine }
 	skill = 4
 }
-create_field_marshal = {
+create_corps_commander = {
 	name = "Wang Yaowu"
 	portrait_path = "gfx/leaders/CHI/Portrait_China_Wang_Yaowu.dds"
 	traits = { offensive_doctrine }

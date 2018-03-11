@@ -182,7 +182,7 @@ create_country_leader = {
 }
 
 
-create_corps_commander = {
+create_field_marshal = {
 	name = "Lin Biao"
 	portrait_path = "gfx/leaders/PRC/Lin_Biao.dds"
 	traits = { winter_specialist fortress_buster }
@@ -203,7 +203,7 @@ create_corps_commander = {
 	skill = 3
 }
 
-create_corps_commander = {
+create_field_marshal = {
 	name = "Zhu De"
 	portrait_path = "gfx/leaders/PRC/Zhu_De.dds"
 	traits = { trait_mountaineer }

@@ -2415,6 +2415,7 @@ country_event = {
 				send_equipment = { target = CHI type = fighter_equipment_1 amount = 150 }
 				send_equipment = { target = CHI type = tac_bomber_equipment_1 amount = 250 }
 			}
+			#unlock_decision_tooltip = CHI_flying_tigers
 		}
 		hidden_effect = {
 			random_other_country = {
@@ -2425,6 +2426,7 @@ country_event = {
 				add_ace = { name = "Robert" surname = "Smith" callsign = "R.T." type = fighter_genius is_female = no }
 				load_oob = CHI_flying_tiger
 			}
+			#set_country_flag = CHI_flying_tigers
 		}
 	}
 }
@@ -4691,5 +4693,29 @@ country_event = {
 				add_state_core = PREV
 			}
 		}
+	}
+}
+#hidden, legit china = leader china
+country_event = {
+	id = rcmchina.338
+	hidden = yes
+	trigger = {
+		is_legit_china = yes
+		NOT = {
+			any_other_country = {
+				OR = {
+					is_legit_china = yes
+					tag = event_target:WTT_current_china_leader
+				}
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 0
+	}
+	immediate = {
+		save_global_event_target_as = WTT_current_china_leader
+	}
+	option = {
 	}
 }

@@ -2726,99 +2726,48 @@ CHI_xian_incident = {
 	CHI_instigate_xian_incident = {
 		icon = generic_political_discourse
 		available = {			
+			NOT ={
+				PRC = {
+					has_completed_focus = PRC_Anti_Japanese_and_Chiang
+				}
+			}
+			has_global_flag = tacit_truce_flag
+			OR = {
+				has_government = democratic
+				has_government = neutrality
+			}
+			CHI = {
+				has_opinion_modifier = hostile_status
+				NOT = { has_war_with = GXC }
+				NOT = { has_global_flag = CHI_truce_com }
+				NOT = { is_in_faction_with = JAP }
+			}
+			NOT = { has_}
+			has_global_flag = chiang_in_xian
+			country_exists = PRC
 			NOT = {
 				has_global_flag = CHI_xian_fired
 			}
-			CHI = {
-				NOT = {
-					is_in_faction_with = PRC
-				}
-				NOT = {
-					has_war_with = JAP
-				}
-				NOT = {
-					has_war_with = PRC
-				}
-				NOT = {
-					OR = {
-						has_completed_focus = CHI_foreign_threats
-						has_completed_focus = CHI_prioritize_the_interior
-					}
-				}
-			}
-			PRC = {
-				NOT = {
-					has_war_with = JAP
-				}
-				NOT = {
-					has_war_with = CHI
-				}
-				is_in_faction = no
-			}
 			NOT = {
-				has_war_with = CHI
-			}
-			NOT = {
-				has_war_with = PRC
+				has_opinion_modifier = CHI_prc_reconciliation
 			}
 		}
 
 		visible = {
-			NOT = {
-				has_global_flag = CHI_xian_fired
-			}
-			CHI = {
-				NOT = {
-					is_in_faction_with = PRC
-				}
-				NOT = {
-					has_war_with = JAP
-				}
-			}
-			PRC = {
-				NOT = {
-					has_war_with = JAP
-				}
-			}
-			is_literally_china = yes
-			NOT = {
-				OR = {
-					original_tag = CHI
-					original_tag = PRC
-				}
-			}
-			event_target:WTT_current_china_leader = { tag = CHI }
+			has_completed_focus = CHI_cooperation_with_the_communists
+			tag = NEA
 		}
 		cost = 25
+		days_remove = 50
 		fire_only_once = yes
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				threat > 0.1
-				factor = 2
-			}
-			modifier = {
-				NOT = { 	
-					JAP = {
-						has_added_tension_amount > 0
-					}
-				}
-				factor = 0
-			}
-			modifier = {
-				JAP = {
-					NOT = {
-						has_government = fascism
-					}
-				}
-				factor = 0
-			}
+			factor = 2000
 		}
 		complete_effect = {
 			set_country_flag = CHI_xian_instigator_flag
 			set_global_flag = CHI_xian_fired
 			CHI = {
-				country_event = wtt_xian_incident.1
+				country_event = { id = rcmsoviet.18 }
 			}
 		}
 	}

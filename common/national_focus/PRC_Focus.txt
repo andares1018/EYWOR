@@ -442,7 +442,7 @@ focus_tree = {
 					id = EFM_Comchina.11
 				}
 			}
-		}
+		}has_opinion_modifier = CHI_prc_reconciliation
 		completion_reward = {
 			for_tracking_ten_comp_foc = yes
 			custom_effect_tooltip = about_twenfivdays_in_tt

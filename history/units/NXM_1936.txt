@@ -76,6 +76,34 @@ units = {
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.9
 	}
+	division = {
+		name = "5 Ma Qibing Jun"
+		location = 1630
+		division_template = "Qibing Jun"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "6 Ma Qibing Jun"
+		location = 1630
+		division_template = "Qibing Jun"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "7 Ma Qibing Jun"
+		location = 1630
+		division_template = "Qibing Jun"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "8 Ma Qibing Jun"
+		location = 1630
+		division_template = "Qibing Jun"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
 }
 
 ### STARTING PRODUCTION ###
