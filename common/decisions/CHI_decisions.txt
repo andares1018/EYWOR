@@ -2762,7 +2762,7 @@ CHI_xian_incident = {
 		ai_will_do = {
 			factor = 2000
 		}
-		complete_effect = {
+		remove_effect = {
 			set_country_flag = CHI_xian_instigator_flag
 			set_global_flag = CHI_xian_fired
 			CHI = {
