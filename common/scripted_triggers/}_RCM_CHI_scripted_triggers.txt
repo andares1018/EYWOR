@@ -183,3 +183,33 @@ check_has_focus_tree_to_switch_to_n_socialism = {
 	NOT = { tag = JAP }
 	NOT = { tag = CHI }
 }
+
+JAP_or_friend_controls_big_part_of_CHI_or_peace = {
+	OR = {
+		NOT = { has_war_with = CHI }
+		AND = {
+			714 = { is_controlled_by_jap_or_its_puppet = yes }
+			717 = { is_controlled_by_jap_or_its_puppet = yes }
+			328 = { is_controlled_by_jap_or_its_puppet = yes }
+			774 = { is_controlled_by_jap_or_its_puppet = yes }
+			775 = { is_controlled_by_jap_or_its_puppet = yes }
+			776 = { is_controlled_by_jap_or_its_puppet = yes }
+			777 = { is_controlled_by_jap_or_its_puppet = yes }
+			778 = { is_controlled_by_jap_or_its_puppet = yes }
+			779 = { is_controlled_by_jap_or_its_puppet = yes }
+			780 = { is_controlled_by_jap_or_its_puppet = yes }
+			781 = { is_controlled_by_jap_or_its_puppet = yes }
+			715 = { is_controlled_by_jap_or_its_puppet = yes }
+			527 = { is_controlled_by_jap_or_its_puppet = yes }
+			525 = { is_controlled_by_jap_or_its_puppet = yes }
+			716 = { is_controlled_by_jap_or_its_puppet = yes }
+			610 = { is_controlled_by_jap_or_its_puppet = yes }
+			612 = { is_controlled_by_jap_or_its_puppet = yes }
+			611 = { is_controlled_by_jap_or_its_puppet = yes }
+			608 = { is_controlled_by_jap_or_its_puppet = yes }
+			614 = { is_controlled_by_jap_or_its_puppet = yes }
+			597 = { is_controlled_by_jap_or_its_puppet = yes }
+			766 = { is_controlled_by_jap_or_its_puppet = yes }
+		}
+	}
+}

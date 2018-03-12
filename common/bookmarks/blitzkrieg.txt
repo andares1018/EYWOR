@@ -260,37 +260,6 @@ bookmarks = {
 			}
 		}
 		
-		"PRC"={
-			minor = yes
-			history = "PRC_BLITZKRIEG_DESC"
-			ideology = communism
-			ideas = {
-				Long_March_3
-				PRC_no_skilled_personnel_1
-				incompetent_heavy_industry
-			}
-			focuses = {
-				PRC_Trotskyism_faction
-				PRC_A_New_Countey
-				PRC_PLA
-			}
-		}
-		
-		"SIK"={
-			minor = yes
-			history = "SIK_BLITZKRIEG_DESC"
-			ideology = communism
-			ideas = {
-				SIK_Autocracy
-				SIK_Surrport
-				SIK_Conflict_with_the_local_people
-			}
-			focuses = {
-				SIK_Sinkiang_King
-				SIK_The_western_revolution
-				SIK_Turkic_land
-			}
-		}
 		
 		"MON"={
 			minor = yes
@@ -306,7 +275,237 @@ bookmarks = {
 				KMT_ties
 			}
 		}
+		"ECA"={
+			minor = yes
+			history = "WARLORDS_BLITZKRIEG_DESC"
+			ideology = fascism
+			ideas = {
+				MON_nomadic
+				MEN_reformed_currency
+				MEN_standing_advisors
+			}
+			focuses = {
+				MEN_bank
+				MEN_suiyuan_offensive
+				MEN_independence_war
+			}
+		}
+		"PRC"={
+			minor = yes
+			history = "PRC_BLITZKRIEG_DESC"
+			ideology = communism
+			ideas = {
+				Long_March_3
+				PRC_no_skilled_personnel_1
+				incompetent_heavy_industry
+			}
+			focuses = {
+				PRC_Trotskyism_faction
+				PRC_A_New_Countey
+				PRC_PLA
+			}
+		}
+		"MAN"={
+			minor = yes
+			history = "MAN_BLITZKRIEG_DESC"
+			ideology = fascism
+			ideas = {
+				MAN_kwantung_veto
+				MAN_five_year_plan_industry
+				MAN_low_legitimacy_4
+			}
+			focuses = {
+				MAN_alliance_with_the_kwantung_army
+				MAN_develop_aluminum_sources
+				MAN_the_two_emperors
+			}
+		}
+		"SIK"={
+			minor = yes
+			history = "SIK_BLITZKRIEG_DESC"
+			ideology = communism
+			ideas = {
+				SIK_Autocracy
+				SIK_Surrport
+				SIK_Conflict_with_the_local_people
+			}
+			focuses = {
+				SIK_Sinkiang_King
+				SIK_The_western_revolution
+				SIK_Turkic_land
+			}
+		}
+		"SHX"={
+			minor = yes
+			history = "WARLORDS_BLITZKRIEG_DESC"
+			ideology = neutrality
+			ideas = {
+				CHI_long_term_economic_planning
+			}
+			focuses = {
+				CHI_join_the_republican_government
+				CHI_power_struggle
+				CHI_heavy_weapons_development
+			}
+		}
+		"YUN"={
+			minor = yes
+			history = "WARLORDS_BLITZKRIEG_DESC"
+			ideology = neutrality
+			ideas = {
+				CHI_long_term_economic_planning
+			}
+			focuses = {
+				CHI_join_the_republican_government
+				CHI_power_struggle
+				CHI_heavy_weapons_development
+			}
+		}	
+		"GXC"={
+			minor = yes
+			history = "WARLORDS_BLITZKRIEG_DESC"
+			ideology = neutrality
+			ideas = {
+				CHI_long_term_economic_planning
+			}
+			focuses = {
+				CHI_join_the_republican_government
+				CHI_power_struggle
+				CHI_heavy_weapons_development
+			}
+		}
+		"GUD"={
+			minor = yes
+			history = "WARLORDS_BLITZKRIEG_DESC"
+			ideology = neutrality
+			ideas = {
+				CHI_long_term_economic_planning
+			}
+			focuses = {
+				CHI_join_the_republican_government
+				CHI_power_struggle
+				CHI_heavy_weapons_development
+			}
+		}		
+			
+		"XSM"={
+			minor = yes
+			history = "WARLORDS_BLITZKRIEG_DESC"
+			ideology = neutrality
+			ideas = {
+				CHI_long_term_economic_planning
+			}
+			focuses = {
+				CHI_join_the_republican_government
+				CHI_power_struggle
+				CHI_heavy_weapons_development
+			}
+		}		
+		"NXM"={
+			minor = yes
+			history = "WARLORDS_BLITZKRIEG_DESC"
+			ideology = neutrality
+			ideas = {
+				CHI_long_term_economic_planning
+			}
+			focuses = {
+				CHI_join_the_republican_government
+				CHI_power_struggle
+				CHI_heavy_weapons_development
+			}
+		}
+		"SIC"={
+			minor = yes
+			history = "WARLORDS_BLITZKRIEG_DESC"
+			ideology = neutrality
+			ideas = {
+				CHI_long_term_economic_planning
+			}
+			focuses = {
+				CHI_join_the_republican_government
+				CHI_power_struggle
+				CHI_heavy_weapons_development
+			}
+		}
+		"XIK"={
+			minor = yes
+			history = "WARLORDS_BLITZKRIEG_DESC"
+			ideology = neutrality
+			ideas = {
+				CHI_long_term_economic_planning
+			}
+			focuses = {
+				CHI_join_the_republican_government
+				CHI_power_struggle
+				CHI_heavy_weapons_development
+			}
+		}
+		"HPC"={
+			minor = yes
+			history = "WARLORDS_BLITZKRIEG_DESC"
+			ideology = neutrality
+			ideas = {
+				CHI_long_term_economic_planning
+			}
+			focuses = {
+				CHI_join_the_republican_government
+				CHI_power_struggle
+				CHI_heavy_weapons_development
+			}
+		}
+		"SHD"={
+			minor = yes
+			history = "WARLORDS_BLITZKRIEG_DESC"
+			ideology = neutrality
+			ideas = {
+				CHI_long_term_economic_planning
+			}
+			focuses = {
+				CHI_join_the_republican_government
+				CHI_power_struggle
+				CHI_heavy_weapons_development
+			}
+		}
+		"NEA"={
+			minor = yes
+			history = "WARLORDS_BLITZKRIEG_DESC"
+			ideology = neutrality
+			ideas = {
+				CHI_long_term_economic_planning
+			}
+			focuses = {
+				CHI_join_the_republican_government
+				CHI_power_struggle
+				CHI_heavy_weapons_development
+			}
+		}
 		
+		"TNG"={
+			minor = yes
+			history = "WARLORDS_BLITZKRIEG_DESC"
+			ideology = neutrality
+			ideas = {
+				CHI_long_term_economic_planning
+			}
+			focuses = {
+				CHI_join_the_republican_government
+				CHI_power_struggle
+				CHI_heavy_weapons_development
+			}
+		}
+		"HMI"={
+			minor = yes
+			history = "WARLORDS_BLITZKRIEG_DESC"
+			ideology = neutrality
+			ideas = {
+				CHI_long_term_economic_planning
+			}
+			focuses = {
+				CHI_join_the_republican_government
+				CHI_power_struggle
+				CHI_heavy_weapons_development
+			}
+		}
 		effect = {
 			randomize_weather = 12345 # <- Obligatory in every bookmark !
 			#123 = { rain_light = yes }

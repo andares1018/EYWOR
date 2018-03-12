@@ -370,24 +370,6 @@ ideas = {
 
 	political_advisor = {
 
-
-		MAN_songgotu_zhanshan = {
-
-			picture = generic_political_advisor_asia_1
-			
-			allowed = {
-				original_tag = MAN
-			}
-
-			available = {
-				if = {
-					limit = { has_dlc = "Waking the Tiger" }
-					has_completed_focus = MAN_invite_japanese_investors
-				}
-			}
-			
-			traits = { captain_of_industry }
-		}
 	}	
 
 	army_chief = {

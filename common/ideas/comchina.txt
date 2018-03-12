@@ -111,6 +111,9 @@ ideas = {
 			modifier = {
 			}
 		}
+		
+	}
+	country = {
 		####
 		#WTT
 		####
@@ -324,7 +327,7 @@ ideas = {
 			}
 		}
 
-		PRC_government_corruption = { 
+		PRC_government_corruption = {
 
 			picture = anti_soviet_pact
 
@@ -377,8 +380,6 @@ ideas = {
 				partisan_effect = 0.75
 			}
 		}
-	}
-	country = {
 		dongbei_turned_red_idea = {
 			picture = trotskyite_plot
 			available = {

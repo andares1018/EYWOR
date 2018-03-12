@@ -137,7 +137,9 @@ guiTypes = {
 				size = { width = 100% height = 100% }
 				slotsize = { width = 53 height = 40 }
 				add_horizontal = yes
-				max_slots_vertical = 2
+				#MODDEDv
+				max_slots = { x = 23 y = 2 }
+				#MODDED^
 				format = "UPPER_LEFT"
 			}
 		}

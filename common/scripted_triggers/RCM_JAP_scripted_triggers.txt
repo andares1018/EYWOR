@@ -23,48 +23,7 @@ is_rrc = {
 		has_country_flag = im_rrc_now
 	}
 }
-JAP_or_friend_controls_big_part_of_CHI_or_peace = {
-	OR = {
-		NOT = { has_war_with = CHI }
-		NOT = {
-			any_state = {
-				OR = {
-					state = 714
-					state = 717
-					state = 328
-					state = 774
-					state = 775
-					state = 776
-					state = 777
-					state = 778
-					state = 779
-					state = 780
-					state = 781
-					state = 715
-					state = 527
-					state = 525
-					state = 716
-					state = 610
-					state = 612
-					state = 611
-					state = 608
-					state = 614
-					state = 597
-					state = 766
-				}
-				controller = {
-					NOT = {
-						OR = {
-							is_subject_of = JAP
-							is_in_faction_with = JAP
-							tag = JAP
-						}
-					}
-				}
-			}
-		}
-	}
-}
+
 is_forbidden_states_in_puppet_formation = {
 	OR = {
 		state = 594

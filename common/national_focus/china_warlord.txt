@@ -279,13 +279,11 @@ focus_tree = {
 		ai_will_do = {
 			factor = 100
 			modifier = {
-				factor = -999
+				add = 0
 				OR = {
 					original_tag = GUD
 					original_tag = GXC
 					original_tag = NEA
-					#original_tag = SIC
-					#original_tag = SHD
 				}
 			}
 		}
@@ -1396,7 +1394,7 @@ focus_tree = {
 			JAP = {
 				has_opinion = {
 					target = ROOT
-					value > 10
+					value > 9
 				}
 			}
 			NOT = { has_war_with = JAP }
