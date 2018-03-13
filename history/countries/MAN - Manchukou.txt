@@ -15,6 +15,15 @@ add_ideas = {
 	#MAN_puppet_of_japan
 	#Manchuria_economy
 }
+if = {
+	limit = { has_dlc = "Waking the Tiger" }
+	set_country_flag = MAN_northern_bandits
+	set_country_flag = MAN_eastern_bandits
+	set_country_flag = MAN_western_bandits
+	add_ideas = MAN_banditry
+	add_ideas = MAN_kwantung_veto
+	add_ideas = MAN_low_legitimacy_5
+}
 set_technology = {
 	infantry_weapons = 1
 	gw_artillery = 1
@@ -42,6 +51,31 @@ set_convoys = 5
 	complete_national_focus = construction_effort
 	complete_national_focus = production_effort
 	
+	if = {
+		limit = { has_dlc = "Waking the Tiger" }
+
+		
+		#No bandits
+		unlock_national_focus = MAN_pacify_the_countryside
+		remove_ideas = MAN_banditry
+
+		complete_national_focus = MAN_army_modernization
+		complete_national_focus = MAN_mukden_military_academy
+		complete_national_focus = MAN_law_university
+		complete_national_focus = MAN_obedience
+
+		#Five year plan
+		unlock_national_focus = MAN_first_five_year_plan
+		add_timed_idea = { days = 1275 idea = MAN_five_year_plan_industry }
+
+		complete_national_focus = MAN_trade_delegation
+		complete_national_focus = MAN_expand_the_textile_industry
+		complete_national_focus = MAN_hoankyoku
+		complete_national_focus = MAN_invite_japanese_investors
+		complete_national_focus = MAN_expand_the_railways
+		complete_national_focus = MAN_develop_aluminum_sources
+		complete_national_focus = MAN_social_research_unit
+	}
 	oob = "MAN_1939"
 	set_technology = {
 		infantry_weapons1 = 1
@@ -158,18 +192,27 @@ create_country_leader = {
 	traits = {
 	}
 }
+
+
 create_field_marshal = {
 	name = "Zhang Jinghui"
 	picture = "Portrait_Manchukuo_Zhang_Jinghui.dds"
-	traits = { old_guard }
-	skill = 1
+	traits = { infantry_officer }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
 }
 create_corps_commander = {
 	name = "Yu Zhishan"
 	picture = "Portrait_Manchukuo_Yu_Zhishan.dds"
 	traits = { }
 	skill = 2
-	   
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2   
 }
 
 create_corps_commander = {
@@ -200,7 +243,7 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Urjin Garmaev"
 	picture = "Portrait_Manchukuo_Urjin_Garmaev.dds"
-	traits = { }
+	traits = { offensive_doctrine }
 	skill = 2
 }
 

@@ -47,8 +47,10 @@ CHI_industrial_evacuations = {
 
 CHI_xian_incident = {
 	icon = power_struggle
-	allowed = {
+	visible = {
 		owns_state = 743
+		has_completed_focus = CHI_cooperation_with_the_communists
+		tag = NEA
 	}
 }
 

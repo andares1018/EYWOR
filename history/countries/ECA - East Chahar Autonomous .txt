@@ -192,4 +192,8 @@ create_corps_commander = {
 	portrait_path = "gfx/leaders/ECA/Portrait_Li_Shouxin.dds"
 	traits = { trait_mountaineer }
 	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
 }

@@ -143,8 +143,12 @@ create_field_marshal = {
 	id = 821895 #choibalsan_gen
 	name = "Khorloogiin Choibalsan"
 	portrait_path = "gfx/leaders/MON/Portrait_Choibalsan.dds"
-	traits = { offensive_doctrine }
+	traits = { offensive_doctrine politically_connected }
 	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
 }
 
 1939.1.1 = {

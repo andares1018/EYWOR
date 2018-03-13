@@ -248,6 +248,10 @@ create_corps_commander = {
 	portrait_path = "gfx/leaders/BUR/Portrait_Burma_Ne_Win.dds"
 	traits = { hill_fighter }
 	skill = 3
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 3
+	logistics_skill = 2
 }
 
 create_field_marshal = {
@@ -255,6 +259,10 @@ create_field_marshal = {
 	portrait_path = "gfx/leaders/BUR/Portrait_Burma_Kenneth_Mcleod.dds"
 	traits = { defensive_doctrine}
 	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
 }
 
 create_corps_commander = {
@@ -262,6 +270,10 @@ create_corps_commander = {
 	portrait_path = "gfx/leaders/BUR/Portrait_Burma_Ba_Maw_fascism.dds"
 	traits = { desert_fox }
 	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
 }
 
 create_navy_leader = {
@@ -269,4 +281,8 @@ create_navy_leader = {
 	portrait_path = "gfx/leaders/BUR/Portrait_Burma_John_Henry_Godfrey.dds"
 	traits = { blockade_runner }
 	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
 }

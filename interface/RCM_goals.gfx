@@ -188,4 +188,48 @@ spriteTypes = {
 		name = "GFX_goal_one_party"
 		texturefile = "gfx/interface/goals/goal_one_party.dds"				
 	}
+	SpriteType = {
+		name = "GFX_focus_blueshirts_coup"
+		texturefile = "gfx/interface/goals/focus_blueshirts_coup.dds"				
+	}
+	
+	
+	SpriteType = {
+		name = "GFX_focus_nationalize_companies"
+		texturefile = "gfx/interface/goals/focus_nationalize_companies.dds"				
+	}
+	SpriteType = {
+		name = "GFX_focus_juntong"
+		texturefile = "gfx/interface/goals/focus_juntong.dds"				
+	}
+	SpriteType = {
+		name = "GFX_focus_jongtong"
+		texturefile = "gfx/interface/goals/focus_jongtong.dds"				
+	}
+	
+	SpriteType = {
+		name = "GFX_focus_bs"
+		texturefile = "gfx/interface/goals/focus_bs.dds"				
+	}
+	SpriteType = {
+		name = "GFX_focus_yi_dang_zhi_guo"
+		texturefile = "gfx/interface/goals/focus_yi_dang_zhi_guo.dds"				
+	}
+	SpriteType = {
+		name = "GFX_focus_cc_clique"
+		texturefile = "gfx/interface/goals/focus_cc_clique.dds"				
+	}
+	SpriteType = {
+		name = "GFX_focus_last_ditch"
+		texturefile = "gfx/interface/goals/focus_last_ditch.dds"				
+	}
+	SpriteType = {
+		name = "GFX_focus_national_defense"
+		texturefile = "gfx/interface/goals/focus_national_defense.dds"				
+	}
+	SpriteType = {
+		name = "GFX_focus_ethnicism"
+		texturefile = "gfx/interface/goals/focus_ethnicism.dds"				
+	}
+	
 }

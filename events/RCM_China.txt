@@ -3219,7 +3219,7 @@ country_event = {
 		}
 	}
 	option = {#fuck no
-		name = rcmchina.298.a
+		name = rcmchina.298.b
 		ai_chance = {
 			factor = 0
 		}
@@ -3259,7 +3259,7 @@ country_event = {
 		}
 	}
 	option = {#fuck no
-		name = rcmchina.299.a
+		name = rcmchina.299.b
 		ai_chance = {
 			factor = 0
 		}
@@ -3297,7 +3297,7 @@ country_event = {
 		}
 	}
 	option = {#kill em all 
-		name = rcmchina.300.a
+		name = rcmchina.300.b
 		ai_chance = {
 			factor = 40
 		}
@@ -3344,7 +3344,7 @@ country_event = {
 		}
 	}
 	option = {#how about we join as well
-		name = rcmchina.301.a
+		name = rcmchina.301.b
 		ai_chance = {
 			factor = 100
 		}
@@ -3356,7 +3356,7 @@ country_event = {
 		
 	}
 	option = {#kill em all 
-		name = rcmchina.301.a
+		name = rcmchina.301.c
 		ai_chance = {
 			factor = 0
 		}
@@ -3398,7 +3398,7 @@ country_event = {
 		}
 	}
 	option = {#still nah
-		name = rcmchina.302.a
+		name = rcmchina.302.b
 		ai_chance = {
 			factor = 20
 		}
@@ -3454,7 +3454,7 @@ country_event = {
 		}
 	}
 	option = {#killem all===>>
-		name = rcmchina.304.a
+		name = rcmchina.304.b
 		ai_chance = {
 			factor = 50
 		}
@@ -3938,6 +3938,7 @@ country_event = {
 		date < 1939.1.1
 		SIC = {
 			has_government = neutrality
+			has_country_leader = { ruling_only = yes name = "Liu Xiang" }
 		}
 	}
 	immediate = {

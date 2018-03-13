@@ -53,4 +53,8 @@ create_field_marshal = {
 	portrait_path = "gfx/leaders/GUD/Portrait_Guangdong_Chen_Jitang.dds"
 	traits = { defensive_doctrine }
 	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
 }

@@ -1185,3 +1185,4 @@ industry_evac_decision = {
 		clr_country_flag = CHI_industrial_evacuations_moved_IC
 	}
 }
+}

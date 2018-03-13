@@ -1372,7 +1372,7 @@ ideas = {
 			}
 			traits = { communist_revolutionary }
 			on_add = {
-				country_event = political.1
+				#country_event = political.1
 			}
 			do_effect = {
 				NOT = {
@@ -1392,7 +1392,7 @@ ideas = {
 			}
 			traits = { democratic_reformer }
 			on_add = {
-				country_event = political.13
+				#country_event = political.13
 			}
 			do_effect = {
 				NOT = {
@@ -1412,7 +1412,7 @@ ideas = {
 			}
 			traits = { socialist_idealist }
 			on_add = {
-				country_event = rcmpolitical.30
+				#country_event = rcmpolitical.30
 			}
 			do_effect = {
 				NOT = {
@@ -1429,7 +1429,7 @@ ideas = {
 			}
 			traits = { fascist_demagogue }
 			on_add = {
-				country_event = political.7
+				#country_event = political.7
 			}
 			do_effect = {
 				NOT = {

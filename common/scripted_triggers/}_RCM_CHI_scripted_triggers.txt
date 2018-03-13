@@ -213,3 +213,78 @@ JAP_or_friend_controls_big_part_of_CHI_or_peace = {
 		}
 	}
 }
+
+####
+
+check_has_focus_tree_to_switch_to_fascism = {
+	NOT = { tag = JAP }
+	NOT = { tag = GER }
+	NOT = { tag = MAN }
+	NOT = { tag = ITA }
+	NOT = { tag = CHI }
+	NOT = { tag = PRC }
+	NOT = {
+		AND = {
+			tag = SAF
+			has_dlc = "Together for Victory"
+		}
+	}
+	NOT = {
+		AND = {
+			tag = RAJ
+			has_dlc = "Together for Victory"
+		}
+	}
+}
+
+check_has_focus_tree_to_switch_to_democratic = {
+	NOT = { tag = MAN }
+	NOT = { tag = FRA }
+	NOT = { tag = USA }
+	NOT = { tag = ENG }
+	NOT = { tag = CAN }
+	NOT = { tag = SAF }
+	NOT = { tag = AUS }
+	NOT = { tag = NZL }
+	NOT = { tag = RAJ }
+	NOT = { tag = CZE }
+	NOT = {
+		AND = {
+			tag = HUN
+			has_dlc = "Death or Dishonor"
+		}
+	}
+	NOT = {
+		AND = {
+			OR = {
+				tag = JAP
+				tag = GER
+				is_warlord = yes
+			}
+			has_dlc = "Waking the Tiger"
+		}
+	}
+}
+
+check_has_focus_tree_to_switch_to_communism = {
+	NOT = { tag = PRC }
+	NOT = { tag = SIK }
+	NOT = { tag = MAN }
+	NOT = { tag = SOV }
+	NOT = {
+		AND = {
+			tag = RAJ
+			has_dlc = "Together for Victory"
+		}
+	}
+	NOT = {
+		AND = {
+			OR = {
+				tag = JAP
+				#tag = GER
+				is_warlord = yes
+			}
+			has_dlc = "Waking the Tiger"
+		}
+	}
+}

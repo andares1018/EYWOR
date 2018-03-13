@@ -144,4 +144,8 @@ create_field_marshal = {
 	portrait_path = "gfx/leaders/XIK/Portrait_Sichuan_Liu_Wenhui.dds"
 	traits = { logistics_wizard }
 	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 1
 }

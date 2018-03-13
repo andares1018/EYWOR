@@ -144,6 +144,10 @@ create_field_marshal = {
 	traits = { defensive_doctrine }
 	skill = 4
 	id = 4003
+	attack_skill = 3
+	defense_skill = 4
+	planning_skill = 2
+	logistics_skill = 3
 }
 create_field_marshal = {
 	name = "Fu Zuoyi"
@@ -151,4 +155,8 @@ create_field_marshal = {
 	traits = { offensive_doctrine }
 	skill = 3
 	id = 4002
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 3
 }

@@ -263,51 +263,83 @@ add_opinion_modifier = { target = JAP modifier = hostile_status }
 create_field_marshal = {
 	name = "He Yingqin"
 	portrait_path = "gfx/leaders/CHI/Portrait_China_He_Yingqin.dds"
-	traits = { offensive_doctrine }
+	traits = { offensive_doctrine trait_cautious armor_officer harsh_leader }
 	skill = 4
+	attack_skill = 4
+	defense_skill = 4
+	planning_skill = 2
+	logistics_skill = 3
 }
 create_field_marshal = {
 	name = "Gu Jutong"
         portrait_path = "gfx/leaders/CHI/Portrait_China_Gu_Zt.dds"
-	traits = { fast_planner }
-	skill = 3	
+	traits = { career_officer fast_planner }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2	
 }
 create_field_marshal = {
 	name = "Chen Cheng"
 	portrait_path = "gfx/leaders/CHI/Portrait_China_Chen_Cheng.dds"
-	traits = { offensive_doctrine }
+	traits = { offensive_doctrine old_guard career_officer }
 	skill = 4
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 4
+	logistics_skill = 2
 }
 create_corps_commander = {
 	name = "Wang Yaowu"
 	portrait_path = "gfx/leaders/CHI/Portrait_China_Wang_Yaowu.dds"
-	traits = { offensive_doctrine }
-	skill = 3
+	traits = { defensive_doctrine trait_cautious infantry_officer }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
 }
 create_corps_commander = {
 	name = "Zhang Lingfu"
 	portrait_path = "gfx/leaders/CHI/Portrait_Zhang_Lingfu.dds"
-	traits = {  }
+	traits = { offensive_doctrine trait_reckless career_officer }
 	skill = 4
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 4
 }
 create_corps_commander = {
 	name = "Xue Yueh"
 	portrait_path = "gfx/leaders/CHI/Portrait_China_Xue.dds"
-	traits = {  }
+	traits = { offensive_doctrine trait_reckless brilliant_strategist war_hero }
 	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 1
+	logistics_skill = 3
 }
 create_corps_commander = {
 	name = "Du Yuming"
         portrait_path = "gfx/leaders/CHI/Portrait_China_Du_Y.dds"
-	traits = { trickster }
-	skill = 2	
+	traits = { trait_cautious harsh_leader defensive_doctrine }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 1
 }
 
 create_corps_commander = {
 	name = "Sun Liren"
         portrait_path = "gfx/leaders/CHI/Portrait_China_Sun_L.dds"
-	traits = { panzer_leader }
-	skill = 3	
+	traits = { brilliant_strategist }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
 }
 
 create_navy_leader = {

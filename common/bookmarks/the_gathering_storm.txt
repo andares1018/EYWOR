@@ -296,6 +296,21 @@ bookmarks = {
 				MEN_independence_war
 			}
 		}
+		"MAN"={
+			minor = yes
+			history = "MAN_GATHERING_STORM_DESC"
+			ideology = fascism
+			ideas = {
+				MAN_banditry
+				MAN_kwantung_veto
+				MAN_low_legitimacy_5
+			}
+			focuses = {
+				MAN_obedience
+				MAN_independence_war
+				MAN_claim_the_mandate_of_heaven
+			}
+		}
 		"PRC"={
 			minor = yes
 			history = "PRC_GATHERING_STORM_DESC"

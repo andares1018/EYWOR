@@ -141,16 +141,28 @@ create_field_marshal = {
 	portrait_path = "gfx/leaders/HPC/Portrait_hpc_Song.dds"
 	traits = { inspirational_leader }
 	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
 }
 create_corps_commander = {
 	name = "Chang Zhizong"
         portrait_path = "gfx/leaders/CHI/Portrait_China_Zhang.dds"
 	traits = { urban_assault_specialist }
-	skill = 4	
+	skill = 4
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 4
 }
 create_corps_commander = {
 	name = "Ji Xingwen"
         portrait_path = "gfx/leaders/HPC/Portrait_Ji_Xingwen.dds"
 	traits = { urban_assault_specialist }
-	skill = 3	
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
 }

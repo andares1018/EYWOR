@@ -206,20 +206,20 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/prc_motorised_infantry.dds"
 	}
 	
-	SpriteType = {
-		name = "GFX_PRC_mechanised_infantry_medium"
-		texturefile = "gfx/interface/technologies/prc_mechanised_infantry.dds"	
-	}
+	#SpriteType = {
+	#	name = "GFX_PRC_mechanised_infantry_medium"
+	#	texturefile = "gfx/interface/technologies/prc_mechanised_infantry.dds"	
+	#}
 
-	SpriteType = {
-		name = "GFX_PRC_mechanised_infantry2_medium"
-		texturefile = "gfx/interface/technologies/prc_mechanised_infantry2.dds"
-	}
+	#SpriteType = {
+	#	name = "GFX_PRC_mechanised_infantry2_medium"
+	#	texturefile = "gfx/interface/technologies/prc_mechanised_infantry2.dds"
+	#}
 
-	SpriteType = {
-		name = "GFX_PRC_mechanised_infantry3_medium"
-		texturefile = "gfx/interface/technologies/prc_mechanised_infantry3.dds"
-	}
+	#SpriteType = {
+	#	name = "GFX_PRC_mechanised_infantry3_medium"
+	#	texturefile = "gfx/interface/technologies/prc_mechanised_infantry3.dds"
+	#}
 
 	SpriteType = {
 		name = "GFX_PRC_motorized_equipment_medium"

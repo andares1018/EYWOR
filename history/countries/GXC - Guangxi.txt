@@ -126,10 +126,18 @@ create_field_marshal = {
 	portrait_path = "gfx/leaders/CHI/Portrait_China_Bai.dds"
 	traits = { inspirational_leader }
 	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
 }
 create_field_marshal = {
 	name = "Li Zongren"
 	portrait_path = "gfx/leaders/GXC/Portrait_Guangxi_Li_Zongren.dds"
-	traits = { fast_planner }
+	traits = { defensive_doctrine trait_cautious politically_connected }
 	skill = 4
+	attack_skill = 2
+	defense_skill = 4
+	planning_skill = 3
+	logistics_skill = 4
 }
