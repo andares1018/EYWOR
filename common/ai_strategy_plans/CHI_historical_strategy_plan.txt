@@ -11,7 +11,7 @@ CHI_nationalist_historical_plan = {
 			OR = {
 				has_completed_focus = JAP_strengthen_civilian_government
 				has_completed_focus = JAP_the_unthinkable_option
-				has_completed_focus = JAP_support_the_kodoha_faction
+				has_global_flag = kodoha_won
 				is_in_faction_with = ENG 
 				is_in_faction_with = USA 
 			}

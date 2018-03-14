@@ -86,7 +86,7 @@ JAP_manchukuo_player_historical_plan = {
 		JAP_bicycle_battalions #April 20 1939	
 		JAP_small_arms_modernization #June 30 1939	
 		 				#September 10 1939	
-		JAP_strike_south_doctrine #November 20 1939	
+		southern_expansion_focus #November 20 1939	
 		JAP_agility_focus #January 30 1940	
 		JAP_first_air_fleet #April 10 1940	
 		JAP_the_zero #June 20 1940	

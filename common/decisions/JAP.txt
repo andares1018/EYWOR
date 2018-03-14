@@ -834,7 +834,7 @@ JAP_southern_expansion = {
 		}
 
 		visible = {
-			has_completed_focus = JAP_strike_south_doctrine
+			has_completed_focus = southern_expansion_focus
 		}
 
 		fire_only_once = yes
@@ -1319,8 +1319,8 @@ operations = {
 
 		available = {
 			OR = {
-				has_completed_focus = JAP_purge_the_kodoha_faction
-				has_completed_focus = JAP_support_the_kodoha_faction
+				has_global_flag = kodoha_failed
+				has_global_flag = kodoha_won
 			}
 			NOT = {
 				has_war_with = SOV

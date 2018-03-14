@@ -4700,7 +4700,7 @@ country_event = {
 }
 #hidden, legit china = leader china
 country_event = {
-	id = rcmchina.338
+	id = rcmchina.339
 	hidden = yes
 	trigger = {
 		is_legit_china = yes

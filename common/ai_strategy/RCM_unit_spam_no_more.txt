@@ -3314,18 +3314,6 @@ production_unit_295_ratios = {
 		value = -9999
 	}
 }
-stockpile_management = {
-	enable = {
-		num_divisions > 150
-	}
-	abort = {
-		num_divisions < 130
-	}
-	ai_strategy = {
-		type = equipment_stockpile
-		value = 35 # double base stockpile #from 25 to 35
-	}
-}
 do_not_waste_pp_if_saving_for_manpower_laws = {
 	enable = {
 		manpower_per_military_factory < 500

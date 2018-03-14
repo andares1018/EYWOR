@@ -12,6 +12,9 @@ add_ideas = {
 	limited_exports
 	limited_conscription
 	partial_economic_mobilisation
+
+	JAP_zaibatsus
+	JAP_duplicate_research_efforts
 	emperor_showa
 	JAP_military_outweighs_the_government_idea
 }
@@ -92,7 +95,7 @@ add_opinion_modifier = { target = CHI modifier = hostile_status }
 	}
 	remove_ideas = fumimaro_konoe
 	complete_national_focus = jap_placate_military_focus
-	complete_national_focus = purge_military_focus
+	complete_national_focus = JAP_purge_the_kodoha_faction
 	complete_national_focus = pressure_pm_focus
 	unlock_national_focus = chinese_war_focus
 	complete_national_focus = konoe_cabinet

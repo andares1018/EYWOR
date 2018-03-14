@@ -1,12 +1,12 @@
 
 ai_historical_focus_list_JAP = {
 	ai_national_focuses = {
-		mengjiang_puppet_focus
+		#mengjiang_puppet_focus
 		industrial_effort_focus2
 		jap_placate_military_focus
-		mua_puppet_focus
-		reform_menjiang_focus
-		purge_military_focus	
+		#mua_puppet_focus
+		#reform_menjiang_focus
+		JAP_purge_the_kodoha_faction	
 		pressure_pm_focus
 		konoe_cabinet
 		infra_effort_focus
@@ -14,10 +14,10 @@ ai_historical_focus_list_JAP = {
 		CHI_war_focus
 		subdue_warlords_focus
 		spiritual_mobilization_focus		
-		great_way_gov_focus
-		provisional_gov_focus
-		reform_shanghai_puppet_focus
-		reorganized_CHI_puppet
+		#great_way_gov_focus
+		#provisional_gov_focus
+		#reform_shanghai_puppet_focus
+		#reorganized_CHI_puppet
 		tojo_cabinet_focus
 		strike_usa_focus
 		found_own_faction_focus

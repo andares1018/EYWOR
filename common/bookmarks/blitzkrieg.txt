@@ -85,12 +85,12 @@ bookmarks = {
 			ideas={
 				state_shintoism
 				emperor_showa
-				active_duty_generals_only
+				JAP_zaibatsus
 			}	
 			focuses = {
 				southern_expansion_focus
 				divine_wind_focus
-				found_own_faction_focus
+				showa_restoration_focus
 			}		
 		}
 		

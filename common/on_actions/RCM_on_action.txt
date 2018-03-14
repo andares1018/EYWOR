@@ -283,17 +283,16 @@ on_actions = {
 									has_country_flag = im_rrc_now #only RRC
 									AND = {
 										NOT = {
-											JAP = {
-												has_completed_focus = reorganized_CHI_puppet
+											any_country = {
+												is_subject_of = JAP
+												is_rrc = yes
 											}
 										}
 										OR = {
 											AND = {#only rfm
-												JAP = {
-													has_completed_focus = reform_shanghai_puppet_focus
-													NOT = {
-														has_completed_focus = provisional_gov_focus
-													}
+												has_global_flag = rfm_exists
+												NOT = {
+													has_global_flag = jnc_exists
 												}
 												original_tag = RFM
 												owns_state = 613
@@ -310,10 +309,10 @@ on_actions = {
 											}
 											AND = {#only great_way_gov
 												JAP = {
-													has_completed_focus = great_way_gov_focus
+													has_global_flag = ccp_exists
 													NOT = {
-														has_completed_focus = provisional_gov_focus
-														has_completed_focus = reform_shanghai_puppet_focus
+														has_global_flag = jnc_exists
+														has_global_flag = rfm_exists
 													}
 												}
 												owns_state = 613

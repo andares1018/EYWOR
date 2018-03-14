@@ -1048,7 +1048,12 @@ country_event = {
 		NOT = { has_country_flag = transfer_state_loop_jap }
 		num_of_controlled_states > 1
 		has_war_with = CHI
-		NOT = { has_completed_focus = reorganized_CHI_puppet }
+		NOT = { 
+			any_country = {
+				is_subject_of = JAP
+				is_rrc = yes
+			}
+		}
 	}
 	mean_time_to_happen = {
 		days = 0
@@ -1160,7 +1165,14 @@ country_event = {
 		name = rcmjapan.34.a
 		ai_chance = { factor = 100 }
 		if = {
-			limit = { NOT = { has_completed_focus = reorganized_CHI_puppet } }
+			limit = {
+				NOT = {
+					any_country = {
+						is_subject_of = JAP
+						is_rrc = yes
+					}
+				}
+			}
 			every_owned_state = {
 				limit = {
 					is_controlled_by = JAP

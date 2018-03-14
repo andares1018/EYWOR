@@ -442,9 +442,9 @@ news_event = {
 	fire_only_once = yes
 	trigger = {
 		tag = JAP
-		NOT = { has_completed_focus = jap_gov_focus }
+		NOT = { has_completed_focus = JAP_strengthen_civilian_government }
 		focus_progress = {
-			focus = jap_gov_focus
+			focus = JAP_strengthen_civilian_government
 			progress > 0.2
 		}
 	}
@@ -493,9 +493,9 @@ news_event = {
 	fire_only_once = yes
 	trigger = {
 		tag = JAP
-		NOT = { has_completed_focus = jap_gov_focus }
+		NOT = { has_completed_focus = JAP_strengthen_civilian_government }
 		focus_progress = {
-			focus = jap_gov_focus
+			focus = JAP_strengthen_civilian_government
 			progress > 0.6
 		}
 	}
@@ -544,9 +544,9 @@ news_event = {
 	fire_only_once = yes
 	trigger = {
 		tag = JAP
-		NOT = { has_completed_focus = jap_gov_focus }
+		NOT = { has_completed_focus = JAP_strengthen_civilian_government }
 		focus_progress = {
-			focus = jap_gov_focus
+			focus = JAP_strengthen_civilian_government
 			progress > 0.9
 		}
 	}
