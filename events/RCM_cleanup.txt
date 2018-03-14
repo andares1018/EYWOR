@@ -126,7 +126,12 @@ country_event = {
 	}
 	option = {
 		name = MONCLN.2.a
-		remove_unit_leader = 821895
+		if = {
+			limit = {
+				has_unit_leader = 821895
+			}
+			remove_unit_leader = 821895
+		}
 		add_popularity = { ideology = communism popularity = -0.1 }
 		add_stability = 0.05
 		army_experience = -5

@@ -1688,9 +1688,24 @@ country_event = {
 			remove_ideas = hajime_sugiyama
 			remove_ideas = osami_nagano
 			remove_ideas = isoroku_yamamoto
+			if = {
+			limit = {
+				has_unit_leader = 2001
+			}
 			remove_unit_leader = 2001
+		}
+			if = {
+			limit = {
+				has_unit_leader = 2002
+			}
 			remove_unit_leader = 2002
+		}
+			if = {
+			limit = {
+				has_unit_leader = 2003
+			}
 			remove_unit_leader = 2003
+		}
 		}
 	}
 }

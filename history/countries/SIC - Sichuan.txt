@@ -129,6 +129,10 @@ create_country_leader = {
 create_field_marshal = {
 	name = "Liu Xiang"
 	portrait_path = "gfx/leaders/SIC/Portrait_Sichuan_Liu_Xiang.dds"
-	traits = { logistics_wizard }
+	traits = { infantry_officer offensive_doctrine }
 	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
 }

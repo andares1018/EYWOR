@@ -95,7 +95,18 @@ continent = {
 
 continent = {
 	name = asia
-
+	army = {
+		male = {
+			"gfx/leaders/Asia/portrait_asia_generic_land_7.dds"
+			"gfx/leaders/Asia/portrait_asia_generic_land_8.dds"
+			"gfx/leaders/Asia/portrait_asia_generic_land_9.dds"
+			"gfx/leaders/Asia/portrait_asia_generic_land_10.dds"
+			"gfx/leaders/Asia/portrait_asia_generic_land_11.dds"
+			"gfx/leaders/Asia/portrait_asia_generic_land_12.dds"
+			"gfx/leaders/Asia/portrait_asia_generic_land_13.dds"
+			"gfx/leaders/Asia/portrait_asia_generic_land_14.dds"
+		}
+	}
 	political = {
 		#MODDEDv
 		n_socialism = {
@@ -106,6 +117,7 @@ continent = {
 		#MODDED^
 	}
 }
+
 
 continent = {
 	name = middle_east

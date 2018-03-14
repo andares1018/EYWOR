@@ -227,7 +227,12 @@ country_event = {
 	option = {
 		name = Sinkiang.13.a
 		retire_country_leader = yes
-		remove_unit_leader = 2897
+		if = {
+			limit = {
+				has_unit_leader = 2897
+			}
+			remove_unit_leader = 2897
+		}
 		set_party_name = { ideology = communism long_name = SIK_Xinjiang_defend_peace_and_democracy_alliance name = SIK_Xinjiang_defend_peace_and_democracy_alliance }
 		set_party_name = { ideology = fascism long_name = SIK_Yining_Liberation_Organization name = SIK_Yining_Liberation_Organization }
 		set_party_name = { ideology = neutrality long_name = SIK_China_nationalist_party name = SIK_Kuomintang }
@@ -335,8 +340,8 @@ country_event = {
 	}
 	is_triggered_only = yes
 	#mean_time_to_happen = {
-	#	days = 90
-	#}
+		#	days = 90
+		#}
 	
 	option = {
 		ai_chance = { factor = 90 }
@@ -580,7 +585,12 @@ country_event = {
 	option = {
 		ai_chance = { factor = 80 }
 		name = Sinkiang.20.a
-		remove_unit_leader = 2889
+		if = {
+			limit = {
+				has_unit_leader = 2889
+			}
+			remove_unit_leader = 2889
+		}
 		add_popularity = {
 			ideology = communism
 			popularity = -0.025
@@ -610,7 +620,12 @@ country_event = {
 	option = {
 		ai_chance = { factor = 70 }
 		name = Sinkiang.21.a
-		remove_unit_leader = 2898
+		if = {
+			limit = {
+				has_unit_leader = 2898
+			}
+			remove_unit_leader = 2898
+		}
 		add_popularity = {
 			ideology = communism
 			popularity = -0.025
@@ -665,7 +680,12 @@ country_event = {
 		random_list = {
 			60 = {
 				country_event = { id = Sinkiang.27 days = 1 }
-				remove_unit_leader = 2897
+				if = {
+					limit = {
+						has_unit_leader = 2897
+					}
+					remove_unit_leader = 2897
+				}
 			}
 			40 = {
 				country_event = { id = Sinkiang.26 days = 1 }
@@ -676,7 +696,12 @@ country_event = {
 		ai_chance = { factor = 50 }
 		name = Sinkiang.25.b
 		country_event = { id = Sinkiang.28 days = 1 }
-		remove_unit_leader = 2897
+		if = {
+			limit = {
+				has_unit_leader = 2897
+			}
+			remove_unit_leader = 2897
+		}
 	}
 }
 country_event = {
@@ -693,7 +718,12 @@ country_event = {
 			elections_allowed = no
 		}
 		kill_country_leader = yes
-		remove_unit_leader = 2897
+		if = {
+			limit = {
+				has_unit_leader = 2897
+			}
+			remove_unit_leader = 2897
+		}
 		set_party_name = { ideology = communism long_name = SIK_Xinjiang_defend_peace_and_democracy_alliance name = SIK_Xinjiang_defend_peace_and_democracy_alliance }
 		set_party_name = { ideology = fascism long_name = SIK_Yining_Liberation_Organization name = SIK_Yining_Liberation_Organization }
 		set_party_name = { ideology = neutrality long_name = SIK_China_nationalist_party name = SIK_Kuomintang }
@@ -1253,7 +1283,12 @@ country_event = {
 					}
 					remove_ideas = SIK_Soviet_supports_armed_groups
 				}
-				remove_unit_leader = 2898
+				if = {
+					limit = {
+						has_unit_leader = 2898
+					}
+					remove_unit_leader = 2898
+				}
 				create_corps_commander = {
 					name = "Peter Romanovich Aleksandrov"
 					id = 2895
@@ -1370,7 +1405,12 @@ country_event = {
 					skill = 2
 				}
 			}
-			remove_unit_leader = 2898
+			if = {
+				limit = {
+					has_unit_leader = 2898
+				}
+				remove_unit_leader = 2898
+			}
 		}
 		set_equipment_fraction = 0.8
 		set_stability = 0.7
@@ -1688,31 +1728,56 @@ country_event = {
 			limit = {
 				has_unit_leader = 2890
 			}
-			remove_unit_leader = 2890
+			if = {
+				limit = {
+					has_unit_leader = 2890
+				}
+				remove_unit_leader = 2890
+			}
 		}
 		if = {
 			limit = {
 				has_unit_leader = 2891
 			}
-			remove_unit_leader = 2891
+			if = {
+				limit = {
+					has_unit_leader = 2891
+				}
+				remove_unit_leader = 2891
+			}
 		}
 		if = {
 			limit = {
 				has_unit_leader = 2892
 			}
-			remove_unit_leader = 2892
+			if = {
+				limit = {
+					has_unit_leader = 2892
+				}
+				remove_unit_leader = 2892
+			}
 		}
 		if = {
 			limit = {
 				has_unit_leader = 2893
 			}
-			remove_unit_leader = 2893
+			if = {
+				limit = {
+					has_unit_leader = 2893
+				}
+				remove_unit_leader = 2893
+			}
 		}
 		if = {
 			limit = {
 				has_unit_leader = 2894
 			}
-			remove_unit_leader = 2894
+			if = {
+				limit = {
+					has_unit_leader = 2894
+				}
+				remove_unit_leader = 2894
+			}
 		}
 		add_popularity = {
 			ideology = communism
@@ -1806,7 +1871,12 @@ country_event = {
 	}
 	option = {
 		name = Sinkiang.57.a
-		remove_unit_leader = 2900
+		if = {
+			limit = {
+				has_unit_leader = 2900
+			}
+			remove_unit_leader = 2900
+		}
 	}
 }
 # SIK Join anti Japanese front
@@ -2456,7 +2526,12 @@ country_event = {
 	option = {
 		name = Sinkiang.99.a
 		kill_country_leader = yes
-		remove_unit_leader = 2897
+		if = {
+			limit = {
+				has_unit_leader = 2897
+			}
+			remove_unit_leader = 2897
+		}
 		create_country_leader = {
 			name = "Masud Sabri"
 			desc = "POLITICS_MASUD_SABRI_DESC"
@@ -2685,11 +2760,11 @@ country_event = {
 			remove_ideas = SIK_Neutral
 		}
 		#if = {
-		#	limit = {
-		#		has_idea = Chinese_Warlord
-		#	}
-		#	remove_ideas = Chinese_Warlord
-		#}
+			#	limit = {
+				#		has_idea = Chinese_Warlord
+				#	}
+			#	remove_ideas = Chinese_Warlord
+			#}
 		clr_global_flag = SIK_three_areas_revolution
 		create_country_leader = {
 			name = "Ospan Batyr"
@@ -2724,37 +2799,67 @@ country_event = {
 			limit = {
 				has_unit_leader = 2890
 			}
-			remove_unit_leader = 2890
+			if = {
+				limit = {
+					has_unit_leader = 2890
+				}
+				remove_unit_leader = 2890
+			}
 		}
 		if = {
 			limit = {
 				has_unit_leader = 2891
 			}
-			remove_unit_leader = 2891
+			if = {
+				limit = {
+					has_unit_leader = 2891
+				}
+				remove_unit_leader = 2891
+			}
 		}
 		if = {
 			limit = {
 				has_unit_leader = 2892
 			}
-			remove_unit_leader = 2892
+			if = {
+				limit = {
+					has_unit_leader = 2892
+				}
+				remove_unit_leader = 2892
+			}
 		}
 		if = {
 			limit = {
 				has_unit_leader = 2893
 			}
-			remove_unit_leader = 2893
+			if = {
+				limit = {
+					has_unit_leader = 2893
+				}
+				remove_unit_leader = 2893
+			}
 		}
 		if = {
 			limit = {
 				has_unit_leader = 2894
 			}
-			remove_unit_leader = 2894
+			if = {
+				limit = {
+					has_unit_leader = 2894
+				}
+				remove_unit_leader = 2894
+			}
 		}
 		if = {
 			limit = {
 				has_unit_leader = 2895
 			}
-			remove_unit_leader = 2895
+			if = {
+				limit = {
+					has_unit_leader = 2895
+				}
+				remove_unit_leader = 2895
+			}
 		}
 		hidden_effect = {
 			news_event = { hours = 6 id = news.1039 }

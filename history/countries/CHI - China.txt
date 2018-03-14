@@ -16,6 +16,7 @@ set_technology = {
 }
 save_global_event_target_as = WTT_current_china_leader
 add_ideas = {
+	free_trade
 	german_advisors
 	#CHI_communist_uprisings
 	CHI_kmt
