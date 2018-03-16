@@ -1,5 +1,26 @@
 ideas = {
 	country = {
+		reformed_colonial_administration = {
+			allowed = {
+				always = no
+			}
+			picture = idea_generic_political_support
+			allowed_civil_war = {
+				NOT = {
+					OR = {
+						has_government = democratic
+						has_government = communism
+						has_government = n_socialism
+					}
+				}
+			}
+			removal_cost = -1
+			modifier = {
+				local_resources_factor = 0.05
+				drift_defence_factor = 0.25
+				neutrality_drift = 0.1
+			}
+		}
 		JAP_reorganized_japanese_militarism_idea = {
 			allowed = {
 				always = no
@@ -360,7 +381,7 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				stability_factor = 0.1
-				political_power_gain = 0.075
+				political_power_gain = 0.25
 			}
 		}
 		prince_purged_jap = {
@@ -1388,7 +1409,7 @@ ideas = {
 				original_tag = "JAP"
 			}
 			available = {
-				has_idea = reformed_government
+				has_completed_focus = JAP_strengthen_civilian_government
 			}
 			traits = { democratic_reformer }
 			on_add = {

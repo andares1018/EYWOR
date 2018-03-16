@@ -348,7 +348,7 @@ CCP_tacit_truce = {
 			NOT = { country_exists = CHI }
 			has_opinion_modifier = CHI_prc_reconciliation
 			JAP = {
-				has_completed_focus = chinese_war_focus
+				has_completed_focus = JAP_intervene_in_china
 				NOT = {
 					has_war_with = CHI
 				}
@@ -380,7 +380,7 @@ NEA_tacit_truce = {
 				has_opinion_modifier = CHI_prc_reconciliation
 			}
 			JAP = {
-				has_completed_focus = chinese_war_focus
+				has_completed_focus = JAP_intervene_in_china
 				NOT = {
 					has_war_with = CHI
 				}

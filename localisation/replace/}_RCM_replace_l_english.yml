@@ -124,6 +124,17 @@
  MAN_communism_ADJ:0 "Manchu"
  
  #AUTONOMY NAME
+ MAN_JAP_neutrality_autonomy_puppet:0 "Empire of Manchuria"
+ MAN_JAP_neutrality_autonomy_reichsprotectorate:0 "Empire of Manchuria"
+ MAN_JAP_neutrality_autonomy_colony:0 "Empire of Manchuria"
+ MAN_JAP_neutrality_autonomy_dominion:0 "Empire of Manchuria"
+ MAN_JAP_neutrality_autonomy_satellite:0 "Empire of Manchuria"
+ MAN_JAP_neutrality_autonomy_integrated_puppet:0 "Empire of Manchuria"
+ MAN_JAP_neutrality_autonomy_reichskommissariat:0 "Empire of Manchuria"
+ MAN_JAP_neutrality_autonomy_wtt_imperial_protectorate:0 "Empire of Manchuria"
+ MAN_JAP_neutrality_autonomy_wtt_imperial_subject:0 "Empire of Manchuria"
+ MAN_JAP_neutrality_autonomy_wtt_imperial_associate:0 "Empire of Manchuria"
+ ##
  MAN_JAP_fascism_autonomy_puppet:0 "Empire of Manchuria"
  MAN_JAP_fascism_autonomy_reichsprotectorate:0 "Empire of Manchuria"
  MAN_JAP_fascism_autonomy_colony:0 "Empire of Manchuria"

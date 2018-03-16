@@ -2815,7 +2815,7 @@ country_event = {
 	option = {
 		name = rcmchina.285.a	
 		ai_chance = { factor = 100 }
-		unlock_national_focus = chinese_war_focus
+		unlock_national_focus = JAP_intervene_in_china
 		remove_from_faction = HPC
 		remove_from_faction = CHI
 		create_wargoal = {
@@ -2845,7 +2845,7 @@ country_event = {
 	option = {
 		name = rcmchina.285.a
 		ai_chance = { factor = 100 }
-		unlock_national_focus = chinese_war_focus
+		unlock_national_focus = JAP_intervene_in_china
 		remove_from_faction = HPC
 		remove_from_faction = CHI
 		create_wargoal = {

@@ -474,6 +474,7 @@
  RRC_democratic_DEF:1 "The Reorganized Free China"
  RRC_neutrality_DEF:1 "The Reorganized Republic of China"
  RRC_communism_DEF:1 "The Reorganized Socialist China"
+ ##replaced
  MAN_fascism:1 "Empire of Manchuria"
  MAN_democratic:1 "Republic of Manchuria"
  MAN_neutrality:1 "Manchukuo"
@@ -486,6 +487,7 @@
  MAN_democratic_DEF:1 "The Republic of Manchukuo"
  MAN_neutrality_DEF:1 "Manchukuo"
  MAN_communism_DEF:1 "The Peoples Republic of Manchukuo"
+ ##
  SIC_fascism:1 "Sichuan Military Government"
  SIC_democratic:1 "Republic of Sichuan"
  SIC_neutrality:1 "Sichuan Clique"
@@ -522,12 +524,14 @@
  HPC_democratic_DEF:1 "The Hebei-Chahar Democratic Government"
  HPC_neutrality_DEF:1 "Hebei-Chahar Political Council"
  HPC_communism_DEF:1 "Hebei-Chahar People's Government"
+ ##
  JNC_fascism:1 "Provisional Government of the ROC"
  JNC_neutrality:1 "The Provisional Chinese Republic"
  JNC_fascism_DEF:1 "The Provisional Government of the ROC"
  JNC_fascism_ADJ:1 "Provisional Government's"
  JNC_neutrality_DEF:1 "The Provisional Chinese Republic"
  JNC_neutrality_ADJ:1 "Provisional Government's"
+ ##
  MEJ_fascism:1 "Mengjiang"
  MEJ_fascism_DEF:1 "Mengjiang"
  MEJ_democratic:1 "Republic of Inner Mongolia"
@@ -540,6 +544,7 @@
  MEJ_democratic_ADJ:1 "Inner Mongolian"
  MEJ_neutrality_ADJ:1 "Mongkukuo's"
  MEJ_communism_ADJ:1 "Mongolian"
+ ##
  RFM_fascism:1 "Reformed Government of the ROC"
  RFM_democratic:1 "Reformed Government of the ROC"
  RFM_neutrality:1 "Reformed Government of the ROC"
@@ -552,6 +557,7 @@
  RFM_democratic_DEF:1 "The Reformed Government of the ROC"
  RFM_neutrality_DEF:1 "The Reformed Government of the ROC"
  RFM_communism_DEF:1 "The Reformed Socialist China"
+ ##
  ECA_fascism:1 "East Chahar Autonomous Region"
  ECA_fascism_DEF:1 "The East Chahar Autonomous Region"
  ECA_democratic:1 "Republic of Inner Mongolia"
@@ -564,6 +570,7 @@
  ECA_democratic_ADJ:1 "Mongolian"
  ECA_neutrality_ADJ:1 "Mongolian"
  ECA_communism_ADJ:1 "Mongolian"
+ ##
  FIC_fascism:1 "Imperial State of Indochina"
  FIC_fascism_DEF:1 "The Imperial State of Indochina"
  FIC_democratic:1 "Indochina"
@@ -576,6 +583,7 @@
  FIC_democratic_ADJ:1 "Indochinese"
  FIC_neutrality_ADJ:1 "Indochinese"
  FIC_communism_ADJ:1 "Indochinese"
+ ##
  SST_fascism:1 "Nationalist Malaya"
  SST_democratic:1 "Straits Settlements"
  SST_neutrality:1 "Kingdom of Malaya"

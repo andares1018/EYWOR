@@ -675,7 +675,7 @@ ideas = {
 		generic_tank_manufacturer = {
 			picture = generic_tank_manufacturer_1
 			allowed = {
-				NOT = { OR = { tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = BEL tag = CZE } }
+				is_using_generic_idea = yes
 				NOT = {
 					has_available_idea_with_traits = { idea = tank_manufacturer limit = 1 }
 				}
@@ -684,13 +684,6 @@ ideas = {
 						OR = { tag = AST tag = SAF tag = NZL tag = CAN }
 						has_dlc = "Together for Victory"
 					}
-				}
-				NOT = {
-					OR = {
-						is_literally_china = yes
-						tag = MAN
-					}
-					has_dlc = "Waking the Tiger"
 				}
 			}
 			cost = 150
@@ -706,7 +699,7 @@ ideas = {
 		generic_naval_manufacturer = {
 			picture = generic_naval_manufacturer_1
 			allowed = {
-				NOT = { OR = { tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = SWE tag = HUN tag = CZE } }
+				is_using_generic_idea = yes
 				NOT = {
 					has_available_idea_with_traits = { idea = naval_manufacturer limit = 1 }
 				}
@@ -714,12 +707,6 @@ ideas = {
 					AND = {
 						OR = { tag = AST tag = CAN tag = NZL tag = RAJ }
 						has_dlc = "Together for Victory"
-					}
-				}
-				NOT = {
-					AND = {
-						OR = { tag = CHI tag = PRC tag = MAN tag = SHX tag = XSM tag = GXC tag = YUN tag = SIK }
-						has_dlc = "Waking the Tiger"
 					}
 				}
 			}
@@ -736,7 +723,7 @@ ideas = {
 		generic_light_aircraft_manufacturer = {
 			picture = generic_air_manufacturer_1
 			allowed = {
-				NOT = { OR = { tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA } }
+				is_using_generic_idea = yes
 				NOT = {
 					has_available_idea_with_traits = { idea = light_aircraft_manufacturer limit = 1 }
 				}
@@ -745,12 +732,6 @@ ideas = {
 						has_dlc = "Death or Dishonor"
 					}
 					NOT = { tag = ROM } NOT = { tag = YUG }
-				}
-				NOT = {
-					AND = {
-						OR = { tag = CHI tag = PRC tag = MAN tag = SHX tag = XSM tag = GXC tag = YUN tag = SIK }
-						has_dlc = "Waking the Tiger"
-					}
 				}
 			}
 			cost = 150
@@ -763,7 +744,7 @@ ideas = {
 		generic_medium_aircraft_manufacturer = {
 			picture = generic_air_manufacturer_3
 			allowed = {
-				NOT = { OR = { tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = ROM } }
+				is_using_generic_idea = yes
 				NOT = {
 					has_available_idea_with_traits = { idea = medium_aircraft_manufacturer limit = 1 }
 				}
@@ -772,12 +753,6 @@ ideas = {
 						has_dlc = "Death or Dishonor"
 					}
 					NOT = { tag = YUG }
-				}
-				NOT = {
-					AND = {
-						OR = { tag = CHI tag = PRC tag = MAN tag = SHX tag = XSM tag = GXC tag = YUN tag = SIK }
-						has_dlc = "Waking the Tiger"
-					}
 				}
 			}
 			cost = 150
@@ -790,7 +765,7 @@ ideas = {
 		generic_heavy_aircraft_manufacturer = {
 			picture = generic_air_manufacturer_2
 			allowed = {
-				NOT = { OR = { tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = CAN tag = ROM } }
+				is_using_generic_idea = yes
 				NOT = {
 					has_available_idea_with_traits = { idea = heavy_aircraft_manufacturer limit = 1 }
 				}
@@ -799,11 +774,6 @@ ideas = {
 						has_dlc = "Death or Dishonor"
 					}
 					NOT = { tag = YUG }
-				}
-				NOT = {
-					AND = {
-						OR = { tag = CHI tag = PRC tag = MAN tag = SHX tag = XSM tag = GXC tag = YUN tag = SIK }
-					}
 				}
 			}
 			cost = 150
@@ -816,17 +786,9 @@ ideas = {
 		generic_naval_aircraft_manufacturer = {
 			picture = generic_naval_manufacturer_2
 			allowed = {
-				NOT = { OR = { tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = CAN tag = ROM tag = YUG } }
+				is_using_generic_idea = yes
 				NOT = {
 					has_available_idea_with_traits = { idea = naval_aircraft_manufacturer limit = 1 }
-				}
-				if = {
-					limit = {
-						has_dlc = "Waking the Tiger"
-					}
-					NOT = {
-						OR = { tag = CHI tag = PRC tag = MAN tag = SHX tag = XSM tag = GXC tag = YUN tag = SIK }
-					}
 				}
 			}
 			cost = 150
@@ -841,15 +803,9 @@ ideas = {
 		generic_industrial_concern = {
 			picture = generic_industrial_concern_1
 			allowed = {
-				NOT = { OR = { tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = HUN } }
+				is_using_generic_idea = yes
 				NOT = {
 					has_available_idea_with_traits = { idea = industrial_concern limit = 1 }
-				}
-				NOT = {
-					AND = {
-						OR = { tag = CHI tag = PRC tag = MAN tag = SHX tag = XSM tag = GXC tag = YUN tag = SIK }
-						has_dlc = "Waking the Tiger"
-					}
 				}
 			}
 			cost = 150
@@ -862,16 +818,9 @@ ideas = {
 		generic_electronics_concern = {
 			picture = generic_electronics_concern_1
 			allowed = {
-				NOT = { OR = { tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA } }
+				is_using_generic_idea = yes
 				NOT = {
 					has_available_idea_with_traits = { idea = electronics_concern limit = 1 }
-				}
-				NOT = {
-					has_DLC = "Waking the Tiger"
-					OR = {
-						original_tag = MAN
-						is_literally_china = yes
-					}
 				}
 			}
 			cost = 150
@@ -887,15 +836,9 @@ ideas = {
 		generic_motorized_equipment_manufacturer = {
 			picture = generic_motorized_equipment_manufacturer_3
 			allowed = {
-				NOT = { OR = { tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA } }
+				is_using_generic_idea = yes
 				NOT = {
 					has_available_idea_with_traits = { idea = motorized_equipment_manufacturer limit = 1 }
-				}
-				NOT = {
-					AND = {
-						OR = { tag = CHI tag = PRC tag = MAN tag = SHX tag = XSM tag = GXC tag = YUN tag = SIK }
-						has_dlc = "Waking the Tiger"
-					}
 				}
 			}
 			cost = 150
@@ -908,15 +851,9 @@ ideas = {
 		generic_infantry_equipment_manufacturer = {
 			picture = generic_infantry_equipment_manufacturer_2
 			allowed = {
-				NOT = { OR = { tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = HUN } }
+				is_using_generic_idea = yes
 				NOT = {
 					has_available_idea_with_traits = { idea = infantry_equipment_manufacturer limit = 1 }
-				}
-				NOT = {
-					AND = {
-						OR = { tag = CHI tag = PRC tag = MAN tag = SHX tag = XSM tag = GXC tag = YUN tag = SIK }
-						has_dlc = "Waking the Tiger"
-					}
 				}
 			}
 			cost = 150
@@ -929,15 +866,9 @@ ideas = {
 		generic_artillery_manufacturer = {
 			picture = generic_artillery_manufacturer_2
 			allowed = {
-				NOT = { OR = { tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA } }
+				is_using_generic_idea = yes
 				NOT = {
 					has_available_idea_with_traits = { idea = artillery_manufacturer limit = 1 }
-				}
-				NOT = {
-					AND = {
-						OR = { tag = CHI tag = PRC tag = MAN tag = SHX tag = XSM tag = GXC tag = YUN tag = SIK }
-						has_dlc = "Waking the Tiger"
-					}
 				}
 			}
 			cost = 150

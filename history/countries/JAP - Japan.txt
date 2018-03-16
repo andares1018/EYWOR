@@ -3,7 +3,8 @@ capital = 282
 
 oob = "JAP_1936"
 
-set_stability = 0.65
+set_stability = 0.65 #baseline, THE EMPEROR PROTECTS
+set_war_support = 0.8
 
 set_research_slots = 4
 
@@ -18,6 +19,14 @@ add_ideas = {
 	emperor_showa
 	JAP_military_outweighs_the_government_idea
 }
+
+if = {
+	limit = { has_dlc = "Waking the Tiger" }
+	add_ideas = {
+		JAP_interservice_rivalry_balanced		
+	}
+}
+
 every_state = {
 	limit = {
 		is_owned_by_jap_or_its_puppet = yes
@@ -97,7 +106,7 @@ add_opinion_modifier = { target = CHI modifier = hostile_status }
 	complete_national_focus = jap_placate_military_focus
 	complete_national_focus = JAP_purge_the_kodoha_faction
 	complete_national_focus = pressure_pm_focus
-	unlock_national_focus = chinese_war_focus
+	unlock_national_focus = JAP_intervene_in_china
 	complete_national_focus = konoe_cabinet
 	complete_national_focus = nat_mob_law
 	complete_national_focus = infra_effort_focus
@@ -108,6 +117,19 @@ add_opinion_modifier = { target = CHI modifier = hostile_status }
 	complete_national_focus = extra_tech_focus
 	complete_national_focus = industrial_effort_focus2
 	complete_national_focus = spiritual_mobilization_focus
+	complete_national_focus = JAP_guide_the_zaibatsus
+	complete_national_focus = JAP_liaison_conference
+	complete_national_focus = JAP_army_expansion_law
+	complete_national_focus = JAP_new_naval_estimates
+	complete_national_focus = JAP_army_expansion
+	complete_national_focus = JAP_cruiser_modernization
+	complete_national_focus = JAP_long_lance_torpedoes
+	complete_national_focus = JAP_bicycle_battalions
+	complete_national_focus = JAP_small_arms_modernization
+	complete_national_focus = JAP_fighter_modernization
+	complete_national_focus = JAP_carrier_warfare_experiments
+	complete_national_focus = JAP_supremacy_of_technology
+	remove_ideas = officer_purged_jap
 	puppet = MAN
 	puppet = RFM
 	set_autonomy = {

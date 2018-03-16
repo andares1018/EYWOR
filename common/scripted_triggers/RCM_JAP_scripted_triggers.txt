@@ -13,6 +13,19 @@
 #	}
 # 
 #	THIS FILE IS FOR TRIGGERS SPECIFICALLY FOR THE GER TAG
+
+
+independent_war_china_or_china_died = {
+	has_completed_focus = JAP_intervene_in_china
+	is_puppet = no
+	OR = {
+		has_war_with = event_target:WTT_current_china_leader
+		NOT = {
+			country_exists = event_target:WTT_current_china_leader
+		}
+	}
+}
+
 is_rrc = {
 	AND = {
 		OR = {

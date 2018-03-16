@@ -186,15 +186,14 @@ create_country_leader = {
 	}
 }
 create_country_leader = {
-	name = "Zhang Xueliang"
-	desc = "POLITICS_Zhang_Xueliang_DESC"
-	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_warlord1.dds"
-	expire = "1999.1.1"
-	ideology = despotism
+	name = "Zhang Jinghui"
+	desc = "POLITICS_Zhang_Jinghui_DESC"
+	picture = "Portrait_Manchukuo_Zhang_Jinghui.dds"
+	expire = "1964.1.1"
+	ideology = collaborationism
 	traits = {
 	}
 }
-
 
 create_field_marshal = {
 	name = "Zhang Jinghui"

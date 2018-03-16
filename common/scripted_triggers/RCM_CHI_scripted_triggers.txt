@@ -13,6 +13,40 @@
 #	}
 # 
 #	THIS FILE IS FOR TRIGGERS SPECIFICALLY FOR THE CHI TAG
+
+is_using_generic_idea = {
+	NOT = {
+		OR = {
+			tag = GER
+			tag = ENG
+			tag = SOV
+			tag = FRA
+			tag = ITA
+			tag = JAP
+			tag = USA
+			tag = CAN
+			tag = ROM
+			tag = YUG
+		}
+	}
+	if = {
+		limit = {
+			has_dlc = "Waking the Tiger"
+		}
+		NOT = {
+			OR = {
+				tag = CHI 
+				tag = PRC 
+				#tag = MAN 
+				#tag = SHX 
+				#tag = XSM 
+				#tag = GXC 
+				#tag = YUN 
+				#tag = SIK 
+			}
+		}
+	}
+}
 is_northeast_china_state = {
 	OR = {
 		state = 714

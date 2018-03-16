@@ -51,7 +51,7 @@ socialism_on_the_rise = {
 		modifier = {
 			n_socialism_drift = 0.02
 			stability_weekly = -0.03
- 			political_power_gain = -0.2
+			political_power_gain = -0.2
 		}
 		
 		ai_will_do = {
@@ -69,9 +69,9 @@ socialism_on_the_rise = {
 			check_has_focus_tree_to_switch_to_n_socialism = yes
 			NOT = { has_government = n_socialism }
 		}
-	
+		
 		fire_only_once = no
-	
+		
 		cost = 50
 
 		days_remove = 30
@@ -123,9 +123,9 @@ socialism_on_the_rise = {
 			check_has_focus_tree_to_switch_to_n_socialism = yes
 			NOT = { has_government = n_socialism }
 		}
-	
+		
 		fire_only_once = yes
-	
+		
 		cost = 50
 		
 		complete_effect = {
@@ -159,9 +159,9 @@ socialism_on_the_rise = {
 				NOT = { has_unit_leader_flag = hidden_sympathies_marshal }
 			}
 		}
-	
+		
 		fire_only_once = yes
-	
+		
 		cost = 50
 		
 		complete_effect = {
@@ -190,9 +190,9 @@ socialism_on_the_rise = {
 			check_has_focus_tree_to_switch_to_n_socialism = yes
 			NOT = { has_government = n_socialism }
 		}
-	
+		
 		fire_only_once = no
-	
+		
 		cost = 50
 		
 		complete_effect = {
@@ -224,9 +224,9 @@ socialism_on_the_rise = {
 			check_has_focus_tree_to_switch_to_n_socialism = yes
 			NOT = { has_government = n_socialism }
 		}
-	
+		
 		fire_only_once = yes
-	
+		
 		cost = 50
 		
 		complete_effect = {
@@ -254,9 +254,9 @@ socialism_on_the_rise = {
 			check_has_focus_tree_to_switch_to_n_socialism = yes
 			NOT = { has_government = n_socialism }
 		}
-	
+		
 		fire_only_once = yes
-	
+		
 		cost = 50
 		
 		complete_effect = {
@@ -340,7 +340,7 @@ socialism_on_the_rise = {
 		}
 
 		fire_only_once = yes
-	
+		
 		cost = 25
 
 		days_remove = 365
@@ -535,6 +535,547 @@ liangguang_incident = {
 		}
 		remove_effect = {
 			country_event = { id = gxc.1 }
+		}
+	}
+}
+
+
+
+
+
+###PUPPETS FORMING
+japan_form_CHI_puppets = {
+
+	###CCP
+	JAP_form_CCP_mission = { #great way
+		icon = generic_independence
+		available = { #objective
+			has_global_flag = ccp_exists
+		}
+		days_mission_timeout = 180
+		fire_only_once = yes
+		is_good = no 
+		activation = {
+			independent_war_china_or_china_died = yes
+			613 = {
+				is_controlled_by_jap_or_its_puppet = yes
+			}
+		}
+		complete_effect = {
+			add_political_power = 50
+		}
+		timeout_effect = {
+			add_stability = -0.1 #naughty
+		}
+	}
+	JAP_form_CCP = {
+		icon = generic_independence
+		available = {
+			independent_war_china_or_china_died = yes
+			613 = {
+				is_controlled_by_jap_or_its_puppet = yes
+			}
+		}
+		visible = {
+			independent_war_china_or_china_died = yes
+		}
+		fire_only_once = yes
+		cost = 50
+		days_remove = 25
+		remove_effect = {
+			add_stability = 0.03
+			CCP_CREATION = yes
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	
+	###RFM
+	JAP_form_RFM_mission = { 
+		icon = generic_independence
+		available = { #objective
+			has_global_flag = rfm_exists
+		}
+		days_mission_timeout = 180
+		fire_only_once = yes
+		is_good = no 
+		activation = {
+			independent_war_china_or_china_died = yes
+			598 = {
+				is_controlled_by_jap_or_its_puppet = yes
+			}
+		}
+		complete_effect = {
+			add_political_power = 50
+		}
+		timeout_effect = {
+			add_stability = -0.1 #naughty
+		}
+	}
+	JAP_form_RFM = {
+		icon = generic_independence
+		available = {
+			independent_war_china_or_china_died = yes
+			598 = {
+				is_controlled_by_jap_or_its_puppet = yes
+			}
+		}
+		visible = {
+			independent_war_china_or_china_died = yes
+		}
+		fire_only_once = yes
+		cost = 50
+		days_remove = 25
+		remove_effect = {
+			add_stability = 0.03
+			RFM_CREATION = yes
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	
+	###JNC
+	JAP_form_JNC_mission = { 
+		icon = generic_independence
+		available = { #objective
+			has_global_flag = jnc_exists
+		}
+		days_mission_timeout = 180
+		fire_only_once = yes
+		is_good = no 
+		activation = {
+			independent_war_china_or_china_died = yes
+			598 = {
+				is_controlled_by_jap_or_its_puppet = yes
+			}
+		}
+		complete_effect = {
+			add_political_power = 50
+		}
+		timeout_effect = {
+			add_stability = -0.1 #naughty
+		}
+	}
+	JAP_form_JNC = {
+		icon = generic_independence
+		available = {
+			independent_war_china_or_china_died = yes
+			608 = {
+				is_controlled_by_jap_or_its_puppet = yes
+			}
+		}
+		visible = {
+			independent_war_china_or_china_died = yes
+		}
+		fire_only_once = yes
+		cost = 50
+		days_remove = 25
+		complete_effect = {
+			JNC_DETERMINE = yes
+		}
+		remove_effect = {
+			add_stability = 0.03
+			hidden_effect = {
+				####CREATE
+				if = {
+					limit = {
+						any_country = {
+							has_country_flag = im_jnc_now
+							is_subject_of = JAP
+						}
+					}
+					random_other_country = {
+						limit = {
+							has_country_flag = im_jnc_now
+							is_subject_of = JAP
+						}
+						JNC_CREATION = yes 
+					}
+					else = {
+						set_global_flag = jnc_exists
+					}
+				}
+			}
+			effect_tooltip = {
+				JNC = {
+					add_state_core = 614
+					add_state_core = 615
+					add_state_core = 767
+					add_state_core = 608
+					add_state_core = 609
+					add_state_core = 597
+					add_state_core = 766
+					add_state_core = 607
+				}
+			}
+			custom_effect_tooltip = EHB_reform
+			custom_effect_tooltip = JNC_prov_focus
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	
+	###RRC
+	JAP_form_RRC_mission = { 
+		icon = generic_independence
+		available = { #objective
+			has_global_flag = rrc_exists
+		}
+		days_mission_timeout = 280
+		fire_only_once = yes
+		is_good = no 
+		activation = {
+			independent_war_china_or_china_died = yes
+			598 = {
+				is_controlled_by_jap_or_its_puppet = yes
+			}
+			606 = {
+				is_controlled_by_jap_or_its_puppet = yes
+			}
+			596 = {
+				is_controlled_by_jap_or_its_puppet = yes
+			}
+			597 = {
+				is_controlled_by_jap_or_its_puppet = yes
+			}
+			766 = {
+				is_controlled_by_jap_or_its_puppet = yes
+			}
+			613 = {
+				is_controlled_by_jap_or_its_puppet = yes
+			}
+		}
+		complete_effect = {
+			add_political_power = 50
+		}
+		timeout_effect = {
+			add_stability = -0.1 #naughty
+		}
+	}
+	JAP_form_RRC = {
+		icon = generic_independence
+		available = {
+			independent_war_china_or_china_died = yes
+			598 = {
+				is_controlled_by_jap_or_its_puppet = yes
+			}
+			606 = {
+				is_controlled_by_jap_or_its_puppet = yes
+			}
+			596 = {
+				is_controlled_by_jap_or_its_puppet = yes
+			}
+			597 = {
+				is_controlled_by_jap_or_its_puppet = yes
+			}
+			766 = {
+				is_controlled_by_jap_or_its_puppet = yes
+			}
+			613 = {
+				is_controlled_by_jap_or_its_puppet = yes
+			}
+		}
+		visible = {
+			independent_war_china_or_china_died = yes
+		}
+		fire_only_once = yes
+		cost = 100
+		days_remove = 60
+		complete_effect = {
+			RRC_PREP = yes
+		}
+		remove_effect = {
+			hidden_effect = {
+				news_event = {
+					id = efm_news.1013
+				}
+			}
+			add_political_power = 100
+			add_stability = 0.05
+			hidden_effect = {
+				random_other_country = {
+					###DETERMINE
+					limit = {
+						OR = {
+							TAG = CCP
+							TAG = RFM
+							TAG = EHB
+							TAG = HPC
+						}
+						OR = {
+							NOT = {
+								any_other_country = {
+									OR = {
+										TAG = CCP
+										TAG = RFM
+										TAG = EHB
+										TAG = HPC
+									}
+								}
+							}
+							AND = {
+								has_country_flag = im_jnc_now
+								is_ai = no
+								RFM = {
+									is_ai = no
+								}
+							}
+							AND = {
+								has_country_flag = im_jnc_now
+								is_ai = yes
+								RFM = {
+									is_ai = yes
+								}
+							}
+							AND = {
+								is_ai = no
+								NOT = {
+									any_other_country = {
+										OR = {
+											#TAG = CCP
+											TAG = RFM
+											TAG = EHB
+											TAG = HPC
+										}
+										is_subject_of = JAP
+										is_ai = no
+									}
+								}
+							}
+						}
+					}
+					RRC_CREATION = yes
+				}
+				####TELL ECA
+				ECA = { country_event = { hours = 3 id = rcmjapan.736 } }
+			}
+			custom_effect_tooltip = RRC_annex
+		}
+		ai_will_do = {
+			factor = 2000
+		}
+	}
+}
+
+japan_form_IN_MON_puppets = {
+	#INNER MONG
+	###RFM
+	JAP_form_MEN = {
+		icon = generic_independence
+		available = {
+			is_puppet = no
+			ECA = {
+				controls_state = 757
+			}
+			country_exists = PLM
+		}
+		visible = {
+			is_puppet = no
+			ECA = {
+				controls_state = 757
+			}
+			country_exists = PLM
+		}
+		fire_only_once = yes
+		cost = 20
+		days_remove = 50
+		remove_effect = {
+			PLM = {
+				country_event = {
+					days = 2 id = rcmjapan.83
+				}
+			}
+			custom_effect_tooltip = blank_line
+			custom_effect_tooltip = if_they_accept_red
+			custom_effect_tooltip = merge_eca_plm_tt
+			effect_tooltip = {
+				MEN = {
+					add_state_core = 612
+					add_state_core = 621
+					add_state_core = 763
+					add_state_core = 330
+				}
+			}
+			custom_effect_tooltip = if_they_refuse_red
+			effect_tooltip = {
+				ECA = {
+					add_state_core = 612
+					add_state_core = 621
+					add_state_core = 763
+					add_state_core = 330
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 2000
+		}
+	}
+	
+	JAP_form_MUA_mission = { 
+		icon = generic_independence
+		available = { #objective
+			has_global_flag = mua_exists
+		}
+		days_mission_timeout = 180
+		fire_only_once = yes
+		is_good = no 
+		activation = {
+			hidden_trigger = {
+				OR = {
+					is_ai = no
+					date > 1937.8.25
+				}
+			}
+			independent_war_china_or_china_died = yes
+			ECA = {
+				controls_state = 757
+				controls_state = 612
+			}
+		}
+		complete_effect = {
+			add_political_power = 50
+		}
+		timeout_effect = {
+			add_stability = -0.1 #naughty
+		}
+	}
+	JAP_form_MUA = {
+		icon = generic_independence
+		available = {
+			hidden_trigger = {
+				OR = {
+					is_ai = no
+					date > 1937.9.25
+				}
+			}
+			independent_war_china_or_china_died = yes
+			ECA = {
+				controls_state = 757
+				controls_state = 612
+			}
+		}
+		visible = {
+			hidden_trigger = {
+				OR = {
+					is_ai = no
+					date > 1937.9.25
+				}
+			}
+			independent_war_china_or_china_died = yes
+		}
+		fire_only_once = yes
+		cost = 20
+		complete_effect = {
+			effect_tooltip = {
+				MEN = {
+					country_event = {
+						days = 2 id = rcmjapan.88
+					}
+				}				
+			}
+			custom_effect_tooltip = blank_line
+			custom_effect_tooltip = MUA_reform
+			effect_tooltip = {
+				MUA = {
+					add_political_power = 100
+				}
+			}
+			hidden_effect = {
+				ECA = {
+					country_event = {
+						days = 2 id = rcmjapan.88
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 2000
+		}
+	}
+	
+	###MEJ
+	JAP_form_MEJ_mission = { 
+		icon = generic_independence
+		available = { #objective
+			has_global_flag = mej_exists
+		}
+		days_mission_timeout = 180
+		fire_only_once = yes
+		is_good = no 
+		activation = {
+			independent_war_china_or_china_died = yes
+			ECA = {
+				controls_state = 757
+				controls_state = 612
+			}
+			611 = {
+				is_controlled_by_jap_or_its_puppet = yes
+			}
+		}
+		complete_effect = {
+			add_political_power = 50
+		}
+		timeout_effect = {
+			add_stability = -0.1 #naughty
+		}
+	}
+	JAP_form_MEJ = {
+		icon = generic_independence
+		available = {
+			independent_war_china_or_china_died = yes
+			ECA = {
+				controls_state = 757
+				controls_state = 612
+			}
+			611 = {
+				is_controlled_by_jap_or_its_puppet = yes
+			}
+		}
+		visible = {
+			independent_war_china_or_china_died = yes
+		}
+		fire_only_once = yes
+		cost = 50
+		days_remove = 25
+		remove_effect = {
+			hidden_effect = {
+				ECA = {
+					country_event = {
+						id = rcmjapan.90
+					}
+					add_state_core = 612
+					add_state_core = 611
+					add_state_core = 621
+					add_state_core = 763
+					add_state_core = 762
+					add_state_core = 330
+				}
+			}
+			add_stability = 0.03
+			effect_tooltip = {
+				MUA = {
+					country_event = {
+						id = rcmjapan.90
+					}
+				}
+			}
+			custom_effect_tooltip = MEN_reform
+			effect_tooltip = {
+				MEJ = {
+					add_state_core = 612
+					add_state_core = 611
+					add_state_core = 621
+					add_state_core = 763
+					add_state_core = 762
+					add_state_core = 330
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 2000
 		}
 	}
 }

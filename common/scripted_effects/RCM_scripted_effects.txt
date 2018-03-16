@@ -14,7 +14,67 @@
 #	effect = {
 #		example_effect = yes
 #	}
-
+RRC_PREP = {#used in complete_effect
+	hidden_effect = {
+		set_country_flag = im_making_or_have_made_rrc
+		if = {
+			limit = {
+				any_other_country = {
+					is_legit_china = yes
+					NOT = {
+						is_subject_of = JAP
+					}
+				}
+			}
+			news_event = {
+				days = 25 id = efm_news.1012
+			}
+		}
+	}
+}
+JNC_DETERMINE = { #used in complete_effect
+	hidden_effect = {
+		####DETERMINE
+		if = {
+			limit = {
+				HPC = {
+					is_puppet_of = JAP
+				}
+			}
+			if = {
+				limit = {
+					EHB = {
+						is_ai = no
+					}
+					HPC = {
+						is_ai = yes
+					}
+				}
+				annex_country = {
+					target = HPC
+					transfer_troops = yes
+				}
+				EHB = {
+					set_country_flag = im_jnc_now
+				}
+				else = {
+					annex_country = {
+						target = EHB
+						transfer_troops = yes
+					}
+					HPC = {
+						set_country_flag = im_jnc_now
+					}
+				}
+			}
+			else = {
+				EHB = {
+					set_country_flag = im_jnc_now
+				}
+			}
+		}
+	}
+}
 max_infra_effect = {
 	add_building_construction = {
 		type = infrastructure
@@ -314,33 +374,11 @@ create_mengjiang = {
 	hidden_effect = {
 		every_state = {
 			limit = {
-				OR = {
-					ECA = {
-						has_full_control_of_state = PREV
-					}
-					JAP = {
-						has_full_control_of_state = PREV
-					}
-					AND = {
-						is_controlled_by_jap_or_its_puppet = yes
-						NOT = {
-							any_neighbor_state = {
-								OR = {
-									CHI = {
-										has_full_control_of_state = PREV
-									}
-									SHX = {
-										has_full_control_of_state = PREV
-									}
-									XSM = {
-										has_full_control_of_state = PREV
-									}
-									PRC = {
-										has_full_control_of_state = PREV
-									}
-								}
-							}
-						}
+				controller = {
+					has_full_control_of_state = PREV
+					OR = {
+						tag = JAP
+						is_subject_of = JAP
 					}
 				}
 				OR = {

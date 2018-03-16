@@ -1,3 +1,10 @@
 ﻿l_english:
- chinese_war_focus_desc:0 "The Chinese still refuse to acknowledge our liberation of Manchuria, and tensions along the border near Beiping have resulted in several skirmishes. If we manufacture an incident, we can escalate the conflict into full-scale war. This will give us the excuse we need to deal with the Chinese once and for all!"
+ JAP_liberate_manchuria:0 "Reform Colonial Administration"
+ JAP_liberate_manchuria_desc:0 "Much of the militaristic sentiment still exists within the administrations of our colonies, a reform is needed to reclaim our influence there."
+ JAP_intervene_in_china:0 "War with China"
+ JAP_intervene_in_china_desc:0 "The Chinese still refuse to acknowledge our liberation of Manchuria, and tensions along the border near Beiping have resulted in several skirmishes. If we manufacture an incident, we can escalate the conflict into full-scale war. This will give us the excuse we need to deal with the Chinese once and for all!"
  MAN_chinese_leadership:0 "Manchuria Leadership"
+ JAP_purge_the_kodoha_faction:0 "Purge the Military"
+ JAP_purge_the_kodoha_faction_desc:0 "Japan cannot afford another coup, and a purge within the military will make sure that's never going to happen again."
+ JAP_strengthen_civilian_government:0 "Strengthen the Government"
+ JAP_strengthen_civilian_government_desc:0 "The country needs strengthening and stability in these times we live in. To do this, we must give powers to a more democratic leadership in Japan."

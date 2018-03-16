@@ -109,9 +109,22 @@ continent = {
 	}
 	political = {
 		#MODDEDv
+		democratic = {
+			male = { 
+				"gfx/leaders/Asia/Portrait_Asia_Generic_democrac_2.dds"
+				"gfx/leaders/Asia/Portrait_Asia_Generic_democrac_5.dds"
+			}
+		}
 		n_socialism = {
-				male = { 
-					"gfx/leaders/Asia/Portrait_Asia_Generic_2.dds" 
+			male = { 
+				"gfx/leaders/Asia/Portrait_Asia_Generic_2.dds" 
+				"gfx/leaders/Asia/Portrait_Asia_Generic_democrac_2.dds" 
+				"gfx/leaders/Asia/Portrait_Asia_Generic_3.dds"
+			}
+		}
+		fascism = {
+			male = {
+				"gfx/leaders/Asia/portrait_asia_generic_5.dds"
 			}
 		}
 		#MODDED^

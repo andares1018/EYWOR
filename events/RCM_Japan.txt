@@ -804,7 +804,7 @@ country_event = {
 	trigger = {
 		OR = {
 			JAP = {
-				has_completed_focus = chinese_war_focus
+				has_completed_focus = JAP_intervene_in_china
 			}
 			date > 1939.1.1
 		}
@@ -1027,7 +1027,7 @@ country_event = {
 	trigger = {
 		OR = {
 			JAP = {
-				has_completed_focus = chinese_war_focus
+				has_completed_focus = JAP_intervene_in_china
 			}
 			date > 1939.1.1
 		}
@@ -6339,5 +6339,22 @@ country_event = {
 			set_country_flag = i_cracked_down_on_you
 			
 		}
+	}
+}
+
+#new colony
+country_event = {
+	id = rcmjapan.106
+	title = rcmjapan.106.t
+	desc = rcmjapan.106.d
+	picture = GFX_report_event_japan_army_mountainside
+	is_triggered_only = yes
+	option = {
+		name = rcmjapan.106.a
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = no
+		}
+		add_ideas = reformed_colonial_administration
 	}
 }

@@ -70,6 +70,7 @@
  purge_political_advisor:0 "The following advisor(s) will be purged:\n"
  force_political_advisor:0 "The following advisors will be forced to retire:\n"
  justifying_on_china:0 "A §YMajor§! is justifying wargoal on us."
+ emperor_influence:0 "§MHaving §!§Yadvisors§!§Mor§!§YChief of Army§!§M trusted by the Emperor, such as §!§GGenro§!§M and §!§GRoyal members§!§M in the government may influence his decision.§!\n"
  #MESC
  failed_to_do_this_focus_in_time_can_lead_to_a_complete_defection_of_inner_mongolia_tt:0 "§RFailed to do this focus in time can lead to a complete defection of Inner Mongolia.§!\n"
  MEJ_reform:0 "@MEJ §Y[MEJ.GetNameDef]§! will be called @MEJ §YMongol Autonomous Federation§!.\n"
@@ -100,4 +101,5 @@
  chiang_in_xian:0 "§YChiang is in Xi'an.§!\n"
  declare_war_on_all_warlords_tt:0 "Gains §YAnnex§! wargoals against §Yall independent warlord states§!."
  promise_remove_bs_cc:0 "\n\nOur government will promise the Japanese government to dissolve §Mthe Blueshirts§! and §Mthe Central Club§!. §RFailed or too late to do so may have serious consequences.§!"
+ become_puppet_of_MAN_tt:0 "Becomes a puppet of @MAN§Y[MAN.GetName]§!.\n"
  
