@@ -113,6 +113,7 @@ continent = {
 			male = { 
 				"gfx/leaders/Asia/Portrait_Asia_Generic_democrac_2.dds"
 				"gfx/leaders/Asia/Portrait_Asia_Generic_democrac_5.dds"
+				"gfx/leaders/Asia/portrait_asia_generic_6.dds"
 			}
 		}
 		n_socialism = {
@@ -120,11 +121,17 @@ continent = {
 				"gfx/leaders/Asia/Portrait_Asia_Generic_2.dds" 
 				"gfx/leaders/Asia/Portrait_Asia_Generic_democrac_2.dds" 
 				"gfx/leaders/Asia/Portrait_Asia_Generic_3.dds"
+				"gfx/leaders/Asia/portrait_asia_generic_6.dds"
 			}
 		}
 		fascism = {
 			male = {
 				"gfx/leaders/Asia/portrait_asia_generic_5.dds"
+			}
+		}
+		neutrality = {
+			male = {
+				"gfx/leaders/Asia/portrait_asia_generic_6.dds"
 			}
 		}
 		#MODDED^
