@@ -7,7 +7,7 @@ set_stability = 0.65 #baseline, THE EMPEROR PROTECTS
 set_war_support = 0.8
 
 set_research_slots = 4
-
+set_global_flag = ccp_exists
 add_ideas = {
 	state_shintoism
 	limited_exports
@@ -109,13 +109,7 @@ add_opinion_modifier = { target = CHI modifier = hostile_status }
 	unlock_national_focus = JAP_intervene_in_china
 	complete_national_focus = konoe_cabinet
 	complete_national_focus = nat_mob_law
-	complete_national_focus = infra_effort_focus
 	complete_national_focus = aggressive_china_politics
-	complete_national_focus = test_the_ussr_focus
-	complete_national_focus = naval_expansion_focus
-	complete_national_focus = advanced_torpedoes_focus
-	complete_national_focus = extra_tech_focus
-	complete_national_focus = industrial_effort_focus2
 	complete_national_focus = spiritual_mobilization_focus
 	complete_national_focus = JAP_guide_the_zaibatsus
 	complete_national_focus = JAP_liaison_conference
@@ -129,6 +123,7 @@ add_opinion_modifier = { target = CHI modifier = hostile_status }
 	complete_national_focus = JAP_fighter_modernization
 	complete_national_focus = JAP_carrier_warfare_experiments
 	complete_national_focus = JAP_supremacy_of_technology
+
 	remove_ideas = officer_purged_jap
 	puppet = MAN
 	puppet = RFM
@@ -218,14 +213,7 @@ set_autonomy = {
 	target = ECA
 	autonomous_state = autonomy_integrated_puppet 
 }
-set_autonomy = {
-	target = SCG
-	autonomous_state = autonomy_integrated_puppet 
-}
-set_autonomy = {
-	target = NSG
-	autonomous_state = autonomy_integrated_puppet 
-}
+
 
 set_politics = {
 	parties = {
@@ -285,6 +273,14 @@ set_politics = {
 		traits = {
 			popular_figurehead
 		}
+	}
+	set_autonomy = {
+		target = SCG
+		autonomous_state = autonomy_integrated_puppet 
+	}
+	set_autonomy = {
+		target = NSG
+		autonomous_state = autonomy_integrated_puppet 
 	}
 }
 

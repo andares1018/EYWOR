@@ -82,7 +82,7 @@ ideas = {
 			}
 			
 			removal_cost = -1
-			picture = generic_democratic_drift_bonus
+			picture = idea_jap_zaibatsu
 			
 			modifier = {
 				trade_opinion_factor = 0.3
@@ -119,12 +119,7 @@ ideas = {
 			
 			allowed_civil_war = {
 				always = yes
-				
-				
-				
-				
-				
-				
+
 			}
 			removal_cost = -1
 			
@@ -140,15 +135,9 @@ ideas = {
 			}
 			allowed_civil_war = {
 				always = no
-				
-				
-				
-				
-				
-				
-				
+
 			}
-			
+			picture = state_shintoism
 			removal_cost = -1
 			
 			modifier = {
@@ -160,15 +149,11 @@ ideas = {
 			picture = generic_infantry_bonus
 			allowed = {
 				always = no
-				
-				
-				
-				
+
 			}
 			allowed_civil_war = {
 				always = no
-				
-				
+
 			}
 			
 			removal_cost = -1
@@ -599,8 +584,7 @@ ideas = {
 			}
 		}
 	}	
-	
-	high_command = {
+		high_command = {
 		kenkichi_ueda = {
 			picture = generic_army_asia_1
 			allowed = {
@@ -653,8 +637,7 @@ ideas = {
 			}
 		}
 	}
-	
-	industrial_concern = {
+		industrial_concern = {
 		
 		south_manchuria_railway = {
 			picture = generic_industrial_concern_1

@@ -501,6 +501,14 @@ focus_tree = {
 				uses = 1
 				category = cat_mobile_warfare
 			}
+			if = {
+				limit = {
+					NOT = {
+						has_idea = generic_sov_advisor
+					}
+				}
+				add_ideas = generic_sov_advisor
+			}
 		}
 		available = {
 			NOT = {

@@ -146,8 +146,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			army_experience = 30
 		}
@@ -1545,8 +1544,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			715 = {
 				add_resource = {
@@ -1601,8 +1599,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			717 = {
 				add_resource = {
@@ -1949,6 +1946,9 @@ focus_tree = {
 					generator = owned_states
 				}
 			}
+			add_political_power = 300
+			add_war_support = 0.2
+			add_stability = 0.1
 			hidden_effect = {
 				if = {
 					limit = {
@@ -2810,8 +2810,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			336 = {
 				add_resource = {
@@ -4450,8 +4449,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			add_stability = 0.1
 			MAN = {
@@ -4491,8 +4489,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			add_tech_bonus = {
 				name = JAP_cruiser_modernization
@@ -4529,8 +4526,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			add_tech_bonus = {
 				name = JAP_fighter_modernization
@@ -4570,8 +4566,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			custom_effect_tooltip = JAP_approach_the_young_officers_tt
 			hidden_effect = {
@@ -4627,8 +4622,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			hidden_effect = {
 				if = {
@@ -4887,8 +4881,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			country_event = wtt_japan.31
 		}
@@ -4914,8 +4907,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			add_stability = 0.1
 		}
@@ -4941,8 +4933,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			add_ideas = JAP_reeducation_campaign
 		}
@@ -4986,8 +4977,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		will_lead_to_war_with = MAN
 		completion_reward = {
 			create_wargoal = {
@@ -5026,8 +5016,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			if = {
 				limit = {
@@ -5089,8 +5078,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			add_ideas = JAP_red_brigades
 		}
@@ -5116,8 +5104,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			add_ideas = JAP_communist_volunteers
 		}
@@ -5165,8 +5152,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			if = {
 				limit = {
@@ -5285,8 +5271,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			add_ideas = JAP_people_owned_mines
 		}
@@ -5323,8 +5308,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			535 = {
 				add_building_construction = {
@@ -5370,8 +5354,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			282 = {
 				add_resource = {
@@ -5401,8 +5384,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			add_ideas = JAP_liaison_conference
 			every_army_leader = {
@@ -5430,8 +5412,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			set_rule = {
 				can_create_factions = yes
@@ -5460,7 +5441,10 @@ focus_tree = {
 			CHI = {
 				surrender_progress > 0.3
 			}
-			has_war_with = USA
+			OR = {
+				has_war_with = USA
+				has_global_flag = jap_usa_pact_flag
+			}
 		}
 		bypass = {
 			CHI = {
@@ -5470,8 +5454,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			add_named_threat = {
 				threat = 15
@@ -5509,8 +5492,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			SIA = {
 				country_event = generic.5
@@ -5586,8 +5568,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			random_country = {
 				limit = {
@@ -5684,8 +5665,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			add_tech_bonus = {
 				name = JAP_prepare_for_war_with_the_soviet_union
@@ -5784,8 +5764,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			send_equipment = {
 				target = MAN
@@ -5865,8 +5844,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			air_experience = 25
 			MAN = {
@@ -5932,8 +5910,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			CHI = {
 				country_event = wtt_japan.11
@@ -6042,8 +6019,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			if = {
 				limit = {
@@ -6107,8 +6083,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			create_wargoal = {
 				target = SOV
@@ -6247,8 +6222,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			add_research_slot = 1
 		}
@@ -6274,8 +6248,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			unlock_decision_category_tooltip = JAP_pacific_guardian
 		}
@@ -6309,8 +6282,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			SOV = {
 				add_opinion_modifier = {
@@ -6364,8 +6336,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			add_ideas = JAP_anti_communist_volunteers
 		}
@@ -6396,8 +6367,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			if = {
 				limit = {
@@ -6490,8 +6460,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			every_country = {
 				limit = {
@@ -6512,10 +6481,8 @@ focus_tree = {
 					id = rcmjapan.106
 				}
 				effect_tooltip = {
-					set_politics = {
-						ruling_party = neutrality
-						elections_allowed = no
-					}
+					custom_effect_tooltip = "§YJapanese Colonial Administration§!"
+					custom_effect_tooltip = becomes_ruling_party_no_elec
 					add_ideas = reformed_colonial_administration
 				}
 			}
@@ -6549,8 +6516,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			add_to_tech_sharing_group = JAP_ultimate_deterrence
 			every_country = {
@@ -6587,8 +6553,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			USA = {
 				country_event = {
@@ -6622,8 +6587,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			add_tech_bonus = {
 				name = JAP_small_arms_modernization
@@ -6660,8 +6624,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			add_ideas = JAP_supremacy_of_technology
 		}
@@ -6686,8 +6649,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			add_tech_bonus = {
 				name = JAP_modern_artillery
@@ -6717,8 +6679,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			add_tech_bonus = {
 				name = JAP_armored_divisions
@@ -6749,8 +6710,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			set_technology = {
 				bicycle_infantry = 1
@@ -6781,8 +6741,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			custom_effect_tooltip = available_chief_of_army
 			show_ideas_tooltip = hajime_sugiyama
@@ -6815,8 +6774,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			add_ideas = JAP_superior_will
 		}
@@ -6841,8 +6799,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = aichi
@@ -6872,8 +6829,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = mitsubishi
@@ -6907,8 +6863,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			custom_effect_tooltip = JAP_the_zero_tt
 			hidden_effect = {
@@ -6939,8 +6894,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			add_tech_bonus = {
 				name = JAP_bomber_modernization
@@ -6974,8 +6928,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			add_tech_bonus = {
 				name = JAP_strategic_bomber_effort
@@ -7008,8 +6961,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			remove_ideas = JAP_duplicate_research_efforts
 		}
@@ -7035,8 +6987,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			add_tech_bonus = {
 				name = JAP_jet_prototypes
@@ -7073,8 +7024,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			add_tech_bonus = {
 				name = JAP_carrier_warfare_experiments
@@ -7109,8 +7059,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			add_ideas = JAP_expand_the_snlf
 			add_tech_bonus = {
@@ -7145,8 +7094,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			add_ideas = JAP_first_air_fleet
 		}
@@ -7172,8 +7120,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			add_tech_bonus = {
 				name = JAP_modern_escorts
@@ -7206,8 +7153,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			add_tech_bonus = {
 				name = JAP_supremacy_of_the_battlefleet
@@ -7239,8 +7185,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			add_tech_bonus = {
 				name = JAP_the_ultimate_battleship
@@ -7270,8 +7215,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			add_ideas = the_long_lance
 		}
@@ -7296,8 +7240,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			set_technology = {
 				torpedo_cruiser = 1

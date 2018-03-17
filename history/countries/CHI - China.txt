@@ -45,6 +45,7 @@ set_convoys = 40
 	set_country_flag = china101_fired
 	set_country_flag = mbf_ed
 	set_country_flag = nineteen_thirtynine_start
+	set_global_flag = nineteen_thirtynine_start
 	set_global_flag = flying_tiger
 	remove_ideas = CHI_nanking_decade_idea
 	remove_ideas = german_advisors

@@ -191,9 +191,9 @@
  rcmjapan.71.t:0 "America Accepted Our Request"
  rcmjapan.71.d:0 "The Government of the United States responded positively to our request yesterday. A summit between our Prime Minister and their leader would be held soon."
  rcmjapan.71.a:0 "And alright so!"
- rcmjapan.71.t:0 "America Refused Our Request"
- rcmjapan.71.d:0 "The Government of the United States responded negatively to our request yesterday. Maybe war is the only way out."
- rcmjapan.71.a:0 "They will regret their decision."
+ rcmjapan.72.t:0 "America Refused Our Request"
+ rcmjapan.72.d:0 "The Government of the United States responded negatively to our request yesterday. Maybe war is the only way out."
+ rcmjapan.72.a:0 "They will regret their decision."
  rcmjapan.73.t:0 "Nuetrality Pact with Japan"
  rcmjapan.73.d:0 "The Japanese Foreign Ministry have proposed a non-aggression pact between our two nations. This treaty will greatly increase our mutual trade. While the Japanese may not be trustworthy, this pact will allow us to deal with Germany without fear of outside interference."
  rcmjapan.73.a:0 "Sign the treaty."
@@ -361,6 +361,9 @@
  rcmjapan.105.t:0 "Crush the Communist Militias!"
  rcmjapan.105.d:0 "The Chinese governments has fallen, now it's the era of Japan. However, there are still some remaining communist guerillas in the Northeast China region. We'll have to eliminate them before we proceed to do other important things."
  rcmjapan.105.a:0 "Sure!"
+ rcmjapan.106.t:0 "A New Colonial Administration in Place"
+ rcmjapan.106.d:0 "After a huge political shift within Japan, the ideological position [JAP.GetName] has been switched to a very different route. And therefore, expectedly, our administration has also been affected. This will mark a new chapter in history for both us and Japan."
+ rcmjapan.106.a:0 "Uncertain times."
                     #################################
  ####===============######PUPPET STATES REBUILD######===============####
                     #################################

@@ -5,7 +5,7 @@ focus_tree = {
 		factor = 0
 		
 		modifier = {
-			add = 30
+			add = 50
 			is_originally_warlord = yes
 			has_dlc = "Waking the Tiger"
 		}

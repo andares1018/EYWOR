@@ -31,6 +31,15 @@
  a_few_divisions_recuited_tt:0 "§YA few divisions from the central government will be recruited.§!\n"
  stop_subject_war_end_tt:0 "§MYou will stop being a subject of [CHI.GetNameDef] when the war ends.§!\n"
  ###JAP
+ jap_usa_pact_flag:0 "Signed a pact with the USA."
+ emperor_may_refuse:0 "§RThe Emperor might refuse the restoration in the progress, which will cost:§!\n"
+ emperor_refused:0 "The Emperor refused the restoration."
+ focus_selected:0 "\n§MWill do the following when selected:§!\n"
+ assassinate_possibility:0 "§RPrime Minister have a high chance of being assassinated during the reform.§!"
+ pm_killed:0 "Prime Minister is assassinated."
+ if_they_accept:0 "If they accept:\n"
+ kodoha_ruling_idea:0 "\n§YKōdōha§! becomes the ruling party.\nPublic elections will not be held.\n"
+ becomes_ruling_party_no_elec:0 " becomes the ruling party.\nPublic elections will not be held.\n"
  no_sever_ties_tt:0 "Japan has not sever Sino-German ties"
  N_puppet_trigger:0 "State §YShanghai§! is controlled by Japan or its puppet"
  nanking_puppet_trigger:0 "State §YNanking§! is controlled by Japan or its puppet"
@@ -102,4 +111,12 @@
  declare_war_on_all_warlords_tt:0 "Gains §YAnnex§! wargoals against §Yall independent warlord states§!."
  promise_remove_bs_cc:0 "\n\nOur government will promise the Japanese government to dissolve §Mthe Blueshirts§! and §Mthe Central Club§!. §RFailed or too late to do so may have serious consequences.§!"
  become_puppet_of_MAN_tt:0 "Becomes a puppet of @MAN§Y[MAN.GetName]§!.\n"
+ ####XXX Exists
+ ccp_exists:0 "@CCP§YGreat Way Government§! has been established."
+ jnc_exists:0 "@JNC§YProvisional Government of the ROC§! has been established."
+ rfm_exists:0 "@RFM§YReformed Government of the ROC§! has been established."
+ rrc_exists:0 "@RRC§YReorganized Republic of China§! has been established."
+ men_exists:0 "@MEN§YMongol Military Government§! has been established."
+ mej_exists:0 "@MEJ§YMengjiang§! has been established."
+ mua_exists:0 "@MUA§YMOngol United Autonomous Government§! has been established."
  

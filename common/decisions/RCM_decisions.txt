@@ -578,6 +578,9 @@ japan_form_CHI_puppets = {
 		}
 		visible = {
 			independent_war_china_or_china_died = yes
+			NOT = {
+				has_global_flag = ccp_exists
+			}
 		}
 		fire_only_once = yes
 		cost = 50
@@ -623,6 +626,9 @@ japan_form_CHI_puppets = {
 		}
 		visible = {
 			independent_war_china_or_china_died = yes
+			NOT = {
+				has_global_flag = rfm_exists
+			}
 		}
 		fire_only_once = yes
 		cost = 50
@@ -668,6 +674,9 @@ japan_form_CHI_puppets = {
 		}
 		visible = {
 			independent_war_china_or_china_died = yes
+			NOT = {
+				has_global_flag = jnc_exists
+			}
 		}
 		fire_only_once = yes
 		cost = 50
@@ -780,6 +789,9 @@ japan_form_CHI_puppets = {
 		}
 		visible = {
 			independent_war_china_or_china_died = yes
+			NOT = {
+				has_global_flag = rrc_exists
+			}
 		}
 		fire_only_once = yes
 		cost = 100
@@ -965,6 +977,9 @@ japan_form_IN_MON_puppets = {
 				}
 			}
 			independent_war_china_or_china_died = yes
+			NOT = {
+				has_global_flag = mua_exists
+			}
 		}
 		fire_only_once = yes
 		cost = 20
@@ -1036,6 +1051,9 @@ japan_form_IN_MON_puppets = {
 		}
 		visible = {
 			independent_war_china_or_china_died = yes
+			NOT = {
+				has_global_flag = mej_exists
+			}
 		}
 		fire_only_once = yes
 		cost = 50

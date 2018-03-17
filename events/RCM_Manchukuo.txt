@@ -1,243 +1,240 @@
-﻿add_namespace = Manchukuo
+﻿add_namespace = EFM_Manchukuo
 
 
 # Labour law
 country_event = {
-	id = Manchukuo.1
-	title = Manchukuo.1.t
+	id = EFM_Manchukuo.1
+	title = EFM_Manchukuo.1.t
 	picture = GFX_report_event_generic_read_write
-	desc = Manchukuo.1.d
+	desc = EFM_Manchukuo.1.d
 	
 	is_triggered_only = yes
 	
-		option = {
-				name = Manchukuo.1.a
-				ai_chance = { factor = 85 }
-				add_manpower = 50000
-				add_stability = -0.1
-			}
-		option = {
-				name = Manchukuo.1.b
-				ai_chance = { factor = 10 }
-				add_manpower = 25000
-				add_stability = -0.05
-				add_political_power = 25
-			}
-			
-		option = {
-				name = Manchukuo.1.c
-				ai_chance = { factor = 5 }
-				add_manpower = 8000
-				add_political_power = 75
-			}
-			
-}
+	option = {
+		name = EFM_Manchukuo.1.a
+		ai_chance = { factor = 85 }
+		add_manpower = 50000
+		add_stability = -0.1
+	}
+	option = {
+		name = EFM_Manchukuo.1.b
+		ai_chance = { factor = 10 }
+		add_manpower = 25000
+		add_stability = -0.05
+		add_political_power = 25
+	}
 	
+	option = {
+		name = EFM_Manchukuo.1.c
+		ai_chance = { factor = 5 }
+		add_manpower = 8000
+		add_political_power = 75
+	}
+	
+}
+
 # Policy of Japanese immigrants
 country_event = {
-	id = Manchukuo.2
-	title = Manchukuo.2.t
+	id = EFM_Manchukuo.2
+	title = EFM_Manchukuo.2.t
 	picture = GFX_report_event_generic_read_write
-	desc = Manchukuo.2.d
+	desc = EFM_Manchukuo.2.d
 	
 	is_triggered_only = yes
 	
-		option = {
-				name = Manchukuo.2.a
-				ai_chance = { factor = 85 }
-				add_manpower = 60000
-				add_stability = -0.1
-					add_autonomy_ratio = {
-					value = -0.05
-					localization = MAN_Improve_autonomy
-					}
-			}
-		option = {
-				name = Manchukuo.2.b
-				ai_chance = { factor = 10 }
-				add_manpower = 30000
-				add_stability = -0.05
-				add_political_power = 25
-					add_autonomy_ratio = {
-					value = -0.1
-					localization = MAN_Improve_autonomy
-					}
-			}
-			
-		option = {
-				name = Manchukuo.2.c
-				ai_chance = { factor = 5 }
-				add_manpower = 5000
-				add_political_power = 50
-					add_autonomy_ratio = {
-					value = -0.15
-					localization = MAN_Improve_autonomy
-					}
-			}		
+	option = {
+		name = EFM_Manchukuo.2.a
+		ai_chance = { factor = 85 }
+		add_manpower = 60000
+		add_stability = -0.1
+		add_autonomy_ratio = {
+			value = -0.05
+			localization = MAN_Improve_autonomy
+		}
+	}
+	option = {
+		name = EFM_Manchukuo.2.b
+		ai_chance = { factor = 10 }
+		add_manpower = 30000
+		add_stability = -0.05
+		add_political_power = 25
+		add_autonomy_ratio = {
+			value = -0.1
+			localization = MAN_Improve_autonomy
+		}
+	}
+	
+	option = {
+		name = EFM_Manchukuo.2.c
+		ai_chance = { factor = 5 }
+		add_manpower = 5000
+		add_political_power = 50
+		add_autonomy_ratio = {
+			value = -0.15
+			localization = MAN_Improve_autonomy
+		}
+	}		
 }
 
 # State religion
 country_event = {
-	id = Manchukuo.3
-	title = Manchukuo.3.t
+	id = EFM_Manchukuo.3
+	title = EFM_Manchukuo.3.t
 	picture = GFX_report_event_generic_read_write
-	desc = Manchukuo.3.d
+	desc = EFM_Manchukuo.3.d
 	
 	is_triggered_only = yes
 	
-		option = {
-				name = Manchukuo.3.a
-					if = {
-				limit = {
+	option = {
+		name = EFM_Manchukuo.3.a
+		if = {
+			limit = {
 				OR = {
-					has_autonomy_state = autonomy_colony
-					has_autonomy_state = autonomy_puppet
-					has_autonomy_state = autonomy_integrated_puppet
-					}
-				}
-				add_ideas = state_shintoism
-				add_stability = -0.05
-					add_autonomy_ratio = {
-					value = -0.05
-					localization = MAN_Improve_autonomy
-					}
-				}
-				
-					if = {
-				limit = {
-				OR = {
-					has_autonomy_state = autonomy_dominion
+					has_autonomy_state = autonomy_wtt_imperial_associate
+					has_autonomy_state = autonomy_wtt_imperial_subject
 					is_puppet = no
-					}
-				}
-				add_ideas = Manchukuo_state_shintoism
-				add_stability = 0.05
-					add_autonomy_ratio = {
-					value = 0.05
-					localization = MAN_Improve_autonomy
-					}
 				}
 			}
+			add_ideas = state_shintoism
+			add_stability = -0.05
+			add_autonomy_ratio = {
+				value = -0.05
+				localization = MAN_Improve_autonomy
+			}
+		}
+		
+		if = {
+			limit = {
+				
+			}
+			add_ideas = Manchukuo_state_shintoism
+			add_stability = 0.05
+			add_autonomy_ratio = {
+				value = 0.05
+				localization = MAN_Improve_autonomy
+			}
+		}
+	}
 }
 
 # Northeast Theater
 country_event = {
-	id = Manchukuo.4
-	title = Manchukuo.4.t
+	id = EFM_Manchukuo.4
+	title = EFM_Manchukuo.4.t
 	picture = GFX_report_event_chinese_soldiers_fighting
-	desc = Manchukuo.4.d
+	desc = EFM_Manchukuo.4.d
 	
 	is_triggered_only = yes
 	
-		option = {
-				name = Manchukuo.4.a
-				ai_chance = { factor = 90 }
-				if = {
-					limit = {
-						CHI = {
-							has_war_with = JAP
-						}
-					}
-					CHI = {
-                        add_to_faction = MAN
-						}
-					add_to_war = {
-                        targeted_alliance = CHI
-                        enemy = JAP
-                    }
+	option = {
+		name = EFM_Manchukuo.4.a
+		ai_chance = { factor = 90 }
+		if = {
+			limit = {
+				CHI = {
+					has_war_with = JAP
 				}
-					add_stability = 0.1
 			}
-		option = {
-				name = Manchukuo.4.b
-				ai_chance = { factor = 10 }
-					add_stability = 0.2
+			CHI = {
+				add_to_faction = MAN
 			}
+			add_to_war = {
+				targeted_alliance = CHI
+				enemy = JAP
+			}
+		}
+		add_stability = 0.1
+	}
+	option = {
+		name = EFM_Manchukuo.4.b
+		ai_chance = { factor = 10 }
+		add_stability = 0.2
+	}
 }
 
 # Military conflict with USSR
 country_event = {
-	id = Manchukuo.5
-	title = Manchukuo.5.t
+	id = EFM_Manchukuo.5
+	title = EFM_Manchukuo.5.t
 	picture = GFX_report_event_chinese_soldiers_fighting
-	desc = Manchukuo.5.d
+	desc = EFM_Manchukuo.5.d
 	
 	is_triggered_only = yes
 	
-		option = {
-				name = Manchukuo.5.a
-			}
+	option = {
+		name = EFM_Manchukuo.5.a
+	}
 }
 
 # Japanese Reaction
 country_event = {
-	id = Manchukuo.6
-	title = Manchukuo.6.t
+	id = EFM_Manchukuo.6
+	title = EFM_Manchukuo.6.t
 	picture = GFX_report_event_chinese_soldiers_fighting
-	desc = Manchukuo.6.d
+	desc = EFM_Manchukuo.6.d
 	
 	is_triggered_only = yes
 	
-		option = {
-				name = Manchukuo.6.a
-        add_opinion_modifier = {
-                target = MAN
-                modifier = Nations_estrangement
-				}
-			}
+	option = {
+		name = EFM_Manchukuo.6.a
+		add_opinion_modifier = {
+			target = MAN
+			modifier = Nations_estrangement
+		}
+	}
 }
 
 # Support northern expansion － USSR Reaction
 country_event = {
-	id = Manchukuo.7
-	title = Manchukuo.7.t
+	id = EFM_Manchukuo.7
+	title = EFM_Manchukuo.7.t
 	picture = GFX_report_event_soviet_army_greeted
-	desc = Manchukuo.7.d
+	desc = EFM_Manchukuo.7.d
 	
 	is_triggered_only = yes
 	
-		option = {
-				name = Manchukuo.7.a
-				ai_chance = { factor = 50 }
-				create_wargoal = { type = annex_everything target = JAP } 
+	option = {
+		name = EFM_Manchukuo.7.a
+		ai_chance = { factor = 50 }
+		create_wargoal = { type = annex_everything target = JAP } 
+	}
+	
+	option = {
+		name = EFM_Manchukuo.7.b
+		ai_chance = { factor = 50 }
+		add_stability = -0.1
+		JAP = {
+			country_event = {
+				id = EFM_Manchukuo.8
 			}
-			
-		option = {
-				name = Manchukuo.7.b
-				ai_chance = { factor = 50 }
-				add_stability = -0.1
-					JAP = {
-						country_event = {
-                        id = Manchukuo.8
-                    }
-				}
-			}
+		}
+	}
 }
 
 # Support northern expansion － USSR Concession
 country_event = {
-	id = Manchukuo.8
-	title = Manchukuo.8.t
+	id = EFM_Manchukuo.8
+	title = EFM_Manchukuo.8.t
 	picture = GFX_report_event_soldiers_in_france
-	desc = Manchukuo.8.d
+	desc = EFM_Manchukuo.8.d
 	
 	is_triggered_only = yes
 	
-		option = {
-				name = Manchukuo.8.a
-				ai_chance = { factor = 90 }
-				create_wargoal = { type = annex_everything target = SOV } 
+	option = {
+		name = EFM_Manchukuo.8.a
+		ai_chance = { factor = 90 }
+		create_wargoal = { type = annex_everything target = SOV } 
+	}
+	
+	option = {
+		name = EFM_Manchukuo.8.b
+		ai_chance = { factor = 10 }
+		add_stability = -0.05
+		MAN = {
+			add_autonomy_ratio = {
+				value = 0.5
+				localization = MAN_Improve_autonomy
 			}
-			
-		option = {
-				name = Manchukuo.8.b
-				ai_chance = { factor = 10 }
-				add_stability = -0.05
-					MAN = {
-						add_autonomy_ratio = {
-						value = 0.5
-						localization = MAN_Improve_autonomy
-					}
-				}
-			}
+		}
+	}
 }

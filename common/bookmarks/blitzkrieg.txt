@@ -315,9 +315,9 @@ bookmarks = {
 				MAN_low_legitimacy_4
 			}
 			focuses = {
-				MAN_alliance_with_the_kwantung_army
-				MAN_develop_aluminum_sources
-				MAN_the_two_emperors
+				MAN_obedience
+				MAN_independence_war
+				MAN_claim_the_mandate_of_heaven
 			}
 		}
 		"SIK"={
@@ -374,19 +374,6 @@ bookmarks = {
 				CHI_heavy_weapons_development
 			}
 		}
-		"GUD"={
-			minor = yes
-			history = "WARLORDS_BLITZKRIEG_DESC"
-			ideology = neutrality
-			ideas = {
-				CHI_long_term_economic_planning
-			}
-			focuses = {
-				CHI_join_the_republican_government
-				CHI_power_struggle
-				CHI_heavy_weapons_development
-			}
-		}		
 			
 		"XSM"={
 			minor = yes
@@ -414,19 +401,6 @@ bookmarks = {
 				CHI_heavy_weapons_development
 			}
 		}
-		"SIC"={
-			minor = yes
-			history = "WARLORDS_BLITZKRIEG_DESC"
-			ideology = neutrality
-			ideas = {
-				CHI_long_term_economic_planning
-			}
-			focuses = {
-				CHI_join_the_republican_government
-				CHI_power_struggle
-				CHI_heavy_weapons_development
-			}
-		}
 		"XIK"={
 			minor = yes
 			history = "WARLORDS_BLITZKRIEG_DESC"
@@ -440,72 +414,7 @@ bookmarks = {
 				CHI_heavy_weapons_development
 			}
 		}
-		"HPC"={
-			minor = yes
-			history = "WARLORDS_BLITZKRIEG_DESC"
-			ideology = neutrality
-			ideas = {
-				CHI_long_term_economic_planning
-			}
-			focuses = {
-				CHI_join_the_republican_government
-				CHI_power_struggle
-				CHI_heavy_weapons_development
-			}
-		}
-		"SHD"={
-			minor = yes
-			history = "WARLORDS_BLITZKRIEG_DESC"
-			ideology = neutrality
-			ideas = {
-				CHI_long_term_economic_planning
-			}
-			focuses = {
-				CHI_join_the_republican_government
-				CHI_power_struggle
-				CHI_heavy_weapons_development
-			}
-		}
-		"NEA"={
-			minor = yes
-			history = "WARLORDS_BLITZKRIEG_DESC"
-			ideology = neutrality
-			ideas = {
-				CHI_long_term_economic_planning
-			}
-			focuses = {
-				CHI_join_the_republican_government
-				CHI_power_struggle
-				CHI_heavy_weapons_development
-			}
-		}
 		
-		"TNG"={
-			minor = yes
-			history = "WARLORDS_BLITZKRIEG_DESC"
-			ideology = neutrality
-			ideas = {
-				CHI_long_term_economic_planning
-			}
-			focuses = {
-				CHI_join_the_republican_government
-				CHI_power_struggle
-				CHI_heavy_weapons_development
-			}
-		}
-		"HMI"={
-			minor = yes
-			history = "WARLORDS_BLITZKRIEG_DESC"
-			ideology = neutrality
-			ideas = {
-				CHI_long_term_economic_planning
-			}
-			focuses = {
-				CHI_join_the_republican_government
-				CHI_power_struggle
-				CHI_heavy_weapons_development
-			}
-		}
 		effect = {
 			randomize_weather = 12345 # <- Obligatory in every bookmark !
 			#123 = { rain_light = yes }

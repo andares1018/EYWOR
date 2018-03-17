@@ -343,6 +343,35 @@ bookmarks = {
 				SIK_Turkic_land
 			}
 		}
+		
+		"HMI"={
+			minor = yes
+			history = "WARLORDS_BLITZKRIEG_DESC"
+			ideology = neutrality
+			ideas = {
+				CHI_long_term_economic_planning
+			}
+			focuses = {
+				CHI_join_the_republican_government
+				CHI_power_struggle
+				CHI_heavy_weapons_development
+			}
+		}
+		
+		"TNG"={
+			minor = yes
+			history = "WARLORDS_BLITZKRIEG_DESC"
+			ideology = neutrality
+			ideas = {
+				CHI_long_term_economic_planning
+			}
+			focuses = {
+				CHI_join_the_republican_government
+				CHI_power_struggle
+				CHI_heavy_weapons_development
+			}
+		}
+		
 		"SHX"={
 			minor = yes
 			history = "WARLORDS_BLITZKRIEG_DESC"
@@ -356,6 +385,7 @@ bookmarks = {
 				CHI_heavy_weapons_development
 			}
 		}
+		
 		"YUN"={
 			minor = yes
 			history = "WARLORDS_BLITZKRIEG_DESC"
@@ -369,6 +399,7 @@ bookmarks = {
 				CHI_heavy_weapons_development
 			}
 		}
+		
 		"GXC"={
 			minor = yes
 			history = "WARLORDS_BLITZKRIEG_DESC"
@@ -381,7 +412,8 @@ bookmarks = {
 				CHI_power_struggle
 				CHI_heavy_weapons_development
 			}
-		}	
+		}
+		
 		"GUD"={
 			minor = yes
 			history = "WARLORDS_BLITZKRIEG_DESC"
@@ -409,6 +441,7 @@ bookmarks = {
 				CHI_heavy_weapons_development
 			}
 		}		
+		
 		"NXM"={
 			minor = yes
 			history = "WARLORDS_BLITZKRIEG_DESC"
@@ -422,6 +455,7 @@ bookmarks = {
 				CHI_heavy_weapons_development
 			}
 		}
+		
 		"SIC"={
 			minor = yes
 			history = "WARLORDS_BLITZKRIEG_DESC"
@@ -435,6 +469,7 @@ bookmarks = {
 				CHI_heavy_weapons_development
 			}
 		}
+		
 		"XIK"={
 			minor = yes
 			history = "WARLORDS_BLITZKRIEG_DESC"
@@ -448,6 +483,7 @@ bookmarks = {
 				CHI_heavy_weapons_development
 			}
 		}
+		
 		"HPC"={
 			minor = yes
 			history = "WARLORDS_BLITZKRIEG_DESC"
@@ -461,6 +497,7 @@ bookmarks = {
 				CHI_heavy_weapons_development
 			}
 		}
+		
 		"SHD"={
 			minor = yes
 			history = "WARLORDS_BLITZKRIEG_DESC"
@@ -474,6 +511,7 @@ bookmarks = {
 				CHI_heavy_weapons_development
 			}
 		}
+		
 		"NEA"={
 			minor = yes
 			history = "WARLORDS_BLITZKRIEG_DESC"
@@ -488,32 +526,10 @@ bookmarks = {
 			}
 		}
 		
-		"TNG"={
-			minor = yes
-			history = "WARLORDS_BLITZKRIEG_DESC"
-			ideology = neutrality
-			ideas = {
-				CHI_long_term_economic_planning
-			}
-			focuses = {
-				CHI_join_the_republican_government
-				CHI_power_struggle
-				CHI_heavy_weapons_development
-			}
-		}
-		"HMI"={
-			minor = yes
-			history = "WARLORDS_BLITZKRIEG_DESC"
-			ideology = neutrality
-			ideas = {
-				CHI_long_term_economic_planning
-			}
-			focuses = {
-				CHI_join_the_republican_government
-				CHI_power_struggle
-				CHI_heavy_weapons_development
-			}
-		}
+		
+		
+		
+		
 		effect = {
 			randomize_weather = 22345 # <- Obligatory in every bookmark !
 			#123 = { rain_light = yes }

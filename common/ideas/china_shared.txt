@@ -202,6 +202,7 @@ ideas = {
 				OR = {
 					is_literally_china = yes
 					tag = MAN
+					tag = PRC
 				}
 				has_dlc = "Waking the Tiger"
 			}
@@ -354,8 +355,9 @@ ideas = {
 			
 			allowed = {
 				OR = {
-					is_literally_china = yes
+					is_originally_warlord = yes
 					tag = MAN
+					tag = PRC
 				}
 				has_dlc = "Waking the Tiger"
 			}
@@ -377,6 +379,7 @@ ideas = {
 
 			
 			allowed = {
+				always = no
 				OR = {
 					is_literally_china = yes
 					tag = MAN
@@ -434,7 +437,12 @@ ideas = {
 				has_dlc = "Waking the Tiger"
 				OR = {
 					is_literally_china = yes
-					tag = MAN
+				}
+				NOT = {
+					tag = CHI
+				}
+				NOT = {
+					tag = PRC
 				}
 			}
 			
@@ -491,7 +499,12 @@ ideas = {
 				has_DLC = "Waking the Tiger"
 				OR = {
 					is_literally_china = yes
-					tag = MAN
+				}
+				NOT = {
+					tag = CHI
+				}
+				NOT = {
+					tag = PRC
 				}
 			}
 			
@@ -527,9 +540,13 @@ ideas = {
 				has_DLC = "Waking the Tiger"
 				OR = {
 					is_literally_china = yes
-					tag = MAN
 				}
-
+				NOT = {
+					tag = CHI
+				}
+				NOT = {
+					tag = PRC
+				}
 			}
 			
 			research_bonus = {
@@ -566,7 +583,12 @@ ideas = {
 				has_DLC = "Waking the Tiger"
 				OR = {
 					is_literally_china = yes
-					tag = MAN
+				}
+				NOT = {
+					tag = CHI
+				}
+				NOT = {
+					tag = PRC
 				}
 			}
 
@@ -608,6 +630,9 @@ ideas = {
 			}
 
 			allowed = {
+				NOT = {
+					tag = CHI
+				}
 				has_dlc = "Waking the Tiger"
 				OR = {
 					original_tag = MAN
@@ -699,6 +724,9 @@ ideas = {
 			}
 
 			allowed = {
+				NOT = {
+					tag = CHI
+				}
 				has_DLC = "Waking the Tiger"
 				OR = {
 					original_tag = MAN

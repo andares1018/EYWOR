@@ -32,3 +32,30 @@
  CHI_liangguang_incident:0 "Stage Liangguang Incident"
  CHI_liangguang_incident_desc:0 "We can't allow Chiang Kei Shek to continue his dictorship. We can seek support from the Guangdong Clique to form an united front."
  liangguang_incident:0 "Liangguang Incident"
+ 
+ ######
+ japan_form_CHI_puppets:0 "Form Puppet Governments in China"
+ japan_form_CHI_puppets_desc:0 "Due to the toxic human nature of rejecting the new and the grand scale of our operations, proxy governments need to be put in place in order for our campaigns to proceed smoothly. We can't risk disrupting our operations simply because of some ineffective occupation policies."
+ japan_form_IN_MON_puppets:0 "Form Puppet Governments in Inner-Mongolia"
+ japan_form_IN_MON_puppets_desc:0 "There are plenty of ethnic Mongols live in the Inner-Mongolia region, which had been under Chinese control for a long time. Most of them aren't a fan of the Chinese government either. We can use that fact to our advantage."
+ #####
+ JAP_form_CCP_mission:0 "People in Shanghai Rejects Foreign Rules"
+ JAP_form_CCP:0 "Form @CCP[CCP.GetNameDef] in Shanghai"
+ #
+ JAP_form_RFM_mission:0 "People in Nanking Rejects Foreign Rules"
+ JAP_form_RFM:0 "Form @RFM[RFM.GetNameDef] in Nanking"
+ 
+ JAP_form_JNC_mission:0 "People in North China Rejects Foreign Rules"
+ JAP_form_JNC:0 "Form @JNC[JNC.GetNameDef] in North China"
+ 
+ JAP_form_RRC_mission:0 "Puppet Governments in China Becomes Unstable"
+ JAP_form_RRC:0 "Form @RRC[RRC.GetNameDef] in China"
+ 
+ JAP_form_MEJ_mission:0 "[MUA.GetNameDef] Demands a Merger"
+ JAP_form_MEJ:0 "Form [MEJ.GetNameDef] in Inner-Mongolia"
+ 
+ JAP_form_MUA_mission:0 "[MEN.GetNameDef] Demands an Another Assembly"
+ JAP_form_MUA:0 "Second Assembly of the Mongols"
+ 
+ #JAP_form_MEN_mission:0 "Form Puppet Governments in China"
+ JAP_form_MEN:0 "Puppet for the Mongols"

@@ -24,6 +24,40 @@ operations = {
 
 }
 
+###MODDED
+japan_form_CHI_puppets = {
+	icon = generic_political_actions
+
+	allowed = {
+		tag = JAP
+		
+	}
+	
+	visible = {
+		has_completed_focus = JAP_intervene_in_china
+	}
+}
+japan_form_IN_MON_puppets = {
+	icon = generic_political_actions
+
+	allowed = {
+		tag = JAP
+	}
+	
+	#visible = {
+	#	NOT = { has_government = democratic }
+	#	has_idea_with_trait = democratic_reformer
+	#}
+}
+liangguang_incident = {
+	
+	icon = generic_crisis
+
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
+###
 foreign_support = {
 	icon = generic_political_actions
 	
@@ -84,6 +118,19 @@ communism_on_the_rise = {
 	#}
 }
 
+####MODDED
+socialism_on_the_rise = {
+	icon = generic_communism
+
+	allowed = {
+		always = yes
+	}
+	
+	visible = {
+		is_puppet = no
+	}
+}
+####
 crisis = {
 	icon = generic_crisis
 	priority = 100
@@ -118,14 +165,6 @@ prospect_for_resources = {
 special_projects = {
 	
 	icon = generic_prospect_for_resources
-
-	allowed = {
-		has_dlc = "Waking the Tiger"
-	}
-}
-liangguang_incident = {
-	
-	icon = generic_crisis
 
 	allowed = {
 		has_dlc = "Waking the Tiger"
