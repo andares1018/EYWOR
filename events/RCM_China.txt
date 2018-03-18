@@ -565,6 +565,7 @@ country_event = {
 					NOT = { state = 525 }
 					NOT = { state = 527 }	
 					NOT = { state = 283 }
+					NOT = { state = 792 }
 					NOT = { state = 743 }
 					NOT = { state = 761 }					
 					NOT = { state = 607 }
@@ -713,9 +714,15 @@ country_event = {
 				add_state_core = 655
 				add_state_core = 329
 				add_state_core = 618
+				add_state_core = 798
+				add_state_core = 799
 				add_state_core = 619
 				add_state_core = 330
 				add_state_core = 617
+				add_state_core = 796
+				add_state_core = 797
+				add_state_core = 800
+				add_state_core = 801
 				add_state_core = 287
 				add_state_core = 537
 			}
@@ -879,8 +886,14 @@ country_event = {
 				add_state_core = 655
 				add_state_core = 329
 				add_state_core = 618
+				add_state_core = 798
+				add_state_core = 799
 				add_state_core = 619
 				add_state_core = 617
+				add_state_core = 796
+				add_state_core = 797
+				add_state_core = 800
+				add_state_core = 801
 				add_state_core = 287
 				add_state_core = 537
 			}
@@ -1134,6 +1147,15 @@ country_event = {
 			}	
 			if = {
 				limit = {
+					CHI = { controls_state = 792 }
+					FROM = {
+						original_tag = NXM
+					}
+				}
+				NXM = { transfer_state = 792 }
+			}
+			if = {
+				limit = {
 					CHI = { controls_state = 616 }
 					FROM = {
 						original_tag = NXM
@@ -1158,6 +1180,51 @@ country_event = {
 					}
 				}
 				XSM = { transfer_state = 604 }
+			}
+			if = {
+				limit = {
+					CHI = { controls_state = 790 }
+					FROM = {
+						original_tag = XSM
+					}
+				}
+				XSM = { transfer_state = 790 }
+			}
+			if = {
+				limit = {
+					CHI = { controls_state = 791 }
+					FROM = {
+						original_tag = XSM
+					}
+				}
+				XSM = { transfer_state = 791 }
+			}
+			if = {
+				limit = {
+					CHI = { controls_state = 792 }
+					FROM = {
+						original_tag = XSM
+					}
+				}
+				XSM = { transfer_state = 792 }
+			}
+			if = {
+				limit = {
+					CHI = { controls_state = 793 }
+					FROM = {
+						original_tag = XSM
+					}
+				}
+			XSM = { transfer_state = 793 }
+			}
+			if = {
+				limit = {
+					CHI = { controls_state = 794 }
+					FROM = {
+						original_tag = XSM
+					}
+				}
+				XSM = { transfer_state = 794 }
 			}
 			if = {
 				limit = {

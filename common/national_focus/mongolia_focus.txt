@@ -915,6 +915,12 @@ focus_tree = {
 					}
 				}
 			}
+			798 = {
+				add_core_of = MON
+			}
+			799 = {
+				add_core_of = MON
+			}
 		}
 		available = {
 			618 = {
@@ -922,9 +928,25 @@ focus_tree = {
 					is_owned_by = MON
 				}
 			}
+			798 = {
+				NOT = {
+					is_owned_by = MON
+				}
+			}
+			799 = {
+				NOT = {
+					is_owned_by = MON
+				}
+			}
 		}
 		bypass = {
 			618 = {
+				is_owned_by = MON
+			}
+			798 = {
+				is_owned_by = MON
+			}
+			799 = {
 				is_owned_by = MON
 			}
 		}

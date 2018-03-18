@@ -35,6 +35,8 @@ country_event = {
 				add_state_core = 763
 				add_state_core = 616
 				add_state_core = 618
+				add_state_core = 798
+				add_state_core = 799
 			}
 			if = {
 				limit = {
@@ -98,6 +100,24 @@ country_event = {
 					}
 				}
 				ECA = { transfer_state = 618 }
+			}
+			if = {
+				limit = {
+					OR = {
+						798 = { is_controlled_by = JAP }
+						798 = { controller = { is_puppet_of = JAP } }
+					}
+				}
+				ECA = { transfer_state = 798 }
+			}
+			if = {
+				limit = {
+					OR = {
+						799 = { is_controlled_by = JAP }
+						799 = { controller = { is_puppet_of = JAP } }
+					}
+				}
+				ECA = { transfer_state = 799 }
 			}
 			set_province_name = { id = 4801 name = "Urga" }
 		}

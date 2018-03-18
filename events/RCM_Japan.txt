@@ -1289,9 +1289,16 @@ country_event = {
 		}
 		287 = { is_controlled_by_jap_or_its_puppet = yes }
 		617 = { is_controlled_by_jap_or_its_puppet = yes }
+		796 = { is_controlled_by_jap_or_its_puppet = yes }
+		797 = { is_controlled_by_jap_or_its_puppet = yes }
+		800 = { is_controlled_by_jap_or_its_puppet = yes }
+		801 = { is_controlled_by_jap_or_its_puppet = yes }
 		618 = { is_controlled_by_jap_or_its_puppet = yes }
+		798 = { is_controlled_by_jap_or_its_puppet = yes }
+		799 = { is_controlled_by_jap_or_its_puppet = yes }
 		758 = { is_controlled_by_jap_or_its_puppet = yes }
 		759 = { is_controlled_by_jap_or_its_puppet = yes }
+		795 = { is_controlled_by_jap_or_its_puppet = yes }
 		619 = { is_controlled_by_jap_or_its_puppet = yes }
 		NOT = { has_global_flag = no_sik_flag }
 	}
@@ -1305,15 +1312,29 @@ country_event = {
 			transfer_state = 287
 			transfer_state = 617
 			transfer_state = 618
+			transfer_state = 796
+			transfer_state = 797
+			transfer_state = 798
+			transfer_state = 799
+			transfer_state = 800
+			transfer_state = 801
 			transfer_state = 619
 			transfer_state = 758
 			transfer_state = 759
+			transfer_state = 795
 			add_state_core = 287
 			add_state_core = 617
+			add_state_core = 796
+			add_state_core = 797
+			add_state_core = 798
+			add_state_core = 799
+			add_state_core = 800
+			add_state_core = 801
 			add_state_core = 618
 			add_state_core = 619
 			add_state_core = 758
 			add_state_core = 759
+			add_state_core = 795
 		}
 		puppet = SIK
 		hidden_effect = {
@@ -1356,9 +1377,14 @@ country_event = {
 			}
 		}
 		283 = { is_controlled_by_jap_or_its_puppet = yes }
+		792 = { is_controlled_by_jap_or_its_puppet = yes }
 		760 = { is_controlled_by_jap_or_its_puppet = yes }
 		#616 = { is_controlled_by_jap_or_its_puppet = yes }
 		604 = { is_controlled_by_jap_or_its_puppet = yes }
+		790 = { is_controlled_by_jap_or_its_puppet = yes }
+		791 = { is_controlled_by_jap_or_its_puppet = yes }
+		793 = { is_controlled_by_jap_or_its_puppet = yes }
+		794 = { is_controlled_by_jap_or_its_puppet = yes }
 		NOT = { has_global_flag = no_xsm_flag }
 	}
 	mean_time_to_happen = {
@@ -1370,13 +1396,23 @@ country_event = {
 		ai_chance = { factor = 100 }
 		XSM = {
 			transfer_state = 283
+			transfer_state = 792
 			transfer_state = 760
 			#transfer_state = 616
 			transfer_state = 604
+			transfer_state = 790
+			transfer_state = 791
+			transfer_state = 793
+			transfer_state = 794
 			add_state_core = 283
+			add_state_core = 792
 			add_state_core = 760
 			#add_state_core = 616
 			add_state_core = 604
+			add_state_core = 790
+			add_state_core = 791
+			add_state_core = 793
+			add_state_core = 794
 		}
 		puppet = XSM
 		hidden_effect = {

@@ -291,6 +291,8 @@ country_event = {
 		add_political_power = -100
 		MON = {
 			transfer_state = 618
+			transfer_state = 798
+			transfer_state = 799
 			country_event = { id = MON.11 }
 		}
 	}
@@ -325,7 +327,7 @@ country_event = {
 			create_wargoal = {
 				type = take_state_focus
 				target = FROM
-				generator = { 618 }
+				generator = { 618 798 799 }
 			}
 			clr_global_flag = refused_dzungaria
 		}
@@ -786,6 +788,7 @@ country_event = {
 		PRC = { 
 			country_event = { id = MON.28 }
 			transfer_state = 615
+			transfer_state = 789
 			transfer_state = 767
 			transfer_state = 762
 		}
@@ -824,6 +827,7 @@ country_event = {
 		PRC = { 
 			country_event = { id = MON.28 } 
  			transfer_state = 283 
+			transfer_state = 792 
  			puppet = NXM
  		}
  		hidden_effect = {

@@ -2223,6 +2223,7 @@ focus_tree = {
 				597 = {	set_border_war = yes }
 				766 = {	set_border_war = yes }
 				615 = {	set_border_war = yes }
+				789 = {	set_border_war = yes }
 				767 = {	set_border_war = yes }
 				614 = {	set_border_war = yes }
 				608 = {	set_border_war = yes }
@@ -3689,6 +3690,14 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			789 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
 			606 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
@@ -3733,6 +3742,9 @@ focus_tree = {
 				alu_tung_trigger = yes
 			}
 			615 = {
+				alu_tung_trigger = yes
+			}
+			789 = {
 				alu_tung_trigger = yes
 			}
 			606 = {
@@ -3876,6 +3888,13 @@ focus_tree = {
 					state = 615
 				}
 			}
+			789 = {
+				add_resource = {
+					type = steel
+					amount = 75
+					state = 789
+				}
+			}
 			606 = {
 				add_resource = {
 					type = steel
@@ -3921,6 +3940,9 @@ focus_tree = {
 			615 = {
 				infra_bypass_3_tr = yes
 			}
+			789 = {
+				infra_bypass_3_tr = yes
+			}
 			606 = {
 				infra_bypass_3_tr = yes
 			}
@@ -3955,6 +3977,14 @@ focus_tree = {
 				}
 			}
 			602 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			784 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
@@ -4005,6 +4035,9 @@ focus_tree = {
 				max_infra_trigger = yes
 			}
 			602 = {
+				max_infra_trigger = yes
+			}
+			784 = {
 				max_infra_trigger = yes
 			}
 			606 = {
@@ -4188,11 +4221,25 @@ focus_tree = {
 					state = 615
 				}
 			}
+			789 = {
+				add_resource = {
+					type = aluminium
+					amount = 20
+					state = 789
+				}
+			}
 			603 = {
 				add_resource = {
 					type = aluminium
 					amount = 15
 					state = 603
+				}
+			}
+			783 = {
+				add_resource = {
+					type = aluminium
+					amount = 20
+					state = 783
 				}
 			}
 		}
@@ -4211,7 +4258,13 @@ focus_tree = {
 			615 = {
 				hainan_trigger = yes
 			}
+			789 = {
+				hainan_trigger = yes
+			}
 			603 = {
+				hainan_trigger = yes
+			}
+			783 = {
 				hainan_trigger = yes
 			}
 		}
@@ -4250,11 +4303,25 @@ focus_tree = {
 					state = 615
 				}
 			}
+			789 = {
+				add_resource = {
+					type = aluminium
+					amount = 35
+					state = 789
+				}
+			}
 			603 = {
 				add_resource = {
 					type = aluminium
 					amount = 25
 					state = 603
+				}
+			}
+			783 = {
+				add_resource = {
+					type = aluminium
+					amount = 40
+					state = 783
 				}
 			}
 		}
@@ -4273,7 +4340,13 @@ focus_tree = {
 			615 = {
 				7_infra_trigger = yes
 			}
+			789 = {
+				7_infra_trigger = yes
+			}
 			603 = {
+				7_infra_trigger = yes
+			}
+			783 = {
 				7_infra_trigger = yes
 			}
 		}
@@ -4312,11 +4385,25 @@ focus_tree = {
 					state = 615
 				}
 			}
+			789 = {
+				add_resource = {
+					type = aluminium
+					amount = 70
+					state = 789
+				}
+			}
 			603 = {
 				add_resource = {
 					type = aluminium
 					amount = 45
 					state = 603
+				}
+			}
+			783 = {
+				add_resource = {
+					type = aluminium
+					amount = 65
+					state = 783
 				}
 			}
 		}
@@ -4331,7 +4418,13 @@ focus_tree = {
 			615 = {
 				infra_bypass_3_tr = yes
 			}
+			789 = {
+				infra_bypass_3_tr = yes
+			}
 			603 = {
+				infra_bypass_3_tr = yes
+			}
+			783 = {
 				infra_bypass_3_tr = yes
 			}
 		}
@@ -4370,11 +4463,25 @@ focus_tree = {
 					state = 593
 				}
 			}
+			786 = {
+				add_resource = {
+					type = tungsten
+					amount = 20
+					state = 786
+				}
+			}
 			602 = {
 				add_resource = {
 					type = tungsten
 					amount = 30
 					state = 602
+				}
+			}
+			784 = {
+				add_resource = {
+					type = tungsten
+					amount = 25
+					state = 784
 				}
 			}
 		}
@@ -4393,7 +4500,13 @@ focus_tree = {
 			593 = {
 				hainan_trigger = yes
 			}
+			786 = {
+				hainan_trigger = yes
+			}
 			602 = {
+				hainan_trigger = yes
+			}
+			784 = {
 				hainan_trigger = yes
 			}
 		}
@@ -4432,11 +4545,25 @@ focus_tree = {
 					state = 593
 				}
 			}
+			786 = {
+				add_resource = {
+					type = tungsten
+					amount = 40
+					state = 786
+				}
+			}
 			602 = {
 				add_resource = {
 					type = tungsten
 					amount = 55
 					state = 602
+				}
+			}
+			784 = {
+				add_resource = {
+					type = tungsten
+					amount = 50
+					state = 784
 				}
 			}
 		}
@@ -4455,7 +4582,13 @@ focus_tree = {
 			593 = {
 				7_infra_trigger = yes
 			}
+			786 = {
+				7_infra_trigger = yes
+			}
 			602 = {
+				7_infra_trigger = yes
+			}
+			784 = {
 				7_infra_trigger = yes
 			}
 		}
@@ -4494,11 +4627,25 @@ focus_tree = {
 					state = 593
 				}
 			}
+			786 = {
+				add_resource = {
+					type = tungsten
+					amount = 70
+					state = 786
+				}
+			}
 			602 = {
 				add_resource = {
 					type = tungsten
 					amount = 95
 					state = 602
+				}
+			}
+			784 = {
+				add_resource = {
+					type = tungsten
+					amount = 75
+					state = 784
 				}
 			}
 		}
@@ -4513,7 +4660,13 @@ focus_tree = {
 			593 = {
 				infra_bypass_3_tr = yes
 			}
+			786 = {
+				infra_bypass_3_tr = yes
+			}
 			602 = {
+				infra_bypass_3_tr = yes
+			}
+			784 = {
 				infra_bypass_3_tr = yes
 			}
 		}
@@ -4946,6 +5099,9 @@ focus_tree = {
 			615 = {
 				level_3_infra = yes
 			}
+			789 = {
+				level_3_infra = yes
+			}
 			767 = {
 				level_3_infra = yes
 			}
@@ -4953,6 +5109,9 @@ focus_tree = {
 				level_3_infra = yes
 			}
 			622 = {
+				level_3_infra = yes
+			}
+			788 = {
 				level_3_infra = yes
 			}
 			616 = {
@@ -5039,6 +5198,9 @@ focus_tree = {
 			615 = {
 				level_6_infra = yes
 			}
+			789 = {
+				level_6_infra = yes
+			}
 			767 = {
 				level_6_infra = yes
 			}
@@ -5046,6 +5208,9 @@ focus_tree = {
 				level_6_infra = yes
 			}
 			622 = {
+				level_6_infra = yes
+			}
+			788 = {
 				level_6_infra = yes
 			}
 			616 = {
@@ -5431,10 +5596,16 @@ focus_tree = {
 			599 = {
 				level_3_infra = yes
 			}
+			785 = {
+				level_3_infra = yes
+			}
 			773 = {
 				level_3_infra = yes
 			}
 			592 = {
+				level_3_infra = yes
+			}
+			787 = {
 				level_3_infra = yes
 			}
 			603 = {
@@ -5444,6 +5615,9 @@ focus_tree = {
 				level_3_infra = yes
 			}
 			602 = {
+				level_3_infra = yes
+			}
+			784 = {
 				level_3_infra = yes
 			}
 			600 = {
@@ -5521,16 +5695,28 @@ focus_tree = {
 			599 = {
 				level_6_infra = yes
 			}
+			785 = {
+				level_6_infra = yes
+			}
 			773 = {
 				level_6_infra = yes
 			}
 			592 = {
 				level_6_infra = yes
 			}
+			787 = {
+				level_6_infra = yes
+			}
 			603 = {
 				level_6_infra = yes
 			}
+			783 = {
+				level_6_infra = yes
+			}
 			602 = {
+				level_6_infra = yes
+			}
+			784 = {
 				level_6_infra = yes
 			}
 			600 = {
@@ -6883,7 +7069,22 @@ focus_tree = {
 			604 = {
 				level_3_infra = yes
 			}
+			790 = {
+				level_3_infra = yes
+			}
+			791 = {
+				level_3_infra = yes
+			}
+			793 = {
+				level_3_infra = yes
+			}
+			794 = {
+				level_3_infra = yes
+			}
 			283 = {
+				level_3_infra = yes
+			}
+			792 = {
 				level_3_infra = yes
 			}
 			601 = {
@@ -6964,7 +7165,22 @@ focus_tree = {
 			604 = {
 				level_6_infra = yes
 			}
+			790 = {
+				level_6_infra = yes
+			}
+			791 = {
+				level_6_infra = yes
+			}
+			793 = {
+				level_6_infra = yes
+			}
+			794 = {
+				level_6_infra = yes
+			}
 			283 = {
+				level_6_infra = yes
+			}
+			792 = {
 				level_6_infra = yes
 			}
 			601 = {

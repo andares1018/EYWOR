@@ -20,6 +20,7 @@ country_event = {
 			owns_state = 760
 		}
 		owns_state = 283
+		owns_state = 792
 	}
 	
 	option = {
