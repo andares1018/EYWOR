@@ -17,6 +17,8 @@ state={
 		}
 		1938.10.25 = {
 			owner = EHB
+			owner = CHI
+			controller = EHB
 			add_core_of = EHB
 		}
 	}

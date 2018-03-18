@@ -71,6 +71,7 @@ set_convoys = 5
 
 		complete_national_focus = MAN_trade_delegation
 		complete_national_focus = MAN_South_Manchuria_Railway
+		complete_national_focus = MAN_North_Manchuria_Railway
 		complete_national_focus = MAN_hoankyoku
 		complete_national_focus = MAN_invite_japanese_investors
 		complete_national_focus = MAN_Kwantung_Army_Focus

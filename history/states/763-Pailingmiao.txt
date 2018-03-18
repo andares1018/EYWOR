@@ -16,15 +16,8 @@ state = {
 
 		}
 		1939.1.1 = {
-			owner = SHX
+			owner = ECA
 			add_core_of = ECA
-			ECA = {
-				set_province_controller = 12331
-				set_province_controller = 10424
-				set_province_controller = 12403
-				set_province_controller = 7048
-				set_province_controller = 4525
-			}
 		}
 		victory_points = {
 			4525 2 

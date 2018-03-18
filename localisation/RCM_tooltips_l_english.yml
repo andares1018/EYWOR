@@ -111,6 +111,7 @@
  declare_war_on_all_warlords_tt:0 "Gains §YAnnex§! wargoals against §Yall independent warlord states§!."
  promise_remove_bs_cc:0 "\n\nOur government will promise the Japanese government to dissolve §Mthe Blueshirts§! and §Mthe Central Club§!. §RFailed or too late to do so may have serious consequences.§!"
  become_puppet_of_MAN_tt:0 "Becomes a puppet of @MAN§Y[MAN.GetName]§!.\n"
+ JCA_party:0 "§YJapanese Colonial Administration§!"
  ####XXX Exists
  ccp_exists:0 "@CCP§YGreat Way Government§! has been established."
  jnc_exists:0 "@JNC§YProvisional Government of the ROC§! has been established."

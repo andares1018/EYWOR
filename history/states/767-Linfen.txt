@@ -14,11 +14,13 @@ state={
 		1939.1.1 = {
 			add_core_of = PRC
 			add_core_of = EHB
-			owner = EHB
-			controller = EHB
-			PRC = {
-				set_province_controller = 1034
-				set_province_controller = 1531
+			owner = SHX
+			controller = PRC
+			EHB = {
+				set_province_controller = 10421
+				set_province_controller = 1180
+				set_province_controller = 7571
+				set_province_controller = 4634
 			}
 		}
 	}

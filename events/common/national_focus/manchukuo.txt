@@ -2984,7 +2984,7 @@ focus_tree = {
 						}
 					declare_war_on = {
 							target = JAP
-							type = puppet_focus
+							type = puppet_wargoal_focus
 						}
 					hidden_effect = {
 							news_event = {

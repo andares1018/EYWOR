@@ -6481,7 +6481,7 @@ focus_tree = {
 					id = rcmjapan.106
 				}
 				effect_tooltip = {
-					custom_effect_tooltip = "§YJapanese Colonial Administration§!"
+					custom_effect_tooltip = JCA_party
 					custom_effect_tooltip = becomes_ruling_party_no_elec
 					add_ideas = reformed_colonial_administration
 				}

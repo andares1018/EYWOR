@@ -2239,7 +2239,7 @@ focus_tree = {
 			}
 		}
 		available = {
-			has_stability > 0.7
+			has_war_support > 0.7
 			#hidden_trigger = {
 			#	ai_cont_foc_prc = yes
 			#}
