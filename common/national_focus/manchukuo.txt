@@ -281,8 +281,8 @@ focus_tree = {
 				add_ideas = generic_jap_advisor
 			}
 		}
-		
-	} 
+
+	}
 	focus = {
 		id = MAN_Japanese_researchers
 		icon = GFX_goal_generic_scientific_exchange
@@ -2438,8 +2438,9 @@ focus_tree = {
 			}
 		}
 		available = {
-			#compare_autonomy_progress_ratio > 0.75#compare_autonomy_progress_ratio > 0.75
+			#compare_autonomy_progress_ratio > #compare_autonomy_progress_ratio > 0.75#compare_autonomy_progress_ratio > 0.75#compare_autonomy_progress_ratio > 0.75
 		}
+		#compare_autonomy_progress_ratio > #compare_autonomy_progress_ratio > 0.75
 		#compare_autonomy_progress_ratio > 0.75
 		#compare_autonomy_progress_ratio > 0.75
 		#compare_autonomy_progress_ratio > 0.75
@@ -2492,7 +2493,7 @@ focus_tree = {
 		prerequisite = {
 			focus = MAN_independence_war
 		}
-		x = 24
+		x = 25
 		y = 9
 		ai_will_do = {
 			factor = 10
@@ -2516,10 +2517,11 @@ focus_tree = {
 		icon = GFX_focus_research
 		cost = 10.00
 		prerequisite = {
-			focus = MAN_imperial_divinity
+			focus = MAN_the_defacto_leader
+			focus = MAN_reclaim_the_empire
 		}
-		x = 23
-		y = 10
+		x = 25
+		y = 11
 		ai_will_do = {
 			factor = 5
 		}
@@ -2542,13 +2544,10 @@ focus_tree = {
 		icon = GFX_goal_generic_propaganda
 		cost = 10.00
 		prerequisite = {
-			focus = MAN_imperial_divinity
-		}
-		prerequisite = {
 			focus = MAN_reclaim_the_empire
 		}
-		x = 25
-		y = 10
+		x = 27
+		y = 11
 		ai_will_do = {
 			factor = 10
 		}
@@ -2576,8 +2575,8 @@ focus_tree = {
 		prerequisite = {
 			focus = MAN_move_capitals
 		}
-		x = 25
-		y = 11
+		x = 27
+		y = 12
 		ai_will_do = {
 			factor = 20
 		}
@@ -2615,10 +2614,10 @@ focus_tree = {
 						has_government = fascism
 					}
 					create_country_leader = {
-						name = "Xuantong"
+						name = "Emperor Xuantong"
 						picture = "GFX_portrait_man_henry_pu_yi_emperor"
 						expire = "1960.1.1"
-						ideology = rexism
+						ideology = fascism_ideology
 						traits = {
 
 						}
@@ -2629,7 +2628,7 @@ focus_tree = {
 						has_government = neutrality
 					}
 					create_country_leader = {
-						name = "Xuantong"
+						name = "Emperor Xuantong"
 						picture = "GFX_portrait_man_henry_pu_yi_emperor"
 						expire = "1960.1.1"
 						ideology = despotism
@@ -2649,8 +2648,11 @@ focus_tree = {
 		prerequisite = {
 			focus = MAN_independence_war
 		}
+		mutually_exclusive = {
+			focus = MAN_the_defacto_leader
+		}
 		x = 26
-		y = 9
+		y = 10
 		ai_will_do = {
 			factor = 1
 		}
@@ -2674,6 +2676,35 @@ focus_tree = {
 				}
 				add_core_of = ROOT
 			}
+			remove_ideas = puyi
+			if = {
+				limit = {
+					has_government = fascism
+				}
+				create_country_leader = {
+					name = "Emperor Xuantong"
+					picture = "GFX_portrait_man_henry_pu_yi_emperor"
+					expire = "1960.1.1"
+					ideology = fascism_ideology
+					traits = {
+
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_government = neutrality
+				}
+				create_country_leader = {
+					name = "Emperor Xuantong"
+					picture = "GFX_Portrait_Manchuria_Henry_Pu_Yi"
+					expire = "1960.1.1"
+					ideology = fascism_ideology
+					traits = {
+
+					}
+				}
+			}
 		}
 
 	}
@@ -2687,8 +2718,8 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = MAN_offer_vassalization
 		}
-		x = 27
-		y = 10
+		x = 29
+		y = 11
 		ai_will_do = {
 			factor = 1
 		}
@@ -2726,8 +2757,8 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = MAN_assert_our_authority
 		}
-		x = 29
-		y = 10
+		x = 31
+		y = 11
 		ai_will_do = {
 			factor = 1
 		}
@@ -2844,5 +2875,162 @@ focus_tree = {
 		}
 
 	}
+	focus = {
+		id = MAN_the_defacto_leader
+		icon = GFX_focus_generic_strike_at_democracy1
+		cost = 10.00
+		prerequisite = {
+			focus = MAN_independence_war
+		}
+		mutually_exclusive = {
+			focus = MAN_reclaim_the_empire
+		}
+		x = 24
+		y = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_country_leader = { name = "Zhang Jinghui" ruling_only = yes }
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_war_support = 0.1
+			set_rule = {
+				can_create_factions = yes
+			}
+			add_country_leader_trait = imperial_connections
+			add_country_leader_trait = dictator
+		}
 
+	}
+	focus = {
+		id = MAN_Empire_of_the_East
+		icon = GFX_focus_jap_manchurian_project
+		cost = 10.00
+		prerequisite = {
+			focus = MAN_join_axis
+		}
+		x = 23
+		y = 12
+		ai_will_do = {
+			factor = 20
+		}
+		available = {
+			all_state = {
+				OR = {
+					NOT = {
+						is_core_of = ROOT
+					}
+					is_controlled_by = ROOT
+				}
+			}
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			MAN_low_legitimacy_clear_all = yes
+			add_stability = 0.1
+		}
+
+	}
+	focus = {
+		id = MAN_join_axis
+		icon = GFX_focus_ger_reichskommisariats
+		cost = 10.00
+		prerequisite = {
+			focus = MAN_the_defacto_leader
+		}
+		x = 23
+		y = 11
+		available = {
+			NOT = {
+				has_war_with = GER
+			}
+		}
+		bypass = {
+			NOT = {
+				OR = {
+					country_exists = GER
+					GER = {
+						has_government = fascism
+					}
+				}
+			}
+		}
+		completion_reward = {
+			GER = {
+				country_event = generic.2
+			}
+		}
+	}
+	focus = {
+		id = MAN_reclaim_northern_territories
+		icon = GFX_goal_generic_territory_or_war
+		cost = 10.00
+		prerequisite = {
+			focus = MAN_the_defacto_leader
+		}
+		x = 21
+		y = 11
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			every_state = {
+				limit = {
+					OR = {
+						state = 657
+						state = 560
+						state = 409
+						state = 561
+						state = 408
+						state = 655
+						state = 537
+					}
+					is_controlled_by = SOV
+				}
+				add_core_of = ROOT
+			}
+			add_war_support = 0.1
+		}
+
+	}
+	focus = {
+		id = MAN_war_on_the_soviet
+		icon = GFX_goal_generic_war_with_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = MAN_reclaim_northern_territories
+		}
+		prerequisite = {
+			focus = MAN_join_axis
+		}
+		x = 22
+		y = 13
+		completion_reward = {
+			create_wargoal = {
+				target = SOV
+				type = annex_everything
+			}
+		}
+	}
 }

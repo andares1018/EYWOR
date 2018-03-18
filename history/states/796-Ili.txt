@@ -1,0 +1,22 @@
+state={
+	id=796
+	name="STATE_796"
+	provinces={
+		7850 7866 12601 
+	}
+	history={
+		owner = SIK
+		add_claim_by = CHI
+		add_claim_by = PRC
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			industrial_complex = 1
+
+		}
+
+	}
+	manpower=480500
+	state_category=rural
+	buildings_max_level_factor=1.000
+}

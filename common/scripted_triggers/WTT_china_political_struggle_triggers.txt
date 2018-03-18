@@ -25,8 +25,10 @@ WTT_can_ROOT_select_state_support_decision_state = {
 		tooltip = WTT_china_pol_struggle_state_controlled_by_leader
 		CONTROLLER = { 
 			NOT = { has_war_with = ROOT } 
-			tag = event_target:WTT_current_china_leader
-			is_subject_of = event_target:WTT_current_china_leader
+			OR = {
+				tag = event_target:WTT_current_china_leader
+				is_subject_of = event_target:WTT_current_china_leader
+			}
 		}
 	}
 	if = {

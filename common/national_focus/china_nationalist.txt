@@ -12,7 +12,7 @@ focus_tree = {
 
 #	focus = {
 #		id = CHI_
-#		icon = GFX_
+#		icon = GFX_ 
 #		prerequisite = { focus = }
 #		mutually_exclusive = { focus =  }
 #		x = -3

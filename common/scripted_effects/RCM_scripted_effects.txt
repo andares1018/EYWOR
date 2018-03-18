@@ -205,6 +205,7 @@ RRC_core = {
 	add_state_core = 771
 	add_state_core = 772
 	add_state_core = 603
+	add_state_core = 783
 	add_state_core = 606
 	add_state_core = 768
 	add_state_core = 598
@@ -226,6 +227,7 @@ RRC_core = {
 	add_state_core = 593
 	add_state_core = 594
 	add_state_core = 601
+	add_state_core = 782
 	add_state_core = 729
 	add_state_core = 728
 	add_state_core = 329
@@ -1083,7 +1085,7 @@ industry_evac_decision = {
 	#Move AF
 	CONTROLLER = {
 		random_owned_controlled_state = {
-			prioritize = { 605 603 601 }
+			prioritize = { 605 770 769 }
 			limit = {
 				is_fully_controlled_by = ROOT
 				any_neighbor_state = {
@@ -1128,7 +1130,7 @@ industry_evac_decision = {
 				}
 			}
 			random_owned_controlled_state = {
-				prioritize = { 605 603 601 }
+				prioritize = { 605 770 601 }
 				limit = {
 					is_controlled_by = ROOT
 					free_building_slots = {
@@ -1154,7 +1156,7 @@ industry_evac_decision = {
 		
 		#Move IC
 		random_owned_controlled_state = {
-			prioritize = { 605 603 601 }
+			prioritize = { 605 770 769 }
 			limit = {
 				is_fully_controlled_by = ROOT
 				any_neighbor_state = {
@@ -1199,7 +1201,7 @@ industry_evac_decision = {
 				}
 			}
 			random_owned_controlled_state = {
-				prioritize = { 605 603 601 }
+				prioritize = { 605 770 769 }
 				limit = {
 					is_controlled_by = ROOT
 					free_building_slots = {

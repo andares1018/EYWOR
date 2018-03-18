@@ -15,7 +15,7 @@ continuous_focus_palette = {
 	position = { x = 50 y = 1100 }
 	
 	focus = {
-		id = warlord_continuous_counter_insurgency
+		id = MAN_continuous_counter_insurgency
 		
 		icon = GFX_goal_continuous_counter_insurgency
 		
@@ -64,7 +64,7 @@ continuous_focus_palette = {
 	}
 		
 	focus = {
-		id = warlord_continuous_naval_production
+		id = MAN_continuous_naval_production
 		
 		icon = GFX_goal_continuous_naval_production
 		
@@ -85,7 +85,7 @@ continuous_focus_palette = {
 	}
 
 	focus = {
-		id = warlord_continuous_air_production
+		id = MAN_continuous_air_production
 		
 		icon = GFX_goal_continuous_air_production
 		
@@ -106,7 +106,7 @@ continuous_focus_palette = {
 	}
 	
 	focus = {
-		id = warlord_continuous_non_factory_construct
+		id = MAN_continuous_non_factory_construct
 		
 		icon = GFX_goal_continuous_non_factory_construct
 		
@@ -139,7 +139,7 @@ continuous_focus_palette = {
 	}
 
 	focus = {
-		id = warlord_continuous_reduce_training_time
+		id = MAN_continuous_reduce_training_time
 		
 		icon = GFX_goal_continuous_reduce_training_time
 		
@@ -162,7 +162,7 @@ continuous_focus_palette = {
 	}
 
 	focus = {
-		id = warlord_continuous_suppression
+		id = MAN_continuous_suppression
 		
 		icon = GFX_goal_continuous_suppression
 		
@@ -190,7 +190,7 @@ continuous_focus_palette = {
 	}
 
 	focus = {
-		id = warlord_continuous_repair
+		id = MAN_continuous_repair
 		
 		icon = GFX_goal_continuous_repairments
 		
@@ -219,7 +219,7 @@ continuous_focus_palette = {
 	}
 
 	focus = {
-		id = warlord_continuous_tech_share
+		id = MAN_continuous_tech_share
 		
 		icon = GFX_goal_continuous_research
 		
@@ -264,7 +264,7 @@ continuous_focus_palette = {
 	}
 	
 	focus = {
-		id = warlord_continuous_boost_freedom
+		id = MAN_continuous_boost_freedom
 		
 		icon = GFX_goal_continuous_boost_freedom
 		
@@ -289,7 +289,7 @@ continuous_focus_palette = {
 	}
 
 	focus = {
-		id = warlord_continuous_restrict_freedom
+		id = MAN_continuous_restrict_freedom
 		
 		icon = GFX_goal_continuous_restrict_freedom
 		

@@ -1,0 +1,29 @@
+state={
+	id=790
+	name="STATE_790"
+	provinces={
+		2053 4888 7270 10490 11448 12732 
+	}
+	history={
+		owner = XSM
+		add_core_of = XSM
+		add_core_of = CHI
+		add_core_of = PRC
+		victory_points = {
+			12732 10 
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 2
+			arms_factory = 1
+		}
+		1939.1.1 = {
+			owner = XSM
+
+		}
+
+	}
+	manpower=1296100
+	state_category=town
+	buildings_max_level_factor=1.000
+}

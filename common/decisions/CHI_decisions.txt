@@ -51,7 +51,7 @@ CHI_army_reform = {
 
 		available = {
 			has_army_experience > 99
-			has_completed_focus = CHI_army_reform
+			has_completed_focus = CHI_reorganize_nra
 		}
 
 		cost = 0
@@ -132,7 +132,7 @@ CHI_army_reform = {
 
 		visible = {
 			tag = CHI
-			has_completed_focus = CHI_army_reform
+			has_completed_focus = CHI_reorganize_nra
 		}
 
 		complete_effect = {
@@ -186,7 +186,7 @@ CHI_army_reform = {
 		fire_only_once = yes
 
 		visible = {
-			has_completed_focus = CHI_60_divisions_plan
+			has_completed_focus = german_training_method
 		}
 
 		days_remove = 180
@@ -2232,7 +2232,14 @@ foreign_support = {
 					}
 				}
 			}
-			747 = {
+			771 = {
+				CONTROLLER = {
+					NOT = {
+						has_war_with = ROOT
+					}
+				}
+			}
+			772 = {
 				CONTROLLER = {
 					NOT = {
 						has_war_with = ROOT
@@ -2245,7 +2252,8 @@ foreign_support = {
 					state = 288
 					state = 640
 					state = 325
-					state = 747
+					state = 771
+					state = 772
 				}
 				CONTROLLER = {
 					OR = {
@@ -2338,6 +2346,20 @@ foreign_support = {
 				}
 			}
 			325 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			771 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			772 = {
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -2450,7 +2472,7 @@ foreign_support = {
 			}
 		}
 	}
-	CHI_expand_the_airlift = {
+	CHI_expand_the_airlift = {	
 		icon = generic_construction
 		available = {	
 			OR = {

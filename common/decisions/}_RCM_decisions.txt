@@ -1,4 +1,159 @@
+foreign_politics = {
+	JAP_sue_for_peace_CHI = {
 
+		available = {
+			FROM = { 
+				surrender_progress < 0.2 # if they are losing, lets not allow it
+			}
+			custom_trigger_tooltip = {
+				tooltip = JAP_sue_for_peace_TT
+				NOT = {
+					controls_state = 525
+					controls_state = 527
+				}
+				NOT = {
+					any_state = {
+						is_core_of = CHI
+						NOT = {
+							state = 524
+						}
+						OR = {
+							is_controlled_by = JAP
+							AND = {
+								is_controlled_by = ECA
+								ECA = { is_subject_of = JAP }
+							}
+							AND = {
+								is_controlled_by = MAN
+								MAN = { is_subject_of = JAP }
+							}
+						}
+					}
+				}
+				MAN = {
+					OR = {
+						exists = no
+						NOT = {
+							is_subject_of = JAP
+						}
+						has_capitulated = yes
+					}
+				}
+			}
+		}
+
+		target_trigger = {
+			#Target is FROM
+			FROM = {
+				tag = event_target:WTT_current_china_leader
+				has_war_with = JAP
+			}
+		}
+
+		visible = {
+			tag = JAP
+			always = no
+			any_country = {
+				is_literally_china = yes
+				has_war_with = JAP
+			}
+		}
+
+		cost = 0
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 400
+		}
+
+		complete_effect = {
+			event_target:WTT_current_china_leader = {
+				country_event = { id = wtt_japan.126 days = 1 }
+			}
+		}
+	}
+	
+	CHI_sue_for_peace_JAP = {
+
+		available = {
+			NOT = {
+				OR = {
+					has_idea = CHI_sunfall_sea
+					has_idea = CHI_arc
+				}
+			}
+			FROM = { 
+				surrender_progress < 0.2 # if they are losing, lets not allow it
+			}
+			custom_trigger_tooltip = {
+				tooltip = JAP_sue_for_peace_TT
+				NOT = {
+					controls_state = 525
+					controls_state = 527
+				}
+				NOT = {
+					any_state = {
+						is_core_of = CHI
+						NOT = {
+							state = 524
+						}
+						OR = {
+							is_controlled_by = JAP
+							AND = {
+								is_controlled_by = ECA
+								ECA = { is_subject_of = JAP }
+							}
+							AND = {
+								is_controlled_by = MAN
+								MAN = { is_subject_of = JAP }
+							}
+						}
+					}
+				}
+				MAN = {
+					OR = {
+						exists = no
+						NOT = {
+							is_subject_of = JAP
+						}
+						has_capitulated = yes
+					}
+				}
+			}
+		}
+
+		target_trigger = {
+			#Target is FROM
+			FROM = {
+				tag = event_target:WTT_current_china_leader
+				has_war_with = JAP
+			}
+		}
+
+		visible = {
+			is_legit_china = yes
+			has_war_with = JAP
+		}
+
+		cost = 0
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 400
+		}
+
+		complete_effect = {
+			event_target:WTT_current_china_leader = {
+				country_event = {
+					id = rcmchina.282
+				}
+			}
+		}
+	}
+	###########
+}
 socialism_on_the_rise = {
 	prepare_for_socialist_civil_war = {
 

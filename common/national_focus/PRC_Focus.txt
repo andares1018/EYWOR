@@ -5440,6 +5440,9 @@ focus_tree = {
 			603 = {
 				level_3_infra = yes
 			}
+			783 = {
+				level_3_infra = yes
+			}
 			602 = {
 				level_3_infra = yes
 			}
@@ -6886,6 +6889,9 @@ focus_tree = {
 			601 = {
 				level_3_infra = yes
 			}
+			782 = {
+				level_3_infra = yes
+			}
 			605 = {
 				level_3_infra = yes
 			}
@@ -6962,6 +6968,9 @@ focus_tree = {
 				level_6_infra = yes
 			}
 			601 = {
+				level_6_infra = yes
+			}
+			782 = {
 				level_6_infra = yes
 			}
 			605 = {

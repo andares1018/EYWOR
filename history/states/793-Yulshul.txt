@@ -1,0 +1,28 @@
+state={
+	id=793
+	name="STATE_793"
+	provinces={
+		4914 4964 7940 8018 8037 12899 
+	}
+	history={
+		owner = XSM
+		add_core_of = XSM
+		add_core_of = CHI
+		add_core_of = PRC
+		victory_points = {
+			7940 1 
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		1939.1.1 = {
+			owner = XSM
+
+		}
+
+	}
+	manpower=296100
+	state_category=rural
+	buildings_max_level_factor=1.000
+}

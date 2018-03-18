@@ -1,0 +1,23 @@
+state={
+	id=792
+	name="STATE_792"
+	provinces={
+		1778 2028 5057 5100 7727 7971 8102 12327 12596 12820 
+	}
+	history={
+		owner = NXM
+		add_core_of = NXM
+		add_core_of = CHI
+		add_core_of = PRC
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 1
+		}
+
+	}
+
+	manpower=1705400
+	buildings_max_level_factor=1.000
+	state_category=town
+}

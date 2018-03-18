@@ -35,7 +35,6 @@
  #EFM_Manchukuo.8.a:0 "Hill!"
  #EFM_Manchukuo.8.b:0 "Not to be allowed to open battles"
  #EFM_Manchukuo.8_tt:0 "-The strategy will be changed according to the situation, and if the Soviet Union controls the capital, Manchu will be able to directly vote for each other-\n"
- 
  ### Manchu event_tt ###
  Restore_Qing_Empire_tt:0 "It will restore the glory of the §YEmpire of the Great Qing§!.\n"
  
@@ -130,6 +129,11 @@
  #MAN_Restore_the_great_Qing:0 "Restore the Great Qing"
  MAN_Japanese_researchers:0 "Japanese Researchers"
  #MAN_Higher_education:0 "Higher Education"
+ MAN_war_on_the_soviet:0 "War on the Soviet"
+ MAN_reclaim_northern_territories:0 "Reclaim Northern Territories"
+ MAN_join_axis:0 "Join Axis"
+ MAN_Empire_of_the_East:0 "Empire of the East"
+ MAN_the_defacto_leader:0 "The Defacto Leader"
  
  MAN_North_Manchuria_Railway_desc:0 "The expansion of the Northern Manchurian Railway will strengthen our country's transportation capabilities in the northern region."
  MAN_South_Manchuria_Railway_desc:0 "The expansion of the South Manchuria Railway will strengthen our country's transportation operations in the southern region."
@@ -174,6 +178,11 @@
  MAN_Armored_force_desc:0 "The chariot design provided by Japan is very old, but in order to build armor, we still have to use these drawings."
  MAN_Offensive_doctrine_desc:0 "The imperial army can only protect the security of the empire's territory with an offensive. We need to focus on attackism."
  MAN_Defense_doctrine_desc:0 "Building a huge defense facility will make it impossible for the enemy to step into the empire. We will focus on defensiveism."
+ MAN_war_on_the_soviet_desc:0 "Now we got germany on our side. Together we can destroy the Soviet Union into pieces."
+ MAN_reclaim_northern_territories_desc:0 "The lost territories of Manchuria north of the Heilung River is now occupied by the soviets. We shall claim them before We make our move."
+ MAN_join_axis_desc:0 "We can't stand strong in the East on our own, and Germany can make a very good ally."
+ MAN_Empire_of_the_East_desc:0 "Now after the great defeat of Japan, we are the strongest empire in East Asia. We shall reclaim our imperial glory as an Empire of the Manchu!"
+ MAN_the_defacto_leader_desc:0 "Despite having the title of an Emperor, Puyi is merely an puppet to unite the country. The real power falls into Zhang Jinghui's hand."
  #MAN_Imperial_diplomacy_desc:0 "Our diplomatic system is still controlled by Japan, so that we can only "diplomatize" with Japan's fancy countries."
  #MAN_Be_Loyal_to_Japan_desc:0 "Relying on Japan can save our country from western colonialist aggression and we will establish closer cooperation with Japan."
  #MAN_Together_manchuria_and_japan_desc:0 "Japan and Manchu were one and we enjoyed the victory together."

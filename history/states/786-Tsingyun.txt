@@ -1,0 +1,27 @@
+state={
+	id=786
+	name="STATE_786"
+	provinces={
+		1120 7210 9970 9997 10080 10121 12014 12095 
+	}
+	history={
+		owner = GUD
+		add_core_of = GUD
+		add_core_of = CHI
+		add_core_of = PRC
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		1939.1.1 = {
+			owner = CHI
+			JAP = {
+				set_province_controller = 12095
+
+			}
+		}
+	}
+	manpower=8670000
+	buildings_max_level_factor=1.000
+	state_category=city
+}

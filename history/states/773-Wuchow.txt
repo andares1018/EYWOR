@@ -1,11 +1,13 @@
+
 state={
 	id=773
 	name="STATE_773"
 	resources={
-		tungsten=15.000
-		steel=10.000
+		tungsten=10.000
+		steel=5.000
 		chromium=5.000
 	}
+
 	history={
 		owner = GXC
 		add_core_of = GXC
@@ -14,12 +16,15 @@ state={
 		buildings = {
 			infrastructure = 3
 			arms_factory = 1
+
 		}
+
 	}
+
 	provinces={
-		1023 1597 4028 4152 7095 7128 7168 7192 10050 12023 12407 
+		1597 4028 4152 7128 7168 7192 10050 12023 
 	}
-	manpower=4236000
+	manpower=2216000
 	buildings_max_level_factor=1.000
 	state_category=town
 }

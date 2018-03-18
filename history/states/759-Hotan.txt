@@ -1,9 +1,9 @@
+
 state={
 	id=759
 	name="STATE_759"
+
 	history={
-		#owner = TNG
-		#Tunganistan
 		owner = TNG
 		add_core_of = TNG
 		add_core_of = SIK
@@ -13,18 +13,22 @@ state={
 			infrastructure = 2
 			arms_factory = 1
 			industrial_complex = 1
+
 		}
 		victory_points = {
-			4973 3
+			4973 3 
 		}
 		1938.10.25 = {
 			owner = SIK
+
 		}
+
 	}
+
 	provinces={
-		1943 1970 2074 4973 5042 8112 10315 10911 
+		1970 4973 5042 8112 
 	}
 	manpower=330700
-	state_category=rural
 	buildings_max_level_factor=1.500
+	state_category=rural
 }

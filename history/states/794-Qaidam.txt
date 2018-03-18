@@ -1,0 +1,27 @@
+state={
+	id=794
+	name="STATE_794"
+	provinces={
+		2099 5076 7997 10796 10834 10865 12890 
+	}
+	history={
+		owner = XSM
+		add_core_of = XSM
+		add_core_of = CHI
+		add_core_of = PRC
+
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+
+		}
+		1939.1.1 = {
+			owner = XSM
+
+		}
+
+	}
+	manpower=396100
+	state_category=rural
+	buildings_max_level_factor=1.000
+}

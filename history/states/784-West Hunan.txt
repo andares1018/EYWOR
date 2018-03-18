@@ -1,0 +1,23 @@
+state={
+	id=784
+	name="STATE_784"
+	resources={
+		tungsten=12.000
+	}
+	history={
+		buildings = {
+			infrastructure = 3
+
+		}
+		owner = CHI
+		add_core_of = CHI
+		add_core_of = PRC
+
+	}
+	provinces={
+		4480 7665 10006 10335 12017 12053 12310 
+	}
+	manpower=11293700
+	buildings_max_level_factor=1.000
+	state_category=town
+}

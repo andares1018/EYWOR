@@ -1,0 +1,21 @@
+state={
+	id=799
+	name="STATE_799"
+	provinces={
+		4714 4788 4823 4849 7693 7737 12590 12737 
+	}
+	history={
+		owner = SIK
+		add_claim_by = CHI
+		add_claim_by = PRC
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+
+		}
+
+	}
+	manpower=320800
+	state_category=rural
+	buildings_max_level_factor=1.000
+}

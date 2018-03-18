@@ -1,13 +1,9 @@
 
 state={
 	id=601
-	name="STATE_601" # Xikang
-	manpower = 968200
-
-	state_category = rural
-
+	name="STATE_601"
 	resources={
-		oil=2
+		oil=2.000
 	}
 
 	history={
@@ -20,20 +16,26 @@ state={
 			infrastructure = 3
 			industrial_complex = 1
 			arms_factory = 1
-		}
 
+		}
 		1939.1.1 = {
 			buildings = {
 				industrial_complex = 1
 				infrastructure = 2
+
 			}
+
 		}
-		
-		victory_points = { 10841 5 }
+		victory_points = {
+			10841 5 
+		}
 
 	}
 
 	provinces={
-		1918 1999 2067 4999 7294 7988 8104 10726 10841 10903 12837 12724
+		1999 2067 4999 7294 10726 10841 
 	}
+	manpower=968200
+	buildings_max_level_factor=1.000
+	state_category=rural
 }
