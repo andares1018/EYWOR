@@ -571,8 +571,8 @@
  ECA_neutrality_ADJ:1 "Mongolian"
  ECA_communism_ADJ:1 "Mongolian"
  ##
- FIC_fascism:1 "Imperial State of Indochina"
- FIC_fascism_DEF:1 "The Imperial State of Indochina"
+ FIC_fascism:1 "French Indochina"
+ FIC_fascism_DEF:1 "French Indochina"
  FIC_democratic:1 "Indochina"
  FIC_democratic_DEF:1 "Indochina"
  FIC_neutrality:1 "French Indochina"

@@ -25,5 +25,9 @@ country_event = {
 		ai_chance = { factor = 100 }
 		add_ideas = FRA_front_populaire
 		set_politics = { ruling_party = n_socialism elections_allowed = yes }
+		hidden_effect = {
+		FIC = { country_event = { days = 100 id = rcmindochina.1 } } #new colonial governor appointed
+		}
+		
 	}
 }
