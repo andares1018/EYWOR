@@ -20,6 +20,7 @@ VIC_indochinese_politics = {
 		}
 		
 		visible = {
+		has_global_flag = fall_of_france
 		AND = {
 		OR = {
 			original_tag = FRA
@@ -47,7 +48,7 @@ VIC_indochinese_politics = {
 
 		days_remove = 0
 
-		cost = 20
+		cost = 5
 
 		complete_effect = {
 		FIC = { country_event = { days = 1 id = rcmindochina.3 } } #jean decoux appointed

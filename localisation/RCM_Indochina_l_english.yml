@@ -24,3 +24,6 @@
  VIC_indochinese_politics:0 "Indochinese Politics"
  VIC_remove_catroux:0 "Remove Georges Catroux"
  VIC_remove_catroux_desc:0 "To avoid the defection of our Empire to the traitorous gaullist mercenaries, we should appoint loyal governors in our colony. Jean Decoux is one of them."
+ 
+ #Flags
+ fall_of_france:0 "Fall of France"

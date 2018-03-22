@@ -110,10 +110,18 @@ country_event = {
 		}
 		NOT = { has_government = fascism }
 		}
-		annex_country = { target = FIC transfer_troops = yes }
+		puppet = FIC
+		create_country_leader = {
+		name = "Georges Catroux"
+			desc = "POLITICS_GEORGES_CATROUX_DESC"
+			picture = "gfx/leaders/FIC/Portrait_Indochina_Georges_Catroux.dds"
+			expire = "1965.1.1"
+			ideology = conservatism
+			traits = {
+			}
+		}
 		country_event = { days = 1 id = rcmindochina.5 } #free france informed
 		}
-
 		every_country = {
 		limit = {
 		OR = { 
