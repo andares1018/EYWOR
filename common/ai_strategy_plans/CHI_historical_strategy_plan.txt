@@ -62,9 +62,7 @@ CHI_nationalist_historical_plan = {
 		CHI_new_life_movement #May 20 1943
 		CHI_modern_logistics #July 30 1943
 	}
-
 	research = {
-
 	}
 
 	ideas = {

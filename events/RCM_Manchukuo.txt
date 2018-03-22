@@ -240,5 +240,60 @@ country_event = {
 }
 
 ######################################
-#Border Clash w/ SOV
+#Integration and extension
 ######################################
+country_event = {
+	id = EFM_Manchukuo.9
+	title = EFM_Manchukuo.9.t
+	picture = GFX_report_event_soldiers_in_france
+	desc = EFM_Manchukuo.9.d
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EFM_Manchukuo.9.a
+		effect_tooltip = {
+			if = {
+				limit = {
+					has_dlc = "Together for Victory"
+				}
+				MAN = {
+					add_autonomy_ratio = {
+						value = -0.05
+					}
+					add_ideas = integration_movement
+				}
+				else = {
+					set_autonomy = {
+						target = MAN
+						autonomous_state = autonomy_integrated_puppet
+					}
+				}
+			}
+		}
+	}
+}
+country_event = {
+	id = EFM_Manchukuo.10
+	title = EFM_Manchukuo.10.t
+	picture = GFX_report_event_soldiers_in_france
+	desc = EFM_Manchukuo.10.d
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EFM_Manchukuo.10.a
+		every_state = {
+			limit = {
+				is_owned_by = MAN
+			}
+			add_core_of = JAP
+		}
+		JAP = {
+			annex_country = {
+				target = MAN
+				transfer_troops = yes
+			}
+		}
+	}
+}

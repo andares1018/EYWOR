@@ -23,7 +23,7 @@ add_ideas = {
 if = {
 	limit = { has_dlc = "Waking the Tiger" }
 	add_ideas = {
-		JAP_interservice_rivalry_balanced		
+		JAP_interservice_rivalry_balanced
 	}
 }
 
@@ -44,7 +44,7 @@ set_technology = {
 	marines  = 1
 	gw_artillery = 1
 	gwtank = 1
-	basic_light_tank = 1`
+	basic_light_tank = 1
 	cv_early_fighter = 1
 	cv_CAS1 = 1
 	cv_naval_bomber1 = 1
@@ -80,10 +80,10 @@ add_opinion_modifier = { target = CHI modifier = hostile_status }
 1939.1.1 = {
 
 	add_political_power = 1198
-	set_party_name = { 
-		ideology = fascism 
-		name = JAP_fascism_party_toh 
-		long_name = JAP_fascism_party_toh 
+	set_party_name = {
+		ideology = fascism
+		name = JAP_fascism_party_toh
+		long_name = JAP_fascism_party_toh
 	}
 	set_cosmetic_tag = JAP_TOH
 	set_country_flag = konoe_cabinet_lol
@@ -129,7 +129,7 @@ add_opinion_modifier = { target = CHI modifier = hostile_status }
 	puppet = RFM
 	set_autonomy = {
 		target = ECA
-		autonomous_state = autonomy_puppet 
+		autonomous_state = autonomy_puppet
 	}
 	#puppet = NSG
 	#puppet = SCG
@@ -211,7 +211,7 @@ set_autonomy = {
 }
 set_autonomy = {
 	target = ECA
-	autonomous_state = autonomy_integrated_puppet 
+	autonomous_state = autonomy_integrated_puppet
 }
 
 
@@ -276,11 +276,11 @@ set_politics = {
 	}
 	set_autonomy = {
 		target = SCG
-		autonomous_state = autonomy_integrated_puppet 
+		autonomous_state = autonomy_integrated_puppet
 	}
 	set_autonomy = {
 		target = NSG
-		autonomous_state = autonomy_integrated_puppet 
+		autonomous_state = autonomy_integrated_puppet
 	}
 }
 
@@ -353,19 +353,19 @@ create_country_leader = {
 	expire = "1989.1.1"
 	ideology = liberalism
 	traits = {
-   
+
 	}
 }
 
-		   
-		  
-			 
-					
-				   
-		   
-   
-  
- 
+
+
+
+
+
+
+
+
+
 create_corps_commander = {
 	name = "Tomoyuki Yamashita"
 		picture = "Portrait_Japan_Tomoyuki_Yamashita.dds"
@@ -382,7 +382,7 @@ create_corps_commander = {
 create_field_marshal = {
 	name = "Hisaichi Terauchi"
 	picture = "Portrait_Japan_Hisaichi_Terauchi.dds"
-	traits = { 
+	traits = {
 		offensive_doctrine
 		JAP_samurai_lineage   # hakushaku
 		politically_connected
@@ -405,12 +405,12 @@ create_field_marshal = {
 	logistics_skill = 4
 }
 
-						
-					  
-																																												 
-																							  
-		  
- 
+
+
+
+
+
+
 
 create_corps_commander = {
 	name = "Akira Muto"
@@ -427,7 +427,7 @@ create_corps_commander = {
 	name = "Kanji Ishiwara"
 		picture = "Portrait_Japan_Kanji_Ishiwara.dds"
 	traits = { JAP_samurai_lineage }
-	skill = 1 
+	skill = 1
 	attack_skill = 1
 	defense_skill = 1
 	planning_skill = 1
@@ -482,7 +482,7 @@ create_corps_commander = {
 	name = "Naruhiko Higashikuni"
 	picture = "Portrait_Japan_Naruhiko_Higashikuni.dds"
 	traits = { JAP_samurai_lineage politically_connected }
-	skill = 3 
+	skill = 3
 	attack_skill = 3
 	defense_skill = 3
 	planning_skill = 2
@@ -515,13 +515,13 @@ create_corps_commander = {
 	name = "Kenji Doihara"
 		picture = "Portrait_Japan_Kenji_Doihara.dds"
 	traits = { career_officer substance_abuser }
-	skill = 1 
+	skill = 1
 	attack_skill = 1
 	defense_skill = 1
 	planning_skill = 1
-						
-																																													 
-			  
+
+
+
 	logistics_skill = 1
 }
 
@@ -594,7 +594,7 @@ create_corps_commander = {
 	name = "Sadao Araki"
 		picture = "Portrait_Japan_Sadao_Araki.dds"
 	traits = { JAP_samurai_lineage }
-		  
+
 	skill = 2
 	attack_skill = 1
 	defense_skill = 2
@@ -605,7 +605,7 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Keisuke Fujie"
 		picture = "Portrait_Japan_Keisuke_Fujie.dds"
-	traits = { fortress_buster career_officer politically_connected } 
+	traits = { fortress_buster career_officer politically_connected }
 	skill = 3
 	attack_skill = 1
 	defense_skill = 3
@@ -803,7 +803,7 @@ create_navy_leader = {
 			}
 			obsolete = yes
 		}
-		create_equipment_variant = {  
+		create_equipment_variant = {
 			name = "Akagi Class"
 			type = carrier_1
 			parent_version = 0
@@ -827,7 +827,7 @@ create_navy_leader = {
 			}
 			obsolete = yes
 		}
-		### Battleship Variants	
+		### Battleship Variants
 		create_equipment_variant = {
 			name = "Ise Class"
 			type = battleship_1
@@ -852,7 +852,7 @@ create_navy_leader = {
 			}
 			obsolete = yes
 		}
-		### Heavy Cruiser Variants	
+		### Heavy Cruiser Variants
 		create_equipment_variant = {
 			name = "Myoko Class"
 			type = heavy_cruiser_1
@@ -877,7 +877,7 @@ create_navy_leader = {
 			}
 			obsolete = yes
 		}
-		### Light Cruiser Variants	
+		### Light Cruiser Variants
 		create_equipment_variant = {
 			name = "Yubari Class"
 			type = light_cruiser_1
@@ -890,7 +890,7 @@ create_navy_leader = {
 			}
 			obsolete = yes
 		}
-		create_equipment_variant = {	  
+		create_equipment_variant = {
 			name = "Kuma Class"
 			type = light_cruiser_1
 			parent_version = 0
@@ -914,7 +914,7 @@ create_navy_leader = {
 			}
 			obsolete = yes
 		}
-		create_equipment_variant = {	  
+		create_equipment_variant = {
 			name = "Sendai Class"
 			type = light_cruiser_1
 			parent_version = 1
@@ -938,8 +938,8 @@ create_navy_leader = {
 				ship_anti_air_upgrade = 1
 			}
 			obsolete = yes
-		}	
-		create_equipment_variant = {	  
+		}
+		create_equipment_variant = {
 			name = "Mutsuki Class"
 			type = destroyer_1
 			parent_version = 0
@@ -950,7 +950,7 @@ create_navy_leader = {
 				ship_anti_air_upgrade = 1
 			}
 			obsolete = yes
-		}	
+		}
 		create_equipment_variant = {
 			name = "Fubuki Class"
 			type = destroyer_1
@@ -962,7 +962,7 @@ create_navy_leader = {
 				ship_anti_air_upgrade = 2
 			}
 			obsolete = yes
-		}	
+		}
 		create_equipment_variant = {
 			name = "Hatsuharu Class"
 			type = destroyer_1
@@ -986,7 +986,7 @@ create_navy_leader = {
 				ship_anti_air_upgrade = 3
 			}
 		}
-		### Submarine Variants	
+		### Submarine Variants
 		create_equipment_variant = {
 			name = "Kiraisen Class"
 			type = submarine_1
@@ -1095,7 +1095,7 @@ create_navy_leader = {
 			}
 			obsolete = yes
 		}
-	# 1939 Start #			
+	# 1939 Start #
 	1939.1.1 = {
 		### Carrier Variants
 		create_equipment_variant = {
@@ -1121,7 +1121,7 @@ create_navy_leader = {
 		#		ship_anti_air_upgrade = 2
 		#	}
 		#	obsolete = yes
-		#}	
+		#}
 		create_equipment_variant = {
 			name = "Kagero Class"
 			type = destroyer_2
@@ -1132,5 +1132,5 @@ create_navy_leader = {
 				ship_ASW_upgrade = 2
 				ship_anti_air_upgrade = 2
 			}
-		}	
+		}
 	}

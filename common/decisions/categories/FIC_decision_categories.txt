@@ -1,34 +1,34 @@
 VIC_indochinese_politics = {
 	allowed = {
-	OR = {
-	always = no
-	AND = {
 		OR = {
-		original_tag = FRA
-		tag = FRA
+			always = no
+			AND = {
+				OR = {
+					original_tag = FRA
+					tag = FRA
+				}
+				has_government = fascism
+
+				FIC = {
+					is_puppet = no
+				}
+			}
 		}
-		has_government = fascism
-	
-		FIC = { 
-		is_puppet = no
-		}
-	}
-	}
 	}
 	visible = {
-	OR = {
-	always = no
-	AND = {
-	OR = {
-		original_tag = FRA
-		tag = FRA
-	}
-	has_government = fascism
-	
-		FIC = { 
-		is_puppet = no
+		OR = {
+			always = no
+			AND = {
+				OR = {
+					original_tag = FRA
+					tag = FRA
+				}
+				has_government = fascism
+
+				FIC = {
+					is_puppet = no
+				}
+			}
 		}
-	}
-	}
 	}
 }

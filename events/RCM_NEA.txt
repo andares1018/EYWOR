@@ -22,7 +22,7 @@ country_event = {
 			is_faction_leader = yes
 			has_completed_focus = nea_xian_incident
 		}
-		has_global_flag = xian_kmt_refuse
+		has_global_flag = CHI_xian_refused
 		NOT = { has_country_flag = joined_xian_war }
 	}
 	mean_time_to_happen = {

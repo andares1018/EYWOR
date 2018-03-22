@@ -37,35 +37,6 @@ is_rrc = {
 	}
 }
 
-is_forbidden_states_in_puppet_formation = {
-	OR = {
-		state = 594
-		state = 743
-		state = 761
-		state = 599
-		state = 621
-		state = 763
-		state = 762
-		state = 622
-		state = 604
-		state = 603
-		state = 783
-		state = 605
-		state = 769
-		state = 770
-		state = 325
-		state = 771
-		state = 772
-		state = 601
-		state = 782
-		state = 616
-		state = 760
-		state = 283
-		state = 757
-		state = 612
-		state = 611
-	}
-}
 is_owned_by_CHI_PRC_WARLORD_SIK = {
 	OR = {
 		is_owned_by = CHI
@@ -139,133 +110,11 @@ JAP_or_its_puppet_has_full_control_over_prev_states = {
 		}
 	}
 }
-more_than_ten_troops_of_JAP_or_its_puppet_in_prev_state = {
-	OR = {
-		JAP = {
-			divisions_in_state = {
-				state = PREV
-				size > 10
-			}
-		}
-		EHB = {
-			divisions_in_state = {
-				state = PREV
-				size > 10
-			}
-		}
-		if = {
-			limit = {
-				HPC = {
-					is_subject_of = JAP
-				}
-			}
-			HPC = {
-				divisions_in_state = {
-					state = PREV
-					size > 10
-				}
-			}
-		}
-		RFM = {
-			divisions_in_state = {
-				state = PREV
-				size > 10
-			}
-		}
-		ECA = {
-			divisions_in_state = {
-				state = PREV
-				size > 10
-			}
-		}
-		NSG = {
-			divisions_in_state = {
-				state = PREV
-				size > 10
-			}
-		}
-		SCG = {
-			divisions_in_state = {
-				state = PREV
-				size > 10
-			}
-		}
-		MAN = {
-			divisions_in_state = {
-				state = PREV
-				size > 10
-			}
-		}
-	}
-} 
+
 is_capital_of_japan_puppet = {
-	OR = {#THESE ARE ALL CAPITALS
-		AND = {
-			state = 328
-			country_exists = MAN
-		}
-		AND = {
-			state = 608
-			OR = {
-				country_exists = EHB
-				AND = {
-					country_exists = HPC
-					HPC = {
-						is_subject_of = JAP
-					}
-				}
-			}
-			has_global_flag = jnc_exists
-		}
-		AND = {
-			state = 613
-			country_exists = CCP
-		}
-		AND = {
-			state = 609
-			country_exists = EHB
-			NOT = {
-				has_global_flag = jnc_exists
-			}
-		}
-		AND = {
-			state = 611
-			OR = {
-				country_exists = SCG
-				AND = {
-					country_exists = ECA
-					has_global_flag = mej_exists
-				}
-			}
-		}
-		AND = {
-			state = 598
-			OR = {
-				country_exists = RFM
-				AND = {
-					country_exists = EHB
-					has_global_flag = rrc_exists
-				}
-			}
-		}
-		AND = {
-			state = 757
-			country_exists = ECA
-			NOT = {
-				has_global_flag = mua_exists
-			}
-		}
-		AND = {
-			state = 612
-			country_exists = ECA
-			NOT = {
-				has_global_flag = mej_exists
-			}
-		}
-		AND = {
-			state = 762
-			country_exists = NSG
-		}
+	is_capital = yes
+	owner = {
+		is_subject_of = JAP
 	}
 }
 is_controlled_by_jap_or_its_puppet = {

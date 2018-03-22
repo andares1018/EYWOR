@@ -838,12 +838,8 @@ country_event = {
 		every_state = {
 			limit = {
 				OR = {
-					ROOT = {
-						has_full_control_of_state = PREV
-					}
-					JAP = {
-						has_full_control_of_state = PREV
-					}
+					is_fully_controlled_by = ROOT
+					is_fully_controlled_by = JAP
 					controller = {
 						is_subject_of = JAP
 						has_full_control_of_state = PREV
@@ -853,9 +849,6 @@ country_event = {
 					is_owned_by = ECA
 				}
 				is_core_of = ROOT
-				NOT = {
-					is_forbidden_states_in_puppet_formation = yes
-				}
 			}
 			ROOT = { set_state_controller = PREV }
 			#ROOT = { transfer_state = PREV } #puppet transfer state active

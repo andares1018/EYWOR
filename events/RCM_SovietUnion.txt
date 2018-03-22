@@ -228,7 +228,7 @@ country_event = {
 			CHI = {
 				country_event = { days = 1 id = rcmchina.315 }
 			}
-			set_global_flag = xian_kmt_refuse
+			set_global_flag = CHI_xian_refused
 		}
 		PRC = {
 			add_to_war = {

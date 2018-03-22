@@ -131,7 +131,16 @@ create_country_leader = {
 		#
 	}
 }
-
+create_field_marshal = {
+	name = "Ma Hushan"
+	portrait_path = "Portrait_Ma_Hushan.dds"
+	traits = { defensive_doctrine } 
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+}
 
 
 

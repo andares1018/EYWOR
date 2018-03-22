@@ -132,8 +132,12 @@ create_country_leader = {
 create_field_marshal = {
 	name = "Ma Bufang"
 	portrait_path = "gfx/leaders/XSM/Portrait_Xibei_San_Ma_Ma_Bufang.dds"
-	traits = { offensive_doctrine }
+	traits = { offensive_doctrine trait_reckless }
 	id = 3003
 	skill = 4
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 4
+	logistics_skill = 3
 }
 

@@ -619,6 +619,7 @@ foreign_politics = {
 
 		visible = {
 			tag = JAP
+			always = no
 			any_country = {
 				is_literally_china = yes
 				has_war_with = JAP

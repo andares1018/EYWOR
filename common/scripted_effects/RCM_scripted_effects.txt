@@ -222,15 +222,26 @@ RRC_core = {
 	add_state_core = 770
 	add_state_core = 326
 	add_state_core = 602
+	add_state_core = 784
 	add_state_core = 599
+	add_state_core = 785
 	add_state_core = 773
 	add_state_core = 593
+	add_state_core = 786
 	add_state_core = 594
 	add_state_core = 601
 	add_state_core = 782
 	add_state_core = 729
 	add_state_core = 728
 	add_state_core = 329
+	add_state_core = 789
+	add_state_core = 788
+	add_state_core = 787
+	add_state_claim = 790
+	add_state_claim = 791
+	add_state_claim = 792
+	add_state_claim = 793
+	add_state_claim = 794
 	add_state_claim = 604
 	add_state_claim = 762
 	add_state_claim = 283
@@ -477,7 +488,6 @@ RRC_CREATION = {
 	every_state = {
 		limit = {
 			NOT = {
-				is_forbidden_states_in_puppet_formation = yes
 				is_owned_by = ECA
 				AND = {
 					is_owned_by = XSM
@@ -495,7 +505,6 @@ RRC_CREATION = {
 		}
 		PREV = {
 			set_state_controller = PREV
-			#set_state_owner = PREV #puppet transfer state active
 		}
 		if = {
 			limit = {
@@ -503,7 +512,6 @@ RRC_CREATION = {
 			}
 			PREV = {
 				set_state_controller = PREV
-				#transfer_state = PREV #puppet transfer state active
 			}
 		}
 	}
@@ -558,6 +566,7 @@ JNC_CREATION = {
 		transfer_state = 608
 		add_state_core = 614
 		add_state_core = 615
+		add_state_core = 789
 		add_state_core = 767
 		add_state_core = 608
 		add_state_core = 609
@@ -604,6 +613,7 @@ JNC_CREATION = {
 		JNC = {
 			add_state_core = 614
 			add_state_core = 615
+			add_state_core = 789
 			add_state_core = 767
 			add_state_core = 608
 			add_state_core = 609
@@ -1224,5 +1234,4 @@ industry_evac_decision = {
 		}
 		clr_country_flag = CHI_industrial_evacuations_moved_IC
 	}
-}
 }

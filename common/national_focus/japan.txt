@@ -2062,6 +2062,11 @@ focus_tree = {
 		}
 		completion_reward = {
 			set_global_flag = MAN_no_more
+			MAN = {
+				country_event = {
+					id = EFM_Manchukuo.9
+				}			
+			}
 			if = {
 				limit = {
 					has_dlc = "Together for Victory"
@@ -2094,16 +2099,29 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		completion_reward = {
-			every_state = {
-				limit = {
-					is_owned_by = MAN
-				}
-				add_core_of = JAP
+		available = {
+			MAN = {
+				compare_autonomy_progress_ratio < 0.25
+				has_idea = MAN_kwantung_veto
 			}
-			annex_country = {
-				target = MAN
-				transfer_troops = yes
+		}
+		completion_reward = {
+			MAN = {
+				country_event = {
+					id = EFM_Manchukuo.10
+				}
+			}
+			effect_tooltip = {
+				every_state = {
+					limit = {
+						is_owned_by = MAN
+					}
+					add_core_of = JAP
+				}
+				annex_country = {
+					target = MAN
+					transfer_troops = yes
+				}
 			}
 		}
 	}
@@ -2260,91 +2278,62 @@ focus_tree = {
 		cancel_if_invalid = yes
 	}
 	focus = {
-		id = subdue_warlords_focus
-		icon = GFX_goal_generic_occupy_states_ongoing_war
+		id = JAP_develop_chinese_resources
+		icon = GFX_goal_generic_construct_civilian
 		cost = 10.00
 		prerequisite = {
-			focus = JAP_intervene_in_china
-		}
-		prerequisite = {
 			focus = JAP_secure_china
+			focus = unite_china
 		}
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = JAP_secure_china
+
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				#OR = {
-					any_country = {
-						has_war_with = ROOT
-						is_major = yes
-					}
-				}
-			}
-			#has_war_with_amount > 2
-			#}
-		will_lead_to_war_with = PRC
-		will_lead_to_war_with = GUD
-		will_lead_to_war_with = GXC
-		will_lead_to_war_with = SIC
-		will_lead_to_war_with = SHX
-		will_lead_to_war_with = XSM
-		will_lead_to_war_with = NXM
-		will_lead_to_war_with = XIK
-		will_lead_to_war_with = HPC
-		will_lead_to_war_with = SHD
-		will_lead_to_war_with = NEA
-		will_lead_to_war_with = HMI
-		will_lead_to_war_with = TNG
-		will_lead_to_war_with = YUN
-		completion_reward = {
-			custom_effect_tooltip = declare_war_on_all_warlords_tt
-			hidden_effect = {
-				every_country = {
-					limit = {
-						is_warlord = yes
-						is_subject = no
-					}
-					if = {
-						limit = {
-							country_exists = PREV
-							is_puppet = no
-							NOT = {
-								is_in_faction_with = ROOT
-								is_in_faction_with = SOV
-							}
-						}
-						ROOT = {
-							create_wargoal = {
-								target = PREV
-								type = puppet_wargoal_focus
-							}
-						}
-					}
-				}
-			}
+			factor = 4
 		}
+
 		available = {
-			NOT = {
-				has_war_with = CHI
-				has_global_flag = china_split
-			}
-			OR = {
-				CHI = {
-					exists = no
-				}
-				CHI = {
-					is_in_faction_with = JAP
-				}
-			}
 			any_country = {
-				is_warlord = yes
-				is_subject = no
+				OR = {
+					tag = ROOT
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+				}
+				has_full_control_of_state = 605
+				has_full_control_of_state = 325
 			}
 		}
+
 		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			605 = {
+				add_resource = {
+					type = aluminium
+					amount = 8
+				}
+			}
+			325 = {
+				add_resource = {
+					type = aluminium
+					amount = 12
+				}
+			}
+			if = {
+				limit = { has_dlc = "Waking the Tiger" }
+				unlock_decision_category_tooltip = prospect_for_resources
+			}
 		}
 	}
 	focus = {
@@ -7253,7 +7242,7 @@ focus_tree = {
 		cost = 10.00
 		prerequisite = {
 			focus = fortress_man
-			focus = subdue_warlords_focus
+			focus = JAP_develop_chinese_resources
 		}
 		mutually_exclusive = {
 			focus = man_independent_focus

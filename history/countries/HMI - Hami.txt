@@ -141,4 +141,14 @@ create_country_leader = {
 		#
 	}
 }
+create_field_marshal = {
+	name = "Yulbars Khan"
+	picture = "Portrait_Yulbars_Khan.dds"
+	traits = { defensive_doctrine } 
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+}
 

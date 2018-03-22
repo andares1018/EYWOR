@@ -1,13 +1,13 @@
 ﻿
 add_namespace = EFM_independent
-# Join faction
+# Join faction yes!
 country_event = {
 	id = EFM_independent.1
 	title = EFM_independent.1.t
 	desc = EFM_independent.1.d
-	
+
 	picture = GFX_report_event_generic_read_write
-	
+
 	is_triggered_only = yes
 	option = {
 		ai_chance = { factor = 90 }
@@ -19,29 +19,29 @@ country_event = {
 		name = EFM_independent.1.b
 		FROM = { country_event = { id = EFM_independent.2 days = 1 } }
 	}
-	
+
 }
 country_event = {
 	id = EFM_independent.2
 	title = EFM_independent.2.t
 	desc = EFM_independent.2.d
-	
+
 	picture = GFX_report_event_chinese_soldiers_02
-	
+
 	is_triggered_only = yes
 	option = {
 		name = EFM_independent.2.a
 	}
-	
+
 }
 # Join a country
 country_event = {
 	id = EFM_independent.3
 	title = EFM_independent.3.t
 	desc = EFM_independent.3.d
-	
+
 	picture = GFX_report_event_chinese_japanese_handshake
-	
+
 	is_triggered_only = yes
 	option = {
 		ai_chance = { factor = 70 }
@@ -54,49 +54,49 @@ country_event = {
 		ROOT = { set_autonomy = { target = FROM autonomy_state = autonomy_integrated_puppet } }
 		FROM = { country_event = { id = EFM_independent.4 days = 1 } }
 	}
-	
+
 }
 country_event = {
 	id = EFM_independent.4
 	title = EFM_independent.4.t
 	desc = EFM_independent.4.d
-	
+
 	picture = GFX_report_event_chinese_japanese_handshake
-	
+
 	is_triggered_only = yes
 	option = {
 		name = EFM_independent.4.a
 	}
-	
+
 }
 # CCP Defeat a warlord
 country_event = {
 	id = EFM_independent.5
 	title = EFM_independent.5.t
 	desc = EFM_independent.5.d
-	
+
 	picture = GFX_report_event_chinese_soldiers_02
-	
+
 	is_triggered_only = yes
 	option = {
 		name = EFM_independent.5.b
 		ROOT = { set_autonomy = { target = FROM autonomy_state = autonomy_integrated_puppet } }
 	}
-	
+
 }
 country_event = {
 	id = EFM_independent.6
 	title = EFM_independent.6.t
 	desc = EFM_independent.6.d
-	
+
 	picture = GFX_report_event_chinese_soldiers_02
-	
+
 	is_triggered_only = yes
 	option = {
 		name = EFM_independent.6.a
 		ROOT = { annex_country = { target = FROM transfer_troops = yes } }
 	}
-	
+
 }
 # China demand territory
 country_event = {
@@ -104,7 +104,7 @@ country_event = {
 	title = EFM_independent.10.t
 	desc = EFM_independent.10.d
 	picture = GFX_report_event_chinese_soldiers_fighting
-	
+
 	is_triggered_only = yes
 	option = {
 		ai_chance = {
@@ -150,7 +150,7 @@ country_event = {
 	title = EFM_independent.11.t
 	desc = EFM_independent.11.d
 	picture = report_event_ANZAC_day
-	
+
 	is_triggered_only = yes
 	option = {
 		ai_chance = { factor = 70 }
@@ -168,7 +168,7 @@ country_event = {
 	title = EFM_independent.12.t
 	desc = EFM_independent.12.d
 	picture = GFX_report_event_chinese_soldiers_fighting
-	
+
 	is_triggered_only = yes
 	option = {
 		name = EFM_independent.12.a
@@ -181,7 +181,7 @@ country_event = {
 	title = EFM_independent.13.t
 	desc = EFM_independent.13.d
 	picture = GFX_report_event_chinese_soldiers_fighting
-	
+
 	is_triggered_only = yes
 	option = {
 		ai_chance = {
@@ -235,7 +235,7 @@ country_event = {
 	title = EFM_independent.14.t
 	desc = EFM_independent.14.d
 	picture = report_event_ANZAC_day
-	
+
 	is_triggered_only = yes
 	option = {
 		ai_chance = { factor = 70 }
@@ -253,7 +253,7 @@ country_event = {
 	title = EFM_independent.15.t
 	desc = EFM_independent.15.d
 	picture = GFX_report_event_chinese_soldiers_fighting
-	
+
 	is_triggered_only = yes
 	option = {
 		name = EFM_independent.15.a
@@ -266,7 +266,7 @@ country_event = {
 	title = EFM_independent.18.t
 	desc = EFM_independent.18.d
 	picture = GFX_report_event_chinese_soldiers_fighting
-	
+
 	is_triggered_only = yes
 	option = {
 		name = EFM_independent.18.a
@@ -289,7 +289,7 @@ country_event = {
 	title = EFM_independent.19.t
 	desc = EFM_independent.19.d
 	picture = report_event_ANZAC_day
-	
+
 	is_triggered_only = yes
 	option = {
 		name = EFM_independent.19.a
@@ -307,7 +307,7 @@ country_event = {
 	title = EFM_independent.20.t
 	desc = EFM_independent.20.d
 	picture = GFX_report_event_chinese_soldiers_fighting
-	
+
 	is_triggered_only = yes
 	option = {
 		name = EFM_independent.20.a
@@ -321,7 +321,7 @@ country_event = {
 	title = EFM_independent.21.t
 	desc = EFM_independent.21.d
 	picture = GFX_report_event_chinese_soldiers_fighting
-	
+
 	is_triggered_only = yes
 	option = {
 		name = EFM_independent.21.a
@@ -342,7 +342,7 @@ country_event = {
 	title = EFM_independent.22.t
 	desc = EFM_independent.22.d
 	picture = report_event_ANZAC_day
-	
+
 	is_triggered_only = yes
 	option = {
 		ai_chance = {
@@ -378,7 +378,7 @@ country_event = {
 	title = EFM_independent.23.t
 	desc = EFM_independent.23.d
 	picture = GFX_report_event_chinese_soldiers_fighting
-	
+
 	is_triggered_only = yes
 	option = {
 		name = EFM_independent.23.a
@@ -390,7 +390,7 @@ country_event = {
 	title = EFM_independent.24.t
 	desc = EFM_independent.24.d
 	picture = GFX_report_event_chinese_soldiers_fighting
-	
+
 	is_triggered_only = yes
 	option = {
 		ai_chance = {
@@ -444,12 +444,12 @@ country_event = {
 	title = EFM_independent.25.t
 	desc = EFM_independent.25.d
 	picture = report_event_ANZAC_day
-	
+
 	is_triggered_only = yes
 	option = {
 		name = EFM_independent.25.a
 		ai_chance = { factor = 90 }
-		
+
 		if = {
 			limit = {
 				TIB = {
@@ -476,7 +476,7 @@ country_event = {
 	title = EFM_independent.26.t
 	desc = EFM_independent.26.d
 	picture = GFX_report_event_chinese_soldiers_fighting
-	
+
 	is_triggered_only = yes
 	option = {
 		name = EFM_independent.26.a

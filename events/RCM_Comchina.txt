@@ -7,7 +7,7 @@ add_namespace = prc
 country_event = {
 	id = prc.1
 	title = prc.1.t
-	desc = { 
+	desc = {
 		text = prc.1.d_com
 		trigger = { TAG = PRC }
 	}
@@ -16,7 +16,7 @@ country_event = {
 		trigger = { NOT = { TAG = PRC } }
 	}
 	picture = GFX_report_event_chinese_soldiers_02
-	trigger ={
+	trigger = {
 		OR = {
 			tag = PRC
 			tag = NEA
@@ -32,11 +32,11 @@ country_event = {
 	}
 	option = { #join
 		name = prc.1.a
-		ai_chance = { 
+		ai_chance = {
 			base = 80
 			modifier = {
 				factor = 200
-				OR = { 
+				OR = {
 					AND = {
 						has_global_flag = gud_ready
 						GXC = { has_offensive_war_with = CHI }
@@ -105,8 +105,8 @@ country_event = {
 	fire_only_once = yes
 	option = { #join
 		name = prc.2.a
-		ai_chance = { 
-			factor = 100 	
+		ai_chance = {
+			factor = 100
 		}
 		add_political_power = 20
 		drop_cosmetic_tag = yes
@@ -158,7 +158,7 @@ country_event = {
 		effect_tooltip = {
 			if = {
 				limit = { has_war_with = SOV }
-			white_peace = SOV		
+			white_peace = SOV
 			}
 			white_peace = PRC
 		}
@@ -166,7 +166,7 @@ country_event = {
 			limit = { country_exists = CHI }
 			diplomatic_relation = { country = CHI relation = non_aggression_pact }
 		}
-		
+
 		hidden_effect = {
 				CHI = {
 				white_peace = SOV
@@ -196,23 +196,23 @@ country_event = {
 							}
 							set_country_flag = peace_sov_@ROOT
 							remove_from_faction = CHI
-						}					
+						}
 					}
 				}
-				
+
 			}
 			every_country = {
 				limit = {
 					is_in_faction_with = SOV
 					NOT = { tag = SOV }
 				}
-				white_peace = CHI               
+				white_peace = CHI
 			}
 			every_country = {
 				limit = {
 				   has_country_flag = peace_sov_@ROOT
 				}
-				add_to_faction = CHI              
+				add_to_faction = CHI
 			}
 		}
 	}

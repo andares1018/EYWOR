@@ -2670,6 +2670,7 @@ focus_tree = {
 			set_rule = {
 				can_create_factions = yes
 			}
+			
 			every_state = {
 				limit = {
 					is_core_of = CHI
@@ -2690,6 +2691,7 @@ focus_tree = {
 
 					}
 				}
+				set_party_name = { ideology = fascism long_name = "Imperial Council of the Qing Dynasty" name = "Imperial Council" }
 			}
 			else_if = {
 				limit = {
@@ -2704,6 +2706,7 @@ focus_tree = {
 
 					}
 				}
+				set_party_name = { ideology = neutrality long_name = "Imperial Council of the Qing Dynasty" name = "Imperial Council" }
 			}
 		}
 
