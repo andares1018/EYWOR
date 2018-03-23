@@ -32,7 +32,7 @@
  CHI_liangguang_incident:0 "Stage Liangguang Incident"
  CHI_liangguang_incident_desc:0 "We can't allow Chiang Kei Shek to continue his dictorship. We can seek support from the Guangdong Clique to form an united front."
  liangguang_incident:0 "Liangguang Incident"
- 
+
  ######
  japan_form_CHI_puppets:0 "Form Puppet Governments in China"
  japan_form_CHI_puppets_desc:0 "Due to the toxic human nature of rejecting the new and the grand scale of our operations, proxy governments need to be put in place in order for our campaigns to proceed smoothly. We can't risk disrupting our operations simply because of some ineffective occupation policies."
@@ -46,25 +46,25 @@
  JAP_form_RFM_mission:0 "Nanking Crisis"
  JAP_form_RFM_mission_desc:0 "Our rule in Nanking is very unpopular now, this can end very badly unless we set up a proxy government in time."
  JAP_form_RFM:0 "Form @RFM[RFM.GetNameDef]"
- 
+
  JAP_form_JNC_mission:0 "North China Crisis"
  JAP_form_JNC_mission_desc:0 "Our rule in China Crisis is very unpopular now, this can end very badly unless we set up a proxy government in time."
  JAP_form_JNC:0 "Form @JNC[JNC.GetNameDef]"
- 
+
  JAP_form_RRC_mission:0 "Puppet Governments Unstable"
  JAP_form_RRC_mission_desc:0 "Our rule in China Crisis is very unstable now, this can end very badly unless we set up a new, reorganized proxy government in time."
  JAP_form_RRC:0 "Form @RRC[RRC.GetNameDef]"
- 
+
  JAP_form_MEJ_mission:0 "The Mongols Demands a Merger"
  JAP_form_MEJ_mission_desc:0 "After taking over a few more states in South Chahar and North Shanxi, the Mongols now demand a merger of their government and those territories. Failed to do so in time can destablize our rule."
  JAP_form_MEJ:0 "Form [MEJ.GetNameDef]"
- 
- JAP_form_MUA_mission:0 "The Mongols Demands an Another Assembly"
+
+ JAP_form_MUA_mission:0 "The Mongols Demands Another Assembly"
  JAP_form_MUA_mission_desc:0 "After the war broke out the Proxy Government in Mongolia has suffered from the ineffective bureaucracy of the outdated political framework. It's time to hold another 'Assembly of the Mongols'."
  JAP_form_MUA:0 "Second Assembly of the Mongols"
- 
+
  #JAP_form_MEN_mission:0 "Form Puppet Governments in China"
  JAP_form_MEN:0 "Puppet for the Mongols"
- 
+
  ###
  CHI_sue_for_peace_JAP:0 "Offer Peace to Japan"

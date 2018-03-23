@@ -11,10 +11,10 @@ country_event = {
 	desc = hpc.1.d
 	picture = GFX_report_event_chinese_officers
 	is_triggered_only = yes
-	option = { 
+	option = {
 		name = gud.1.a #accept, supposed to be gud
-		ai_chance = { 
-		base = 80 	
+		ai_chance = {
+		base = 80
 			modifier = {
 				factor = 150
 				is_historical_focus_on = yes
@@ -24,10 +24,10 @@ country_event = {
 			country_event = { days = 5 id = gxc.2 }
 		}
 	}
-	option = { 
+	option = {
 		name = gud.1.b #refuse
-		ai_chance = { 
-		base = 20 	
+		ai_chance = {
+		base = 20
 			modifier = {
 				factor = 0
 				is_historical_focus_on = yes
@@ -94,9 +94,9 @@ country_event = {
 		}
 	}
 	picture = GFX_report_event_chinese_soldiers_running
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = hpc.2.a
 		ai_chance = {
@@ -118,11 +118,11 @@ country_event = {
 		set_global_flag = hpc_pro_jap
 		JAP = {
 			country_event = { id = rcmjapan.2 }
-		}	
+		}
 		effect_tooltip = {
 			country_event = { days = 15 id = news.1302 }
 			JAP = {
-				give_guarantee = HPC		
+				give_guarantee = HPC
 			}
 		}
 	}
@@ -147,7 +147,7 @@ country_event = {
 		JAP = {
 			country_event = { id = rcmjapan.1 }
 		}
-	}	
+	}
 }
 #puppeted by china cuz china allies with jap
 country_event = {
@@ -170,6 +170,10 @@ country_event = {
 		any_other_country = {
 			has_war_with = ROOT
 			is_legit_china = yes
+		}
+		is_puppet = no
+		NOT = {
+			has_country_flag = called_out_nationwide
 		}
 		NOT = {
 			is_subject_of = JAP

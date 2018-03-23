@@ -5,9 +5,9 @@ country_event = {
 	title = EFM_Comchina.1.t
 	desc = EFM_Comchina.1.d
 	picture = GFX_report_event_chinese_soldiers_fighting
-	
+
 	fire_only_once = yes
-	
+
 	is_triggered_only = yes
 	option = {
 		name = EFM_Comchina.1.a
@@ -20,12 +20,12 @@ country_event = {
 	title = EFM_Comchina.2.t
 	desc = EFM_Comchina.2.d
 	picture = GFX_report_event_chinese_soldiers_fighting
-	
+
 	is_triggered_only = yes
 	trigger = {
 		tag = PRC
 	}
-	
+
 	option = {
 		name = EFM_Comchina.2.a
 		add_political_power = 50
@@ -41,7 +41,7 @@ country_event = {
 	title = EFM_Comchina.3.t
 	desc = EFM_Comchina.3.d
 	picture = GFX_report_event_chinese_soldiers_fighting
-	
+
 	is_triggered_only = yes
 	option = {
 		name = EFM_Comchina.3.a
@@ -56,12 +56,12 @@ country_event = {
 	title = EFM_Comchina.4.t
 	desc = EFM_Comchina.4.d
 	picture = GFX_report_event_chinese_soldiers_fighting
-	
+
 	is_triggered_only = yes
 	trigger = {
 		tag = PRC
 	}
-	
+
 	option = {
 		name = EFM_Comchina.4.a
 		add_political_power = -100
@@ -77,7 +77,7 @@ country_event = {
 	title = EFM_Comchina.5.t
 	desc = EFM_Comchina.5.d
 	picture = GFX_report_event_chinese_soldiers_fighting
-	
+
 	is_triggered_only = yes
 	option = {
 		name = EFM_Comchina.5.a
@@ -92,10 +92,10 @@ country_event = {
 	title = EFM_Comchina.6.t
 	desc = EFM_Comchina.6.d
 	picture = GFX_report_event_chinese_soldiers_fighting
-	
+
 	fire_only_once = yes
 	is_triggered_only = yes
-	
+
 	option = {
 		name = EFM_Comchina.6.a
 		declare_war_on = { target = NXM type = annex_everything }
@@ -107,12 +107,12 @@ country_event = {
 	title = EFM_Comchina.7.t
 	desc = EFM_Comchina.7.d
 	picture = GFX_report_event_chinese_soldiers_fighting
-	
+
 	is_triggered_only = yes
 	trigger = {
 		tag = PRC
 	}
-	
+
 	option = {#stop and peace
 		name = EFM_Comchina.7.a
 		add_political_power = 50
@@ -127,7 +127,7 @@ country_event = {
 		set_country_flag = PRC_west_expedition_victory
 		white_peace = NXM
 	}
-	
+
 	option = {#continue fight
 		name = EFM_Comchina.7.b
 		trigger = {
@@ -151,9 +151,9 @@ country_event = {
 	title = EFM_Comchina.8.t
 	desc = EFM_Comchina.8.d
 	picture = GFX_report_event_chinese_soldiers_fighting
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = EFM_Comchina.8.c
 		ai_chance = {
@@ -186,7 +186,7 @@ country_event = {
 		}
 		PRC = { transfer_state = 760 }
 	}
-	
+
 	option = {
 		name = EFM_Comchina.8.b
 		ai_chance = {
@@ -205,12 +205,12 @@ country_event = {
 	title = EFM_Comchina.9.t
 	desc = EFM_Comchina.9.d
 	picture = GFX_report_event_chinese_soldiers_fighting
-	
+
 	is_triggered_only = yes
 	trigger = {
 		tag = PRC
 	}
-	
+
 	option = {
 		name = EFM_Comchina.9.a
 		add_political_power = -100
@@ -226,7 +226,7 @@ country_event = {
 	title = EFM_Comchina.10.t
 	desc = EFM_Comchina.10.d
 	picture = GFX_report_event_chinese_soldiers_fighting
-	
+
 	is_triggered_only = yes
 	option = {
 		name = EFM_Comchina.10.a
@@ -274,7 +274,7 @@ country_event = {
 					days = 70 id = rcmchina.311
 				}
 			}
-			
+
 		}
 		PRC = {
 			country_event = {
@@ -300,7 +300,7 @@ country_event = {
 			}
 		}
 		hidden_effect = {
-			
+
 			set_global_flag = zhang_refuses_tacit_truce
 		}
 	}
@@ -322,7 +322,7 @@ country_event = {
 			}
 		}
 		hidden_effect = {
-			
+
 			set_global_flag = zhang_refuses_tacit_truce
 		}
 	}
@@ -388,7 +388,7 @@ country_event = { # DMZ loop # SEND THIS TO THE LOOP COUNTRY
 			}
 		}
 	}
-	option = {		
+	option = {
 	}
 }
 country_event = { # DMZ loop
@@ -444,7 +444,7 @@ country_event = { # DMZ loop stop# SEND THIS TO THE LOOP COUNTRY
 		}
 		set_country_flag = DMZ_you_shall_stop_now_flag
 	}
-	option = {		
+	option = {
 	}
 }
 # SOV Support PRC if they win NXM
@@ -455,7 +455,7 @@ country_event = {
 	picture = GFX_report_event_british_artillery
 	trigger = {
 		tag = PRC
-		PRC = { 
+		PRC = {
 			exists = yes
 			is_subject = no
 			has_country_flag = PRC_west_expedition_victory
@@ -478,7 +478,7 @@ country_event = {
 	mean_time_to_happen = {
 		days = 50
 	}
-	
+
 	option = {
 		name = EFM_Comchina.14.a
 		add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 1000 producer = SOV }
@@ -491,7 +491,7 @@ country_event = {
 	title = EFM_Comchina.15.t
 	desc = EFM_Comchina.15.d
 	picture = GFX_report_event_chinese_officers
-	
+
 	is_triggered_only = yes
 	option = {
 		ai_chance = {
@@ -537,7 +537,7 @@ country_event = {
 	title = EFM_Comchina.16.t
 	desc = EFM_Comchina.16.d
 	picture = GFX_report_event_chinese_soldiers_02
-	
+
 	is_triggered_only = yes
 	option = {
 		ai_chance = { factor = 70 }
@@ -554,7 +554,7 @@ country_event = {
 	title = EFM_Comchina.17.t
 	desc = EFM_Comchina.17.d
 	picture = GFX_report_event_chinese_soldiers
-	
+
 	is_triggered_only = yes
 	option = {
 		name = EFM_Comchina.17.a
@@ -567,35 +567,37 @@ country_event = {
 	title = EFM_Comchina.18.t
 	desc = EFM_Comchina.18.d
 	picture = GFX_report_event_chinese_army_training
-	
+
 	is_triggered_only = yes
 	option = {
 		ai_chance = {
-			factor = 80
+			factor = 50
 			modifier = {
 				factor = 0
 				OR = {
 					ROOT = { has_government = communism }
 					tag = GXC
 					tag = GUD
+					tag = SIC
+					tag = SHD
+					tag = NEA
 				}
-			}
-			modifier = {
-				factor = 50
-				tag = SIC
 			}
 		}
 		name = EFM_Comchina.18.a
 	}
 	option = {
 		ai_chance = {
-			factor = 20
+			factor = 50
 			modifier = {
 				factor = 100
 				OR = {
 					ROOT = { has_government = communism }
 					tag = GXC
 					tag = GUD
+					tag = SIC
+					tag = SHD
+					tag = NEA
 				}
 			}
 			modifier = {
@@ -608,6 +610,10 @@ country_event = {
 			add_to_faction = ROOT
 			country_event = { id = EFM_Comchina.19 days = 1 }
 		}
+		add_to_war = {
+			targeted_alliance = FROM enemy = CHI
+		}
+		set_country_flag = called_out_nationwide
 		add_ai_strategy = {
 			type = befriend
 			id = "PRC"
@@ -625,7 +631,7 @@ country_event = {
 	title = EFM_Comchina.19.t
 	desc = EFM_Comchina.19.d
 	picture = GFX_report_event_chinese_japanese_handshake
-	
+
 	is_triggered_only = yes
 	option = {
 		name = EFM_Comchina.19.a
@@ -637,7 +643,7 @@ country_event = {
 	title = EFM_Comchina.20.t
 	desc = EFM_Comchina.20.d
 	picture = GFX_report_event_generic_communist_congress
-	
+
 	fire_only_once = yes
 	is_triggered_only = yes
 	trigger = {
@@ -676,7 +682,7 @@ country_event = { #like or hate sov
 	title = EFM_Comchina.21.t
 	desc = EFM_Comchina.21.d
 	picture = GFX_report_event_generic_communist_congress
-	
+
 	is_triggered_only = yes
 	option = {#like
 		ai_chance = {
@@ -688,17 +694,17 @@ country_event = { #like or hate sov
 		}
 		name = EFM_Comchina.21.a
 		hidden_effect = {
-			random_list = { 
+			random_list = {
 				70 = {
-					country_event = { id = EFM_Comchina.23 days = 5 } 
+					country_event = { id = EFM_Comchina.23 days = 5 }
 				}
 				30 = {
 					country_event = { id = EFM_Comchina.22 days = 10 }
-				} 
+				}
 			}
 		}
 	}
-	
+
 	option = {#hate
 		ai_chance = {
 			factor = 50
@@ -719,7 +725,7 @@ country_event = { #Public accept us
 	title = EFM_Comchina.22.t
 	desc = EFM_Comchina.22.d
 	picture = GFX_report_event_hitler_handshake
-	
+
 	is_triggered_only = yes
 	option = {
 		name = EFM_Comchina.22.a
@@ -732,7 +738,7 @@ country_event = { #People question us that we like sov, convince them or agree
 	title = EFM_Comchina.23.t
 	desc = EFM_Comchina.23.d
 	picture = GFX_report_event_generic_communist_congress
-	
+
 	is_triggered_only = yes
 	option = {
 		ai_chance = {#convince
@@ -747,7 +753,7 @@ country_event = { #People question us that we like sov, convince them or agree
 			random_list = { 70 = { country_event = { id = EFM_Comchina.24 days = 5 } } 30 = { country_event = { id = EFM_Comchina.22 days = 10 } } }
 		}
 	}
-	
+
 	option = {#agree
 		ai_chance = {
 			factor = 50
@@ -768,7 +774,7 @@ country_event = { #Public barely accept us
 	title = EFM_Comchina.24.t
 	desc = EFM_Comchina.24.d
 	picture = GFX_report_event_generic_communist_congress
-	
+
 	is_triggered_only = yes
 	option = {
 		name = EFM_Comchina.24.a
@@ -782,7 +788,7 @@ country_event = { #respect or not respect troskyists
 	title = EFM_Comchina.25.t
 	desc = EFM_Comchina.25.d
 	picture = GFX_report_event_generic_communist_congress
-	
+
 	is_triggered_only = yes
 	option = {#respect
 		ai_chance = {
@@ -797,7 +803,7 @@ country_event = { #respect or not respect troskyists
 			country_event = { id = EFM_Comchina.26 days = 5 }
 		}
 	}
-	
+
 	option = {#NOT
 		ai_chance = {
 			factor = 50
@@ -817,7 +823,7 @@ country_event = { #troskyists try to convince us, agree or not
 	title = EFM_Comchina.26.t
 	desc = EFM_Comchina.26.d
 	picture = GFX_report_event_generic_communist_congress
-	
+
 	is_triggered_only = yes
 	option = {
 		ai_chance = {
@@ -851,7 +857,7 @@ country_event = { #Trotskyism Revisited
 	title = EFM_Comchina.27.t
 	desc = EFM_Comchina.27.d
 	picture = GFX_report_event_hitler_handshake
-	
+
 	is_triggered_only = yes
 	option = {
 		name = EFM_Comchina.27.a
@@ -865,7 +871,7 @@ country_event = { #People hate troskyists
 	title = EFM_Comchina.28.t
 	desc = EFM_Comchina.28.d
 	picture = GFX_report_event_generic_communist_congress
-	
+
 	is_triggered_only = yes
 	option = {
 		name = EFM_Comchina.28.a
@@ -878,7 +884,7 @@ country_event = { #Trotskyists Express Dissatisfaction, expel them or ignore
 	title = EFM_Comchina.29.t
 	desc = EFM_Comchina.29.d
 	picture = GFX_report_event_generic_communist_congress
-	
+
 	is_triggered_only = yes
 	option = {
 		ai_chance = {
@@ -913,7 +919,7 @@ country_event = { #Clash within CCP
 	title = EFM_Comchina.30.t
 	desc = EFM_Comchina.30.d
 	picture = GFX_report_event_generic_riot
-	
+
 	is_triggered_only = yes
 	option = {
 		name = EFM_Comchina.30.a
@@ -927,7 +933,7 @@ country_event = { #Trotskyists go their own way
 	title = EFM_Comchina.31.t
 	desc = EFM_Comchina.31.d
 	picture = GFX_report_event_generic_ruins
-	
+
 	is_triggered_only = yes
 	option = {
 		name = EFM_Comchina.31.a
@@ -946,7 +952,7 @@ country_event = {
 	title = EFM_Comchina.32.t
 	desc = EFM_Comchina.32.d
 	picture = GFX_report_event_generic_rally2
-	
+
 	fire_only_once = yes
 	trigger = {
 		tag = PRC
@@ -970,7 +976,7 @@ country_event = {
 	title = EFM_Comchina.33.t
 	desc = EFM_Comchina.33.d
 	picture = GFX_report_event_hitler_handshake
-	
+
 	is_triggered_only = yes
 	option = {
 		name = EFM_Comchina.33.a
@@ -983,7 +989,7 @@ country_event = {
 	title = EFM_Comchina.34.t
 	desc = EFM_Comchina.34.d
 	picture = GFX_report_event_generic_rally2
-	
+
 	is_triggered_only = yes
 	option = {
 		name = EFM_Comchina.34.a
@@ -995,7 +1001,7 @@ country_event = {
 	title = EFM_Comchina.35.t
 	desc = EFM_Comchina.35.d
 	picture = GFX_report_event_generic_rally2
-	
+
 	fire_only_once = yes
 	trigger = {
 		tag = PRC
@@ -1024,7 +1030,7 @@ country_event = {
 	title = EFM_Comchina.36.t
 	desc = EFM_Comchina.36.d
 	picture = GFX_report_event_generic_read_write
-	
+
 	is_triggered_only = yes
 	option = {
 		ai_chance = {
@@ -1100,7 +1106,7 @@ country_event = {
 	title = EFM_Comchina.37.t
 	desc = EFM_Comchina.37.d
 	picture = GFX_report_event_hitler_handshake
-	
+
 	is_triggered_only = yes
 	option = {
 		name = EFM_Comchina.37.a
@@ -1117,7 +1123,7 @@ country_event = {
 	title = EFM_Comchina.38.t
 	desc = EFM_Comchina.38.d
 	picture = GFX_report_event_chinese_soldiers_02
-	
+
 	is_triggered_only = yes
 	option = {
 		name = EFM_Comchina.38.a
@@ -1133,7 +1139,7 @@ country_event = {
 	title = EFM_Comchina.39.t
 	desc = EFM_Comchina.39.d
 	picture = GFX_report_event_chinese_soldiers_02
-	
+
 	is_triggered_only = yes
 	option = {
 		name = EFM_Comchina.39.a
@@ -1371,7 +1377,7 @@ country_event = {
 	title = EFM_Comchina.100.t
 	desc = EFM_Comchina.100.d
 	picture = GFX_report_event_generic_read_write
-	
+
 	is_triggered_only = yes
 	option = {
 		name = EFM_Comchina.100.a
@@ -1384,7 +1390,7 @@ country_event = {
 	title = EFM_Comchina.199.t
 	desc = EFM_Comchina.199.d
 	picture = GFX_report_event_chinese_soldiers_fighting
-	
+
 	#fire_only_once = yes
 	mean_time_to_happen = {
 		days = 0
@@ -1412,9 +1418,9 @@ country_event = {
 	title = EFM_Comchina.200.t
 	desc = EFM_Comchina.200.d
 	picture = GFX_report_event_chinese_soldiers_fighting
-	
+
 	#fire_only_once = yes
-	
+
 	trigger = {
 		tag = PRC
 		has_idea = idea_continuous_recover_from_the_long_march
@@ -1441,9 +1447,9 @@ country_event = {
 	title = EFM_Comchina.201.t
 	desc = EFM_Comchina.201.d
 	picture = GFX_report_event_chinese_soldiers_fighting
-	
+
 	#fire_only_once = yes
-	
+
 	trigger = {
 		tag = PRC
 		has_idea = idea_continuous_recover_from_the_long_march
@@ -1470,9 +1476,9 @@ country_event = {
 	title = EFM_Comchina.202.t
 	desc = EFM_Comchina.202.d
 	picture = GFX_report_event_chinese_soldiers_fighting
-	
+
 	#fire_only_once = yes
-	
+
 	trigger = {
 		tag = PRC
 		has_idea = idea_continuous_recover_from_the_long_march
@@ -1499,9 +1505,9 @@ country_event = {
 	title = EFM_Comchina.203.t
 	desc = EFM_Comchina.203.d
 	picture = GFX_report_event_chinese_soldiers_fighting
-	
+
 	#fire_only_once = yes
-	
+
 	trigger = {
 		tag = PRC
 		has_idea = idea_continuous_recover_from_the_long_march
@@ -1526,9 +1532,9 @@ country_event = {
 	title = EFM_Comchina.204.t
 	desc = EFM_Comchina.204.d
 	picture = GFX_report_event_chinese_soldiers_fighting
-	
+
 	#fire_only_once = yes
-	
+
 	trigger = {
 		tag = PRC
 		has_idea = idea_continuous_recover_from_the_long_march
@@ -1555,9 +1561,9 @@ country_event = {
 	title = EFM_Comchina.205.t
 	desc = EFM_Comchina.205.d
 	picture = GFX_report_event_chinese_soldiers_fighting
-	
+
 	#fire_only_once = yes
-	
+
 	trigger = {
 		tag = PRC
 		has_idea = idea_continuous_recover_from_the_long_march
@@ -1584,9 +1590,9 @@ country_event = {
 	title = EFM_Comchina.206.t
 	desc = EFM_Comchina.206.d
 	picture = GFX_report_event_chinese_soldiers_fighting
-	
+
 	#fire_only_once = yes
-	
+
 	trigger = {
 		tag = PRC
 		has_idea = idea_continuous_recover_from_the_long_march
@@ -1613,9 +1619,9 @@ country_event = {
 	title = EFM_Comchina.207.t
 	desc = EFM_Comchina.207.d
 	picture = GFX_report_event_chinese_soldiers_fighting
-	
+
 	#fire_only_once = yes
-	
+
 	trigger = {
 		tag = PRC
 		has_idea = idea_continuous_recover_from_the_long_march
@@ -1642,9 +1648,9 @@ country_event = {
 	title = EFM_Comchina.208.t
 	desc = EFM_Comchina.208.d
 	picture = GFX_report_report_event_chinese_officers
-	
+
 	#fire_only_once = yes
-	
+
 	is_triggered_only = yes
 	option = {
 		name = EFM_Comchina.208.a
@@ -1658,9 +1664,9 @@ country_event = {
 	title = EFM_Comchina.209.t
 	desc = EFM_Comchina.209.d
 	picture = GFX_report_report_event_chinese_officers
-	
+
 	#fire_only_once = yes
-	
+
 	is_triggered_only = yes
 	option = {
 		name = EFM_Comchina.209.a
@@ -1674,9 +1680,9 @@ country_event = {
 	title = EFM_Comchina.210.t
 	desc = EFM_Comchina.210.d
 	picture = GFX_report_event_chinese_officers
-	
+
 	#fire_only_once = yes
-	
+
 	is_triggered_only = yes
 	option = {
 		name = EFM_Comchina.210.a
@@ -1690,7 +1696,7 @@ country_event = {
 	title = EFM_Comchina.211.t
 	desc = EFM_Comchina.211.d
 	picture = GFX_report_event_chinese_soldiers_fighting
-	
+
 	fire_only_once = yes
 	is_triggered_only = yes
 	immediate = {
@@ -1705,7 +1711,7 @@ country_event = {  #win (to PRC)
 	title = EFM_Comchina.2117.t
 	desc = EFM_Comchina.2117.d
 	picture = GFX_report_event_chinese_soldiers_fighting
-	
+
 	fire_only_once = yes
 	is_triggered_only = yes
 	trigger = {
@@ -1726,7 +1732,7 @@ country_event = {  #PRC lose (to NXM)
 	title = EFM_Comchina.2118.t
 	desc = EFM_Comchina.2118.d
 	picture = GFX_report_event_chinese_soldiers_fighting
-	
+
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
@@ -1795,7 +1801,7 @@ country_event = {  #PRC stalemate (to NXM)
 	title = EFM_Comchina.2121.t
 	desc = EFM_Comchina.2121.d
 	picture = GFX_report_event_chinese_soldiers_fighting
-	
+
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
@@ -1808,9 +1814,9 @@ country_event = {
 	title = EFM_Comchina.213.t
 	desc = EFM_Comchina.213.d
 	picture = GFX_report_event_japanese_chinese_surrender
-	
+
 	is_triggered_only = yes
-	
+
 	# Agree to a truce
 	option = {
 		name = rcmsoviet.19.a
@@ -1849,7 +1855,7 @@ country_event = {  #PRC accept (to KMT)
 	title = EFM_Comchina.214.t
 	desc = EFM_Comchina.214.d
 	picture = GFX_report_event_japanese_chinese_surrender
-	
+
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
@@ -1861,7 +1867,7 @@ country_event = {  #PRC refuse (to KMT)
 	title = EFM_Comchina.215.t
 	desc = EFM_Comchina.215.d
 	picture = GFX_report_event_chinese_soldiers_fighting
-	
+
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
@@ -1886,7 +1892,7 @@ country_event = {  #start training
 	desc = EFM_Comchina.216.d
 	picture = GFX_report_event_training_program
 	is_triggered_only = yes
-	
+
 	immediate = {
 		hidden_effect = {
 			if = {
@@ -1945,7 +1951,7 @@ country_event = {  #start training
 	option = {
 		name = EFM_Comchina.216.a
 	}
-	
+
 }
 ###training program V->H
 country_event = {  #start training
@@ -2078,7 +2084,7 @@ country_event = {  #start training
 	}
 }
 ###training program interrupted
-country_event = {  
+country_event = {
 	id = EFM_Comchina.221
 	title = EFM_Comchina.221.t
 	desc = EFM_Comchina.221.d
