@@ -19,10 +19,10 @@
  CHI_destroyer_3_desc:0 "The Tan Yang is a modernized Kagerō-class destroyer. The ship is fitted with a radar and improved ASW systems. Anti-Aircraft capability has been greatly improved by upgrading the anti-aircraft guns to eight 40mm Bofors. The biggest change of all was the replacement of the three dual mount 12.7cm/L50 turrets with single mount 12.7cm/L38 in open ring mounts which improves the main gun anti-aircraft ability and increase the main-armament's aggregate rounds-per-minute."
  #Post-War Purchase
  CHI_destroyer_4:0 "Chao Yang Class"
- CHI_destroyer_4_desc:0 "The Chao Yang class are American Gearing class destoryers. The Gearing are slightly larger Allan M. Sumners class, displacing 3400 tons. As launched the Gearing class has six 127mm/L38 guns in twin mounts, a dozen 40mm Bofors, eleven 20mm Oerlikon cannon, ten 533mm torpedo tubes, and heavy ASW armament. The larger size of the Gearing class allowes for greater range and more upgrade potential."
+ CHI_destroyer_4_desc:0 "The Chao Yang class are American Gearing class destoryers. The Gearing are slightly larger Allan M. Sumners class, displacing 3400 tons. As launched the Gearing class has six 127mm/L38 guns in twin mounts, a dozen 40mm Bofors, eleven 20mm Oerlikon cannon, ten 533mm torpedo tubes, and heavy ASW armament. The larger size of the Gearing class allows for greater range and more upgrade potential."
  #Bridging Class, theoretical
  CHI_light_cruiser_2:0 "Hai Bian Class"
- CHI_light_cruiser_2_desc:0 "The Hai Bian Class is a hypothetical class of light cruiser designed to meet the requirements of the 1930 Naval Plan. The Hai Bian class would have likely served both as flotilla leaders and fast escort, and would have an emphasis on speed in their design. These ships would have likely been similar in size, performance, and armament to the Sendai-class."
+ CHI_light_cruiser_2_desc:0 "The Hai Bian Class is a hypothetical class of light cruiser designed to meet the requirements of the 1930 Naval Plan. The Hai Bian class would have likely served both as flotilla leaders and fast escort, and would have an emphasis on speed in their design. These ships would have likely been similar in size, performance, and armament to the Sendai-class. The 1930 Naval Plan called for two light cruisers."
  #Post-War Restitution
  CHI_light_cruiser_3:0 "Chongqing Class"
  CHI_light_cruiser_3_desc:0 "The Chongqing class is a modernized British Arethusa class light cruiser. Introduced as a cost-effective supplement to the Leander class, the Arethusa class was designed with trade protection in mind, but also with the capacity to serve as a fleet cruiser. In it's late-war configuration the ship has been retrofitted with radar with independent ranging units for the ship's anti-aircraft batteries. Main guns on the ship are six 15.2cm/L50 in twin turrets, supplemented with six torpedo tubes and very heavy anti-aircraft armament."
@@ -35,13 +35,17 @@
  CHI_heavy_cruiser_2:0 "Jiaoren Class"
  #Chen Qimei
  CHI_heavy_cruiser_3:0 "Qimei Class"
+ #Huang Xing
+ CHI_heavy_cruiser_4:0 "Xing Class"
  #Famous Naval Figures, all theoretical
- #Liu Buchan
- CHI_carrier_1:0 "Admiral Buchan Class"
- CHI_carrier_1_desc:0 "Plans for a Chinese aircraft carrier where submitted to the Navy Department in 1928, with overall plans for a small carrier-centric fleet submitted in 1930. The Admiral Buchan is a hypothetical class that would have tested the capabilities of China's ship-building industry. The ship would have been comparable in size and performance to early inter-war fleet carriers like the Hōshō."
+ #Deng Shichang
+ CHI_carrier_1:0 "Shichang Class"
+ CHI_carrier_1_desc:0 "Plans for a Chinese aircraft carrier where submitted to the Navy Department in 1928, with overall plans for a small carrier-centric fleet submitted in 1930. The Shichang is a hypothetical class that would have tested the capabilities of China's ship-building industry. The ship would have been comparable in size and performance to early inter-war fleet carriers like the Hōshō."
  #Koxinga - Zheng Chenggong
- CHI_carrier_2:0 "Koxinga Class"
- CHI_carrier_2_desc:0 "The Koxinga Class is a hypothetical class designed to meet the ROCN post-armistice reconstruction plans. The Koxinga would have been designed with littoral operations in mind. Size and performance would have been greatly limited by China's naval technical and production abilities. Work was never started due to the Chinese Civil War."
+ CHI_carrier_2:0 "Cheng Gong Class"
+ CHI_carrier_2_desc:0 "The Cheng Gong Class is a hypothetical class designed to meet the ROCN post-armistice reconstruction plans. The Cheng Gong would have been designed with littoral operations in mind. Size and performance would have been greatly limited by China's naval technical and production abilities. Work was never started due to the Chinese Civil War."
+ #Chen Huacheng
+ CHI_carrier_3:0 "Admiral Huacheng Class"
 # Republic of China Navy (1911-1937) Naming Conventions:
 # They are still using certain Chinese words as suffix on ship's name except for Survey Vessels
 # Yong: Large Gunboats
