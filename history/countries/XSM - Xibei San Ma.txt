@@ -1,4 +1,4 @@
-﻿capital = 604
+﻿capital = 790
 
 oob = "XSM_1936"
 
@@ -140,4 +140,3 @@ create_field_marshal = {
 	planning_skill = 4
 	logistics_skill = 3
 }
-

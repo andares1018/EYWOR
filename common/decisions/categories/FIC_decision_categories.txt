@@ -4,14 +4,13 @@ VIC_indochinese_politics = {
 		original_tag = FRA
 		tag = FRA
 		}
+	}
+
+	visible = {
+		has_global_flag = fall_of_france
 		has_government = fascism
 		FIC = {
 			is_puppet = no
 		}
-			
-		}
-	
-	visible = {
-	has_global_flag = fall_of_france
 	}
 }
