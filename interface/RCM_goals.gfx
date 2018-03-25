@@ -231,5 +231,8 @@ spriteTypes = {
 		name = "GFX_focus_ethnicism"
 		texturefile = "gfx/interface/goals/focus_ethnicism.dds"				
 	}
-	
+	SpriteType = {
+		name = "GFX_focus_healthcare_program"
+		texturefile = "gfx/interface/goals/focus_healthcare_program.dds"				
+	}
 }

@@ -28,7 +28,9 @@ add_ideas = {
 	no_proper_equipment_design
 	the_blueshirts
 	central_club
+	CHI_incompetent_officers
 	CHI_nanking_decade_idea
+	CHI_hyper_inflation_1
 	unstable_economy
 	#internationalism
 	#fascist_influence
@@ -51,7 +53,7 @@ set_convoys = 40
 	remove_ideas = german_advisors
 	add_political_power = 1198
 	set_global_flag = hpc_joins_chi
-	set_country_flag = severed_ties_with_GER
+	set_country_flag = falkenhausen_recalled
 	complete_national_focus = CHI_fight_focus
 	complete_national_focus = CHI_unite_focus
 	complete_national_focus = CHI_pressure_xinjiang
@@ -94,7 +96,7 @@ set_convoys = 40
 		}
 	}
 	add_to_faction = PRC
-	
+
 	remove_opinion_modifier = { target = PRC modifier = hostile_status }
 	#load_oob = "CHI_united_front"
 	set_global_flag = CHI_unite
@@ -143,23 +145,23 @@ set_convoys = 40
 set_politics = {
 
 	parties = {
-		democratic = { 
+		democratic = {
 			popularity = 15
 		}
-		
-		n_socialism = { 
+
+		n_socialism = {
 			popularity = 0
 		}
 
 		fascism = {
 			popularity = 25
 		}
-		
+
 		communism = {
 			popularity = 10
 		}
-		
-		neutrality = { 
+
+		neutrality = {
 			popularity = 50
 		}
 	}
@@ -234,20 +236,20 @@ add_opinion_modifier = { target = JAP modifier = hostile_status }
 	set_politics = {
 
 	parties = {
-		democratic = { 
+		democratic = {
 			popularity = 15
 		}
 
 		fascism = {
 			popularity = 20
 		}
-		
+
 		communism = {
 			popularity = 10
 			#banned = no #default is no
 		}
-		
-		neutrality = { 
+
+		neutrality = {
 			popularity = 55
 
 		}
@@ -280,7 +282,7 @@ create_field_marshal = {
 	attack_skill = 3
 	defense_skill = 3
 	planning_skill = 2
-	logistics_skill = 2	
+	logistics_skill = 2
 }
 create_field_marshal = {
 	name = "Chen Cheng"

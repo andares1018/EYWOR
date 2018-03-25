@@ -17,7 +17,10 @@
  prc_government_reform:0 "Reformed Government"
  appeasement_policy:0 "Appeasement Policy"
  CHI_german_style_training_idea:0 "German-style Training"
- unstable_economy:0 "Unstable Economy"
+ unstable_economy:0 "Silver Standard Economy"
+ unstable_economy_desc:0 "Silver has always been a major form of currency in China, however The US silver purchase act of 1934 created an intolerable demand on China's silver coins, and China's silver standard economy has taken a huge hit because of that."
+ CHI_Isolationism_idea:0 "Isolationism"
+ CHI_International_Legion:0 "International Legion"
  CHI_inch_blood_1:0 "A Thousand of Youth, a Thousand of Troops"
  CHI_inch_blood_2:0 "A Thousand of Youth, a Thousand of Troops"
  CHI_inch_blood_3:0 "A Thousand of Youth, a Thousand of Troops"
@@ -273,7 +276,6 @@
  Demchugdongrub_new_leader:0 "\n§YPrince Demchugdongrub§! will become the new leader of [Root.GetName]."
  MEN_nanking_aid:0 "Military Aid from Nanking"
  JAP_expansionist_propaganda:0 "Expansionist Propaganda"
- severed_ties_with_GER:0 "Severed ties with @GERGermany"
  JAP_military_outweighs_the_government_idea:0 "Military Outweighs the Government"
  JAP_military_outweighs_the_government_idea_desc:0 "With the rise of militarism and the clash of factions within the military, the government of Japan has become less and less competent. Without a functional government, the military of Japan has also fallen into a chaotic state."
  JAP_military_outweighs_the_government_idea_good:0 "Military Outweighs the Government"
@@ -285,6 +287,8 @@
  JAP_reorganized_japanese_militarism_idea:0 "Reorganized Japanese Militarism"
  JAP_reorganized_japanese_militarism_idea_desc:0 "The Imperial Japanese Army has been reorganized and militarism has been tightly integrated into the Government. The powerful military of Japan is no longer pulling itself back."
  reformed_colonial_administration:0 "Reformed Colonial Administration"
+ FIC_friendly_invasion:0 ""Friendly"Invasion"
+ FIC_friendly_invasion_desc:0 "Due to the recently signed Tripartite Pact between the German Riech and Japan, the Japanese Empire should be our friend instead of enemy. However, they are now using that fact against us and preparing an attack on the Indochinese Peninsula. Knowing that if they launch an offensive operation against Indochina Germany mostly likely won't even care, despite our allegiance towards its ally, Germany."
  ####COMPANIES#####
  naval_aircraft_agency:0 "Naval Aircraft Agency"
  idea_guangdong_arsenal:0 "Guangdong Arsenal"
@@ -370,15 +374,15 @@
  kung_hsiang_hsi:0 "Kung Hsiang Hsi"
  CHI_huang_guangrei:0 "Huang Guangrei"
  #JAP
- emperor_showa:0 "Emperor Hirohito"  
+ emperor_showa:0 "Emperor Hirohito"
  emperor_showa_desc:0 "As the ruler of the Showa Era in the Empire of Japan, the Emperor is revered by both the military and the general public."
  kanji_ishiwara:0 "Kanji Ishiwara"
  makino_nobuaki:0 "Makino Nobuaki"
  nobusuke_kishi:0 "Nobusuke Kishi"
  sadao_araki:0 "Sadao Araki"
  yoshijiro_umezu:0 "Yoshijiro Umezu"
- kazushige_ugaki:0 "Kazushige Ugaki" 
- kanji_ishiwara_MAN:0 "Kanji Ishiwara" 
+ kazushige_ugaki:0 "Kazushige Ugaki"
+ kanji_ishiwara_MAN:0 "Kanji Ishiwara"
  yoshiyuki_kawashima:0 "Yoshiyuki Kawashima"
  kohei_kashii:0 "Kohei Kashii"
  kijuro_shidehara:0 "kijuro Shidehara"
@@ -394,6 +398,5 @@
  shigeru_honjo:0 "Shigeru Honjo"
  jotaro_watanabe:0 "Jotaro Watanabe"
  saionji_kinmochi:0 "Saionji Kinmochi"
+
  ###commie stuff
- 
- 

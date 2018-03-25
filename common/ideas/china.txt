@@ -12,24 +12,74 @@ ideas = {
 		}
 	}
 	country = {
-		#####################
+		#DOB
+		CHI_International_Legion = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_volunteer_expedition_bonus
+
+			rule = {
+				can_send_volunteers = yes
+			}
+
+			modifier = {
+				send_volunteer_divisions_required = -0.5
+			}
+		}
+		CHI_Isolationism_idea = {
+
+			picture = generic_wall_line
+
+			removal_cost = -1
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				#generate_wargoal_tension = 1.00
+				join_faction_tension = 1.00
+				#lend_lease_tension = 0.50
+				send_volunteers_tension = 0.20
+				guarantee_tension = 1.0
+				ai_badass_factor = 0.01    # Will receive 1% of the threat from others
+				ai_get_ally_desire_factor = -100
+				production_speed_bunker_factor = 0.2
+				production_speed_coastal_bunker_factor = 0.2
+				production_speed_anti_air_building_factor = 0.2
+			}
+		}
+		####################
 		##### WTT IDEAS #####
 		#####################
 
 		CHI_nine_power_treaty = {
 
 			picture = HUN_treaty_of_triannon
-		
+
 			allowed = {
 				always = no
 			}
 
 			allowed_civil_war = {
-				always = yes			
+				always = yes
 			}
 
 			removal_cost = -1
-			
+
 			modifier = {
 
 			}
@@ -41,7 +91,7 @@ ideas = {
 			picture = chi_army_corruption
 
 			name = CHI_army_corruption
-		
+
 			allowed = {
 				always = no
 			}
@@ -51,7 +101,7 @@ ideas = {
 			}
 
 			removal_cost = -1
-			
+
 			modifier = {
 				army_attack_factor = -0.5
 				army_defence_factor = -0.5
@@ -63,9 +113,9 @@ ideas = {
 		CHI_army_corruption_2 = {
 
 			picture = chi_army_corruption2
-		
+
 			name = CHI_army_corruption
-			
+
 			allowed = {
 				always = no
 			}
@@ -75,7 +125,7 @@ ideas = {
 			}
 
 			removal_cost = -1
-			
+
 			modifier = {
 				army_attack_factor = -0.33
 				army_defence_factor = -0.33
@@ -83,13 +133,13 @@ ideas = {
 			}
 
 		}
-		
+
 		CHI_army_corruption_3 = {
 
 			picture = chi_army_corruption3
-		
+
 			name = CHI_army_corruption
-			
+
 			allowed = {
 				always = no
 			}
@@ -99,7 +149,7 @@ ideas = {
 			}
 
 			removal_cost = -1
-			
+
 			modifier = {
 				army_attack_factor = -0.16
 				army_defence_factor = -0.16
@@ -111,7 +161,7 @@ ideas = {
 		CHI_ineffective_bureaucracy = {
 
 			picture = generic_disjointed_gov
-		
+
 			allowed = {
 				always = no
 			}
@@ -121,7 +171,7 @@ ideas = {
 			}
 
 			removal_cost = -1
-			
+
 			modifier = {
 				conscription_factor = -0.35
 			}
@@ -131,7 +181,7 @@ ideas = {
 		CHI_incompetent_officers = {
 
 			picture = chi_incompetent_officers
-		
+
 			allowed = {
 				always = no
 			}
@@ -141,7 +191,7 @@ ideas = {
 			}
 
 			removal_cost = -1
-			
+
 			modifier = {
 				command_power_gain_mult = -0.7
 			}
@@ -153,17 +203,17 @@ ideas = {
 		CHI_chinese_unity_1 = {
 
 			picture = chi_chinese_unity
-		
+
 			allowed = {
 				always = no
 			}
 
 			allowed_civil_war = {
-				always = yes			
+				always = yes
 			}
 
 			removal_cost = -1
-			
+
 			modifier = {
 				surrender_limit = 0.05
 			}
@@ -174,17 +224,17 @@ ideas = {
 
 			name = CHI_chinese_unity_1
 			picture = chi_chinese_unity
-		
+
 			allowed = {
 				always = no
 			}
 
 			allowed_civil_war = {
-				always = yes			
+				always = yes
 			}
 
 			removal_cost = -1
-			
+
 			modifier = {
 				surrender_limit = 0.1
 			}
@@ -200,11 +250,11 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes			
+				always = yes
 			}
 
 			removal_cost = -1
-			
+
 			modifier = {
 				surrender_limit = 0.15
 			}
@@ -215,16 +265,16 @@ ideas = {
 		##### Hyper inflation level ####
 		################################
 
-		CHI_hyper_inflation_none = {
+		 = {
 
 			picture = chi_hyper_inflation
-		
+
 			allowed = {
 				always = no
 			}
 
 			removal_cost = -1
-			
+
 			modifier = {
 
 			}
@@ -233,7 +283,7 @@ ideas = {
 		CHI_hyper_inflation_1 = {
 
 			picture = chi_hyper_inflation
-		
+
 			allowed = {
 				always = no
 			}
@@ -243,18 +293,18 @@ ideas = {
 			}
 
 			removal_cost = -1
-			
+
 			modifier = {
-				consumer_goods_factor = 0.05
+				consumer_goods_factor = 0.02
 				industrial_capacity_factory = -0.05
 			}
 		}
 
-		
+
 		CHI_hyper_inflation_2 = {
 
 			picture = chi_hyper_inflation2
-		
+
 			allowed = {
 				always = no
 			}
@@ -264,17 +314,17 @@ ideas = {
 			}
 
 			removal_cost = -1
-			
+
 			modifier = {
-				consumer_goods_factor = 0.10
+				consumer_goods_factor = 0.04
 				industrial_capacity_factory = -0.10
 			}
 		}
-		
+
 		CHI_hyper_inflation_3 = {
 
 			picture = chi_hyper_inflation3
-		
+
 			allowed = {
 				always = no
 			}
@@ -284,17 +334,17 @@ ideas = {
 			}
 
 			removal_cost = -1
-			
+
 			modifier = {
-				consumer_goods_factor = 0.15
+				consumer_goods_factor = 0.08
 				industrial_capacity_factory = -0.15
 			}
 		}
-		
+
 		CHI_hyper_inflation_4 = {
 
 			picture = chi_hyper_inflation4
-		
+
 			allowed = {
 				always = no
 			}
@@ -304,9 +354,9 @@ ideas = {
 			}
 
 			removal_cost = -1
-			
+
 			modifier = {
-				consumer_goods_factor = 0.20
+				consumer_goods_factor = 0.16
 				industrial_capacity_factory = -0.20
 			}
 		}
@@ -314,7 +364,7 @@ ideas = {
 		CHI_hyper_inflation_5 = {
 
 			picture = chi_hyper_inflation5
-		
+
 			allowed = {
 				always = no
 			}
@@ -324,12 +374,12 @@ ideas = {
 			}
 
 			removal_cost = -1
-			
+
 			modifier = {
-				consumer_goods_factor = 0.25
+				consumer_goods_factor = 0.32
 				industrial_capacity_factory = -0.25
 			}
-		}		
+		}
 
 		#####################
 		##### From focus ####
@@ -338,7 +388,7 @@ ideas = {
 		CHI_executive_yuan = {
 
 			picture = generic_constitutional_guarantees
-		
+
 			allowed = {
 				always = no
 			}
@@ -348,7 +398,7 @@ ideas = {
 			}
 
 			removal_cost = -1
-			
+
 			modifier = {
 				political_power_gain = 0.25
 			}
@@ -357,7 +407,7 @@ ideas = {
 		CHI_legislative_yuan = {
 
 			picture = generic_democratic_drift_bonus
-		
+
 			allowed = {
 				always = no
 			}
@@ -367,7 +417,7 @@ ideas = {
 			}
 
 			removal_cost = -1
-			
+
 			modifier = {
 				political_power_gain = 0.25
 				democratic_drift = 0.02
@@ -377,7 +427,7 @@ ideas = {
 		CHI_inter_party_coordination_council = {
 
 			picture = generic_neutrality_drift_bonus
-		
+
 			allowed = {
 				always = no
 			}
@@ -387,7 +437,7 @@ ideas = {
 			}
 
 			removal_cost = -1
-			
+
 			modifier = {
 				neutrality_drift = -0.02
 			}
@@ -395,7 +445,7 @@ ideas = {
 
 		CHI_war_of_resistance = {
 
-			picture = chi_war_of_resistance		
+			picture = chi_war_of_resistance
 
 			allowed = {
 				always = no
@@ -406,7 +456,7 @@ ideas = {
 			}
 
 			removal_cost = -1
-			
+
 			modifier = {
 				army_core_defence_factor = 0.1
 			}
@@ -427,7 +477,7 @@ ideas = {
 			}
 
 			removal_cost = -1
-			
+
 			modifier = {
 				army_core_defence_factor = 0.1
 				army_core_attack_factor = 0.1
@@ -436,7 +486,7 @@ ideas = {
 
 		CHI_war_of_national_liberation = {
 
-			picture = chi_war_of_resistance3			
+			picture = chi_war_of_resistance3
 
 			allowed = {
 				always = no
@@ -447,7 +497,7 @@ ideas = {
 			}
 
 			removal_cost = -1
-			
+
 			modifier = {
 				army_core_attack_factor = 0.1
 			}
@@ -466,7 +516,7 @@ ideas = {
 			}
 
 			removal_cost = -1
-			
+
 			modifier = {
 				conscription = 0.02
 				war_support_factor = -0.1
@@ -475,7 +525,7 @@ ideas = {
 
 		CHI_military_affairs_commission = {
 
-			picture = generic_army_war_college		
+			picture = generic_army_war_college
 
 			allowed = {
 				always = no
@@ -486,16 +536,16 @@ ideas = {
 			}
 
 			removal_cost = -1
-			
+
 			modifier = {
 				max_command_power = 5
 				experience_gain_army = 0.05
 			}
 		}
-		
+
 		CHI_whampoa_military_academy = {
 
-			picture = chi_whampoa_military_academy		
+			picture = chi_whampoa_military_academy
 
 			allowed = {
 				always = no
@@ -506,7 +556,7 @@ ideas = {
 			}
 
 			removal_cost = -1
-			
+
 			modifier = {
 				army_leader_cost_factor = -0.5
 				army_leader_start_planning_level = 1
@@ -515,7 +565,7 @@ ideas = {
 
 		CHI_grain_tax = {
 
-			picture = generic_agrarian_society			
+			picture = generic_agrarian_society
 
 			allowed = {
 				always = no
@@ -526,7 +576,7 @@ ideas = {
 			}
 
 			removal_cost = -1
-			
+
 			modifier = {
 				consumer_goods_factor = -0.1
 				war_support_factor = -0.07
@@ -538,7 +588,7 @@ ideas = {
 
 			name = CHI_warlord_integration
 
-			picture = chi_warlord_integration5		
+			picture = chi_warlord_integration5
 
 			allowed = {
 				always = no
@@ -549,7 +599,7 @@ ideas = {
 			}
 
 			removal_cost = -1
-			
+
 			modifier = {
 				political_power_gain = -0.25
 			}
@@ -570,17 +620,17 @@ ideas = {
 			}
 
 			removal_cost = -1
-			
+
 			modifier = {
 				political_power_gain = -0.5
 			}
 		}
-		
+
 		CHI_warlord_integration_3 = {
 
 			name = CHI_warlord_integration
 
-			picture = chi_warlord_integration3			
+			picture = chi_warlord_integration3
 
 			allowed = {
 				always = no
@@ -591,7 +641,7 @@ ideas = {
 			}
 
 			removal_cost = -1
-			
+
 			modifier = {
 				political_power_gain = -0.75
 			}
@@ -601,7 +651,7 @@ ideas = {
 
 			name = CHI_warlord_integration
 
-			picture = chi_warlord_integration2			
+			picture = chi_warlord_integration2
 
 			allowed = {
 				always = no
@@ -612,7 +662,7 @@ ideas = {
 			}
 
 			removal_cost = -1
-			
+
 			modifier = {
 				political_power_gain = -1.0
 			}
@@ -622,7 +672,7 @@ ideas = {
 
 			name = CHI_warlord_integration
 
-			picture = chi_warlord_integration			
+			picture = chi_warlord_integration
 
 			allowed = {
 				always = no
@@ -633,7 +683,7 @@ ideas = {
 			}
 
 			removal_cost = -1
-			
+
 			modifier = {
 				political_power_gain = -1.25
 			}
@@ -641,7 +691,7 @@ ideas = {
 
 		CHI_war_of_anti_imperialism = {
 
-			picture = FRA_scw_intervention_nationalists_focus		
+			picture = FRA_scw_intervention_nationalists_focus
 
 			allowed = {
 				always = no
@@ -652,7 +702,7 @@ ideas = {
 			}
 
 			removal_cost = -1
-			
+
 			targeted_modifier = {
 				tag = JAP
 				attack_bonus_against = 0.1
@@ -669,17 +719,17 @@ ideas = {
 		CHI_illegal_regime = {
 
 			picture = generic_purge
-		
+
 			allowed = {
 				always = no
 			}
 
 			allowed_civil_war = {
-				always = no			
+				always = no
 			}
 
 			removal_cost = -1
-			
+
 			modifier = {
 				stability_factor = -0.5
 				war_support_factor = -0.65
@@ -689,7 +739,7 @@ ideas = {
 		##CHINA IDEAS
 		CHI_nanking_decade_idea = {
 			picture = generic_exploit_mines
-			
+
 			allowed = {
 				always = no
 			}
@@ -699,7 +749,7 @@ ideas = {
 				}
 			}
 			removal_cost = -1
-			
+
 			modifier = {
 				production_speed_buildings_factor = 0.05
 				production_factory_max_efficiency_factor = 0.1
@@ -707,7 +757,7 @@ ideas = {
 		}
 		CHI_whampoa_spirit_idea = {
 			picture = FRA_national_mobilization_focus
-			
+
 			allowed = {
 				always = no
 			}
@@ -717,7 +767,7 @@ ideas = {
 				}
 			}
 			removal_cost = -1
-			
+
 			research_bonus = {
 				land_doctrine = 0.05
 			}
@@ -728,7 +778,7 @@ ideas = {
 		}
 		CHI_german_style_training_idea = {
 			picture = FRA_national_mobilization_focus
-			
+
 			allowed = {
 				always = no
 			}
@@ -738,7 +788,7 @@ ideas = {
 				}
 			}
 			removal_cost = -1
-			
+
 			research_bonus = {
 			}
 			modifier = {
@@ -753,7 +803,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			removal_cost = -1			
+			removal_cost = -1
 			modifier = {
 				opinion_gain_monthly_factor = 0.15
 				opinion_gain_monthly_same_ideology_factor = 0.15
@@ -770,7 +820,7 @@ ideas = {
 					has_government = neutrality
 				}
 			}
-			removal_cost = -1			
+			removal_cost = -1
 			modifier = {
 				consumer_goods_factor = 0.05
 				political_power_factor = 0.2
@@ -788,7 +838,7 @@ ideas = {
 					has_government = neutrality
 				}
 			}
-			removal_cost = -1			
+			removal_cost = -1
 			modifier = {
 				consumer_goods_factor = 0.07
 				political_power_factor = 0.2
@@ -807,7 +857,7 @@ ideas = {
 					has_government = neutrality
 				}
 			}
-			removal_cost = -1			
+			removal_cost = -1
 			modifier = {
 				consumer_goods_factor = 0.10
 				political_power_factor = 0.1
@@ -826,7 +876,7 @@ ideas = {
 					has_government = neutrality
 				}
 			}
-			removal_cost = -1			
+			removal_cost = -1
 			modifier = {
 				army_morale_factor = 0.1
 				stability_factor = 0.1
@@ -844,7 +894,7 @@ ideas = {
 					has_government = neutrality
 				}
 			}
-			removal_cost = -1			
+			removal_cost = -1
 			modifier = {
 				consumer_goods_factor = -0.05
 				fascism_acceptance = 20
@@ -863,7 +913,7 @@ ideas = {
 					has_government = neutrality
 				}
 			}
-			removal_cost = -1			
+			removal_cost = -1
 			modifier = {
 				research_time_factor = -0.05
 				democratic_acceptance = 20
@@ -877,14 +927,14 @@ ideas = {
 			allowed_civil_war = {
 				NOT = { has_government = fascism }
 			}
-			removal_cost = -1	
+			removal_cost = -1
 		}
 		#####
 		the_blueshirts = {
-			removal_cost = -1	
+			removal_cost = -1
 			allowed = {
 				always = no
-			}			
+			}
 			allowed_civil_war = {
 				OR = {
 					has_government = fascism
@@ -902,7 +952,7 @@ ideas = {
 				NOT = {
 					has_government = communism
 				}
-			}			
+			}
 			allowed_civil_war = {
 				OR = {
 					has_government = fascism
@@ -916,10 +966,10 @@ ideas = {
 		}
 		the_blueshirts_stronger = {
 			picture = the_blueshirts
-			removal_cost = -1	
+			removal_cost = -1
 			allowed = {
 				always = no
-			}			
+			}
 			allowed_civil_war = {
 				OR = {
 					has_government = fascism
@@ -939,7 +989,7 @@ ideas = {
 				NOT = {
 					has_government = communism
 				}
-			}			
+			}
 			allowed_civil_war = {
 				OR = {
 					has_government = fascism
@@ -955,10 +1005,10 @@ ideas = {
 		#####
 		national_resource_council = {
 			removal_cost = -1
-			picture = resource_commitee		
+			picture = resource_commitee
 			allowed = {
 				always = no
-			}			
+			}
 			allowed_civil_war = {
 				OR = {
 					has_government = fascism
@@ -971,10 +1021,10 @@ ideas = {
 		}
 		improved_industry = {
 			removal_cost = -1
-			picture = improved_industry		
+			picture = improved_industry
 			allowed = {
 				always = no
-			}			
+			}
 			allowed_civil_war = {
 				always = yes
 			}
@@ -986,10 +1036,10 @@ ideas = {
 		#####
 		industrial_revolution = {
 			removal_cost = -1
-			picture = idea_tot_economic_mobilisation		
+			picture = idea_tot_economic_mobilisation
 			allowed = {
 				always = no
-			}			
+			}
 			allowed_civil_war = {
 				always = yes
 			}
@@ -1000,10 +1050,10 @@ ideas = {
 		}
 		oil_exploring = {
 			removal_cost = -1
-			picture = idea_generic_refining_concern_1			
+			picture = idea_generic_refining_concern_1
 			allowed = {
 				always = no
-			}			
+			}
 			allowed_civil_war = {
 				always = yes
 			}
@@ -1014,10 +1064,10 @@ ideas = {
 		}
 		under_construction = {
 			removal_cost = -1
-			picture = under_construction				
+			picture = under_construction
 			allowed = {
 				always = no
-			}			
+			}
 			allowed_civil_war = {
 				always = yes
 			}
@@ -1028,10 +1078,10 @@ ideas = {
 		}
 		excavating = {
 			removal_cost = -1
-			picture = idea_ast_all_in			
+			picture = idea_ast_all_in
 			allowed = {
 				always = no
-			}			
+			}
 			allowed_civil_war = {
 				always = yes
 			}
@@ -1042,10 +1092,10 @@ ideas = {
 		}
 		steelmaking = {
 			removal_cost = -1
-			picture = idea_ast_all_in			
+			picture = idea_ast_all_in
 			allowed = {
 				always = no
-			}			
+			}
 			allowed_civil_war = {
 				always = yes
 			}
@@ -1057,25 +1107,25 @@ ideas = {
 		#####
 		NBIS = {
 			removal_cost = -1
-			picture = kmt_NBIS			
+			picture = kmt_NBIS
 			allowed = {
 				always = no
-			}			
+			}
 			allowed_civil_war = {
 				always = yes
 			}
 			modifier = {
 				enemy_partisan_effect = -0.25
 				political_power_factor = 0.025
-				
+
 			}
 		}
 		NBIS_esp = {
 			removal_cost = -1
-			picture = kmt_NBIS			
+			picture = kmt_NBIS
 			allowed = {
 				always = no
-			}			
+			}
 			allowed_civil_war = {
 				always = yes
 			}
@@ -1087,10 +1137,10 @@ ideas = {
 		}
 		CBIS = {
 			removal_cost = -1
-			picture = kmt_CBIS			
+			picture = kmt_CBIS
 			allowed = {
 				always = no
-			}			
+			}
 			allowed_civil_war = {
 				always = yes
 			}
@@ -1100,10 +1150,10 @@ ideas = {
 		}
 		CBIS_kmt = {
 			removal_cost = -1
-			picture = kmt_CBIS			
+			picture = kmt_CBIS
 			allowed = {
 				always = no
-			}			
+			}
 			allowed_civil_war = {
 				always = yes
 			}
@@ -1114,10 +1164,10 @@ ideas = {
 		}
 		CBIS_indoctrination = {
 			removal_cost = -1
-			picture = kmt_CBIS			
+			picture = kmt_CBIS
 			allowed = {
 				always = no
-			}			
+			}
 			allowed_civil_war = {
 				always = yes
 			}
@@ -1131,10 +1181,10 @@ ideas = {
 		}
 		CBIS_kmt_indoctrination = {
 			removal_cost = -1
-			picture = kmt_CBIS			
+			picture = kmt_CBIS
 			allowed = {
 				always = no
-			}			
+			}
 			allowed_civil_war = {
 				always = yes
 			}
@@ -1149,10 +1199,10 @@ ideas = {
 		#########
 		no_proper_equipment_design = {
 			removal_cost = -1
-			picture = no_design			
+			picture = no_design
 			allowed = {
 				always = no
-			}			
+			}
 			allowed_civil_war = {
 				always = yes
 			}
@@ -1164,10 +1214,10 @@ ideas = {
 		}
 		no_proper_equipment_design_no_naval = {
 			removal_cost = -1
-			picture = no_design_no_naval			
+			picture = no_design_no_naval
 			allowed = {
 				always = no
-			}			
+			}
 			allowed_civil_war = {
 				always = yes
 			}
@@ -1179,10 +1229,10 @@ ideas = {
 		}
 		no_proper_equipment_design_no_armor = {
 			removal_cost = -1
-			picture = no_design_no_armor			
+			picture = no_design_no_armor
 			allowed = {
 				always = no
-			}			
+			}
 			allowed_civil_war = {
 				always = yes
 			}
@@ -1194,10 +1244,10 @@ ideas = {
 		}
 		no_proper_equipment_design_no_air = {
 			removal_cost = -1
-			picture = no_design_no_air			
+			picture = no_design_no_air
 			allowed = {
 				always = no
-			}			
+			}
 			allowed_civil_war = {
 				always = yes
 			}
@@ -1209,10 +1259,10 @@ ideas = {
 		}
 		no_proper_equipment_design_naval = {
 			removal_cost = -1
-			picture = no_design_naval			
+			picture = no_design_naval
 			allowed = {
 				always = no
-			}			
+			}
 			allowed_civil_war = {
 				always = yes
 			}
@@ -1224,10 +1274,10 @@ ideas = {
 		}
 		no_proper_equipment_design_armor = {
 			removal_cost = -1
-			picture = no_design_armor			
+			picture = no_design_armor
 			allowed = {
 				always = no
-			}			
+			}
 			allowed_civil_war = {
 				always = yes
 			}
@@ -1239,10 +1289,10 @@ ideas = {
 		}
 		no_proper_equipment_design_air = {
 			removal_cost = -1
-			picture = no_design_air			
+			picture = no_design_air
 			allowed = {
 				always = no
-			}			
+			}
 			allowed_civil_war = {
 				always = yes
 			}
@@ -1256,63 +1306,63 @@ ideas = {
 		iliterate_population = {
 			removal_cost = -1
 			picture = illiteracy
-			
+
 			allowed = {
 				always = no
 			}
-			
+
 			allowed_civil_war = {
 				always = yes
 			}
-			
+
 			modifier = {
 				research_time_factor = 0.24
 			}
-			
+
 			research_bonus = {
 				electronics = -0.48
 				nuclear = -0.8
 			}
 		}
-		
+
 		iliterate_population_1 = {
 			removal_cost = -1
 			picture = illiteracy_2
-			
+
 			allowed = {
 				always = no
 			}
-			
+
 			allowed_civil_war = {
 				always = yes
 			}
-			
+
 			modifier = {
 				research_time_factor = 0.12
 			}
-			
+
 			research_bonus = {
 				electronics = -0.24
 				nuclear = -0.4
 			}
 		}
-		
+
 		iliterate_population_2 = {
 			removal_cost = -1
 			picture = illiteracy_3
-			
+
 			allowed = {
 				always = no
 			}
-			
+
 			allowed_civil_war = {
 				always = yes
 			}
-			
+
 			modifier = {
 				research_time_factor = 0.06
 			}
-			
+
 			research_bonus = {
 				electronics = -0.12
 				nuclear = -0.2
@@ -1321,10 +1371,10 @@ ideas = {
 		#########################
 		unbalanced_industry = {
 			removal_cost = -1
-			picture = unbalanced_industry			
+			picture = unbalanced_industry
 			allowed = {
 				always = no
-			}			
+			}
 			allowed_civil_war = {
 				always = yes
 			}
@@ -1338,10 +1388,10 @@ ideas = {
 		}
 		unbalanced_industry_1 = {
 			removal_cost = -1
-			picture = unbalanced_industry_2			
+			picture = unbalanced_industry_2
 			allowed = {
 				always = no
-			}			
+			}
 			allowed_civil_war = {
 				always = yes
 			}
@@ -1355,10 +1405,10 @@ ideas = {
 		}
 		unbalanced_industry_2 = {
 			removal_cost = -1
-			picture = unbalanced_industry_3			
+			picture = unbalanced_industry_3
 			allowed = {
 				always = no
-			}			
+			}
 			allowed_civil_war = {
 				always = yes
 			}
@@ -1372,10 +1422,10 @@ ideas = {
 		}
 		unbalanced_industry_3 = {
 			removal_cost = -1
-			picture = unbalanced_industry_4			
+			picture = unbalanced_industry_4
 			allowed = {
 				always = no
-			}			
+			}
 			allowed_civil_war = {
 				always = yes
 			}
@@ -1390,13 +1440,13 @@ ideas = {
 		#############
 		incompetent_heavy_industry = {
 			removal_cost = -1
-			picture = incompetent_heavy_industry		
+			picture = incompetent_heavy_industry
 			allowed = {
 				always = no
-			}		
+			}
 			allowed_civil_war = {
 				always = yes
-			}						
+			}
 			equipment_bonus = {
 				gw_tank_equipment = {
 					build_cost_ic = 30 instant = yes
@@ -1587,8 +1637,8 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				war_support_factor = -0.05
-			}			
-		}		
+			}
+		}
 		appeasement_policy = {
 			picture = generic_morale_bonus
 			allowed = {
@@ -1602,8 +1652,8 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				war_support_factor = -0.10
-			}			
-		}		
+			}
+		}
 		appeasement_policy_2 = {
 			picture = generic_morale_bonus
 			allowed = {
@@ -1617,8 +1667,8 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				war_support_factor = -0.15
-			}			
-		}		
+			}
+		}
 		CHI_sunfall_sea	= {
 			allowed = {
 				always = no
@@ -1638,7 +1688,7 @@ ideas = {
 		}
 		CHI_navy_reorganized = {
 			picture = generic_navy_bonus
-			
+
 			allowed = {
 				always = no
 			}
@@ -1657,9 +1707,9 @@ ideas = {
 					build_cost_ic = -0.10 instant = yes
 				}
 			}
-			
+
 		}
-		
+
 		CHI_german_coop = {
 			allowed = {
 				always = no
@@ -1741,7 +1791,7 @@ ideas = {
 				drift_defence_factor = 0.2
 				army_org_factor = -0.2
 				army_morale_Factor = -0.25
-			}		
+			}
 		}
 		chiang1 = {
 			picture = chiang
@@ -1773,7 +1823,7 @@ ideas = {
 				}
 			}
 			removal_cost = -1
-			modifier = {				
+			modifier = {
 				enemy_partisan_effect = -0.20
 				drift_defence_factor = 0.15
 				army_org_factor = -0.15
@@ -1811,7 +1861,7 @@ ideas = {
 				}
 			}
 			removal_cost = -1
-			modifier = {				
+			modifier = {
 				enemy_partisan_effect = -0.15
 				drift_defence_factor = 0.10
 				army_org_factor = -0.10
@@ -1926,7 +1976,7 @@ ideas = {
 				drift_defence_factor = -0.1
 				n_socialism_drift = 0.02
 				communism_drift = 0.02
-			}		
+			}
 		}
 		CHI_kmt = {
 			allowed = {
@@ -1952,7 +2002,7 @@ ideas = {
 				NOT = {
 					has_government = communism
 				}
-			}		
+			}
 			picture = CHI_nationalize_industry_1_focus
 			removal_cost = -1
 			modifier = {
@@ -1970,7 +2020,7 @@ ideas = {
 				NOT = {
 					has_government = communism
 				}
-			}			
+			}
 			picture = CHI_nationalize_industry_2_focus
 			removal_cost = -1
 			modifier = {
@@ -1988,7 +2038,7 @@ ideas = {
 				NOT = {
 					has_government = communism
 				}
-			}		
+			}
 			picture = CHI_nationalize_industry_3_focus
 			removal_cost = -1
 			modifier = {
@@ -2058,7 +2108,7 @@ ideas = {
 		}
 		CHI_civil_war_deserters = {
 			picture = generic_morale_bonus
-			
+
 			allowed = {
 				always = no
 			}
@@ -2071,7 +2121,7 @@ ideas = {
 				}
 			}
 			removal_cost = -1
-			
+
 			modifier = {
 				army_morale_factor = -0.2
 			}
@@ -2091,7 +2141,7 @@ ideas = {
 				}
 			}
 			removal_cost = -1
-			
+
 			modifier = {
 			}
 		}
@@ -2173,7 +2223,7 @@ ideas = {
 			}
 		}
 		CHI_no_turning_back = {
-			picture = generic_reserve_divisions			
+			picture = generic_reserve_divisions
 			allowed = {
 				always = no
 			}
@@ -2185,7 +2235,7 @@ ideas = {
 				}
 			}
 			removal_cost = -1
-			
+
 			modifier = {
 				army_morale_factor = 0.1
 				army_attack_factor = 0.05
@@ -2194,7 +2244,7 @@ ideas = {
 		}
 		############CHI INCH
 		CHI_inch_blood_1 = {
-			picture = idea_generic_reserve_divisions			
+			picture = idea_generic_reserve_divisions
 			allowed = {
 				always = no
 			}
@@ -2206,7 +2256,7 @@ ideas = {
 				}
 			}
 			removal_cost = -1
-			
+
 			modifier = {
 				army_morale_factor = 0.05
 				army_core_defence_factor = 0.05
@@ -2215,7 +2265,7 @@ ideas = {
 			}
 		}
 		CHI_inch_blood_2 = {
-			picture = idea_generic_reserve_divisions			
+			picture = idea_generic_reserve_divisions
 			allowed = {
 				always = no
 			}
@@ -2227,7 +2277,7 @@ ideas = {
 				}
 			}
 			removal_cost = -1
-			
+
 			modifier = {
 				army_morale_factor = 0.1
 				army_core_defence_factor = 0.1
@@ -2236,7 +2286,7 @@ ideas = {
 			}
 		}
 		CHI_inch_blood_3 = {
-			picture = idea_generic_reserve_divisions			
+			picture = idea_generic_reserve_divisions
 			allowed = {
 				always = no
 			}
@@ -2248,7 +2298,7 @@ ideas = {
 				}
 			}
 			removal_cost = -1
-			
+
 			modifier = {
 				army_morale_factor = 0.15
 				army_core_defence_factor = 0.15
@@ -2257,7 +2307,7 @@ ideas = {
 			}
 		}
 		CHI_inch_blood_4 = {
-			picture = idea_generic_reserve_divisions			
+			picture = idea_generic_reserve_divisions
 			allowed = {
 				always = no
 			}
@@ -2269,7 +2319,7 @@ ideas = {
 				}
 			}
 			removal_cost = -1
-			
+
 			modifier = {
 				army_morale_factor = 0.20
 				army_core_defence_factor = 0.20
@@ -2278,7 +2328,7 @@ ideas = {
 			}
 		}
 		CHI_inch_blood_5 = {
-			picture = idea_generic_reserve_divisions			
+			picture = idea_generic_reserve_divisions
 			allowed = {
 				always = no
 			}
@@ -2290,7 +2340,7 @@ ideas = {
 				}
 			}
 			removal_cost = -1
-			
+
 			modifier = {
 				army_morale_factor = 0.25
 				army_core_defence_factor = 0.25
@@ -2299,7 +2349,7 @@ ideas = {
 			}
 		}
 		CHI_inch_blood_6 = {
-			picture = idea_generic_reserve_divisions			
+			picture = idea_generic_reserve_divisions
 			allowed = {
 				always = no
 			}
@@ -2311,7 +2361,7 @@ ideas = {
 				}
 			}
 			removal_cost = -1
-			
+
 			modifier = {
 				army_morale_factor = 0.3
 				army_core_defence_factor = 0.3
@@ -2320,7 +2370,7 @@ ideas = {
 			}
 		}
 		CHI_inch_blood_7 = {
-			picture = idea_generic_reserve_divisions			
+			picture = idea_generic_reserve_divisions
 			allowed = {
 				always = no
 			}
@@ -2332,7 +2382,7 @@ ideas = {
 				}
 			}
 			removal_cost = -1
-			
+
 			modifier = {
 				army_morale_factor = 0.35
 				army_core_defence_factor = 0.35
@@ -2341,7 +2391,7 @@ ideas = {
 			}
 		}
 		CHI_inch_blood_8 = {
-			picture = idea_generic_reserve_divisions			
+			picture = idea_generic_reserve_divisions
 			allowed = {
 				always = no
 			}
@@ -2353,7 +2403,7 @@ ideas = {
 				}
 			}
 			removal_cost = -1
-			
+
 			modifier = {
 				army_morale_factor = 0.4
 				army_core_defence_factor = 0.4
@@ -2362,7 +2412,7 @@ ideas = {
 			}
 		}
 		CHI_inch_blood_9 = {
-			picture = idea_generic_reserve_divisions			
+			picture = idea_generic_reserve_divisions
 			allowed = {
 				always = no
 			}
@@ -2374,7 +2424,7 @@ ideas = {
 				}
 			}
 			removal_cost = -1
-			
+
 			modifier = {
 				army_morale_factor = 0.45
 				army_core_defence_factor = 0.45
@@ -2383,7 +2433,7 @@ ideas = {
 			}
 		}
 		CHI_inch_blood_10 = {
-			picture = idea_generic_reserve_divisions			
+			picture = idea_generic_reserve_divisions
 			allowed = {
 				always = no
 			}
@@ -2395,7 +2445,7 @@ ideas = {
 				}
 			}
 			removal_cost = -1
-			
+
 			modifier = {
 				army_morale_factor = 0.5
 				army_core_defence_factor = 0.5
@@ -2436,7 +2486,7 @@ ideas = {
 			}
 			traits = { prince_of_terror }
 		}
-		
+
 		he_zhonghan = {
 			picture = idea_he_zhonghan
 			allowed = {
@@ -2462,40 +2512,40 @@ ideas = {
 				has_government = fascism
 			}
 			traits = { fascist_demagogue }
-			
+
 			on_add = {
 				set_country_flag = CHI_no_fascist
 			}
-			
+
 			do_effect = {
 				NOT = {
 					has_government = fascism
 				}
 			}
 		}
-		
+
 		carsun_chang = {
-			
+
 			picture = idea_carsun_chang
 			allowed = {
 				original_tag = CHI
 			}
-			
-			
+
+
 			traits = { democratic_reformer }
-			
-			
+
+
 			on_add = {
 				set_country_flag = CHI_no_demo
-			}		
-			
+			}
+
 			do_effect = {
 				NOT = {
 					has_government = democratic
 				}
 			}
 		}
-		
+
 		zhang_bojun = {
 			picture = idea_zhang_bojun
 			allowed = {
@@ -2504,12 +2554,12 @@ ideas = {
 			}
 			available = { NOT = { has_country_flag = cdl_outlawed }}
 			traits = { socialist_idealist }
-			
-			
+
+
 			on_add = {
 				set_country_flag = CHI_no_demo
-			}		
-			
+			}
+
 			do_effect = {
 				NOT = {
 					has_government = n_socialism
@@ -2518,69 +2568,69 @@ ideas = {
 			ai_will_do = {
 				factor = 0
 			}
-			
+
 		}
-		
+
 		yu_dawei = {
 			picture = idea_yu_dawei
-			
+
 			allowed = {
 				original_tag = CHI
 			}
-			
+
 			traits = { war_industrialist }
 		}
-		
+
 		chen_yibai = {
 			picture = idea_chen_yibai
-			
+
 			allowed = {
 				original_tag = CHI
 			}
-			
+
 			traits = { quartermaster_general }
 		}
-		
-		
+
+
 		weng_wenhao = {
 			picture = idea_weng_wenhao
-			
+
 			allowed = {
 				original_tag = CHI
 			}
-			
+
 			traits = { captain_of_industry }
 		}
-		
+
 		sun_fo = {
 			picture = idea_sun_fo
-			
+
 			allowed = {
 				original_tag = CHI
 			}
-			
+
 			traits = { compassionate_gentleman }
 		}
-		
+
 		lin_sen = {
 			picture = idea_lin_sen
-			
+
 			allowed = {
 				original_tag = CHI
 			}
-			
+
 			traits = { popular_figurehead }
 		}
-		
+
 		zhang_qun = {
 			picture = idea_zhang_qun
-			
+
 			allowed = {
 				original_tag = CHI
 			}
 			traits = { silent_workhorse }
 		}
-		
+
 		chen_lifu = {
 			picture = idea_chen_lifu
 			allowed_civil_war = {
@@ -2606,7 +2656,7 @@ ideas = {
 			}
 			traits = { backroom_backstabber }
 		}
-		
+
 		kung_hsiang_hsi = {
 			picture = idea_kung_hsiang_hsi
 			allowed = {
@@ -2624,10 +2674,10 @@ ideas = {
 			}
 			on_add = {
 			}
-	
+
 			do_effect = {
 			}
-	
+
 			ai_will_do = {
 				factor = 100
 			}
@@ -2650,10 +2700,10 @@ ideas = {
 			}
 			on_add = {
 			}
-	
+
 			do_effect = {
 			}
-	
+
 			ai_will_do = {
 				factor = 1
 			}
@@ -2661,7 +2711,7 @@ ideas = {
 		CHI_soong_mei_ling = {
 
 			picture = GFX_idea_chi_soong_mei_ling
-			
+
 			available = {
 				has_country_leader = { ruling_only = yes name = "Chiang Kai-shek" }
 				has_completed_focus = reinforce_new_life_movement
@@ -2671,7 +2721,7 @@ ideas = {
 				original_tag = CHI
 				#has_dlc = "Waking the Tiger"
 			}
-			
+
 			traits = { first_lady }
 		}
 
@@ -2682,20 +2732,20 @@ ideas = {
 			available = {
 				#has_completed_focus = CHI_financial_policy
 			}
-			
+
 			allowed = {
 				original_tag = CHI
 				#has_dlc = "Waking the Tiger"
 			}
-			
+
 			traits = { financial_expert }
 		}
 	}
-	
+
 	foreign_advisor = {
 		claire_lee_chennault_chi = {
 			picture = idea_claire_lee_chennault
-			
+
 			allowed = {
 				#OR = {
 					#original_tag = USA
@@ -2704,7 +2754,7 @@ ideas = {
 						#	has_global_flag = flying_tiger
 						#}
 					#}
-			}		
+			}
 			available = {
 				AND = {
 					original_tag = CHI
@@ -2714,17 +2764,17 @@ ideas = {
 				NOT = { has_government = fascism }
 				NOT = { has_war_with = USA }
 				NOT = { has_idea = joseph_stilwell_chi }
-			}			
+			}
 			traits = { air_tactical_bombing_3 }
 			ai_will_do = {
 				factor = 10
 			}
 		}
-		joseph_stilwell_chi = {	
+		joseph_stilwell_chi = {
 			picture = idea_joseph_stilwell
 			allowed = {
 				original_tag = CHI
-			}		
+			}
 			available = {
 				AND = {
 					original_tag = CHI
@@ -2733,8 +2783,8 @@ ideas = {
 				NOT = { has_government = fascism }
 				NOT = { has_war_with = USA }
 				NOT = { has_idea = claire_lee_chennault_chi }
-			}		
-			traits = { army_logistics_2 }		
+			}
+			traits = { army_logistics_2 }
 			ai_will_do = {
 				factor = 1
 			}
@@ -2755,7 +2805,7 @@ ideas = {
 				factor = 1
 			}
 		}
-		CHI_gregory_thor = {		
+		CHI_gregory_thor = {
 			allowed = {
 				original_tag = CHI
 				has_country_flag = second_term_sov_advisor
@@ -2768,12 +2818,12 @@ ideas = {
 			}
 			# PURGED
 			traits = { air_chief_safety_2 }
-			
+
 			ai_will_do = {
 				factor = 1
 			}
 		}
-		CHI_petr_anisimov = {		
+		CHI_petr_anisimov = {
 			allowed = {
 				original_tag = CHI
 				has_country_flag = third_term_sov_advisor
@@ -2786,12 +2836,12 @@ ideas = {
 			}
 			# PURGED
 			traits = { air_chief_reform_3 }
-			
+
 			ai_will_do = {
 				factor = 1
 			}
 		}
-		CHI_pavel_rychagov = {		
+		CHI_pavel_rychagov = {
 			allowed = {
 				original_tag = CHI
 				has_country_flag = fourth_term_sov_advisor
@@ -2803,7 +2853,7 @@ ideas = {
 			}
 			# PURGED
 			traits = { air_chief_all_weather_2 }
-			
+
 			ai_will_do = {
 				factor = 1
 			}
@@ -2816,7 +2866,7 @@ ideas = {
 				NOT = {
 					OR = {
 						has_war_with = GER
-						has_country_flag = severed_ties_with_GER
+						has_country_flag = falkenhausen_recalled
 						has_government = communism
 						has_government = n_socialism
 					}
@@ -2837,7 +2887,7 @@ ideas = {
 		}
 	}
 	army_chief = {
-		
+
 		#shanxi
 		CHI_yan_xishan = {
 			picture = generic_army_asia_1
@@ -2851,79 +2901,79 @@ ideas = {
 				}
 			}
 			traits = { army_chief_organizational_2 }
-			
+
 			ai_will_do = {
 				factor = 1
 			}
 		}
 		#Clique
-		
+
 		CHI_chen_jitang = {
 			picture = generic_army_asia_2
-			
+
 			allowed = {
 				original_tag = CHI
 			}
-			
+
 			available = {
 				OR = {
 					is_in_faction_with = GUD
 					has_global_flag = gud_joins_chi
 				}
 			}
-			
+
 			traits = { army_chief_drill_2 }
-			
+
 			ai_will_do = {
 				factor = 1
 			}
 		}
 		#Nationalist
-		
+
 		CHI_li_zongren = {
-			
+
 			picture = generic_army_asia_3
 			allowed = {
 				original_tag = CHI
 			}
-			
+
 			available = {
 				OR = {
 					is_in_faction_with = GXC
 					has_global_flag = gxc_joins_chi
 				}
 			}
-			
+
 			traits = { army_chief_defensive_3 }
-			
+
 			ai_will_do = {
 				factor = 90
 			}
 		}
-		
+
 		CHI_song_zheyuan = {
-			
+
 			picture = generic_army_asia_3
 			allowed = {
 				original_tag = CHI
 			}
-			
+
 			available = {
 				OR = {
 					is_in_faction_with = HPC
 					has_global_flag = hpc_joins_chi
 				}
 			}
-			
+
 			traits = { army_chief_morale_3 }
-			
+
 			ai_will_do = {
 				factor = 1
 			}
 		}
-		
+
 		CHI_he_yingqin = {
-			
+
 			picture = generic_army_asia_1
 			allowed = {
 				original_tag = CHI
@@ -2931,46 +2981,46 @@ ideas = {
 					has_country_flag = he_yingqin_in_charge
 				}
 			}
-			
+
 			traits = { army_chief_offensive_2 }
-			
+
 			ai_will_do = {
 				factor = 5
 			}
 		}
-		
+
 		CHI_chen_cheng = {
-			
+
 			picture = generic_army_asia_2
 			allowed = {
 				original_tag = CHI
 			}
-			
+
 			traits = { army_chief_maneuver_2 }
-			
+
 			ai_will_do = {
 				factor = 5
 			}
 		}
 	}
 	air_chief = {
-		
-		
+
+
 		#Communist
 		#Fang Zeyi
 		#army_aviation_doctrine
 		#Clique
 		CHI_wang_shuming = {
-			
+
 			picture = generic_air_asia_1
-			
+
 			allowed = {
 				original_tag = CHI
 			}
-			
-			
+
+
 			traits = { air_chief_all_weather_2 }
-			
+
 			ai_will_do = {
 				factor = 1
 			}
@@ -2978,103 +3028,103 @@ ideas = {
 		#Nationalist
 		CHI_zhou_zhirou = {
 			picture = generic_air_asia_2
-			
+
 			allowed = {
 				original_tag = CHI
 			}
-			
-			
+
+
 			traits = { air_chief_old_guard }
-			
+
 			ai_will_do = {
 				factor = 1
 			}
 		}
 		CHI_huang_guangrei = {
 			picture = generic_air_asia_3
-			
+
 			allowed = {
 				original_tag = CHI
 				has_country_flag = haung_guangrei_defects
 			}
-			
-			
+
+
 			traits = { air_chief_ground_support_3 }
-			
+
 			ai_will_do = {
 				factor = 1
 			}
 		}
 	}
-	
+
 	navy_chief = {
-		
+
 		#Nationalist
 		CHI_chen_shaokuan = {
 			picture = generic_navy_asia_3
-			
+
 			allowed = {
 				original_tag = CHI
 			}
-			
+
 			traits = { navy_chief_decisive_battle_2 }
-			
+
 			ai_will_do = {
 				factor = 1
 			}
 		}
 		CHI_gui_yongqing = {
 			picture = generic_navy_asia_2
-			
+
 			allowed = {
 				original_tag = CHI
 			}
-			
+
 			traits = { navy_chief_commerce_raiding_2 }
-			
+
 			ai_will_do = {
 				factor = 1
 			}
 		}
 	}
 	# TECHNOLOGY
-	
+
 	naval_manufacturer = {
-		
+
 		designer = yes
-		
+
 		kiangnan_shipyard_group = {
 			picture = kiangnan_shipyeard
-			
+
 			allowed = {
 				original_tag = CHI
 			}
-			
+
 			research_bonus = {
 				naval_equipment = 0.10
 			}
-			
+
 			# riverine warfare weak on open waters
-			
+
 			traits = { naval_manufacturer }
-			
+
 		}
 		CHI_minsheng = {
 			picture = minsheng
 			allowed = {
 				original_tag = CHI
 			}
-			
+
 			research_bonus = {
 				naval_equipment = 0.10
 			}
-			
+
 			traits = { coastal_defence_naval_manufacturer } #used for many repairs and conversions
-			
+
 			equipment_bonus = {
-				
+
 			}
-		}	
+		}
 		CHI_hamburg_america_line_idea = {
 			picture = hamburg_america_line_idea
 			allowed = {
@@ -3084,17 +3134,17 @@ ideas = {
 				has_idea = Carlowitz_Co_idea
 				NOT = {
 					has_war_with = GER
-					has_country_flag = severed_ties_with_GER
+					has_country_flag = falkenhausen_recalled
 				}
 			}
 			research_bonus = {
 				naval_equipment = 0.10
 			}
-			
-			traits = { atlantic_fleet_naval_manufacturer } 
-			
+
+			traits = { atlantic_fleet_naval_manufacturer }
+
 			equipment_bonus = {
-				
+
 			}
 		}
 		#GER idea
@@ -3108,20 +3158,20 @@ ideas = {
 			research_bonus = {
 				naval_equipment = 0.10
 			}
-			
-			traits = { atlantic_fleet_naval_manufacturer } 
-			
+
+			traits = { atlantic_fleet_naval_manufacturer }
+
 			equipment_bonus = {
-				
+
 			}
 		}
 	}
-	
+
 	aircraft_manufacturer = { #
-		
+
 		designer = yes
 		eurasia_aviation_corp = {
-						
+
 			allowed = {
 				original_tag = CHI
 			}
@@ -3132,13 +3182,13 @@ ideas = {
 					has_government = fascism
 				}
 			}
-			
+
 			research_bonus = {
 				air_equipment = 0.10
 			}
-			
+
 			traits = { light_aircraft_manufacturer }
-			
+
 			modifier = {
 			}
 		}
@@ -3153,35 +3203,35 @@ ideas = {
 			research_bonus = {
 				air_equipment = 0.10
 			}
-			
+
 			traits = { medium_aircraft_manufacturer }
-			
+
 			# assembled hawk II and hawk III fighter bombers as well as the Vultee V-11 ground attackers
-			
+
 			ai_will_do = {
 				factor = 1
 			}
 		}
-		
+
 		cnac = {
-						
+
 			allowed = {
 				original_tag = CHI
 			}
-			
+
 			research_bonus = {
 				air_equipment = 0.10
 			}
-			
+
 			traits = { heavy_aircraft_manufacturer }
 
 		}
-		
+
 		naval_aircraft_agency = {
-			
+
 			picture = generic_naval_manufacturer_3
 			allowed = {
-				original_tag = CHI				
+				original_tag = CHI
 			}
 			available = {
 				#controls_state = 595
@@ -3189,42 +3239,42 @@ ideas = {
 			}
 			cost = 150
 			removal_cost = 10
-			
+
 			research_bonus = {
 				air_equipment = 0.10
 			}
-			
+
 			traits = { naval_aircraft_manufacturer }
 		}
 	}
-	
+
 	materiel_manufacturer = {
-	
+
 		designer = yes
-	
-		idea_yue_loong = {		
+
+		idea_yue_loong = {
 			picture = generic_motorized_equipment_manufacturer_3
 			allowed = {
-				original_tag = CHI				
+				original_tag = CHI
 			}
 			available = {
 				has_completed_focus = CHI_motorize_effort_focus
 			}
 			cost = 150
 			removal_cost = 10
-			
+
 			research_bonus = {
 				motorized_equipment = 0.10
 			}
-			
+
 			traits = { motorized_equipment_manufacturer }
 		}
-		
+
 		idea_guangdong_arsenal = {
-			
+
 			picture = generic_infantry_equipment_manufacturer_2
 			allowed = {
-				original_tag = CHI				
+				original_tag = CHI
 			}
 			available = {
 				OR = {
@@ -3236,57 +3286,57 @@ ideas = {
 			}
 			cost = 150
 			removal_cost = 10
-			
+
 			research_bonus = {
 				infantry_weapons = 0.10
 			}
-			
+
 			traits = { mass_infantry_equipment_manufacturer }
 		}
-		
+
 		idea_hanyang_arsenal = {
-			
+
 			picture = generic_infantry_equipment_manufacturer_2
 			allowed = {
-				original_tag = CHI				
+				original_tag = CHI
 			}
-			
+
 			cost = 150
 			removal_cost = 10
-			
+
 			available = {
 				has_full_control_of_state = 620
 			}
-			
+
 			research_bonus = {
 				infantry_weapons = 0.10
 			}
-			
+
 			traits = { infantry_equipment_manufacturer }
 		}
-		
+
 		idea_jingling_arsenal = {
-			
+
 			picture = generic_artillery_manufacturer_2
 			allowed = {
-				original_tag = CHI				
+				original_tag = CHI
 			}
-			
+
 			cost = 150
 			removal_cost = 10
-			
+
 			research_bonus = {
 				artillery = 0.10
 			}
-			
+
 			traits = { artillery_manufacturer }
 		}
-		
+
 		idea_shenyang_arsenal = {
-			
+
 			picture = generic_infantry_equipment_manufacturer_2
 			allowed = {
-				original_tag = CHI				
+				original_tag = CHI
 			}
 			cost = 150
 			removal_cost = 10
@@ -3296,15 +3346,15 @@ ideas = {
 			research_bonus = {
 				infantry_weapons = 0.10
 			}
-			
+
 			traits = { slow_infantry_equipment_manufacturer }
 		}
-		
+
 		idea_gongxian_arsenal = {
-			
+
 			picture = generic_infantry_equipment_manufacturer_2
 			allowed = {
-				original_tag = CHI				
+				original_tag = CHI
 			}
 			cost = 50
 			removal_cost = 10
@@ -3324,10 +3374,10 @@ ideas = {
 			}
 			traits = { bad_infantry_equipment_manufacturer }
 		}
-		CHI_goodyear_tires_idea = {		
+		CHI_goodyear_tires_idea = {
 			picture = goodyear_tires_idea
 			allowed = {
-				original_tag = CHI				
+				original_tag = CHI
 			}
 			available = {
 				has_idea = Carlowitz_Co_idea
@@ -3337,7 +3387,7 @@ ideas = {
 			}
 			cost = 150
 			removal_cost = 10
-			
+
 			research_bonus = {
 				motorized_equipment = 0.05
 			}
@@ -3345,20 +3395,20 @@ ideas = {
 				motorized_equipment = {
 					build_cost_ic = -0.1 instant = yes
 				}
-			}	
+			}
 			traits = { motorized_equipment_manufacturer }
 		}
 		#USA idea
 		goodyear_tires_idea = {
 			picture = goodyear_tires_idea
 			allowed = {
-				original_tag = USA				
+				original_tag = USA
 			}
 			available = {
 			}
 			cost = 150
 			removal_cost = 10
-			
+
 			research_bonus = {
 				motorized_equipment = 0.05
 			}
@@ -3366,34 +3416,34 @@ ideas = {
 				motorized_equipment = {
 					build_cost_ic = -0.1 instant = yes
 				}
-			}	
-			
+			}
+
 			traits = { motorized_equipment_manufacturer }
 		}
 		#idea_zhejiang_steelwork = {
-			
+
 		#	picture = generic_infantry_equipment_manufacturer_2
 		#	allowed = {
-		#		original_tag = CHI				
+		#		original_tag = CHI
 		#	}
 		#	available = {
 		#		controls_state = 596
 		#	}
 		#	cost = 150
 		#	removal_cost = 10
-			
+
 		#	research_bonus = {
 		#		infantry_weapons = 0.10
 		#	}
-			
+
 		#	traits = { infantry_equipment_manufacturer }
 		#}
 	}
-	
+
 	theorist = {
 		CHI_xiong_shihui = {
 			picture = generic_army_asia_2
-			
+
 			allowed = {
 				original_tag = CHI
 			}
@@ -3403,149 +3453,149 @@ ideas = {
 			research_bonus = {
 				land_doctrine = 0.07
 			}
-			
+
 			traits = { military_theorist }
 		}
-		
+
 		CHI_mao_bangchu = {
 			picture = generic_air_asia_2
-			
+
 			allowed = {
 				original_tag = CHI
 			}
-			
+
 			research_bonus = {
 				air_doctrine = 0.07
 			}
-			
+
 			traits = { air_warfare_theorist }
 		}
 		CHI_shen_honglie = {
 			picture = generic_navy_asia_2
-			
+
 			allowed = {
 				original_tag = CHI
 			}
-			
+
 			research_bonus = {
 				naval_doctrine = 0.07
 			}
-			
+
 			traits = { naval_theorist }
 		}
 	}
 	high_command = {
-	
+
 		CHI_gao_zhihang = {
-			picture = generic_air_asia_2	
+			picture = generic_air_asia_2
 			allowed = {
 				original_tag = CHI
 			}
 			traits = { air_air_superiority_3 }
-			
+
 			ai_will_do = {
 				factor = 1
 			}
 		}
 		CHI_wang_tianxiang = {
-			picture = generic_air_asia_1	
+			picture = generic_air_asia_1
 			allowed = {
 				original_tag = CHI
 			}
 			traits = { air_strategic_bombing_2 }
-			
+
 			ai_will_do = {
 				factor = 1
 			}
 		}
 		CHI_liu_tsuigang = {
-			picture = generic_air_asia_3	
+			picture = generic_air_asia_3
 			allowed = {
 				original_tag = CHI
 			}
 			traits = { air_bomber_interception_3 }
-			
+
 			ai_will_do = {
 				factor = 1
 			}
 		}
 		CHI_wei_lihuang = {
 			picture = generic_army_asia_1
-			
+
 			allowed = {
 				original_tag = CHI
 			}
-			
+
 			traits = { army_entrenchment_2 }
-			
+
 			ai_will_do = {
 				factor = 50
 			}
 		}
-		
+
 		CHI_zhang_lingfu = {
 			picture = generic_army_asia_2
-			
+
 			allowed = {
 				original_tag = CHI
 			}
-			
+
 			traits = { army_infantry_2 }
-			
+
 			ai_will_do = {
 				factor = 100
 			}
 		}
-		
+
 		CHI_yu_hanmou = {
 			picture = generic_army_asia_3
-			
+
 			allowed = {
 				original_tag = CHI
 			}
-			
+
 			traits = { army_regrouping_2 }
-			
+
 			ai_will_do = {
 				factor = 30
 			}
 		}
-		
+
 		CHI_wang_yaowu = {
 			picture = generic_army_asia_1
-			
+
 			allowed = {
 				original_tag = CHI
 			}
-			
+
 			traits = { army_artillery_2 }
-			
+
 			ai_will_do = {
 				factor = 1
 			}
 		}
 		CHI_chen_qingkwen = {
 			picture = generic_navy_asia_1
-			
+
 			allowed = {
 				original_tag = CHI
 			}
-			
+
 			traits = { navy_screen_2 }
-			
+
 			ai_will_do = {
 				factor = 1
 			}
 		}
 		CHI_lu_weiyuan = {
 			picture = generic_navy_asia_2
-			
+
 			allowed = {
 				original_tag = CHI
 			}
-			
+
 			traits = { navy_fleet_logistics_2 }
-			
+
 			ai_will_do = {
 				factor = 1
 			}
@@ -3553,11 +3603,11 @@ ideas = {
 	}
 	industrial_concern = {
 		academia_sinica = {
-						
+
 			allowed = {
 				original_tag = CHI
 			}
-						
+
 			research_bonus = {
 				electronics = 0.10
 			}
@@ -3567,7 +3617,7 @@ ideas = {
 			traits = { electronics_concern }
 		}
 		Carlowitz_Co_idea = {
-						
+
 			allowed = {
 				original_tag = CHI
 			}
@@ -3575,7 +3625,7 @@ ideas = {
 				NOT = {
 					OR = {
 						has_war_with = GER
-						has_country_flag = severed_ties_with_GER
+						has_country_flag = falkenhausen_recalled
 					}
 				}
 			}
@@ -3586,11 +3636,11 @@ ideas = {
 		}
 	}
 	tank_manufacturer = {
-	
+
 		designer = yes
-		
+
 		qishuyan_machinery = {
-			
+
 			allowed = {
 				original_tag = CHI
 			}
@@ -3602,9 +3652,9 @@ ideas = {
 				factor = 1
 			}
 			traits = { tank_manufacturer }
-		}	
+		}
 		roc_avdc = {
-			
+
 			allowed = {
 				original_tag = CHI
 			}
@@ -3615,7 +3665,7 @@ ideas = {
 					has_government = fascism
 				}
 				has_completed_focus = CHI_learn_foreign_tank_design_focus
-			}	
+			}
 			research_bonus = {
 				armor = 0.10
 			}
@@ -3634,17 +3684,17 @@ ideas = {
 				NOT = {
 					OR = {
 						has_war_with = GER
-						has_country_flag = severed_ties_with_GER
+						has_country_flag = falkenhausen_recalled
 					}
 				}
 			}
-			
+
 			research_bonus = {
 				armor = 0.10
 			}
-			
+
 			traits = { fast_tank_manufacturer }
-			
+
 			ai_will_do = {
 				factor = 100
 			}

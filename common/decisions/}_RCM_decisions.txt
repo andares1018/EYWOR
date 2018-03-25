@@ -1,5 +1,5 @@
 foreign_politics = {
-	
+
 	CHI_sue_for_peace_JAP = {
 
 		available = {
@@ -9,7 +9,7 @@ foreign_politics = {
 					has_idea = CHI_arc
 				}
 			}
-			FROM = { 
+			FROM = {
 				surrender_progress < 0.2 # if they are losing, lets not allow it
 			}
 			custom_trigger_tooltip = {
@@ -94,20 +94,20 @@ socialism_on_the_rise = {
 			check_has_focus_tree_to_switch_to_n_socialism = yes
 			NOT = { has_government = n_socialism }
 		}
-		
+
 		fire_only_once = yes
-		
+
 		cost = 50
-		
+
 		complete_effect = {
 			set_country_flag = preparation_for_socialist_civil_war
 		}
-		
+
 		ai_will_do = {
 			factor = 0
 		}
 	}
-	
+
 	expand_civil_socialist_support = {
 
 		icon = generic_civil_support
@@ -121,9 +121,9 @@ socialism_on_the_rise = {
 			check_has_focus_tree_to_switch_to_n_socialism = yes
 			NOT = { has_government = n_socialism }
 		}
-		
+
 		fire_only_once = no
-		
+
 		cost = 25
 
 		days_remove = 30
@@ -133,12 +133,12 @@ socialism_on_the_rise = {
 			stability_weekly = -0.03
 			political_power_gain = -0.2
 		}
-		
+
 		ai_will_do = {
 			factor = 1
 		}
 	}
-	
+
 	army_support_for_socialist_civil_war = {
 
 		icon = generic_army_support
@@ -149,9 +149,9 @@ socialism_on_the_rise = {
 			check_has_focus_tree_to_switch_to_n_socialism = yes
 			NOT = { has_government = n_socialism }
 		}
-		
+
 		fire_only_once = no
-		
+
 		cost = 50
 
 		days_remove = 30
@@ -165,20 +165,20 @@ socialism_on_the_rise = {
 				limit = {
 					check_variable = { var = army_support_var value = 0.1 compare = less_than }
 				}
-				set_variable = { var = army_support_var value = 0.1 } 
+				set_variable = { var = army_support_var value = 0.1 }
 			}
 			if = {
 				limit = {
 					check_variable = { var = army_support_var value = 0.1 compare = greater_than_or_equals }
 				}
-				add_to_variable = { var = army_support_var value = 0.1 } 
+				add_to_variable = { var = army_support_var value = 0.1 }
 			}
 			set_country_flag = military_support_for_socialist_civil_war
 		}
-		
+
 		complete_effect = {
 		}
-		
+
 		ai_will_do = {
 			factor = 0
 		}
@@ -203,15 +203,15 @@ socialism_on_the_rise = {
 			check_has_focus_tree_to_switch_to_n_socialism = yes
 			NOT = { has_government = n_socialism }
 		}
-		
+
 		fire_only_once = yes
-		
+
 		cost = 50
-		
+
 		complete_effect = {
 			country_event = { id = decisions.1 }
 		}
-		
+
 		ai_will_do = {
 			factor = 0
 		}
@@ -239,15 +239,15 @@ socialism_on_the_rise = {
 				NOT = { has_unit_leader_flag = hidden_sympathies_marshal }
 			}
 		}
-		
+
 		fire_only_once = yes
-		
+
 		cost = 50
-		
+
 		complete_effect = {
 			country_event = { id = decisions.2 }
 		}
-		
+
 		ai_will_do = {
 			factor = 0
 		}
@@ -270,11 +270,11 @@ socialism_on_the_rise = {
 			check_has_focus_tree_to_switch_to_n_socialism = yes
 			NOT = { has_government = n_socialism }
 		}
-		
+
 		fire_only_once = no
-		
+
 		cost = 50
-		
+
 		complete_effect = {
 			add_command_power = -2
 			add_equipment_to_stockpile = {
@@ -283,7 +283,7 @@ socialism_on_the_rise = {
 			}
 			set_country_flag = siphoned_equipment_stockpiles_for_civil_war
 		}
-		
+
 		ai_will_do = {
 			factor = 0
 		}
@@ -304,22 +304,22 @@ socialism_on_the_rise = {
 			check_has_focus_tree_to_switch_to_n_socialism = yes
 			NOT = { has_government = n_socialism }
 		}
-		
+
 		fire_only_once = yes
-		
+
 		cost = 50
-		
+
 		complete_effect = {
 			add_command_power = -2
 			custom_effect_tooltip = formulate_surprise_attack_plan_for_civil_war_tt
 			set_country_flag = formulated_surprise_attack_plan_for_civil_war
 		}
-		
+
 		ai_will_do = {
 			factor = 0
 		}
 	}
-	
+
 	ignite_the_socialist_civil_war = {
 
 		icon = generic_ignite_civil_war
@@ -334,11 +334,11 @@ socialism_on_the_rise = {
 			check_has_focus_tree_to_switch_to_n_socialism = yes
 			NOT = { has_government = n_socialism }
 		}
-		
+
 		fire_only_once = yes
-		
+
 		cost = 50
-		
+
 		complete_effect = {
 			if = {
 				limit = {
@@ -399,13 +399,13 @@ socialism_on_the_rise = {
 				size = civil_war_size_var
 				keep_unit_leaders_trigger = {
 					has_trait = hidden_sympathies
-				}				
+				}
 			}
 			clr_country_flag = preparation_for_socialist_civil_war
 			clr_country_flag = military_support_for_socialist_civil_war
 			clr_country_flag = civil_support_for_socialist_civil_war
 		}
-		
+
 		ai_will_do = {
 			factor = 0
 		}
@@ -420,7 +420,7 @@ socialism_on_the_rise = {
 		}
 
 		fire_only_once = yes
-		
+
 		cost = 25
 
 		days_remove = 365
@@ -433,7 +433,7 @@ socialism_on_the_rise = {
 			industrial_capacity_factory = 0.1
 			industrial_capacity_dockyard = 0.1
 		}
-		
+
 		ai_will_do = {
 			factor = 200
 		}
@@ -456,24 +456,24 @@ socialism_on_the_rise = {
 			check_has_focus_tree_to_switch_to_n_socialism = yes
 			NOT = { has_government = n_socialism }
 		}
-		
+
 		remove_trigger = {
 			has_government = n_socialism
 		}
-		
+
 		fire_only_once = yes
-		
+
 		cost = 75
-		
+
 		complete_effect = {
 			set_country_flag = open_up_political_discourse_socialist
 		}
-		
+
 		ai_will_do = {
 			factor = 1
 		}
 	}
-	
+
 	discredit_government_n_socialism = {
 
 		icon = generic_political_discourse
@@ -494,15 +494,15 @@ socialism_on_the_rise = {
 			check_has_focus_tree_to_switch_to_n_socialism = yes
 			NOT = { has_government = n_socialism }
 		}
-		
+
 		remove_trigger = {
 			has_government = n_socialism
 		}
-		
+
 		fire_only_once = yes
-		
+
 		cost = 50
-		
+
 		complete_effect = {
 			add_stability = -0.010
 			if = {
@@ -544,12 +544,12 @@ socialism_on_the_rise = {
 			}
 			#MODDED^
 		}
-		
+
 		ai_will_do = {
 			factor = 1
 		}
 	}
-	
+
 	hold_the_socialist_national_referendum = {
 
 		icon = generic_political_discourse
@@ -563,19 +563,19 @@ socialism_on_the_rise = {
 			check_has_focus_tree_to_switch_to_n_socialism = yes
 			has_country_flag = preparation_for_socialist_civil_war
 		}
-		
+
 		remove_trigger = {
 			has_government = n_socialism
 		}
-		
+
 		fire_only_once = yes
-		
+
 		cost = 100
-		
+
 		complete_effect = {
 			country_event = { id = political.19 }
 		}
-		
+
 		ai_will_do = {
 			factor = 210
 			modifier = {
@@ -587,10 +587,10 @@ socialism_on_the_rise = {
 }
 
 liangguang_incident = {
-	
+
 	CHI_liangguang_incident = {
 		icon = GFX_decision_category_military_operation
-		
+
 		available = {
 			CHI = {
 				owns_state = 598
@@ -634,7 +634,7 @@ japan_form_CHI_puppets = {
 		}
 		days_mission_timeout = 180
 		fire_only_once = yes
-		is_good = no 
+		is_good = no
 		activation = {
 			independent_war_china_or_china_died = yes
 			613 = {
@@ -673,18 +673,19 @@ japan_form_CHI_puppets = {
 			factor = 100
 		}
 	}
-	
+
 	###RFM
-	JAP_form_RFM_mission = { 
+	JAP_form_RFM_mission = {
 		icon = generic_independence
 		available = { #objective
 			has_global_flag = rfm_exists
 		}
 		days_mission_timeout = 180
 		fire_only_once = yes
-		is_good = no 
+		is_good = no
 		activation = {
 			independent_war_china_or_china_died = yes
+			has_global_flag = ccp_exists
 			598 = {
 				is_controlled_by_jap_or_its_puppet = yes
 			}
@@ -706,6 +707,7 @@ japan_form_CHI_puppets = {
 		}
 		visible = {
 			independent_war_china_or_china_died = yes
+			has_global_flag = ccp_exists
 			NOT = {
 				has_global_flag = rfm_exists
 			}
@@ -721,16 +723,16 @@ japan_form_CHI_puppets = {
 			factor = 100
 		}
 	}
-	
+
 	###JNC
-	JAP_form_JNC_mission = { 
+	JAP_form_JNC_mission = {
 		icon = generic_independence
 		available = { #objective
 			has_global_flag = jnc_exists
 		}
 		days_mission_timeout = 180
 		fire_only_once = yes
-		is_good = no 
+		is_good = no
 		activation = {
 			independent_war_china_or_china_died = yes
 			598 = {
@@ -780,7 +782,7 @@ japan_form_CHI_puppets = {
 							has_country_flag = im_jnc_now
 							is_subject_of = JAP
 						}
-						JNC_CREATION = yes 
+						JNC_CREATION = yes
 					}
 					else = {
 						set_global_flag = jnc_exists
@@ -806,16 +808,16 @@ japan_form_CHI_puppets = {
 			factor = 100
 		}
 	}
-	
+
 	###RRC
-	JAP_form_RRC_mission = { 
+	JAP_form_RRC_mission = {
 		icon = generic_independence
 		available = { #objective
 			has_global_flag = rrc_exists
 		}
 		days_mission_timeout = 280
 		fire_only_once = yes
-		is_good = no 
+		is_good = no
 		activation = {
 			independent_war_china_or_china_died = yes
 			598 = {
@@ -836,6 +838,9 @@ japan_form_CHI_puppets = {
 			613 = {
 				is_controlled_by_jap_or_its_puppet = yes
 			}
+			has_global_flag = jnc_exists
+			has_global_flag = rfm_exists
+			has_global_flag = mej_exists
 		}
 		complete_effect = {
 			add_political_power = 50
@@ -869,6 +874,9 @@ japan_form_CHI_puppets = {
 		}
 		visible = {
 			independent_war_china_or_china_died = yes
+			has_global_flag = jnc_exists
+			has_global_flag = rfm_exists
+			has_global_flag = mej_exists
 			NOT = {
 				has_global_flag = rrc_exists
 			}
@@ -1005,26 +1013,25 @@ japan_form_IN_MON_puppets = {
 			factor = 2000
 		}
 	}
-	
-	JAP_form_MUA_mission = { 
+
+	JAP_form_MUA_mission = {
 		icon = generic_independence
 		available = { #objective
 			has_global_flag = mua_exists
 		}
 		days_mission_timeout = 180
 		fire_only_once = yes
-		is_good = no 
+		is_good = no
 		activation = {
-			hidden_trigger = {
-				OR = {
-					is_ai = no
-					date > 1937.8.25
-				}
-			}
 			independent_war_china_or_china_died = yes
-			ECA = {
-				controls_state = 757
-				controls_state = 612
+			757 = {
+				is_controlled_by_jap_or_its_puppet = yes
+			}
+			612 = {
+				is_controlled_by_jap_or_its_puppet = yes
+			}
+			611 = {
+				is_controlled_by_jap_or_its_puppet = yes
 			}
 		}
 		complete_effect = {
@@ -1037,25 +1044,18 @@ japan_form_IN_MON_puppets = {
 	JAP_form_MUA = {
 		icon = generic_independence
 		available = {
-			hidden_trigger = {
-				OR = {
-					is_ai = no
-					date > 1937.9.25
-				}
-			}
 			independent_war_china_or_china_died = yes
-			ECA = {
-				controls_state = 757
-				controls_state = 612
+			757 = {
+				is_controlled_by_jap_or_its_puppet = yes
+			}
+			612 = {
+				is_controlled_by_jap_or_its_puppet = yes
+			}
+			611 = {
+				is_controlled_by_jap_or_its_puppet = yes
 			}
 		}
 		visible = {
-			hidden_trigger = {
-				OR = {
-					is_ai = no
-					date > 1937.9.25
-				}
-			}
 			independent_war_china_or_china_died = yes
 			NOT = {
 				has_global_flag = mua_exists
@@ -1069,7 +1069,7 @@ japan_form_IN_MON_puppets = {
 					country_event = {
 						days = 2 id = rcmjapan.88
 					}
-				}				
+				}
 			}
 			custom_effect_tooltip = blank_line
 			custom_effect_tooltip = MUA_reform
@@ -1090,24 +1090,40 @@ japan_form_IN_MON_puppets = {
 			factor = 2000
 		}
 	}
-	
+
 	###MEJ
-	JAP_form_MEJ_mission = { 
+	JAP_form_MEJ_mission = {
 		icon = generic_independence
 		available = { #objective
 			has_global_flag = mej_exists
 		}
 		days_mission_timeout = 180
 		fire_only_once = yes
-		is_good = no 
+		is_good = no
 		activation = {
 			independent_war_china_or_china_died = yes
-			ECA = {
-				controls_state = 757
-				controls_state = 612
+			757 = {
+				is_controlled_by_jap_or_its_puppet = yes
+			}
+			612 = {
+				is_controlled_by_jap_or_its_puppet = yes
 			}
 			611 = {
 				is_controlled_by_jap_or_its_puppet = yes
+			}
+			762 = {
+				is_controlled_by_jap_or_its_puppet = yes
+			}
+			763 = {
+				is_controlled_by_jap_or_its_puppet = yes
+			}
+			OR = {
+				has_global_flag = nsg_no_puppet
+				country_exists = NSG
+			}
+			OR = {
+				has_global_flag = scg_no_puppet
+				country_exists = SCG
 			}
 		}
 		complete_effect = {
@@ -1121,11 +1137,19 @@ japan_form_IN_MON_puppets = {
 		icon = generic_independence
 		available = {
 			independent_war_china_or_china_died = yes
-			ECA = {
-				controls_state = 757
-				controls_state = 612
+			757 = {
+				is_controlled_by_jap_or_its_puppet = yes
+			}
+			612 = {
+				is_controlled_by_jap_or_its_puppet = yes
 			}
 			611 = {
+				is_controlled_by_jap_or_its_puppet = yes
+			}
+			762 = {
+				is_controlled_by_jap_or_its_puppet = yes
+			}
+			763 = {
 				is_controlled_by_jap_or_its_puppet = yes
 			}
 		}
@@ -1175,5 +1199,73 @@ japan_form_IN_MON_puppets = {
 		ai_will_do = {
 			factor = 2000
 		}
+	}
+	lushan_declaration = {
+	     icon = generic_political_discourse
+	     fire_only_once = yes
+	     days_remove = 15 # Stays for 5 days before being removed
+	     #days_re_enable = 5 # Will show up in the interface and can be selected again after 5 days
+	     cost = 15
+	     #war_with_target_on_remove = no #will give warning (not yet tested)
+	     #highlight_states = { #These states will be highlighted
+	     #     state =
+	     #}
+	     visible = { #can see
+	          tag = CHI
+			NOT = {
+				has_completed_focus = CHI_lushan_focus
+			}
+			NOT = {
+				has_country_flag = Im_doing_CHI_lushan_focus
+			}
+	     }
+	     available = { #can do
+	          has_defensive_war_with = JAP
+	     }
+	     complete_effect = { #run effect on selection
+	         effect_tooltip = {
+			   remove_ideas = appeasement_policy
+		    }
+		    hidden_effect = {
+			   remove_ideas = appeasement_policy
+			   remove_ideas = appeasement_policy_0
+			   remove_ideas = appeasement_policy_2
+		    }
+	     }
+	     remove_trigger = { #will run remove effect and abort
+
+	     }
+	     remove_effect = { #run effect when removed/finished
+			unlock_national_focus = CHI_lushan_focus
+			if = {
+				limit = {
+					has_country_leader = {
+						ruling_only = yes
+						name = "Chiang Kai-shek"
+					}
+				}
+				add_country_leader_trait = generallissimo
+			}
+			hidden_effect = {
+				news_event = {
+					id = news.2017
+				}
+				if = {
+					limit = {
+						is_ai = yes
+					}
+					remove_ideas = idea_gongxian_arsenal
+				}
+			}
+	     }
+	     cancel_trigger = { #will abort
+
+	     }
+	     modifier = { #active during the course of the decision
+
+	     }
+	     ai_will_do = {
+	          factor = 200
+	     }
 	}
 }

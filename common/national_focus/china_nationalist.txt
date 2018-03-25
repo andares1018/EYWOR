@@ -1,10 +1,10 @@
 focus_tree = {
 	id = china_nationalist_focus
-	
+
 	country = {
 		factor = 0
 	}
-	
+
 
 	default = no
 
@@ -12,12 +12,12 @@ focus_tree = {
 
 #	focus = {
 #		id = CHI_
-#		icon = GFX_ 
+#		icon = GFX_
 #		prerequisite = { focus = }
 #		mutually_exclusive = { focus =  }
 #		x = -3
 #		y = 0
-#		relative_position_id = 
+#		relative_position_id =
 #
 #		cost = 10
 #
@@ -28,7 +28,7 @@ focus_tree = {
 #		available = {
 #
 #		}
-#		
+#
 #		bypass = {
 #
 #		}
@@ -45,7 +45,7 @@ focus_tree = {
 #
 #		}
 #	}
-	shared_focus = CHI_invite_foreign_investors
+	#shared_focus = CHI_invite_foreign_investors
 
 	focus = {
 		id = CHI_three_principles_of_the_people
@@ -60,7 +60,7 @@ focus_tree = {
 		}
 
 		available = {
-		
+
 		}
 
 		bypass = {
@@ -187,7 +187,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			CHI_hyper_inflation_level_down = yes 
+			CHI_hyper_inflation_level_down = yes
 		}
 	}
 
@@ -258,7 +258,7 @@ focus_tree = {
 
 		}
 
-		completion_reward = {			
+		completion_reward = {
 			add_war_support = 0.05
 			CHI_hyper_inflation_level_up = yes
 		}
@@ -887,7 +887,7 @@ focus_tree = {
 					create_wargoal = {
 						type = annex_everything
 						target = JAP
-					}	
+					}
 				}
 			}
 			hidden_effect = {
@@ -929,7 +929,7 @@ focus_tree = {
 		bypass = {
 			OR = {
 				is_in_faction_with = PRC
-				NOT = { 
+				NOT = {
 					any_country = {
 						OR = {
 							tag = YUN
@@ -955,7 +955,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			if = {		
+			if = {
 				limit = {
 					SIK = {
 						has_government = communism
@@ -966,7 +966,7 @@ focus_tree = {
 					target = SIK
 				}
 			}
-			if = {		
+			if = {
 				limit = {
 					TIB = {
 						has_government = communism
@@ -1143,7 +1143,7 @@ focus_tree = {
 		available = {
 			NOT = {
 				has_idea = CHI_army_corruption_1
-			}		
+			}
 		}
 
 		bypass = {
@@ -1195,7 +1195,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			unlock_decision_category_tooltip = CHI_industrial_evacuations			
+			unlock_decision_category_tooltip = CHI_industrial_evacuations
 			set_variable = { var = CHI_industrial_evacuations_amount_factor value = 0.75 } #Ratio for how many building are moved. Change CHI_industrial_evacuations_add_AF and CHI_industrial_evacuations_add_IC if you change the value
 		}
 	}
@@ -1520,7 +1520,7 @@ focus_tree = {
 							level = 2
 							instant_build = yes
 						}
-					}					
+					}
 				}
 
 				#If not full control, only add forts in provinces bordering the enemy
@@ -1637,7 +1637,7 @@ focus_tree = {
 							level = 3
 							instant_build = yes
 						}
-					}					
+					}
 				}
 
 				#If not full control, only add forts in provinces bordering the enemy
@@ -1670,7 +1670,7 @@ focus_tree = {
 						}
 						level = 2
 						instant_build = yes
-					}								
+					}
 				}
 
 				#If not full control, only add forts in provinces bordering the enemy
@@ -1700,7 +1700,7 @@ focus_tree = {
 						}
 						level = 2
 						instant_build = yes
-					}								
+					}
 				}
 			}
 		}
@@ -1773,8 +1773,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_stability = 0.1
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = CHI_dai_li
+			add_ideas = NBIS
 		}
 	}
 
@@ -1905,7 +1904,7 @@ focus_tree = {
 		}
 
 		available = {
-			OR = {			
+			OR = {
 				has_war = no
 				has_stability > 0.7
 			}
@@ -1959,7 +1958,7 @@ focus_tree = {
 
 		}
 
-		completion_reward = {			
+		completion_reward = {
 			add_research_slot = 1
 		}
 	}
@@ -2057,7 +2056,7 @@ focus_tree = {
 		completion_reward = {
 			CHI_hyper_inflation_level_up = yes
 			custom_effect_tooltip = available_industrial_concern
-			show_ideas_tooltip = CHI_mining_commission			
+			show_ideas_tooltip = CHI_mining_commission
 		}
 	}
 
@@ -2102,7 +2101,7 @@ focus_tree = {
 					type = arms_factory
 					level = 2
 					instant_build = yes
-				}			
+				}
 			}
 		}
 	}

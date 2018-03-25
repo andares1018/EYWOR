@@ -55,11 +55,11 @@
  JAP_form_RRC_mission_desc:0 "Our rule in China Crisis is very unstable now, this can end very badly unless we set up a new, reorganized proxy government in time."
  JAP_form_RRC:0 "Form @RRC[RRC.GetNameDef]"
 
- JAP_form_MEJ_mission:0 "The Mongols Demands a Merger"
+ JAP_form_MEJ_mission:0 "The Mongols Demand a Merger"
  JAP_form_MEJ_mission_desc:0 "After taking over a few more states in South Chahar and North Shanxi, the Mongols now demand a merger of their government and those territories. Failed to do so in time can destablize our rule."
  JAP_form_MEJ:0 "Form [MEJ.GetNameDef]"
 
- JAP_form_MUA_mission:0 "The Mongols Demands Another Assembly"
+ JAP_form_MUA_mission:0 "The Mongols Demand Another Assembly"
  JAP_form_MUA_mission_desc:0 "After the war broke out the Proxy Government in Mongolia has suffered from the ineffective bureaucracy of the outdated political framework. It's time to hold another 'Assembly of the Mongols'."
  JAP_form_MUA:0 "Second Assembly of the Mongols"
 
@@ -68,3 +68,5 @@
 
  ###
  CHI_sue_for_peace_JAP:0 "Offer Peace to Japan"
+ lushan_declaration:0 "lushan Declaration"
+ lushan_declaration_desc:0 "Our country is at war. A powerful speech is needed to united this fragmented country."

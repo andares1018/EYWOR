@@ -302,7 +302,7 @@
  #ONLY ONE
  rcmjapan.90.b:0 "Great! Let's notify our neighboring client state."
  #NO NSG SCG
- rcmjapan.90.c:0 "For the Mongols!" 
+ rcmjapan.90.c:0 "For the Mongols!"
  #
  rcmjapan.91.t:0 "[MEJ.GetName] Demands Merger"
  rcmjapan.91.d:0 "With the help of Japan, the Mengjiang United Autonomous Government has been established.  [From.GetLeader] is designated Chairman and the Kalgan is set to be be the new capital. But Kalgan is currently under our administration so both [JAP.GetName] and [From.GetLeader] are now demanding that we merge with [MEJ.GetName]. What should we respond?"
@@ -364,6 +364,10 @@
  rcmjapan.106.t:0 "A New Colonial Administration in Place"
  rcmjapan.106.d:0 "After a huge political shift within Japan, the ideological position [JAP.GetName] has been switched to a very different route. And therefore, expectedly, our administration has also been affected. This will mark a new chapter in history for both us and Japan."
  rcmjapan.106.a:0 "Uncertain times."
+ #
+ rcmjapan.107.t:0 "Japan Persues its "Strik-South" Doctrine"
+ rcmjapan.107.d:0 "Some of our agents have found plenty of evidence suggesting the [JAP.GetName] is pursuing its "Strike-South" doctrines and mostly likely well launch an offensive operation against us. Also due to the recently-signed Tripartite Pact Between the German Riech and Japan, it will be very hard for us to call for help if they actually do launch an attack."
+ rcmjapan.107.a:0 "This is not good!"
                     #################################
  ####===============######PUPPET STATES REBUILD######===============####
                     #################################

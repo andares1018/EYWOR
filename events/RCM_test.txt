@@ -20,8 +20,15 @@ country_event = {
 		days = 0
 	}
 	immediate = {
+		CHI = {
+			set_variable = { var = cf_number value = num_of_civilian_factories_available_for_projects }
+			set_variable = { var = af_number value = num_of_military_factories }
+			#divide_variable = { var = cf_number value = af_number }
+			#round_variable = cf_number
+			print_variables = { file = log_file text = header_text append = yes var_list = { cf_number af_number }  }
+		}
 	}
-	#is_triggered_only = yes
+	is_triggered_only = yes
 	option = { 
 		name = rcmtest.1.a
 	}
@@ -32,8 +39,13 @@ country_event = {
 	picture = GFX_report_event_test
 	hidden = yes
 	trigger = {
+		
 	}
 	immediate = {
+		set_variable = { var = cf_that_arent_used_for_consumer_goods value = num_of_civilian_factories_available_for_projects }
+		set_variable = { var = af_number value = num_of_available_military_factories }
+		divide_variable = { var = cf_that_arent_used_for_consumer_goods value = af_number }
+		round_variable = cf_that_arent_used_for_consumer_goods
 	}
 	is_triggered_only = yes
 	option = { 

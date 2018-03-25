@@ -1,36 +1,208 @@
-﻿add_namespace = rcmgermany
+add_namespace = rcmgermany
 # China Mod
 country_event = {
 	id = rcmgermany.2000
 	title = rcmgermany.2000.t
 	desc = rcmgermany.2000.d
 	picture = GFX_report_event_HHK_berlin
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = rcmgermany.2000.a		#Agree
-		ai_chance = { factor = 100 }
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 100
+				CHI = {
+					GER_will_support = yes
+				}
+			}
+		}
+
 		add_political_power = 100
 		set_global_flag = ger_support_chi
 		GER = {
-				add_opinion_modifier = { target = CHI modifier = CHI_promise_focus }
-			}
+			add_opinion_modifier = { target = CHI modifier = CHI_promise_focus }
+		}
 		JAP = {
-				add_opinion_modifier = { target = GER modifier = ger_support_chi }
-			}
+			add_opinion_modifier = { target = GER modifier = ger_support_chi }
+		}
 		CHI = {
-				add_opinion_modifier = { target = GER modifier = ger_accept_chi }
-				country_event = { days = 5 id = rcmchina.229 }
+			add_opinion_modifier = { target = GER modifier = ger_accept_chi }
+			country_event = { days = 5 id = rcmchina.229 }
 		}
 	}
-	
+
 	option = {
 		name = rcmgermany.2000.b		#refuse
-		ai_chance = { factor = 0 }
-		CHI =  { 
-				add_opinion_modifier = { target = GER modifier = ger_refuse_chi } 
-				country_event = { days = 5 id = rcmchina.230 }
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 0
+				CHI = {
+					GER_will_support = yes
+				}
+			}
+		}
+		CHI =  {
+			add_opinion_modifier = { target = GER modifier = ger_refuse_chi }
+			country_event = { days = 5 id = rcmchina.230 }
+		}
+	}
+}
+# Japan Demands Withdrawal of Falkenhausen
+country_event = {
+	id = rcmgermany.24
+	title = rcmgermany.24.t
+	desc = rcmgermany.24.d
+	picture = GFX_report_event_hitler_china
+
+	is_triggered_only = yes
+
+	option = { # Agree
+		name = rcmgermany.24.a
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				CHI = {
+					GER_will_support = yes
+				}
+				JAP = {
+					NOT = {
+						GER_will_support = yes
+					}
+				}
+			}
+			modifier = {
+				factor = 50
+				CHI = {
+					GER_will_support = yes
+				}
+				JAP = {
+					GER_will_support = yes
+				}
+			}
+			modifier = {
+				factor = 100
+				JAP = {
+					GER_will_support = yes
+					ic_ratio = {
+						tag = CHI
+						ratio > 1.2
+					}
+				}
+			}
+		}
+		JAP = {
+			country_event = { days = 1 id = rcmjapan.8 }
+		}
+		CHI = {
+			country_event = { days = 1 id = china.2 }
+			effect_tooltip = {
+				remove_ideas = german_advisors
+				show_ideas_tooltip = german_advisors
+			}
+			set_global_flag = falkenhausen_recalled
+		}
+	}
+	option = { # Refuse
+		name = rcmgermany.24.b
+
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 100
+				CHI = {
+					GER_will_support = yes
+				}
+			}
+			modifier = {
+				factor = 50
+				CHI = {
+					GER_will_support = yes
+				}
+				JAP = {
+					GER_will_support = yes
+				}
+			}
+			modifier = {
+				factor = 0
+				JAP = {
+					GER_will_support = yes
+					ic_ratio = {
+						tag = CHI
+						ratio > 1.2
+					}
+				}
+			}
+		}
+		JAP = {
+			country_event = { days = 1 id = rcmjapan.9 }
+		}
+	}
+
+}
+
+# German - Chinese Relations Poor, Mission Recalled
+country_event = {
+	id = rcmgermany.25
+	title = rcmgermany.25.t
+	desc = rcmgermany.25.d
+	picture = GFX_report_event_chinese_army_training
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = GER
+		CHI = { has_idea = german_advisors }
+		has_opinion = { target = CHI value < -20 }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		CHI = { remove_ideas = german_advisors }
+	}
+
+	option = {
+		name = rcmgermany.25.a
+		CHI = {
+			country_event = { id = china.3 }
+		}
+	}
+}
+
+# Germany at war with China, Advisors Detained
+country_event = {
+	id = rcmgermany.26
+	title = rcmgermany.26.t
+	desc = rcmgermany.26.d
+	picture = GFX_report_event_german_detained_china
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = GER
+		CHI = { has_idea = german_advisors }
+		has_war_with = CHI
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		CHI = { remove_ideas = german_advisors }
+	}
+
+	option = {
+		name = rcmgermany.26.a
+		CHI = {
+			country_event = { id = china.4 }
 		}
 	}
 }

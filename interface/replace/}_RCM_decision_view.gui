@@ -1,0 +1,86 @@
+guiTypes = {
+	containerWindowType = {
+		name = "timed_decision_item"
+		position = { x=0 y=0 }
+		size = { width=100% height=41 }
+		clipping = no
+
+		iconType = {
+			name = "btn_bg"
+			position = {x=0 y=0}
+			spriteType = "GFX_decision_item_bg"
+		}
+
+		iconType = {
+			name = "btn_progress_good"
+			position = {x=9 y=28}
+			spriteType = "GFX_decision_item_progress_good"			
+		}
+
+		iconType = {
+			name = "btn_progress_bad"
+			position = {x=9 y=28}
+			spriteType = "GFX_decision_item_progress_bad"
+		}
+
+		iconType = {
+			name = "icon"
+			position = {x=32 y=20}
+			spriteType = "GFX_decision_unknown"
+			centerposition = yes
+		}
+
+		instantTextboxType = {
+			name = "name_text"
+			position = { x = 62 y = 12 }
+			textureFile = ""
+			font = "hoi_16mbs"
+			borderSize = { x = 0 y = 0 }
+			text = ""
+			maxWidth = 300
+			maxHeight = 20
+			format = left
+		}
+
+		iconType = {
+			name = "timer_icon"
+			position = {x=492 y=15}
+			spriteType = "GFX_decision_timer_icon_strip"
+			frame = 1
+			centerposition = yes
+			scale = 0.95
+		}
+
+		instantTextboxType = {
+			name = "timer_text"
+			position = { x = 405 y = 8 }
+			textureFile = ""
+			font = "hoi_16mbs"
+			borderSize = { x = 0 y = 0 }
+			text = "999"
+			maxWidth = 70
+			maxHeight = 20
+			format = right
+		}
+
+		instantTextboxType = {
+			name = "cost_and_timer_text"
+			position = { x = 135 y = 8 }
+			textureFile = ""
+			font = "hoi_16mbs"
+			borderSize = { x = 0 y = 0 }
+			text = "999"
+			maxWidth = 320
+			maxHeight = 35
+			format = right
+		}
+
+		buttonType = {
+			name = "btn_select"
+			position = {x=465 y=6}
+			spriteType = "GFX_decision_select_icon_strip"
+			clicksound = decisions_ui_checkbox
+			frame = 2
+		}
+	}
+}

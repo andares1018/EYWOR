@@ -66,7 +66,7 @@ country_event = {
 
 	option = {
 		name = rcmchina.2.a
-		set_country_flag = severed_ties_with_GER
+		set_country_flag = falkenhausen_recalled
 		remove_ideas = german_advisors
 	}
 }
@@ -80,7 +80,7 @@ country_event = {
 
 	is_triggered_only = yes
 	immediate = {
-		set_country_flag = severed_ties_with_GER
+		set_country_flag = falkenhausen_recalled
 	}
 	option = {
 		name = rcmchina.3.a
@@ -96,7 +96,7 @@ country_event = {
 
 	is_triggered_only = yes
 	immediate = {
-		set_country_flag = severed_ties_with_GER
+		set_country_flag = falkenhausen_recalled
 	}
 	option = {
 		name = rcmchina.4.a

@@ -145,6 +145,9 @@ default_peace = {
 			FROM = {
 				any_owned_state = { NOT = { is_core_of = FROM } }
 			}
+			NOT = {
+				is_warlord = yes
+			}
 		}
 		modifier = { #Not if we claim anything
 			factor = 0

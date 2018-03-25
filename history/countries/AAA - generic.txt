@@ -28,11 +28,11 @@ PLM = {
 	reverse_add_opinion_modifier = { target = ECA modifier = MODIFIERS_spirit_of_genghis }
 }
 SHX = {
-	give_military_access = PLM 
+	give_military_access = PLM
 }
 
 HPC = {
-	give_military_access = PLM 
+	give_military_access = PLM
 }
 CHI = {
 	give_military_access = SHX
@@ -81,11 +81,11 @@ ENG = {
 			puppet = BUR
 		}
 	}
-	
+
 	set_politics = {
 
 		parties = {
-			democratic = { 
+			democratic = {
 				popularity = 60
 			}
 
@@ -99,7 +99,7 @@ ENG = {
 				popularity = 1
 			}
 		}
-		
+
 		ruling_party = democratic
 		last_election = "1935.11.14"
 		election_frequency = 48
@@ -113,7 +113,7 @@ ENG = {
 		expire = "1965.1.1"
 		ideology = n_socialism_ideology
 		traits = {
-			
+
 		}
 	}
 }
@@ -151,7 +151,7 @@ ENG = {
 			elections_allowed = no
 		}
 	}
-	
+
 }
 every_country = {
 	limit = {
@@ -215,7 +215,12 @@ if = {
 		add_ideas = {
 			PRC_government_corruption
 			CHI_ineffective_bureaucracy_warlord
+			incompetent_heavy_industry
+			unbalanced_industry
+			iliterate_population
+			no_proper_equipment_design
+			CHI_incompetent_officers
+			CHI_hyper_inflation_1
 		}
 	}
 }
-

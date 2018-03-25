@@ -1,24 +1,19 @@
 political_actions = {
-
 	VIC_remove_catroux = {
-
 		icon = jap_conquer_china
-
 		available = {
-		AND = {
-		OR = {
-			original_tag = FRA
-			tag = FRA
-		}
-		has_government = fascism
-		}
+			AND = {
+				OR = {
+					original_tag = FRA
+					tag = FRA
+				}
+				has_government = fascism
+			}
 			FIC = {
-			is_puppet = no
-			has_country_leader = { ruling_only = yes name = "Georges Catroux" }
+				is_puppet = no
+				has_country_leader = { ruling_only = yes name = "Georges Catroux" }
+			}
 		}
-
-		}
-
 		allowed = {
 			OR = {
 				original_tag = FRA
@@ -32,30 +27,29 @@ political_actions = {
 			}
 			has_global_flag = fall_of_france
 		}
-
 		selectable_mission = yes
 		days_mission_timeout = 15
 		is_good = no
 		fire_only_once = yes
-
 		ai_will_do = {
 			factor = 50
 		}
 		modifier = {
-
 		}
-
 		days_remove = 0
-
 		cost = 5
-
 		complete_effect = {
-		FIC = { country_event = { days = 1 id = rcmindochina.3 } } #jean decoux appointed
+			FIC = {
+				country_event = { days = 1 id = rcmindochina.3  #jean decoux appointed
+				}
+			}
 		}
-
 		timeout_effect = {
-		FIC = { country_event = { days = 1 id = rcmindochina.4 } } #indochina defects?
+			FIC = {
+				country_event = {
+					days = 1 id = rcmindochina.4 #indochina defects?
+				}
+			}
 		}
 	}
-
 }

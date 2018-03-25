@@ -2,19 +2,21 @@
  #REACTIONARY
  DR_FACTION_NEUTRALITY:0 "Reactionary: "
  DR_US_NEUTRAL:0 "§Y$US$§! is Reactionary: "
- 
+
  #COSMETICS
  INS_HOL_neutrality:0 "Dutch East Indies"
  INS_HOL_neutrality_DEF:0 "The Dutch East Indies"
  MAL_subject:0 "$OVERLORDADJ$ Malaysia"
  MAL_UK_neutrality:0 "Federated Malay States"
- MAL_UK_neutrality_DEF:0 "The Federated Malay States"                                                                            
+ MAL_UK_neutrality_DEF:0 "The Federated Malay States"
  MAL_UK_democratic:0 "Federated Malay States"
  MAL_UK_democratic_DEF:0 "The Federated Malay States"
- 
+
+ #TOOLTIPS
+ falkenhausen_recalled:0 "§Y@CHISino-@GERGerman§! ties has been severed.§!"
  #idea
  southern_expansion:0 "Nanshin-ron"
- 
+
  #COUNTRIES
  JAP_democratic:0 "Japan"
  JAP_democratic_DEF:0 "Japan"
@@ -112,7 +114,7 @@
  BLR_communism_DEF:0 "The People's Republic of Belarus"
  PAK_fascism:0 "Islamic states of Pakistan"
  PAK_fascism_DEF:0 "The Islamic states of Pakistan"
- 
+
  MAN_fascism:1 "Qing Empire"
  MAN_fascism_DEF:1 "The Qing Empire"
  MAN_democratic:0 "Republic of Manchuria"
@@ -125,7 +127,7 @@
  MAN_democratic_ADJ:0 "Manchu"
  MAN_neutrality_ADJ:0 "Manchu"
  MAN_communism_ADJ:0 "Manchu"
- 
+
  #AUTONOMY NAME
  MAN_JAP_neutrality_autonomy_puppet:0 "Empire of Manchuria"
  MAN_JAP_neutrality_autonomy_reichsprotectorate:0 "Empire of Manchuria"
@@ -148,7 +150,7 @@
  MAN_JAP_fascism_autonomy_wtt_imperial_protectorate:0 "Empire of Manchuria"
  MAN_JAP_fascism_autonomy_wtt_imperial_subject:0 "Empire of Manchuria"
  MAN_JAP_fascism_autonomy_wtt_imperial_associate:0 "Empire of Manchuria"
- 
+
  MAN_kwantung_army_fascism:0 "Imperial Kwantung Territories"
  MAN_kwantung_army_communism:0 "Manchurian People's Republic"
  MAN_kwantung_army_democratic:0 "Manchurian Federated Provinces"

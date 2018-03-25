@@ -786,6 +786,8 @@
  commie_ridden_states:0 " Is affected by §YCommunist Partisan Activities§!"
  CHI_counter_insurgency:0 "Counter-Insurgency Plan"
  CHI_counter_insurgency_desc:0 "The communist militias has infiltrated our country. We shall demonstrate them a show of force and eliminate them as soon as possible. A Counter-Insurgency Plan can definitely help."
+ CHI_counter_insurgency_BS:0 "Counter-Insurgency Plan"
+ CHI_counter_insurgency_BS_desc:0 "The communist militias has infiltrated our country. We shall demonstrate them a show of force and eliminate them as soon as possible. A Counter-Insurgency Plan can definitely help."
  CHI_continuous_counter_insurgency:0 "Counter Insurgency"
  CHI_continuous_counter_insurgency_desc:0 "The communist militias has infiltrated our country. We shall demonstrate them a show of force and eliminate them as soon as possible."
  counter_insurgency_tt:0 "When the focus activates, the §YCommunist Partisan Activities§! in §Yone random state owned by us§! will be removed §Yroughly every§! §G2§! §Yweeks§!."
@@ -906,25 +908,23 @@
  CHI_jap_refused_the_return:0 "Refused to Negotiate"
  CHI_jap_the_return:0 "Return negotiations"
  CHI_ger_cooperation:0 "Sino-German cooperation"
- 
+
  EFM_Expand_trade:0 "Trade Expansion"
  EFM_Expand_exports_to_germany:0 "Increased Export to Germany"
- 
+
  ### Flag ###
  CHI_CPC_no_peace:0 "No Possible Peace"
  CHI_Sixth_encirclement_campaign_processing:0 "Sixth Encirclement Campaign is on the go"
  ger_german_will_support_sino:0 "Germany Supports China"
  germany_withdraws_advisors:0 "Germany Recall Consultants"
  xian_incident_has_happened:0 "Xi'an Incident"
- 
+
  ### Chinese faction ###
  CHI_Red_dragon:0 "Red Dragon"
  CHI_Pan_asian_alliance:0 "Pan-Asian Alliance"
  5_4_alliance:0 "May 4th Alliance"
- 
+
  ### threat ###
  japan_puppet_china_threat_JAP:0 "Japanese puppeted China"
  japan_defeat_china_threat_JAP:0 "Japan defeated China"
  JAP_wins_second_sino_japanese_war:0 "Japan Won against China"
-
- 

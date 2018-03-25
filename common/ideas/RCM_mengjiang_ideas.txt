@@ -10,7 +10,7 @@ ideas = {
 				cavalry_defence_factor = 0.05
 				decryption = 0.5
 			}
-			available = { 
+			available = {
 				OR = {
 					is_puppet_of = JAP
 					is_in_faction_with = JAP
@@ -28,7 +28,7 @@ ideas = {
 				supply_consumption_factor = -0.25
 				planning_speed = 0.15
 			}
-			available = { 
+			available = {
 				NOT = {
 					AND = {
 						has_global_flag = sui_camp_flag
@@ -53,7 +53,7 @@ ideas = {
 				army_morale_factor = 0.15
 				autonomy_gain = -0.1
 			}
-			available = { 
+			available = {
 				OR = {
 					is_puppet_of = JAP
 					is_in_faction_with = JAP
@@ -94,14 +94,14 @@ ideas = {
 			}
 		}
 		MEN_general_staff = {
-			picture = idea_ast_volunteer_defence_corps
+			picture = idea_chi_army_corruption3
 			modifier = {
 				army_org_factor = 0.05
 				planning_speed = 0.1
 			}
 		}
 		MEN_general_staff_tfv = {
-			picture = idea_ast_volunteer_defence_corps
+			picture = idea_chi_army_corruption3
 			modifier = {
 				army_org_factor = 0.05
 				planning_speed = 0.1

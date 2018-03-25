@@ -1,10 +1,10 @@
 focus_tree = {
 	id = china_communist_focus
-	
+
 	country = {
 		factor = 0
 	}
-	
+
 
 	default = no
 
@@ -17,7 +17,7 @@ focus_tree = {
 #		mutually_exclusive = { focus =  }
 #		x = -3
 #		y = 0
-#		relative_position_id = 
+#		relative_position_id =
 #
 #		cost = 10
 #
@@ -28,7 +28,7 @@ focus_tree = {
 #		available = {
 #
 #		}
-#		
+#
 #		bypass = {
 #
 #		}
@@ -45,7 +45,7 @@ focus_tree = {
 #
 #		}
 #	}
-	shared_focus = CHI_invite_foreign_investors
+	#shared_focus = CHI_invite_foreign_investors
 
 	focus = {
 		id = PRC_strengthen_the_central_secretariat
@@ -119,7 +119,7 @@ focus_tree = {
 				expire = "1965.1.1"
 				ideology = marxism
 				traits = {
-					
+
 				}
 			}
 		}
@@ -199,7 +199,7 @@ focus_tree = {
 				remove_ideas = PRC_the_long_march_1
 			}
 			else = {
-				remove_ideas = PRC_the_long_march_2 
+				remove_ideas = PRC_the_long_march_2
 			}
 		}
 	}
@@ -384,7 +384,7 @@ focus_tree = {
 
 	focus = {
 		id = PRC_proclaim_the_peoples_republic
-		icon = GFX_focus_prc_proclaim_the_peoples_republic 
+		icon = GFX_focus_prc_proclaim_the_peoples_republic
 		prerequisite = { focus = PRC_socialism_with_chinese_characteristics focus = PRC_internationalism }
 		x = -1
 		y = 4
@@ -467,7 +467,7 @@ focus_tree = {
 			}
 			if = {
 				limit = { has_idea = PRC_the_long_march_2 }
-				remove_ideas = PRC_the_long_march_2 
+				remove_ideas = PRC_the_long_march_2
 			}
 		}
 	}
@@ -488,7 +488,7 @@ focus_tree = {
 			modifier = {
 				has_war_with = event_target:WTT_current_china_leader
 				factor = 0
-			} 
+			}
 		}
 
 		available = {
@@ -519,7 +519,7 @@ focus_tree = {
 				expire = "1965.1.1"
 				ideology = marxism
 				traits = {
-					
+
 				}
 			}
 		}
@@ -542,7 +542,7 @@ focus_tree = {
 		available = {
 			if = {
 				limit = {
-					WTT_not_taking_over_national_leadership = no				
+					WTT_not_taking_over_national_leadership = no
 				}
 				WTT_not_taking_over_national_leadership = yes
 			}
@@ -644,7 +644,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			CHI = { add_stability = -0.05 } 
+			CHI = { add_stability = -0.05 }
 		}
 	}
 
@@ -689,7 +689,7 @@ focus_tree = {
 				custom_effect_tooltip = loses_political_support_points_15
 				subtract_from_variable = { other_political_support = 15 }
 			}
-			WTT_political_struggle_recalculate_support = yes			
+			WTT_political_struggle_recalculate_support = yes
 		}
 	}
 
@@ -1536,7 +1536,7 @@ focus_tree = {
 		}
 
 		available = {
-			country_exists = event_target:WTT_current_china_leader 
+			country_exists = event_target:WTT_current_china_leader
 			NOT = {
 				is_subject_of = event_target:WTT_current_china_leader
 			}
