@@ -5487,6 +5487,20 @@ country_event = {
 				factor = 65
 				is_neighbor_of = event_target:scp_war_opposition_leader
 			}
+			modifier = {
+				factor = 0
+				OR = {
+					tag = XSM
+					tag = NXM
+					tag = TNG
+					tag = HMI
+					tag = PRC
+				}
+			}
+			modifier = {
+				factor = 5
+				tag = SHX
+			}
 		}
 		every_other_country = {
 			limit = {

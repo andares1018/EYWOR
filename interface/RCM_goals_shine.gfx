@@ -1675,11 +1675,11 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 	SpriteType = {
-		name = "GFX_GFX_focus_SAF_colonialist_crusade_shine"
-		texturefile = "gfx/interface/goals/GFX_focus_SAF_colonialist_crusade.dds"
+		name = "GFX_focus_SAF_colonialist_crusade_shine"
+		texturefile = "gfx/interface/goals/focus_SAF_colonialist_crusade.dds"
 				effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GFX_focus_SAF_colonialist_crusade.dds"
+			animationmaskfile = "gfx/interface/goals/focus_SAF_colonialist_crusade.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -1692,7 +1692,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GFX_focus_SAF_colonialist_crusade.dds"
+			animationmaskfile = "gfx/interface/goals/focus_SAF_colonialist_crusade.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
