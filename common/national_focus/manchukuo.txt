@@ -1269,7 +1269,7 @@ focus_tree = {
 	focus = {
 		id = MAN_first_five_year_plan
 		icon = GFX_goal_generic_production
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = MAN_pacify_the_countryside
 		}
@@ -2670,7 +2670,7 @@ focus_tree = {
 			set_rule = {
 				can_create_factions = yes
 			}
-			
+
 			every_state = {
 				limit = {
 					is_core_of = CHI
@@ -2897,7 +2897,7 @@ focus_tree = {
 			has_country_leader = { name = "Zhang Jinghui" ruling_only = yes }
 		}
 		bypass = {
-			
+
 		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -2935,7 +2935,7 @@ focus_tree = {
 			}
 		}
 		bypass = {
-			
+
 		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no

@@ -7,13 +7,13 @@ ideas = {
 			}
 			allowed_civil_war = {
 				always = yes
-				
-				
+
+
 			}
-			
+
 			removal_cost = -1
 			picture = kwantung_army
-			
+
 			modifier = {
 				war_support_factor = -0.05
 				army_org = -5
@@ -35,13 +35,13 @@ ideas = {
 			}
 			allowed_civil_war = {
 				always = yes
-				
-				
+
+
 			}
-			
+
 			removal_cost = -1
 			picture = kwantung_army
-			
+
 			modifier = {
 				army_org = 5
 				army_morale_factor = 0.05
@@ -50,20 +50,20 @@ ideas = {
 				land_doctrine = 0.1
 			}
 		}
-		
+
 		MAN_puppet_of_japan = {
 			allowed = {
 				always = no
 			}
 			allowed_civil_war = {
 				always = yes
-				
-				
+
+
 			}
-			
+
 			removal_cost = -1
 			picture = japan_puppet_flag
-			
+
 			modifier = {
 				war_support_factor = -0.10
 				research_time_factor = 0.15
@@ -75,54 +75,54 @@ ideas = {
 			allowed = {
 				always = no
 			}
-			
-			
+
+
 			allowed_civil_war = {
 				always = yes
 			}
-			
+
 			removal_cost = -1
-			picture = idea_jap_zaibatsu
-			
+			picture = jap_zaibatsu
+
 			modifier = {
 				trade_opinion_factor = 0.3
 				consumer_goods_factor = -0.05
 			}
 		}
-		
+
 		MAN_Improve_autonomy = {
-			
-			
+
+
 			allowed = {
 				always = no
 			}
-			
-			
+
+
 			allowed_civil_war = {
 				always = yes
 			}
-			
+
 			removal_cost = -1
 			picture = generic_pp_unity_bonus
-			
+
 			modifier = {
 				autonomy_gain = 0.4
 			}
 		}
 		MAN_Revitalization_plan = {
-			
+
 			picture = generic_production_bonus
 			allowed = {
 				always = no
 			}
-			
-			
+
+
 			allowed_civil_war = {
 				always = yes
 
 			}
 			removal_cost = -1
-			
+
 			modifier = {
 				production_speed_industrial_complex_factor = 0.05
 				production_speed_infrastructure_factor = 0.05
@@ -139,7 +139,7 @@ ideas = {
 			}
 			picture = state_shintoism
 			removal_cost = -1
-			
+
 			modifier = {
 				enemy_partisan_effect = -0.1
 				partisan_effect = 0.1
@@ -155,9 +155,9 @@ ideas = {
 				always = no
 
 			}
-			
+
 			removal_cost = -1
-			
+
 			modifier = {
 				army_core_attack_factor = -0.1
 				army_core_defence_factor = -0.05
@@ -167,7 +167,7 @@ ideas = {
 			}
 		}
 		MAN_Imperial_Army_Focus = {
-			
+
 			picture = generic_infantry_bonus
 			allowed = {
 				always = no
@@ -175,9 +175,9 @@ ideas = {
 			allowed_civil_war = {
 				always = no
 			}
-			
+
 			removal_cost = -1
-			
+
 			modifier = {
 				army_core_attack_factor = 0.1
 				army_core_defence_factor = 0.05
@@ -191,13 +191,13 @@ ideas = {
 			allowed = {
 				always = no
 			}
-			
+
 			allowed_civil_war = {
 				always = no
 			}
-			
+
 			removal_cost = -1
-			
+
 			modifier = {
 				conscription = 0.05
 			}
@@ -210,9 +210,9 @@ ideas = {
 			allowed_civil_war = {
 				always = no
 			}
-			
+
 			removal_cost = -1
-			
+
 			modifier = {
 				enemy_partisan_effect = -0.10
 				partisan_effect = 0.10
@@ -220,19 +220,19 @@ ideas = {
 			}
 		}
 		MAN_Headquarters = {
-			
-			
+
+
 			picture = generic_intel_bonus
 			allowed = {
 				always = no
 			}
-			
+
 			allowed_civil_war = {
 				always = no
 			}
-			
+
 			removal_cost = -1
-			
+
 			modifier = {
 				max_planning = 0.1
 				planning_speed = 0.1
@@ -247,9 +247,9 @@ ideas = {
 			allowed_civil_war = {
 				always = no
 			}
-			
+
 			removal_cost = -1
-			
+
 			modifier = {
 				army_attack_factor = 0.05
 				army_core_attack_factor = 0.05
@@ -257,18 +257,18 @@ ideas = {
 			}
 		}
 		MAN_Defense_doctrine = {
-			
+
 			picture = generic_wall_line
-			
+
 			allowed = {
 				always = no
 			}
 			allowed_civil_war = {
 				always = no
 			}
-			
+
 			removal_cost = -1
-			
+
 			modifier = {
 				army_defence_factor = 0.05
 				army_core_defence_factor = 0.05
@@ -276,70 +276,70 @@ ideas = {
 			}
 		}
 		MAN_democratic_influence = {
-			
-			
-			
+
+
+
 			allowed = {
 				always = no
 			}
 			allowed_civil_war = {
 				has_government = democratic
-				
-				
+
+
 			}
-			
+
 			removal_cost = -1
 			picture = generic_democratic_drift_bonus
-			
+
 			modifier = {
 				democratic_drift = 0.1
 			}
 		}
 		MAN_fascist_influence = {
-			
+
 			allowed = {
 				always = no
 			}
-			
+
 			allowed_civil_war = {
 				has_government = fascism
 			}
 			removal_cost = -1
 			picture = generic_fascism_drift_bonus
-			
+
 			modifier = {
 				fascism_drift = 0.1
 			}
 		}
 		MAN_ex_Qing = {
-			
+
 			allowed = {
 				always = no
 			}
-			
+
 			allowed_civil_war = {
 				has_government = neutrality
 			}
-			
+
 			removal_cost = -1
 			picture = generic_disjointed_gov
-			
+
 			modifier = {
 				neutrality_drift = 0.1
 			}
 		}
-		
+
 		emperor_puyi = {
 			allowed = {
 				always = no
 			}
-			
+
 			allowed_civil_war = {
 				NOT = {
 					has_government = communism
 				}
 			}
-			
+
 			removal_cost = -1
 			modifier = {
 				stability_factor = 0.05
@@ -354,9 +354,9 @@ ideas = {
 					has_government = democratic
 				}
 			}
-			
+
 			removal_cost = -1
-			
+
 			modifier = {
 				stability_factor = 0.10
 			}
@@ -378,9 +378,9 @@ ideas = {
 					}
 				}
 			}
-			
+
 			removal_cost = -1
-			
+
 			modifier = {
 				political_power_cost = 0.15
 				max_planning = 0.10
@@ -460,49 +460,49 @@ ideas = {
 			traits = { backroom_backstabber }
 		}
 		hotsumi_ozaki = {
-			
-			
+
+
 			allowed = {
 				original_tag = "MAN"
 			}
-			
-			
+
+
 			traits = { communist_revolutionary }
-			
+
 			on_add = {
 				#country_event = political.1
 			}
-			
+
 			do_effect = {
 				NOT = {
 					has_government = communism
 				}
 			}
-			
+
 			ai_will_do = {
 				factor = 0
 			}
 		}
 		kanji_ishiwara_MAN = {
-			
+
 			picture = kanji_ishiwara
 			allowed = {
 				original_tag = "MAN"
 			}
-			
-			
+
+
 			traits = { fascist_demagogue }
-			
+
 			on_add = {
 				#country_event = political.7
 			}
-			
+
 			do_effect = {
 				NOT = {
 					has_government = fascism
 				}
 			}
-			
+
 			ai_will_do = {
 				factor = 0
 			}
@@ -561,29 +561,29 @@ ideas = {
 	air_chief = {
 		yujiro_noguchi = {
 			picture = generic_air_asia_1
-			
+
 			allowed = {
 				original_tag = MAN
 			}
 			traits = { air_chief_night_operations_1 }
-			
+
 			ai_will_do = {
 				factor = 1
 			}
 		}
 		cao_bingsen = {
 			picture = generic_air_asia_2
-			
+
 			allowed = {
 				original_tag = MAN
 			}
 			traits = { air_chief_ground_support_1 }
-			
+
 			ai_will_do = {
 				factor = 1
 			}
 		}
-	}	
+	}
 		high_command = {
 		kenkichi_ueda = {
 			picture = generic_army_asia_1
@@ -620,7 +620,7 @@ ideas = {
 # [JP] http://steamcommunity.com/sharedfiles/filedetails/?id=774245196
 # [EN] http://steamcommunity.com/sharedfiles/filedetails/?id=788664629
 	aircraft_manufacturer = {
-		
+
 		designer = yes
 		manshu_hikoki = {
 			picture = generic_air_manufacturer_1
@@ -630,84 +630,84 @@ ideas = {
 			research_bonus = {
 				air_equipment = 0.10
 			}
-			
+
 			traits = { light_aircraft_manufacturer }
-			
+
 			modifier = {
 			}
 		}
 	}
 		industrial_concern = {
-		
+
 		south_manchuria_railway = {
 			picture = generic_industrial_concern_1
 			allowed = {
 				original_tag = MAN
 			}
-			
+
 			research_bonus = {
 				industry = 0.10
 			}
-			
+
 			traits = { industrial_concern }
 		}
-		
-		
+
+
 		mtt = {
 			picture = generic_electronics_concern_1
-			
+
 			allowed = {
 				original_tag = MAN
 			}
-			
+
 			research_bonus = {
 				electronics = 0.10
 			}
-			
+
 			traits = { electronics_concern }
 		}
 		showa_steel_works = {
 			picture = generic_industrial_concern_2
-			
+
 			allowed = {
 				original_tag = MAN
 			}
-			
+
 			research_bonus = {
 				industry = 0.05
 				synth_resources = 0.1
 			}
-			
+
 			traits = { refinery_concern }
 		}
 	}
 	materiel_manufacturer = {
-		
+
 		designer = yes
-		
+
 		fengtian_arsenal = {
 			picture = generic_infantry_equipment_manufacturer_2
 			allowed = {
 				original_tag = MAN
 			}
-			
+
 			research_bonus = {
 				infantry_weapons = 0.10
 			}
-			
+
 			traits = { infantry_equipment_manufacturer }
 		}
-		
+
 		dowa_automobile = {
 			picture = generic_motorized_equipment_manufacturer_3
 			allowed = {
 				original_tag = MAN
 			}
-			
+
 			research_bonus = {
 				motorized_equipment = 0.10
 			}
-			
+
 			traits = { motorized_equipment_manufacturer }
 		}
 	}
@@ -762,5 +762,5 @@ ideas = {
 			}
 			traits = { mobile_warfare_expert }
 		}
-	}	
+	}
 }

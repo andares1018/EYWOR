@@ -328,18 +328,18 @@
  EFM_Comchina.220.d:0 "Our part has decided that we have something more urgent than training skilled personnel to deal with. The ongoing terms for all training programs are therefore cancelled."
  EFM_Comchina.220.a:0 "No!"
  ###
- EFM_China.2000.t:0 "Second United Front"
- EFM_China.2000.d:0 "The nationalists has decided to form the "Second United Front" for us to work closer with each other in the face of Japanese aggression. How should we respond to that?"
- EFM_China.2000.a:0 "Great!"
- EFM_China.2000.b:0 "Nah, we changed our mind."
+ rcmchina.352.t:0 "Second United Front"
+ rcmchina.352.d:0 "The nationalists has decided to form the "Second United Front" for us to work closer with each other in the face of Japanese aggression. How should we respond to that?"
+ rcmchina.352.a:0 "Great!"
+ rcmchina.352.b:0 "Nah, we changed our mind."
  ###
- EFM_China.2001.t:0 "[From.GetName] Accepts our Proposal"
- EFM_China.2001.d:0 "After notified of our friendly intention, [From.GetName] responded positively to our Proposal of forming the "Second United Front" in the face of Japanese aggression. Now the Chinese will work with each other to defend our homeland."
- EFM_China.2001.a:0 "Great!"
+ rcmchina.353.t:0 "[From.GetName] Accepts our Proposal"
+ rcmchina.353.d:0 "After notified of our friendly intention, [From.GetName] responded positively to our Proposal of forming the "Second United Front" in the face of Japanese aggression. Now the Chinese will work with each other to defend our homeland."
+ rcmchina.353.a:0 "Great!"
  ###
- EFM_China.2002.t:0 "[From.GetName] Rejects our Proposal"
- EFM_China.2002.d:0 "After notified of our friendly intention, to our dismay, [From.GetName] responded negatively to our roposal of forming the "Second United Front" in the face of Japanese aggression. Now the Chinese won't be able to work with each other to defend our homeland thanks to those communist goons."
- EFM_China.2002.a:0 "It's time to teach them a lesson!"
+ rcmchina.354.t:0 "[From.GetName] Rejects our Proposal"
+ rcmchina.354.d:0 "After notified of our friendly intention, to our dismay, [From.GetName] responded negatively to our roposal of forming the "Second United Front" in the face of Japanese aggression. Now the Chinese won't be able to work with each other to defend our homeland thanks to those communist goons."
+ rcmchina.354.a:0 "It's time to teach them a lesson!"
  ### PRC Focus ###
  PRC_Red_Army_Recovery:0 "Recovery Effort"
  PRC_Expand_production:0 "Civilian Factory Effort"
@@ -730,7 +730,7 @@
  zhang_prc_name:0 "New Nationalist Party of China"
  zhang_prc_name_politics_tt:0 "Politics will change:\n§YNew Nationalist Party of China§! becomes the ruling party.\nPublic elections will not be held.\n"
  ### PRC event_tt ###
- they_wont_accept_if_regional_influence_too_strong_tt:0 "\n§RThey won't accept our request§! if our regional influence is too strong §Y(have more than§! §G2§! §Ystates)§!.\n"
+ they_wont_accept_if_regional_influence_too_strong_tt:0 "\n§RThey won't accept our request§! if our regional influence is too strong §Y(have more than§! §G3§! §Ystates)§!.\n"
  this_will_lead_to_war_tt:0 "§RThis will lead to war.§!\n"
  PRC_End_of_Long_March_tt:0 "A §Yconference§! will be held during the focus. §MThe future of the Chinese Communist Party will be determined by how you answer each event§!.\n§RChoose your response wisely.§!\n"
  PRC_Joint_command_tech_group:0 "Joint Command"

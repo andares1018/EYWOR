@@ -2380,7 +2380,7 @@ focus_tree = {
 				}
 				country_event = {
 					days = 5
-					id = EFM_China.109
+					id = rcmchina.351
 				}
 			}
 			every_other_country = {

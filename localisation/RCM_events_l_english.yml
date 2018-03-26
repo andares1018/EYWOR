@@ -84,7 +84,6 @@
  hpc.3.t:0 "Sino-Japanese Alliance"
  hpc.3.d:0 "After a series of negotiations, China and Japan have miraculously formed an alliance with each others. Chiang's regime can now finally gain control over Hebei."
  hpc.3.a:0 "United we are strong!"
- if_buy_succ:0 "If successful:"
  #####prc
  prc.1.t:0 "Liangguang Incident"
  prc.1.d_com:0 "A civil war has broken out between the southern warlords and Chiang Kai-shek's Nanking Government. More and more people in the communist party are feeling sympathetic to the warlords. This may also be a great chance for us to gain power and expand."

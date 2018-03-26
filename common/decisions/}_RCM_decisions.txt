@@ -1200,6 +1200,9 @@ japan_form_IN_MON_puppets = {
 			factor = 2000
 		}
 	}
+
+}
+political_actions = {
 	lushan_declaration = {
 	     icon = generic_political_discourse
 	     fire_only_once = yes

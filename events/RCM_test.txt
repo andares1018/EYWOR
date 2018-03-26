@@ -20,12 +20,8 @@ country_event = {
 		days = 0
 	}
 	immediate = {
-		CHI = {
-			set_variable = { var = cf_number value = num_of_civilian_factories_available_for_projects }
-			set_variable = { var = af_number value = num_of_military_factories }
-			#divide_variable = { var = cf_number value = af_number }
-			#round_variable = cf_number
-			print_variables = { file = log_file text = header_text append = yes var_list = { cf_number af_number }  }
+		SIC = {
+			country_event = wtt_china.1
 		}
 	}
 	is_triggered_only = yes

@@ -1710,240 +1710,31 @@ focus_tree = {
 		will_lead_to_war_with = TNG
 		will_lead_to_war_with = YUN
 		completion_reward = {
-			if = {
+
+			every_other_country = {
 				limit = {
-					country_exists = PRC
-					NOT = {
-						CHI = {
-							has_war_with = PRC
-						}
+					exists = yes
+					OR = {
+						is_originally_warlord = yes
+						tag = SIK
 					}
-				}
-				create_wargoal = {
-					type = take_state_focus
-					target = PRC
-					generator = owned_states
-				}
-			}
-			if = {
-				limit = {
-					country_exists = SHX
 					NOT = {
-						CHI = {
-							has_war_with = SHX
-						}
+						has_war_with = event_target:WTT_current_china_leader
 					}
-				}
-				create_wargoal = {
-					type = take_state_focus
-					target = SHX
-					generator = owned_states
-				}
-			}
-			if = {
-				limit = {
-					country_exists = GXC
 					NOT = {
-						CHI = {
-							has_war_with = GXC
-						}
-					}
-				}
-				create_wargoal = {
-					type = take_state_focus
-					target = GXC
-					generator = owned_states
-				}
-			}
-			if = {
-				limit = {
-					country_exists = GUD
-					NOT = {
-						CHI = {
-							has_war_with = GUD
-						}
-					}
-				}
-				create_wargoal = {
-					type = take_state_focus
-					target = GUD
-					generator = owned_states
-				}
-			}
-			if = {
-				limit = {
-					country_exists = SIC
-					NOT = {
-						CHI = {
-							has_war_with = SIC
-						}
-					}
-				}
-				create_wargoal = {
-					type = take_state_focus
-					target = SIC
-					generator = owned_states
-				}
-			}
-			if = {
-				limit = {
-					country_exists = XSM
-					NOT = {
-						CHI = {
-							has_war_with = XSM
-						}
-					}
-				}
-				create_wargoal = {
-					type = take_state_focus
-					target = XSM
-					generator = owned_states
-				}
-			}
-			if = {
-				limit = {
-					country_exists = NXM
-					NOT = {
-						CHI = {
-							has_war_with = NXM
-						}
-					}
-				}
-				create_wargoal = {
-					type = take_state_focus
-					target = NXM
-					generator = owned_states
-				}
-			}
-			if = {
-				limit = {
-					country_exists = NEA
-					is_subject = no
-					NOT = {
-						CHI = {
-							has_war_with = NEA
-						}
-					}
-				}
-				create_wargoal = {
-					type = take_state_focus
-					target = NEA
-					generator = owned_states
-				}
-			}
-			if = {
-				limit = {
-					country_exists = SHD
-					is_subject = no
-					NOT = {
-						CHI = {
-							has_war_with = SHD
-						}
-					}
-				}
-				create_wargoal = {
-					type = take_state_focus
-					target = SHD
-					generator = owned_states
-				}
-			}
-			if = {
-				limit = {
-					country_exists = HPC
-					is_subject = no
-					NOT = {
-						CHI = {
-							has_war_with = HPC
-						}
-					}
-				}
-				create_wargoal = {
-					type = take_state_focus
-					target = HPC
-					generator = owned_states
-				}
-			}
-			if = {
-				limit = {
-					country_exists = YUN
-					NOT = {
-						CHI = {
-							has_war_with = YUN
-						}
-					}
-				}
-				create_wargoal = {
-					type = take_state_focus
-					target = YUN
-					generator = owned_states
-				}
-			}
-			if = {
-				limit = {
-					country_exists = XIK
-					NOT = {
-						CHI = {
-							has_war_with = XIK
-						}
-					}
-				}
-				create_wargoal = {
-					type = take_state_focus
-					target = XIK
-					generator = owned_states
-				}
-			}
-			if = {
-				limit = {
-					country_exists = HMI
-					NOT = {
-						CHI = {
-							has_war_with = HMI
-						}
-					}
-				}
-				create_wargoal = {
-					type = take_state_focus
-					target = HMI
-					generator = owned_states
-				}
-			}
-			if = {
-				limit = {
-					country_exists = TNG
-					NOT = {
-						CHI = {
-							has_war_with = TNG
-						}
-					}
-				}
-				create_wargoal = {
-					type = take_state_focus
-					target = TNG
-					generator = owned_states
-				}
-			}
-			if = {
-				limit = {
-					country_exists = SIK
-					SIK = {
-						NOT = {
+						OR ={
+							is_in_faction_with = event_target:WTT_current_china_leader
 							is_in_faction_with = SOV
 						}
 					}
-					SIK = {
-						is_in_faction_with = XIK
-					}
-					NOT = {
-						CHI = {
-							has_war_with = SIK
-						}
-					}
+					is_puppet = no
 				}
-				create_wargoal = {
-					type = take_state_focus
-					target = SIK
-					generator = owned_states
+				ROOT = {
+					create_wargoal = {
+						type = take_state_focus
+						target = PREV
+						generator = owned_states
+					}
 				}
 			}
 			add_political_power = 300
@@ -2786,16 +2577,26 @@ focus_tree = {
 			GER = {
 				has_guaranteed = ROOT
 			}
+			has_global_flag = fall_of_france
 			is_puppet = no
 			NOT = {
 				is_in_faction_with = FIC
 			}
 		}
 		bypass = {
-			NOT = {
-				country_exists = FIC
+			OR = {
+				NOT = {
+					country_exists = FIC
+				}
+				has_war_with = FIC
+				AND = {
+					has_completed_focus = oust_germans_focus
+					NOT = {
+						has_global_flag = falkenhausen_recalled
+					}
+				}
 			}
-			has_war_with = FIC
+
 		}
 	}
 	focus = {

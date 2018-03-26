@@ -82,6 +82,8 @@
  force_political_advisor:0 "The following advisors will be forced to retire:\n"
  justifying_on_china:0 "A §YMajor§! is justifying wargoal on us."
  emperor_influence:0 "§MHaving §!§Yadvisors§!§Mor§!§YChief of Army§!§M trusted by the Emperor, such as §!§GGenro§!§M and §!§GRoyal members§!§M in the government may influence his decision.§!\n"
+ unlock_focus_right:0 "§MThe industry will be balanced enough to handle§! §Yall the national focuses§! §Rto the right in the same row.§!"
+ if_buy_succ:0 "§GIf successful:§!\n"
  #MESC
  failed_to_do_this_focus_in_time_can_lead_to_a_complete_defection_of_inner_mongolia_tt:0 "§RFailed to do this focus in time can lead to a complete defection of Inner Mongolia.§!\n"
  MEJ_reform:0 "@MEJ §Y[MEJ.GetNameDef]§! will be called @MEJ §YMongol Autonomous Federation§!.\n"
@@ -114,6 +116,10 @@
  promise_remove_bs_cc:0 "\n\nOur government will promise the Japanese government to dissolve §Mthe Blueshirts§! and §Mthe Central Club§!. §RFailed or too late to do so may have serious consequences.§!"
  become_puppet_of_MAN_tt:0 "Becomes a puppet of @MAN§Y[MAN.GetName]§!.\n"
  JCA_party:0 "§YJapanese Colonial Administration§!"
+ joined_chi_SHX:0 "@SHX §YShanxi-Suiyuan Army§! joined our government"
+ joined_chi_HPC:0 "@HPC §YHebei-Chahar Political Council§! joined our government"
+ joined_chi_GUD:0 "@GUD §YGuangdong Clique§! joined our government"
+ joined_chi_GXC:0 "@GXC §YNew Guangxi Clique§! joined our government"
  ####XXX Exists
  ccp_exists:0 "@CCP§YGreat Way Government§! has been established."
  jnc_exists:0 "@JNC§YProvisional Government of the ROC§! has been established."

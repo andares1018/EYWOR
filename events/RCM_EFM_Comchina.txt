@@ -308,7 +308,7 @@ country_event = {
 		name = EFM_Comchina.11.c
 		trigger = {#####CHANGE ME IF THE NUMBER OF PRC STARTING STATES CHANGES
 			PRC = {
-				num_of_controlled_states > 2
+				num_of_controlled_states > 3
 			}
 		}
 		ai_chance = {

@@ -3,6 +3,61 @@
 ###########################
 add_namespace = rcmchina
 
+#Japan declared war, PRC notified
+country_event = {
+	id = rcmchina.112
+	title = rcmchina.112.t
+	desc = rcmchina.112.d
+	picture = GFX_report_event_chinese_soldiers_running
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		tag = PRC
+		NOT = {
+			has_global_flag = CHI_unite_PRC_so_no_more_questions
+		}
+		JAP = { has_offensive_war = yes }
+		NOT = { has_war_with = JAP }
+		NOT = { is_in_faction_with = JAP }
+		any_other_country = {
+			is_legit_china = yes
+			has_defensive_war = yes
+			has_war_with = JAP
+			is_faction_leader = yes
+			NOT = {
+				is_in_faction_with = PRC
+			}
+		}
+	}
+	#mean_time_to_happen = {
+	#	days = 15
+	#}
+	option = {
+		name = rcmchina.112.a
+		ai_chance = { factor = 100 }
+		random_other_country = {
+			limit = {
+				is_legit_china = yes
+				has_defensive_war = yes
+				has_war_with = JAP
+				is_faction_leader = yes
+				NOT = {
+					is_in_faction_with = PRC
+				}
+			}
+			PRC = {
+				add_to_war = {
+					targeted_alliance = PREV
+					enemy = JAP
+				}
+			}
+		}
+	}
+	option = {
+		name = rcmchina.112.b
+		ai_chance = { factor = 0 }
+	}
+}
 # Henan Famine
 country_event = {
 	id = rcmchina.210
@@ -348,7 +403,7 @@ country_event = {
 	trigger = {
 		country_exists = PRC
 		tag = CHI
-		has_global_flag = CHI_unite
+		has_global_flag = JAP_attacks_CHI_unites
 		HPC = { NOT = { has_war_with = JAP } }
 		SHX = { NOT = { has_war_with = JAP } }
 		NOT = { has_war_with = JAP }
@@ -413,7 +468,7 @@ country_event = {
 		NOT = {
 			tag = NEA
 		}
-		has_global_flag = CHI_unite
+		has_global_flag = JAP_attacks_CHI_unites
 		HPC = { NOT = { has_war_with = JAP } }
 		SHX = { NOT = { has_war_with = JAP } }
 		NOT = { has_war_with = JAP }
@@ -2232,61 +2287,7 @@ country_event = {
 		name = rcmchina.265.a
 	}
 }
-#Japan declared war, PRC notified
-country_event = {
-	id = rcmchina.112
-	title = rcmchina.112.t
-	desc = rcmchina.112.d
-	picture = GFX_report_event_chinese_soldiers_running
-	is_triggered_only = yes
-	fire_only_once = yes
-	trigger = {
-		tag = PRC
-		NOT = {
-			has_global_flag = CHI_unite_PRC_so_no_more_questions
-		}
-		JAP = { has_offensive_war = yes }
-		NOT = { has_war_with = JAP }
-		NOT = { is_in_faction_with = JAP }
-		any_other_country = {
-			is_legit_china = yes
-			has_defensive_war = yes
-			has_war_with = JAP
-			is_faction_leader = yes
-			NOT = {
-				is_in_faction_with = PRC
-			}
-		}
-	}
-	#mean_time_to_happen = {
-	#	days = 15
-	#}
-	option = {
-		name = rcmchina.112.a
-		ai_chance = { factor = 100 }
-		random_other_country = {
-			limit = {
-				is_legit_china = yes
-				has_defensive_war = yes
-				has_war_with = JAP
-				is_faction_leader = yes
-				NOT = {
-					is_in_faction_with = PRC
-				}
-			}
-			PRC = {
-				add_to_war = {
-					targeted_alliance = PREV
-					enemy = JAP
-				}
-			}
-		}
-	}
-	option = {
-		name = rcmchina.112.b
-		ai_chance = { factor = 0 }
-	}
-}
+
 #new equal treaties uk
 country_event = {
 	id = rcmchina.266
@@ -3968,7 +3969,7 @@ country_event = {
 		custom_effect_tooltip = NDP_unite
 		hidden_effect = {
 			annex_country = { target = SIC transfer_troops = yes }
-			set_global_flag = sic_joins_chi
+			set_global_flag = joined_chi_@SIC
 		}
 	}
 }
@@ -3999,7 +4000,7 @@ country_event = {
 		custom_effect_tooltip = NDP_unite
 		hidden_effect = {
 			annex_country = { target = SIC transfer_troops = yes }
-			set_global_flag = sic_joins_chi
+			set_global_flag = joined_chi_@SIC
 		}
 	}
 }
@@ -4544,12 +4545,14 @@ country_event = {
 			random_other_country = {
 				limit = {
 					is_warlord = yes
+					has_war_with = JAP
 				}
 				ROOT = {
 					add_to_war = {
 						targeted_alliance = PREV enemy = JAP
 					}
 				}
+				
 			}
 		}
 		every_other_country = {
@@ -4564,6 +4567,58 @@ country_event = {
 			country_event = {
 				days = 2 id = rcmchina.332
 			}
+		}
+		every_country = { #united front
+			limit = {
+				is_warlord = yes
+				NOT = {
+					AND = {
+						OR = {
+							tag = HMI
+							tag = TNG
+						}
+						has_war_with = SIK
+					}
+				}
+				NOT = { has_country_flag = china101_fired }
+				has_global_flag = JAP_attacks_CHI_unites		
+				OR = {
+					HPC = { 
+						has_war_with = JAP
+					}
+					any_other_country = {
+						is_legit_china = yes
+						has_war_with = JAP
+					}
+					AND = {
+						HPC = { is_puppet_of = JAP }
+						any_other_country = {
+							is_legit_china = yes
+							has_war_with = JAP
+						}
+					}
+				}
+				JAP = { has_offensive_war = yes }
+				NOT = {
+					is_subject_of = JAP
+				}
+				any_other_country = {
+					is_legit_china = yes
+					NOT = {
+						has_war_with = ROOT
+					}
+				}
+				OR = {
+					is_in_faction = no
+					owns_state = 614
+					tag = SHD
+				}		
+				OR = {
+					has_war = no
+					has_war_with = JAP
+				}
+			}
+			country_event = { id = rcmchina.101 }
 		}
 	}
 	option = {#no thanks
@@ -4584,14 +4639,7 @@ country_event = {
 		ai_chance = {
 			factor = 100
 		}
-		random_other_country = {
-			limit = {
-				is_faction_leader = yes
-				is_in_faction_with = ROOT
-			}
-			remove_from_faction = ROOT
-		}
-		every_state = {
+		every_state = { #divide the land
 			limit = {
 				is_controlled_by = ROOT
 			}
@@ -4602,6 +4650,15 @@ country_event = {
 		white_peace = FROM
 		add_to_war = {
 			targeted_alliance = FROM enemy = JAP
+		}
+		if = {
+			limit = {
+				is_faction_leader = yes
+			}
+			create_wargoal = { #FOR CONTINUE THE CIVIL WAR AFTER THE WAR
+				target = FROM
+				type = annex_everything
+			}
 		}
 		hidden_effect = {
 			FROM = {
@@ -5149,6 +5206,133 @@ country_event = {
 		if = {
 			limit = { has_dlc = "Together for Victory" }
 			add_ideas = EAM_United_Front_idea_boost
+		}
+	}
+}
+
+# Restart Chinese civil war #PRC WAR of Liberation
+country_event = {
+	id = rcmchina.351
+	title = rcmchina.109.t
+	desc = rcmchina.109.d
+	picture = GFX_report_event_chinese_soldiers
+
+	is_triggered_only = yes
+	
+#	fire_only_once = yes
+
+#	trigger = {
+#		tag = PRC
+#		has_global_flag = PRC_restart_CHI_war
+#		NOT = { has_war_together_with = CHI }
+#	}
+
+#	mean_time_to_happen = { days = 360 }
+
+	option = {
+		name = rcmchina.109.a
+		custom_effect_tooltip = rcmchina.109_tt		
+		CHI = { country_event = { id = rcmchina.110 } }
+		effect_tooltip = {
+			declare_war_on = { target = CHI type = annex_everything }
+		}
+	}
+}
+country_event = {#second united front
+	id = rcmchina.352
+	title = rcmchina.352.t
+	desc = rcmchina.352.d
+	picture = GFX_report_event_chinese_soldiers
+
+	is_triggered_only = yes
+	
+
+	option = {
+		name = rcmchina.352.a
+		add_opinion_modifier = {
+			target = CHI modifier = CHI_prc_pact
+		}
+		reverse_add_opinion_modifier = {
+			target = CHI modifier = CHI_prc_pact
+		}
+		diplomatic_relation = { country = CHI relation = non_aggression_pact }
+		hidden_effect = {
+			CHI = {
+				white_peace = PRC
+			}
+			every_country = {
+				limit = {
+					is_in_faction_with = CHI
+					NOT = { tag = CHI }
+				}
+				white_peace = PRC
+				white_peace = GXC
+				white_peace = GUD
+			}
+			every_country = {
+				limit = {
+					is_in_faction_with = PRC
+					NOT = { tag = PRC }
+				}
+				white_peace = CHI
+			}
+		}
+	}
+	option = {
+		name = rcmchina.352.b
+		trigger = {
+			NOT = {
+				has_global_flag = xian_incident_flag
+			}
+		}
+		custom_effect_tooltip = this_will_lead_to_war_tt
+	}
+}
+country_event = {#second united front #PRC acce
+	id = rcmchina.353
+	title = rcmchina.353.t
+	desc = rcmchina.353.d
+	picture = GFX_report_event_chinese_soldiers
+
+	is_triggered_only = yes
+
+	option = {
+		name = rcmchina.353.a
+		effect_tooltip = {
+			add_opinion_modifier = {
+				target = PRC modifier = CHI_prc_pact
+			}
+			reverse_add_opinion_modifier = {
+				target = PRC modifier = CHI_prc_pact
+			}
+			diplomatic_relation = { country = PRC relation = non_aggression_pact }
+		}
+		add_stability = 0.05
+		add_political_power = -30
+	}
+}
+country_event = {#second united front #PRC ref
+	id = rcmchina.354
+	title = rcmchina.354.t
+	desc = rcmchina.354.d
+	picture = GFX_report_event_chinese_soldiers
+
+	is_triggered_only = yes
+
+	option = {
+		name = rcmchina.354.a
+		if = {
+			limit = {
+				NOT = {
+					has_completed_focus = CHI_attack_com
+				}
+			}
+			complete_national_focus = CHI_attack_com
+			else = {
+				create_wargoal = {
+					type = annex_everything target = FROM
+				}
+			}
 		}
 	}
 }

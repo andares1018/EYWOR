@@ -57,7 +57,7 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/idea_yoshijiro_umezu.dds"
 	}
 ###### CHINA REWORK #####
-	
+
 	spriteType = {
 		name = "GFX_idea_CHI_nationalize_industry_1_focus"
 		texturefile = "gfx/interface/ideas/chi_nationalize_industry_1_focus.dds"
@@ -337,7 +337,7 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_men_behind_the_sun"
 		texturefile = "gfx/interface/ideas/men_behind_the_sun.dds"
-	}		
+	}
 	####################
 	spriteType = {
 		name = "GFX_idea_generic_n_socialism_europe"
@@ -492,11 +492,20 @@ spriteTypes = {
 		name = "GFX_idea_CHI_civilianism_idea"
 		texturefile = "gfx/interface/ideas/civilianism.dds"
 	}
-	
+
 	spriteType = {
 		name = "GFX_idea_dangguo_system"
 		texturefile = "gfx/interface/ideas/dangguo_system.dds"
 	}
+	spriteType = {
+	    name = "GFX_idea_idea_chi_emergency_bailout"
+	    texturefile = "gfx/interface/ideas/idea_chi_emergency_bailout.dds"
+    	}
+	spriteType = {
+	    name = "GFX_idea_chi_hyper_inflation_none"
+	    texturefile = "gfx/interface/ideas/chi_hyper_inflation_none.dds"
+    	}
+
 	####
 	spriteType = {
 		name = "GFX_idea_CHI_diplomatic_effort_idea"

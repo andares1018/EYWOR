@@ -12,6 +12,22 @@ ideas = {
 		}
 	}
 	country = {
+		##gov bail
+		CHI_emergency_bailout = {
+			allowed = {
+				always = no
+			}
+			picture = idea_chi_emergency_bailout
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.20
+				political_power_gain = -1
+			}
+		}
 		#DOB
 		CHI_International_Legion = {
 
@@ -265,9 +281,9 @@ ideas = {
 		##### Hyper inflation level ####
 		################################
 
-		 = {
+		CHI_hyper_inflation_none = {
 
-			picture = chi_hyper_inflation
+			picture = chi_hyper_inflation_none
 
 			allowed = {
 				always = no
@@ -276,7 +292,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-
+				stability_weekly = 0.02
 			}
 		}
 
@@ -2897,7 +2913,10 @@ ideas = {
 			available = {
 				OR = {
 					is_in_faction_with = SHX
-					has_global_flag = shx_joins_chi
+					custom_trigger_tooltip = {
+						tooltip = joined_chi_SHX
+						has_global_flag = joined_chi_@SHX
+					}
 				}
 			}
 			traits = { army_chief_organizational_2 }
@@ -2918,7 +2937,10 @@ ideas = {
 			available = {
 				OR = {
 					is_in_faction_with = GUD
-					has_global_flag = gud_joins_chi
+					custom_trigger_tooltip = {
+						tooltip = joined_chi_GUD
+						has_global_flag = joined_chi_@GUD
+					}
 				}
 			}
 
@@ -2940,7 +2962,10 @@ ideas = {
 			available = {
 				OR = {
 					is_in_faction_with = GXC
-					has_global_flag = gxc_joins_chi
+					custom_trigger_tooltip = {
+						tooltip = joined_chi_GXC
+						has_global_flag = joined_chi_@GXC
+					}
 				}
 			}
 
@@ -2961,7 +2986,10 @@ ideas = {
 			available = {
 				OR = {
 					is_in_faction_with = HPC
-					has_global_flag = hpc_joins_chi
+					custom_trigger_tooltip = {
+						tooltip = joined_chi_HPC
+						has_global_flag = joined_chi_@HPC
+					}
 				}
 			}
 
@@ -3279,7 +3307,7 @@ ideas = {
 			available = {
 				OR = {
 					is_in_faction_with = GUD
-					has_global_flag = gud_joins_chi
+					has_global_flag = joined_chi_@GUD
 					has_full_control_of_state = 593
 				}
 				NOT = { JAP = { controls_state = 593 } }

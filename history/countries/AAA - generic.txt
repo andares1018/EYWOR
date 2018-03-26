@@ -215,6 +215,17 @@ if = {
 		add_ideas = {
 			PRC_government_corruption
 			CHI_ineffective_bureaucracy_warlord
+		}
+	}
+	every_country = {
+		limit = {
+			OR = {
+				is_warlord = yes
+				tag = PRC
+			}
+		}
+		add_ideas = {
+
 			incompetent_heavy_industry
 			unbalanced_industry
 			iliterate_population
@@ -223,4 +234,5 @@ if = {
 			CHI_hyper_inflation_1
 		}
 	}
+
 }

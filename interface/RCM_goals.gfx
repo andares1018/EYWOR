@@ -1,238 +1,242 @@
-spriteTypes = {	
+spriteTypes = {
 	###MOD
 	SpriteType = {
 		name = "GFX_goal_puppet_jnc"
-		texturefile = "gfx/interface/goals/goal_puppet_jnc.dds"				
+		texturefile = "gfx/interface/goals/goal_puppet_jnc.dds"
 	}
 	SpriteType = {
 		name = "GFX_goal_reorg_JAP"
-		texturefile = "gfx/interface/goals/goal_reorg_JAP.dds"				
+		texturefile = "gfx/interface/goals/goal_reorg_JAP.dds"
 	}
-	
+
 	SpriteType = {
 		name = "GFX_goal_puppet_mej"
-		texturefile = "gfx/interface/goals/goal_puppet_mej.dds"				
+		texturefile = "gfx/interface/goals/goal_puppet_mej.dds"
 	}
-	
+
 	SpriteType = {
 		name = "GFX_goal_puppet_men"
-		texturefile = "gfx/interface/goals/goal_puppet_men.dds"				
+		texturefile = "gfx/interface/goals/goal_puppet_men.dds"
 	}
-	
+
 	SpriteType = {
 		name = "GFX_goal_puppet_rfm"
-		texturefile = "gfx/interface/goals/goal_puppet_rfm.dds"				
+		texturefile = "gfx/interface/goals/goal_puppet_rfm.dds"
 	}
-	
+
 	SpriteType = {
 		name = "GFX_goal_puppet_ccp"
-		texturefile = "gfx/interface/goals/goal_puppet_ccp.dds"				
+		texturefile = "gfx/interface/goals/goal_puppet_ccp.dds"
 	}
-	
+
 	SpriteType = {
 		name = "GFX_goal_puppet_rrc"
-		texturefile = "gfx/interface/goals/goal_puppet_rrc.dds"				
+		texturefile = "gfx/interface/goals/goal_puppet_rrc.dds"
 	}
-	
+
 	SpriteType = {
 		name = "GFX_goal_support_man"
-		texturefile = "gfx/interface/goals/goal_support_man.dds"				
+		texturefile = "gfx/interface/goals/goal_support_man.dds"
 	}
-	
+
 	SpriteType = {
 		name = "GFX_goal_suppress_man"
-		texturefile = "gfx/interface/goals/goal_suppress_man.dds"				
+		texturefile = "gfx/interface/goals/goal_suppress_man.dds"
 	}
-	
+
 	SpriteType = {
 		name = "GFX_goal_extend_territory"
-		texturefile = "gfx/interface/goals/goal_extend_territory.dds"				
-	}	
-	
+		texturefile = "gfx/interface/goals/goal_extend_territory.dds"
+	}
+
 	SpriteType = {
 		name = "GFX_goal_empire_restored"
-		texturefile = "gfx/interface/goals/goal_empire_restored.dds"				
+		texturefile = "gfx/interface/goals/goal_empire_restored.dds"
 	}
-	
+
 	SpriteType = {
 		name = "GFX_goal_befriend_soviet"
-		texturefile = "gfx/interface/goals/goal_befriend_soviet.dds"				
+		texturefile = "gfx/interface/goals/goal_befriend_soviet.dds"
 	}
-	
+
 	SpriteType = {
 		name = "GFX_goal_chinese_republic"
-		texturefile = "gfx/interface/goals/goal_chinese_republic.dds"				
+		texturefile = "gfx/interface/goals/goal_chinese_republic.dds"
 	}
-	
+
 	SpriteType = {
 		name = "GFX_goal_counter_intellegence"
-		texturefile = "gfx/interface/goals/goal_counter_intellegence.dds"				
+		texturefile = "gfx/interface/goals/goal_counter_intellegence.dds"
 	}
-	
+
 	SpriteType = {
 		name = "GFX_goal_espionage_network"
-		texturefile = "gfx/interface/goals/goal_espionage_network.dds"				
+		texturefile = "gfx/interface/goals/goal_espionage_network.dds"
 	}
-	
+
 	SpriteType = {
 		name = "GFX_goal_aluminium"
-		texturefile = "gfx/interface/goals/goal_aluminium.dds"				
+		texturefile = "gfx/interface/goals/goal_aluminium.dds"
 	}
-	
+
 	SpriteType = {
 		name = "GFX_goal_tungsten"
-		texturefile = "gfx/interface/goals/goal_tungsten.dds"				
+		texturefile = "gfx/interface/goals/goal_tungsten.dds"
 	}
-	
+
 	SpriteType = {
 		name = "GFX_goal_steelwork"
-		texturefile = "gfx/interface/goals/goal_steelwork.dds"				
+		texturefile = "gfx/interface/goals/goal_steelwork.dds"
 	}
-	
+
 	SpriteType = {
 		name = "GFX_focus_NRA"
-		texturefile = "gfx/interface/goals/focus_NRA.dds"				
+		texturefile = "gfx/interface/goals/focus_NRA.dds"
 	}
-	
+
 	SpriteType = {
 		name = "GFX_split_plm_focus"
-		texturefile = "gfx/interface/goals/split_plm_focus.dds"				
+		texturefile = "gfx/interface/goals/split_plm_focus.dds"
 	}
-	
+
 	SpriteType = {
 		name = "GFX_rise_of_wang_focus"
-		texturefile = "gfx/interface/goals/rise_of_wang_focus.dds"				
+		texturefile = "gfx/interface/goals/rise_of_wang_focus.dds"
 	}
-	
+
 	SpriteType = {
 		name = "GFX_strengthen_chiang"
-		texturefile = "gfx/interface/goals/strengthen_chiang.dds"				
+		texturefile = "gfx/interface/goals/strengthen_chiang.dds"
 	}
-	
+
 	SpriteType = {
 		name = "GFX_zhang_lan_focus"
-		texturefile = "gfx/interface/goals/zhang_lan_focus.dds"				
+		texturefile = "gfx/interface/goals/zhang_lan_focus.dds"
 	}
-	
+
 	SpriteType = {
 		name = "GFX_qixiang_focus"
-		texturefile = "gfx/interface/goals/qixiang_focus.dds"				
+		texturefile = "gfx/interface/goals/qixiang_focus.dds"
 	}
-	
+
 	SpriteType = {
 		name = "GFX_three_principle_focus"
-		texturefile = "gfx/interface/goals/three_principle_focus.dds"				
+		texturefile = "gfx/interface/goals/three_principle_focus.dds"
 	}
-	
+
 	SpriteType = {
 		name = "GFX_constitution_focus"
-		texturefile = "gfx/interface/goals/constitution_focus.dds"				
+		texturefile = "gfx/interface/goals/constitution_focus.dds"
 	}
-	
+
 	SpriteType = {
 		name = "GFX_assembly_const_focus"
-		texturefile = "gfx/interface/goals/assembly_const_focus.dds"				
+		texturefile = "gfx/interface/goals/assembly_const_focus.dds"
 	}
-	
+
 	SpriteType = {
 		name = "GFX_draft_focus"
-		texturefile = "gfx/interface/goals/draft_focus.dds"				
+		texturefile = "gfx/interface/goals/draft_focus.dds"
 	}
-	
+
 	SpriteType = {
 		name = "GFX_goal_puppet_mua"
-		texturefile = "gfx/interface/goals/goal_puppet_mua.dds"				
+		texturefile = "gfx/interface/goals/goal_puppet_mua.dds"
 	}
-	
+
 	SpriteType = {
 		name = "GFX_goal_continuous_long_march"
-		texturefile = "gfx/interface/goals/goal_continuous_long_march.dds"				
+		texturefile = "gfx/interface/goals/goal_continuous_long_march.dds"
 	}
 	SpriteType = {
 		name = "GFX_goal_PRC_continuous_specialized_training_program_icon"
-		texturefile = "gfx/interface/goals/goal_PRC_continuous_specialized_training_program_icon.dds"				
+		texturefile = "gfx/interface/goals/goal_PRC_continuous_specialized_training_program_icon.dds"
 	}
 	SpriteType = {
 		name = "GFX_goal_continuous_amass_public_support"
-		texturefile = "gfx/interface/goals/goal_continuous_amass_public_support.dds"				
+		texturefile = "gfx/interface/goals/goal_continuous_amass_public_support.dds"
 	}
 	SpriteType = {
 		name = "GFX_goal_continuous_stage_uprisings"
-		texturefile = "gfx/interface/goals/goal_continuous_stage_uprisings.dds"				
+		texturefile = "gfx/interface/goals/goal_continuous_stage_uprisings.dds"
 	}
 	SpriteType = {
 		name = "GFX_goal_continuous_counter_insurgency"
-		texturefile = "gfx/interface/goals/goal_continuous_counter_insurgency.dds"				
+		texturefile = "gfx/interface/goals/goal_continuous_counter_insurgency.dds"
 	}
 	SpriteType = {
 		name = "GFX_goal_academia_reform"
-		texturefile = "gfx/interface/goals/goal_academia_reform.dds"				
+		texturefile = "gfx/interface/goals/goal_academia_reform.dds"
 	}
 	SpriteType = {
 		name = "GFX_goal_academia_expand"
-		texturefile = "gfx/interface/goals/goal_academia_expand.dds"				
+		texturefile = "gfx/interface/goals/goal_academia_expand.dds"
 	}
 	SpriteType = {
 		name = "GFX_goal_strengthen_kmt"
-		texturefile = "gfx/interface/goals/goal_strengthen_kmt.dds"				
+		texturefile = "gfx/interface/goals/goal_strengthen_kmt.dds"
 	}
 	SpriteType = {
 		name = "GFX_goal_sino_german_coop"
-		texturefile = "gfx/interface/goals/goal_sino_german_coop.dds"				
+		texturefile = "gfx/interface/goals/goal_sino_german_coop.dds"
 	}
 	SpriteType = {
 		name = "GFX_goal_dangguo"
-		texturefile = "gfx/interface/goals/goal_dangguo.dds"				
+		texturefile = "gfx/interface/goals/goal_dangguo.dds"
 	}
 	SpriteType = {
 		name = "GFX_goal_one_party"
-		texturefile = "gfx/interface/goals/goal_one_party.dds"				
+		texturefile = "gfx/interface/goals/goal_one_party.dds"
 	}
 	SpriteType = {
 		name = "GFX_focus_blueshirts_coup"
-		texturefile = "gfx/interface/goals/focus_blueshirts_coup.dds"				
+		texturefile = "gfx/interface/goals/focus_blueshirts_coup.dds"
 	}
-	
-	
+
+
 	SpriteType = {
 		name = "GFX_focus_nationalize_companies"
-		texturefile = "gfx/interface/goals/focus_nationalize_companies.dds"				
+		texturefile = "gfx/interface/goals/focus_nationalize_companies.dds"
 	}
 	SpriteType = {
 		name = "GFX_focus_juntong"
-		texturefile = "gfx/interface/goals/focus_juntong.dds"				
+		texturefile = "gfx/interface/goals/focus_juntong.dds"
 	}
 	SpriteType = {
 		name = "GFX_focus_jongtong"
-		texturefile = "gfx/interface/goals/focus_jongtong.dds"				
+		texturefile = "gfx/interface/goals/focus_jongtong.dds"
 	}
-	
+
 	SpriteType = {
 		name = "GFX_focus_bs"
-		texturefile = "gfx/interface/goals/focus_bs.dds"				
+		texturefile = "gfx/interface/goals/focus_bs.dds"
 	}
 	SpriteType = {
 		name = "GFX_focus_yi_dang_zhi_guo"
-		texturefile = "gfx/interface/goals/focus_yi_dang_zhi_guo.dds"				
+		texturefile = "gfx/interface/goals/focus_yi_dang_zhi_guo.dds"
 	}
 	SpriteType = {
 		name = "GFX_focus_cc_clique"
-		texturefile = "gfx/interface/goals/focus_cc_clique.dds"				
+		texturefile = "gfx/interface/goals/focus_cc_clique.dds"
 	}
 	SpriteType = {
 		name = "GFX_focus_last_ditch"
-		texturefile = "gfx/interface/goals/focus_last_ditch.dds"				
+		texturefile = "gfx/interface/goals/focus_last_ditch.dds"
 	}
 	SpriteType = {
 		name = "GFX_focus_national_defense"
-		texturefile = "gfx/interface/goals/focus_national_defense.dds"				
+		texturefile = "gfx/interface/goals/focus_national_defense.dds"
 	}
 	SpriteType = {
 		name = "GFX_focus_ethnicism"
-		texturefile = "gfx/interface/goals/focus_ethnicism.dds"				
+		texturefile = "gfx/interface/goals/focus_ethnicism.dds"
 	}
 	SpriteType = {
 		name = "GFX_focus_healthcare_program"
-		texturefile = "gfx/interface/goals/focus_healthcare_program.dds"				
+		texturefile = "gfx/interface/goals/focus_healthcare_program.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_government_bailout"
+		texturefile = "gfx/interface/goals/focus_government_bailout.dds"
 	}
 }

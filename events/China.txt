@@ -582,7 +582,7 @@ country_event = {
 		JAP = { has_offensive_war = yes }
 		has_defensive_war = yes
 		NOT = { owns_state = 622 }		
-		NOT = { has_global_flag = CHI_unite }
+		NOT = { has_global_flag = JAP_attacks_CHI_unites }
 		NOT = { has_global_flag = CHI_no_national_front_flag }
 	}
 
@@ -592,7 +592,7 @@ country_event = {
 		name = china.100.a
 		create_faction = chinese_united_front
 		#load_oob = "CHI_united_front"
-		set_global_flag = CHI_unite
+		set_global_flag = JAP_attacks_CHI_unites
 
 	}
 	#option = {
@@ -610,7 +610,7 @@ country_event = {
 	is_triggered_only = yes
 	trigger = { always = no
 		NOT = { has_country_flag = china.101_fired }
-		has_global_flag = CHI_unite
+		has_global_flag = JAP_attacks_CHI_unites
 		OR = {
 			tag = GXC
 			tag = YUN
@@ -672,7 +672,7 @@ country_event = {
 	fire_only_once = yes
 	is_triggered_only = yes
 	trigger = { always = no
-		has_global_flag = CHI_unite
+		has_global_flag = JAP_attacks_CHI_unites
 		tag = SIK
 		GER = { has_war_with = SOV }
 		CHI = {
@@ -929,7 +929,7 @@ country_event = {
 		is_subject = no
 		PRC = { is_subject = no }
 		tag = CHI
-		has_global_flag = CHI_unite
+		has_global_flag = JAP_attacks_CHI_unites
 		NOT = { has_war_with = JAP }		
 	}
 
