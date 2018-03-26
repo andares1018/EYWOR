@@ -4552,7 +4552,7 @@ country_event = {
 						targeted_alliance = PREV enemy = JAP
 					}
 				}
-				
+
 			}
 		}
 		every_other_country = {
@@ -4581,9 +4581,9 @@ country_event = {
 					}
 				}
 				NOT = { has_country_flag = china101_fired }
-				has_global_flag = JAP_attacks_CHI_unites		
+				has_global_flag = JAP_attacks_CHI_unites
 				OR = {
-					HPC = { 
+					HPC = {
 						has_war_with = JAP
 					}
 					any_other_country = {
@@ -4612,7 +4612,7 @@ country_event = {
 					is_in_faction = no
 					owns_state = 614
 					tag = SHD
-				}		
+				}
 				OR = {
 					has_war = no
 					has_war_with = JAP
@@ -4893,9 +4893,9 @@ country_event = {
 		name = rcmchina.340.a
 		CHI = { country_event = { id = rcmchina.341 days = 7 } }
 	}
-	
+
 	option = {
-		ai_chance = { 
+		ai_chance = {
 			factor = 30
 			modifier = {
 				add = 20
@@ -4906,7 +4906,7 @@ country_event = {
 		CHI = { country_event = { id = rcmchina.342 days = 7 } }
 		custom_effect_tooltip = GAME_OVER_TT
 	}
-	
+
 	option = {
 		ai_chance = { factor = 10 }
 		name = rcmchina.340.b
@@ -4928,10 +4928,10 @@ country_event = {
 		name = rcmchina.341.a
 		puppet = FROM
 	}
-	
+
 	option = {
-		ai_chance = { 
-			factor = 50 
+		ai_chance = {
+			factor = 50
 			modifier = {
 				add = 25
 				has_idea = CHI_Revolution_Exported_idea
@@ -4982,7 +4982,7 @@ country_event = {
 	is_triggered_only = yes
 
 	option = {
-		ai_chance = { 
+		ai_chance = {
 			factor = 70
 			modifier = {
 				add = 20
@@ -4993,7 +4993,7 @@ country_event = {
 		CHI = { country_event = { id = rcmchina.342 days = 7 } }
 		custom_effect_tooltip = GAME_OVER_TT
 	}
-	
+
 	option = {
 		ai_chance = { factor = 10 }
 		name = rcmchina.341.b
@@ -5008,10 +5008,10 @@ country_event = {
 	picture = GFX_report_event_CHI_sino_sov_diplomacy
 
 	is_triggered_only = yes
-	
+
 	option = {
 		name = rcmchina.345.a
-		ai_chance = { 
+		ai_chance = {
 			factor = 25
 			modifier = {
 				add = 25
@@ -5024,37 +5024,37 @@ country_event = {
 			}
 		}
 		custom_effect_tooltip = rcmchina.345.a_tt
-		CHI = { 
+		CHI = {
 			create_wargoal = { target = MON type = annex_everything }
-			if = { 
+			if = {
 				limit = { TAN = { exists = yes } }
 				create_wargoal = { target = TAN type = annex_everything }
 			}
-			if = { 
-				limit = { 
+			if = {
+				limit = {
 					SIK = { exists = yes }
 					NOT = { SIK = { is_puppet_of = CHI } }
 				}
 				create_wargoal = { target = SIK type = annex_everything }
 			}
-			if = { 
+			if = {
 				limit = {
 					TAN = { exists = no }
 					SOV = { owns_state = 392 }
 				}
-				create_wargoal = { 
-					target = SOV 
-					type = take_state_focus 
-					generator = { 392 } 
+				create_wargoal = {
+					target = SOV
+					type = take_state_focus
+					generator = { 392 }
 				}
 			}
 		}
 		hidden_effect = { news_event = { id = CHI_news.13 days = 7 } }
 	}
-	
+
 	option = {
 		name = rcmchina.345.b
-		ai_chance = { 
+		ai_chance = {
 			factor = 25
 			modifier = {
 				add = 25
@@ -5108,7 +5108,7 @@ country_event = {
 	picture = GFX_report_event_CHI_sino_sov_diplomacy
 
 	is_triggered_only = yes
-		
+
 	option = {
 		trigger = { NOT = { TAG = SIK } }
 		name = rcmchina.346.a
@@ -5116,7 +5116,7 @@ country_event = {
 		custom_effect_tooltip = GAME_OVER_TT
 		CHI = { country_event = { id = rcmchina.347 days = 6 } }
 	}
-	
+
 	#Puppet option for Humans - SRSLY? Y U DO?
 	option = {
 		trigger = { NOT = { TAG = SIK } }
@@ -5124,7 +5124,7 @@ country_event = {
 		ai_chance = { factor = 0 }
 		CHI = { country_event = { id = rcmchina.348 days = 6 } }
 	}
-	
+
 	option = {
 		trigger = { TAG = SIK }
 		name = rcmchina.346.a
@@ -5132,7 +5132,7 @@ country_event = {
 		custom_effect_tooltip = GAME_OVER_TT
 		CHI = { country_event = { id = rcmchina.349 days = 3 } }
 	}
-	
+
 	option = {
 		trigger = { TAG = SIK }
 		name = rcmchina.346.b
@@ -5163,7 +5163,7 @@ country_event = {
 	picture = GFX_report_event_generic_sign_treaty2
 
 	is_triggered_only = yes
-	
+
 	immediate = { remove_from_faction = FROM }
 
 	option = {
@@ -5185,8 +5185,8 @@ country_event = {
 		if = {
 			limit = { has_dlc = "Together for Victory" }
 			ROOT = { puppet = FROM }
-			add_ideas = EAM_United_Front_idea_boost
-			
+			#add_ideas = EAM_United_Front_idea_boost
+
 			else = { annex_country = { target = FROM transfer_troops = yes } }
 		}
 	}
@@ -5205,7 +5205,7 @@ country_event = {
 		ROOT = { puppet = FROM }
 		if = {
 			limit = { has_dlc = "Together for Victory" }
-			add_ideas = EAM_United_Front_idea_boost
+			#add_ideas = EAM_United_Front_idea_boost
 		}
 	}
 }
@@ -5218,7 +5218,7 @@ country_event = {
 	picture = GFX_report_event_chinese_soldiers
 
 	is_triggered_only = yes
-	
+
 #	fire_only_once = yes
 
 #	trigger = {
@@ -5231,7 +5231,7 @@ country_event = {
 
 	option = {
 		name = rcmchina.109.a
-		custom_effect_tooltip = rcmchina.109_tt		
+		custom_effect_tooltip = rcmchina.109_tt
 		CHI = { country_event = { id = rcmchina.110 } }
 		effect_tooltip = {
 			declare_war_on = { target = CHI type = annex_everything }
@@ -5245,7 +5245,7 @@ country_event = {#second united front
 	picture = GFX_report_event_chinese_soldiers
 
 	is_triggered_only = yes
-	
+
 
 	option = {
 		name = rcmchina.352.a

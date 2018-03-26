@@ -20,17 +20,19 @@ JAP_historical_plan = {
 		JAP_army_expansion #10
 		jap_placate_military_focus #5
 		JAP_purge_the_kodoha_faction #7
-		JAP_new_naval_estimates	#10	
-		JAP_small_arms_modernization #10
+		JAP_new_naval_estimates	#10			
 		pressure_pm_focus #7
-		aggressive_china_politics #10
 		konoe_cabinet #10
+		aggressive_china_politics #10		
 		JAP_intervene_in_china #10
+		JAP_small_arms_modernization #10
 		JAP_supremacy_of_technology #10
 		JAP_fighter_modernization #10
 		JAP_carrier_warfare_experiments 10
 		JAP_cruiser_modernization
 		 #February 20 1938	
+		unit_731
+		strike_usa_focus
 		JAP_torpedo_cruisers #September 10 1939	
 		southern_expansion_focus #November 20 1939	
 		JAP_agility_focus #January 30 1940	

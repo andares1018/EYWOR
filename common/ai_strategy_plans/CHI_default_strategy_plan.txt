@@ -266,7 +266,7 @@ CHI_befriend_america = {
 	desc = "Teaches the AI to make friends with britain to progress further down the tree"
 
 	enable = {
-		has_completed_focus = CHI_mission_to_the_us
+		has_completed_focus = CHI_allies_help_focus
 	}
 	abort = {
 		has_completed_focus = CHI_the_hump #they have served their purpose

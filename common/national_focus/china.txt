@@ -236,7 +236,7 @@ focus_tree = {
 				has_idea = agrarian_reform_idea
 			}
 		}
-		has_idea = weng_wenhao
+		#has_idea = weng_wenhao
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = unstable_economy
@@ -1090,7 +1090,7 @@ focus_tree = {
 					is_warlord = yes
 					is_puppet = no
 					NOT = {
-						has_war_ith = SIK
+						has_war_with = SIK
 					}
 				}
 				country_event = {

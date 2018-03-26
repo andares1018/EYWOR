@@ -3,8 +3,15 @@ CHI_warlord_alternate_plan_nationalist = {
 	desc = "Alternate behavior for Chinese Warlord - Nationalist"
 
 	enable = {
-		is_chinese_warlord = yes
-		has_completed_focus = CHI_cooperation_with_the_nationalists
+		NOT = {
+			OR = {
+				original_tag = GUD
+				original_tag = GXC
+				original_tag = NEA
+				original_tag = SIK
+			}
+		}
+		is_warlord = yes
 	}
 	abort = {
 		not = {

@@ -3407,7 +3407,7 @@ focus_tree = {
 	}
 	focus = {
 		id = JAP_west_pacific_treaty_organization
-		icon = GFX_focus_chi_mission_to_the_us
+		icon = GFX_focus_CHI_allies_help_focus
 		cost = 10.00
 		prerequisite = {
 			focus = JAP_pacific_guardian

@@ -670,8 +670,6 @@ focus_tree = {
 				remove_idea = CHI_executive_yuan
 				add_idea = CHI_legislative_yuan
 			}
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = CHI_kwong_jiang
 		}
 	}
 
@@ -2055,8 +2053,7 @@ focus_tree = {
 
 		completion_reward = {
 			CHI_hyper_inflation_level_up = yes
-			custom_effect_tooltip = available_industrial_concern
-			show_ideas_tooltip = CHI_mining_commission
+			add_ideas = national_resource_council
 		}
 	}
 
@@ -2309,41 +2306,6 @@ focus_tree = {
 
 		completion_reward = {
 			CHI_hyper_inflation_level_down = yes
-		}
-	}
-
-	focus = {
-		id = CHI_forced_loans
-		icon = GFX_goal_generic_forceful_treaty
-		prerequisite = { focus = CHI_reform_the_national_bank }
-		x = 0
-		y = 1
-		relative_position_id = CHI_reform_the_national_bank
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			has_hyper_inflation = yes
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-			unlock_decision_tooltip = CHI_forced_loans
 		}
 	}
 
