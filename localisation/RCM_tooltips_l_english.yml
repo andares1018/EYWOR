@@ -116,6 +116,7 @@
  promise_remove_bs_cc:0 "\n\nOur government will promise the Japanese government to dissolve §Mthe Blueshirts§! and §Mthe Central Club§!. §RFailed or too late to do so may have serious consequences.§!"
  become_puppet_of_MAN_tt:0 "Becomes a puppet of @MAN§Y[MAN.GetName]§!.\n"
  JCA_party:0 "§YJapanese Colonial Administration§!"
+ government_bailout_tt:0 "\n§YGovernment Bailout§! can lower your inflation level at a cost."
  joined_chi_SHX:0 "@SHX §YShanxi-Suiyuan Army§! joined our government"
  joined_chi_HPC:0 "@HPC §YHebei-Chahar Political Council§! joined our government"
  joined_chi_GUD:0 "@GUD §YGuangdong Clique§! joined our government"

@@ -3146,7 +3146,7 @@ focus_tree = {
 
 	}
 	focus = {
-		id = CHI_comintern_help_focus
+		id = CHI_mission_to_the_soviet_union
 		icon = GFX_focus_chi_mission_to_the_soviet_union
 		cost = 7.00
 		prerequisite = {
@@ -3202,7 +3202,7 @@ focus_tree = {
 		icon = GFX_goal_generic_army_tanks
 		cost = 7.00
 		prerequisite = {
-			focus = CHI_comintern_help_focus
+			focus = CHI_mission_to_the_soviet_union
 		}
 		x = 33
 		y = 4
@@ -7480,6 +7480,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			unlock_decision_tooltip = CHI_forced_loans
+			custom_effect_tooltip = government_bailout_tt
 		}
 
 	}
