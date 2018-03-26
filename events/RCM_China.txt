@@ -4844,7 +4844,8 @@ country_event = {
 	option = {
 		name = rcmchina.338.a
 		set_rule = { can_create_factions = yes }
-		create_faction = "Northwest Anti-Japanese United Army"
+		create_faction = "Northwest Anti-Japan United Army"
+		set_global_flag = northwest_united
 		every_state = {
 			limit = {
 				is_core_of = PRC
@@ -5331,6 +5332,262 @@ country_event = {#second united front #PRC ref
 			else = {
 				create_wargoal = {
 					type = annex_everything target = FROM
+				}
+			}
+		}
+	}
+}
+
+country_event = { ###second_central_plains_war
+	id = rcmchina.355
+	title = rcmchina.355.t
+	desc = rcmchina.355.d
+	picture = GFX_report_event_chinese_soldiers_02
+	is_triggered_only = yes
+	option = {
+		name = rcmchina.355.a
+		trigger = {
+			is_faction_leader = no
+			NOT = {
+				OR = {
+					tag = event_target:scp_war_opposition_leader
+					tag = event_target:WTT_current_china_leader
+				}
+			}
+		}
+	}
+	option = {
+		name = rcmchina.355.b
+		trigger = { TAG = event_target:scp_war_opposition_leader }
+		if = {
+			limit = {
+				FROM = {
+					is_subject_of = event_target:WTT_current_china_leader
+				}
+			}
+			end_puppet = FROM
+		}
+		add_to_faction = FROM
+		FROM = {
+			add_to_war = { targeted_alliance = ROOT enemy = event_target:WTT_current_china_leader }
+		}
+	}
+	option = {
+		name = rcmchina.355.c
+		trigger = { TAG = event_target:WTT_current_china_leader }
+	} #Join opposition faction
+}
+country_event = { # JOIN Opposition totally
+	id = rcmchina.356
+	title = rcmchina.356.t
+	desc = rcmchina.356.d
+	picture = GFX_report_event_chinese_soldiers_02
+	is_triggered_only = yes
+	option = {
+		name = rcmchina.356.a
+		trigger = {
+			is_faction_leader = no
+			NOT = {
+				OR = {
+					tag = event_target:scp_war_opposition_leader
+					tag = event_target:WTT_current_china_leader
+				}
+			}
+		}
+	}
+	option = {
+		name = rcmchina.356.b
+		trigger = { TAG = event_target:scp_war_opposition_leader }
+		annex_country = {
+			target = FROM transfer_troops = yes
+		}
+	}
+	option = {
+		name = rcmchina.356.c
+		trigger = { TAG = event_target:WTT_current_china_leader }
+	}
+}
+country_event = { #JOIN LEADER CHI
+	id = rcmchina.357
+	title = rcmchina.357.t
+	desc = rcmchina.357.d
+	picture = GFX_report_event_chinese_soldiers_02
+	is_triggered_only = yes
+	option = {
+		name = rcmchina.357.a
+		trigger = {
+			is_faction_leader = no
+			NOT = {
+				OR = {
+					tag = event_target:scp_war_opposition_leader
+					tag = event_target:WTT_current_china_leader
+				}
+			}
+		}
+	}
+	option = {
+		name = rcmchina.357.b
+		trigger = { tag = event_target:WTT_current_china_leader }
+		FROM = {
+			add_to_war = {
+				targeted_alliance = event_target:WTT_current_china_leader enemy = event_target:scp_war_opposition_leader
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					FROM = {
+						is_subject_of = event_target:scp_war_opposition_leader
+					}
+				}
+				event_target:scp_war_opposition_leader = {
+					end_puppet = FROM
+				}
+			}
+		}
+		FROM = {
+			add_to_war = { targeted_alliance = ROOT enemy = event_target:scp_war_opposition_leader }
+		}
+	}
+	option = {
+		name = rcmchina.357.c
+		trigger = { TAG = event_target:scp_war_opposition_leader }
+	}
+}
+
+###second_central_plains_war, generic
+country_event = {
+	id = rcmchina.358
+	title = rcmchina.358.t
+	desc = {
+		text = rcmchina.358.d
+		trigger = {
+			event_target:scp_war_opposition_leader = {
+				NOT = {
+					tag = NEA
+				}
+			}
+		}
+	}
+	desc = {
+		text = nea.1.d
+		trigger = {
+			event_target:scp_war_opposition_leader = {
+				tag = NEA
+			}
+		}
+	}
+	picture = GFX_report_event_china_flag
+	is_triggered_only = yes
+	option = { #join
+		name = rcmchina.358.a
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 65
+				is_neighbor_of = event_target:scp_war_opposition_leader
+			}
+		}
+		every_other_country = {
+			limit = {
+				is_in_faction_with = event_target:scp_war_opposition_leader
+			}
+			country_event = { days = 3 id = rcmchina.355 }
+		}
+	}
+	option = { #join #annex
+		name = rcmchina.358.b
+		ai_chance = {
+			base = 0
+			modifier = {
+				factor = 200
+				event_target:scp_war_opposition_leader = {
+					tag = NEA
+				}
+				tag = PRC
+			}
+			modifier = {
+				factor = 50
+				event_target:scp_war_opposition_leader = {
+					NOT = {
+						OR = {
+							tag = NEA
+							tag = GXC
+						}
+						is_historical_focus_on = yes
+					}
+				}
+				is_neighbor_of = event_target:scp_war_opposition_leader
+			}
+		}
+		every_other_country = {
+			limit = {
+				is_in_faction_with = event_target:scp_war_opposition_leader
+			}
+			country_event = { days = 3 id = rcmchina.356 }
+		}
+		custom_effect_tooltip = GAME_OVER_TT
+	}
+	option = { #join #kmt
+		name = rcmchina.358.c
+		ai_chance = {
+			base = 0
+			modifier = {
+				factor = 80
+				OR = {
+					tag = XSM
+					tag = SHX
+					tag = NXM
+					tag = YUN
+				}
+			}
+		}
+		every_other_country = {
+			limit = {
+				is_in_faction_with = event_target:scp_war_opposition_leader
+			}
+			country_event = { days = 3 id = rcmchina.357 }
+		}
+	}
+	option = { #not join
+		name = rcmchina.358.e
+		trigger = {
+			NOT = {
+				TAG = PRC
+			}
+		}
+		ai_chance = {
+			base = 20
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						has_global_flag = gud_ready
+						GXC = { has_offensive_war_with = CHI }
+					}
+					AND = {
+						OR = {
+							tag = GUD
+							tag = GXC
+							tag = SIC
+							tag = SHD
+						}
+						is_historical_focus_on = yes
+					}
+				}
+			}
+			modifier = {
+				factor = 100
+				OR = {
+					tag = SHX
+					tag = YUN
+					tag = HPC
+					tag = XIK
+					tag = PLM
+					tag = XSM
+					tag = NXM
+					tag = TNG
+					tag = HMI
 				}
 			}
 		}

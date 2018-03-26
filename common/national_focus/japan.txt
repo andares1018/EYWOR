@@ -1710,30 +1710,32 @@ focus_tree = {
 		will_lead_to_war_with = TNG
 		will_lead_to_war_with = YUN
 		completion_reward = {
-
-			every_other_country = {
-				limit = {
-					exists = yes
-					OR = {
-						is_originally_warlord = yes
-						tag = SIK
-					}
-					NOT = {
-						has_war_with = event_target:WTT_current_china_leader
-					}
-					NOT = {
-						OR ={
-							is_in_faction_with = event_target:WTT_current_china_leader
-							is_in_faction_with = SOV
+			custom_effect_tooltip = declare_war_on_all_warlords_tt
+			hidden_effect = {
+				every_other_country = {
+					limit = {
+						exists = yes
+						OR = {
+							is_originally_warlord = yes
+							tag = SIK
 						}
+						NOT = {
+							has_war_with = event_target:WTT_current_china_leader
+						}
+						NOT = {
+							OR ={
+								is_in_faction_with = event_target:WTT_current_china_leader
+								is_in_faction_with = SOV
+							}
+						}
+						is_puppet = no
 					}
-					is_puppet = no
-				}
-				ROOT = {
-					create_wargoal = {
-						type = take_state_focus
-						target = PREV
-						generator = owned_states
+					ROOT = {
+						create_wargoal = {
+							type = take_state_focus
+							target = PREV
+							generator = owned_states
+						}
 					}
 				}
 			}
@@ -1950,61 +1952,36 @@ focus_tree = {
 			set_global_flag = justifying_on_china
 		}
 		completion_reward = {
-			if = {
-				limit = {
-					HPC = {
-						NOT = {
-							OR = {
-								is_puppet_of = JAP
-								any_other_country = {
-									is_legit_china = yes
-									has_war_with = HPC
-								}
-							}
-						}
-						owns_state = 608
-					}
-				}
-				create_wargoal = {
-					target = HPC
-					type = puppet_wargoal_focus
-				}
-			}
+			#if = {
+			#	limit = {
+			#		HPC = {
+			#			NOT = {
+			#				OR = {
+			#					is_puppet_of = JAP
+			#					any_other_country = {
+			#						is_legit_china = yes
+			#						has_war_with = HPC
+			#					}
+			#				}
+			#			}
+			#			owns_state = 608
+			#		}
+			#	}
+			#	create_wargoal = {
+			#		target = HPC
+			#		type = puppet_wargoal_focus
+			#	}
+			#}
 			#else = {
 				#}
-			random_other_country = {
-				limit = {
-					is_legit_china = yes
-					NOT = {
-						is_in_faction_with = ROOT
-					}
-				}
-				ROOT = {
-					create_wargoal = {
-						target = PREV
-						type = puppet_wargoal_focus
-					}
-				}
-			}
+
 			if = {
 				limit = {
 					any_country = {
 						is_warlord = yes
-						has_war_with = CHI
+						has_war_with = event_target:WTT_current_china_leader
 					}
 				}
-				#random_other_country = {
-					# limit = {
-						#  is_legit_china = yes
-						#  controls_state = 598
-						# }
-					# ROOT = {
-						#  create_wargoal = {
-							##   target = PREV
-							#   type = puppet_wargoal_focus
-							#  }
-						# }
-					#}
 				every_country = {
 					limit = {
 						OR = {
@@ -2015,7 +1992,7 @@ focus_tree = {
 							is_faction_leader = yes
 							is_in_faction = no
 						}
-						has_war_with = CHI
+						has_war_with = event_target:WTT_current_china_leader
 					}
 					ROOT = {
 						create_wargoal = {
@@ -3407,7 +3384,7 @@ focus_tree = {
 	}
 	focus = {
 		id = JAP_west_pacific_treaty_organization
-		icon = GFX_focus_CHI_allies_help_focus
+		icon = GFX_focus_chi_mission_to_the_US
 		cost = 10.00
 		prerequisite = {
 			focus = JAP_pacific_guardian

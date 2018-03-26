@@ -9,25 +9,7 @@ country_event = {
 	title = nea.1.t
 	desc = nea.1.d
 	picture = GFX_report_event_china_flag
-	trigger ={
-		OR = {
-			tag = GUD
-			tag = PRC
-			tag = GXC
-			tag = SIC
-			tag = SHD
-		}
-		CHI = { has_war_with = NEA }
-		NEA = {
-			is_faction_leader = yes
-			has_completed_focus = nea_xian_incident
-		}
-		has_global_flag = CHI_xian_refused
-		NOT = { has_country_flag = joined_xian_war }
-	}
-	mean_time_to_happen = {
-		days = 5
-	}
+	is_triggered_only = yes
 	option = { #join
 		name = nea.1.a
 		ai_chance = { 
@@ -37,26 +19,9 @@ country_event = {
 				is_historical_focus_on = yes
 			}
 		}
-		hidden_effect = {
-			set_country_flag = joined_xian_war
-		}
 		every_other_country = {
 			limit = {
-				OR = {
-					tag = PRC
-					tag = NEA
-					AND = {
-						tag = CHI
-						ROOT = {
-							tag = PRC
-						}
-					}
-					tag = SHD
-					tag = GUD
-				}
-				NOT = {
-					tag = ROOT
-				}
+				is_in_faction_with = event_target:scp_war_opposition_leader
 			}
 			country_event = { days = 3 id = nea.2 }
 		}
@@ -114,35 +79,35 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = nea.2.a
-		trigger = { TAG = PRC }
-		hidden_effect = {
-			if = {
-				limit = {
-					FROM = {
-						is_subject_of = CHI
-					}
-				}
-				CHI = {
-					end_puppet = FROM
-				}
-			}
-		}
-		PRC = {
-			FROM = {
-				add_to_war = { targeted_alliance = PRC enemy = CHI }
-			}
+		trigger = {
+			TAG = PRC
 		}
 	}
 	option = {
 		name = nea.2.b
-		trigger = { TAG = NEA }
-		NEA = {
+		trigger = { is_faction_leader = yes }
+		ROOT = {
 			add_to_faction = FROM
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					FROM = {
+						is_subject_of = event_target:WTT_current_china_leader
+					}
+				}
+				event_target:WTT_current_china_leader = {
+					end_puppet = FROM
+				}
+			}
+		}
+		FROM = {
+			add_to_war = { targeted_alliance = ROOT enemy = event_target:WTT_current_china_leader }
 		}
 	}
 	option = {
 		name = nea.2.c
-		trigger = { TAG = CHI }
+		trigger = { TAG = event_target:WTT_current_china_leader }
 	}
 }
 ####

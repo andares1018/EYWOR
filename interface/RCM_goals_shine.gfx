@@ -1,4 +1,4 @@
-spriteTypes = {	
+spriteTypes = {
 	#####mod
 	SpriteType = {
 		name = "GFX_goal_puppet_ccp_shine"
@@ -14,7 +14,7 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 
 		animation = {
@@ -27,11 +27,11 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
-		legacy_lazy_load = no	
+		legacy_lazy_load = no
 	}
-	
+
 	SpriteType = {
 		name = "GFX_goal_reorg_JAP_shine"
 		texturefile = "gfx/interface/goals/goal_reorg_JAP.dds"
@@ -46,7 +46,7 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 
 		animation = {
@@ -59,9 +59,9 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
-		legacy_lazy_load = no	
+		legacy_lazy_load = no
 	}
 	SpriteType = {
 		name = "GFX_goal_puppet_jnc_shine"
@@ -77,7 +77,7 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 
 		animation = {
@@ -90,9 +90,9 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
-		legacy_lazy_load = no	
+		legacy_lazy_load = no
 	}
 
 	SpriteType = {
@@ -109,7 +109,7 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 
 		animation = {
@@ -122,9 +122,9 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
-		legacy_lazy_load = no	
+		legacy_lazy_load = no
 	}
 
 	SpriteType = {
@@ -141,7 +141,7 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 
 		animation = {
@@ -154,9 +154,9 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
-		legacy_lazy_load = no	
+		legacy_lazy_load = no
 	}
 	SpriteType = {
 		name = "GFX_goal_puppet_rfm_shine"
@@ -172,7 +172,7 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 
 		animation = {
@@ -185,9 +185,9 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
-		legacy_lazy_load = no	
+		legacy_lazy_load = no
 	}
 
 	SpriteType = {
@@ -204,7 +204,7 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 
 		animation = {
@@ -217,11 +217,11 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
-		legacy_lazy_load = no	
+		legacy_lazy_load = no
 	}
-	
+
 	SpriteType = {
 		name = "GFX_goal_support_man_shine"
 		texturefile = "gfx/interface/goals/goal_support_man.dds"
@@ -236,7 +236,7 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 
 		animation = {
@@ -249,11 +249,11 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
-		legacy_lazy_load = no	
+		legacy_lazy_load = no
 	}
-	
+
 	SpriteType = {
 		name = "GFX_goal_suppress_man_shine"
 		texturefile = "gfx/interface/goals/goal_suppress_man.dds"
@@ -268,7 +268,7 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 
 		animation = {
@@ -281,11 +281,11 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
-		legacy_lazy_load = no	
+		legacy_lazy_load = no
 	}
-	
+
 	SpriteType = {
 		name = "GFX_goal_extend_territory_shine"
 		texturefile = "gfx/interface/goals/goal_extend_territory.dds"
@@ -300,7 +300,7 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 
 		animation = {
@@ -313,11 +313,11 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
-		legacy_lazy_load = no	
+		legacy_lazy_load = no
 	}
-	
+
 	SpriteType = {
 		name = "GFX_goal_empire_restored_shine"
 		texturefile = "gfx/interface/goals/goal_empire_restored.dds"
@@ -332,7 +332,7 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 
 		animation = {
@@ -345,11 +345,11 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
-		legacy_lazy_load = no	
+		legacy_lazy_load = no
 	}
-	
+
 	SpriteType = {
 		name = "GFX_goal_befriend_soviet_shine"
 		texturefile = "gfx/interface/goals/goal_befriend_soviet.dds"
@@ -364,7 +364,7 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 
 		animation = {
@@ -377,11 +377,11 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
-		legacy_lazy_load = no	
+		legacy_lazy_load = no
 	}
-	
+
 	SpriteType = {
 		name = "GFX_goal_chinese_republic_shine"
 		texturefile = "gfx/interface/goals/goal_chinese_republic.dds"
@@ -396,7 +396,7 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 
 		animation = {
@@ -409,11 +409,11 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
-		legacy_lazy_load = no	
+		legacy_lazy_load = no
 	}
-	
+
 	SpriteType = {
 		name = "GFX_goal_counter_intellegence_shine"
 		texturefile = "gfx/interface/goals/goal_counter_intellegence.dds"
@@ -428,7 +428,7 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 
 		animation = {
@@ -441,11 +441,11 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
-		legacy_lazy_load = no	
+		legacy_lazy_load = no
 	}
-	
+
 	SpriteType = {
 		name = "GFX_goal_espionage_network_shine"
 		texturefile = "gfx/interface/goals/goal_espionage_network.dds"
@@ -460,7 +460,7 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 
 		animation = {
@@ -473,9 +473,9 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
-		legacy_lazy_load = no	
+		legacy_lazy_load = no
 	}
 	SpriteType = {
 		name = "GFX_goal_aluminium_shine"
@@ -491,7 +491,7 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 
 		animation = {
@@ -504,9 +504,9 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
-		legacy_lazy_load = no	
+		legacy_lazy_load = no
 	}
 	SpriteType = {
 		name = "GFX_goal_tungsten_shine"
@@ -522,7 +522,7 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 
 		animation = {
@@ -535,9 +535,9 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
-		legacy_lazy_load = no	
+		legacy_lazy_load = no
 	}
 	SpriteType = {
 		name = "GFX_goal_goal_steelwork_shine"
@@ -553,7 +553,7 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 
 		animation = {
@@ -566,11 +566,11 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
-		legacy_lazy_load = no	
+		legacy_lazy_load = no
 	}
-	
+
 	SpriteType = {
 		name = "GFX_focus_NRA_shine"
 		texturefile = "gfx/interface/goals/focus_NRA.dds"
@@ -585,7 +585,7 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 
 		animation = {
@@ -598,11 +598,11 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
-		legacy_lazy_load = no	
+		legacy_lazy_load = no
 	}
-	
+
 	SpriteType = {
 		name = "GFX_split_plm_focus_shine"
 		texturefile = "gfx/interface/goals/split_plm_focus.dds"
@@ -617,7 +617,7 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 
 		animation = {
@@ -630,11 +630,11 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
-		legacy_lazy_load = no	
+		legacy_lazy_load = no
 	}
-	
+
 	SpriteType = {
 		name = "GFX_rise_of_wang_focus_shine"
 		texturefile = "gfx/interface/goals/rise_of_wang_focus.dds"
@@ -649,7 +649,7 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 
 		animation = {
@@ -662,11 +662,11 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
-		legacy_lazy_load = no	
+		legacy_lazy_load = no
 	}
-	
+
 	SpriteType = {
 		name = "GFX_strengthen_chiang_shine"
 		texturefile = "gfx/interface/goals/strengthen_chiang.dds"
@@ -681,7 +681,7 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 
 		animation = {
@@ -694,11 +694,11 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
-		legacy_lazy_load = no	
+		legacy_lazy_load = no
 	}
-	
+
 	SpriteType = {
 		name = "GFX_zhang_lan_focus_shine"
 		texturefile = "gfx/interface/goals/zhang_lan_focus.dds"
@@ -713,7 +713,7 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 
 		animation = {
@@ -726,11 +726,11 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
-		legacy_lazy_load = no	
+		legacy_lazy_load = no
 	}
-	
+
 	SpriteType = {
 		name = "GFX_qixiang_focus_shine"
 		texturefile = "gfx/interface/goals/qixiang_focus.dds"
@@ -745,7 +745,7 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 
 		animation = {
@@ -758,11 +758,11 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
-		legacy_lazy_load = no	
+		legacy_lazy_load = no
 	}
-	
+
 	SpriteType = {
 		name = "GFX_three_principle_focus_shine"
 		texturefile = "gfx/interface/goals/three_principle_focus.dds"
@@ -777,7 +777,7 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 
 		animation = {
@@ -790,12 +790,12 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
-		legacy_lazy_load = no	
+		legacy_lazy_load = no
 	}
-	
-	
+
+
 	SpriteType = {
 		name = "GFX_constitution_focus_shine"
 		texturefile = "gfx/interface/goals/constitution_focus.dds"
@@ -810,7 +810,7 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 
 		animation = {
@@ -823,11 +823,11 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
-		legacy_lazy_load = no	
+		legacy_lazy_load = no
 	}
-	
+
 	SpriteType = {
 		name = "GFX_cassembly_const_focus_shine"
 		texturefile = "gfx/interface/goals/assembly_const_focus.dds"
@@ -842,7 +842,7 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 
 		animation = {
@@ -855,11 +855,11 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
-		legacy_lazy_load = no	
+		legacy_lazy_load = no
 	}
-	
+
 	SpriteType = {
 		name = "GFX_draft_focus_shine"
 		texturefile = "gfx/interface/goals/draft_focus.dds"
@@ -874,7 +874,7 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 
 		animation = {
@@ -887,11 +887,11 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
-		legacy_lazy_load = no	
+		legacy_lazy_load = no
 	}
-	
+
 	SpriteType = {
 		name = "GFX_goal_puppet_mua_shine"
 		texturefile = "gfx/interface/goals/goal_puppet_mua.dds"
@@ -906,7 +906,7 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 
 		animation = {
@@ -919,11 +919,11 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
-		legacy_lazy_load = no	
+		legacy_lazy_load = no
 	}
-	
+
 	SpriteType = {
 		name = "GFX_goal_continuous_long_march_shine"
 		texturefile = "gfx/interface/goals/goal_continuous_long_march.dds"
@@ -938,7 +938,7 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 
 		animation = {
@@ -951,11 +951,11 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
-		legacy_lazy_load = no	
+		legacy_lazy_load = no
 	}
-	
+
 	SpriteType = {
 		name = "GFX_goal_PRC_continuous_specialized_training_program_icon_shine"
 		texturefile = "gfx/interface/goals/goal_PRC_continuous_specialized_training_program_icon.dds"
@@ -970,7 +970,7 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 
 		animation = {
@@ -983,11 +983,11 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
-		legacy_lazy_load = no	
+		legacy_lazy_load = no
 	}
-	
+
 	SpriteType = {
 		name = "GFX_goal_continuous_amass_public_support_shine"
 		texturefile = "gfx/interface/goals/goal_continuous_amass_public_support.dds"
@@ -1002,7 +1002,7 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 
 		animation = {
@@ -1015,11 +1015,11 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
-		legacy_lazy_load = no	
+		legacy_lazy_load = no
 	}
-	
+
 	SpriteType = {
 		name = "GFX_goal_continuous_stage_uprisings_shine"
 		texturefile = "gfx/interface/goals/goal_continuous_stage_uprisings.dds"
@@ -1034,7 +1034,7 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 
 		animation = {
@@ -1047,9 +1047,9 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
-		legacy_lazy_load = no	
+		legacy_lazy_load = no
 	}
 	SpriteType = {
 		name = "GFX_goal_continuous_counter_insurgency_shine"
@@ -1065,7 +1065,7 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 
 		animation = {
@@ -1078,9 +1078,9 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
-		legacy_lazy_load = no	
+		legacy_lazy_load = no
 	}
 	SpriteType = {
 		name = "GFX_goal_academia_reform_shine"
@@ -1096,7 +1096,7 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 
 		animation = {
@@ -1109,9 +1109,9 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
-		legacy_lazy_load = no	
+		legacy_lazy_load = no
 	}
 	SpriteType = {
 		name = "GFX_goal_strengthen_kmt_shine"
@@ -1127,7 +1127,7 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 
 		animation = {
@@ -1140,9 +1140,9 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
-		legacy_lazy_load = no	
+		legacy_lazy_load = no
 	}
 	SpriteType = {
 		name = "GFX_goal_sino_german_coop_shine"
@@ -1158,7 +1158,7 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 
 		animation = {
@@ -1171,9 +1171,9 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
-		legacy_lazy_load = no	
+		legacy_lazy_load = no
 	}
 	SpriteType = {
 		name = "GFX_goal_dangguo_shine"
@@ -1189,7 +1189,7 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 
 		animation = {
@@ -1202,9 +1202,9 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
-		legacy_lazy_load = no	
+		legacy_lazy_load = no
 	}
 	SpriteType = {
 		name = "GFX_goal_one_party_shine"
@@ -1220,7 +1220,7 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 
 		animation = {
@@ -1233,9 +1233,9 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
-		legacy_lazy_load = no	
+		legacy_lazy_load = no
 	}
 	SpriteType = {
 		name = "GFX_goal_academia_expand_shine"
@@ -1251,7 +1251,7 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 
 		animation = {
@@ -1264,9 +1264,9 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
-		legacy_lazy_load = no	
+		legacy_lazy_load = no
 	}
 	SpriteType = {
 		name = "GFX_focus_blueshirts_coup_shine"
@@ -1282,7 +1282,7 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 
 		animation = {
@@ -1295,11 +1295,11 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
-		legacy_lazy_load = no	
+		legacy_lazy_load = no
 	}
-	
+
 	SpriteType = {
 		name = "GFX_focus_nationalize_companies_shine"
 		texturefile = "gfx/interface/goals/focus_nationalize_companies.dds"
@@ -1314,7 +1314,7 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 
 		animation = {
@@ -1327,9 +1327,9 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
-		legacy_lazy_load = no	
+		legacy_lazy_load = no
 	}
 	SpriteType = {
 		name = "GFX_focus_juntong_shine"
@@ -1345,7 +1345,7 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 
 		animation = {
@@ -1358,9 +1358,9 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
-		legacy_lazy_load = no	
+		legacy_lazy_load = no
 	}
 	SpriteType = {
 		name = "GFX_focus_jongtong_shine"
@@ -1376,7 +1376,7 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 
 		animation = {
@@ -1389,9 +1389,9 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
-		legacy_lazy_load = no	
+		legacy_lazy_load = no
 	}
 	SpriteType = {
 		name = "GFX_focus_bs_shine"
@@ -1407,7 +1407,7 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 
 		animation = {
@@ -1420,9 +1420,9 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
-		legacy_lazy_load = no	
+		legacy_lazy_load = no
 	}
 	SpriteType = {
 		name = "GFX_focus_yi_dang_zhi_guo_shine"
@@ -1438,7 +1438,7 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 
 		animation = {
@@ -1451,9 +1451,9 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
-		legacy_lazy_load = no	
+		legacy_lazy_load = no
 	}
 	SpriteType = {
 		name = "GFX_focus_cc_clique_shine"
@@ -1469,7 +1469,7 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 
 		animation = {
@@ -1482,9 +1482,9 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
-		legacy_lazy_load = no	
+		legacy_lazy_load = no
 	}
 	SpriteType = {
 		name = "GFX_focus_last_ditch_shine"
@@ -1500,7 +1500,7 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 
 		animation = {
@@ -1513,9 +1513,9 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
-		legacy_lazy_load = no	
+		legacy_lazy_load = no
 	}
 	SpriteType = {
 		name = "GFX_focus_national_defense_shine"
@@ -1531,7 +1531,7 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 
 		animation = {
@@ -1544,9 +1544,9 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
-		legacy_lazy_load = no	
+		legacy_lazy_load = no
 	}
 	SpriteType = {
 		name = "GFX_focus_ethnicism_shine"
@@ -1562,7 +1562,7 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 
 		animation = {
@@ -1575,9 +1575,9 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
-		legacy_lazy_load = no	
+		legacy_lazy_load = no
 	}
 	SpriteType = {
 		name = "GFX_focus_ethnicism_shine"
@@ -1593,7 +1593,7 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 
 		animation = {
@@ -1606,11 +1606,11 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
-		legacy_lazy_load = no	
+		legacy_lazy_load = no
 	}
-	
+
 	SpriteType = {
 		name = "GFX_focus_healthcare_program_shine"
 		texturefile = "gfx/interface/goals/focus_healthcare_program.dds"
@@ -1625,7 +1625,7 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 
 		animation = {
@@ -1638,11 +1638,11 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
-		legacy_lazy_load = no	
+		legacy_lazy_load = no
 	}
-	
+
 	SpriteType = {
 		name = "GFX_focus_government_bailout_shine"
 		texturefile = "gfx/interface/goals/focus_government_bailout.dds"
@@ -1657,7 +1657,7 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 
 		animation = {
@@ -1670,16 +1670,16 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
-		legacy_lazy_load = no	
+		legacy_lazy_load = no
 	}
 	SpriteType = {
 		name = "GFX_GFX_focus_SAF_colonialist_crusade_shine"
-		texturefile = "gfx/interface/goals/GFX_focus_saf_colonialist_crusade.dds"
+		texturefile = "gfx/interface/goals/GFX_focus_SAF_colonialist_crusade.dds"
 				effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GFX_focus_saf_colonialist_crusade.dds"
+			animationmaskfile = "gfx/interface/goals/GFX_focus_SAF_colonialist_crusade.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -1688,11 +1688,11 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GFX_focus_saf_colonialist_crusade.dds"
+			animationmaskfile = "gfx/interface/goals/GFX_focus_SAF_colonialist_crusade.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -1701,11 +1701,11 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
-		legacy_lazy_load = no	
+		legacy_lazy_load = no
 	}
-	
-	
-	
+
+
+
 }

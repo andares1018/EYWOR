@@ -2811,7 +2811,7 @@ ideas = {
 				NOT = { has_country_flag = second_term_sov_advisor }
 			}
 			available = {
-				has_completed_focus = sov_volunteer_group
+				has_completed_focus = CHI_the_soviet_volunteer_group
 				NOT = { SOV = { has_country_flag = counter_purge } }
 				NOT = { has_global_flag = SOV_recalled_advisors }
 				NOT = { has_war_with = SOV }

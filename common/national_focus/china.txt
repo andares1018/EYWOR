@@ -3299,7 +3299,7 @@ focus_tree = {
 
 	}
 	focus = {
-		id = sov_volunteer_group
+		id = CHI_the_soviet_volunteer_group
 		icon = GFX_goal_generic_air_bomber
 		cost = 10.00
 		prerequisite = {
@@ -3350,7 +3350,7 @@ focus_tree = {
 		icon = GFX_goal_generic_scientific_exchange
 		cost = 10.00
 		prerequisite = {
-			focus = sov_volunteer_group
+			focus = CHI_the_soviet_volunteer_group
 		}
 		x = 33
 		y = 7
@@ -3551,7 +3551,7 @@ focus_tree = {
 
 	}
 	focus = {
-		id = flying_tigers
+		id = CHI_invite_the_flying_tigers
 		icon = GFX_focus_chi_flying_tigers
 		cost = 7.00
 		prerequisite = {
@@ -3628,7 +3628,7 @@ focus_tree = {
 		icon = GFX_focus_generic_treaty
 		cost = 10.00
 		prerequisite = {
-			focus = flying_tigers
+			focus = CHI_invite_the_flying_tigers
 		}
 		x = 35
 		y = 6
@@ -3969,7 +3969,7 @@ focus_tree = {
 							has_government = fascism
 						}
 					}
-					add_ideas = CHI_New_Life_Movement
+					add_ideas = new_life
 					country_event = {
 						id = generic.1
 					}

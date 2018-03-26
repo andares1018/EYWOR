@@ -632,6 +632,11 @@ japan_form_CHI_puppets = {
 		available = { #objective
 			has_global_flag = ccp_exists
 		}
+		target_trigger = {
+			FROM = {
+				tag = CCP
+			}
+		}
 		days_mission_timeout = 180
 		fire_only_once = yes
 		is_good = no
@@ -650,6 +655,11 @@ japan_form_CHI_puppets = {
 	}
 	JAP_form_CCP = {
 		icon = generic_independence
+		target_trigger = {
+			FROM = {
+				tag = CCP
+			}
+		}
 		available = {
 			independent_war_china_or_china_died = yes
 			613 = {
@@ -677,6 +687,11 @@ japan_form_CHI_puppets = {
 	###RFM
 	JAP_form_RFM_mission = {
 		icon = generic_independence
+		target_trigger = {
+			FROM = {
+				tag = RFM
+			}
+		}
 		available = { #objective
 			has_global_flag = rfm_exists
 		}
@@ -699,6 +714,11 @@ japan_form_CHI_puppets = {
 	}
 	JAP_form_RFM = {
 		icon = generic_independence
+		target_trigger = {
+			FROM = {
+				tag = RFM
+			}
+		}
 		available = {
 			independent_war_china_or_china_died = yes
 			598 = {
@@ -727,6 +747,11 @@ japan_form_CHI_puppets = {
 	###JNC
 	JAP_form_JNC_mission = {
 		icon = generic_independence
+		target_trigger = {
+			FROM = {
+				tag = JNC
+			}
+		}
 		available = { #objective
 			has_global_flag = jnc_exists
 		}
@@ -748,6 +773,11 @@ japan_form_CHI_puppets = {
 	}
 	JAP_form_JNC = {
 		icon = generic_independence
+		target_trigger = {
+			FROM = {
+				tag = JNC
+			}
+		}
 		available = {
 			independent_war_china_or_china_died = yes
 			608 = {
@@ -812,6 +842,11 @@ japan_form_CHI_puppets = {
 	###RRC
 	JAP_form_RRC_mission = {
 		icon = generic_independence
+		target_trigger = {
+			FROM = {
+				tag = RRC
+			}
+		}
 		available = { #objective
 			has_global_flag = rrc_exists
 		}
@@ -851,6 +886,11 @@ japan_form_CHI_puppets = {
 	}
 	JAP_form_RRC = {
 		icon = generic_independence
+		target_trigger = {
+			FROM = {
+				tag = RRC
+			}
+		}
 		available = {
 			independent_war_china_or_china_died = yes
 			598 = {
@@ -965,6 +1005,11 @@ japan_form_IN_MON_puppets = {
 	###RFM
 	JAP_form_MEN = {
 		icon = generic_independence
+		target_trigger = {
+			FROM = {
+				tag = MEN
+			}
+		}
 		available = {
 			is_puppet = no
 			ECA = {
@@ -1016,6 +1061,11 @@ japan_form_IN_MON_puppets = {
 
 	JAP_form_MUA_mission = {
 		icon = generic_independence
+		target_trigger = {
+			FROM = {
+				tag = MUA
+			}
+		}
 		available = { #objective
 			has_global_flag = mua_exists
 		}
@@ -1043,6 +1093,11 @@ japan_form_IN_MON_puppets = {
 	}
 	JAP_form_MUA = {
 		icon = generic_independence
+		target_trigger = {
+			FROM = {
+				tag = MUA
+			}
+		}
 		available = {
 			independent_war_china_or_china_died = yes
 			757 = {
@@ -1094,6 +1149,11 @@ japan_form_IN_MON_puppets = {
 	###MEJ
 	JAP_form_MEJ_mission = {
 		icon = generic_independence
+		target_trigger = {
+			FROM = {
+				tag = MEJ
+			}
+		}
 		available = { #objective
 			has_global_flag = mej_exists
 		}
@@ -1135,6 +1195,11 @@ japan_form_IN_MON_puppets = {
 	}
 	JAP_form_MEJ = {
 		icon = generic_independence
+		target_trigger = {
+			FROM = {
+				tag = MEJ
+			}
+		}
 		available = {
 			independent_war_china_or_china_died = yes
 			757 = {
@@ -1269,6 +1334,63 @@ political_actions = {
 	     }
 	     ai_will_do = {
 	          factor = 200
+	     }
+	}
+}
+foreign_politics = {
+	opposition_clashes_with_CHI = {
+	     icon = generic_ignite_civil_war
+	     cost = 25
+	     target_trigger = {
+	          FROM = {
+                    is_warlord = yes
+                    is_faction_leader = yes
+                    has_war_with = event_target:WTT_current_china_leader
+               }
+	     }
+	     visible = { #can see
+			OR = {
+				is_originally_warlord = yes
+				tag = PRC
+				tag = CHI
+			}
+			any_country = {
+				has_war_with = event_target:WTT_current_china_leader
+				is_originally_warlord = yes
+				is_faction_leader = yes
+			}
+			NOT = {
+				has_war_with = event_target:WTT_current_china_leader
+			}
+	     }
+	     available = { #can do
+			OR = {
+				is_puppet = no
+				is_subject_of = event_target:WTT_current_china_leader
+			}
+	     }
+	     complete_effect = { #run effect on selection
+			FROM = {
+				save_global_event_target_as = scp_war_opposition_leader
+			}
+			if = {
+                    limit = {
+                         FROM = {
+                              tag = GXC
+                         }
+                    }
+                    country_event = {
+     				id = prc.1
+     			}
+				else = {
+					country_event = {
+	     				id = rcmchina.358
+	     			}
+				}
+               }
+	     }
+	     ai_will_do = {
+	          factor = 2000
 	     }
 	}
 }

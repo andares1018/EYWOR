@@ -16,20 +16,7 @@ country_event = {
 		trigger = { NOT = { TAG = PRC } }
 	}
 	picture = GFX_report_event_chinese_soldiers_02
-	trigger = {
-		OR = {
-			tag = PRC
-			tag = NEA
-			tag = SHD
-		}
-		CHI = { has_defensive_war_with = GXC }
-		NOT = { has_global_flag = CHI_unite_PRC }
-		NOT = { is_in_faction_with = GXC }
-		NOT = { has_country_flag = joined_2g_war }
-	}
-	mean_time_to_happen = {
-		days = 2
-	}
+	is_triggered_only = yes
 	option = { #join
 		name = prc.1.a
 		ai_chance = {

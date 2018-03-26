@@ -1,4 +1,4 @@
-﻿########################################################CHINA REWORKED	
+﻿########################################################CHINA REWORKED
 add_namespace = rcmsoviet
 
 # Demand Peace China
@@ -8,12 +8,12 @@ country_event = {
 	title = rcmsoviet.18.t
 	desc = rcmsoviet.18.d
 	picture = GFX_report_event_xian_zhang_yang
-	
+
 	is_triggered_only = yes
-				  
-		   
-														  
-  
+
+
+
+
 
 	fire_only_once = yes
 
@@ -35,15 +35,18 @@ country_event = {
 			CHI = {
 				end_puppet = NEA
 			}
-			
+
 			PRC = {
 				add_opinion_modifier = {
+					target = NEA modifier = tacit_agreement
+				}
+				reverse_add_opinion_modifier = {
 					target = NEA modifier = tacit_agreement
 				}
 			}
 		}
 	}
- 
+
 	# Enter negotiations with Communist China
 	option = {
 		name = rcmsoviet.18.a
@@ -56,7 +59,7 @@ country_event = {
 		name = rcmsoviet.18.b
 		NEA = { country_event = { id = rcmsoviet.20 days = 1 } }
 		ai_chance = { factor = 0 }
-		
+
 		effect_tooltip = {
 			end_puppet = SHD
 			CHI = {
@@ -83,9 +86,9 @@ country_event = {
 	title = rcmsoviet.19.t
 	desc = rcmsoviet.19.d
 	picture = GFX_report_event_japanese_chinese_surrender
-	
+
 	is_triggered_only = yes
-	
+
 	# Agree to a truce only otp
 	option = {
 		name = rcmsoviet.19.a
@@ -125,7 +128,7 @@ country_event = {
             }
 			white_peace = CHI
         }
-		NEA = { 
+		NEA = {
 			country_event = { id = rcmsoviet.21 days = 1 }
 		}
 	}
@@ -137,7 +140,7 @@ country_event = {
 	title = rcmsoviet.20.t
 	desc = rcmsoviet.20.d
 	picture = GFX_report_event_chiang_speech
-	
+
 	is_triggered_only = yes
 	immediate = {
 		clr_global_flag = chiang_in_xian
@@ -163,7 +166,7 @@ country_event = {
 				desc = ""
 				picture = "Portrait_China_He_Yingqin.dds"
 				expire = "1965.1.1"
-				ideology = despotism 
+				ideology = despotism
 				traits = {
 					army_chief_offensive_2
 				}
@@ -216,7 +219,7 @@ country_event = {
 				type = annex_everything
 			}
 			NEA = {
-				
+
 				add_to_war = {
 					targeted_alliance = PRC
 					enemy = CHI
@@ -236,7 +239,7 @@ country_event = {
 				enemy = CHI
 			}
 		}
-		
+
 	}
 }
 
@@ -246,7 +249,7 @@ country_event = {
 	title = rcmsoviet.21.t
 	desc = rcmsoviet.21.d
 	picture = GFX_report_event_chinese_japanese_handshake
-	
+
 	is_triggered_only = yes
 	immediate = {
 		clr_global_flag = chiang_in_xian
@@ -317,7 +320,7 @@ country_event = {
 				desc = ""
 				picture = "Portrait_China_He_Yingqin.dds"
 				expire = "1965.1.1"
-				ideology = despotism 
+				ideology = despotism
 				traits = {
 					army_chief_offensive_2
 				}
@@ -369,8 +372,8 @@ country_event = {
 				type = annex_everything
 			}
 			set_country_flag = yang_hucheng_in_charge
-		}	
-		
+		}
+
 		add_opinion_modifier = {
 			target = JAP modifier = hostile_status
 		}
@@ -382,6 +385,9 @@ country_event = {
 		}
 		reverse_add_opinion_modifier = {
 			target = PRC modifier = offered_support
+		}
+		add_opinion_modifier = {
+			target = PRC modifier = tacit_agreement
 		}
 		reverse_add_opinion_modifier = {
 			target = PRC modifier = tacit_agreement
@@ -431,9 +437,9 @@ country_event = {
 	title = rcmsoviet.22.t
 	desc = rcmsoviet.22.d
 	picture = GFX_report_event_chinese_officers
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = rcmsoviet.22.a
 	}
@@ -470,17 +476,17 @@ country_event = {
 			set_global_flag = retreat_from_CHI
 		}
 	}
-	
+
 	option = {
 		name = rcmsoviet.1000.b
 		ai_chance = { factor = 20 }
 		hidden_effect = {
 			set_global_flag = retreat_from_CHI
 		}
-	} 
+	}
 }
 # SOV demand peace from china2
-country_event = { 
+country_event = {
 	id = rcmsoviet.1001
 	title = rcmsoviet.1001.t
 	desc = rcmsoviet.1001.d
@@ -501,10 +507,10 @@ country_event = {
 		OR = {
 			330 = { is_controlled_by = CHI }
 			657 = { is_controlled_by = CHI }
-			408 = { is_controlled_by = CHI }		
+			408 = { is_controlled_by = CHI }
 		}
 	}
-	
+
 	option = {
 		name = rcmsoviet.1001.a
 		ai_chance = { factor = 100 }
@@ -524,11 +530,11 @@ country_event = {
 	picture = GFX_report_event_soviet_japanese_pact
 	fire_only_once = yes
 	is_triggered_only = yes
-	
+
 	option = { #accept
 		name = rcmsoviet.1003.a
-		ai_chance = { 
-			base = 70 
+		ai_chance = {
+			base = 70
 			modifier = {
 				factor = 100
 				is_historical_focus_on = yes
@@ -548,11 +554,11 @@ country_event = {
 		add_opinion_modifier = { target = JAP modifier = jap_sov_pact_opinion }
 		hidden_effect = { JAP = { country_event = { days = 2 id = rcmsoviet.1004 } } }
 	}
-	
+
 	option = { #refuse
 		name = rcmsoviet.1003.b
-		ai_chance = { 
-			base = 30 
+		ai_chance = {
+			base = 30
 			modifier = {
 				factor = 0
 				is_historical_focus_on = yes
@@ -568,7 +574,7 @@ country_event = {
 	picture = GFX_report_event_generic_sign_treaty2
 	fire_only_once = yes
 	is_triggered_only = yes
-	
+
 	option = { #accept
 		name = rcmsoviet.1004.a
 	}
@@ -580,7 +586,7 @@ country_event = {
 	picture = GFX_report_event_soviet_purge_trial
 	fire_only_once = yes
 	is_triggered_only = yes
-	
+
 	option = { #refuse
 		name = rcmsoviet.1005.a
 	}
@@ -590,7 +596,7 @@ country_event = { #drop pact with jap
 	hidden = yes
 	fire_only_once = yes
 	trigger = {
-		tag = JAP 
+		tag = JAP
 		has_global_flag = jap_sov_pact_flag
 		NOT = { has_idea = jap_sov_pact }
 	}
@@ -613,7 +619,7 @@ country_event = { #renew the pact 1
 	id = rcmsoviet.1007
 	hidden = yes
 	trigger = {
-		tag = JAP 
+		tag = JAP
 		has_idea = jap_sov_pact
 		NOT = { has_global_flag = renew_pact }
 	}
@@ -640,7 +646,7 @@ country_event = { #renew the pact 2
 	id = rcmsoviet.1008
 	hidden = yes
 	trigger = {
-		tag = JAP 
+		tag = JAP
 		has_idea = jap_sov_pact
 		has_global_flag = renew_pact
 	}
@@ -672,7 +678,7 @@ country_event = {
 	title = rcmsoviet.1009.t
 	desc = rcmsoviet.1009.d
 	picture = GFX_report_event_japanese_officers
-	is_triggered_only = yes	
+	is_triggered_only = yes
 	option = { # Agree
 		name = rcmsoviet.1009.a
 		ai_chance = {
@@ -719,11 +725,11 @@ country_event = {
 	}
 	mean_time_to_happen = {
 		days = 0
-	}	
+	}
 	immediate = {
 		set_global_flag = CHI_SOV_ties_severed
 		CHI = { set_global_flag = SOV_recalled_advisors }
-	}	
+	}
 	option = {
 		name = rcmsoviet.1010.a
 		CHI = {
@@ -738,7 +744,7 @@ country_event = {
 	title = rcmsoviet.1011.t
 	desc = rcmsoviet.1011.d
 	picture = GFX_report_event_german_detained_china
-	fire_only_once = yes	
+	fire_only_once = yes
 	trigger = {
 		tag = SOV
 		CHI = {
@@ -753,12 +759,12 @@ country_event = {
 	}
 	mean_time_to_happen = {
 		days = 0
-	}	
+	}
 	immediate = {
 		CHI = { remove_ideas = CHI_pavel_zhigarev }
 		CHI = { remove_ideas = CHI_gregory_thor }
 		CHI = { remove_ideas = CHI_petr_anisimov }
-		CHI = { remove_ideas = CHI_pavel_rychagov }	
+		CHI = { remove_ideas = CHI_pavel_rychagov }
 		set_global_flag = CHI_SOV_ties_severed
 	}
 	option = {
@@ -775,7 +781,7 @@ country_event = {
 	picture = GFX_report_event_soviet_purge_trial
 	fire_only_once = yes
 	is_triggered_only = yes
-	
+
 	option = { #refuse
 		name = rcmsoviet.1012.a
 	}
@@ -787,10 +793,10 @@ country_event = {
 	picture = GFX_report_event_soviet_purge_trial
 	fire_only_once = yes
 	is_triggered_only = yes
-	
+
 	option = { #refuse
 		name = rcmsoviet.1013.a
-		CHI = { 
+		CHI = {
 			set_country_flag = second_term_sov_advisor
 			remove_ideas = CHI_pavel_zhigarev
 			add_ideas = CHI_gregory_thor
@@ -807,10 +813,10 @@ country_event = {
 	picture = GFX_report_event_soviet_purge_trial
 	fire_only_once = yes
 	is_triggered_only = yes
-	
+
 	option = { #refuse
 		name = rcmsoviet.1014.a
-		CHI = { 
+		CHI = {
 			set_country_flag = third_term_sov_advisor
 			remove_ideas = CHI_gregory_thor
 			add_ideas = CHI_petr_anisimov
@@ -827,10 +833,10 @@ country_event = {
 	picture = GFX_report_event_soviet_purge_trial
 	fire_only_once = yes
 	is_triggered_only = yes
-	
+
 	option = { #refuse
 		name = rcmsoviet.1015.a
-		CHI = { 
+		CHI = {
 			set_country_flag = fourth_term_sov_advisor
 			remove_ideas = CHI_petr_anisimov
 			add_ideas = CHI_pavel_rychagov
@@ -848,7 +854,7 @@ country_event = {
 	picture = GFX_report_event_soviet_purge_trial
 	fire_only_once = yes
 	is_triggered_only = yes
-	
+
 	option = { #refuse
 		name = rcmsoviet.1016.a
 	}
@@ -860,7 +866,7 @@ country_event = {
 	picture = GFX_report_event_soviet_purge_trial
 	fire_only_once = yes
 	is_triggered_only = yes
-	
+
 	option = { #refuse
 		name = rcmsoviet.1017.a
 	}
@@ -874,7 +880,7 @@ country_event = {
 	picture = GFX_report_event_soviet_purge_trial
 	fire_only_once = yes
 	is_triggered_only = yes
-	
+
 	option = { #refuse
 		name = rcmsoviet.1018.a
 	}
@@ -888,11 +894,11 @@ country_event = {
 	picture = GFX_report_event_soviet_chianese_pact
 	fire_only_once = yes
 	is_triggered_only = yes
-	
+
 	option = { #accept
 		name = rcmsoviet.1023.a
-		ai_chance = { 
-			base = 90 
+		ai_chance = {
+			base = 90
 			modifier = {
 				factor = 100
 				is_historical_focus_on = yes
@@ -912,11 +918,11 @@ country_event = {
 		add_opinion_modifier = { target = CHI modifier = CHI_sov_pact_opinion }
 		hidden_effect = { CHI = { country_event = { days = 2 id = rcmsoviet.1024 } } }
 	}
-	
+
 	option = { #refuse
 		name = rcmsoviet.1023.b
-		ai_chance = { 
-			base = 10 
+		ai_chance = {
+			base = 10
 			modifier = {
 				factor = 0
 				is_historical_focus_on = yes
@@ -932,7 +938,7 @@ country_event = {
 	picture = GFX_report_event_generic_sign_treaty2
 	fire_only_once = yes
 	is_triggered_only = yes
-	
+
 	option = { #accept
 		name = rcmsoviet.1024.a
 	}
@@ -944,7 +950,7 @@ country_event = {
 	picture = GFX_report_event_soviet_purge_trial
 	fire_only_once = yes
 	is_triggered_only = yes
-	
+
 	option = { #refuse
 		name = rcmsoviet.1025.a
 	}
@@ -954,7 +960,7 @@ country_event = { #drop pact with chi
 	hidden = yes
 	fire_only_once = yes
 	trigger = {
-		tag = CHI 
+		tag = CHI
 		has_global_flag = CHI_sov_pact_flag
 		NOT = { has_idea = CHI_sov_pact }
 	}
@@ -977,7 +983,7 @@ country_event = { #renew the pact 1
 	id = rcmsoviet.1027
 	hidden = yes
 	trigger = {
-		tag = CHI 
+		tag = CHI
 		has_idea = CHI_sov_pact
 		NOT = { has_global_flag = renew_pact_sino_soviet }
 	}
@@ -1004,7 +1010,7 @@ country_event = { #renew the pact 2
 	id = rcmsoviet.1028
 	hidden = yes
 	trigger = {
-		tag = CHI 
+		tag = CHI
 		has_idea = CHI_sov_pact
 		has_global_flag = renew_pact_sino_soviet
 	}
