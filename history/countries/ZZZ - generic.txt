@@ -550,6 +550,17 @@ FRA = {
 			
 		}
 	}
+	
+	create_country_leader = {
+		name = "Pierre Laval"
+		desc = ""
+		picture = "Portrait_Pierre_Laval.dds"
+		expire = "1965.1.1"
+		ideology = conservatism
+		traits = {
+			
+		}
+	}
 
 	create_country_leader = {
 		name = "Philippe Pétain"

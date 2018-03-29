@@ -1,0 +1,17 @@
+﻿l_english:
+###EVENTS###
+ rcmfrance.1.t:0 "Left-wing Coalition Won the Election"
+ rcmfrance.1.d:0 "The Popular Front, composed of the French Section of the Workers' International (SFIO), the Radical-Socialists, the French Section of the Communist International (SFIC), and miscellaneous leftists, won power from the broad Republican coalitions that had governed since the 6 February 1934 crisis in the recent election. For the first time, Parti Radical were eclipsed on the democratic left by the SFIO, while still keeping a considerable role in French politics."
+ rcmfrance.1.a:0 "For the Front Populaire!"
+ rcmfrance.2.t:0 "Pierre Laval resigns"
+ rcmfrance.2.d:0 "The growing unpopularity of the Laval government, mostly caused by his attempts to reach an agreement with Italy during the Abyssinan crisis, has forced prime minister Pierre Laval to resign."
+ rcmfrance.2.a:0 "Albert Sarraut will form a new government."
+###DECISIONS###
+ 
+
+ ###FLAGS###
+ fall_of_france:0 "Fall of France"
+ 
+ ###IDEAS###
+ #General
+ #Ministers
