@@ -1,5 +1,5 @@
 ﻿l_english:
-#Events
+###EVENTS###
  rcmindochina.1.t:0 "A new Governor-General Appointed"
  rcmindochina.1.d:0 "The new government of Léon Blum has chosen to appoint Jules Brévié, former governor of French West Africa, as governor of French Indochina, in order to appease the social agitation in the colony. He will replace the unpopular René Robin."
  rcmindochina.1.a:0 "Wish him luck."
@@ -20,10 +20,23 @@
  rcmindochina.6.d:0 "General Georges Catroux has announced his defection to the gaullist traitors. Indochina is now under their control, but surely not for long."
  rcmindochina.6.a:0 "He will be punished like all his gaullist friends."
 
- #Decisions
+ ###DECISIONS###
  VIC_indochinese_politics:0 "Indochinese Politics"
  VIC_remove_catroux:0 "Remove Georges Catroux"
  VIC_remove_catroux_desc:0 "To avoid the defection of our Empire to the traitorous gaullist mercenaries, we should appoint loyal governors in our colony. Jean Decoux is one of them."
 
- #Flags
+ ###FLAGS###
  fall_of_france:0 "Fall of France"
+ 
+ ###IDEAS###
+ #Ministers
+ FIC_pierre_louis_dreyfus:0 "Pierre Louis-Dreyfus"
+ FIC_pierre_lefaucheux:0 "Pierre Lefaucheux"
+ FIC_michel_boudier:0 "Michel Boudier"
+ FIC_thierry_dargenlieu:0 "Georges Thierry d'Argenlieu"
+ FIC_jean_decoux_nav:0 "Jean Decoux"
+ FIC_leonce_jore:0 "Léonce Jore"
+ FIC_georges_catroux_hq:0 "Georges Catroux"
+ FIC_georges_catroux_theo:0 "Georges Catroux"
+ FIC_michel_boudier_theo:0 "Michel Boudier"
+ FIC_jean_decoux_theo:0 "Jean Decoux"

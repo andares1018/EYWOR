@@ -117,7 +117,7 @@ ideas = {
 			}
 
 		}
-		FIC_pierre_dupong = {
+		FIC_pierre_louis_dreyfus = {
 
 			picture = generic_political_advisor_europe_1
 
@@ -139,7 +139,7 @@ ideas = {
 			traits = { backroom_backstabber }
 		}
 
-		FIC_pierre_krier = {
+		FIC_pierre_lefaucheux = {
 
 			picture = generic_political_advisor_europe_3
 
@@ -150,7 +150,7 @@ ideas = {
 			traits = { captain_of_industry }
 		}
 	}
-	# MIFICARY
+	# MILITARY
 	army_chief = {
 
 		FIC_emile_speller = {
@@ -186,7 +186,7 @@ ideas = {
 
 	air_chief = {
 
-		FIC_guillaume_soisson = {
+		FIC_michel_boudier = {
 
 			picture = generic_air_europe_3
 
@@ -201,26 +201,11 @@ ideas = {
 			}
 		}
 
-		FIC_nicholas_diedrich = {
-
-			picture = generic_air_europe_1
-
-			allowed = {
-				original_tag = FIC
-			}
-
-			traits = { air_chief_ground_support_2 }
-
-			ai_will_do = {
-				factor = 1
-			}
-		}
-
 	}
 
 	navy_chief = {
 
-		FIC_paul_medinger = {
+		FIC_thierry_dargenlieu = {
 
 			picture = generic_navy_europe_3
 
@@ -235,7 +220,7 @@ ideas = {
 			}
 		}
 
-		FIC_henri_ahnen = {
+		FIC_jean_decoux_nav = {
 
 			picture = generic_navy_europe_1
 
@@ -253,7 +238,7 @@ ideas = {
 
 	high_command = {
 
-		FIC_francois_schammel = {
+		FIC_leonce_jore = {
 
 			picture = generic_army_europe_1
 
@@ -268,7 +253,7 @@ ideas = {
 			}
 		}
 
-		FIC_aloyse_glodt = {
+		FIC_georges_catroux_hq = {
 
 			picture = generic_army_europe_3
 
@@ -276,7 +261,7 @@ ideas = {
 				original_tag = FIC
 			}
 
-			traits = { army_armored_2 }
+			traits = { army_logistics_2 }
 
 			ai_will_do = {
 				factor = 1
@@ -316,7 +301,7 @@ ideas = {
 
 	theorist = {
 
-		FIC_alex_federspiel = {
+		FIC_georges_catroux_theo = {
 
 			picture = generic_army_europe_1
 
@@ -331,7 +316,7 @@ ideas = {
 			traits = { military_theorist }
 		}
 
-		FIC_nicolas_de_dixmude = {
+		FIC_michel_boudier_theo = {
 
 			picture = generic_air_europe_1
 
@@ -346,7 +331,7 @@ ideas = {
 			traits = { air_warfare_theorist }
 		}
 
-		FIC_florent_destriveaux = {
+		FIC_jean_decoux_theo = {
 
 			picture = generic_navy_europe_1
 
