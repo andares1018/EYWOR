@@ -1,5 +1,5 @@
 ﻿l_english:
-###EVENTS###
+ ###EVENTS###
  rcmindochina.1.t:0 "A new Governor-General Appointed"
  rcmindochina.1.d:0 "The new government of Léon Blum has chosen to appoint Jules Brévié, former governor of French West Africa, as governor of French Indochina, in order to appease the social agitation in the colony. He will replace the unpopular René Robin."
  rcmindochina.1.a:0 "Wish him luck."
@@ -26,9 +26,11 @@
  VIC_remove_catroux_desc:0 "To avoid the defection of our Empire to the traitorous gaullist mercenaries, we should appoint loyal governors in our colony. Jean Decoux is one of them."
 
  ###FLAGS###
- fall_of_france:0 "Fall of France"
  
  ###IDEAS###
+ #General
+ FIC_friendly_invasion:0 "'Friendly'Invasion"
+ FIC_friendly_invasion_desc:0 "Due to the recently signed Tripartite Pact between the German Riech and Japan, the Japanese Empire should be our friend instead of enemy. However, they are now using that fact against us and preparing an attack on the Indochinese Peninsula. Knowing that if they launch an offensive operation against Indochina Germany mostly likely won't even care, despite our allegiance towards its ally, Germany."
  #Ministers
  FIC_pierre_louis_dreyfus:0 "Pierre Louis-Dreyfus"
  FIC_pierre_lefaucheux:0 "Pierre Lefaucheux"
