@@ -68,7 +68,7 @@ ideas = {
 			}
 			
 			allowed_to_remove = {
-				has_completed_focus = monetary_reform
+				has_completed_focus = CHI_monetary_reform
 			}
 			
 			cancel_if_invalid = no

@@ -25,7 +25,7 @@ CHI_nationalist_historical_plan = {
 		an_inch_of_mountain_an_inch_of_blood
 		peace_with_japan
 		CHI_split_plm_focus
-		monetary_reform
+		CHI_monetary_reform
 		big_rear_plan
 		CHI_foreign_help_focus
 		CHI_inst_reform_focus
@@ -34,7 +34,7 @@ CHI_nationalist_historical_plan = {
 		CHI_fight_focus
 		CHI_unite_focus
 		CHI_lushan_focus
-		reinforce_new_life_movement
+		CHI_reinforce_new_life_movement
 		CHI_coast_infra_focus
 		CHI_defend_river_focus
 		CHI_sov_pact_focus

@@ -15,10 +15,15 @@ set_technology = {
 	gw_artillery = 1
 }
 save_global_event_target_as = WTT_current_china_leader
+set_variable = { var = duration_of_infra value = 120 } #teir 1
+set_variable = { var = duration_of_infra_reenable value = 70 }
+set_variable = { var = cost_of_infra_cf_minus_1 value = 11 } #teir 1
+set_variable = { var = cost_of_infra_cf value = 12 }
 add_ideas = {
 	free_trade
 	german_advisors
 	#CHI_communist_uprisings
+	prince_de_defect
 	CHI_kmt
 	appeasement_policy
 	chiang
@@ -32,6 +37,7 @@ add_ideas = {
 	CHI_nanking_decade_idea
 	CHI_hyper_inflation_1
 	unstable_economy
+	
 	#internationalism
 	#fascist_influence
 	#communist_influence
@@ -61,7 +67,7 @@ set_convoys = 40
 	complete_national_focus = CHI_nationalize_industry_focus
 	complete_national_focus = CHI_nationalize_industry_ii_focus
 	unlock_national_focus  = CHI_attack_com
-	complete_national_focus	= reinforce_new_life_movement
+	complete_national_focus	= CHI_reinforce_new_life_movement
 	complete_national_focus = big_rear_plan
 	complete_national_focus = CHI_lushan_focus
 	complete_national_focus = CHI_inst_reform_focus
@@ -71,7 +77,7 @@ set_convoys = 40
 	complete_national_focus = CHI_mission_to_the_soviet_union
 	complete_national_focus = CHI_allies_help_focus
 	complete_national_focus = CHI_reorganize_nra
-	complete_national_focus = monetary_reform
+	complete_national_focus = CHI_monetary_reform
 	complete_national_focus = CHI_streamlined_industry
 	add_ideas = {
 		#laws

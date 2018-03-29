@@ -22,6 +22,7 @@ JAP_historical_plan = {
 		JAP_purge_the_kodoha_faction #7					
 		pressure_pm_focus #7
 		konoe_cabinet #10
+		JAP_guide_the_zaibatsus
 		aggressive_china_politics #10		
 		JAP_intervene_in_china #10
 		JAP_new_naval_estimates	#10

@@ -458,6 +458,10 @@ focus_tree = {
 			custom_effect_tooltip = if_they_accept_tt
 			effect_tooltip = {
 				761 = { set_demilitarized_zone = yes }
+				set_truce = {
+					target = PRC days = 300
+				}
+				custom_effect_tooltip = enter_tt
 				add_political_power = 50
 				add_stability = 0.05
 			}
@@ -475,7 +479,7 @@ focus_tree = {
 			hidden_trigger = {
 				ai_cont_foc_prc = yes
 			}
-			has_full_control_of_state = 622
+			#has_full_control_of_state = 622
 		}
 		bypass = {
 			has_opinion_modifier = CHI_prc_reconciliation
@@ -498,14 +502,13 @@ focus_tree = {
 			factor = 100
 		}
 		completion_reward = {
+			unlock_decision_tooltip = recover_from_the_long_march
 			for_tracking_ten_comp_foc = yes
-			add_stability = 0.10
+			add_stability = 0.05
 			swap_ideas = {
 				add_idea = Long_March_2
 				remove_idea = Long_March_1
 			}
-			custom_effect_tooltip = enable_recovery_effort_focus_tt
-			#custom_effect_tooltip = continuous_recover_from_the_long_march_tt
 		}
 		available = {
 			hidden_trigger = {
@@ -2219,7 +2222,7 @@ focus_tree = {
 				}
 				country_event = {
 					id = borderwar.1
-				} 
+				}
 				597 = {	set_border_war = yes }
 				766 = {	set_border_war = yes }
 				615 = {	set_border_war = yes }
@@ -2485,7 +2488,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = PRC_PLA
 		icon = GFX_goal_generic_army_doctrines

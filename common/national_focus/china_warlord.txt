@@ -13,7 +13,7 @@ focus_tree = {
 	
 	default = no
 
-	continuous_focus_position = { x = 50 y = 1350 }
+	continuous_focus_position = { x = 50 y = 1480 }
 
 #	focus = {
 #		id = CHI_
@@ -703,7 +703,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			load_focus_tree = china_nationalist_focus
+			load_focus_tree = warlord_generic_nationalist
 			set_cosmetic_tag = CHI_warlord_leader
 			every_state = {
 				limit = {
@@ -1709,10 +1709,10 @@ focus_tree = {
 					}
 					NOT = { neutrality > 0.5 }
 				}
-				load_focus_tree = china_communist_focus
+				load_focus_tree = warlord_generic_communist
 			}
 			else = {
-				load_focus_tree = china_nationalist_focus
+				load_focus_tree = warlord_generic_nationalist
 			}
 		}
 	}

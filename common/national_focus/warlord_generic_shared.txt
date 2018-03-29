@@ -1,0 +1,2332 @@
+shared_focus = {
+	id = WRL_industry_focus
+	icon = GFX_goal_generic_construct_civilian
+	cost = 7.00
+	x = 2
+	y = 0
+	relative_position_id = WRL_monetary_reform
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		add_tech_bonus = {
+			name = industrial_bonus
+			bonus = 0.5
+			uses = 2
+			category = industry
+		}
+		every_owned_state = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+		custom_effect_tooltip = separate_line_tt
+		CHI_hyper_inflation_level_up = yes
+	}
+
+}
+shared_focus = {
+	id = WRL_reorganize_the_military
+	icon = GFX_focus_generic_little_entente
+	cost = 5.00
+	x = 19
+	y = 1
+	ai_will_do = {
+		factor = 50
+	}
+	completion_reward = {
+		army_experience = 15
+		add_political_power = 50
+		unlock_decision_category_tooltip = CHI_army_reform
+	}
+
+}
+shared_focus = {
+	id = WRL_monetary_reform
+	icon = GFX_focus_generic_self_management
+	cost = 5.00
+	x = 6
+	y = -1
+	relative_position_id = WRL_reorganize_the_military
+	ai_will_do = {
+		factor = 50
+		modifier = {
+			factor = 0
+			has_war_with = JAP
+		}
+	}
+	available = {
+		NOT = {
+			has_war_with = JAP
+		}
+	}
+	completion_reward = {
+		unlock_decision_tooltip = monetary_reform_decision
+	}
+
+}
+shared_focus = {
+	id = WRL_public_school_program_focus
+	icon = GFX_focus_generic_military_academy
+	cost = 10.00
+	prerequisite = {
+		focus = WRL_monetary_reform
+	}
+	x = 0
+	y = 1
+	relative_position_id = WRL_monetary_reform
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		swap_ideas = {
+			remove_idea = iliterate_population
+			add_idea = iliterate_population_1
+		}
+	}
+	available = {
+
+	}
+	bypass = {
+
+	}
+
+}
+shared_focus = {
+	id = WRL_reform_military_academy
+	icon = GFX_focus_generic_military_academy
+	cost = 10.00
+	prerequisite = {
+		focus = WRL_reorganize_the_military
+	}
+	prerequisite = {
+		focus = WRL_public_school_program_focus
+	}
+	x = -3
+	y = 1
+	relative_position_id = WRL_reorganize_the_military
+	completion_reward = {
+		army_experience = 25
+		add_tech_bonus = {
+			name = land_doc_bonus
+			bonus = 0.5
+			uses = 1
+			category = land_doctrine
+		}
+		every_army_leader = {
+			add_planning = 1
+		}
+		add_ideas = CHI_whampoa_military_academy
+		hidden_effect = {
+			news_event = {
+				days = 3
+				id = news.5008
+			}
+		}
+	}
+	available = {
+		is_puppet = no
+	}
+
+}
+shared_focus = {
+	id = WRL_artillery_effort_focus
+	icon = GFX_goal_generic_army_artillery2
+	cost = 10.00
+	prerequisite = {
+		focus = WRL_reform_military_academy
+	}
+	x = 1
+	y = 1
+	relative_position_id = WRL_reform_military_academy
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		add_tech_bonus = {
+			name = infantry_artillery_bonus
+			bonus = 0.5
+			uses = 2
+			category = artillery
+		}
+	}
+	available = {
+
+	}
+	bypass = {
+
+	}
+
+}
+shared_focus = {
+	id = WRL_study_foreign_ship
+	icon = GFX_focus_generic_navy_battleship2
+	cost = 10.00
+	prerequisite = {
+		focus = WRL_public_school_program_focus
+	}
+	prerequisite = {
+		focus = WRL_reorganize_the_military
+	}
+	x = 3
+	y = 1
+	relative_position_id = WRL_reorganize_the_military
+	completion_reward = {
+		if = {
+			limit = {
+				has_idea = no_proper_equipment_design
+			}
+			swap_ideas = {
+				remove_idea = no_proper_equipment_design
+				add_idea = no_proper_equipment_design_no_naval
+			}
+		}
+		if = {
+			limit = {
+				has_idea = no_proper_equipment_design_no_armor
+			}
+			swap_ideas = {
+				remove_idea = no_proper_equipment_design_no_armor
+				add_idea = no_proper_equipment_design_air
+			}
+		}
+		if = {
+			limit = {
+				has_idea = no_proper_equipment_design_no_air
+			}
+			swap_ideas = {
+				remove_idea = no_proper_equipment_design_no_air
+				add_idea = no_proper_equipment_design_armor
+			}
+		}
+		if = {
+			limit = {
+				has_idea = no_proper_equipment_design_naval
+			}
+			remove_ideas = no_proper_equipment_design_naval
+		}
+	}
+	bypass = {
+		custom_trigger_tooltip = {
+			tooltip = already_learned_naval_design
+			NOT = {
+				has_idea = no_proper_equipment_design
+				has_idea = no_proper_equipment_design_no_armor
+				has_idea = no_proper_equipment_design_no_air
+				has_idea = no_proper_equipment_design_naval
+			}
+		}
+	}
+
+}
+shared_focus = {
+	id = WRL_infrastructure_effort_i
+	icon = GFX_goal_generic_construct_infrastructure
+	cost = 8.00
+	prerequisite = {
+		focus = WRL_industry_focus
+	}
+	x = 6
+	y = 1
+	relative_position_id = WRL_industry_focus
+	select_effect = {
+		add_ideas = under_construction
+	}
+	completion_reward = {
+		set_country_flag = infra_effort_flag
+		set_country_flag = infra_tier_1
+		unlock_decision_category_tooltip = national_infra_decision
+		set_variable = {
+			var = duration_of_infra
+			value = 120
+		}
+		#teir 1
+		set_variable = {
+			var = duration_of_infra_reenable
+			value = 70
+		}
+	}
+	bypass = {
+
+	}
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = industry_balanced_enough
+			has_completed_focus = WRL_nationalize_industry_focus
+		}
+	}
+
+}
+shared_focus = {
+	id = WRL_national_resource_exploration
+	icon = GFX_goal_generic_construction2
+	cost = 10.00
+	prerequisite = {
+		focus = WRL_infrastructure_effort_i
+	}
+	x = 5
+	y = 1
+	relative_position_id = WRL_infrastructure_effort_i
+	completion_reward = {
+		add_ideas = national_resource_council
+	}
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = industry_balanced_enough
+			has_completed_focus = WRL_nationalize_industry_ii_focus
+		}
+		is_puppet = no
+	}
+
+}
+shared_focus = {
+	id = WRL_rifle_production
+	icon = GFX_focus_secret_rearmament
+	cost = 10.00
+	prerequisite = {
+		focus = WRL_reform_military_academy
+	}
+	x = -1
+	y = 1
+	relative_position_id = WRL_reform_military_academy
+	completion_reward = {
+		add_tech_bonus = {
+			name = infantry_equipment
+			bonus = 0.5
+			uses = 2
+			category = infantry_weapons
+		}
+		hidden_effect = {
+			news_event = {
+				days = 3
+				id = news.5004
+			}
+		}
+	}
+	available = {
+		is_puppet = no
+	}
+
+}
+shared_focus = {
+	id = WRL_motorize_effort_focus
+	icon = GFX_goal_generic_army_motorized
+	cost = 10.00
+	prerequisite = {
+		focus = WRL_artillery_effort_focus
+	}
+	prerequisite = {
+		focus = WRL_rifle_production
+	}
+	x = 1
+	y = 1
+	relative_position_id = WRL_rifle_production
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		add_tech_bonus = {
+			name = motorized_bonus
+			bonus = 0.5
+			uses = 2
+			technology = motorised_infantry
+		}
+	}
+	available = {
+
+	}
+	bypass = {
+
+	}
+
+}
+shared_focus = {
+	id = WRL_learn_foreign_tank_design_focus
+	icon = GFX_focus_CZE_military_research_institute
+	cost = 10.00
+	prerequisite = {
+		focus = WRL_motorize_effort_focus
+	}
+	x = -1
+	y = 1
+	relative_position_id = WRL_army_reorganisation_focus
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		if = {
+			limit = {
+				has_idea = no_proper_equipment_design
+			}
+			swap_ideas = {
+				remove_idea = no_proper_equipment_design
+				add_idea = no_proper_equipment_design_no_armor
+			}
+		}
+		if = {
+			limit = {
+				has_idea = no_proper_equipment_design_no_naval
+			}
+			swap_ideas = {
+				remove_idea = no_proper_equipment_design_no_naval
+				add_idea = no_proper_equipment_design_air
+			}
+		}
+		if = {
+			limit = {
+				has_idea = no_proper_equipment_design_no_air
+			}
+			swap_ideas = {
+				remove_idea = no_proper_equipment_design_no_air
+				add_idea = no_proper_equipment_design_naval
+			}
+		}
+		if = {
+			limit = {
+				has_idea = no_proper_equipment_design_armor
+			}
+			remove_ideas = no_proper_equipment_design_armor
+		}
+	}
+	bypass = {
+		custom_trigger_tooltip = {
+			tooltip = already_learned_armor_design
+			NOT = {
+				has_idea = no_proper_equipment_design
+				has_idea = no_proper_equipment_design_no_naval
+				has_idea = no_proper_equipment_design_no_air
+				has_idea = no_proper_equipment_design_armor
+			}
+		}
+	}
+
+}
+shared_focus = {
+	id = WRL_china_first_tank_focus
+	icon = GFX_focus_generic_tank_production
+	cost = 10.00
+	prerequisite = {
+		focus = WRL_learn_foreign_tank_design_focus
+	}
+	x = 0
+	y = 1
+	relative_position_id = WRL_learn_foreign_tank_design_focus
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		add_tech_bonus = {
+			name = armor_bonus
+			bonus = 0.5
+			uses = 2
+			category = armor
+		}
+	}
+	available = {
+
+	}
+	bypass = {
+
+	}
+
+}
+shared_focus = {
+	id = WRL_army_reorganisation_focus
+	icon = GFX_focus_chi_army_reform
+	cost = 10.00
+	prerequisite = {
+		focus = WRL_motorize_effort_focus
+	}
+	x = 1
+	y = 1
+	relative_position_id = WRL_motorize_effort_focus
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		add_ideas = CHI_reorganized_army_focus
+	}
+
+}
+shared_focus = {
+	id = WRL_technical_school_focus
+	icon = GFX_focus_CZE_military_aeronautical_institute
+	cost = 10.00
+	prerequisite = {
+		focus = WRL_public_school_program_focus
+	}
+	prerequisite = {
+		focus = WRL_reorganize_the_military
+	}
+	x = 0
+	y = 1
+	relative_position_id = WRL_reorganize_the_military
+	completion_reward = {
+		if = {
+			limit = {
+				has_idea = no_proper_equipment_design
+			}
+			swap_ideas = {
+				remove_idea = no_proper_equipment_design
+				add_idea = no_proper_equipment_design_no_air
+			}
+			set_country_flag = technical_school_halt
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = technical_school_halt
+				}
+				has_idea = no_proper_equipment_design_no_armor
+			}
+			swap_ideas = {
+				remove_idea = no_proper_equipment_design_no_armor
+				add_idea = no_proper_equipment_design_naval
+			}
+			set_country_flag = technical_school_halt
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = technical_school_halt
+				}
+				has_idea = no_proper_equipment_design_no_naval
+			}
+			swap_ideas = {
+				remove_idea = no_proper_equipment_design_no_naval
+				add_idea = no_proper_equipment_design_armor
+			}
+			set_country_flag = technical_school_halt
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = technical_school_halt
+				}
+				has_idea = no_proper_equipment_design_air
+			}
+			remove_ideas = no_proper_equipment_design_air
+		}
+	}
+	bypass = {
+		custom_trigger_tooltip = {
+			tooltip = already_learned_air_design
+			NOT = {
+				has_idea = no_proper_equipment_design
+				has_idea = no_proper_equipment_design_no_armor
+				has_idea = no_proper_equipment_design_no_naval
+				has_idea = no_proper_equipment_design_air
+			}
+		}
+	}
+
+}
+shared_focus = {
+	id = WRL_internal_air_focus
+	icon = GFX_goal_generic_air_production
+	cost = 10.00
+	prerequisite = {
+		focus = WRL_technical_school_focus
+	}
+	x = 0
+	y = 1
+	relative_position_id = WRL_technical_school_focus
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		air_experience = 25
+		if = {
+			limit = {
+				capital_scope = {
+					NOT = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+				}
+			}
+			random_owned_state = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+				}
+				CHI = {
+					set_country_flag = aviation_effort_AB
+				}
+			}
+		}
+		if = {
+			limit = {
+				capital_scope = {
+					free_building_slots = {
+						building = air_base
+						size > 1
+					}
+				}
+			}
+			capital_scope = {
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+				CHI = {
+					set_country_flag = aviation_effort_AB
+				}
+			}
+		}
+		add_tech_bonus = {
+			name = air_doc_bonus
+			bonus = 0.5
+			uses = 1
+			category = air_doctrine
+		}
+	}
+
+}
+shared_focus = {
+	id = WRL_land_focus
+	icon = GFX_goal_generic_air_fighter
+	cost = 10.00
+	prerequisite = {
+		focus = WRL_internal_air_focus
+	}
+	mutually_exclusive = {
+		focus = WRL_coast_focus
+	}
+	x = -1
+	y = 1
+	relative_position_id = WRL_internal_air_focus
+	completion_reward = {
+		add_ideas = CHI_land_focus_idea
+	}
+
+}
+shared_focus = {
+	id = WRL_coast_focus
+	icon = GFX_goal_generic_air_naval_bomber
+	cost = 10.00
+	prerequisite = {
+		focus = WRL_internal_air_focus
+	}
+	mutually_exclusive = {
+		focus = WRL_land_focus
+	}
+	x = 1
+	y = 1
+	relative_position_id = WRL_internal_air_focus
+	completion_reward = {
+		add_ideas = CHI_coast_focus_idea
+	}
+
+}
+shared_focus = {
+	id = WRL_air_orga_focus
+	icon = GFX_focus_YUG_ikarus
+	cost = 10.00
+	prerequisite = {
+		focus = WRL_land_focus
+		focus = WRL_coast_focus
+	}
+	x = -1
+	y = 1
+	relative_position_id = WRL_coast_focus
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		add_ideas = CHI_air_reorganisation
+	}
+
+}
+shared_focus = {
+	id = WRL_internal_navy_focus
+	icon = GFX_goal_generic_navy_battleship
+	cost = 10.00
+	prerequisite = {
+		focus = WRL_study_foreign_ship
+	}
+	x = -1
+	y = 1
+	relative_position_id = WRL_study_foreign_ship
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		navy_experience = 25
+		if = {
+			limit = {
+				capital_scope = {
+					NOT = {
+						is_coastal = yes
+						free_building_slots = {
+							building = naval_base
+							size > 1
+						}
+					}
+				}
+			}
+			random_owned_state = {
+				if = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = naval_base
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = naval_base
+						level = 2
+						instant_build = yes
+					}
+				}
+				CHI = {
+					set_country_flag = navy_effort_AB
+				}
+			}
+		}
+		if = {
+			limit = {
+				capital_scope = {
+					is_coastal = yes
+					free_building_slots = {
+						building = naval_base
+						size > 1
+					}
+				}
+			}
+			capital_scope = {
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+				CHI = {
+					set_country_flag = navy_effort_AB
+				}
+			}
+		}
+		add_tech_bonus = {
+			name = naval_doc_bonus
+			bonus = 0.5
+			uses = 1
+			category = naval_doctrine
+		}
+	}
+
+}
+shared_focus = {
+	id = WRL_expand_jiangnan_shipyard
+	icon = GFX_goal_generic_construct_naval_dockyard
+	cost = 10.00
+	prerequisite = {
+		focus = WRL_study_foreign_ship
+	}
+	x = 1
+	y = 1
+	relative_position_id = WRL_study_foreign_ship
+	completion_reward = {
+		613 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = dockyard
+				level = 2
+				instant_build = yes
+			}
+		}
+		596 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = dockyard
+				level = 1
+				instant_build = yes
+			}
+		}
+		hidden_effect = {
+			news_event = {
+				days = 3
+				id = news.5018
+			}
+		}
+	}
+	available = {
+		613 = {
+			is_controlled_by = CHI
+		}
+		596 = {
+			is_controlled_by = CHI
+		}
+	}
+
+}
+shared_focus = {
+	id = WRL_pacific_fleet
+	icon = GFX_goal_generic_navy_carrier
+	cost = 10.00
+	prerequisite = {
+		focus = WRL_internal_navy_focus
+	}
+	prerequisite = {
+		focus = WRL_expand_jiangnan_shipyard
+	}
+	x = -1
+	y = 1
+	relative_position_id = WRL_expand_jiangnan_shipyard
+	completion_reward = {
+		navy_experience = 10
+		add_tech_bonus = {
+			name = cv_bonus
+			bonus = 0.25
+			uses = 1
+			category = cv_tech
+		}
+		add_tech_bonus = {
+			name = bb_bonus
+			bonus = 0.25
+			uses = 1
+			category = bb_tech
+		}
+	}
+
+}
+shared_focus = {
+	id = WRL_navy_reorganization
+	icon = GFX_goal_generic_navy_doctrines_tactics
+	cost = 10.00
+	prerequisite = {
+		focus = WRL_pacific_fleet
+	}
+	x = -1
+	y = 1
+	relative_position_id = WRL_pacific_fleet
+	ai_will_do = {
+		factor = 1
+	}
+	completion_reward = {
+		add_ideas = CHI_navy_reorganized
+	}
+	available = {
+		NOT = {
+			country_exists = JAP
+		}
+	}
+
+}
+shared_focus = {
+	id = WRL_extra_research_slot
+	icon = GFX_focus_research2
+	cost = 10.00
+	prerequisite = {
+		focus = WRL_army_reorganisation_focus
+	}
+	prerequisite = {
+		focus = WRL_air_orga_focus
+	}
+	prerequisite = {
+		focus = WRL_navy_reorganization
+	}
+	x = 0
+	y = 1
+	relative_position_id = WRL_air_orga_focus
+	available = {
+
+	}
+	available_if_capitulated = yes
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		add_research_slot = 1
+	}
+
+}
+shared_focus = {
+	id = WRL_shanghai_navy
+	icon = GFX_goal_generic_construct_naval_dockyard
+	cost = 10.00
+	prerequisite = {
+		focus = WRL_pacific_fleet
+	}
+	x = 1
+	y = 1
+	relative_position_id = WRL_navy_reorganization
+	ai_will_do = {
+		factor = 1
+	}
+	completion_reward = {
+		613 = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = dockyard
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+	available = {
+		613 = {
+			is_owned_by = CHI
+		}
+	}
+
+}
+shared_focus = {
+	id = WRL_taiwan_navy
+	icon = GFX_goal_generic_construct_naval_dockyard
+	cost = 10.00
+	prerequisite = {
+		focus = WRL_shanghai_navy
+	}
+	x = 0
+	y = 1
+	relative_position_id = WRL_shanghai_navy
+	completion_reward = {
+		navy_experience = 10
+		add_tech_bonus = {
+			name = navy_bonus
+			bonus = 0.5
+			uses = 1
+			category = naval_equipment
+		}
+		524 = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = dockyard
+				level = 3
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = naval_base
+				level = 3
+				instant_build = yes
+			}
+		}
+	}
+	available = {
+		524 = {
+			is_owned_by = CHI
+		}
+	}
+	bypass = {
+		524 = {
+			free_building_slots = {
+				building = dockyard
+				size < 5
+				include_locked = yes
+			}
+		}
+	}
+
+}
+shared_focus = {
+	id = WRL_compulsory_education_chi
+	icon = GFX_goal_generic_propaganda
+	cost = 10.00
+	prerequisite = {
+		focus = WRL_public_school_program_focus
+	}
+	x = 0
+	y = 1
+	relative_position_id = WRL_public_school_program_focus
+	completion_reward = {
+		add_political_power = -100
+		swap_ideas = {
+			remove_idea = iliterate_population_1
+			add_idea = iliterate_population_2
+		}
+	}
+
+}
+shared_focus = {
+	id = WRL_academy_rf_focus
+	icon = GFX_goal_academia_reform
+	cost = 10.00
+	prerequisite = {
+		focus = WRL_compulsory_education_chi
+	}
+	x = 0
+	y = 1
+	relative_position_id = WRL_compulsory_education_chi
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		add_research_slot = 1
+	}
+
+}
+shared_focus = {
+	id = WRL_modern_university
+	icon = GFX_focus_research
+	cost = 10.00
+	prerequisite = {
+		focus = WRL_academy_rf_focus
+	}
+	x = 0
+	y = 1
+	relative_position_id = WRL_academy_rf_focus
+	completion_reward = {
+		#remove_ideas = iliterate_population
+		#remove_ideas = iliterate_population_1
+		remove_ideas = iliterate_population_2
+	}
+	available = {
+		is_puppet = no
+	}
+
+}
+shared_focus = {
+	id = WRL_nationalize_industry_focus
+	icon = GFX_focus_focus_generic_industry_1
+	cost = 8.00
+	prerequisite = {
+		focus = WRL_industry_focus
+	}
+	x = 0
+	y = 1
+	relative_position_id = WRL_industry_focus
+	ai_will_do = {
+		factor = 50
+	}
+	completion_reward = {
+		custom_effect_tooltip = unlock_focus_right
+		add_ideas = CHI_nationalize_industry_1_focus
+		custom_effect_tooltip = blank_line
+		swap_ideas = {
+			remove_idea = unbalanced_industry
+			add_idea = unbalanced_industry_1
+		}
+		custom_effect_tooltip = separate_line_tt
+		CHI_hyper_inflation_level_up = yes
+	}
+	available = {
+		has_tech = basic_machine_tools
+		OR = {
+			has_tech = concentrated_industry
+			has_tech = dispersed_industry
+		}
+		OR = {
+			AND = {
+				num_of_factories > 25
+				has_war = no
+			}
+			AND = {
+				num_of_factories > 30
+				has_defensive_war = yes
+			}
+			AND = {
+				num_of_factories > 35
+				has_offensive_war = yes
+			}
+		}
+	}
+
+}
+shared_focus = {
+	id = WRL_nationalize_industry_ii_focus
+	icon = GFX_focus_generic_industry_2
+	cost = 9.00
+	prerequisite = {
+		focus = WRL_nationalize_industry_focus
+	}
+	x = 0
+	y = 1
+	relative_position_id = WRL_nationalize_industry_focus
+	ai_will_do = {
+		factor = 50
+	}
+	completion_reward = {
+		custom_effect_tooltip = unlock_focus_right
+		swap_ideas = {
+			remove_idea = CHI_nationalize_industry_1_focus
+			add_idea = CHI_nationalize_industry_2_focus
+		}
+		custom_effect_tooltip = blank_line
+		swap_ideas = {
+			remove_idea = unbalanced_industry_1
+			add_idea = unbalanced_industry_2
+		}
+		custom_effect_tooltip = separate_line_tt
+		CHI_hyper_inflation_level_up = yes
+	}
+	available = {
+		has_tech = improved_machine_tools
+		OR = {
+			has_tech = concentrated_industry2
+			has_tech = dispersed_industry2
+		}
+		OR = {
+			AND = {
+				num_of_factories > 45
+				has_war = no
+			}
+			AND = {
+				num_of_factories > 50
+				has_defensive_war = yes
+			}
+			AND = {
+				num_of_factories > 55
+				has_offensive_war = yes
+			}
+		}
+	}
+
+}
+shared_focus = {
+	id = WRL_nationalize_industry_iii_focus
+	icon = GFX_focus_generic_industry_3
+	cost = 10.00
+	prerequisite = {
+		focus = WRL_nationalize_industry_ii_focus
+	}
+	x = 0
+	y = 1
+	relative_position_id = WRL_nationalize_industry_ii_focus
+	ai_will_do = {
+		factor = 50
+	}
+	completion_reward = {
+		custom_effect_tooltip = unlock_focus_right
+		swap_ideas = {
+			remove_idea = CHI_nationalize_industry_2_focus
+			add_idea = CHI_nationalize_industry_3_focus
+		}
+		custom_effect_tooltip = blank_line
+		swap_ideas = {
+			remove_idea = unbalanced_industry_2
+			add_idea = unbalanced_industry_3
+		}
+		custom_effect_tooltip = separate_line_tt
+		CHI_hyper_inflation_level_up = yes
+	}
+	available = {
+		has_tech = advanced_machine_tools
+		OR = {
+			has_tech = concentrated_industry3
+			has_tech = dispersed_industry3
+		}
+		OR = {
+			AND = {
+				num_of_factories > 65
+				has_war = no
+			}
+			AND = {
+				num_of_factories > 70
+				has_defensive_war = yes
+			}
+			AND = {
+				num_of_factories > 75
+				has_offensive_war = yes
+			}
+		}
+	}
+
+}
+shared_focus = {
+	id = WRL_modern_industrialization
+	icon = GFX_focus_nationalize_companies
+	cost = 14.29
+	prerequisite = {
+		focus = WRL_nationalize_industry_iii_focus
+	}
+	x = 0
+	y = 1
+	relative_position_id = WRL_nationalize_industry_iii_focus
+	completion_reward = {
+		add_political_power = -100
+		custom_effect_tooltip = unlock_focus_right
+		remove_ideas = unbalanced_industry_3
+		custom_effect_tooltip = blank_line
+		custom_effect_tooltip = separate_line_tt
+		CHI_hyper_inflation_level_up = yes
+	}
+	available = {
+		has_war = no
+		has_tech = assembly_line_production
+		OR = {
+			has_tech = concentrated_industry4
+			has_tech = dispersed_industry4
+		}
+		has_tech = construction4
+		num_of_factories > 85
+	}
+
+}
+shared_focus = {
+	id = WRL_academy_ex_focus
+	icon = GFX_goal_academia_expand
+	cost = 10.00
+	prerequisite = {
+		focus = WRL_academy_rf_focus
+	}
+	prerequisite = {
+		focus = WRL_modern_industrialization
+	}
+	x = 1
+	y = 1
+	relative_position_id = WRL_modern_university
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		add_research_slot = 1
+	}
+
+}
+shared_focus = {
+	id = WRL_streamlined_industry
+	icon = GFX_goal_generic_construction
+	cost = 10.00
+	prerequisite = {
+		focus = WRL_industry_focus
+	}
+	x = 3
+	y = 1
+	relative_position_id = WRL_industry_focus
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		add_ideas = improved_industry
+	}
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = industry_balanced_enough
+			has_completed_focus = WRL_nationalize_industry_focus
+		}
+	}
+
+}
+shared_focus = {
+	id = WRL_rejuvenate_heavy_industry
+	icon = GFX_goal_generic_construct_mil_factory
+	cost = 25.00
+	prerequisite = {
+		focus = WRL_streamlined_industry
+	}
+	x = 0
+	y = 1
+	relative_position_id = WRL_streamlined_industry
+	select_effect = {
+		add_ideas = industrial_revolution
+	}
+	completion_reward = {
+		custom_effect_tooltip = debuff_tt
+		show_ideas_tooltip = industrial_revolution
+		custom_effect_tooltip = blank_line
+		hidden_effect = {
+			remove_ideas = industrial_revolution
+		}
+		remove_ideas = incompetent_heavy_industry
+		608 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+		615 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+		789 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+		606 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+		614 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+		716 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = industry_balanced_enough
+			has_completed_focus = WRL_nationalize_industry_ii_focus
+		}
+		has_war = no
+		608 = {
+			alu_tung_trigger = yes
+		}
+		716 = {
+			alu_tung_trigger = yes
+		}
+		614 = {
+			alu_tung_trigger = yes
+		}
+		615 = {
+			alu_tung_trigger = yes
+		}
+		789 = {
+			alu_tung_trigger = yes
+		}
+		606 = {
+			alu_tung_trigger = yes
+		}
+	}
+
+}
+shared_focus = {
+	id = WRL_revive_hanyang_steelwork_focus
+	icon = GFX_focus_generic_steel
+	cost = 10.00
+	prerequisite = {
+		focus = WRL_rejuvenate_heavy_industry
+	}
+	x = -1
+	y = 1
+	relative_position_id = WRL_rejuvenate_heavy_industry
+	ai_will_do = {
+		factor = 10
+	}
+	select_effect = {
+		add_ideas = steelmaking
+		add_ideas = under_construction
+	}
+	completion_reward = {
+		custom_effect_tooltip = debuff_tt
+		show_ideas_tooltip = steelmaking
+		show_ideas_tooltip = under_construction
+		custom_effect_tooltip = blank_line
+		hidden_effect = {
+			remove_ideas = steelmaking
+			remove_ideas = under_construction
+		}
+		756 = {
+			add_resource = {
+				type = steel
+				amount = 100
+				state = 756
+			}
+		}
+	}
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = industry_balanced_enough
+			has_completed_focus = WRL_nationalize_industry_iii_focus
+		}
+		has_tech = excavation3
+		756 = {
+			alu_tung_trigger = yes
+		}
+	}
+
+}
+shared_focus = {
+	id = WRL_anshan_steelwork_focus
+	icon = GFX_focus_generic_steel
+	cost = 12.00
+	prerequisite = {
+		focus = WRL_rejuvenate_heavy_industry
+	}
+	x = 1
+	y = 1
+	relative_position_id = WRL_rejuvenate_heavy_industry
+	ai_will_do = {
+		factor = 10
+	}
+	select_effect = {
+		add_ideas = steelmaking
+		add_ideas = under_construction
+	}
+	completion_reward = {
+		custom_effect_tooltip = debuff_tt
+		show_ideas_tooltip = steelmaking
+		show_ideas_tooltip = under_construction
+		custom_effect_tooltip = blank_line
+		hidden_effect = {
+			remove_ideas = steelmaking
+			remove_ideas = under_construction
+		}
+		716 = {
+			add_resource = {
+				type = steel
+				amount = 75
+				state = 716
+			}
+		}
+	}
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = industry_balanced_enough
+			has_completed_focus = WRL_nationalize_industry_iii_focus
+		}
+		has_tech = excavation3
+		716 = {
+			alu_tung_trigger = yes
+		}
+	}
+
+}
+shared_focus = {
+	id = WRL_infrastructure_effort_ii
+	icon = GFX_goal_generic_construct_infrastructure
+	cost = 10.00
+	prerequisite = {
+		focus = WRL_infrastructure_effort_i
+	}
+	x = 0
+	y = 1
+	relative_position_id = WRL_infrastructure_effort_i
+	completion_reward = {
+		custom_effect_tooltip = shorten_duration_tt
+		set_country_flag = infra_tier_2
+		set_variable = {
+			var = duration_of_infra
+			value = 70
+		}
+		#teir 1
+		set_variable = {
+			var = duration_of_infra_reenable
+			value = 50
+		}
+		set_variable = {
+			var = cost_of_infra_cf_minus_1
+			value = 8
+		}
+		#teir 1
+		set_variable = {
+			var = cost_of_infra_cf
+			value = 9
+		}
+	}
+	bypass = {
+
+	}
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = industry_balanced_enough
+			has_completed_focus = WRL_nationalize_industry_ii_focus
+		}
+	}
+
+}
+shared_focus = {
+	id = WRL_infrastructure_effort_iii
+	icon = GFX_goal_generic_construct_infrastructure
+	cost = 15.00
+	prerequisite = {
+		focus = WRL_infrastructure_effort_ii
+	}
+	x = 0
+	y = 2
+	relative_position_id = WRL_infrastructure_effort_i
+	select_effect = {
+
+	}
+	completion_reward = {
+		custom_effect_tooltip = shorten_duration_tt
+		set_country_flag = infra_tier_3
+		set_variable = {
+			var = duration_of_infra
+			value = 40
+		}
+		#teir 1
+		set_variable = {
+			var = duration_of_infra_reenable
+			value = 30
+		}
+		set_variable = {
+			var = cost_of_infra_cf_minus_1
+			value = 5
+		}
+		#teir 1
+		set_variable = {
+			var = cost_of_infra_cf
+			value = 6
+		}
+	}
+	bypass = {
+
+	}
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = industry_balanced_enough
+			has_completed_focus = WRL_nationalize_industry_iii_focus
+		}
+	}
+
+}
+shared_focus = {
+	id = WRL_national_steelwork_focus
+	icon = GFX_goal_generic_construct_civ_factory
+	cost = 25.00
+	prerequisite = {
+		focus = WRL_anshan_steelwork_focus
+		focus = WRL_revive_hanyang_steelwork_focus
+	}
+	prerequisite = {
+		focus = WRL_infrastructure_effort_iii
+	}
+	x = -1
+	y = 1
+	relative_position_id = WRL_infrastructure_effort_iii
+	select_effect = {
+		add_ideas = steelmaking
+		add_ideas = under_construction
+	}
+	completion_reward = {
+		custom_effect_tooltip = debuff_tt
+		show_ideas_tooltip = steelmaking
+		show_ideas_tooltip = under_construction
+		custom_effect_tooltip = blank_line
+		hidden_effect = {
+			remove_ideas = steelmaking
+			remove_ideas = under_construction
+		}
+		608 = {
+			add_resource = {
+				type = steel
+				amount = 25
+				state = 608
+			}
+		}
+		615 = {
+			add_resource = {
+				type = steel
+				amount = 60
+				state = 615
+			}
+		}
+		789 = {
+			add_resource = {
+				type = steel
+				amount = 80
+				state = 789
+			}
+		}
+		606 = {
+			add_resource = {
+				type = steel
+				amount = 70
+				state = 606
+			}
+		}
+		614 = {
+			add_resource = {
+				type = steel
+				amount = 120
+				state = 614
+			}
+		}
+		716 = {
+			add_resource = {
+				type = steel
+				amount = 40
+				state = 716
+			}
+		}
+	}
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = industry_balanced_enough
+			has_completed_focus = WRL_modern_industrialization
+		}
+		has_war = no
+		has_tech = construction4
+		has_tech = excavation4
+		608 = {
+			infra_bypass_3_tr = yes
+		}
+		716 = {
+			infra_bypass_3_tr = yes
+		}
+		614 = {
+			infra_bypass_3_tr = yes
+		}
+		615 = {
+			infra_bypass_3_tr = yes
+		}
+		789 = {
+			infra_bypass_3_tr = yes
+		}
+		606 = {
+			infra_bypass_3_tr = yes
+		}
+	}
+
+}
+shared_focus = {
+	id = WRL_aluminium_effort_i_focus
+	icon = GFX_goal_aluminium
+	cost = 10.00
+	prerequisite = {
+		focus = WRL_national_resource_exploration
+	}
+	x = -3
+	y = 1
+	relative_position_id = WRL_national_resource_exploration
+	select_effect = {
+		add_ideas = excavating
+	}
+	completion_reward = {
+		custom_effect_tooltip = debuff_tt
+		show_ideas_tooltip = excavating
+		custom_effect_tooltip = blank_line
+		hidden_effect = {
+			remove_ideas = excavating
+		}
+		607 = {
+			add_resource = {
+				type = aluminium
+				amount = 20
+				state = 607
+			}
+		}
+		615 = {
+			add_resource = {
+				type = aluminium
+				amount = 25
+				state = 615
+			}
+		}
+		789 = {
+			add_resource = {
+				type = aluminium
+				amount = 20
+				state = 789
+			}
+		}
+		603 = {
+			add_resource = {
+				type = aluminium
+				amount = 15
+				state = 603
+			}
+		}
+		783 = {
+			add_resource = {
+				type = aluminium
+				amount = 15
+				state = 783
+			}
+		}
+	}
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = industry_balanced_enough
+			has_completed_focus = WRL_nationalize_industry_iii_focus
+		}
+		has_tech = excavation3
+		607 = {
+			hainan_trigger = yes
+		}
+		615 = {
+			hainan_trigger = yes
+		}
+		789 = {
+			hainan_trigger = yes
+		}
+		603 = {
+			hainan_trigger = yes
+		}
+		783 = {
+			hainan_trigger = yes
+		}
+	}
+
+}
+shared_focus = {
+	id = WRL_aluminium_effort_ii_focus
+	icon = GFX_goal_aluminium
+	cost = 15.00
+	prerequisite = {
+		focus = WRL_aluminium_effort_i_focus
+	}
+	x = 0
+	y = 1
+	relative_position_id = WRL_aluminium_effort_i_focus
+	select_effect = {
+		add_ideas = excavating
+	}
+	completion_reward = {
+		custom_effect_tooltip = debuff_tt
+		show_ideas_tooltip = excavating
+		custom_effect_tooltip = blank_line
+		hidden_effect = {
+			remove_ideas = excavating
+		}
+		607 = {
+			add_resource = {
+				type = aluminium
+				amount = 35
+				state = 607
+			}
+		}
+		615 = {
+			add_resource = {
+				type = aluminium
+				amount = 45
+				state = 615
+			}
+		}
+		789 = {
+			add_resource = {
+				type = aluminium
+				amount = 30
+				state = 789
+			}
+		}
+		603 = {
+			add_resource = {
+				type = aluminium
+				amount = 25
+				state = 603
+			}
+		}
+		783 = {
+			add_resource = {
+				type = aluminium
+				amount = 35
+				state = 783
+			}
+		}
+	}
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = industry_balanced_enough
+			has_completed_focus = WRL_modern_industrialization
+		}
+		has_tech = excavation4
+		607 = {
+			7_infra_trigger = yes
+		}
+		615 = {
+			7_infra_trigger = yes
+		}
+		789 = {
+			7_infra_trigger = yes
+		}
+		603 = {
+			7_infra_trigger = yes
+		}
+		783 = {
+			7_infra_trigger = yes
+		}
+	}
+
+}
+shared_focus = {
+	id = WRL_aluminium_effort_iii_focus
+	icon = GFX_goal_aluminium
+	cost = 20.00
+	prerequisite = {
+		focus = WRL_aluminium_effort_ii_focus
+	}
+	x = 0
+	y = 1
+	relative_position_id = WRL_aluminium_effort_ii_focus
+	select_effect = {
+		add_ideas = excavating
+	}
+	completion_reward = {
+		custom_effect_tooltip = debuff_tt
+		show_ideas_tooltip = excavating
+		custom_effect_tooltip = blank_line
+		hidden_effect = {
+			remove_ideas = excavating
+		}
+		607 = {
+			add_resource = {
+				type = aluminium
+				amount = 65
+				state = 607
+			}
+		}
+		615 = {
+			add_resource = {
+				type = aluminium
+				amount = 85
+				state = 615
+			}
+		}
+		789 = {
+			add_resource = {
+				type = aluminium
+				amount = 75
+				state = 789
+			}
+		}
+		603 = {
+			add_resource = {
+				type = aluminium
+				amount = 45
+				state = 603
+			}
+		}
+		783 = {
+			add_resource = {
+				type = aluminium
+				amount = 55
+				state = 603
+			}
+		}
+	}
+	available = {
+		has_tech = excavation5
+		607 = {
+			infra_bypass_3_tr = yes
+		}
+		615 = {
+			infra_bypass_3_tr = yes
+		}
+		789 = {
+			infra_bypass_3_tr = yes
+		}
+		603 = {
+			infra_bypass_3_tr = yes
+		}
+		783 = {
+			infra_bypass_3_tr = yes
+		}
+	}
+
+}
+shared_focus = {
+	id = WRL_tungsten_effort_i_focus
+	icon = GFX_goal_tungsten
+	cost = 10.00
+	prerequisite = {
+		focus = WRL_national_resource_exploration
+	}
+	x = -1
+	y = 1
+	relative_position_id = WRL_national_resource_exploration
+	select_effect = {
+		add_ideas = excavating
+	}
+	completion_reward = {
+		custom_effect_tooltip = debuff_tt
+		show_ideas_tooltip = excavating
+		custom_effect_tooltip = blank_line
+		hidden_effect = {
+			remove_ideas = excavating
+		}
+		600 = {
+			add_resource = {
+				type = tungsten
+				amount = 20
+				state = 600
+			}
+		}
+		593 = {
+			add_resource = {
+				type = tungsten
+				amount = 15
+				state = 593
+			}
+		}
+		786 = {
+			add_resource = {
+				type = tungsten
+				amount = 20
+				state = 786
+			}
+		}
+		602 = {
+			add_resource = {
+				type = tungsten
+				amount = 30
+				state = 602
+			}
+		}
+		784 = {
+			add_resource = {
+				type = tungsten
+				amount = 20
+				state = 784
+			}
+		}
+	}
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = industry_balanced_enough
+			has_completed_focus = WRL_nationalize_industry_iii_focus
+		}
+		has_tech = excavation3
+		600 = {
+			hainan_trigger = yes
+		}
+		593 = {
+			hainan_trigger = yes
+		}
+		786 = {
+			hainan_trigger = yes
+		}
+		602 = {
+			hainan_trigger = yes
+		}
+		784 = {
+			hainan_trigger = yes
+		}
+	}
+
+}
+shared_focus = {
+	id = WRL_tungsten_effort_ii_focus
+	icon = GFX_goal_tungsten
+	cost = 15.00
+	prerequisite = {
+		focus = WRL_tungsten_effort_i_focus
+	}
+	x = 0
+	y = 1
+	relative_position_id = WRL_tungsten_effort_i_focus
+	select_effect = {
+		add_ideas = excavating
+	}
+	completion_reward = {
+		custom_effect_tooltip = debuff_tt
+		show_ideas_tooltip = excavating
+		custom_effect_tooltip = blank_line
+		hidden_effect = {
+			remove_ideas = excavating
+		}
+		600 = {
+			add_resource = {
+				type = tungsten
+				amount = 35
+				state = 600
+			}
+		}
+		593 = {
+			add_resource = {
+				type = tungsten
+				amount = 25
+				state = 593
+			}
+		}
+		786 = {
+			add_resource = {
+				type = tungsten
+				amount = 55
+				state = 786
+			}
+		}
+		602 = {
+			add_resource = {
+				type = tungsten
+				amount = 55
+				state = 602
+			}
+		}
+		784 = {
+			add_resource = {
+				type = tungsten
+				amount = 45
+				state = 784
+			}
+		}
+	}
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = industry_balanced_enough
+			has_completed_focus = WRL_modern_industrialization
+		}
+		has_tech = excavation4
+		600 = {
+			7_infra_trigger = yes
+		}
+		593 = {
+			7_infra_trigger = yes
+		}
+		786 = {
+			7_infra_trigger = yes
+		}
+		602 = {
+			7_infra_trigger = yes
+		}
+		784 = {
+			7_infra_trigger = yes
+		}
+	}
+
+}
+shared_focus = {
+	id = WRL_tungsten_effort_iii_focus
+	icon = GFX_goal_tungsten
+	cost = 20.00
+	prerequisite = {
+		focus = WRL_tungsten_effort_ii_focus
+	}
+	x = 0
+	y = 1
+	relative_position_id = WRL_tungsten_effort_ii_focus
+	select_effect = {
+		add_ideas = excavating
+	}
+	completion_reward = {
+		custom_effect_tooltip = debuff_tt
+		show_ideas_tooltip = excavating
+		custom_effect_tooltip = blank_line
+		hidden_effect = {
+			remove_ideas = excavating
+		}
+		600 = {
+			add_resource = {
+				type = tungsten
+				amount = 65
+				state = 600
+			}
+		}
+		593 = {
+			add_resource = {
+				type = tungsten
+				amount = 45
+				state = 593
+			}
+		}
+		786 = {
+			add_resource = {
+				type = tungsten
+				amount = 35
+				state = 786
+			}
+		}
+		602 = {
+			add_resource = {
+				type = tungsten
+				amount = 95
+				state = 602
+			}
+		}
+		784 = {
+			add_resource = {
+				type = tungsten
+				amount = 55
+				state = 74
+			}
+		}
+	}
+	available = {
+		has_tech = excavation5
+		600 = {
+			infra_bypass_3_tr = yes
+		}
+		593 = {
+			infra_bypass_3_tr = yes
+		}
+		786 = {
+			infra_bypass_3_tr = yes
+		}
+		602 = {
+			infra_bypass_3_tr = yes
+		}
+		784 = {
+			infra_bypass_3_tr = yes
+		}
+	}
+
+}
+shared_focus = {
+	id = WRL_refinery_technology_german
+	icon = GFX_goal_generic_oil_refinery
+	cost = 10.00
+	prerequisite = {
+		focus = WRL_national_resource_exploration
+	}
+	x = 1
+	y = 1
+	relative_position_id = WRL_national_resource_exploration
+	completion_reward = {
+		add_tech_bonus = {
+			name = synth_bonus
+			bonus = 0.5
+			uses = 1
+			category = synth_resources
+		}
+		766 = {
+			add_building_construction = {
+				type = synthetic_refinery
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = industry_balanced_enough
+			has_completed_focus = WRL_nationalize_industry_iii_focus
+		}
+	}
+
+}
+shared_focus = {
+	id = WRL_daqing_oil_field
+	icon = GFX_goal_generic_oil_refinery
+	cost = 10.00
+	prerequisite = {
+		focus = WRL_refinery_technology_german
+	}
+	x = 0
+	y = 1
+	relative_position_id = WRL_refinery_technology_german
+	select_effect = {
+		add_ideas = oil_exploring
+	}
+	completion_reward = {
+		custom_effect_tooltip = debuff_tt
+		show_ideas_tooltip = oil_exploring
+		custom_effect_tooltip = blank_line
+		hidden_effect = {
+			remove_ideas = oil_exploring
+		}
+		717 = {
+			add_resource = {
+				type = oil
+				amount = 75
+				state = 717
+			}
+		}
+		hidden_effect = {
+			news_event = {
+				days = 2
+				id = news.5020
+			}
+		}
+	}
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = industry_balanced_enough
+			has_completed_focus = WRL_modern_industrialization
+		}
+		has_tech = improved_oil_processing
+		717 = {
+			alu_tung_trigger = yes
+		}
+	}
+
+}
+shared_focus = {
+	id = WRL_hainan_plantation
+	icon = GFX_focus_generic_rubber
+	cost = 10.00
+	prerequisite = {
+		focus = WRL_national_resource_exploration
+	}
+	x = 3
+	y = 1
+	relative_position_id = WRL_national_resource_exploration
+	completion_reward = {
+		591 = {
+			add_resource = {
+				type = rubber
+				amount = 40
+				state = 591
+			}
+		}
+	}
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = industry_balanced_enough
+			has_completed_focus = WRL_nationalize_industry_iii_focus
+		}
+		591 = {
+			hainan_trigger = yes
+		}
+	}
+
+}
+shared_focus = {
+	id = WRL_forced_loans
+	icon = GFX_focus_government_bailout
+	cost = 10.00
+	prerequisite = {
+		focus = WRL_monetary_reform
+	}
+	x = -2
+	y = 1
+	relative_position_id = WRL_monetary_reform
+	ai_will_do = {
+		factor = 1
+	}
+	available = {
+		has_hyper_inflation = yes
+		has_idea_with_trait = financial_expert
+	}
+	bypass = {
+
+	}
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+	complete_tooltip = {
+
+	}
+	completion_reward = {
+		unlock_decision_tooltip = CHI_forced_loans
+		custom_effect_tooltip = government_bailout_tt
+	}
+
+}
+shared_focus = {
+	id = WRL_academy_mp_focus
+	icon = GFX_focus_wonderweapons
+	cost = 10.00
+	prerequisite = {
+		focus = WRL_academy_ex_focus
+	}
+	x = 0
+	y = 1
+	relative_position_id = WRL_academy_ex_focus
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		add_tech_bonus = {
+			bonus = 0.5
+			uses = 1
+			category = nuclear
+		}
+	}
+
+}
+shared_focus = {
+	id = WRL_powerhouse_of_the_east
+	icon = GFX_focus_generic_combined_arms
+	cost = 15.00
+	prerequisite = {
+		focus = WRL_national_steelwork_focus
+	}
+	x = 0
+	y = 1
+	relative_position_id = WRL_national_steelwork_focus
+	select_effect = {
+		add_ideas = under_construction
+	}
+	completion_reward = {
+		custom_effect_tooltip = debuff_tt
+		show_ideas_tooltip = under_construction
+		custom_effect_tooltip = blank_line
+		hidden_effect = {
+			remove_ideas = under_construction
+		}
+		600 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+		602 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+		784 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+		606 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+		614 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+		620 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+		756 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+	available = {
+		has_tech = construction5
+		has_tech = excavation5
+		600 = {
+			max_infra_trigger = yes
+		}
+		602 = {
+			max_infra_trigger = yes
+		}
+		784 = {
+			max_infra_trigger = yes
+		}
+		606 = {
+			max_infra_trigger = yes
+		}
+		768 = {
+			max_infra_trigger = yes
+		}
+		614 = {
+			max_infra_trigger = yes
+		}
+		620 = {
+			max_infra_trigger = yes
+		}
+		756 = {
+			max_infra_trigger = yes
+		}
+	}
+
+}

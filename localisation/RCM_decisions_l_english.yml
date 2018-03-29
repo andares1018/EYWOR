@@ -72,3 +72,23 @@
  lushan_declaration_desc:0 "Our country is at war. A powerful speech is needed to united this fragmented country."
  opposition_clashes_with_CHI:0 "Opposition Clashes with Central Authorities"
  opposition_clashes_with_CHI_desc:0 "The conflict between the growing oppositional power, [scp_war_opposition_leader.GetName] and the central authority leading by [WTT_current_china_leader.GetLeader] has now escalated into a full blown civil war. Is there still hope for this fragmented nation?"
+
+ recovery_effort:0 "Recovery Effort"
+ recovery_effort_desc:0 "Our society and government are suffering from shortages and low morale. Recovery effort is needed to unite the people of [Root.GetName]."
+ recover_from_the_long_march:0 "Recover From the Long March"
+ recover_from_the_long_march_desc:0 "[Root.GetName] has suffered a lot from the devastation caused by the Long March. We will have to recovery from it in order to survive the constant barrage inflicted by the nationalists and other warlords."
+ recovery_reversed_tt:0 "\n§RRecovery effort will be reversed if our stability does not meet the prerequisite.§!"
+ national_infra_decision:0 "National Infrastructure Projects"
+ national_infra_decision_desc:0 "Infrastructure is the foundation of our society, indrustry, and most importantly, our great nation. Thus, in order to prosper we must first rebuild our national infrastructure from the ground up."
+
+ northeast_infra_effort:0 "Infrastructure Effort in the Northeast"
+ north_china_infra_effort:0 "Infrastructure Effort in Norht China"
+ central_china_infra_effort:0 "Infrastructure Effort in Central China"
+ south_china_infra_effort:0 "Infrastructure Effort in South China"
+ west_china_infra_effort:0 "Infrastructure Effort in West China"
+ sinkiang_region_infra_effort:0 "Infrastructure Effort in the Sinkiang Region"
+ tibet_region_infra_effort:0 "Infrastructure Effort in the Tibetan Region"
+ mongol_region_infra_effort:0 "Infrastructure Effort in the Mongol Region"
+
+monetary_reform_decision:0 "Monetary Reform"
+monetary_reform_decision_desc:0 "The Silver Standard economy that has served us for ceturies now due to the shortage of silver it has been rendered obsolete. A monetary reform can help us put our curreny on fiat money."

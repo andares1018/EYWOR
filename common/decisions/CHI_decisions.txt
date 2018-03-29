@@ -147,7 +147,7 @@
 			}
 			fire_only_once = yes
 			visible = {
-				has_completed_focus = german_training_method
+				has_completed_focus = CHI_german_training_method
 			}
 			days_remove = 180
 			modifier = {

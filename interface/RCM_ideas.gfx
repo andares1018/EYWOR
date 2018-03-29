@@ -57,7 +57,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/idea_yoshijiro_umezu.dds"
 	}
 ###### CHINA REWORK #####
-
+	spriteType = {
+		name = "GFX_idea_prince_de_defect"
+		texturefile = "gfx/interface/ideas/prince_de_defect.dds"
+	}
 	spriteType = {
 		name = "GFX_idea_CHI_nationalize_industry_1_focus"
 		texturefile = "gfx/interface/ideas/chi_nationalize_industry_1_focus.dds"

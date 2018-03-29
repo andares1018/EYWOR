@@ -103,7 +103,7 @@ bookmarks = {
 				the_blueshirts
 			}
 			focuses = {
-				strengthen_chiangs_rule
+				CHI_strengthen_chiangs_rule
 				CHI_reorganize_nra
 				three_principle_of_the_people
 			}

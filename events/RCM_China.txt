@@ -1910,7 +1910,7 @@ country_event = {
 			}
 		}
 		add_political_power = 50
-		CHI = {
+		FROM = {
 			country_event = { days = 2 id = rcmchina.255 }
 			#add_relation_modifier = {
 			#	target = GER
@@ -1953,7 +1953,7 @@ country_event = {
 				}
 			}
 		}
-		CHI = { country_event = { days = 2  id = rcmchina.256 } }
+		FROM = { country_event = { days = 2  id = rcmchina.256 } }
 	}
 }
 #to chi ger say yes
@@ -2034,7 +2034,7 @@ country_event = {
 			}
 		}
 		add_political_power = 50
-		CHI = {
+		FROM = {
 			country_event = { days = 2  id = rcmchina.258 }
 			#add_relation_modifier = {
 			#	target = SOV
@@ -2071,7 +2071,7 @@ country_event = {
 				}
 			}
 		}
-		CHI = { country_event = {  days = 2  id = rcmchina.259 } }
+		FROM = { country_event = {  days = 2  id = rcmchina.259 } }
 	}
 }
 #to chi sov say yes
@@ -2138,7 +2138,7 @@ country_event = {
 			}
 		}
 		add_political_power = 50
-		CHI = {
+		FROM = {
 			country_event = { days = 2 id = rcmchina.261 }
 			#add_relation_modifier = {
 			#	target = ENG
@@ -2187,7 +2187,7 @@ country_event = {
 				}
 			}
 		}
-		CHI = { country_event = {  days = 2  id = rcmchina.262 } }
+		FROM = { country_event = {  days = 2  id = rcmchina.262 } }
 	}
 }
 country_event = {
@@ -2298,12 +2298,18 @@ country_event = {
 	option = {
 		ai_chance = { factor = 100 }
 		name = rcmchina.266.a
-		set_global_flag = ENG_accept_new_treaties
+		FROM = {
+			set_country_flag = ENG_accept_new_treaties
+		}
+
 	}
 	option = {
 		ai_chance = { factor = 0 }
 		name = rcmchina.266.b
-		set_global_flag = ENG_refuse_new_treaties
+		FROM = {
+			set_country_flag = ENG_refuse_new_treaties
+		}
+
 	}
 }
 #new us
@@ -2316,12 +2322,16 @@ country_event = {
 	option = {
 		ai_chance = { factor = 100 }
 		name = rcmchina.266.a
-		set_global_flag = USA_accept_new_treaties
+		FROM = {
+			set_country_flag = USA_accept_new_treaties
+		}
 	}
 	option = {
 		ai_chance = { factor = 0 }
 		name = rcmchina.266.b
-		set_global_flag = USA_refuse_new_treaties
+		FROM = {
+			set_country_flag = USA_refuse_new_treaties
+		}
 	}
 }
 #both accept
@@ -2331,7 +2341,10 @@ country_event = {
 	desc = rcmchina.268.d
 	picture = GFX_report_event_new_treaties_2
 	fire_only_once = yes
-	trigger = { tag = CHI has_global_flag = USA_accept_new_treaties has_global_flag = ENG_accept_new_treaties }
+	trigger = {
+		has_country_flag = USA_accept_new_treaties
+		has_country_flag = ENG_accept_new_treaties
+	}
 	option = {
 		ai_chance = { factor = 100 }
 		name = rcmchina.268.a
@@ -2346,9 +2359,9 @@ country_event = {
 	picture = GFX_report_event_FDR_speech
 	fire_only_once = yes
 	trigger = {
-		tag = CHI
-		has_global_flag = USA_accept_new_treaties
-		has_global_flag = ENG_refuse_new_treaties
+		#tag = CHI
+		has_country_flag = USA_accept_new_treaties
+		has_country_flag = ENG_refuse_new_treaties
 	}
 	option = {
 		name = rcmchina.269.a
@@ -2362,9 +2375,9 @@ country_event = {
 	picture = GFX_report_event_finnish_letter
 	fire_only_once = yes
 	trigger = {
-		tag = CHI
-		has_global_flag = ENG_accept_new_treaties
-		has_global_flag = USA_refuse_new_treaties
+		#tag = CHI
+		has_country_flag = ENG_accept_new_treaties
+		has_country_flag = USA_refuse_new_treaties
 	}
 	option = {
 		name = rcmchina.270.a
@@ -2378,9 +2391,9 @@ country_event = {
 	picture = GFX_report_event_finnish_letter
 	fire_only_once = yes
 	trigger = {
-		tag = CHI
-		has_global_flag = ENG_refuse_new_treaties
-		has_global_flag = USA_refuse_new_treaties
+		#tag = CHI
+		has_country_flag = ENG_refuse_new_treaties
+		has_country_flag = USA_refuse_new_treaties
 	}
 	option = {
 		name = rcmchina.271.a

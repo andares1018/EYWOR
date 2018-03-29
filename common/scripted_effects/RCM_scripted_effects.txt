@@ -1,5 +1,5 @@
 #	Example:
-# 
+#
 #	example_effect = {
 #		add_political_power = 66
 #		add_popularity = {
@@ -122,7 +122,7 @@ level_3_infra = {
 			free_building_slots = {
 				building = infrastructure
 				size < 9
-			}		
+			}
 		}
 		add_building_construction = {
 			type = infrastructure
@@ -280,7 +280,7 @@ peace_with_japan_land_partition = {
 		JAP = {
 			white_peace = NEA
 		}
-		annex_country = { target = MAN transfer_troops = no } 
+		annex_country = { target = MAN transfer_troops = no }
 		annex_country = { target = EHB transfer_troops = no }
 		if = {
 			limit = {
@@ -432,7 +432,7 @@ create_mengjiang = {
 				elections_allowed = no
 			}
 		}
-		set_global_flag = mej_exists 
+		set_global_flag = mej_exists
 	}
 }
 #HUGE
@@ -466,7 +466,7 @@ RRC_CREATION = {
 		else = {
 			if = {
 				limit = {
-					HPC = { 
+					HPC = {
 						is_subject_of = JAP
 					}
 				}
@@ -481,7 +481,7 @@ RRC_CREATION = {
 					}
 				}
 			}
-			
+
 		}
 	}
 	####STATES
@@ -837,7 +837,7 @@ puppet_reclaim_land = {
 		}
 	}
 }
-set_commie_rebels = {	
+set_commie_rebels = {
 	if = {
 		limit = {
 			OR = {
@@ -864,12 +864,12 @@ set_commie_rebels = {
 			}
 			has_state_flag = commie_ridden_states
 		}
-		set_border_war = yes 
+		set_border_war = yes
 		else = {
 			clr_state_flag = commie_ridden_states
-			set_border_war = no 
+			set_border_war = no
 		}
-	}	
+	}
 }
 
 capture_collaborators = {
@@ -914,7 +914,7 @@ capture_collaborators = {
 				}
 			}
 		}
-		
+
 		every_state = {
 			limit = {
 				has_state_flag = hanjian_captured_@FROM
@@ -1065,7 +1065,7 @@ industry_evac_decision = {
 		var = af_to_move
 		value = global.CHI_industrial_evacuations_amount_factor
 	}
-	
+
 	set_variable = {
 		var = ic_level
 		value = industrial_complex_level
@@ -1078,10 +1078,10 @@ industry_evac_decision = {
 		var = ic_to_move
 		value = global.CHI_industrial_evacuations_amount_factor
 	}
-	
+
 	custom_effect_tooltip = CHI_industrial_evacuations_remove_AF
 	custom_effect_tooltip = CHI_industrial_evacuations_remove_IC
-	hidden_effect = {				
+	hidden_effect = {
 		remove_building = {
 			type = arms_factory
 			level = af_level
@@ -1091,7 +1091,7 @@ industry_evac_decision = {
 			level = ic_level
 		}
 	}
-	
+
 	#Move AF
 	CONTROLLER = {
 		random_owned_controlled_state = {
@@ -1107,8 +1107,8 @@ industry_evac_decision = {
 					include_locked = yes
 				}
 			}
-			
-			custom_effect_tooltip = CHI_industrial_evacuations_add_AF						
+
+			custom_effect_tooltip = CHI_industrial_evacuations_add_AF
 			hidden_effect = {
 				add_extra_state_shared_building_slots = af_to_move
 				add_building_construction = {
@@ -1119,7 +1119,7 @@ industry_evac_decision = {
 				CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_AF }
 			}
 		}
-		
+
 		#If no states are really safe or all safe are filled
 		#Move to random controlled state
 		if = {
@@ -1149,8 +1149,8 @@ industry_evac_decision = {
 						include_locked = yes
 					}
 				}
-				
-				custom_effect_tooltip = CHI_industrial_evacuations_add_AF						
+
+				custom_effect_tooltip = CHI_industrial_evacuations_add_AF
 				hidden_effect = {
 					add_extra_state_shared_building_slots = af_to_move
 					add_building_construction = {
@@ -1162,8 +1162,8 @@ industry_evac_decision = {
 			}
 		}
 		clr_country_flag = CHI_industrial_evacuations_moved_AF
-		
-		
+
+
 		#Move IC
 		random_owned_controlled_state = {
 			prioritize = { 605 770 769 }
@@ -1178,7 +1178,7 @@ industry_evac_decision = {
 					include_locked = yes
 				}
 			}
-			
+
 			custom_effect_tooltip = CHI_industrial_evacuations_add_IC
 			hidden_effect = {
 				add_extra_state_shared_building_slots = ic_to_move
@@ -1190,7 +1190,7 @@ industry_evac_decision = {
 				CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_IC }
 			}
 		}
-		
+
 		#If no states are really safe or all safe are filled
 		#Move to random controlled state
 		if = {
@@ -1220,7 +1220,7 @@ industry_evac_decision = {
 						include_locked = yes
 					}
 				}
-				
+
 				custom_effect_tooltip = CHI_industrial_evacuations_add_IC
 				hidden_effect = {
 					add_extra_state_shared_building_slots = ic_to_move
@@ -1233,5 +1233,87 @@ industry_evac_decision = {
 			}
 		}
 		clr_country_flag = CHI_industrial_evacuations_moved_IC
+	}
+}
+long_march_up = {
+	if = {
+		limit = { has_idea = Long_March_2 }
+		swap_ideas = {
+			remove_idea = Long_March_2
+			add_idea = Long_March_1
+		}
+	}
+	else_if = {
+		limit = { has_idea = Long_March_3 }
+		swap_ideas = {
+			remove_idea = Long_March_3
+			add_idea = Long_March_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = Long_March_4 }
+		swap_ideas = {
+			remove_idea = Long_March_4
+			add_idea = Long_March_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = Long_March_5 }
+		swap_ideas = {
+			remove_idea = Long_March_5
+			add_idea = Long_March_4
+		}
+	}
+	else_if = {
+		limit = { NOT = { has_idea = Long_March_5 } }
+		add_ideas = Long_March_5
+	}
+}
+long_march_down = {
+	if = {
+		limit = { has_idea = Long_March_5 }
+		remove_ideas = Long_March_5
+	}
+	if = {
+		limit = { has_idea = Long_March_4 }
+		swap_ideas = {
+			remove_idea = Long_March_4
+			add_idea = Long_March_5
+		}
+	}
+	if = {
+		limit = { has_idea = Long_March_3 }
+		swap_ideas = {
+			remove_idea = Long_March_3
+			add_idea = Long_March_4
+		}
+	}
+	if = {
+		limit = { has_idea = Long_March_2 }
+		swap_ideas = {
+			remove_idea = Long_March_2
+			add_idea = Long_March_3
+		}
+	}
+	if = {
+		limit = { has_idea = Long_March_1 }
+		swap_ideas = {
+			remove_idea = Long_March_1
+			add_idea = Long_March_2
+		}
+	}
+}
+reenable_duration = {
+	if = {
+		limit = { has_country_flag = infra_tier_3 }
+		custom_effect_tooltip = infra_tier_3_tt
+	}
+	else_if = {
+		limit = { has_country_flag = infra_tier_2 }
+		custom_effect_tooltip = infra_tier_2_tt
+	}
+	else_if = {
+		limit = { has_country_flag = infra_tier_1 }
+		custom_effect_tooltip = infra_tier_1_tt
 	}
 }

@@ -12,6 +12,78 @@ ideas = {
 		}
 	}
 	country = {
+
+		##WARLORD TREES
+		WRL_authoritarianism = {
+			allowed = {
+				always = no
+			}
+			picture = generic_oppression
+			allowed_civil_war = {
+				OR = {
+					has_government = neutrality
+					has_government = fascism
+				}
+			}
+
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.1
+				stability_factor = 0.05
+			}
+		}
+		WRL_new_constitution = {
+			allowed = {
+				always = no
+			}
+			picture = HUN_treaty_of_triannon
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.05
+				stability_factor = 0.1
+				democratic_drift = 0.01
+			}
+		}
+		WRL_secret_police = {
+			allowed = {
+				always = no
+			}
+			picture = generic_secret_police
+			allowed_civil_war = {
+				OR = {
+					has_government = neutrality
+					has_government = fascism
+				}
+			}
+
+			removal_cost = -1
+			modifier = {
+				enemy_partisan_effect = -0.4
+				subversive_activites_upkeep = -0.25
+			}
+		}
+		WRL_firm_stance = {
+			allowed = {
+				always = no
+			}
+			picture = ger_bulwark_against_bolshevism
+			allowed_civil_war = {
+				OR = {
+					has_government = neutrality
+					has_government = fascism
+				}
+			}
+
+			removal_cost = -1
+			modifier = {
+				drift_defence_factor = 0.4
+				political_power_gain = 0.1
+			}
+		}
 		##gov bail
 		CHI_emergency_bailout = {
 			allowed = {
@@ -753,6 +825,24 @@ ideas = {
 			}
 		}
 		##CHINA IDEAS
+		prince_de_defect = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			available = {
+
+			}
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.05
+			}
+		}
 		CHI_nanking_decade_idea = {
 			picture = generic_exploit_mines
 
@@ -2492,7 +2582,7 @@ ideas = {
 				NOT = {
 					OR = {
 						is_in_faction_with = JAP
-						has_completed_focus = dissolve_bs
+						has_completed_focus = CHI_dissolve_bs
 					}
 				}
 				OR = {
@@ -2516,7 +2606,7 @@ ideas = {
 				NOT = {
 					OR = {
 						is_in_faction_with = JAP
-						has_completed_focus = dissolve_bs
+						has_completed_focus = CHI_dissolve_bs
 					}
 				}
 				OR = {
@@ -2656,7 +2746,7 @@ ideas = {
 				NOT = {
 					OR = {
 						is_in_faction_with = JAP
-						has_completed_focus = dissolve_cc
+						has_completed_focus = CHI_dissolve_cc
 					}
 				}
 				OR = {
@@ -2730,7 +2820,7 @@ ideas = {
 
 			available = {
 				has_country_leader = { ruling_only = yes name = "Chiang Kai-shek" }
-				has_completed_focus = reinforce_new_life_movement
+				has_completed_focus = CHI_reinforce_new_life_movement
 			}
 
 			allowed = {

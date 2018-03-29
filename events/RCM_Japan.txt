@@ -4174,6 +4174,7 @@ country_event = {
 					target = PLM
 					modifier = hostile_status
 				}
+				remove_ideas = prince_de_defect
 			}
 			SHX = {
 				remove_opinion_modifier = {

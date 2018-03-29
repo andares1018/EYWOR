@@ -904,19 +904,19 @@ country_event = {
 				is_historical_focus_on = yes
 			}
 		}
-		CHI = {
+		FROM = {
 			add_timed_idea = { days = 1200 idea = CHI_sov_pact }
 			add_opinion_modifier = { target = SOV modifier = CHI_sov_pact_opinion }
 			add_opinion_modifier = { target = SOV modifier = CHI_sov_pact_opinion_trade }
-			set_global_flag = CHI_sov_pact_flag
+			set_country_flag = CHI_sov_pact_flag
 			diplomatic_relation = {
 				country = SOV
 				relation = non_aggression_pact
 				active = yes
 			}
 		}
-		add_opinion_modifier = { target = CHI modifier = CHI_sov_pact_opinion }
-		hidden_effect = { CHI = { country_event = { days = 2 id = rcmsoviet.1024 } } }
+		add_opinion_modifier = { target = FROM modifier = CHI_sov_pact_opinion }
+		hidden_effect = { FROM = { country_event = { days = 2 id = rcmsoviet.1024 } } }
 	}
 
 	option = { #refuse
@@ -928,7 +928,7 @@ country_event = {
 				is_historical_focus_on = yes
 			}
 		}
-		CHI = { country_event = { days = 2 id = rcmsoviet.1025 } }
+		FROM = { country_event = { days = 2 id = rcmsoviet.1025 } }
 	}
 }
 country_event = {
@@ -960,14 +960,13 @@ country_event = { #drop pact with chi
 	hidden = yes
 	fire_only_once = yes
 	trigger = {
-		tag = CHI
-		has_global_flag = CHI_sov_pact_flag
+		has_country_flag = CHI_sov_pact_flag
 		NOT = { has_idea = CHI_sov_pact }
 	}
 	immediate = {
-		SOV = { remove_opinion_modifier = { target = CHI modifier = CHI_sov_pact_opinion } }
+		SOV = { remove_opinion_modifier = { target = ROOT modifier = CHI_sov_pact_opinion } }
 		remove_opinion_modifier = { target = SOV modifier = CHI_sov_pact_opinion }
-		SOV = { remove_opinion_modifier = { target = CHI modifier = CHI_sov_pact_opinion_trade } }
+		SOV = { remove_opinion_modifier = { target = ROOT modifier = CHI_sov_pact_opinion_trade } }
 		remove_opinion_modifier = { target = SOV modifier = CHI_sov_pact_opinion_trade }
 		diplomatic_relation = {
 			country = SOV
@@ -983,9 +982,9 @@ country_event = { #renew the pact 1
 	id = rcmsoviet.1027
 	hidden = yes
 	trigger = {
-		tag = CHI
+		has_country_flag = CHI_sov_pact_flag
 		has_idea = CHI_sov_pact
-		NOT = { has_global_flag = renew_pact_sino_soviet }
+		NOT = { has_country_flag = renew_pact_sino_soviet }
 	}
 	mean_time_to_happen = {
 		days = 180
@@ -1001,7 +1000,7 @@ country_event = { #renew the pact 1
 			relation = non_aggression_pact
 			active = yes
 		}
-		set_global_flag = renew_pact_sino_soviet
+		set_country_flag = renew_pact_sino_soviet
 	}
 	option = {
 	}
@@ -1010,9 +1009,9 @@ country_event = { #renew the pact 2
 	id = rcmsoviet.1028
 	hidden = yes
 	trigger = {
-		tag = CHI
+		#tag = CHI
 		has_idea = CHI_sov_pact
-		has_global_flag = renew_pact_sino_soviet
+		has_country_flag = renew_pact_sino_soviet
 	}
 	mean_time_to_happen = {
 		days = 180
@@ -1028,7 +1027,7 @@ country_event = { #renew the pact 2
 			relation = non_aggression_pact
 			active = yes
 		}
-		clr_global_flag = renew_pact_sino_soviet
+		clr_country_flag = renew_pact_sino_soviet
 	}
 	option = {
 	}

@@ -133,7 +133,7 @@ add_opinion_modifier = { target = CHI modifier = hostile_status }
 	}
 	#puppet = NSG
 	#puppet = SCG
-	create_faction = japanese_empire
+	#create_faction = japanese_empire
 	add_to_faction = MAN
 	add_to_faction = RFM
 	add_to_faction = EHB

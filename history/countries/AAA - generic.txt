@@ -213,6 +213,7 @@ if = {
 			is_warlord = yes
 		}
 		add_ideas = {
+			unstable_economy
 			PRC_government_corruption
 			CHI_ineffective_bureaucracy_warlord
 		}

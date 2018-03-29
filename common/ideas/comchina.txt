@@ -632,12 +632,13 @@ ideas = {
 			}
 
 			modifier = {
-				war_support_factor = -0.5
-				research_time_factor = 0.5
-				political_power_cost = 0.75
+				stability_factor = -0.25
+				war_support_factor = -0.25
+				research_time_factor = 0.25
+				political_power_cost = 0.5
 				industrial_capacity_factory = -0.25
 				production_factory_max_efficiency_factor = -0.1
-				#attrition = 0.25
+				attrition = 0.25
 				#out_of_supply_factor = 0.25
 				#no_supply_grace = -50
 			}
@@ -660,12 +661,13 @@ ideas = {
 			}
 
 			modifier = {
-				war_support_factor = -0.4
-				research_time_factor = 0.4
-				political_power_cost = 0.60
+				stability_factor = -0.2
+				war_support_factor = -0.2
+				research_time_factor = 0.2
+				political_power_cost = 0.4
 				industrial_capacity_factory = -0.20
 				production_factory_max_efficiency_factor = -0.08
-				#attrition = 0.2
+				attrition = 0.2
 				#out_of_supply_factor = 0.2
 				#no_supply_grace = -40
 			}
@@ -688,12 +690,13 @@ ideas = {
 			}
 
 			modifier = {
-				war_support_factor = -0.3
-				research_time_factor = 0.3
-				political_power_cost = 0.45
+				stability_factor = -0.15
+				war_support_factor = -0.15
+				research_time_factor = 0.15
+				political_power_cost = 0.3
 				industrial_capacity_factory = -0.15
 				production_factory_max_efficiency_factor = -0.06
-				#attrition = 0.15
+				attrition = 0.15
 				#out_of_supply_factor = 0.15
 				#no_supply_grace = -30
 			}
@@ -716,12 +719,13 @@ ideas = {
 			}
 
 			modifier = {
-				war_support_factor = -0.2
-				research_time_factor = 0.2
-				political_power_cost = 0.30
+				stability_factor = -0.1
+				war_support_factor = -0.1
+				research_time_factor = 0.1
+				political_power_cost = 0.2
 				industrial_capacity_factory = -0.1
 				production_factory_max_efficiency_factor = -0.04
-				#attrition = 0.1
+				attrition = 0.1
 				#out_of_supply_factor = 0.1
 				#no_supply_grace = -20
 			}
@@ -744,12 +748,13 @@ ideas = {
 			}
 
 			modifier = {
-				war_support_factor = -0.1
-				research_time_factor = 0.1
-				political_power_cost = 0.15
+				stability_factor = -0.05
+				war_support_factor = -0.05
+				research_time_factor = 0.05
+				political_power_cost = 0.1
 				industrial_capacity_factory = -0.05
 				production_factory_max_efficiency_factor = -0.02
-				#attrition = 0.05
+				attrition = 0.05
 				#out_of_supply_factor = 0.05
 				#no_supply_grace = -10
 			}
