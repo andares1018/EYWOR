@@ -539,10 +539,10 @@ GER_german_monarchy = {
 	color_ui = rgb { 115 115 115 }
 }
 
-CHI_warlord_leader = {
-	color = rgb { 24 115 222 }
-	color_ui = rgb { 93 157 231 }
-}
+#CHI_warlord_leader = {
+#	color = rgb { 24 115 222 }
+#	color_ui = rgb { 93 157 231 }
+#}
 MAN_restored = {
 	color = rgb { 237 152 18 }
 	color_ui = rgb { 224 139 5 }
