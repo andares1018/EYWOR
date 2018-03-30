@@ -1,4 +1,4 @@
-add_namespace = rcmgermany
+﻿add_namespace = rcmgermany
 # China Mod
 country_event = {
 	id = rcmgermany.2000
