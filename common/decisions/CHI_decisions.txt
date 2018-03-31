@@ -147,6 +147,7 @@
 			}
 			fire_only_once = yes
 			visible = {
+				has_dlc = "Waking the Tiger"
 				has_completed_focus = CHI_german_training_method
 			}
 			days_remove = 180

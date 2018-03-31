@@ -284,6 +284,7 @@ focus_tree = {
 				GER_will_support = yes
 			}
 		}
+		
 		bypass = {
 		}
 		cancel_if_invalid = yes
@@ -512,25 +513,10 @@ focus_tree = {
 						gwtank = 1
 					}
 				}
-				if = {
-					limit = {
-						has_completed_focus = WRL_closer_ties_with_germany
-					}
-					add_equipment_to_stockpile = {
-						type = light_tank_equipment_1
-						amount = 100
-						producer = GER
-					}
-				}
-				if = {
-					limit = {
-						has_completed_focus = WRL_rapprochement_with_soviet_union
-					}
-					add_equipment_to_stockpile = {
-						type = light_tank_equipment_1
-						amount = 100
-						producer = SOV
-					}
+				add_equipment_to_stockpile = {
+					type = light_tank_equipment_1
+					amount = 100
+					producer = SOV
 				}
 			}
 		}
@@ -873,7 +859,7 @@ focus_tree = {
 			modifier = {
 				has_completed_focus = WRL_sov_pact_focus
 				has_completed_focus = WRL_Demand_Outer_Mongolia
-				has_completed_focus = WRL_influence_mongolia
+				has_completed_focus = WRL_befriend_mongolia
 				has_completed_focus = WRL_renounce_the_mcmahon_line
 				factor = 5
 			}
@@ -1526,7 +1512,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = WRL_indian_cooperation
+		id = WRL_befriend_india
 		icon = GFX_goal_generic_improve_relations
 		cost = 10.00
 		prerequisite = {
@@ -1562,24 +1548,64 @@ focus_tree = {
 		complete_tooltip = {
 		}
 		completion_reward = {
-			if = {
-				limit = {
-					ROOT = {
-						is_faction_leader = yes
+			RAJ = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = CHI_diplomacy_focus
+				}
+				if = {
+					limit = {
+						ROOT = {
+							has_government = fascism
+						}
 					}
-					RAJ = {
-						is_subject = no
+					add_ideas = new_life
+					country_event = {
+						id = generic.1
 					}
 				}
-				RAJ = {
+				if = {
+					limit = {
+						ROOT = {
+							has_government = democratic
+						}
+					}
+					add_ideas = democratic_influence
 					country_event = {
-						id = generic.5
+						id = generic.1
+					}
+				}
+				if = {
+					limit = {
+						ROOT = {
+							has_government = communism
+						}
+					}
+					add_ideas = communist_influence
+					country_event = {
+						id = generic.1
 					}
 				}
 			}
-			else = {
+			if = {
+				limit = {
+					CHI = {
+						is_faction_leader = yes
+					}
+					RAJ = {
+						is_puppet = no
+						is_in_faction = no
+					}
+				}
+				country_event = {
+					id = generic.5
+				}
 				RAJ = {
-					country_event = wtt_china_shared.1
+					add_ai_strategy = {
+						type = alliance
+						id = "CHI"
+						value = 200
+					}
 				}
 			}
 		}
@@ -1593,7 +1619,7 @@ focus_tree = {
 			focus = WRL_Tibet_Ultimatum
 		}
 		mutually_exclusive = {
-			focus = WRL_indian_cooperation
+			focus = WRL_befriend_india
 		}
 		x = 5
 		y = 9
@@ -1615,11 +1641,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = WRL_influence_mongolia
+		id = WRL_befriend_mongolia
 		icon = GFX_goal_generic_neutrality_focus
 		cost = 10.00
 		prerequisite = {
-			focus = WRL_indian_cooperation
+			focus = WRL_befriend_india
 			focus = WRL_renounce_the_mcmahon_line
 		}
 		mutually_exclusive = {
@@ -1651,24 +1677,64 @@ focus_tree = {
 		complete_tooltip = {
 		}
 		completion_reward = {
-			if = {
-				limit = {
-					ROOT = {
-						is_faction_leader = yes
+			MON = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = CHI_diplomacy_focus
+				}
+				if = {
+					limit = {
+						ROOT = {
+							has_government = fascism
+						}
 					}
-					MON = {
-						is_subject = no
+					add_ideas = new_life
+					country_event = {
+						id = generic.1
 					}
 				}
-				MON = {
+				if = {
+					limit = {
+						ROOT = {
+							has_government = democratic
+						}
+					}
+					add_ideas = democratic_influence
 					country_event = {
-						id = generic.5
+						id = generic.1
+					}
+				}
+				if = {
+					limit = {
+						ROOT = {
+							has_government = communism
+						}
+					}
+					add_ideas = communist_influence
+					country_event = {
+						id = generic.1
 					}
 				}
 			}
-			else = {
+			if = {
+				limit = {
+					CHI = {
+						is_faction_leader = yes
+					}
+					MON = {
+						is_puppet = no
+						is_in_faction = no
+					}
+				}
+				country_event = {
+					id = generic.5
+				}
 				MON = {
-					country_event = wtt_china_shared.1
+					add_ai_strategy = {
+						type = alliance
+						id = "CHI"
+						value = 200
+					}
 				}
 			}
 		}
@@ -1679,10 +1745,10 @@ focus_tree = {
 		cost = 10.00
 		prerequisite = {
 			focus = WRL_renounce_the_mcmahon_line
-			focus = WRL_indian_cooperation
+			focus = WRL_befriend_india
 		}
 		mutually_exclusive = {
-			focus = WRL_influence_mongolia
+			focus = WRL_befriend_mongolia
 		}
 		x = 5
 		y = 10

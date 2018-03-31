@@ -2081,7 +2081,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		
+
 
 		completion_reward = {
 			605 = {
@@ -3382,7 +3382,7 @@ focus_tree = {
 	}
 	focus = {
 		id = JAP_west_pacific_treaty_organization
-		icon = GFX_focus_chi_mission_to_the_US
+		icon = GFX_focus_chi_mission_to_the_us
 		cost = 10.00
 		prerequisite = {
 			focus = JAP_pacific_guardian

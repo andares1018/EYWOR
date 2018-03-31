@@ -557,6 +557,11 @@ GER_greater_german_reich = {
 }
 
 CHI_warlord_PRC = {
-	color = rgb { 245 12 55 }
-	color_ui = rgb { 178 34 60 }
+	color = rgb { 194 20 37 }
+	color_ui = rgb { 194 20 37 }
+}
+
+PRC_proclaimed = {
+	color = rgb { 194 20 37 }
+	color_ui = rgb { 194 20 37 }
 }

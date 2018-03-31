@@ -118,7 +118,7 @@ is_north_china_state = {
 		state = 615
 		state = 789
 		state = 767
-		state = 762
+		state = 802
 		state = 622
 		state = 616
 		state = 760
@@ -306,7 +306,7 @@ is_north_china_state_for_liberation = {
 		state = 608
 		state = 609
 		state = 611
-		state = 762
+		state = 802
 	}
 }
 is_MAN_state_for_liberation = {

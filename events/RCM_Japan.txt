@@ -3909,6 +3909,7 @@ country_event = {
 				country_event = {
 					days = 1 id = rcmjapan.84
 				}
+				remove_ideas = prince_de_defect
 			}
 			SHX = {
 				country_event = {
@@ -4556,7 +4557,7 @@ country_event = {
 #			}
 #		}
 #		AND = {
-#			state = 762
+#			state = 802
 #			country_exists = NSG
 #		}
 #	}
@@ -5279,7 +5280,7 @@ country_event = {
 				add_state_core = 611
 				add_state_core = 612
 				add_state_core = 763
-				add_state_core = 762
+				add_state_core = 802
 				add_state_core = 757
 				add_state_core = 621
 				add_state_core = 330
@@ -5292,7 +5293,7 @@ country_event = {
 				add_state_core = 611
 				add_state_core = 612
 				add_state_core = 763
-				add_state_core = 762
+				add_state_core = 802
 				add_state_core = 757
 				add_state_core = 621
 				add_state_core = 330
@@ -5354,7 +5355,7 @@ country_event = {
 	picture = GFX_report_event_NSG
 	trigger = {
 		tag = JAP
-		762 = {
+		802 = {
 			is_controlled_by_jap_or_its_puppet = yes
 		}
 		NOT = {
@@ -5377,8 +5378,8 @@ country_event = {
 		hidden_effect = {
 			#set_global_flag = nsg_exists
 			NSG = {
-				transfer_state = 762
-				add_state_core = 762
+				transfer_state = 802
+				add_state_core = 802
 			}
 			JAP = {
 				set_autonomy = {
@@ -5519,7 +5520,7 @@ country_event = {
 			limit = {
 				country_exists = SCG
 			}
-			transfer_state = 762
+			transfer_state = 802
 			create_mengjiang = yes
 			SCG = {
 				country_event = {
@@ -5550,7 +5551,7 @@ country_event = {
 				}
 			}
 		}
-		transfer_state = 762
+		transfer_state = 802
 		transfer_state = 611
 		create_mengjiang = yes
 	}
@@ -5936,7 +5937,7 @@ country_event = {
 			}
 			clr_global_flag = scg_exists
 			clr_global_flag = nsg_exists
-			transfer_state = 762
+			transfer_state = 802
 			transfer_state = 611
 		}
 		set_capital = 611
@@ -5990,7 +5991,7 @@ country_event = {
 				target = NSG transfer_troops = yes
 				}
 			}
-			transfer_state = 762
+			transfer_state = 802
 		}
 	}
 }
@@ -6137,10 +6138,10 @@ country_event = {
 			if = {
 				limit = {
 					NOT = {
-						owns_state = 762
+						owns_state = 802
 					}
 				}
-				transfer_state = 762
+				transfer_state = 802
 			}
 			if = {
 				limit = {
@@ -6231,7 +6232,7 @@ country_event = {
 				country_exists = NSG
 			}
 		}
-		762 = {
+		802 = {
 			is_controlled_by_jap_or_its_puppet = yes
 		}
 	}
@@ -6244,8 +6245,8 @@ country_event = {
 		hidden_effect = {
 			set_global_flag = nsg_exists
 			NSG = {
-				transfer_state = 762
-				add_state_core = 762
+				transfer_state = 802
+				add_state_core = 802
 			}
 			JAP = {
 				set_autonomy = {

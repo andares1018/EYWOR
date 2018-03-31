@@ -120,6 +120,17 @@ create_country_leader = {
 		#
 	}
 }
+create_country_leader = {
+	name = "Huang Shaohong"
+	desc = ""
+	picture = "Portrait_Guangxi_Huang_Shaohong.dds"
+	expire = "1969.1.13"
+	ideology = marxism
+	traits = {
+		#
+	}
+}
+
 
 create_field_marshal = {
 	name = "Bai Chongxi"

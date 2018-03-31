@@ -185,6 +185,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
+		allow_branch = {
+			has_dlc = "Waking the Tiger"
+		}
 		completion_reward = {
 			add_timed_idea = {
 				idea = CHI_diplomatic_effort_idea
@@ -367,6 +370,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		allow_branch = {
+			has_dlc = "Waking the Tiger"
+		}
 		available = {
 			JAP_will_support = yes
 		}
@@ -375,8 +381,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			add_tech_bonus = {
 				name = CHI_order_destroyers
@@ -406,8 +411,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			add_tech_bonus = {
 				name = CHI_light_cruiser_project
@@ -437,8 +441,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			add_tech_bonus = {
 				name = CHI_modern_submarines
@@ -523,8 +526,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			add_ideas = CHI_train_marines
 			add_tech_bonus = {
@@ -555,8 +557,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			add_tech_bonus = {
 				name = CHI_heavy_cruiser_project
@@ -586,8 +587,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			add_tech_bonus = {
 				name = CHI_coastal_patrol_planes
@@ -621,8 +621,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			add_tech_bonus = {
 				name = CHI_naval_aviation
@@ -653,8 +652,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			add_tech_bonus = {
 				name = CHI_naval_aviation
@@ -1620,6 +1618,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 4
 		}
+		allow_branch = {
+			has_dlc = "Waking the Tiger"
+		}
 		available = {
 			has_war = yes
 		}
@@ -1628,8 +1629,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			unlock_decision_tooltip = CHI_scorched_earth_tactics
 		}
@@ -2796,6 +2796,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+
 		available = {
 			NOT = {
 				has_global_flag = falkenhausen_recalled
@@ -2819,8 +2820,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			every_army_leader = {
 				add_planning = 1
@@ -2878,7 +2878,12 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_ideas = CHI_german_style_training_idea
-			unlock_decision_tooltip = CHI_60_divisions_plan
+			if = {
+				limit = {
+					has_dlc = "Waking the Tiger"
+				}
+				unlock_decision_tooltip = CHI_60_divisions_plan
+			}
 		}
 		available = {
 			NOT = {
@@ -2991,8 +2996,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			add_ideas = CHI_wargaming_division
 			add_tech_bonus = {
@@ -3082,8 +3086,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			custom_effect_tooltip = CHI_purchase_tanks_tt
 			hidden_effect = {
@@ -3097,25 +3100,10 @@ focus_tree = {
 						gwtank = 1
 					}
 				}
-				if = {
-					limit = {
-						has_completed_focus = CHI_closer_ties_with_germany
-					}
-					add_equipment_to_stockpile = {
-						type = light_tank_equipment_1
-						amount = 100
-						producer = GER
-					}
-				}
-				if = {
-					limit = {
-						has_completed_focus = CHI_rapprochement_with_soviet_union
-					}
-					add_equipment_to_stockpile = {
-						type = light_tank_equipment_1
-						amount = 100
-						producer = SOV
-					}
+				add_equipment_to_stockpile = {
+					type = light_tank_equipment_1
+					amount = 100
+					producer = SOV
 				}
 			}
 		}
@@ -3219,8 +3207,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			SOV = {
 				add_to_tech_sharing_group = CHI_joint_tank_development
@@ -3346,8 +3333,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			custom_effect_tooltip = CHI_purchase_fighters_tt
 			hidden_effect = {
@@ -3525,8 +3511,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			every_army_leader = {
 				add_logistics = 1
@@ -3575,7 +3560,7 @@ focus_tree = {
 			modifier = {
 				has_completed_focus = CHI_sov_pact_focus
 				has_completed_focus = CHI_Demand_Outer_Mongolia
-				has_completed_focus = CHI_influence_mongolia
+				has_completed_focus = CHI_befriend_mongolia
 				has_completed_focus = CHI_renounce_the_mcmahon_line
 				factor = 5
 			}
@@ -3834,12 +3819,13 @@ focus_tree = {
 						is_faction_leader = yes
 					}
 					TIB = {
-						is_ai = yes
 						is_puppet = no
 						is_in_faction = no
 					}
 				}
-				add_to_faction = TIB
+				country_event = {
+					id = generic.5
+				}
 				TIB = {
 					add_ai_strategy = {
 						type = alliance
@@ -4239,12 +4225,6 @@ focus_tree = {
 				add_planning = 1
 			}
 			add_ideas = CHI_whampoa_military_academy
-			hidden_effect = {
-				news_event = {
-					days = 3
-					id = news.5008
-				}
-			}
 		}
 		available = {
 			is_puppet = no
@@ -4265,12 +4245,6 @@ focus_tree = {
 				bonus = 0.5
 				uses = 2
 				category = infantry_weapons
-			}
-			hidden_effect = {
-				news_event = {
-					days = 3
-					id = news.5004
-				}
 			}
 		}
 		available = {
@@ -6287,6 +6261,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		allow_branch = {
+			has_dlc = "Waking the Tiger"
+		}
 		available = {
 			has_hyper_inflation = yes
 			has_idea_with_trait = financial_expert
@@ -6296,8 +6273,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			unlock_decision_tooltip = CHI_forced_loans
 			custom_effect_tooltip = government_bailout_tt
@@ -6775,7 +6751,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = CHI_indian_cooperation
+		id = CHI_befriend_india
 		icon = GFX_goal_generic_improve_relations
 		cost = 10.00
 		prerequisite = {
@@ -6808,27 +6784,66 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
-			if = {
-				limit = {
-					ROOT = {
-						is_faction_leader = yes
+			RAJ = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = CHI_diplomacy_focus
+				}
+				if = {
+					limit = {
+						ROOT = {
+							has_government = fascism
+						}
 					}
-					RAJ = {
-						is_subject = no
+					add_ideas = new_life
+					country_event = {
+						id = generic.1
 					}
 				}
-				RAJ = {
+				if = {
+					limit = {
+						ROOT = {
+							has_government = democratic
+						}
+					}
+					add_ideas = democratic_influence
 					country_event = {
-						id = generic.5
+						id = generic.1
+					}
+				}
+				if = {
+					limit = {
+						ROOT = {
+							has_government = communism
+						}
+					}
+					add_ideas = communist_influence
+					country_event = {
+						id = generic.1
 					}
 				}
 			}
-			else = {
+			if = {
+				limit = {
+					CHI = {
+						is_faction_leader = yes
+					}
+					RAJ = {
+						is_puppet = no
+						is_in_faction = no
+					}
+				}
+				country_event = {
+					id = generic.5
+				}
 				RAJ = {
-					country_event = wtt_china_shared.1
+					add_ai_strategy = {
+						type = alliance
+						id = "CHI"
+						value = 200
+					}
 				}
 			}
 		}
@@ -6842,7 +6857,7 @@ focus_tree = {
 			focus = CHI_Tibet_Ultimatum
 		}
 		mutually_exclusive = {
-			focus = CHI_indian_cooperation
+			focus = CHI_befriend_india
 		}
 		x = 32
 		y = 10
@@ -6857,18 +6872,17 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
 			add_state_claim = 434
 		}
 	}
 	focus = {
-		id = CHI_influence_mongolia
+		id = CHI_befriend_mongolia
 		icon = GFX_goal_generic_neutrality_focus
 		cost = 10.00
 		prerequisite = {
-			focus = CHI_indian_cooperation
+			focus = CHI_befriend_india
 			focus = CHI_renounce_the_mcmahon_line
 		}
 		mutually_exclusive = {
@@ -6897,27 +6911,66 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		complete_tooltip = {
-		}
+		
 		completion_reward = {
-			if = {
-				limit = {
-					ROOT = {
-						is_faction_leader = yes
+			MON = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = CHI_diplomacy_focus
+				}
+				if = {
+					limit = {
+						ROOT = {
+							has_government = fascism
+						}
 					}
-					MON = {
-						is_subject = no
+					add_ideas = new_life
+					country_event = {
+						id = generic.1
 					}
 				}
-				MON = {
+				if = {
+					limit = {
+						ROOT = {
+							has_government = democratic
+						}
+					}
+					add_ideas = democratic_influence
 					country_event = {
-						id = generic.5
+						id = generic.1
+					}
+				}
+				if = {
+					limit = {
+						ROOT = {
+							has_government = communism
+						}
+					}
+					add_ideas = communist_influence
+					country_event = {
+						id = generic.1
 					}
 				}
 			}
-			else = {
+			if = {
+				limit = {
+					CHI = {
+						is_faction_leader = yes
+					}
+					MON = {
+						is_puppet = no
+						is_in_faction = no
+					}
+				}
+				country_event = {
+					id = generic.5
+				}
 				MON = {
-					country_event = wtt_china_shared.1
+					add_ai_strategy = {
+						type = alliance
+						id = "CHI"
+						value = 200
+					}
 				}
 			}
 		}
@@ -6928,10 +6981,10 @@ focus_tree = {
 		cost = 10.00
 		prerequisite = {
 			focus = CHI_renounce_the_mcmahon_line
-			focus = CHI_indian_cooperation
+			focus = CHI_befriend_india
 		}
 		mutually_exclusive = {
-			focus = CHI_influence_mongolia
+			focus = CHI_befriend_mongolia
 		}
 		x = 32
 		y = 11

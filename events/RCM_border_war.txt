@@ -27,7 +27,7 @@ country_event = { #NORTH CHINA
 			608 = {	set_commie_rebels = yes }
 			609 = {	set_commie_rebels = yes }
 			611 = {	set_commie_rebels = yes }
-			762 = {	set_commie_rebels = yes }
+			802 = {	set_commie_rebels = yes }
 			country_event = {
 				days = 1 id = borderwar.2
 			}
@@ -51,7 +51,7 @@ country_event = { #NORTH CHINA
 			608 = {	set_commie_rebels = yes }
 			609 = {	set_commie_rebels = yes }
 			611 = {	set_commie_rebels = yes }
-			762 = {	set_commie_rebels = yes }
+			802 = {	set_commie_rebels = yes }
 			country_event = {
 				days = 1 id = borderwar.1
 			}

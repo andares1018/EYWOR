@@ -55,7 +55,7 @@ PRC_historical_plan = {
 		PRC_socialism_with_chinese_characteristics #January 10	
 		CHI_purchase_tanks #March 20 1942	
 		CHI_experimental_mechanised_unit #May 30 1942	
-		CHI_combined_arms_warfare #August 10 1942	
+		#CHI_combined_arms_warfare #August 10 1942	
 		PRC_proclaim_the_peoples_republic #October 20 1942	
 		PRC_socialist_market_economy #December 30 1942	
 		PRC_peoples_volunteer_army #March 10 1943	

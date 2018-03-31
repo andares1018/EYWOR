@@ -1125,7 +1125,7 @@ japan_form_IN_MON_puppets = {
 			611 = {
 				is_controlled_by_jap_or_its_puppet = yes
 			}
-			762 = {
+			802 = {
 				is_controlled_by_jap_or_its_puppet = yes
 			}
 			763 = {
@@ -1160,7 +1160,7 @@ japan_form_IN_MON_puppets = {
 			611 = {
 				is_controlled_by_jap_or_its_puppet = yes
 			}
-			762 = {
+			802 = {
 				is_controlled_by_jap_or_its_puppet = yes
 			}
 			763 = {
@@ -1186,7 +1186,7 @@ japan_form_IN_MON_puppets = {
 					add_state_core = 611
 					add_state_core = 621
 					add_state_core = 763
-					add_state_core = 762
+					add_state_core = 802
 					add_state_core = 330
 				}
 			}
@@ -1205,7 +1205,7 @@ japan_form_IN_MON_puppets = {
 					add_state_core = 611
 					add_state_core = 621
 					add_state_core = 763
-					add_state_core = 762
+					add_state_core = 802
 					add_state_core = 330
 				}
 			}

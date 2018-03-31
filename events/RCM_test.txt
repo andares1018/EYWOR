@@ -12,17 +12,15 @@ country_event = {
 	title = rcmtest.1.t
 	desc = rcmtest.1.d
 	hidden = yes
-	trigger = {
-		always = no
+	#trigger = {
+		#always = y
 		#date > 1936.1.20
-	}
+	#}
 	mean_time_to_happen = {
 		days = 0
 	}
 	immediate = {
-		SIC = {
-			country_event = wtt_china.1
-		}
+		add_offsite_building = { type = arms_factory level = -1 }
 	}
 	is_triggered_only = yes
 	option = { 
@@ -34,14 +32,11 @@ country_event = {
 	id = rcmtest.2
 	picture = GFX_report_event_test
 	hidden = yes
-	trigger = {
+	#trigger = {
 		
-	}
+	#}
 	immediate = {
-		set_variable = { var = cf_that_arent_used_for_consumer_goods value = num_of_civilian_factories_available_for_projects }
-		set_variable = { var = af_number value = num_of_available_military_factories }
-		divide_variable = { var = cf_that_arent_used_for_consumer_goods value = af_number }
-		round_variable = cf_that_arent_used_for_consumer_goods
+		add_offsite_building = { type = arms_factory level = 1 }
 	}
 	is_triggered_only = yes
 	option = { 
