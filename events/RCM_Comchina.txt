@@ -268,32 +268,6 @@ country_event = {
 		ai_chance = {
 			factor = 40
 		}
-		#random_other_country = {
-		#	limit = {
-		#		any_owned_state = {
-		#			has_state_flag = hanjian_captured_@ROOT
-		#		}
-		#	}
-		#	ROOT = {
-		#		annex_country = {
-		#			target = PREV transfer_troops = yes
-		#		}
-		#	}
-		#}
-		#hidden_effect = {
-		#	JAP = {
-		#		country_event = {
-		#			id = rcmjapan.1000
-		#		}
-		#	}
-		#	random_state = {
-		#		limit = {
-		#			is_owned_by = ROOT
-		#			has_state_flag = hanjian_captured_@ROOT
-		#		}
-		#		clr_state_flag = hanjian_captured_@ROOT
-		#	}
-		#}
 		capture_collaborators = yes
 	}
 }

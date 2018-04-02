@@ -58,7 +58,7 @@ liangguang_incident = {
 }
 recovery_effort = {
 	icon = generic_communism
-	picture = GFX_decision_cat_picture_chi_infiltration
+	#picture = GFX_decision_cat_picture_chi_infiltration
 }
 RCM_communist_infiltration = {
 	allowed = {

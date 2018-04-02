@@ -716,4 +716,18 @@ RAJ = {
 			}
 		}
 	}
+	FRA = {
+		remove_ideas = FRA_front_populaire
+		set_politics = { ruling_party = democratic elections_allowed = yes }
+		create_country_leader = {
+			name = "Édouard Daladier"
+			desc = ""
+			picture = "Portrait_France_Edouard_Daladier.dds"
+			expire = "1965.1.1"
+			ideology = socialism
+			traits = {
+				
+			}
+		}
+	}
 }

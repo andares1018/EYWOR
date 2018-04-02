@@ -1,5 +1,5 @@
 ﻿###########################
-# Chinese Events BORDER WARS ADDED SOUTHERN SHAANXI #ID = 743#
+# Chinese Events COMMIE RIDDEN STATES BORDER WAR SETTING (the yellow lines)
 ###########################
 add_namespace = borderwar_news
 news_event = { #MAN
@@ -71,20 +71,19 @@ news_event = { #MAN
 								has_state_flag = commie_ridden_states
 							}
 						}
-						OR = {
-							controller = {
-								OR = {
-									tag = PRC
-									has_government = communism
-									has_government = n_socialism
-								}
+						controller = {
+							has_full_control_of_state = PREV 
+							OR = {
+								tag = PRC
+								has_government = communism
+								has_government = n_socialism
 							}
-							owner = {
-								OR = {
-									tag = PRC
-									has_government = communism
-									has_government = n_socialism
-								}
+						}	
+						owner = {
+							OR = {
+								tag = PRC
+								has_government = communism
+								has_government = n_socialism
 							}
 						}
 					}

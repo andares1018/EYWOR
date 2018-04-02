@@ -75,6 +75,20 @@ ideas = {
 		}
 	}
 	country = {
+		#PRC com uprise
+		prepared_for_operation = {
+			picture = chi_war_of_resistance3
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = communism
+			}
+					
+			removal_cost = -1
+			modifier = {
+			}	
+		}
 		#SIC
 		leader_hospitalized = {
 			allowed = {

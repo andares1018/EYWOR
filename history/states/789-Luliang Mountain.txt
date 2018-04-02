@@ -19,6 +19,10 @@ state={
 			add_core_of = EHB
 			owner = SHX
 			controller = PRC
+			EHB = {
+				set_province_controller = 10507
+				set_province_controller = 12300
+			}
 		}
 
 	}

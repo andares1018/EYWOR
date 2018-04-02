@@ -19,6 +19,7 @@ country_event = {
 		n_socialism > 0.4
 		democratic < 0.4
 		date < 1936.6.1
+		#date < 1939.1.1
 	}
 	option = {
 		name = rcmfrance.1.a
@@ -46,6 +47,7 @@ country_event = {
 		tag = FRA
 		has_government = democratic
 		date > 1936.1.22
+		date < 1939.1.1
 	}
 	option = {
 		name = rcmfrance.2.a
@@ -78,6 +80,7 @@ country_event = {
 		tag = FRA
 		has_government = n_socialism
 		date > 1937.6.27
+		date < 1939.1.1
 	}
 	option = {
 		name = rcmfrance.3.a
@@ -110,6 +113,7 @@ country_event = {
 		tag = FRA
 		has_government = n_socialism
 		date > 1938.1.1
+		date < 1939.1.1
 		GER = {
 		controls_state = 4
 		}
@@ -145,6 +149,7 @@ country_event = {
 		tag = FRA
 		has_government = n_socialism
 		date > 1938.4.9
+		date < 1939.1.1
 	}
 	option = {
 		name = rcmfrance.5.a

@@ -64,6 +64,7 @@ set_convoys = 40
 	set_global_flag = nineteen_thirtynine_start
 	set_global_flag = flying_tiger
 	remove_ideas = CHI_nanking_decade_idea
+	remove_ideas = prince_de_defect
 	remove_ideas = german_advisors
 	add_political_power = 1198
 	set_global_flag = joined_chi_@HPC

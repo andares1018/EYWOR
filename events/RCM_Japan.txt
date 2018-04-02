@@ -1188,37 +1188,37 @@ country_event = {
 				}
 				RFM = { transfer_state = PREV }
 			}
-			else_if = {
-				limit = {
-					EHB = { has_country_flag = im_rrc_now }
-				}
-				every_owned_state = {
-					limit = {
-						is_controlled_by = JAP
-						is_core_of = EHB
-					}
-					EHB = { transfer_state = PREV }
-				}
+		}
+		else_if = {
+			limit = {
+				EHB = { has_country_flag = im_rrc_now }
 			}
-			else_if = {
+			every_owned_state = {
 				limit = {
-					HPC = { has_country_flag = im_rrc_now }
+					is_controlled_by = JAP
+					is_core_of = EHB
 				}
+				EHB = { transfer_state = PREV }
+			}
+		}
+		else_if = {
+			limit = {
+				HPC = { has_country_flag = im_rrc_now }
+			}
+			every_owned_state = {
+				limit = {
+					is_controlled_by = JAP
+					is_core_of = HPC
+				}
+				HPC = { transfer_state = PREV }
+			}
+			else = {
 				every_owned_state = {
 					limit = {
 						is_controlled_by = JAP
-						is_core_of = HPC
+						is_core_of = RFM
 					}
-					HPC = { transfer_state = PREV }
-				}
-				else = {
-					every_owned_state = {
-						limit = {
-							is_controlled_by = JAP
-							is_core_of = RFM
-						}
-						RFM = { transfer_state = PREV }
-					}
+					RFM = { transfer_state = PREV }
 				}
 			}
 		}

@@ -1998,6 +1998,7 @@ RCM_communist_infiltration = {
 	send_in_the_partisans = {
 	     icon = infiltrate_state
 	     fire_only_once = no
+		cost = 50
 	     #days_remove = 75 # Stays for 5 days before being removed
 	     #days_re_enable = 5 # Will show up in the interface and can be selected again after 5 days
 	     #cost = 75
@@ -2028,27 +2029,8 @@ RCM_communist_infiltration = {
 			}
 	     }
 	     available = { #can do
-			any_state = {
-				owner = {
-					NOT = {
-						tag = ROOT
-					}
-				}
-				is_north_china_state_for_liberation = yes
-				any_neighbor_state = {
-					OR = {
-						has_state_flag = commie_ridden_states
-						owner = {
-							tag = ROOT
-						}
-					}
-				}
-				NOT = {
-					has_state_flag = commie_ridden_states
-				}
-			}
 			has_equipment = {
-				infantry_equipment > 499
+				infantry_equipment > 99
 			}
 			has_manpower > 2000
 	     }
@@ -2084,7 +2066,7 @@ RCM_communist_infiltration = {
 			ROOT = {
 				add_equipment_to_stockpile = {
 					type = infantry_equipment
-					amount = -500
+					amount = -100
 				}
 				add_manpower = -2000
 			}
@@ -2104,7 +2086,7 @@ RCM_communist_infiltration = {
 	     fire_only_once = no
 	     #days_remove = 75 # Stays for 5 days before being removed
 	     #days_re_enable = 5 # Will show up in the interface and can be selected again after 5 days
-	     cost = 75
+	     cost = 50
 	     highlight_states = { #These states will be highlighted
 
 	     }
@@ -2145,27 +2127,8 @@ RCM_communist_infiltration = {
 					has_state_flag = commie_ridden_states
 				}
 			}
-			any_state = {
-				owner = {
-					NOT = {
-						tag = ROOT
-					}
-				}
-				is_MAN_state_for_liberation = yes
-				any_neighbor_state = {
-					OR = {
-						has_state_flag = commie_ridden_states
-						owner = {
-							tag = ROOT
-						}
-					}
-				}
-				NOT = {
-					has_state_flag = commie_ridden_states
-				}
-			}
 			has_equipment = {
-				infantry_equipment > 499
+				infantry_equipment > 49
 			}
 			has_manpower > 200
 	     }
@@ -2213,6 +2176,49 @@ RCM_communist_infiltration = {
 	     }
 	     ai_will_do = {
 	          factor = 100
+	     }
+	}
+	prepared_for_operation_decision = {
+	     icon = generic_political_discourse
+	     fire_only_once = no
+	     days_remove = 50 # Stays for 5 days before being removed
+	     days_re_enable = 0 # Will show up in the interface and can be selected again after 5 days
+	     cost = 25
+	     highlight_states = { #These states will be highlighted
+
+	     }
+	     visible = { #can see
+	          tag = PRC
+			#has_country_flag = communist_infiltration
+
+	     }
+	     available = { #can do
+	          has_war_with = JAP
+			has_war_together_with = event_target:WTT_current_china_leader
+			NOT = {
+				has_idea = prepared_for_operation
+			}
+	     }
+	     complete_effect = { #run effect on selection
+
+	     }
+	     remove_trigger = { #will run remove effect and abort
+
+	     }
+	     remove_effect = { #run effect when removed/finished
+	          hidden_effect = {
+				add_ideas = prepared_for_operation
+			}
+			custom_effect_tooltip = prepared_for_operation_tt
+		}
+	     cancel_trigger = { #will abort
+
+	     }
+	     modifier = { #active during the course of the decision
+	          political_power_gain = -0.1
+	     }
+	     ai_will_do = {
+	          factor = 200
 	     }
 	}
 }

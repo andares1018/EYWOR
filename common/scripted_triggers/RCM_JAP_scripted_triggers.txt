@@ -76,29 +76,7 @@ RFM_is_ai = {
 		}
 	}
 }
-is_a_state_that_is_ready_for_puppet_formation = {
-	OR = {
-		JAP = {
-			has_full_control_of_state = PREV
-		}
-		controller = {
-			is_subject_of = JAP
-			has_full_control_of_state = PREV
-		}
-		AND = {
-			is_controlled_by_jap_or_its_puppet = yes
-			NOT = {
-				any_neighbor_state = {
-					controller = {
-						is_warlord = yes
-						has_war_with = JAP
-						has_full_control_of_state = PREV
-					}
-				}
-			}
-		}
-	}
-}
+
 JAP_or_its_puppet_has_full_control_over_prev_states = {
 	OR = {
 		JAP = {

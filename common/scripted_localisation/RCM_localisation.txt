@@ -8,18 +8,38 @@
 # localization_key -> points to the localization key
 # that'll be used if trigger passes
 defined_text = { # Country
+	name = Getinfiltrateoruprising
+	text = {
+		trigger = {
+			is_controlled_by_jap_or_its_puppet = yes
+		}
+		localization_key = COMMIE_UPRISING_TOOLTIP_infiltrate
+	}
+	text = {
+		localization_key = COMMIE_UPRISING_TOOLTIP_uprising
+	}
+}
+
+defined_text = { # Country
 	name = Getwhetheritsneighbor
 	text = {
 		trigger = {
 			FROM.FROM = {
 				NOT = {
 					any_neighbor_state = {
-						is_owned_by = PRC
+						AND = {
+							owner = {
+								tag = PRC
+							}
+							controller = {
+								tag = PRC
+							}
+						}
 					}
 				}
 			}
 		}
-		localization_key = COMMIE_TOOLTIP_not_a_neigbor_state
+		localization_key = COMMIE_UPRISING_TOOLTIP_not_a_neigbor_state
 	}
 }
 
@@ -34,7 +54,134 @@ defined_text = { # Country
 				}
 			}
 		}
-		localization_key = COMMIE_TOOLTIP_is_jap_puppet_capital
+		localization_key = COMMIE_UPRISING_TOOLTIP_is_jap_puppet_capital
 	}
 	
 }
+defined_text = { # Country
+	name = Getnotnatchi
+	text = {
+		trigger = {
+			NOT = {
+				owner = {
+					NOT = {
+						has_government = communism
+					}
+					OR = {
+						tag = CHI
+						is_warlord = yes
+					}
+				}
+			}
+		}
+		localization_key = COMMIE_UPRISING_TOOLTIP_not_nationalist
+	}
+	
+}
+
+defined_text = { # Country
+	name = Getnopublicsupport
+	text = {
+		trigger = {
+			NOT = {
+				has_state_flag = commie_amassed_support
+			}
+		}
+		localization_key = COMMIE_UPRISING_TOOLTIP_no_public_support
+	}
+	
+}
+
+#get infiltrate or uprising short
+defined_text = { # Country
+	name = Getinforupr
+	text = {
+		trigger = {
+			is_controlled_by_jap_or_its_puppet = yes
+		}
+		localization_key = infiltrate_short
+	}
+	text = {
+		localization_key = uprising_short
+	}
+	
+}
+#get infiltrate or uprising short no in
+defined_text = { # Country
+	name = Getinforuprnoin
+	text = {
+		trigger = {
+			is_controlled_by_jap_or_its_puppet = yes
+		}
+		localization_key = infiltrate_short
+	}
+	text = {
+		localization_key = uprising_short_no_in
+	}
+	
+}
+#is_prepared?#PRC scope
+defined_text = { # Country
+	name = Getpreparedornot
+	text = {
+		trigger = {
+			has_idea = prepared_for_operation
+		}
+		localization_key = prepared_yes
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_idea = prepared_for_operation
+			}
+		}
+		localization_key = prepared_no
+	}
+	
+}
+
+#AMASS SUPPORT
+
+defined_text = { # Country
+	name = Getownernatorjap
+	text = {
+		trigger = {
+			is_owned_by_jap_or_its_puppet = yes
+		}
+		localization_key = COMMIE_SUPPORT_TOOLTIP_jap_owner
+	}
+	text = {
+		localization_key = COMMIE_SUPPORT_TOOLTIP_nationalist_owner
+	}
+}
+defined_text = { # Country
+	name = Getsupportavaiblility
+	text = {
+		trigger = {
+			NOT = {
+				has_political_power > 29
+			}
+		}
+		localization_key = COMMIE_SUPPORT_TOOLTIP_not_enough_pp
+	}
+	text = {
+		trigger = {
+			has_political_power > 29
+		}
+		localization_key = COMMIE_SUPPORT_TOOLTIP_enough_pp
+	}
+	
+}
+defined_text = { # Country
+	name = Getalreadysupport
+	text = {
+		trigger = {
+			has_state_flag = commie_amassed_support
+		}
+		localization_key = COMMIE_SUPPORT_TOOLTIP_already_support
+	}
+	
+}
+
+
+

@@ -1,4 +1,6 @@
 scripted_gui = {
+
+	##UPRISING
 	PRC_communist_uprising = {
 	
 		context_type = selected_state_context
@@ -23,8 +25,18 @@ scripted_gui = {
 					set_country_flag = temp_country_flag_uprised
 				}
 				PRC = {
-					transfer_state = PREV
-				}				
+					set_state_owner = PREV
+				}
+				if = {
+					limit = {
+						NOT = {
+							is_controlled_by_jap_or_its_puppet = yes
+						}
+					}
+					PRC = {
+						set_state_controller = PREV
+					}
+				}
 				if = {
 					limit = {
 						PRC = {
@@ -51,10 +63,26 @@ scripted_gui = {
 					division = "name = \"Difang Youji Shi\" division_template = \"Difang Youjidui\" start_experience_factor = 0.4" 
 					owner = PRC
 				}
-					
+				remove_ideas = prepared_for_operation
 				state_event = RCM_communist_uprising.1
 				clr_state_flag = commie_ridden_states
 			}
+			
+			communists_amass_support_click = {
+				PRC = {
+					add_political_power = -30
+					add_war_support = 0.005
+				}
+				set_state_flag = commie_amassed_support
+			}
+			
+			#communists_vandalism_click = {
+			#	PRC = {
+			#		add_political_power = -30
+			#	}
+			#}
+			
+			
 		}
 		
 		triggers = {
@@ -63,10 +91,33 @@ scripted_gui = {
 					is_capital = no
 					is_controlled_by_jap_or_its_puppet = no
 				}
-				any_neighbor_state = {
-					owner = {
-						tag = PRC
+				owner = {
+					NOT = {
+						has_government = communism
 					}
+					OR = {
+						tag = CHI
+						is_warlord = yes
+					}
+				}
+				any_neighbor_state = {
+					AND = {
+						owner = {
+							tag = PRC
+						}
+						controller = {
+							tag = PRC
+						}
+					}
+				}
+				has_state_flag = commie_amassed_support
+			}
+			communists_amass_support_click_enabled = {
+				PRC = {
+					has_political_power > 29
+				}
+				NOT = {
+					has_state_flag = commie_amassed_support
 				}
 			}
 		}
@@ -76,7 +127,7 @@ scripted_gui = {
 		ai_test_scopes = test_enemy_controlled_states
 		ai_test_scopes = test_ally_controlled_states
 		
-		ai_test_interval = 24
+		ai_test_interval = 48
 		ai_test_variance = 0.1
 		
 		ai_enabled = {
@@ -93,6 +144,16 @@ scripted_gui = {
 					factor = 100
 				}
 			}
+			communists_amass_support_click = {
+				ai_will_do = {
+					factor = 100
+				}
+			}
+			#communists_vandalism_click = {
+			#	ai_will_do = {
+			#		factor = 20
+			#	}
+			#}
 		}
 	}
 	

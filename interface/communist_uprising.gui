@@ -27,10 +27,24 @@ guiTypes = {
 		
 		buttonType = {
 			name = "communists_rise_up_in_state" 
-			position = {x=20 y=33}	
+			position = {x=16.5 y=39.5}	
 			spriteType = "GFX_stateview_resistance_button"
-			pdx_tooltip = "COMMIE_TOOLTIP"
-			
+			pdx_tooltip = "COMMIE_UPRISING_TOOLTIP"
+			scale = 1.1
 		}
+		
+		buttonType = {
+			name = "communists_amass_support" 
+			position = {x=62 y=39.5}	
+			spriteType = "GFX_amass_support_button"
+			pdx_tooltip = "COMMIE_SUPPORT_TOOLTIP"
+		}
+		
+		#buttonType = {
+		#	name = "communists_vandalism" 
+		#	position = {x=107.5 y=39.5}	
+		#	spriteType = "GFX_vandalism_button"
+		#	pdx_tooltip = "COMMIE_VANDALISM_TOOLTIP"
+		#}
 	}
 }

@@ -167,14 +167,6 @@ is_legit_china = {
 		}
 		OR = {
 			tag = event_target:WTT_current_china_leader
-			AND = {
-				NOT = {
-					any_country = {
-						is_legit_china_second_trigger = yes
-					}
-				}
-				original_tag = CHI
-			}
 			has_country_flag = im_legit_now
 			OR = {
 				owns_state = 598
@@ -199,39 +191,6 @@ is_legit_china = {
 				tag = NEA
 				has_war_with = CHI
 			}
-		}
-	}
-}
-is_legit_china_second_trigger = {
-	OR = {
-		is_warlord = yes
-		tag = CHI
-		tag = PRC
-	}
-	OR = {
-		has_country_flag = im_legit_now
-		OR = {
-			owns_state = 598
-			AND = {
-				owns_state = 605
-				is_faction_leader = yes
-			}
-			OR = {
-				598 = {
-					owner = {
-						is_subject_of = ROOT
-					}
-				}
-				605 = {
-					owner = {
-						is_subject_of = ROOT
-					}
-				}
-			}
-		}
-		AND = {
-			tag = NEA
-			has_war_with = CHI
 		}
 	}
 }
@@ -440,57 +399,12 @@ ai_cont_foc_prc = { #this is for AI to do continue focus
 			AND = {
 				has_country_flag = j_focus_completed #10 foci completed
 				OR = {
-					AND = { #long march
-						has_completed_focus = PRC_Red_Army_Recovery
-						has_long_march_idea = yes
-					}
-					AND = { #amass
-						has_completed_focus = PRC_North_China_Uprisings
-						any_state = {
-							custom_trigger_tooltip = {
-								tooltip = commie_ridden_states_tt
-								has_state_flag = commie_ridden_states
-							}
-							NOT = {
-								is_owned_by = ROOT
-							}
-							owner = {
-								OR = {
-									is_warlord = yes
-									is_legit_china = yes
-								}
-							}
-						}
-					}
-					AND = { #stage
-						has_completed_focus = PRC_North_China_Uprisings
-						any_state = {
-							custom_trigger_tooltip = {
-								tooltip = commie_ridden_states_tt
-								has_state_flag = commie_ridden_states
-							}
-							is_owned_by = ROOT
-							NOT = {
-								is_controlled_by = ROOT
-							}
-							controller = {
-								OR = {
-									is_warlord = yes
-									is_legit_china = yes
-								}
-							}
-						}
-					}
-					AND = { #TRAIN
-						OR = {
-							has_idea = PRC_no_skilled_personnel_1
-							has_idea = PRC_no_skilled_personnel_2
-							has_idea = PRC_no_skilled_personnel_3
-							has_idea = PRC_no_skilled_personnel_4
-						}
-						has_completed_focus = PRC_Chinese_Academy_of_Sciences
-					}
+					has_idea = PRC_no_skilled_personnel_1
+					has_idea = PRC_no_skilled_personnel_2
+					has_idea = PRC_no_skilled_personnel_3
+					has_idea = PRC_no_skilled_personnel_4
 				}
+				has_completed_focus = PRC_Chinese_Academy_of_Sciences
 			}
 		}
 	}

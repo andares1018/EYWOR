@@ -105,13 +105,14 @@ on_actions = {
 				ROOT = {
 					random_owned_state = {
 						limit = {
-							is_capital_of_japan_puppet = yes
+							is_capital = yes
 						}
 						set_state_flag = hanjian_captured_@ROOT
 						if = {
 							limit = {#NO COMMIE MILITIA/Im already commie LUL #actually nah who cares
 								OR = {
-									NOT = { has_state_flag = commie_ridden_states }
+									NOT = {							has_state_flag = commie_amassed_support 
+									}
 									FROM = {
 										tag = PRC
 									}

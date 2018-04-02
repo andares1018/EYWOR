@@ -286,6 +286,8 @@
  CHI_emergency_bailout_desc:0 "Our economy is suffering from hyperinflation, bailing out the bug banks and companies can help the situation temporarily."
  prince_de_defect:0 "Prince De Defection?"
  prince_de_defect_desc:0 "Prince Demchugdongrub, the leader of the Pailingmiao Council, has shown signs of defection. Maybe we should do something about it.\n--------------\nCompleting §YSplit Pailingmiao Council§! focus in time may stop a complete defection in Inner-Mongolia."
+ prepared_for_operation:0 "Prepared for Operation"
+ prepared_for_operation_desc:0 "We are now well prepared for initiating an partisan campaign to spread our sphere of influence."
  ####COMPANIES#####
  naval_aircraft_agency:0 "Naval Aircraft Agency"
  idea_guangdong_arsenal:0 "Guangdong Arsenal"

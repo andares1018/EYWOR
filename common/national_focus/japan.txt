@@ -1975,33 +1975,24 @@ focus_tree = {
 			#else = {
 				#}
 
-			if = {
+			every_country = {
 				limit = {
-					any_country = {
+					OR = {
+						tag = PRC
 						is_warlord = yes
-						has_war_with = event_target:WTT_current_china_leader
+					}
+					OR = {
+						is_faction_leader = yes
+						is_in_faction = no
+					}
+					has_war_with = event_target:WTT_current_china_leader
+				}
+				ROOT = {
+					create_wargoal = {
+						target = PREV
+						type = puppet_wargoal_focus
 					}
 				}
-				every_country = {
-					limit = {
-						OR = {
-							tag = PRC
-							is_warlord = yes
-						}
-						OR = {
-							is_faction_leader = yes
-							is_in_faction = no
-						}
-						has_war_with = event_target:WTT_current_china_leader
-					}
-					ROOT = {
-						create_wargoal = {
-							target = PREV
-							type = puppet_wargoal_focus
-						}
-					}
-				}
-				
 			}
 			create_wargoal = {
 				target = event_target:WTT_current_china_leader
