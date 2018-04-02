@@ -837,40 +837,7 @@ puppet_reclaim_land = {
 		}
 	}
 }
-set_commie_rebels = {
-	if = {
-		limit = {
-			OR = {
-				controller = {
-					NOT = {
-						OR = {
-							tag = PRC
-							has_government = communism
-							has_government = n_socialism
-							has_country_flag = i_cracked_down_you
-						}
-					}
-				}
-				owner = {
-					NOT = {
-						OR = {
-							tag = PRC
-							has_government = communism
-							has_government = n_socialism
-							has_country_flag = i_cracked_down_you
-						}
-					}
-				}
-			}
-			has_state_flag = commie_ridden_states
-		}
-		set_border_war = yes
-		else = {
-			clr_state_flag = commie_ridden_states
-			set_border_war = no
-		}
-	}
-}
+
 
 capture_collaborators = {
 	hidden_effect = {

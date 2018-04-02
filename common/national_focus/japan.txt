@@ -2001,6 +2001,11 @@ focus_tree = {
 						}
 					}
 				}
+				
+			}
+			create_wargoal = {
+				target = event_target:WTT_current_china_leader
+				type = puppet_wargoal_focus
 			}
 			set_global_flag = jap_war_chi
 			random_other_country = {

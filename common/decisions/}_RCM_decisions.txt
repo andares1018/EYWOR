@@ -1994,3 +1994,225 @@ economy_decisions = {
 	     }
 	}
 }
+RCM_communist_infiltration = {
+	send_in_the_partisans = {
+	     icon = infiltrate_state
+	     fire_only_once = no
+	     #days_remove = 75 # Stays for 5 days before being removed
+	     #days_re_enable = 5 # Will show up in the interface and can be selected again after 5 days
+	     #cost = 75
+	     highlight_states = { #These states will be highlighted
+
+	     }
+	     visible = { #can see
+	          tag = PRC
+			#has_country_flag = communist_infiltration
+			any_state = {
+				owner = {
+					NOT = {
+						tag = ROOT
+					}
+				}
+				is_north_china_state_for_liberation = yes
+				any_neighbor_state = {
+					OR = {
+						has_state_flag = commie_ridden_states
+						owner = {
+							tag = ROOT
+						}
+					}
+				}
+				NOT = {
+					has_state_flag = commie_ridden_states
+				}
+			}
+	     }
+	     available = { #can do
+			any_state = {
+				owner = {
+					NOT = {
+						tag = ROOT
+					}
+				}
+				is_north_china_state_for_liberation = yes
+				any_neighbor_state = {
+					OR = {
+						has_state_flag = commie_ridden_states
+						owner = {
+							tag = ROOT
+						}
+					}
+				}
+				NOT = {
+					has_state_flag = commie_ridden_states
+				}
+			}
+			has_equipment = {
+				infantry_equipment > 499
+			}
+			has_manpower > 2000
+	     }
+	     complete_effect = { #run effect on selection
+
+	     }
+	     remove_trigger = { #will run remove effect and abort
+
+	     }
+	     remove_effect = { #run effect when removed/finished
+			every_state = {
+				limit = {
+					is_north_china_state_for_liberation = yes
+					any_neighbor_state = {
+						OR = {
+							has_state_flag = commie_ridden_states
+							owner = {
+								tag = ROOT
+							}
+						}
+					}
+					NOT = {
+						has_state_flag = commie_ridden_states
+					}
+				}
+				custom_effect_tooltip = commie_ridden_states_start_tt
+				hidden_effect = {
+					set_border_war = yes
+					set_state_flag = commie_ridden_states
+				}
+
+			}
+			ROOT = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -500
+				}
+				add_manpower = -2000
+			}
+	     }
+	     cancel_trigger = { #will abort
+
+	     }
+	     modifier = { #active during the course of the decision
+			political_power_gain = -0.25
+	     }
+	     ai_will_do = {
+	          factor = 100
+	     }
+	}
+	contact_the_partisans = {
+	     icon = infiltrate_state
+	     fire_only_once = no
+	     #days_remove = 75 # Stays for 5 days before being removed
+	     #days_re_enable = 5 # Will show up in the interface and can be selected again after 5 days
+	     cost = 75
+	     highlight_states = { #These states will be highlighted
+
+	     }
+	     visible = { #can see
+	          tag = PRC
+			608 = {
+				OR = {
+					is_owned_by = ROOT
+					has_state_flag = commie_ridden_states
+				}
+			}
+			#has_country_flag = communist_infiltration
+			any_state = {
+				owner = {
+					NOT = {
+						tag = ROOT
+					}
+				}
+				is_MAN_state_for_liberation = yes
+				any_neighbor_state = {
+					OR = {
+						has_state_flag = commie_ridden_states
+						owner = {
+							tag = ROOT
+						}
+					}
+				}
+				NOT = {
+					has_state_flag = commie_ridden_states
+				}
+			}
+
+	     }
+	     available = { #can do
+			608 = {
+				OR = {
+					is_owned_by = ROOT
+					has_state_flag = commie_ridden_states
+				}
+			}
+			any_state = {
+				owner = {
+					NOT = {
+						tag = ROOT
+					}
+				}
+				is_MAN_state_for_liberation = yes
+				any_neighbor_state = {
+					OR = {
+						has_state_flag = commie_ridden_states
+						owner = {
+							tag = ROOT
+						}
+					}
+				}
+				NOT = {
+					has_state_flag = commie_ridden_states
+				}
+			}
+			has_equipment = {
+				infantry_equipment > 499
+			}
+			has_manpower > 200
+	     }
+	     complete_effect = { #run effect on selection
+
+	     }
+	     remove_trigger = { #will run remove effect and abort
+
+	     }
+	     remove_effect = { #run effect when removed/finished
+			every_state = {
+				limit = {
+					is_MAN_state_for_liberation = yes
+					any_neighbor_state = {
+						OR = {
+							has_state_flag = commie_ridden_states
+							owner = {
+								tag = ROOT
+							}
+						}
+					}
+					NOT = {
+						has_state_flag = commie_ridden_states
+					}
+				}
+				custom_effect_tooltip = commie_ridden_states_start_tt
+				hidden_effect = {
+					set_border_war = yes
+					set_state_flag = commie_ridden_states
+				}
+			}
+			ROOT = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -50
+				}
+				add_manpower = -200
+			}
+	     }
+	     cancel_trigger = { #will abort
+
+	     }
+	     modifier = { #active during the course of the decision
+			political_power_gain = -0.25
+	     }
+	     ai_will_do = {
+	          factor = 100
+	     }
+	}
+}

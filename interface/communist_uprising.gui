@@ -1,0 +1,36 @@
+
+guiTypes = {
+	
+	containerWindowType = {
+		name = "PRC_communist_uprising_container"
+		position = {x=436 y=506}
+		size = { width=270 height=280 }
+
+		fade_time = 300
+		fade_type = linear
+		moveable = no
+		
+		background = {
+			name = "Background"
+			spriteType = "GFX_select_state_view"
+		}
+
+		instantTextboxType = {
+			name = "title"
+			position = {x=14 y=6}
+			font = "hoi_18mbs"
+			text = "[This.GetName]"
+			maxWidth = 340
+			maxHeight = 23
+			format = left
+		}
+		
+		buttonType = {
+			name = "communists_rise_up_in_state" 
+			position = {x=20 y=33}	
+			spriteType = "GFX_stateview_resistance_button"
+			pdx_tooltip = "COMMIE_TOOLTIP"
+			
+		}
+	}
+}

@@ -156,9 +156,10 @@ on_actions = {
 	on_subject_annexed = {
 		#MODDEDv
 		effect = {
-			FROM = {
-				country_event = { days = 10 id = core.1 }				
-			}
+			
+			#FROM = {
+			#	country_event = { days = 10 id = core.1 }				
+			#}
 		}
 		#MODDED^
 	}
@@ -473,6 +474,19 @@ on_actions = {
 				retire_country_leader = yes
 			}
 			#MODDED^
+		}
+	}
+	on_annex = {
+		effect = {
+			
+		}
+	}
+	on_state_control_changed = {
+		effect = {
+		}
+	}
+	on_uncapitulation = {
+		effect = {
 		}
 	}
 }

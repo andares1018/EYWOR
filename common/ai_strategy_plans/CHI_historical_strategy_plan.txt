@@ -21,7 +21,7 @@ CHI_nationalist_historical_plan = {
 	}
 
 	ai_national_focuses = {
-		CHI_forced_loans
+		CHI_government_bailout_focus
 		an_inch_of_mountain_an_inch_of_blood
 		peace_with_japan
 		CHI_split_plm_focus

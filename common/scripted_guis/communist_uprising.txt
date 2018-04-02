@@ -1,0 +1,100 @@
+scripted_gui = {
+	PRC_communist_uprising = {
+	
+		context_type = selected_state_context
+		
+		window_name = "PRC_communist_uprising_container"
+		
+		visible = {
+			ROOT = {
+               tag = PRC
+			   #has_country_flag = commie_rises_up
+			}
+			has_state_flag = commie_ridden_states
+		}
+		
+		effects = {
+			communists_rise_up_in_state_click = {
+				owner = {
+					country_event = RCM_communist_uprising_country.1
+					
+				}
+				owner = {
+					set_country_flag = temp_country_flag_uprised
+				}
+				PRC = {
+					transfer_state = PREV
+				}				
+				if = {
+					limit = {
+						PRC = {
+							NOT = {
+								has_country_flag = has_partisan_template
+							}
+						}
+					}
+					
+					PRC = {
+						division_template = {
+							name = "Difang Youjidui"
+							regiments = {
+								infantry = { x = 0 y = 0 }
+								infantry = { x = 0 y = 1 }
+								infantry = { x = 1 y = 0 }
+								infantry = { x = 1 y = 1 }
+							}
+						}
+						set_country_flag = has_partisan_template
+					}
+				}
+				create_unit = { 
+					division = "name = \"Difang Youji Shi\" division_template = \"Difang Youjidui\" start_experience_factor = 0.4" 
+					owner = PRC
+				}
+					
+				state_event = RCM_communist_uprising.1
+				clr_state_flag = commie_ridden_states
+			}
+		}
+		
+		triggers = {
+			communists_rise_up_in_state_click_enabled = {
+				OR = {
+					is_capital = no
+					is_controlled_by_jap_or_its_puppet = no
+				}
+				any_neighbor_state = {
+					owner = {
+						tag = PRC
+					}
+				}
+			}
+		}
+		
+		#ai_test_parent = "PRC_communist_uprising_container"
+		ai_test_scopes = test_neighbouring_states
+		ai_test_scopes = test_enemy_controlled_states
+		ai_test_scopes = test_ally_controlled_states
+		
+		ai_test_interval = 24
+		ai_test_variance = 0.1
+		
+		ai_enabled = {
+           tag = PRC
+		}
+        
+		ai_check = {
+			
+		}
+		
+		ai_weights = {
+			communists_rise_up_in_state_click = {
+				ai_will_do = {
+					factor = 100
+				}
+			}
+		}
+	}
+	
+}
+

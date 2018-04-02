@@ -288,3 +288,13 @@ check_has_focus_tree_to_switch_to_communism = {
 		}
 	}
 }
+
+PRC_is_not_infiltrating_a_state = {
+	custom_trigger_tooltip = {
+		tooltip = PRC_is_not_infiltrating_a_state
+		NOT = {
+			has_decision = send_in_the_partisans
+			has_decision = contact_the_partisans
+		}
+	}
+}

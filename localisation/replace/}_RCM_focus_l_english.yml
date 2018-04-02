@@ -1,6 +1,6 @@
 ﻿l_english:
- CHI_forced_loans:0 "Government Bailout"
- CHI_forced_loans_desc:0 "The hyper inflation in China is a systemic problem and will hit even harder if we are going into a war. We shall let the experts figure out these problems."
+ CHI_government_bailout_focus:0 "Government Bailout"
+ CHI_government_bailout_focus_desc:0 "The hyper inflation in China is a systemic problem and will hit even harder if we are going into a war. We shall let the experts figure out these problems."
  JAP_liberate_manchuria:0 "Reform Colonial Administration"
  JAP_liberate_manchuria_desc:0 "Much of the militaristic sentiment still exists within the administrations of our colonies, a reform is needed to reclaim our influence there."
  JAP_intervene_in_china:0 "War with China"

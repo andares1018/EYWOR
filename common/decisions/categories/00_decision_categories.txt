@@ -60,6 +60,17 @@ recovery_effort = {
 	icon = generic_communism
 	picture = GFX_decision_cat_picture_chi_infiltration
 }
+RCM_communist_infiltration = {
+	allowed = {
+		tag = PRC
+	}
+	icon = infiltration
+	picture = GFX_decision_cat_picture_chi_infiltration
+}
+RCM_communist_crackdown = {
+	icon = infiltration
+	picture = GFX_decision_cat_picture_chi_infiltration
+}
 national_infra_decision = {
 	icon = generic_prospect_for_resources
 	picture = GFX_decision_cat_generic_mefo_bills

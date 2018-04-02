@@ -9,16 +9,16 @@ country_event = {
 	desc = rcmchina.1.d
 	picture = GFX_report_event_chinese_soldiers_fighting
 	is_triggered_only = yes
-	
-	immediate = { CHI = { set_global_flag = marco_polo } } 
-	option = { # 
+
+	immediate = { CHI = { set_global_flag = marco_polo } }
+	option = { #
 		name = rcmchina.1.a
-		ai_chance = { 
+		ai_chance = {
 			factor = 55
 			modifier = {
 				factor = 60
 				is_historical_focus_on = yes
-			} 
+			}
 		}
 		effect_tooltip = {
 			JAP = { country_event = { days = 5 id = rcmjapan.1 } }
@@ -27,14 +27,14 @@ country_event = {
 			JAP = { country_event = { days = 5 id = rcmjapan.1 } }
 		}
 	}
-	option = { # 
+	option = { #
 		name = rcmchina.1.b
-		ai_chance = { 
+		ai_chance = {
 			factor = 45
 			modifier = {
 				factor = 40
 				is_historical_focus_on = yes
-			} 
+			}
 		}
 		HPC = {
 			country_event = { days = 5 id = hpc.2 }
@@ -45,7 +45,7 @@ country_event = {
 				country_event = { id = rcmjapan.2 }
 			}
 			JAP = {
-				give_guarantee = HPC		
+				give_guarantee = HPC
 			}
 		}
 	}
@@ -134,7 +134,7 @@ country_event = {
 	}
 	immediate = { set_country_flag = CCW_offensive_executed }
 	option = {
-		name = rcmchina.6.a 
+		name = rcmchina.6.a
 		effect_tooltip = {
 			custom_effect_tooltip = rcmchina.6.tt
 			random_list = {
@@ -615,10 +615,10 @@ country_event = {
 					}
 				}
 			}
-			add_to_faction = HPC 
+			add_to_faction = HPC
 			add_to_war = { targeted_alliance = HPC enemy = JAP }
 		}
-		set_global_flag = JAP_attacks_CHI_unites	
+		set_global_flag = JAP_attacks_CHI_unites
 		every_country = {
 			limit = {
 				is_warlord = yes
@@ -632,9 +632,9 @@ country_event = {
 					}
 				}
 				NOT = { has_country_flag = china101_fired }
-				has_global_flag = JAP_attacks_CHI_unites		
+				has_global_flag = JAP_attacks_CHI_unites
 				OR = {
-					HPC = { 
+					HPC = {
 						has_war_with = JAP
 					}
 					any_other_country = {
@@ -663,7 +663,7 @@ country_event = {
 					is_in_faction = no
 					owns_state = 614
 					tag = SHD
-				}		
+				}
 				OR = {
 					has_war = no
 					has_war_with = JAP
@@ -680,15 +680,11 @@ country_event = {
 	desc = rcmchina.101.d
 	picture = GFX_report_event_chinese_officers
 	is_triggered_only = yes
-	#trigger = {
-				
-	#}
+
 	immediate = {
 		set_country_flag = china101_fired
 	}
-	#mean_time_to_happen = {
-	#	days = 0
-	#}
+
 	option = {#join united front (Sichuan)
 		name = rcmchina.101.a
 		ai_chance = {
@@ -721,7 +717,7 @@ country_event = {
 						add_to_faction = ROOT
 					}
 				}
-			}		
+			}
 		}
 		hidden_effect =	{
 			add_popularity = {
@@ -730,13 +726,13 @@ country_event = {
 			}
 		}
 		custom_effect_tooltip = stop_subject_war_end_tt
-		add_to_war = { targeted_alliance = CHI enemy = JAP }	
+		add_to_war = { targeted_alliance = CHI enemy = JAP }
 		hidden_effect = {
 			random_other_country = {
 				limit = {
 					is_legit_china = yes
 				}
-				country_event = { id = rcmchina.106 } 
+				country_event = { id = rcmchina.106 }
 			}
 		}
 	}
@@ -781,21 +777,21 @@ country_event = {
 			#	freedom_level = 0.1
 			#}
 			add_to_war = { targeted_alliance = HPC enemy = JAP }
-		}	
+		}
 		hidden_effect = {
 			random_other_country = {
 				limit = {
 					is_legit_china = yes
 				}
-				country_event = { id = rcmchina.106 } 
+				country_event = { id = rcmchina.106 }
 			}
 		}
 	}
 	option = {
 		name = rcmchina.101.b
-		trigger = { 
-			NOT = { TAG = SHD } 
-			NOT = { TAG = HPC } 
+		trigger = {
+			NOT = { TAG = SHD }
+			NOT = { TAG = HPC }
 		}
 		ai_chance = {
 			base = 0
@@ -813,7 +809,7 @@ country_event = {
 				global_every_army_leader = {
 					limit = {
 						OWNER = { tag = ROOT }
-					} 
+					}
 					set_nationality = PREV
 				}
 			}
@@ -822,8 +818,8 @@ country_event = {
 				limit = {
 					is_legit_china = yes
 				}
-				country_event = { id = rcmchina.103 } 
-				annex_country = { target = ROOT transfer_troops = yes } 
+				country_event = { id = rcmchina.103 }
+				annex_country = { target = ROOT transfer_troops = yes }
 			}
 		}
 	}
@@ -834,7 +830,7 @@ country_event = {
 				TAG = HPC
 				TAG = SHD
 			}
-		} 
+		}
 		ai_chance = {
 			factor = 100
 		}
@@ -844,8 +840,8 @@ country_event = {
 				limit = {
 					is_legit_china = yes
 				}
-				country_event = { id = rcmchina.103 } 
-				annex_country = { target = ROOT transfer_troops = yes } 
+				country_event = { id = rcmchina.103 }
+				annex_country = { target = ROOT transfer_troops = yes }
 			}
 			if = {
 				limit = {
@@ -857,12 +853,12 @@ country_event = {
 					limit = {
 						is_legit_china = yes
 					}
-					annex_country = { target = HPC transfer_troops = yes } 
-					every_owned_state = { remove_core_of = HPC } 
+					annex_country = { target = HPC transfer_troops = yes }
+					every_owned_state = { remove_core_of = HPC }
 					global_every_army_leader = {
 						limit = {
 							OWNER = { tag = ROOT }
-						} 
+						}
 						set_nationality = PREV
 					}
 					set_global_flag = joined_chi_@ROOT
@@ -875,7 +871,7 @@ country_event = {
 						global_every_army_leader = {
 							limit = {
 								OWNER = { tag = ROOT }
-							} 
+							}
 							set_nationality = PREV
 						}
 						set_global_flag = joined_chi_@ROOT
@@ -886,18 +882,18 @@ country_event = {
 	}
 	option = {#do nothing
 		name = rcmchina.101.e
-		trigger = {TAG = HPC } 
+		trigger = {TAG = HPC }
 		ai_chance = {
 			factor = 0
 		}
 	}
 	option = {#do nothing
 		name = rcmchina.101.e
-		trigger = { 
+		trigger = {
 			OR = {
 				TAG = HMI
-				TAG = TNG				
-			} 
+				TAG = TNG
+			}
 		}
 		ai_chance = {
 			factor = 100
@@ -1025,11 +1021,11 @@ country_event = {
 		}
 		#has_war = no
 	}
-	
+
 	immediate = {
 		set_global_flag = CHI_unite_PRC_so_no_more_questions
 	}
-	
+
 	#mean_time_to_happen = {
 	#	days = 3
 	#}
@@ -1044,13 +1040,13 @@ country_event = {
 			country_event = { id = rcmchina.106 }
 			add_to_faction = ROOT
 			PRC = { add_opinion_modifier = { target = PREV modifier = unstable_alliance } }
-			add_opinion_modifier = { target = PRC modifier = unstable_alliance } 
+			add_opinion_modifier = { target = PRC modifier = unstable_alliance }
 			add_to_war = {
 				targeted_alliance = PREV
 				enemy = JAP
 			}
 		}
-		
+
 		if = {
 			limit = { NOT = { has_war_with = SOV } }
 			custom_effect_tooltip = rcmchina.104_PRC_SOV_reinforcements
@@ -1059,8 +1055,8 @@ country_event = {
 		hidden_effect = {
 			set_cosmetic_tag = PRC_SGN
 			if = {
-				limit = { 
-					NOT = { has_war_with = SOV } 
+				limit = {
+					NOT = { has_war_with = SOV }
 					any_other_country = {
 						OR = {
 							tag = ROOT
@@ -1116,7 +1112,7 @@ country_event = {
 				limit = {
 					FROM = {
 						tag = PRC
-					} 
+					}
 				}
 				FROM = {
 					add_to_war = {
@@ -1265,6 +1261,7 @@ country_event = {
 	picture = GFX_report_event_chinese_soldiers
 	fire_only_once = yes
 	trigger = {
+		always = no
 		tag = PRC
 		NOT = {
 			country_exists = CHI

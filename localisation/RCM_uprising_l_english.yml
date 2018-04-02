@@ -1,0 +1,16 @@
+﻿l_english:
+ RCM_communist_uprising.1.t:0 "Communist Uprising in [This.GetName]!"
+ RCM_communist_uprising_country.1.t:0 "Communist Uprising in [From.From.GetName]!"
+ RCM_communist_uprising.1.d:0 "After winning over the people in the region, our comrades in [This.GetName] have been working hard to overthrow the Nationalists government that was still holding on to the place despite its low popularity. However, today our comrades has organized and staged an uprising in the region, and the Nationalist influence there has been successfully expelled. The liberation of China is at our doorstep!"
+ RCM_communist_uprising.1.d_CHI:0 "The communist bandits in [From.From.GetName] has been spreading propaganda against our regional government there for quite some time. Not only that, now they have gone one step futher and launched a treasonous subversion of our regional government and siezed control. The havoc those communist thugs have wreaked is getting our of hand!"
+ RCM_communist_uprising.1.a:0 "For the People!"
+ RCM_communist_uprising.1.b:0 "Outrageous!"
+ RCM_communist_uprising.2.t:0 "Communists Partisan Cracked Down in [This.GetName]"
+ RCM_communist_uprising.2.d:0 "Our comrades in [This.GetName] organizing partisan activities has been cracked down by the Nationalists despite our bes efforts. We need to do something or we might lost all our influence in the region."
+ RCM_communist_uprising.2.d_CHI:0 "Our Army today has successfully cracked down the communist bandits in [This.GetName]. Those destructive havoc-wreakers are taught a great lesson. [This.GetName] should be stable from now on."
+ RCM_communist_uprising.2.a:0 "Oh no!"
+ RCM_communist_uprising.2.b:0 "Great!"
+
+ COMMIE_TOOLTIP:0 "§YLocal Partisans§! will rise up in support of us.\n[This.Getwhetheritscapital][This.Getwhetheritsneighbor]"
+ COMMIE_TOOLTIP_is_jap_puppet_capital:0 "§RYou can't rise up in an enemy's capital.§!\n"
+ COMMIE_TOOLTIP_not_a_neigbor_state:0 "§RYou can only rise up in a neighbor state.\n"

@@ -851,7 +851,6 @@ country_event = {
 				is_core_of = ROOT
 			}
 			ROOT = { set_state_controller = PREV }
-			#ROOT = { transfer_state = PREV } #puppet transfer state active
 		}
 		country_event = { hours = 8 id = rcmjapan.9834 }
 	}
@@ -941,57 +940,46 @@ country_event = {
 			if = {#NO COMMIE MILITIA
 				limit = {
 					NOT = { has_state_flag = commie_ridden_states }
-					#is_MAN_state_for_liberation = yes #WIP
+					NOT = { has_state_flag = commie_amassed_support } #now they gotta amass support before they can take over it directly
 				}
-				#ROOT = { set_state_controller = PREV }
-				#add_core_of = ROOT
-				#else = {
-					ROOT = { transfer_state = PREV }
-				#}
+				add_core_of = ROOT
+				ROOT = { transfer_state = PREV }
 			}
-			#####PRC LIB
-			if = {#COMMIE MILITIA RAMPANT
+			#####COMMUNIST TAKE OVER
+			if = {#COMMIE MILITIA AMASSED SUPPORT
 				limit = {
+					has_state_flag = commie_amassed_support
 					has_state_flag = commie_ridden_states
 				}
-				##
 				PRC = { set_state_controller = PREV }
 				ROOT = { set_state_owner = PREV }
-				##
 				PREV = {
 					clr_state_flag = commie_ridden_states
 				}
-				else = {
-					#####suiyuan workaround
-					if = {
-						limit = {
-							OR = {
-								state = 621 #YES need 763, 打回來易主
-								state = 763
-							}
-							country_exists = SHX
-							NOT = {
-								country_exists = PLM
-							}
-						}
-						SHX = { transfer_state = PREV }
-						else = {
-							if = {
-								limit = {
-									OR = {
-										state = 621 #YES need 763, 打回來易主
-										state = 763
-									}
-									country_exists = PLM
-								}
-								PLM = { set_state_owner = PREV }
-								#else = {
-								#	ROOT = { transfer_state = PREV }
-								#}
-							}
-						}
+			}
+			#####suiyuan workaround
+			else_if = {
+				limit = {
+					OR = {
+						state = 621 #YES need 763, 打回來易主
+						state = 763
+					}
+					country_exists = SHX
+					NOT = {
+						country_exists = PLM
 					}
 				}
+				SHX = { transfer_state = PREV }
+			}
+			else_if = {
+				limit = {
+					OR = {
+						state = 621 #YES need 763, 打回來易主
+						state = 763
+					}
+					country_exists = PLM
+				}
+				PLM = { set_state_owner = PREV }
 			}
 		}
 		country_event = { days = 1 id = rcmjapan.634 }
@@ -1078,7 +1066,7 @@ country_event = {
 		set_country_flag = transfer_state_loop_jap
 	}
 }
-#Expand RRC
+#Expand RRC#semi-obsolete
 country_event = {
 	id = rcmjapan.34
 	title = rcmjapan.34.t
@@ -1200,40 +1188,36 @@ country_event = {
 				}
 				RFM = { transfer_state = PREV }
 			}
-			else = {
-				if = {
+			else_if = {
+				limit = {
+					EHB = { has_country_flag = im_rrc_now }
+				}
+				every_owned_state = {
 					limit = {
-						EHB = { has_country_flag = im_rrc_now }
+						is_controlled_by = JAP
+						is_core_of = EHB
 					}
+					EHB = { transfer_state = PREV }
+				}
+			}
+			else_if = {
+				limit = {
+					HPC = { has_country_flag = im_rrc_now }
+				}
+				every_owned_state = {
+					limit = {
+						is_controlled_by = JAP
+						is_core_of = HPC
+					}
+					HPC = { transfer_state = PREV }
+				}
+				else = {
 					every_owned_state = {
 						limit = {
 							is_controlled_by = JAP
-							is_core_of = EHB
+							is_core_of = RFM
 						}
-						EHB = { transfer_state = PREV }
-					}
-					else = {
-						if = {
-							limit = {
-								HPC = { has_country_flag = im_rrc_now }
-							}
-							every_owned_state = {
-								limit = {
-									is_controlled_by = JAP
-									is_core_of = HPC
-								}
-								HPC = { transfer_state = PREV }
-							}
-							else = {
-								every_owned_state = {
-									limit = {
-										is_controlled_by = JAP
-										is_core_of = RFM
-									}
-									RFM = { transfer_state = PREV }
-								}
-							}
-						}
+						RFM = { transfer_state = PREV }
 					}
 				}
 			}
@@ -1346,6 +1330,7 @@ country_event = {
 		}
 	}
 }
+#hui hui state
 country_event = {
 	id = rcmjapan.535
 	title = rcmjapan.535.t
@@ -1372,7 +1357,6 @@ country_event = {
 		283 = { is_controlled_by_jap_or_its_puppet = yes }
 		792 = { is_controlled_by_jap_or_its_puppet = yes }
 		760 = { is_controlled_by_jap_or_its_puppet = yes }
-		#616 = { is_controlled_by_jap_or_its_puppet = yes }
 		604 = { is_controlled_by_jap_or_its_puppet = yes }
 		790 = { is_controlled_by_jap_or_its_puppet = yes }
 		791 = { is_controlled_by_jap_or_its_puppet = yes }
@@ -1391,7 +1375,6 @@ country_event = {
 			transfer_state = 283
 			transfer_state = 792
 			transfer_state = 760
-			#transfer_state = 616
 			transfer_state = 604
 			transfer_state = 790
 			transfer_state = 791
@@ -1400,7 +1383,6 @@ country_event = {
 			add_state_core = 283
 			add_state_core = 792
 			add_state_core = 760
-			#add_state_core = 616
 			add_state_core = 604
 			add_state_core = 790
 			add_state_core = 791

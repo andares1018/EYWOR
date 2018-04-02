@@ -2196,7 +2196,7 @@ shared_focus = {
 
 	}
 	completion_reward = {
-		unlock_decision_tooltip = CHI_forced_loans
+		unlock_decision_tooltip = CHI_government_bailout_focus
 		custom_effect_tooltip = government_bailout_tt
 	}
 

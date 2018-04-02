@@ -3,7 +3,7 @@
 ###########################
 
 add_namespace = prc
-
+#liangguange PRC and other cliques choose to join or not
 country_event = {
 	id = prc.1
 	title = prc.1.t
@@ -68,6 +68,7 @@ country_event = {
 		}
 	}
 }
+#PRC switch flag
 country_event = {
 	id = prc.2
 	title = prc.2.t

@@ -92,3 +92,13 @@
 
 monetary_reform_decision:0 "Monetary Reform"
 monetary_reform_decision_desc:0 "The Silver Standard economy that has served us for ceturies now due to the shortage of silver it has been rendered obsolete. A monetary reform can help us put our curreny on fiat money."
+
+RCM_communist_infiltration:0 "Partisan Offensive"
+RCM_communist_infiltration_desc:0 "In order to win the war against both the nationalists and the imperialists, a series of partisan activities will be launched against them. Once we've garnered enough support, up we rise!"
+send_in_the_partisans:0 "Send in the Partisans"
+send_in_the_partisans_desc:0 "Partisans activities can disrupt our enemies, and then we can turn the table to our favor later on."
+contact_the_partisans:0 "Contact Guerillas in the Northeast"
+contact_the_partisans_desc:0 "The communist guerilla has fought hard against the evil emperial puppet Manchukuo. Now we had made our progress, it's time to combine our influence."
+
+RCM_communist_crackdown:0 "Crack Down the Partisans"
+RCM_communist_crackdown_desc:0 "The communist partisans have infiltrated our territories during this time of unrest. We need to take action quickly before it's too late. We need to crack them down hard, and sweep every single one of them out of our territories!"

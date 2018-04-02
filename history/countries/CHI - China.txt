@@ -33,9 +33,8 @@ add_ideas = {
 	no_proper_equipment_design
 	the_blueshirts
 	central_club
-	CHI_incompetent_officers
 	CHI_nanking_decade_idea
-	CHI_hyper_inflation_1
+	
 	unstable_economy
 	
 	#internationalism
@@ -45,6 +44,15 @@ add_ideas = {
 	#soviet_german_friendship
 	#communist_pressure
 	#collectivist_ethos_focus
+}
+if = {
+	limit = {
+		has_dlc = "Waking the Tiger"
+	}
+	add_ideas = {
+		CHI_incompetent_officers
+		CHI_hyper_inflation_1
+	}
 }
 
 set_convoys = 40

@@ -1,134 +1,116 @@
 ﻿###########################
 # Chinese Events BORDER WARS ADDED SOUTHERN SHAANXI #ID = 743#
 ###########################
-
-add_namespace = borderwar
-
-# borderwar on annex
-
-country_event = { #NORTH CHINA
-	id = borderwar.1
+add_namespace = borderwar_news
+news_event = { #MAN
+	id = borderwar_news.1
 	hidden = yes
-	is_triggered_only = yes
+	#is_triggered_only = yes
 	trigger = {
+		any_state = {
+			OR = {
+				is_north_china_state_for_liberation = yes
+				is_MAN_state_for_liberation = yes
+			}
+			has_state_flag = commie_ridden_states
+			NOT = {
+				has_state_flag = i_cracked_down_you
+			}
+		}
 		NOT = {
-			has_country_flag = i_cracked_down_you
+			has_country_flag = border_war_marker
 		}
-		country_exists = PRC
 	}
+	#mean_time_to_happen = {
+	#	days = 0
+	#}
 	immediate = {
 		hidden_effect = {
-			597 = {	set_commie_rebels = yes }
-			766 = {	set_commie_rebels = yes }
-			615 = {	set_commie_rebels = yes }
-			789 = {	set_commie_rebels = yes }
-			767 = {	set_commie_rebels = yes }
-			614 = {	set_commie_rebels = yes }
-			608 = {	set_commie_rebels = yes }
-			609 = {	set_commie_rebels = yes }
-			611 = {	set_commie_rebels = yes }
-			802 = {	set_commie_rebels = yes }
-			country_event = {
-				days = 1 id = borderwar.2
+
+			every_state = {
+				limit = {
+					OR = {
+						is_north_china_state_for_liberation = yes
+						is_MAN_state_for_liberation = yes
+					}
+					has_state_flag = commie_ridden_states
+					OR = {
+						controller = {
+							NOT = {
+								OR = {
+									tag = PRC
+									has_government = communism
+									has_government = n_socialism
+								}
+							}
+						}
+						owner = {
+							NOT = {
+								OR = {
+									tag = PRC
+									has_government = communism
+									has_government = n_socialism
+								}
+							}
+						}
+					}
+				}
+				set_border_war = yes
+			}
+			every_state = {
+				limit = {
+					is_border_conflict = yes
+					has_state_flag = commie_ridden_states
+					OR = {
+						NOT = {
+							OR = {
+								OR = {
+									is_north_china_state_for_liberation = yes
+									is_MAN_state_for_liberation = yes
+								}
+								has_state_flag = commie_ridden_states
+							}
+						}
+						OR = {
+							controller = {
+								OR = {
+									tag = PRC
+									has_government = communism
+									has_government = n_socialism
+								}
+							}
+							owner = {
+								OR = {
+									tag = PRC
+									has_government = communism
+									has_government = n_socialism
+								}
+							}
+						}
+					}
+				}
+				clr_state_flag = commie_ridden_states
+				set_border_war = no
+			}
+			set_country_flag = border_war_marker
+			news_event = {
+				days = 1 id = borderwar_news.2
 			}
 		}
 	}
-	option = { 
+	option = {
 	}
 }
-country_event = { #NORTH CHINA
-	id = borderwar.2
+news_event = { #MAN
+	id = borderwar_news.2
 	hidden = yes
 	is_triggered_only = yes
+	#mean_time_to_happen = {
+	#	days = 0
+	#}
 	immediate = {
-		hidden_effect = {
-			766 = {	set_commie_rebels = yes }
-			597 = {	set_commie_rebels = yes }
-			615 = {	set_commie_rebels = yes }
-			789 = {	set_commie_rebels = yes }
-			767 = {	set_commie_rebels = yes }
-			614 = {	set_commie_rebels = yes }
-			608 = {	set_commie_rebels = yes }
-			609 = {	set_commie_rebels = yes }
-			611 = {	set_commie_rebels = yes }
-			802 = {	set_commie_rebels = yes }
-			country_event = {
-				days = 1 id = borderwar.1
-			}
-		}
+		clr_country_flag = border_war_marker
 	}
-	option = { 
-	}
-}
-
-add_namespace = borderwar
-
-# borderwar on annex
-
-country_event = { #MAN
-	id = borderwar.3
-	hidden = yes
-	is_triggered_only = yes
-	trigger = {
-		NOT = {
-			has_country_flag = i_cracked_down_you
-		}
-	}
-	immediate = {
-		hidden_effect = {
-			714 = {	set_commie_rebels = yes }
-			715 = {	set_commie_rebels = yes }
-			716 = {	set_commie_rebels = yes }
-			717 = {	set_commie_rebels = yes }
-			328 = {	set_commie_rebels = yes }
-			774 = {	set_commie_rebels = yes }
-			775 = {	set_commie_rebels = yes }
-			776 = {	set_commie_rebels = yes }
-			777 = {	set_commie_rebels = yes }
-			778 = {	set_commie_rebels = yes }
-			779 = {	set_commie_rebels = yes }
-			780 = {	set_commie_rebels = yes }
-			781 = {	set_commie_rebels = yes }
-			610 = {	set_commie_rebels = yes }
-			757 = {	set_commie_rebels = yes }
-			747 = {	set_commie_rebels = yes }
-			612 = {	set_commie_rebels = yes }
-			country_event = {
-				days = 1 id = borderwar.4
-			}
-		}
-	}
-	option = { 
-	}
-}
-country_event = { #MAN
-	id = borderwar.4
-	hidden = yes
-	is_triggered_only = yes
-	immediate = {
-		hidden_effect = {
-			714 = {	set_commie_rebels = yes }
-			715 = {	set_commie_rebels = yes }
-			716 = {	set_commie_rebels = yes }
-			717 = {	set_commie_rebels = yes }
-			328 = {	set_commie_rebels = yes }
-			774 = {	set_commie_rebels = yes }
-			775 = {	set_commie_rebels = yes }
-			776 = {	set_commie_rebels = yes }
-			777 = {	set_commie_rebels = yes }
-			778 = {	set_commie_rebels = yes }
-			779 = {	set_commie_rebels = yes }
-			780 = {	set_commie_rebels = yes }
-			781 = {	set_commie_rebels = yes }
-			610 = {	set_commie_rebels = yes }
-			757 = {	set_commie_rebels = yes }
-			747 = {	set_commie_rebels = yes }
-			612 = {	set_commie_rebels = yes }
-			country_event = {
-				days = 1 id = borderwar.3
-			}
-		}
-	}
-	option = { 
+	option = {
 	}
 }

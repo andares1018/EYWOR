@@ -127,8 +127,13 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			custom_effect_tooltip = separate_line_tt
-			CHI_hyper_inflation_level_up = yes
+			if = {
+				limit = {
+					has_dlc = "Waking the Tiger"
+				}
+				custom_effect_tooltip = separate_line_tt
+				CHI_hyper_inflation_level_up = yes
+			}			
 		}
 	}
 	focus = {
@@ -4991,8 +4996,13 @@ focus_tree = {
 				remove_idea = unbalanced_industry
 				add_idea = unbalanced_industry_1
 			}
-			custom_effect_tooltip = separate_line_tt
-			CHI_hyper_inflation_level_up = yes
+			if = {
+				limit = {
+					has_dlc = "Waking the Tiger"
+				}
+				custom_effect_tooltip = separate_line_tt
+				CHI_hyper_inflation_level_up = yes
+			}
 		}
 		available = {
 			has_tech = basic_machine_tools
@@ -5039,8 +5049,13 @@ focus_tree = {
 				remove_idea = unbalanced_industry_1
 				add_idea = unbalanced_industry_2
 			}
-			custom_effect_tooltip = separate_line_tt
-			CHI_hyper_inflation_level_up = yes
+			if = {
+				limit = {
+					has_dlc = "Waking the Tiger"
+				}
+				custom_effect_tooltip = separate_line_tt
+				CHI_hyper_inflation_level_up = yes
+			}
 		}
 		available = {
 			has_tech = improved_machine_tools
@@ -5087,8 +5102,13 @@ focus_tree = {
 				remove_idea = unbalanced_industry_2
 				add_idea = unbalanced_industry_3
 			}
-			custom_effect_tooltip = separate_line_tt
-			CHI_hyper_inflation_level_up = yes
+			if = {
+				limit = {
+					has_dlc = "Waking the Tiger"
+				}
+				custom_effect_tooltip = separate_line_tt
+				CHI_hyper_inflation_level_up = yes
+			}
 		}
 		available = {
 			has_tech = advanced_machine_tools
@@ -5126,8 +5146,13 @@ focus_tree = {
 			custom_effect_tooltip = unlock_focus_right
 			remove_ideas = unbalanced_industry_3
 			custom_effect_tooltip = blank_line
-			custom_effect_tooltip = separate_line_tt
-			CHI_hyper_inflation_level_up = yes
+			if = {
+				limit = {
+					has_dlc = "Waking the Tiger"
+				}
+				custom_effect_tooltip = separate_line_tt
+				CHI_hyper_inflation_level_up = yes
+			}
 		}
 		available = {
 			has_war = no
@@ -6249,7 +6274,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = CHI_forced_loans
+		id = CHI_government_bailout_focus
 		icon = GFX_focus_government_bailout
 		cost = 10.00
 		prerequisite = {
@@ -6275,7 +6300,7 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		completion_reward = {
-			unlock_decision_tooltip = CHI_forced_loans
+			unlock_decision_tooltip = CHI_government_bailout_focus
 			custom_effect_tooltip = government_bailout_tt
 		}
 	}

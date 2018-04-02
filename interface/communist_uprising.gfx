@@ -1,0 +1,8 @@
+spriteTypes = {	
+
+	spriteType = {
+		name = "GFX_select_state_view"
+		texturefile = "gfx/interface/select_state_view.dds"
+	}
+			
+}

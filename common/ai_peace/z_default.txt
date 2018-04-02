@@ -50,6 +50,8 @@ default_peace = {
 			NOT = { tag = JAP }
 			NOT = { tag = GXC }
 			NOT = { tag = GUD }
+			NOT = { tag = CHI }
+			NOT = { tag = PRC }
 			#MODDED^
 		}
 
@@ -320,7 +322,9 @@ default_peace = {
 		}
 
 		modifier = {
-			factor = 0		
+		######MODDED
+			factor = 0.01	
+			#####
 			NOT = { FROM = { is_claimed_by = ROOT } }
 			NOT = {
 				FROM = {
