@@ -409,3 +409,4 @@ ai_cont_foc_prc = { #this is for AI to do continue focus
 		}
 	}
 }
+

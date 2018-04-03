@@ -11,50 +11,66 @@ focus_tree = {
 	focus = {
 		id = PRC_East_conquest
 		icon = GFX_focus_SAF_colonialist_crusade
-		cost = 10.00
+		cost = 6.43
 		x = 1
 		y = 0
 		ai_will_do = {
 			factor = 10
 		}
 		select_effect = {
-			country_event = {
-				id = EFM_Comchina.1
+			if = {
+				limit = {
+					has_dlc = "Waking the Tiger"
+				}
+				PRC_border_conflict_SHX_select = yes
+			}
+			else = {
+				country_event = {
+					id = EFM_Comchina.1
+				}
 			}
 		}
 		completion_reward = {
 			for_tracking_ten_comp_foc = yes
 			add_political_power = 60
-			custom_effect_tooltip = a_war_will_be_declared_at_start_of_focus_SHX_tt
-			custom_effect_tooltip = PRC_East_conquest_tt
-			hidden_effect = {
-				if = {
-					limit = {
-						SHX = {
-							OR = {
-								surrender_progress > 0.2
-								exists = no
-							}
-						}
-					}
-					country_event = {
-						id = EFM_Comchina.2
-					}
+			if = {
+				limit = {
+					has_dlc = "Waking the Tiger"
 				}
-				if = {
-					limit = {
-						OR = {
+				PRC_border_conflict_SHX = yes
+			}
+			else = {
+				custom_effect_tooltip = a_war_will_be_declared_at_start_of_focus_SHX_tt
+				custom_effect_tooltip = PRC_East_conquest_tt
+				hidden_effect = {
+					if = {
+						limit = {
 							SHX = {
-								surrender_progress < 0.21
-							}
-							NOT = {
-								has_war_with = SHX
+								OR = {
+									surrender_progress > 0.2
+									exists = no
+								}
 							}
 						}
-						country_exists = SHX
+						country_event = {
+							id = EFM_Comchina.2
+						}
 					}
-					country_event = {
-						id = EFM_Comchina.4
+					if = {
+						limit = {
+							OR = {
+								SHX = {
+									surrender_progress < 0.21
+								}
+								NOT = {
+									has_war_with = SHX
+								}
+							}
+							country_exists = SHX
+						}
+						country_event = {
+							id = EFM_Comchina.4
+						}
 					}
 				}
 			}
@@ -197,7 +213,7 @@ focus_tree = {
 	focus = {
 		id = PRC_Western_expedition
 		icon = GFX_focus_generic_air_defense
-		cost = 10.00
+		cost = 6.43
 		x = 7
 		y = 0
 		ai_will_do = {
@@ -208,50 +224,66 @@ focus_tree = {
 			}
 		}
 		select_effect = {
-			country_event = {
-				id = EFM_Comchina.6
+			if = {
+				limit = {
+					has_dlc = "Waking the Tiger"
+				}
+				PRC_border_conflict_NXM_select = yes
+			}
+			else = {
+				country_event = {
+					id = EFM_Comchina.6
+				}
 			}
 		}
 		completion_reward = {
 			for_tracking_ten_comp_foc = yes
 			add_political_power = 60
-			custom_effect_tooltip = a_war_will_be_declared_at_start_of_focus_NXM_1_tt
-			custom_effect_tooltip = PRC_Western_expedition_tt
-			hidden_effect = {
-				if = {
-					limit = {
-						OR = {
-							760 = {
-								is_controlled_by = PRC
-							}
-							NXM = {
-								exists = no
-							}
-						}
-					}
-					country_event = {
-						id = EFM_Comchina.7
-					}
+			if = {
+				limit = {
+					has_dlc = "Waking the Tiger"
 				}
-				if = {
-					limit = {
-						OR = {
-							NOT = {
+				PRC_border_conflict_NXM = yes
+			}
+			else = {
+				custom_effect_tooltip = a_war_will_be_declared_at_start_of_focus_NXM_1_tt
+				custom_effect_tooltip = PRC_Western_expedition_tt
+				hidden_effect = {
+					if = {
+						limit = {
+							OR = {
 								760 = {
 									is_controlled_by = PRC
 								}
-							}
-							PRC = {
-								surrender_progress > 0.2
-							}
-							NOT = {
-								has_war_with = NXM
+								NXM = {
+									exists = no
+								}
 							}
 						}
-						country_exists = NXM
+						country_event = {
+							id = EFM_Comchina.7
+						}
 					}
-					country_event = {
-						id = EFM_Comchina.9
+					if = {
+						limit = {
+							OR = {
+								NOT = {
+									760 = {
+										is_controlled_by = PRC
+									}
+								}
+								PRC = {
+									surrender_progress > 0.2
+								}
+								NOT = {
+									has_war_with = NXM
+								}
+							}
+							country_exists = NXM
+						}
+						country_event = {
+							id = EFM_Comchina.9
+						}
 					}
 				}
 			}
@@ -1873,7 +1905,6 @@ focus_tree = {
 				}
 				country_event = {
 					id = EFM_Comchina.46
-					days = 0
 				}
 			}
 		}
@@ -2322,63 +2353,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			for_tracking_ten_comp_foc = yes
-			custom_effect_tooltip = enable_amass_upri_focus_tt
-			custom_effect_tooltip = PRC_North_China_Insurgency_tt
+			unlock_decision_category_tooltip = RCM_communist_infiltration
+			custom_effect_tooltip = RCM_communist_infiltration_tt
 			hidden_effect = {
-				every_other_country = {
-					limit = {
-						OR = {
-							tag = CHI
-							is_legit_china = yes
-							is_warlord = yes
-						}
-						has_war_with = JAP
-					}
-					#add_ideas = north_china_turned_red_idea
-					country_event = {
-						id = EFM_Comchina.208
-					}
-				}
-				country_event = {
-					id = borderwar.1
-				}
-				597 = {
-					set_border_war = yes
-				}
-				766 = {
-					set_border_war = yes
-				}
-				615 = {
-					set_border_war = yes
-				}
-				789 = {
-					set_border_war = yes
-				}
-				767 = {
-					set_border_war = yes
-				}
-				614 = {
-					set_border_war = yes
-				}
-				608 = {
-					set_border_war = yes
-				}
-				609 = {
-					set_border_war = yes
-				}
-				611 = {
-					set_border_war = yes
-				}
-				802 = {
-					set_border_war = yes
-				}
-				every_state = {
-					limit = {
-						is_north_china_state_for_liberation = yes
-					}
-					set_state_flag = commie_ridden_states
-				}
-				set_global_flag = north_china_turned_red
+				set_country_flag = communist_infiltration
 			}
 		}
 		available = {
@@ -2407,7 +2385,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PRC_North_China_Uprisings
 		}
-		x = 29
+		x = 30
 		y = 2
 		ai_will_do = {
 			factor = 100
@@ -2475,67 +2453,7 @@ focus_tree = {
 		}
 
 	}
-	focus = {
-		id = PRC_contact_Northeast_AntiJapanese_United_Army
-		icon = GFX_focus_generic_join_comintern
-		cost = 14.29
-		prerequisite = {
-			focus = PRC_North_China_Uprisings
-		}
-		x = 31
-		y = 2
-		ai_will_do = {
-			factor = 100
-		}
-		completion_reward = {
-			for_tracking_ten_comp_foc = yes
-			custom_effect_tooltip = PRC_Manchuria_Insurgency_tt
-			hidden_effect = {
-				every_other_country = {
-					limit = {
-						OR = {
-							tag = CHI
-							is_legit_china = yes
-							is_warlord = yes
-						}
-						has_war_with = JAP
-					}
-					country_event = {
-						days = 5
-						id = EFM_Comchina.209
-					}
-				}
-				country_event = {
-					id = borderwar.3
-				}
-				every_state = {
-					limit = {
-						is_MAN_state_for_liberation = yes
-					}
-					set_state_flag = commie_ridden_states
-				}
-				set_global_flag = dongbei_turned_red
-			}
-		}
-		available = {
-			hidden_trigger = {
-				ai_cont_foc_prc = yes
-			}
-			OR = {
-				SOV = {
-					has_war_with = JAP
-				}
-				owns_state = 608
-			}
-		}
-		bypass = {
-			date > 1940.1.1
-			is_legit_china = yes
-			has_war = no
-			is_subject = no
-		}
-
-	}
+	
 	focus = {
 		id = PRC_PLA
 		icon = GFX_goal_generic_army_doctrines

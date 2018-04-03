@@ -751,6 +751,7 @@ japan_form_CHI_puppets = {
 		timeout_effect = {
 			add_stability = -0.1 #naughty
 		}
+
 	}
 	JAP_form_JNC = {
 		icon = generic_independence
@@ -814,7 +815,7 @@ japan_form_CHI_puppets = {
 			custom_effect_tooltip = JNC_prov_focus
 		}
 		ai_will_do = {
-			factor = 100
+			factor = 2000
 		}
 	}
 
@@ -1225,8 +1226,8 @@ political_actions = {
 		cost = 15
 		#war_with_target_on_remove = no #will give warning (not yet tested)
 		#highlight_states = { #These states will be highlighted
-		#     state =
-		#}
+			#     state =
+			#}
 		visible = { #can see
 			tag = CHI
 			NOT = {
@@ -1397,7 +1398,7 @@ recovery_effort = {
 		}
 		#complete_effect = { #run effect on selection
 
-		#}
+			#}
 		remove_trigger = { #will run remove effect and abort
 			if = {
 				limit = {
@@ -1953,61 +1954,61 @@ national_infra_decision = {
 }
 economy_decisions = {
 	monetary_reform_decision = {
-	     icon = generic_economy
-	     fire_only_once = no
-	     days_remove = 120 # Stays for 5 days before being removed
-	     days_re_enable = 0 # Will show up in the interface and can be selected again after 5 days
-	     cost = 25
-	     highlight_states = { #These states will be highlighted
+		icon = generic_economy
+		fire_only_once = no
+		days_remove = 120 # Stays for 5 days before being removed
+		days_re_enable = 0 # Will show up in the interface and can be selected again after 5 days
+		cost = 25
+		highlight_states = { #These states will be highlighted
 
-	     }
-	     visible = { #can see
-	          has_idea = unstable_economy
+		}
+		visible = { #can see
+			has_idea = unstable_economy
 			OR = {
 				has_completed_focus = CHI_monetary_reform
 				has_completed_focus = WRL_monetary_reform
 			}
-	     }
-	     available = { #can do
-	          has_idea = unstable_economy
-	     }
-	     complete_effect = { #run effect on selection
+		}
+		available = { #can do
+			has_idea = unstable_economy
+		}
+		complete_effect = { #run effect on selection
 			swap_ideas = {
 				remove_idea = unstable_economy
 				add_idea = civilian_economy
 			}
-	     }
-	     remove_trigger = { #will run remove effect and abort
+		}
+		remove_trigger = { #will run remove effect and abort
 
-	     }
-	     remove_effect = { #run effect when removed/finished
+		}
+		remove_effect = { #run effect when removed/finished
 
-	     }
-	     cancel_trigger = { #will abort
+		}
+		cancel_trigger = { #will abort
 
-	     }
-	     modifier = { #active during the course of the decision
-	          consumer_goods_factor = 0.05
-	     }
-	     ai_will_do = {
-	          factor = 2000
-	     }
+		}
+		modifier = { #active during the course of the decision
+			consumer_goods_factor = 0.05
+		}
+		ai_will_do = {
+			factor = 2000
+		}
 	}
 }
 RCM_communist_infiltration = {
 	send_in_the_partisans = {
-	     icon = infiltrate_state
-	     fire_only_once = no
+		icon = infiltrate_state
+		fire_only_once = no
 		cost = 50
-	     #days_remove = 75 # Stays for 5 days before being removed
-	     #days_re_enable = 5 # Will show up in the interface and can be selected again after 5 days
-	     #cost = 75
-	     highlight_states = { #These states will be highlighted
+		days_remove = 50 # Stays for 5 days before being removed
+		days_re_enable = 5 # Will show up in the interface and can be selected again after 5 days
+		cost = 30
+		highlight_states = { #These states will be highlighted
 
-	     }
-	     visible = { #can see
-	          tag = PRC
-			#has_country_flag = communist_infiltration
+		}
+		visible = { #can see
+			tag = PRC
+			has_country_flag = communist_infiltration
 			any_state = {
 				owner = {
 					NOT = {
@@ -2027,20 +2028,20 @@ RCM_communist_infiltration = {
 					has_state_flag = commie_ridden_states
 				}
 			}
-	     }
-	     available = { #can do
+		}
+		available = { #can do
 			has_equipment = {
 				infantry_equipment > 99
 			}
 			has_manpower > 2000
-	     }
-	     complete_effect = { #run effect on selection
+		}
+		complete_effect = { #run effect on selection
 
-	     }
-	     remove_trigger = { #will run remove effect and abort
+		}
+		remove_trigger = { #will run remove effect and abort
 
-	     }
-	     remove_effect = { #run effect when removed/finished
+		}
+		remove_effect = { #run effect when removed/finished
 			every_state = {
 				limit = {
 					is_north_china_state_for_liberation = yes
@@ -2070,28 +2071,28 @@ RCM_communist_infiltration = {
 				}
 				add_manpower = -2000
 			}
-	     }
-	     cancel_trigger = { #will abort
+		}
+		cancel_trigger = { #will abort
 
-	     }
-	     modifier = { #active during the course of the decision
+		}
+		modifier = { #active during the course of the decision
 			political_power_gain = -0.25
-	     }
-	     ai_will_do = {
-	          factor = 100
-	     }
+		}
+		ai_will_do = {
+			factor = 100
+		}
 	}
 	contact_the_partisans = {
-	     icon = infiltrate_state
-	     fire_only_once = no
-	     #days_remove = 75 # Stays for 5 days before being removed
-	     #days_re_enable = 5 # Will show up in the interface and can be selected again after 5 days
-	     cost = 50
-	     highlight_states = { #These states will be highlighted
+		icon = infiltrate_state
+		fire_only_once = no
+		days_remove = 50 # Stays for 5 days before being removed
+		days_re_enable = 5 # Will show up in the interface and can be selected again after 5 days
+		cost = 30
+		highlight_states = { #These states will be highlighted
 
-	     }
-	     visible = { #can see
-	          tag = PRC
+		}
+		visible = { #can see
+			tag = PRC
 			608 = {
 				OR = {
 					is_owned_by = ROOT
@@ -2119,8 +2120,8 @@ RCM_communist_infiltration = {
 				}
 			}
 
-	     }
-	     available = { #can do
+		}
+		available = { #can do
 			608 = {
 				OR = {
 					is_owned_by = ROOT
@@ -2131,14 +2132,14 @@ RCM_communist_infiltration = {
 				infantry_equipment > 49
 			}
 			has_manpower > 200
-	     }
-	     complete_effect = { #run effect on selection
+		}
+		complete_effect = { #run effect on selection
 
-	     }
-	     remove_trigger = { #will run remove effect and abort
+		}
+		remove_trigger = { #will run remove effect and abort
 
-	     }
-	     remove_effect = { #run effect when removed/finished
+		}
+		remove_effect = { #run effect when removed/finished
 			every_state = {
 				limit = {
 					is_MAN_state_for_liberation = yes
@@ -2167,58 +2168,58 @@ RCM_communist_infiltration = {
 				}
 				add_manpower = -200
 			}
-	     }
-	     cancel_trigger = { #will abort
+		}
+		cancel_trigger = { #will abort
 
-	     }
-	     modifier = { #active during the course of the decision
+		}
+		modifier = { #active during the course of the decision
 			political_power_gain = -0.25
-	     }
-	     ai_will_do = {
-	          factor = 100
-	     }
+		}
+		ai_will_do = {
+			factor = 100
+		}
 	}
 	prepared_for_operation_decision = {
-	     icon = generic_political_discourse
-	     fire_only_once = no
-	     days_remove = 50 # Stays for 5 days before being removed
-	     days_re_enable = 0 # Will show up in the interface and can be selected again after 5 days
-	     cost = 25
-	     highlight_states = { #These states will be highlighted
+		icon = generic_political_discourse
+		fire_only_once = no
+		days_remove = 40 # Stays for 5 days before being removed
+		days_re_enable = 0 # Will show up in the interface and can be selected again after 5 days
+		cost = 25
+		highlight_states = { #These states will be highlighted
 
-	     }
-	     visible = { #can see
-	          tag = PRC
-			#has_country_flag = communist_infiltration
+		}
+		visible = { #can see
+			tag = PRC
+			has_country_flag = communist_infiltration
 
-	     }
-	     available = { #can do
-	          has_war_with = JAP
+		}
+		available = { #can do
+			has_war_with = JAP
 			has_war_together_with = event_target:WTT_current_china_leader
 			NOT = {
 				has_idea = prepared_for_operation
 			}
-	     }
-	     complete_effect = { #run effect on selection
+		}
+		complete_effect = { #run effect on selection
 
-	     }
-	     remove_trigger = { #will run remove effect and abort
+		}
+		remove_trigger = { #will run remove effect and abort
 
-	     }
-	     remove_effect = { #run effect when removed/finished
-	          hidden_effect = {
+		}
+		remove_effect = { #run effect when removed/finished
+			hidden_effect = {
 				add_ideas = prepared_for_operation
 			}
 			custom_effect_tooltip = prepared_for_operation_tt
 		}
-	     cancel_trigger = { #will abort
+		cancel_trigger = { #will abort
 
-	     }
-	     modifier = { #active during the course of the decision
-	          political_power_gain = -0.1
-	     }
-	     ai_will_do = {
-	          factor = 200
-	     }
+		}
+		modifier = { #active during the course of the decision
+			political_power_gain = -0.1
+		}
+		ai_will_do = {
+			factor = 200
+		}
 	}
 }

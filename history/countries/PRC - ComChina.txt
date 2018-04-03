@@ -7,6 +7,7 @@ set_technology = {
 	infantry_weapons = 1
 	mass_assault = 1
 }
+set_stability = 0.7
 set_war_support = 0.7
 add_timed_idea = { idea = Chinese_Red_Army days = 295 }
 
@@ -154,7 +155,7 @@ set_politics = {
 add_ideas = {
 	closed_economy
 	extensive_conscription
-	war_economy
+	partial_economic_mobilisation
 	#one_last_stand
 	#PRC_Mobile_Warfare
 	PRC_Isolated_status

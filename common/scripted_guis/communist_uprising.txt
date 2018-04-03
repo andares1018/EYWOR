@@ -17,9 +17,17 @@ scripted_gui = {
 		
 		effects = {
 			communists_rise_up_in_state_click = {
-				owner = {
+				every_country = {
+					limit = {
+						OR = {
+							is_warlord = yes
+							tag = CHI
+						}
+						NOT = {
+							has_government = communism
+						}
+					}
 					country_event = RCM_communist_uprising_country.1
-					
 				}
 				owner = {
 					set_country_flag = temp_country_flag_uprised
@@ -34,7 +42,7 @@ scripted_gui = {
 						}
 					}
 					PRC = {
-						set_state_controller = PREV
+						transfer_state = PREV
 					}
 				}
 				if = {
@@ -63,9 +71,11 @@ scripted_gui = {
 					division = "name = \"Difang Youji Shi\" division_template = \"Difang Youjidui\" start_experience_factor = 0.4" 
 					owner = PRC
 				}
-				remove_ideas = prepared_for_operation
 				state_event = RCM_communist_uprising.1
 				clr_state_flag = commie_ridden_states
+				PRC = {
+					remove_ideas = prepared_for_operation
+				}
 			}
 			
 			communists_amass_support_click = {
@@ -87,6 +97,9 @@ scripted_gui = {
 		
 		triggers = {
 			communists_rise_up_in_state_click_enabled = {
+				PRC = {
+					has_idea = prepared_for_operation
+				}
 				OR = {
 					is_capital = no
 					is_controlled_by_jap_or_its_puppet = no
@@ -101,13 +114,11 @@ scripted_gui = {
 					}
 				}
 				any_neighbor_state = {
-					AND = {
-						owner = {
-							tag = PRC
-						}
-						controller = {
-							tag = PRC
-						}
+					owner = {
+						tag = PRC
+					}
+					controller = {
+						tag = PRC
 					}
 				}
 				has_state_flag = commie_amassed_support

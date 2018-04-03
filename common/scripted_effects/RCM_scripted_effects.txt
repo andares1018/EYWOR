@@ -1284,3 +1284,258 @@ reenable_duration = {
 		custom_effect_tooltip = infra_tier_1_tt
 	}
 }
+
+PRC_border_conflict_NXM_select = {
+	hidden_effect = {
+		NXM = { add_opinion_modifier = { target = ROOT modifier = border_conflict_started } }
+		NXM = { OVERLORD = { add_opinion_modifier = { target = ROOT modifier = border_conflict_started_overlord } } }
+		every_country = { 
+			limit = { has_guaranteed = NXM }
+			add_opinion_modifier = { target = ROOT modifier = border_conflict_started_overlord }
+		}
+	}
+	if = {
+		limit = { has_government = democratic }
+		ROOT = { add_popularity = { ideology = democratic popularity = -0.02 } }
+	}
+	hidden_effect = {
+		random_state = {
+			limit = {
+				is_owned_and_controlled_by = NXM
+				OR = {
+					AND = {
+						ROOT = { is_ai = yes }
+						OR = {
+							is_core_of = ROOT
+							is_claimed_by = ROOT
+						}
+					}
+					
+					ROOT = { is_ai = no }
+				}
+				
+				set_temp_variable = { test_defender_state_temp = id }
+				hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
+				any_neighbor_state = {
+					hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
+					set_temp_variable = { test_attacker_state_temp = id }
+					ROOT = {
+						divisions_in_border_state = {
+							state = var:test_attacker_state_temp
+							border_state = var:test_defender_state_temp
+							size > 0
+						}
+					}
+					is_fully_controlled_by = ROOT
+				}
+			}
+			save_event_target_as = defender_state
+			set_variable = { NXM.defender_state_vs_@ROOT = id }
+			set_temp_variable = { defender_state_temp = id }
+			set_state_flag = border_incident_active
+		}
+		random_state = {
+			limit = {
+				is_fully_controlled_by = ROOT
+				hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
+				set_temp_variable = { attack_dir_state_temp = id }
+				ROOT = {
+					divisions_in_border_state = {
+						state = var:attack_dir_state_temp
+						border_state = var:NXM.defender_state_vs_@ROOT
+						size > 0
+					}
+				}
+				
+				any_neighbor_state = {
+					state = var:NXM.defender_state_vs_@ROOT
+				}
+			}
+			save_event_target_as = attacker_state
+			set_variable = { NXM.attacker_state_vs_@ROOT = id }
+			set_temp_variable = { attacker_state_temp = id }
+			set_state_flag = border_incident_active
+		}
+	}
+	custom_effect_tooltip = RCM_border_incident_delay_until_new_incident_180
+	NXM = {
+		country_event = { id = RCM_border_incident_defender_warning.1 hours = 1 }
+		activate_targeted_decision = { target = ROOT decision = RCM_border_conflict_incident_warning_defender }				
+	}
+}
+PRC_border_conflict_NXM = {
+	hidden_effect = {
+		var:NXM.defender_state_vs_@ROOT = {
+			save_event_target_as = defender_state 
+		}
+		var:NXM.attacker_state_vs_@ROOT = {
+			save_event_target_as = attacker_state 
+		}
+		random_state = {
+			limit = {
+				is_owned_and_controlled_by = NXM
+				OR = {
+					AND = {
+						ROOT = { is_ai = yes }
+						OR = {
+							is_core_of = ROOT
+							is_claimed_by = ROOT
+						}
+					}
+					
+					ROOT = { is_ai = no }
+				}
+				
+				hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
+				any_neighbor_state = {
+					is_fully_controlled_by = ROOT
+					has_ROOT_at_least_1_div_in_current_state_scope = yes
+					hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
+				}
+			}
+			set_temp_variable = { defender_state_temp = id }
+		}
+		random_state = {
+			limit = {
+				is_fully_controlled_by = ROOT
+				hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
+				has_ROOT_at_least_1_div_in_current_state_scope = yes
+				any_neighbor_state = {
+					state = var:NXM.defender_state_vs_@ROOT
+				}
+			}
+			set_temp_variable = { attacker_state_temp = id }
+		}
+	}
+	activate_targeted_decision = {
+		target = NXM
+		decision = RCM_escalate_incident_to_border_conflict
+	}
+}
+PRC_border_conflict_SHX_select = {
+	hidden_effect = {
+		SHX = { add_opinion_modifier = { target = ROOT modifier = border_conflict_started } }
+		SHX = { OVERLORD = { add_opinion_modifier = { target = ROOT modifier = border_conflict_started_overlord } } }
+		every_country = { 
+			limit = { has_guaranteed = SHX }
+			add_opinion_modifier = { target = ROOT modifier = border_conflict_started_overlord }
+		}
+	}
+	if = {
+		limit = { has_government = democratic }
+		ROOT = { add_popularity = { ideology = democratic popularity = -0.02 } }
+	}
+	hidden_effect = {
+		random_state = {
+			limit = {
+				is_owned_and_controlled_by = SHX
+				OR = {
+					AND = {
+						ROOT = { is_ai = yes }
+						OR = {
+							is_core_of = ROOT
+							is_claimed_by = ROOT
+						}
+					}
+					
+					ROOT = { is_ai = no }
+				}
+				
+				set_temp_variable = { test_defender_state_temp = id }
+				hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
+				any_neighbor_state = {
+					hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
+					set_temp_variable = { test_attacker_state_temp = id }
+					ROOT = {
+						divisions_in_border_state = {
+							state = var:test_attacker_state_temp
+							border_state = var:test_defender_state_temp
+							size > 0
+						}
+					}
+					is_fully_controlled_by = ROOT
+				}
+			}
+			save_event_target_as = defender_state
+			set_variable = { SHX.defender_state_vs_@ROOT = id }
+			set_temp_variable = { defender_state_temp = id }
+			set_state_flag = border_incident_active
+		}
+		random_state = {
+			limit = {
+				is_fully_controlled_by = ROOT
+				hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
+				set_temp_variable = { attack_dir_state_temp = id }
+				ROOT = {
+					divisions_in_border_state = {
+						state = var:attack_dir_state_temp
+						border_state = var:SHX.defender_state_vs_@ROOT
+						size > 0
+					}
+				}
+				
+				any_neighbor_state = {
+					state = var:SHX.defender_state_vs_@ROOT
+				}
+			}
+			save_event_target_as = attacker_state
+			set_variable = { SHX.attacker_state_vs_@ROOT = id }
+			set_temp_variable = { attacker_state_temp = id }
+			set_state_flag = border_incident_active
+		}
+	}
+	custom_effect_tooltip = RCM_border_incident_delay_until_new_incident_180
+	SHX = {
+		country_event = { id = RCM_border_incident_defender_warning.1 hours = 1 }
+		activate_targeted_decision = { target = ROOT decision = RCM_border_conflict_incident_warning_defender }				
+	}
+}
+PRC_border_conflict_SHX = {
+	hidden_effect = {
+		var:SHX.defender_state_vs_@ROOT = {
+			save_event_target_as = defender_state 
+		}
+		var:SHX.attacker_state_vs_@ROOT = {
+			save_event_target_as = attacker_state 
+		}
+		random_state = {
+			limit = {
+				is_owned_and_controlled_by = SHX
+				OR = {
+					AND = {
+						ROOT = { is_ai = yes }
+						OR = {
+							is_core_of = ROOT
+							is_claimed_by = ROOT
+						}
+					}
+					
+					ROOT = { is_ai = no }
+				}
+				
+				hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
+				any_neighbor_state = {
+					is_fully_controlled_by = ROOT
+					has_ROOT_at_least_1_div_in_current_state_scope = yes
+					hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
+				}
+			}
+			set_temp_variable = { defender_state_temp = id }
+		}
+		random_state = {
+			limit = {
+				is_fully_controlled_by = ROOT
+				hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
+				has_ROOT_at_least_1_div_in_current_state_scope = yes
+				any_neighbor_state = {
+					state = var:SHX.defender_state_vs_@ROOT
+				}
+			}
+			set_temp_variable = { attacker_state_temp = id }
+		}
+	}
+	activate_targeted_decision = {
+		target = SHX
+		decision = RCM_escalate_incident_to_border_conflict
+	}
+}

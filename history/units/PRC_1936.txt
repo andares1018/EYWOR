@@ -30,7 +30,7 @@ units = {
 		location = 7208
 		division_template = "Renmin Jundui"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.7
+		start_equipment_factor = 0.9
 
 	}
 	division = {
@@ -38,7 +38,7 @@ units = {
 		location = 8049
 		division_template = "Renmin Jundui"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.7
+		start_equipment_factor = 0.9
 
 	}
 	division = {
@@ -46,7 +46,31 @@ units = {
 		location = 517
 		division_template = "Renmin Jundui"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.7
+		start_equipment_factor = 0.9
+
+	}
+	division = {
+		name = "130 Bubing Shi"
+		location = 517
+		division_template = "Renmin Jundui"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+
+	}
+	division = {
+		name = "131 Bubing Shi"
+		location = 517
+		division_template = "Renmin Jundui"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+
+	}
+	division = {
+		name = "132 Bubing Shi"
+		location = 517
+		division_template = "Renmin Jundui"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
 
 	}
 	
@@ -55,48 +79,48 @@ units = {
 		name =  "1 Shensi Juntuán"
 		location = 7208
 		division_template = "Renmin Jundui"		# Provincial militia unit (poor equipment and training)
-		start_equipment_factor = 0.5
+		start_equipment_factor = 0.7
 
 	}
 	division = {
 		name =  "2 Shensi Juntuán"
 		location = 8049
 		division_template = "Renmin Jundui"		# Provincial militia unit (poor equipment and training)
-		start_equipment_factor = 0.5
+		start_equipment_factor = 0.7
 
 	}
 	division = {
 		name =  "3 Shensi Juntuán"
 		location = 517
 		division_template = "Renmin Jundui"		# Provincial militia unit (poor equipment and training)
-		start_equipment_factor = 0.5
+		start_equipment_factor = 0.7
 
 	}
 	division = {
 		name =  "4 Shensi Juntuán"
 		location = 12356
 		division_template = "Renmin Jundui"		# Provincial militia unit (poor equipment and training)
-		start_equipment_factor = 0.5
+		start_equipment_factor = 0.7
 
 	}
 	division = {
 		name =  "5 Shensi Juntuán"
 		location = 12356
 		division_template = "Renmin Jundui"		# Provincial militia unit (poor equipment and training)
-		start_equipment_factor = 0.5
+		start_equipment_factor = 0.7
 	}
 	division = {
 		name =  "5 Shensi Juntuán"
 		location = 12356
 		division_template = "Renmin Jundui"		# Provincial militia unit (poor equipment and training)
-		start_equipment_factor = 0.5
+		start_equipment_factor = 0.7
 
 	}
 	division = {
 		name =  "5 Shensi Juntuán"
 		location = 12356
 		division_template = "Renmin Jundui"		# Provincial militia unit (poor equipment and training)
-		start_equipment_factor = 0.5
+		start_equipment_factor = 0.7
 
 	}
 }
@@ -108,7 +132,7 @@ instant_effect = {
 			type = infantry_equipment_0
 			creator = "PRC"
 		}
-		requested_factories = 2
+		requested_factories = 5
 		progress = 0.33
 		efficiency = 100
 	}

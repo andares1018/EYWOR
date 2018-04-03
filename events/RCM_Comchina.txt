@@ -76,6 +76,8 @@ country_event = {
 	picture = GFX_report_event_chinese_soldiers_02
 	trigger ={
 		tag = PRC
+		country_exists = CHI
+		has_war_with = CHI
 		date < 1939.1.1
 		NOT = {
 			has_idea = Chinese_Red_Army

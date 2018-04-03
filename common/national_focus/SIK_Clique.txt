@@ -1230,7 +1230,7 @@ focus_tree = {
 		completion_reward = {
 			country_event = {
 				id = Sinkiang.78
-				days = 0
+				
 			}
 		}
 		available = {
@@ -1569,7 +1569,7 @@ focus_tree = {
 		completion_reward = {
 			country_event = {
 				id = Sinkiang.25
-				days = 0
+				
 			}
 		}
 		available = {
@@ -2258,7 +2258,7 @@ focus_tree = {
 		completion_reward = {
 			country_event = {
 				id = Sinkiang.35
-				days = 0
+				
 			}
 		}
 		available = {
