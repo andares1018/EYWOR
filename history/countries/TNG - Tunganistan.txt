@@ -7,6 +7,10 @@ set_technology = {
 	infantry_weapons = 1
 	mass_assault = 1
 }
+add_opinion_modifier = {
+	target = PRC
+	modifier = hostile_status
+}
 add_ideas = MON_nomadic
 1939.1.1 = {
 

@@ -2,7 +2,6 @@
 ai_historical_focus_list_CHI = {
 	ai_national_focuses = {
 		an_inch_of_mountain_an_inch_of_blood
-		peace_with_japan
 		CHI_split_plm_focus
 		CHI_monetary_reform
 		big_rear_plan
@@ -20,13 +19,15 @@ ai_historical_focus_list_CHI = {
 		CHI_industry_focus
 		last-ditch_effort
 		CHI_pressure_xinjiang
-		#CHI_offer_xinjiang
+		#
 		national_poltical_council
 		constit_draft_focus
+		CHI_offer_xinjiang
 		assembly_of_the_constutients
 		CHI_nationalize_industry_focus
 		CHI_nationalize_industry_ii_focus
 		CHI_nationalize_industry_iii_focus
+
 	}
 }
 

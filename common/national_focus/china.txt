@@ -11,7 +11,7 @@ focus_tree = {
 	focus = {
 		id = CHI_attack_com
 		icon = GFX_focus_ger_bulwark_against_bolshevism
-		cost = 5.00
+		cost = 10.00
 		mutually_exclusive = {
 			focus = CHI_peace_com
 		}
@@ -152,7 +152,7 @@ focus_tree = {
 	focus = {
 		id = CHI_split_plm_focus
 		icon = GFX_split_plm_focus
-		cost = 3.57
+		cost = 3.58
 		x = 15
 		y = 2
 		ai_will_do = {

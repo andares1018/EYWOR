@@ -1,4 +1,4 @@
-﻿capital = 790
+﻿capital = 760
 
 oob = "NXM_1936"
 set_stability = 0.7

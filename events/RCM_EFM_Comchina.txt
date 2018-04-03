@@ -265,9 +265,6 @@ country_event = {
 		effect_tooltip = {
 			761 = { set_demilitarized_zone = yes }
 		}
-		set_truce = {
-			target = PRC days = 300
-		}
 		add_political_power = 20
 		add_stability = 0.05
 		set_global_flag = tacit_truce_flag

@@ -2,6 +2,8 @@
 
 oob = "NEA_1936"
 
+set_stability = 0.7
+set_war_support = 0.6
 set_research_slots = 1
 
 set_technology = {
@@ -41,7 +43,11 @@ set_politics = {
 	election_frequency = 48
 	elections_allowed = no
 }
-
+add_ideas = {
+	closed_economy
+	extensive_conscription
+	partial_economic_mobilisation
+}
 
 create_country_leader = {
 	name = "Zhang Xueliang"

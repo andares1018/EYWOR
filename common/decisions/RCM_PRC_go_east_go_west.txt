@@ -96,8 +96,7 @@ RCM_border_clashes = {
 		}
 
 		target_trigger = {
-			is_not_china = yes
-			FROM = { is_not_china = yes }
+			always = no
 		}
 
 		highlight_states = {
