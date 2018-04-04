@@ -106,8 +106,8 @@ country_event = {
 	}
 }
 state_event = {
-	id = RCM_communist_uprising.3.t
-	title = RCM_communist_uprising_country.2.t
+	id = RCM_communist_uprising.3
+	title = RCM_communist_uprising.3.t
 	desc = {
 		text = RCM_communist_uprising_country.2.d
 		trigger = {
@@ -124,14 +124,16 @@ state_event = {
 	}
 	is_triggered_only = yes
 	immediate = {
-		every_other_country = {
-			limit = {
-				OR = {
-					is_warlord = yes
-					tag = CHI
+		owner = {
+			every_other_country = {
+				limit = {
+					OR = {
+						is_warlord = yes
+						tag = CHI
+					}
 				}
+				country_event = RCM_communist_uprising_country.2
 			}
-			country_event = RCM_communist_uprising_country.2
 		}
 	}
 	picture = GFX_report_event_china_flag
@@ -160,6 +162,7 @@ country_event = {
 		NOT = {
 			tag = PRC
 		}
+		is_in_faction_with = event_target:WTT_current_china_leader
 	}
 
 	is_triggered_only = yes
@@ -205,6 +208,15 @@ country_event = {
 			NOT = {
 				TAG = PRC
 			}
+		}
+	}
+	trigger = {
+		NOT = {
+			tag = PRC
+		}
+		OR = {
+			is_in_faction_with = PRC
+			is_in_faction_with = event_target:WTT_current_china_leader
 		}
 	}
 	is_triggered_only = yes

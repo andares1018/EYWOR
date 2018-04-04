@@ -10,6 +10,73 @@ on_actions = {
 			100 = rcmelection.18
 		}
 	}
+	#from is war target
+	on_declare_war = {
+		effect = {
+			if = {
+				limit = {
+					FROM = {
+						OR = {
+							tag = event_target:WTT_current_china_leader
+							AND = {
+								is_legit_china = yes
+								tag = PRC
+							}
+						}
+					}
+					ROOT = {
+						tag = JAP
+					}
+					NOT = {
+						has_country_flag = nineteen_thirtynine_start
+					}
+					NOT = {
+						has_global_flag = jap_war_chi
+					}
+				}
+				
+				news_event = {
+					hours = 1
+					id = news.1303
+				}
+				if = {
+					limit = {
+						any_country = {
+							is_warlord = yes
+							has_war_with = CHI
+						}
+					}
+					FROM = {
+						country_event = {
+							hours = 3 id = rcmchina.331 #emergenecy peace
+						}
+					}
+					else = {
+						FROM = {
+							country_event = {
+								hours = 3 id = rcmchina.100 #form united front
+							}
+						}
+					}
+				}
+				every_other_country = {
+					limit = {
+						OR = {
+							tag = MAN
+							tag = EHB
+							tag = ECA
+						}
+						is_subject_of = JAP
+					}
+					add_to_war = {
+						targeted_alliance = JAP enemy = CHI
+					}
+				}
+				set_global_flag = jap_war_chi
+			}
+		}
+		
+	}
 	on_justifying_wargoal_pulse = {
 		effect = {
 			if = {
@@ -169,7 +236,7 @@ on_actions = {
 	#ROOT = nation being puppeted, FROM = overlord
 	on_puppet = {
 		effect = {
-			#MODDEDv
+			#MODDEDv #this huge section is for Japan to expand its current puppets in PC instead of spamming clique puppets like "yuNNAn eMiPiRe"
 			if = {
 				limit = {
 					TAG = XSM
