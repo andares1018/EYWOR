@@ -13,7 +13,7 @@ CHI_border_clashes = {
 			any_state = {
 				is_owned_and_controlled_by = FROM
 				any_neighbor_state = {
-					is_fulcontrolled_by = ROOT
+					is_fully_controlled_by = ROOT
 					set_temp_variable = { var:attacker_state_temp = id }
 					has_ROOT_at_least_1_div_in_current_state_scope = yes
 					hidden_trigger = { NOT = { has_state_flag = border_incident_active } }

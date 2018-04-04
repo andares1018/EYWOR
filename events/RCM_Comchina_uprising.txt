@@ -3,11 +3,12 @@
 ###########################
 
 add_namespace = RCM_communist_uprising
+#state event triggered upon uprising/infiltrate
 state_event = {
 	id = RCM_communist_uprising.1
 	title = RCM_communist_uprising.1.t
 	desc = RCM_communist_uprising.1.d
-	
+
 
 	picture = GFX_report_event_chinese_soldiers_01
 	hidden = no
@@ -17,8 +18,20 @@ state_event = {
 		owner = {
 			set_country_flag = i_have_been_notified
 		}
+		every_country = {
+			limit = {
+				OR = {
+					is_warlord = yes
+					tag = CHI
+				}
+				NOT = {
+					has_government = communism
+				}
+			}
+			country_event = RCM_communist_uprising_country.1
+		}
 	}
-	
+
 
 
 	option = {
@@ -40,6 +53,7 @@ state_event = {
 		}
 	}
 }
+
 country_event = {
 	id = RCM_communist_uprising.2
 	title = RCM_communist_uprising.2.t
@@ -69,7 +83,7 @@ country_event = {
 	immediate = {
 		#
 	}
-	
+
 
 	option = {
 		name = RCM_communist_uprising.2.a
@@ -88,7 +102,51 @@ country_event = {
 				}
 			}
 		}
-		
+
+	}
+}
+state_event = {
+	id = RCM_communist_uprising.3.t
+	title = RCM_communist_uprising_country.2.t
+	desc = {
+		text = RCM_communist_uprising_country.2.d
+		trigger = {
+			TAG = PRC
+		}
+	}
+	desc = {
+		text = RCM_communist_uprising_country.2.d_CHI
+		trigger = {
+			NOT = {
+				TAG = PRC
+			}
+		}
+	}
+	is_triggered_only = yes
+	immediate = {
+		every_other_country = {
+			limit = {
+				OR = {
+					is_warlord = yes
+					tag = CHI
+				}
+			}
+			country_event = RCM_communist_uprising_country.2
+		}
+	}
+	picture = GFX_report_event_china_flag
+	#fire_only_once = yes
+	option = { #OH YEA!
+		name = RCM_communist_uprising_country.2.a
+		trigger = {
+			TAG = FROM
+		}
+	}
+	option = { #OH NO!
+		name = RCM_communist_uprising_country.2.b
+		trigger = {
+			TAG = PRC
+		}
 	}
 }
 add_namespace = RCM_communist_uprising_country
@@ -129,8 +187,43 @@ country_event = {
 			}
 		}
 	}
-	
+
 }
+#crack down
+country_event = {
+	id = RCM_communist_uprising_country.2
+	title = RCM_communist_uprising_country.2.t
+	desc = {
+		text = RCM_communist_uprising_country.2.d
+		trigger = {
+			TAG = PRC
+		}
+	}
+	desc = {
+		text = RCM_communist_uprising_country.2.d_CHI
+		trigger = {
+			NOT = {
+				TAG = PRC
+			}
+		}
+	}
+	is_triggered_only = yes
+	picture = GFX_report_event_china_flag
+	#fire_only_once = yes
+	option = { #OH YEA!
+		name = RCM_communist_uprising_country.2.a
+		trigger = {
+			TAG = FROM
+		}
+	}
+	option = { #OH NO!
+		name = RCM_communist_uprising_country.2.b
+		trigger = {
+			TAG = PRC
+		}
+	}
+}
+
 
 
 ######BORDER CLASH
@@ -140,14 +233,14 @@ country_event = {
 	id = RCM_border_conflict_won_attacker.1
 	title = RCM_border_conflict_won_attacker.1.t
 	desc = RCM_border_conflict_won_attacker.1.desc
-	
+
 	picture = GFX_report_event_chinese_soldiers_city_ruin
 
 	is_triggered_only = yes
 
 	immediate = {
 		save_event_target_as = our_country
-		FROM = { 
+		FROM = {
 			save_event_target_as = our_state
 			clr_state_flag = border_incident_active
 		}
@@ -158,7 +251,7 @@ country_event = {
 		}
 		remove_targeted_decision = { target = event_target:their_country decision = RCM_border_conflict_time_until_cancelled }
 	}
-	
+
 	option = {
 		name = RCM_border_conflict_won_attacker.1.a
 		add_political_power = 50
@@ -175,7 +268,7 @@ country_event = {
 		else = {
 			FROM.FROM = { ROOT = { annex_country = { target = PREV } } }
 		}
-		
+
 		custom_effect_tooltip = RCM_buildings_damaged
 		hidden_effect = {
 			FROM.FROM.FROM = {
@@ -186,7 +279,7 @@ country_event = {
 				}
 			}
 		}
-	}	
+	}
 }
 
 add_namespace = RCM_border_conflict_won_defender
@@ -195,7 +288,7 @@ country_event = {
 	id = RCM_border_conflict_won_defender.1
 	title = RCM_border_conflict_won_defender.1.t
 	desc = RCM_border_conflict_won_defender.1.desc
-	
+
 	picture = GFX_report_event_chinese_soldiers_mountain
 
 	is_triggered_only = yes
@@ -218,7 +311,7 @@ country_event = {
 			remove_targeted_decision = { target = event_target:their_country decision = RCM_border_conflict_time_until_cancelled }
 		}
 	}
-	
+
 	#Same effect as attacker. Tooltip for their effects
 	option = {
 		name = RCM_border_conflict_won_defender.1.a
@@ -240,7 +333,7 @@ country_event = {
 			}
 			clr_country_flag = show_effect_tooltips
 		}
-	}	
+	}
 }
 
 add_namespace = RCM_border_conflict_lost_attacker
@@ -249,7 +342,7 @@ country_event = {
 	id = RCM_border_conflict_lost_attacker.1
 	title = RCM_border_conflict_lost_attacker.1.t
 	desc = RCM_border_conflict_lost_attacker.1.desc
-	
+
 	picture = GFX_report_event_dead_soldiers
 
 	is_triggered_only = yes
@@ -262,18 +355,18 @@ country_event = {
 		set_country_flag = show_effect_tooltips
 		remove_targeted_decision = { target = event_target:their_country decision = RCM_border_conflict_time_until_cancelled }
 	}
-	
-	#Same effect as defender. Tooltip for their effects	
+
+	#Same effect as defender. Tooltip for their effects
 	option = {
 		name = RCM_border_conflict_lost_attacker.1.a
 		add_political_power = -50
 		army_experience = 10
 		add_war_support = -.02
-		
+
 		### ideology loss
-		
+
 		###
-		
+
 		custom_effect_tooltip = RCM_buildings_damaged
 		hidden_effect = {
 			FROM = {
@@ -300,7 +393,7 @@ country_event = {
 			}
 			clr_country_flag = show_effect_tooltips
 		}
-	}	
+	}
 }
 
 add_namespace = RCM_border_conflict_lost_defender
@@ -309,7 +402,7 @@ country_event = {
 	id = RCM_border_conflict_lost_defender.1
 	title = RCM_border_conflict_lost_defender.1.t
 	desc = RCM_border_conflict_lost_defender.1.desc
-	
+
 	picture = GFX_report_event_dead_soldiers
 
 	is_triggered_only = yes
@@ -332,7 +425,7 @@ country_event = {
 			remove_targeted_decision = { target = event_target:their_country decision = RCM_border_conflict_time_until_cancelled }
 		}
 	}
-	
+
 	#Same effect as attacker. Tooltip for their effects
 	option = {
 		name = RCM_border_conflict_lost_defender.1.a
@@ -352,11 +445,11 @@ country_event = {
 				}
 				else = {
 					FROM.FROM = { annex_country = { target = ROOT } }
-				}				
+				}
 			}
 			clr_country_flag = show_effect_tooltips
 		}
-	}	
+	}
 }
 
 add_namespace = RCM_border_conflict_canceled_attacker
@@ -365,7 +458,7 @@ country_event = {
 	id = RCM_border_conflict_canceled_attacker.1
 	title = RCM_border_conflict_canceled_attacker.1.t
 	desc = RCM_border_conflict_canceled_attacker.1.desc
-	
+
 	picture = GFX_report_event_chinese_soldiers_mountain
 
 	is_triggered_only = yes
@@ -377,7 +470,7 @@ country_event = {
 		FROM.FROM.FROM = { save_event_target_as = their_state }
 		set_country_flag = show_effect_tooltips
 	}
-	
+
 	option = {
 		name = RCM_border_conflict_canceled_attacker.1.a
 		army_experience = 15
@@ -391,7 +484,7 @@ country_event = {
 			}
 			clr_country_flag = show_effect_tooltips
 		}
-	}	
+	}
 }
 
 add_namespace = RCM_border_conflict_canceled_defender
@@ -400,7 +493,7 @@ country_event = {
 	id = RCM_border_conflict_canceled_defender.1
 	title = RCM_border_conflict_canceled_defender.1.t
 	desc = RCM_border_conflict_canceled_defender.1.desc
-	
+
 	picture = GFX_report_event_chinese_soldiers_mountain
 
 	is_triggered_only = yes
@@ -422,7 +515,7 @@ country_event = {
 			clear_variable = defender_state_vs_@FROM.FROM
 		}
 	}
-	
+
 	option = {
 		name = RCM_border_conflict_canceled_defender.1.a
 		army_experience = 30
@@ -436,7 +529,7 @@ country_event = {
 			}
 			clr_country_flag = show_effect_tooltips
 		}
-	}	
+	}
 }
 
 add_namespace = RCM_border_incident_defender_warning
@@ -445,7 +538,7 @@ country_event = {
 	id = RCM_border_incident_defender_warning.1
 	title = RCM_border_incident_defender_warning.1.t
 	desc = RCM_border_incident_defender_warning.1.desc
-	
+
 	picture = GFX_report_event_chinese_soldiers_mountain
 
 	is_triggered_only = yes
@@ -457,10 +550,10 @@ country_event = {
 		save_event_target_as = our_country
 		FROM = { save_event_target_as = their_country }
 	}
-	
+
 	option = {
 		name = RCM_border_incident_defender_warning.1.a
-	}	
+	}
 }
 
 add_namespace = RCM_border_conflict_escalation
@@ -469,7 +562,7 @@ country_event = {
 	id = RCM_border_conflict_escalation.1
 	title = RCM_border_conflict_escalation.1.t
 	desc = RCM_border_conflict_escalation.1.desc
-	
+
 	picture = GFX_report_event_chinese_soldiers_01
 
 	is_triggered_only = yes
@@ -481,10 +574,10 @@ country_event = {
 		save_event_target_as = our_country
 		FROM = { save_event_target_as = their_country }
 	}
-	
+
 	option = {
 		name = RCM_border_conflict_escalation.1.a
-	}	
+	}
 }
 
 add_namespace = RCM_border_conflict_escalate_to_war
@@ -493,7 +586,7 @@ country_event = {
 	id = RCM_border_conflict_escalate_to_war.1
 	title = RCM_border_conflict_escalate_to_war.1.t
 	desc = RCM_border_conflict_escalate_to_war.1.desc
-	
+
 	picture = GFX_report_event_chinese_soldiers
 
 	is_triggered_only = yes
@@ -505,8 +598,8 @@ country_event = {
 		save_event_target_as = our_country
 		FROM = { save_event_target_as = their_country }
 	}
-	
+
 	option = {
 		name = RCM_border_conflict_escalate_to_war.1.a
-	}	
+	}
 }

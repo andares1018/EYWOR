@@ -2000,8 +2000,8 @@ RCM_communist_infiltration = {
 		icon = infiltrate_state
 		fire_only_once = no
 		cost = 50
-		days_remove = 50 # Stays for 5 days before being removed
-		days_re_enable = 5 # Will show up in the interface and can be selected again after 5 days
+		#days_remove = 50 # Stays for 5 days before being removed
+		#days_re_enable = 5 # Will show up in the interface and can be selected again after 5 days
 		cost = 30
 		highlight_states = { #These states will be highlighted
 
@@ -2087,7 +2087,7 @@ RCM_communist_infiltration = {
 		fire_only_once = no
 		days_remove = 50 # Stays for 5 days before being removed
 		days_re_enable = 5 # Will show up in the interface and can be selected again after 5 days
-		cost = 30
+		cost = 75
 		highlight_states = { #These states will be highlighted
 
 		}
@@ -2099,7 +2099,7 @@ RCM_communist_infiltration = {
 					has_state_flag = commie_ridden_states
 				}
 			}
-			#has_country_flag = communist_infiltration
+			has_country_flag = communist_infiltration
 			any_state = {
 				owner = {
 					NOT = {
@@ -2184,7 +2184,7 @@ RCM_communist_infiltration = {
 		fire_only_once = no
 		days_remove = 40 # Stays for 5 days before being removed
 		days_re_enable = 0 # Will show up in the interface and can be selected again after 5 days
-		cost = 25
+		cost = 50
 		highlight_states = { #These states will be highlighted
 
 		}
@@ -2195,7 +2195,9 @@ RCM_communist_infiltration = {
 		}
 		available = { #can do
 			has_war_with = JAP
-			has_war_together_with = event_target:WTT_current_china_leader
+			event_target:WTT_current_china_leader = {
+				has_war_with = JAP
+			}
 			NOT = {
 				has_idea = prepared_for_operation
 			}
@@ -2221,5 +2223,66 @@ RCM_communist_infiltration = {
 		ai_will_do = {
 			factor = 200
 		}
+	}
+	RCM_communist_crackdown_decison = {
+	     icon = generic_political_discourse
+	     fire_only_once = no
+	     #days_remove = 70 # Stays for 5 days before being removed
+	     days_re_enable = 25 # Will show up in the interface and can be selected again after 5 days
+	     cost = 50
+
+		available = { #can do
+
+			any_state = {
+ 			    is_controlled_by = ROOT
+ 			    has_state_flag = commie_ridden_states
+			    set_temp_variable = { communist_crackdown_temp = id }
+		   	}
+	     }
+	     visible = { #can see
+			PRC = {
+				has_government = communism
+			}
+			NOT = {
+				has_government = communism
+			}
+	     	any_state = {
+			    is_controlled_by = ROOT
+			    has_state_flag = commie_ridden_states
+
+
+	     }
+
+
+	     complete_effect = { #run effect on selection
+
+	     }
+		highlight_states = { #These states will be highlighted
+			state = var:communist_crackdown_temp
+	     }
+	     remove_trigger = { #will run remove effect and abort
+
+	     }
+	     remove_effect = { #run effect when removed/finished
+			random_state = {
+				limit = { #can do
+					is_controlled_by = ROOT
+					has_state_flag = commie_ridden_states
+					state = var:communist_crackdown_temp
+			     }
+				state_event = RCM_communist_uprising.3.t
+				clr_state_flag = commie_ridden_states
+				set_border_war = no
+			}
+	     }
+	     cancel_trigger = { #will abort
+
+	     }
+	     modifier = { #active during the course of the decision
+			political_power_gain = -0.1
+	     }
+	     ai_will_do = {
+	          factor = 50
+	     }
 	}
 }

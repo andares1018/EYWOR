@@ -44,7 +44,14 @@ RCM_border_clashes = {
 				}
 			}
 		}
+		days_re_enable = 400
 		visible = {
+			NOT = {
+				AND = {
+					has_completed_focus = PRC_East_conquest
+					has_completed_focus = PRC_Western_expedition
+				}
+			}
 			FROM = { exists = yes }
 			NOT = { has_war_with = FROM }
 			FROM = { has_not_initiated_border_incident_with_ROOT = yes }
@@ -568,7 +575,7 @@ RCM_border_clashes = {
 		}
 
 		fire_only_once = yes #Reactivation handled in effect
-
+		cost = 75
 		complete_effect = {
 			if = {
 				limit = { is_border_conflict_defender_vs_FROM = yes }
@@ -611,7 +618,7 @@ RCM_border_clashes = {
 		icon = decision_generic_ignite_civil_war
 
 		allowed = { always = no } #Activated from effect
-
+		cost = 125
 		visible = {
 			NOT = { has_country_flag = RCM_border_conflict_escalate_to_war_cooldown_@FROM }
 			has_border_war_with = FROM

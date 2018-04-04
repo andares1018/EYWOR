@@ -1,4 +1,8 @@
 RCM_border_clashes = {
 	picture = generic_border_conflicts
-	icon = border_conflicts	
+	icon = border_conflicts
+}
+RCM_communist_crackdown = {
+	picture = generic_border_conflicts
+	icon = border_conflicts
 }

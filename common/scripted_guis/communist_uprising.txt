@@ -2,11 +2,11 @@ scripted_gui = {
 
 	##UPRISING
 	PRC_communist_uprising = {
-	
+
 		context_type = selected_state_context
-		
+
 		window_name = "PRC_communist_uprising_container"
-		
+
 		visible = {
 			ROOT = {
                tag = PRC
@@ -14,21 +14,10 @@ scripted_gui = {
 			}
 			has_state_flag = commie_ridden_states
 		}
-		
+
 		effects = {
 			communists_rise_up_in_state_click = {
-				every_country = {
-					limit = {
-						OR = {
-							is_warlord = yes
-							tag = CHI
-						}
-						NOT = {
-							has_government = communism
-						}
-					}
-					country_event = RCM_communist_uprising_country.1
-				}
+
 				owner = {
 					set_country_flag = temp_country_flag_uprised
 				}
@@ -53,7 +42,7 @@ scripted_gui = {
 							}
 						}
 					}
-					
+
 					PRC = {
 						division_template = {
 							name = "Difang Youjidui"
@@ -67,17 +56,19 @@ scripted_gui = {
 						set_country_flag = has_partisan_template
 					}
 				}
-				create_unit = { 
-					division = "name = \"Difang Youji Shi\" division_template = \"Difang Youjidui\" start_experience_factor = 0.4" 
+				create_unit = {
+					division = "name = \"Difang Youji Shi\" division_template = \"Difang Youjidui\" start_experience_factor = 0.4"
 					owner = PRC
 				}
-				state_event = RCM_communist_uprising.1
+				state_event = {
+					id = RCM_communist_uprising.1
+				}
 				clr_state_flag = commie_ridden_states
 				PRC = {
 					remove_ideas = prepared_for_operation
 				}
 			}
-			
+
 			communists_amass_support_click = {
 				PRC = {
 					add_political_power = -30
@@ -85,16 +76,16 @@ scripted_gui = {
 				}
 				set_state_flag = commie_amassed_support
 			}
-			
+
 			#communists_vandalism_click = {
 			#	PRC = {
 			#		add_political_power = -30
 			#	}
 			#}
-			
-			
+
+
 		}
-		
+
 		triggers = {
 			communists_rise_up_in_state_click_enabled = {
 				PRC = {
@@ -132,23 +123,23 @@ scripted_gui = {
 				}
 			}
 		}
-		
+
 		#ai_test_parent = "PRC_communist_uprising_container"
 		ai_test_scopes = test_neighbouring_states
 		ai_test_scopes = test_enemy_controlled_states
 		ai_test_scopes = test_ally_controlled_states
-		
+
 		ai_test_interval = 48
 		ai_test_variance = 0.1
-		
+
 		ai_enabled = {
            tag = PRC
 		}
-        
+
 		ai_check = {
-			
+
 		}
-		
+
 		ai_weights = {
 			communists_rise_up_in_state_click = {
 				ai_will_do = {
@@ -167,6 +158,5 @@ scripted_gui = {
 			#}
 		}
 	}
-	
-}
 
+}
