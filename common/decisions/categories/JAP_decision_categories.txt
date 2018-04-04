@@ -17,6 +17,7 @@ JAP_southern_expansion = {
 JAP_pacific_guardian = {
 	allowed = {
 		original_tag = JAP
+		has_dlc = "Waking the Tiger"
 	}
 
 	visible = {

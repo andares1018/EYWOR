@@ -1,0 +1,136 @@
+
+############
+#
+#
+# XIBEI
+#
+############
+##########
+	entity = {
+		name = "NXM_sabre_entity"
+		clone = "XSM_sabre_entity"
+	}
+	
+	entity = {
+		name = "NXM_sabre_holder_entity"
+		clone = "XSM_sabre_holder_entity"
+	}
+
+	entity = {
+		name = "NXM_infantry_rider_entity"
+		clone = "XSM_infantry_rider_entity"
+	}
+	
+	entity = {
+		name = "NXM_cavalry_entity"
+		clone = "XSM_cavalry_entity"
+	}
+	
+	entity = {
+		name = "NXM_cavalry_rifle_combined_entity"
+		clone = "XSM_cavalry_rifle_combined_entity"
+		
+	}	
+	
+	entity = {
+		name = "NXM_infantry_2_rider_entity"
+		clone = "XSM_infantry_2_rider_entity"	
+	}
+	
+	entity = {
+		name = "NXM_cavalry_2_entity"
+		clone = "XSM_cavalry_2_entity"
+	}
+	
+	entity = {
+		name = "NXM_cavalry_2_combined_entity"
+		clone = "XSM_cavalry_2_combined_entity"
+		
+		
+	}
+##########
+	entity = {
+		name = "TNG_sabre_entity"
+		clone = "XSM_sabre_entity"
+	}
+	
+	entity = {
+		name = "TNG_sabre_holder_entity"
+		clone = "XSM_sabre_holder_entity"
+	}
+
+	entity = {
+		name = "TNG_infantry_rider_entity"
+		clone = "XSM_infantry_rider_entity"
+	}
+	
+	entity = {
+		name = "TNG_cavalry_entity"
+		clone = "XSM_cavalry_entity"
+	}
+	
+	entity = {
+		name = "TNG_cavalry_rifle_combined_entity"
+		clone = "XSM_cavalry_rifle_combined_entity"
+		
+	}	
+	
+	entity = {
+		name = "TNG_infantry_2_rider_entity"
+		clone = "XSM_infantry_2_rider_entity"	
+	}
+	
+	entity = {
+		name = "TNG_cavalry_2_entity"
+		clone = "XSM_cavalry_2_entity"
+	}
+	
+	entity = {
+		name = "TNG_cavalry_2_combined_entity"
+		clone = "XSM_cavalry_2_combined_entity"
+		
+		
+	}
+##########
+	entity = {
+		name = "HMI_sabre_entity"
+		clone = "XSM_sabre_entity"
+	}
+	
+	entity = {
+		name = "HMI_sabre_holder_entity"
+		clone = "XSM_sabre_holder_entity"
+	}
+
+	entity = {
+		name = "HMI_infantry_rider_entity"
+		clone = "XSM_infantry_rider_entity"
+	}
+	
+	entity = {
+		name = "HMI_cavalry_entity"
+		clone = "XSM_cavalry_entity"
+	}
+	
+	entity = {
+		name = "HMI_cavalry_rifle_combined_entity"
+		clone = "XSM_cavalry_rifle_combined_entity"
+		
+	}	
+	
+	entity = {
+		name = "HMI_infantry_2_rider_entity"
+		clone = "XSM_infantry_2_rider_entity"	
+	}
+	
+	entity = {
+		name = "HMI_cavalry_2_entity"
+		clone = "XSM_cavalry_2_entity"
+	}
+	
+	entity = {
+		name = "HMI_cavalry_2_combined_entity"
+		clone = "XSM_cavalry_2_combined_entity"
+		
+		
+	}

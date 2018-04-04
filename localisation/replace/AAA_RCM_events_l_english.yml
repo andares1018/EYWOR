@@ -28,3 +28,5 @@
  japan_border_conflict.5.desc:0 "Fighting continues between Japanese and [SOV.GetAdjective] forces around Sakhalin. In an effort to break the dealock, Japanese forces in other areas have also started to engage [SOV.GetAdjective] forces in that sector. Intelligence suggests that the Japanese may soon reinforce the attack with fresh troops transfered from other parts of their Empire."
  japan_border_conflict.5.a:0 "We must hold the line."
  JAP_kalkin_gol:0 "Soviets Tested"
+ SOV_seize_manchuria:0 "Operation August Storm"
+ SOV_seize_manchuria_desc:0 "As a result of the German Capitulation, Japan's power has been drastically weakened. We have a golden opportunity to finally establish Soviet rule over the area, if we move quickly."

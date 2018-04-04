@@ -1315,7 +1315,7 @@ ideas = {
 			}
 		}
 
-		PRC_North_China_Uprisings = {
+		PRC_partisan_offensive = {
 
 			picture = FRA_scw_intervention_republicans_focus
 

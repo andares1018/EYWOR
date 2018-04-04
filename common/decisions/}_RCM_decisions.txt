@@ -629,7 +629,7 @@ japan_form_CHI_puppets = {
 
 	###CCP
 	JAP_form_CCP_mission = { #great way
-		icon = generic_independence
+		icon = generic_form_nation
 		available = { #objective
 			has_global_flag = ccp_exists
 		}
@@ -651,7 +651,7 @@ japan_form_CHI_puppets = {
 		}
 	}
 	JAP_form_CCP = {
-		icon = generic_independence
+		icon = generic_form_nation
 
 		available = {
 			independent_war_china_or_china_died = yes
@@ -679,7 +679,7 @@ japan_form_CHI_puppets = {
 
 	###RFM
 	JAP_form_RFM_mission = {
-		icon = generic_independence
+		icon = generic_form_nation
 
 		available = { #objective
 			has_global_flag = rfm_exists
@@ -702,7 +702,7 @@ japan_form_CHI_puppets = {
 		}
 	}
 	JAP_form_RFM = {
-		icon = generic_independence
+		icon = generic_form_nation
 
 		available = {
 			independent_war_china_or_china_died = yes
@@ -731,7 +731,7 @@ japan_form_CHI_puppets = {
 
 	###JNC
 	JAP_form_JNC_mission = {
-		icon = generic_independence
+		icon = generic_form_nation
 
 		available = { #objective
 			has_global_flag = jnc_exists
@@ -754,7 +754,7 @@ japan_form_CHI_puppets = {
 
 	}
 	JAP_form_JNC = {
-		icon = generic_independence
+		icon = generic_form_nation
 		target_trigger = {
 
 		}
@@ -821,7 +821,7 @@ japan_form_CHI_puppets = {
 
 	###RRC
 	JAP_form_RRC_mission = {
-		icon = generic_independence
+		icon = generic_form_nation
 
 		available = { #objective
 			has_global_flag = rrc_exists
@@ -861,7 +861,7 @@ japan_form_CHI_puppets = {
 		}
 	}
 	JAP_form_RRC = {
-		icon = generic_independence
+		icon = generic_form_nation
 
 		available = {
 			independent_war_china_or_china_died = yes
@@ -976,7 +976,7 @@ japan_form_IN_MON_puppets = {
 	#INNER MONG
 	###RFM
 	JAP_form_MEN = {
-		icon = generic_independence
+		icon = generic_form_nation
 
 		available = {
 			is_puppet = no
@@ -1028,7 +1028,7 @@ japan_form_IN_MON_puppets = {
 	}
 
 	JAP_form_MUA_mission = {
-		icon = generic_independence
+		icon = generic_form_nation
 
 		available = { #objective
 			has_global_flag = mua_exists
@@ -1056,7 +1056,7 @@ japan_form_IN_MON_puppets = {
 		}
 	}
 	JAP_form_MUA = {
-		icon = generic_independence
+		icon = generic_form_nation
 
 		available = {
 			independent_war_china_or_china_died = yes
@@ -1108,7 +1108,7 @@ japan_form_IN_MON_puppets = {
 
 	###MEJ
 	JAP_form_MEJ_mission = {
-		icon = generic_independence
+		icon = generic_form_nation
 		available = { #objective
 			has_global_flag = mej_exists
 		}
@@ -1149,7 +1149,7 @@ japan_form_IN_MON_puppets = {
 		}
 	}
 	JAP_form_MEJ = {
-		icon = generic_independence
+		icon = generic_form_nation
 		available = {
 			independent_war_china_or_china_died = yes
 			757 = {
@@ -2230,8 +2230,8 @@ RCM_communist_infiltration = {
 RCM_communist_crackdown = {
 	RCM_communist_crackdown_decison = {
 		icon = generic_political_discourse
-		#fire_only_once = no
-		#days_remove = 70 # Stays for 5 days before being removed
+		fire_only_once = no
+		days_remove = 70 # Stays for 5 days before being removed
 		days_re_enable = 25 # Will show up in the interface and can be selected again after 5 days
 		cost = 50
 

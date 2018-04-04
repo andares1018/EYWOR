@@ -753,14 +753,38 @@ news_event = {
 }
 
 #SINO-JAP ALLIANCE BROKE
-#news_event = {
-#	id = news.414
-#	title = news.414.t
-#	desc = news.414.d
-#	picture = GFX_news_event_generic_read_write
-#	fire_only_once = yes
-#	is_triggered_only = yes
-##	option = {
-#		name = news.414.a
-#	}
-#}
+news_event = {
+	id = news.414
+	title = news.414.t
+	desc = news.414.d
+	picture = GFX_news_event_operation_august_storm
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = news.414.a
+		trigger = {
+			has_war_with = JAP
+		}
+	}
+	option = {
+		name = news.414.b
+		trigger = {
+			OR = {
+				tag = JAP
+				has_war_together_with = JAP
+			}
+		}
+	}
+	option = {
+		name = news.414.c
+		trigger = {
+			NOT = {
+				OR = {
+					tag = JAP
+					has_war_with = JAP
+					has_war_together_with = JAP
+				}
+			}
+		}
+	}
+}

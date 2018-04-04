@@ -141,13 +141,17 @@ state_event = {
 	option = { #OH YEA!
 		name = RCM_communist_uprising_country.2.a
 		trigger = {
-			TAG = FROM
+			owner = {
+				TAG = FROM
+			}
 		}
 	}
 	option = { #OH NO!
 		name = RCM_communist_uprising_country.2.b
 		trigger = {
-			TAG = PRC
+			owner = {
+				TAG = PRC
+			}
 		}
 	}
 }

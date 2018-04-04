@@ -1,0 +1,50 @@
+
+
+####################################################################
+####															#####
+####					gud									#####
+####															#####
+####################################################################	
+
+
+
+entity = {
+	name = "GUD_infantry_entity"
+	clone = "GXC_infantry_entity"
+}	
+
+entity = {
+	name = "GUD_infantry_2_entity"
+	clone = "GXC_infantry_2_entity"
+}
+
+entity = {
+	name = "GUD_infantry_weapon_mg_left_entity"
+	clone = "GXC_infantry_weapon_mg_left_entity"
+}	
+
+entity = {
+	name = "GUD_infantry_weapon_mg_right_entity"
+	clone = "GXC_infantry_weapon_mg_right_entity"
+}
+
+entity = {
+	name = "GUD_infantry_weapon_mg_long_idle_entity"
+	clone = "GXC_infantry_weapon_mg_long_idle_entity"
+}	
+
+entity = {
+	name = "GUD_infantry_weapon_rifle_right_entity"
+	clone = "GXC_infantry_weapon_rifle_right_entity"
+}	
+
+entity = {
+	name = "GUD_infantry_weapon_rifle_left_entity"
+	clone = "GXC_infantry_weapon_rifle_left_entity"
+}
+
+entity = {
+	name = "GUD_infantry_weapon_rifle_long_idle_entity"
+	clone = "GXC_infantry_weapon_rifle_long_idle_entity"
+}
+

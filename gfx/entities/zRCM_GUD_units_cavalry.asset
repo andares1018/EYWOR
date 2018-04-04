@@ -1,0 +1,51 @@
+
+############
+#
+#
+# NORTH
+#SHD NEA PLM HPC
+#
+############
+##########
+	entity = {
+		name = "GUD_sabre_entity"
+		clone = "GXC_sabre_entity"
+	}
+	
+	entity = {
+		name = "GUD_sabre_holder_entity"
+		clone = "GXC_sabre_holder_entity"
+	}
+
+	entity = {
+		name = "GUD_infantry_rider_entity"
+		clone = "GXC_infantry_rider_entity"
+	}
+	
+	entity = {
+		name = "GUD_cavalry_entity"
+		clone = "GXC_cavalry_entity"
+	}
+	
+	entity = {
+		name = "GUD_cavalry_rifle_combined_entity"
+		clone = "GXC_cavalry_rifle_combined_entity"
+		
+	}	
+	
+	entity = {
+		name = "GUD_infantry_2_rider_entity"
+		clone = "GXC_infantry_2_rider_entity"	
+	}
+	
+	entity = {
+		name = "GUD_cavalry_2_entity"
+		clone = "GXC_cavalry_2_entity"
+	}
+	
+	entity = {
+		name = "GUD_cavalry_2_combined_entity"
+		clone = "GXC_cavalry_2_combined_entity"
+		
+		
+	}

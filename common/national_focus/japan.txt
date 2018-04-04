@@ -6008,7 +6008,17 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			unlock_decision_category_tooltip = JAP_pacific_guardian
+			if = {
+				limit = {
+					has_dlc = "Waking the Tiger"
+				}
+				unlock_decision_category_tooltip = JAP_pacific_guardian
+				else = {
+					add_political_power = 100
+					add_stability = 0.05
+					add_war_support = 0.05
+				}
+			}
 		}
 	}
 	focus = {

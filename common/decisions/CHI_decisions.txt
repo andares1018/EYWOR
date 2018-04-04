@@ -13,15 +13,22 @@
 				KOR = {
 					exists = no
 				}
-				has_completed_focus = CHI_commit_to_korean_independence
+
+				#has_completed_focus = CHI_commit_to_korean_independence
 			}
 			visible = {
-				owns_state = 525
-				owns_state = 527
+				OR = {
+					owns_state = 525
+					owns_state = 527
+				}
+				
 				KOR = {
 					exists = no
 				}
-				has_completed_focus = CHI_commit_to_korean_independence
+				NOT = {
+					has_government = communism
+				}
+				#has_completed_focus = CHI_commit_to_korean_independence
 			}
 			complete_effect = {
 				add_political_power = 50
@@ -245,10 +252,10 @@
 				}
 				random_country = {
 					limit = {
-						PRC_has_low_popular_support = yes
+						#PRC_has_low_popular_support = yes
 					}
 					#TODO_WTT_CD maybe notification event?
-					PRC_low_popular_support_level_down = yes
+					#PRC_low_popular_support_level_down = yes
 				}
 			}
 		}
@@ -533,20 +540,18 @@
 					original_tag = ENG
 					is_literally_china = yes
 				}
+				#has_dlc = "Waking the Tiger"
 			}
 			available = { #WTT_TODO_CD: Make this tooltip not look like complete garbage
 				if = {
 					limit = {
-						OR = {
-							has_focus_tree = china_nationalist_focus
-							has_focus_tree = china_communist_focus
-						}
+						tag = CHI
 					}
-					has_completed_focus = CHI_burma_road
+					has_completed_focus = CHI_allies_help_focus
 				}
 				if = {
 					limit = {
-						has_focus_tree = british_focus
+						tag = ENG
 					}
 					has_completed_focus = uk_burma_focus
 				}
@@ -596,11 +601,11 @@
 					CONTROLLER = {
 						OR = {
 							has_completed_focus = uk_burma_focus
-							has_completed_focus = CHI_burma_road
+							has_completed_focus = CHI_allies_help_focus
 							AND = {
 								is_in_faction_with = ROOT
 								has_completed_focus = uk_burma_focus
-								has_completed_focus = CHI_burma_road
+								has_completed_focus = CHI_allies_help_focus
 							}
 							if = {
 								limit = {
@@ -609,7 +614,7 @@
 								OVERLORD = {
 									OR = {
 										has_completed_focus = uk_burma_focus
-										has_completed_focus = CHI_burma_road
+										has_completed_focus = CHI_allies_help_focus
 									}
 								}
 							}
@@ -619,11 +624,7 @@
 			}
 			visible = {
 				NOT = { has_global_flag = CHI_burma_3 }
-				OR = {
-					has_focus_tree = china_nationalist_focus
-					has_focus_tree = china_communist_focus
-					has_focus_tree = british_focus
-				}
+				has_focus_tree = british_focus
 				OR = {
 					AND = {
 						OR = {
@@ -724,87 +725,8 @@
 				}
 			}
 		}
-		CHI_expand_the_ledo_road = {
-			icon = generic_construction
-			available = {
-				any_country = {
-					has_completed_focus = CHI_ledo_road
-				}
-				OR = {
-					controls_state = 640
-					640 = {
-						CONTROLLER = {
-							is_in_faction_with = ROOT
-						}
-					}
-					controls_state = 325
-					325 = {
-						CONTROLLER = {
-							OR = {
-								AND = {
-									is_subject = yes
-									OVERLORD = {
-										has_completed_focus = CHI_ledo_road
-									}
-								}
-								AND = {
-									is_in_faction_with = event_target:WTT_current_china_leader
-									event_target:WTT_current_china_leader = {
-										has_completed_focus = CHI_ledo_road
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-			visible = {
-				any_country = {
-					has_completed_focus = CHI_ledo_road
-				}
-				OR = {
-					has_completed_focus = CHI_ledo_road
-					controls_state = 640
-					640 = {
-						CONTROLLER = {
-							is_in_faction_with = ROOT
-						}
-					}
-				}
-				NOT = {
-					has_global_flag = CHI_ledo_3
-				}
-			}
-			days_re_enable = 360
-			ai_will_do = {
-				factor = 1
-			}
-			cost = 25
-			days_remove = 60
-			modifier = {
-				civilian_factory_use = 2
-			}
-			remove_effect = {
-				if = {
-					limit = {
-						has_global_flag = CHI_ledo_2
-					}
-					set_global_flag = CHI_ledo_3
-				}
-				if = {
-					limit = {
-						NOT = { has_global_flag = CHI_ledo_2} #
-					}
-					set_global_flag = CHI_ledo_2
-				}
-				random_country = {
-					limit = { check_variable = { CHI_ledo_road > 0 } }
-					add_to_variable = { var = CHI_ledo_road value = 1 }
-					#Country that had the ledo road open
-					add_offsite_building = { type = arms_factory level = 1 }
-				}
-			}
-		}
+		
+
 		CHI_expand_the_airlift = {
 			icon = generic_construction
 			available = {
@@ -820,7 +742,7 @@
 					601 = {
 						CONTROLLER = {
 							OR = {
-								has_completed_focus = CHI_the_hump
+								has_completed_focus = CHI_allies_help_focus
 								is_in_faction_with = ROOT
 							}
 						}
@@ -830,7 +752,7 @@
 			visible = {
 				OR = {
 					AND = {
-						has_completed_focus = CHI_the_hump
+						has_completed_focus = CHI_allies_help_focus
 						OR = {
 							controls_state = 601
 							601 = {
@@ -842,7 +764,7 @@
 					}
 					AND = {
 						any_country = {
-							has_completed_focus = CHI_the_hump
+							has_completed_focus = CHI_allies_help_focus
 						}
 						controls_state = 434
 					}
@@ -908,126 +830,6 @@
 		}
 	}
 	political_actions = {
-		CHI_suspend_the_inter_party_coordination_council = {
-			icon = oppression
-			available = {
-				has_idea = CHI_inter_party_coordination_council
-			}
-			visible = {
-				has_idea = CHI_inter_party_coordination_council
-			}
-			cost = 25
-			complete_effect = {
-				if = {
-					limit = {
-						NOT = {
-							has_government = democratic
-						}
-					}
-					add_stability = -0.05
-				}
-				remove_ideas = CHI_inter_party_coordination_council
-			}
-		}
-		CHI_reinstate_the_inter_party_coordination_council = {
-			icon = generic_political_discourse
-			available = {
-				NOT = { has_idea = CHI_inter_party_coordination_council }
-				NOT = {
-					has_government = democratic
-				}
-				has_completed_focus = CHI_inter_party_coordination_council
-			}
-			visible = {
-				NOT = { has_idea = CHI_inter_party_coordination_council }
-				NOT = {
-					has_government = democratic
-				}
-				has_completed_focus = CHI_inter_party_coordination_council
-			}
-			cost = 25
-			complete_effect = {
-				add_ideas = CHI_inter_party_coordination_council
-			}
-		}
-		CHI_join_united_front = {
-			available = {
-				is_literally_china = yes
-				CHI = {
-					is_in_faction_with = PRC
-				}
-				OR = {
-					PRC = {
-						is_faction_leader = yes
-					}
-					CHI = {
-						is_faction_leader = yes
-					}
-				}
-				NOT = {
-					OR = {
-						has_war_with = CHI
-						has_war_with = PRC
-					}
-				}
-				is_in_faction = no
-				NOT = {
-					has_completed_focus = CHI_opposition
-				}
-			}
-			visible = {
-				is_literally_china = yes
-				CHI = {
-					is_in_faction_with = PRC
-				}
-				is_in_faction = no
-			}
-			cost = 25
-			ai_will_do = {
-				factor = 1
-				modifier = {
-					JAP = {
-						OR = {
-							has_war_with = CHI
-							has_war_with = PRC
-						}
-					}
-					factor = 10
-				}
-			}
-			complete_effect = {
-				If = {
-					limit = {
-						CHI = {
-							is_faction_leader = yes
-						}
-					}
-					CHI = {
-						country_event = generic.2
-					}
-					add_ai_strategy = {
-						type = alliance
-						id = "CHI"
-						value = 200
-					}
-				}
-				else_if = {
-					limit = {
-						PRC = {
-							is_faction_leader = yes
-						}
-					}
-					PRC = {
-						country_event = generic.2
-					}
-					add_ai_strategy = {
-						type = alliance
-						id = "PRC"
-						value = 200
-					}
-				}
-			}
-		}
 		CHI_move_the_capital = {
 			allowed = {
 				is_literally_china = yes
@@ -1106,8 +908,8 @@
 				has_completed_focus = CHI_cooperation_with_the_communists
 				tag = NEA
 			}
-			cost = 30
-			days_remove = 50
+			cost = 50
+			days_remove = 80
 			fire_only_once = yes
 			ai_will_do = {
 				factor = 1000
@@ -1122,28 +924,7 @@
 		}
 	}
 	operations = {
-		CHI_overlordship_over_indochina = {
-			icon = generic_operation
-			available = {
-				controls_state = 671
-				controls_state = 670
-				controls_state = 286
-				controls_state = 741
-			}
-			days_mission_timeout = 360
-			fire_only_once = yes
-			activation = {
-				has_completed_focus = CHI_overlordship_over_indochina
-			}
-			complete_effect = {
-				add_political_power = 50
-				add_war_support = 0.05
-				add_stability = 0.05
-			}
-			timeout_effect = {
-				add_war_support = -0.1
-			}
-		}
+		
 	}
 	prestigious_projects = {
 		CHI_build_a_carrier = {

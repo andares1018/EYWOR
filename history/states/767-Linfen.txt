@@ -19,12 +19,13 @@ state={
 			add_core_of = EHB
 			owner = SHX
 			controller = EHB
+
 		}
 
 	}
 
 	provinces={
-		1180 4634 7571 10421 
+		1180 1575 4634 7571 10421 
 	}
 	manpower=3121000
 	buildings_max_level_factor=1.000

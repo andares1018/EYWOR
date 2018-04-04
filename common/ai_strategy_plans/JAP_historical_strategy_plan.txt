@@ -44,7 +44,7 @@ JAP_historical_plan = {
 		JAP_non_aggression_pact_with_the_soviet_union #March 30 1941	
 		JAP_modern_artillery #June 10 1941	
 		JAP_secure_the_philippines #August 20 1941	
-		JAP_strike_on_the_southern_resource_area #October 30 1941	
+		southern_expansion_focus #October 30 1941	
 		JAP_alliance_with_siam #January 10	
 		JAP_strategic_bomber_effort #March 20 1942	
 		JAP_modern_escorts #May 30 1942	
