@@ -1,17 +1,17 @@
 ﻿l_english:
- BORDER_CONFLICT:0 "$STATE|H$ is affected by Communist Partisan Activities"
+ BORDER_CONFLICT:0 "\n$STATE|H$ is affected by Communist Partisan Activities"
  TRIGGER_IS_BORDER_CONFLICT:0 "$STATE|H$ is affected by Communist Partisan Activities."
  TRIGGER_IS_NOT_BORDER_CONFLICT:0 "$STATE|H$ is not affected by Communist Partisan Activities."
  border_conflict_reconciled:0 "Communist Partisan Activities Reconciled"
  BORDER_WAR_ATTRITION:0 "Attrition from Communist Partisan Activities: $VAL|=-%$"
 
  BORDER_WAR_HEADER:0 "§HCommunist Partisan Activities§!"
- BORDER_WAR_POWER:0 "The communist guerilla forces is wreaking havoc in this region. Troops in the state will suffer from §Radditional attrition§!."
- BORDER_WAR_POWER_ENEMY:0 "\nTo crack it down as §YNationalist China§!, unlock focus §YCounter-Insurgency Plan§! and utilize the §Ycontinuous focus§! §MCounter Insurgency§!."
+ BORDER_WAR_POWER:0 "The communist guerilla forces is wreaking havoc in this region. Troops in the state will suffer from §Radditional attrition§!.\n\nTake £decision_icon_small §Hdecisiones§!§MCrack Down the Communists§H to eliminate them. However, they will come back over time unless @PRCCommunist China is eliminated."
+ BORDER_WAR_POWER_ENEMY:0 ""
 
- BORDER_WAR_POWER_RATIO:0 "To crack it down as §YJapan§! or its allies/client states, simply eliminate §RCommunist China§! and crack them down in the §Mevent§! occurs afterwards."
+ BORDER_WAR_POWER_RATIO:0 ""
  #^revisit for Jap's version of counter insurgency
- BORDER_WAR_WIN:0 "\nNote: As §YNationalist China§!, you cannot crack this down once §YCommunist China§! take over the §Yownership§! of this state. You can §Ronly crack them down when you still own the state§!. Crack them down when you still can!"
+ BORDER_WAR_WIN:0 ""
  BORDER_WAR_LOSS:0 ""
 
  BORDER_WAR_HINT:0 ""

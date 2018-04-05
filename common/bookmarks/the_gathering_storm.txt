@@ -350,6 +350,8 @@ bookmarks = {
 			ideology = neutrality
 			ideas = {
 				CHI_long_term_economic_planning
+				CHI_public_works
+				CHI_embrace_the_opium_trade
 			}
 			focuses = {
 				CHI_join_the_republican_government
@@ -364,6 +366,8 @@ bookmarks = {
 			ideology = neutrality
 			ideas = {
 				CHI_long_term_economic_planning
+				CHI_public_works
+				CHI_embrace_the_opium_trade
 			}
 			focuses = {
 				CHI_join_the_republican_government
@@ -378,6 +382,8 @@ bookmarks = {
 			ideology = neutrality
 			ideas = {
 				CHI_long_term_economic_planning
+				CHI_public_works
+				CHI_embrace_the_opium_trade
 			}
 			focuses = {
 				CHI_join_the_republican_government
@@ -392,6 +398,8 @@ bookmarks = {
 			ideology = neutrality
 			ideas = {
 				CHI_long_term_economic_planning
+				CHI_public_works
+				CHI_embrace_the_opium_trade
 			}
 			focuses = {
 				CHI_join_the_republican_government
@@ -406,6 +414,8 @@ bookmarks = {
 			ideology = neutrality
 			ideas = {
 				CHI_long_term_economic_planning
+				CHI_public_works
+				CHI_embrace_the_opium_trade
 			}
 			focuses = {
 				CHI_join_the_republican_government
@@ -420,6 +430,8 @@ bookmarks = {
 			ideology = neutrality
 			ideas = {
 				CHI_long_term_economic_planning
+				CHI_public_works
+				CHI_embrace_the_opium_trade
 			}
 			focuses = {
 				CHI_join_the_republican_government
@@ -434,6 +446,8 @@ bookmarks = {
 			ideology = neutrality
 			ideas = {
 				CHI_long_term_economic_planning
+				CHI_public_works
+				CHI_embrace_the_opium_trade
 			}
 			focuses = {
 				CHI_join_the_republican_government
@@ -448,6 +462,8 @@ bookmarks = {
 			ideology = neutrality
 			ideas = {
 				CHI_long_term_economic_planning
+				CHI_public_works
+				CHI_embrace_the_opium_trade
 			}
 			focuses = {
 				CHI_join_the_republican_government
@@ -462,6 +478,8 @@ bookmarks = {
 			ideology = neutrality
 			ideas = {
 				CHI_long_term_economic_planning
+				CHI_public_works
+				CHI_embrace_the_opium_trade
 			}
 			focuses = {
 				CHI_join_the_republican_government
@@ -476,6 +494,8 @@ bookmarks = {
 			ideology = neutrality
 			ideas = {
 				CHI_long_term_economic_planning
+				CHI_public_works
+				CHI_embrace_the_opium_trade
 			}
 			focuses = {
 				CHI_join_the_republican_government
@@ -490,6 +510,8 @@ bookmarks = {
 			ideology = neutrality
 			ideas = {
 				CHI_long_term_economic_planning
+				CHI_public_works
+				CHI_embrace_the_opium_trade
 			}
 			focuses = {
 				CHI_join_the_republican_government
@@ -504,6 +526,8 @@ bookmarks = {
 			ideology = neutrality
 			ideas = {
 				CHI_long_term_economic_planning
+				CHI_public_works
+				CHI_embrace_the_opium_trade
 			}
 			focuses = {
 				CHI_join_the_republican_government
@@ -518,6 +542,8 @@ bookmarks = {
 			ideology = neutrality
 			ideas = {
 				CHI_long_term_economic_planning
+				CHI_public_works
+				CHI_embrace_the_opium_trade
 			}
 			focuses = {
 				CHI_join_the_republican_government

@@ -50,19 +50,19 @@ JNC_DETERMINE = { #used in complete_effect
 						is_ai = yes
 					}
 				}
-				annex_country = {
-					target = HPC
-					transfer_troops = yes
-				}
 				EHB = {
+					annex_country = {
+						target = HPC
+						transfer_troops = yes
+					}
 					set_country_flag = im_jnc_now
 				}
 				else = {
-					annex_country = {
-						target = EHB
-						transfer_troops = yes
-					}
 					HPC = {
+						annex_country = {
+							target = EHB
+							transfer_troops = yes
+						}
 						set_country_flag = im_jnc_now
 					}
 				}
@@ -600,10 +600,33 @@ JNC_CREATION = {
 			ruling_party = fascism
 			elections_allowed = no
 		}
+		if = {
+			limit = {
+				tag = HPC
+				EHB = {
+					is_ai = yes
+				}
+			}
+			annex_country = {
+				target = EHB transfer_troops = yes
+			}
+		}
+		if = {
+			limit = {
+				tag = EHB
+				HPC = {
+					is_subject_of = JAP
+					is_ai = yes
+				}
+			}
+			annex_country = {
+				target = HPC transfer_troops = yes
+			}
+		}
 		create_country_leader = {
 			name = "Wang Kemin"
 			desc = "POLITICS_WANG_KEMIN_DESC"
-			picture = "Portrait_JNC_Wang_Kemin.dds"
+			picture = "gfx/leaders/JNC/Portrait_JNC_Wang_Kemin.dds"
 			expire = "1945.12.25"
 			ideology = collaborationism
 		}
