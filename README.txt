@@ -1,6 +1,6 @@
-#################################################################
-#To test these test builds out please follow these simple steps:#
-#################################################################
+##-----------------------------------------------------------------##
+##  To test these test builds out please follow these simple steps ##
+##-----------------------------------------------------------------##
 
 1. Click the green button "Clone or Download" in the top right, and then click "Download ZIP"
 
@@ -17,6 +17,7 @@
 =============
 basically something like this if you don't understand the steps
 ===↓↓↓↓======
+
 \Documents                                 (folder)
 　╚\Paradox Interactive                    (folder)
 　　╚\Hearts of Iron IV                    (folder)
