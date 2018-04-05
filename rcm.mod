@@ -1,4 +1,4 @@
-﻿name="EYWOR"
+﻿name="Eight Years' War of Resistance: Beta Build"
 path="mod/rcm/"
 tags={
 	"Historical"
