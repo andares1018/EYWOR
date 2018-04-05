@@ -1297,11 +1297,7 @@ operations = {
 				has_global_flag = JAP_kalkin_gol
 			}
 		}
-		target_trigger = {
-			FROM = { 
-				tag = SOV
-			}
-		}
+
 		highlight_states = {
 			OR = {
 				state = 655
@@ -1318,134 +1314,25 @@ operations = {
 			}
 		}
 		cost = 50
-		#days_remove = 15
+		days_remove = 30
 		war_with_on_remove = SOV
 		complete_effect = {
-			custom_effect_tooltip = RCM_negative_opinion
-			hidden_effect = {
-				FROM = { add_opinion_modifier = { target = ROOT modifier = border_conflict_started } }
-				FROM = { OVERLORD = { add_opinion_modifier = { target = ROOT modifier = border_conflict_started_overlord } } }
-				every_country = { 
-					limit = { has_guaranteed = FROM }
-					add_opinion_modifier = { target = ROOT modifier = border_conflict_started_overlord }
-				}
+			537 = {
+				save_event_target_as = JAP_SOV_attacker_state
+				set_state_flag = border_incident_active
 			}
-			if = {
-				limit = { has_government = democratic }
-				ROOT = { add_popularity = { ideology = democratic popularity = -0.02 } }
+			655 = {
+				save_event_target_as = JAP_SOV_defender_state
+				set_state_flag = border_incident_active
 			}
-			hidden_effect = {
-				FROM = {
-					random_owned_controlled_state = {
-						prioritize = { 537 }
-						limit = {
-							OR = {
-								AND = {
-									ROOT = { is_ai = yes }
-									OR = {
-										is_core_of = ROOT
-										is_claimed_by = ROOT
-									}
-								}
-						
-								ROOT = { is_ai = no }
-							}
-							
-							set_temp_variable = { test_defender_state_temp = id }
-							hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
-							any_neighbor_state = {
-								hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
-								set_temp_variable = { test_attacker_state_temp = id }
-								ROOT = {
-									divisions_in_border_state = {
-										state = var:test_attacker_state_temp
-										border_state = var:test_defender_state_temp
-										size > 0
-									}
-								}
-								is_fully_controlled_by = ROOT
-							}
-						}
-						save_event_target_as = defender_state
-						set_variable = { FROM.defender_state_vs_@ROOT = id }
-						set_temp_variable = { defender_state_temp = id }
-						set_state_flag = border_incident_active
-					}
-				}
-				random_state = {
-					limit = {
-						is_fully_controlled_by = ROOT
-						hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
-						set_temp_variable = { attack_dir_state_temp = id }
-						ROOT = {
-								divisions_in_border_state = {
-									state = var:attack_dir_state_temp
-									border_state = var:FROM.defender_state_vs_@ROOT
-									size > 0
-								}
-							}
-							
-						any_neighbor_state = {
-							state = var:FROM.defender_state_vs_@ROOT
-						}
-					}
-					save_event_target_as = attacker_state
-					set_variable = { FROM.attacker_state_vs_@ROOT = id }
-					set_temp_variable = { attacker_state_temp = id }
-					set_state_flag = border_incident_active
-				}
+			SOV = {
+				country_event = { id = japan_border_conflict.1 days = 1 }
+				activate_targeted_decision = { target = JAP decision = JAP_border_conflict_warning_SOV }
 			}
-			custom_effect_tooltip = RCM_border_incident_delay_until_new_incident_180
-			FROM = {
-				country_event = { id = RCM_border_incident_defender_warning.1 hours = 1 }
-				activate_targeted_decision = { target = ROOT decision = RCM_border_conflict_incident_warning_defender }				
-			}
+			#activate_targeted_decision = { target = SOV decision = JAP_border_incident_forgotten }
 		}
 		remove_effect = {
-			hidden_effect = {
-				var:FROM.defender_state_vs_@ROOT = {
-					save_event_target_as = defender_state 
-				}
-				var:FROM.attacker_state_vs_@ROOT = {
-					save_event_target_as = attacker_state 
-				}
-				random_state = {
-					limit = {
-						is_owned_and_controlled_by = FROM
-						OR = {
-							AND = {
-								ROOT = { is_ai = yes }
-								OR = {
-									is_core_of = ROOT
-									is_claimed_by = ROOT
-								}
-							}
-					
-							ROOT = { is_ai = no }
-						}
-						
-						hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
-						any_neighbor_state = {
-							is_fully_controlled_by = ROOT
-							has_ROOT_at_least_1_div_in_current_state_scope = yes
-							hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
-						}
-					}
-					set_temp_variable = { defender_state_temp = id }
-				}
-				random_state = {
-					limit = {
-						is_fully_controlled_by = ROOT
-						hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
-						has_ROOT_at_least_1_div_in_current_state_scope = yes
-						any_neighbor_state = {
-							state = var:FROM.defender_state_vs_@ROOT
-						}
-					}
-					set_temp_variable = { attacker_state_temp = id }
-				}
-			}
-			activate_targeted_decision = { target = FROM decision = RCM_escalate_incident_to_border_conflict }
+			activate_targeted_decision = { target = SOV decision = JAP_escalate_incident_to_border_conflict_SOV }
 		}
 	}
 

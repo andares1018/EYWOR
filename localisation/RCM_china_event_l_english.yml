@@ -250,7 +250,7 @@
  rcmchina.238.d:0 "Our government and Li Zongren's Army failed to reach an agreement in the peace talk we had. A war with the warlords is inevitable now."
  rcmchina.238.a:0 "It's time to unite China."
  rcmchina.242.t:0 "Anti-Japan Salvation Army Disbanded"
- rcmchina.242.d:0 "After the fall of Guangdong Clique, the Anti-Japan Salvation Army formed by the New Guangxi Clique is now disbanded. Hope they know how to cooperate now."
+ rcmchina.242.d:0 "After a turn of events among the political standoff and regional conflict, the Anti-Japan Salvation Army formed by the New Guangxi Clique is now disbanded. Hope they know how to cooperate now."
  rcmchina.242.a:0 "Another internal conflict has been avoided."
  rcmchina.245.t:0 "Request Manchuria From the Soviets"
  rcmchina.245.d:0 "After the Operation August Storm of the Soviet Union, the Soviets have successfully occupied North East China. However, right now we have to fight the imminent civil war with the nationalists. The supplies and resources from Manchuria can help us a lot in the civil war. We shall remind the Soviet Union right now."
@@ -646,6 +646,9 @@
  rcmchina.358.b:0 "We shall join [scp_war_opposition_leader.GetNameDef]."
  rcmchina.358.c:0 "We shall help [WTT_current_china_leader.GetNameDef]."
  rcmchina.358.e:0 "We should stay out of this."
+ rcmchina.359.t:0 "Northwest Anti-Japan United Army Disbanded"
+ rcmchina.359.d:0 "After a turn of events and the fall of the Northeastern Army, the Northwest Anti-Japan United Army has now been left defunct. This is a great for the central army, but a horrendous one to the supporters of its cause."
+ rcmchina.359.a:0 "It was fun while it lasted."
 
  nea.1.t:0 "The Xi'an Incident"
  nea.1.d:0 "Disagreements within Kuomintang's inner circle have led to a precarious situation. Chiang Kai-shek has been executed by general Zhang Xueliang and general Yang Hucheng in an effort to force them to accept a truce with us to unite China against foreign enemies. However, the situation is going out of hand after Chiang's Death and is developing into a full-scale civil war. What meansures should we take in response?"

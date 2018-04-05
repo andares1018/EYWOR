@@ -1376,6 +1376,7 @@ country_event = {
 						CHI = { country_event = { days = 4 id = gxc.14 } }
 						GXC = { country_event = { days = 4 id = gxc.14 } }
 						PRC = { country_event = { days = 4 id = gxc.14 } }
+						clr_global_flag = liangguang_incident_flag
 					}
 					40 = {#refuse
 						GUD = { country_event = { days = 4 id = gxc.15 } }
@@ -1393,6 +1394,7 @@ country_event = {
 						CHI = { country_event = { days = 4 id = gxc.14 } }
 						GXC = { country_event = { days = 4 id = gxc.14 } }
 						PRC = { country_event = { days = 4 id = gxc.14 } }
+						clr_global_flag = liangguang_incident_flag
 					}
 					30 = {#refuse
 						GUD = { country_event = { days = 4 id = gxc.15 } }
@@ -1465,15 +1467,9 @@ country_event = {
 				random_list = {
 					75 = {#buy success
 						GUD = { country_event = { days = 4 id = gud.4 } }
-						#CHI = { country_event = { days = 4 id = gud.4 } }
-						#GXC = { country_event = { days = 4 id = gud.4 } }
-						#PRC = { country_event = { days = 4 id = gud.4 } }
 					}
 					25 = {#refuse
 						GUD = { country_event = { days = 4 id = gud.5 } }
-						#CHI = { country_event = { days = 4 id = gud.5 } }
-						#GXC = { country_event = { days = 4 id = gud.5 } }
-						#PRC = { country_event = { days = 4 id = gud.5 } }
 					}
 				}
 				else = {
@@ -1579,7 +1575,9 @@ country_event = {
 	desc = rcmchina.237.d
 	picture = GFX_report_event_japanese_chinese_surrender
 	is_triggered_only = yes
-
+	immediate = {
+		clr_global_flag = liangguang_incident_flag
+	}
 	#mean_time_to_happen = {
 		#	days = 10
 		#}
@@ -1644,13 +1642,31 @@ country_event = {
 			tag = GXC
 			tag = GUD
 		}
+		NOT = {
+			has_global_flag = liangguang_incident_flag
+		}
+		NOT = {
+			has_war_with = CHI
+		}
 		CHI = { NOT = { has_war_with = JAP } }
 		NOT = { has_global_flag = marco_polo }
 		is_faction_leader = yes
 		NOT = { has_global_flag = CHI_no_united_front }
 	}
 	immediate = {
-		#dismantle_faction = yes
+		every_country = {
+			limit = {
+				OR = {
+					tag = GUD
+					tag = GXC
+					tag = PRC
+					tag = CHI
+					is_in_faction_with = GXC
+					is_in_faction_with = GUD
+				}
+			}
+			country_event = rcmchina.242
+		}
 	}
 	option = {
 	}
@@ -1662,39 +1678,39 @@ country_event = {
 	desc = rcmchina.242.d
 	picture = GFX_report_event_japanese_chinese_surrender
 	is_triggered_only = yes
-	fire_only_once = yes
+	#fire_only_once = yes
 	option = {
 		name = rcmchina.242.a
 	}
 }
-country_event = {
-	id = rcmchina.243
-	hidden = yes
-	trigger = {
-		tag = PRC
-		controls_state = 613
-	}
-	fire_only_once = yes
-	immediate = {
-		#PRC = { set_cosmetic_tag = PRC_PRC }
-	}
-	option = {
-	}
-}
+#country_event = {
+#	id = rcmchina.243
+#	hidden = yes
+#	trigger = {
+#		tag = PRC
+#		controls_state = 613
+#	}
+#	fire_only_once = yes
+#	immediate = {
+#		#PRC = { set_cosmetic_tag = PRC_PRC }
+#	}
+#	option = {
+#	}
+#}
 ###GER FOCUS WHEN GER WAR####
-country_event = {
-	id = rcmchina.244
-	hidden = yes
-	fire_only_once = yes
-	trigger = {
-		tag = CHI
-		CHI = { has_war_with = GER }
-		has_global_flag = rise_of_nationalism
-	}
-	immediate = {
-		unlock_national_focus = CHI_allies_help_politics_focus
-	}
-}
+#country_event = {
+#	id = rcmchina.244
+#	hidden = yes
+#	fire_only_once = yes
+#	trigger = {
+#		tag = CHI
+#		CHI = { has_war_with = GER }
+#		has_global_flag = rise_of_nationalism
+#	}
+#	immediate = {
+#		unlock_national_focus = CHI_allies_help_politics_focus
+#	}
+#}
 country_event = {
 	id = rcmchina.245
 	title = rcmchina.245.t
@@ -5619,4 +5635,41 @@ country_event = {
 			}
 		}
 	}
+}
+#AntiJApdisband
+country_event = {
+     id = rcmchina.359
+     title = rcmchina.359.t
+     desc = rcmchina.359.d
+     picture = GFX_report_event_chinese_soldiers_02
+     hidden = no
+     trigger = {
+		has_global_flag = northwest_united
+          OR = {
+			NOT = {
+				country_exists = NEA
+			}
+			NEA = {
+				is_puppet = yes
+			}
+		}
+		is_warlord = yes
+		is_faction_leader = yes
+		NOT = {
+			tag = event_target:WTT_current_china_leader
+		}
+     }
+     is_triggered_only = no
+     fire_only_once = no
+     immediate = {
+
+     }
+     mean_time_to_happen = {
+          days = 0
+     }
+
+     option = {
+          name = rcmchina.359.a
+	    	dismantle_faction = yes
+     }
 }

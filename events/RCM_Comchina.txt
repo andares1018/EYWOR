@@ -20,7 +20,7 @@ country_event = {
 	option = { #join
 		name = prc.1.a
 		ai_chance = {
-			base = 80
+			base = 0
 			modifier = {
 				factor = 200
 				OR = {
@@ -29,6 +29,22 @@ country_event = {
 						GXC = { has_offensive_war_with = CHI }
 					}
 					is_historical_focus_on = yes
+				}
+			}
+			modifier = {
+				factor = 80
+				NOT = {
+					OR = {
+						tag = XSM
+						tag = NXM
+						tag = HMI
+						tag = TNG
+						tag = SIK
+						tag = XIK
+						tag = SHX
+						tag = YUN
+						tag = HPC
+					}
 				}
 			}
 		}
@@ -55,6 +71,19 @@ country_event = {
 		name = prc.1.b
 		ai_chance = {
 			base = 20
+			modifier = {
+				factor = 100
+				OR = {
+					tag = XSM
+					tag = NXM
+					tag = HMI
+					tag = TNG
+					tag = SIK
+					tag = XIK
+					tag = YUN
+					tag = HPC
+				}
+			}
 			modifier = {
 				factor = 0
 				OR = {

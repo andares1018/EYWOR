@@ -44,12 +44,24 @@ on_actions = {
 						any_country = {
 							is_warlord = yes
 							has_war_with = CHI
+
 						}
 					}
 					FROM = {
 						country_event = {
 							hours = 3 id = rcmchina.331 #emergenecy peace
 						}
+					}
+					else_if = {
+						limit = {
+							AND = {
+								NOT = {
+									is_in_faction_with = CHI
+								}
+								is_faction_leader = yes
+							}
+						}
+
 					}
 					else = {
 						FROM = {
@@ -236,10 +248,12 @@ on_actions = {
 	#ROOT = nation being puppeted, FROM = overlord
 	on_puppet = {
 		effect = {
-			#MODDEDv #this huge section is for Japan to expand its current puppets in PC instead of spamming clique puppets like "yuNNAn eMiPiRe"
 			if = {
 				limit = {
 					TAG = XSM
+					FROM = {
+						has_government = fascism
+					}
 				}
 				set_cosmetic_tag = XSM_HUI
 			}
@@ -259,6 +273,10 @@ on_actions = {
 					ideology = fascism_ideology
 				}
 			}
+			########
+			#MODDEDv #this huge section is for Japan to expand its current puppets in PC instead of spamming clique puppets like "yuNNAn eMiPiRe"
+			
+			#core first
 			every_country = {
 				limit = {
 					is_subject_of = JAP
@@ -273,6 +291,7 @@ on_actions = {
 					}
 				}
 			}
+			#then claim
 			every_country = {
 				limit = {
 					is_subject_of = JAP
@@ -318,15 +337,9 @@ on_actions = {
 				random_other_country = {
 					limit = {
 						760 = {
-							controller = {
-								OR = {
-									tag = JAP
-									is_subject_of = JAP
-								}
-							}
+							is_controlled_by_jap_or_its_puppet = yes
 						}
-						owns_state = 608
-						is_subject_of = JAP
+						has_country_flag = im_jnc_now
 					}
 					transfer_state = 760
 				}
@@ -335,14 +348,6 @@ on_actions = {
 						limit = {#any puppet
 							any_other_country = {
 								is_subject_of = JAP
-								OR = {
-									has_country_flag = im_rrc_now
-									owns_state = 608
-									original_tag = HPC
-									original_tag = EHB
-									original_tag = CCP
-									original_tag = RFM
-								}
 							}
 						}
 						random_other_country = {#all cliques got annexed
@@ -376,25 +381,20 @@ on_actions = {
 													country_exists = RFM
 												}
 											}
-											AND = {#only great_way_gov
-												JAP = {
-													has_global_flag = ccp_exists
-													NOT = {
-														has_global_flag = jnc_exists
-														has_global_flag = rfm_exists
-													}
+											AND = {#only ehb
+												NOT = {
+													has_global_flag = jnc_exists
+													has_global_flag = rfm_exists
 												}
-												owns_state = 613
-												original_tag = CCP
+												country_exists = EHB
+												original_tag = EHB
 											}
 										}
 									}
 								}
 							}
-							PREV = {
-								annex_country = {
-									target = ROOT transfer_troops = yes
-								}
+							annex_country = {
+								target = ROOT transfer_troops = yes
 							}
 						}
 						random_other_country = {#split cliques RFM
@@ -411,22 +411,12 @@ on_actions = {
 								}
 								any_other_country = {
 									is_subject_of = JAP
-									owns_state = 608
-									OR = {
-										original_tag = HPC
-										original_tag = EHB
-									}
+									has_country_flag = im_jnc_now
 								}
-								owns_state = 613
 								original_tag = RFM
 							}
 							annex_country = {
 								target = ROOT transfer_troops = yes
-							}
-							every_state = {
-								limit = {
-									is_owned_by = ROOT
-								}
 							}
 						}
 						random_other_country = {#split cliques EHB/HPC
@@ -467,23 +457,17 @@ on_actions = {
 									country_exists = RFM
 								}
 							}
-							EHB = {
-								NOT = {
-									owns_state = 608
-								}
+							NOT = {
+								has_global_flag = jnc_exists
 							}
-							OR = {
-								HPC = {
-									NOT = {
-										is_subject_of = JAP
-									}
-								}
-								NOT = {
-									country_exists = HPC
-								}
+							NOT = {
+								has_global_flag = rfm_exists
+							}
+							NOT = {
+								has_global_flag = rrc_exists
 							}
 						}
-						FROM = {
+						EHB = {
 							annex_country = {
 								target = ROOT transfer_troops = yes
 							}
@@ -542,6 +526,73 @@ on_actions = {
 				retire_country_leader = yes
 			}
 			#MODDED^
+		}
+	}
+	#ROOT WINNER
+	on_peaceconference_ended = {
+		effect = {
+			if = { #chi get cleared out when being puppeted
+				limit = {
+					ROOT = {
+						tag = JAP
+					}
+					FROM = {
+						tag = event_target:WTT_current_china_leader
+						is_subject_of = JAP
+					}
+				}
+				###### RFM or RRC annex puppeted CHI
+				random_other_country = {
+					limit = {
+						is_in_faction_with = JAP
+						is_subject_of = JAP
+						OR = {
+							has_country_flag = im_rrc_now
+							has_country_flag = im_rfm_now
+						}
+					}
+					annex_country = {
+						target = CHI transfer_troops = yes
+					}
+				}
+				#####
+				###### EHB annex puppeted CHI
+				if = {
+					limit = {
+						country_exists = event_target:WTT_current_china_leader
+					}
+					random_other_country = {
+						limit = {
+							is_in_faction_with = JAP
+							is_subject_of = JAP
+							tag = EHB
+							NOT = {
+								any_other_country = {
+									has_country_flag = im_rrc_now
+									has_country_flag = im_rfm_now
+								}
+							}
+						}
+						annex_country = {
+							target = CHI transfer_troops = yes
+						}
+						set_country_flag = im_rrc_now
+						set_global_flag = jnc_exists
+						set_global_flag = rfm_exists
+						set_global_flag = rrc_exists
+						set_cosmetic_flag = RRC
+						create_country_leader = {
+							name = "Wang Jingwei"
+							desc = "POLITICS_WANG_JINGWEI_DESC"
+							picture = "gfx/leaders/RRC/Portrait_Wang.dds"
+							expire = "1965.1.1"
+							ideology = collaborationism
+							traits = {
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 	on_annex = {

@@ -615,6 +615,7 @@ liangguang_incident = {
 			factor = 2000
 		}
 		remove_effect = {
+			set_global_flag = liangguang_incident_flag
 			country_event = { id = gxc.1 }
 		}
 	}
