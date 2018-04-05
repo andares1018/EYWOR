@@ -4,7 +4,9 @@
 
 1. Click the green button "Clone or Download" in the top right, and then click "Download ZIP"
 
-2. Unzip the downloaded files and throw the entire 'rcm' folder into:
+2. Unzip the downloaded files into a folder and rename the folder into 'rcm'
+
+3. Throw the entire 'rcm' folder into:
    "Documents\Paradox Interactive\Hearts of Iron IV\mod"
   (if there isn't a "mod" folder just manually create one).
 
