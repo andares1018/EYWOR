@@ -2,7 +2,7 @@ To test these test builds out please follow these simple steps:
 
 1. Throw the entire thing to "Documents\Paradox Interactive\Hearts of Iron IV\mod" (if there isn't a "mod" folder just manually create one).
 2. Move the file "rcm.mod" or "rcm" (depending on whether the extension is visible) out of this folder into "Documents\Paradox Interactive\Hearts of Iron IV\mod".
-3. Select "EYWOR" in the start up mod menu of HOI4.
+3. Select "Eight Years' War of Resistance: Beta Build" in the start up mod menu of HOI4.
 4. Enjoy!
 
 =============
