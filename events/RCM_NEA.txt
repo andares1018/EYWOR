@@ -168,3 +168,22 @@ country_event = {
 	option = {
 	}
 }
+country_event = {
+	id = nea.5
+	hidden = yes
+	trigger = {
+		OR = {
+			tag = NEA
+			tag = CHI
+		}
+		NOT = {
+			country_exists = PRC
+		}
+	}
+	immediate = {
+		country_event = EFM_Comchina.9015
+	}
+	is_triggered_only = yes
+	option = { 
+	}
+}
