@@ -591,8 +591,8 @@ focus_tree = {
 			hidden_trigger = {
 				ai_cont_foc_prc = yes
 			}
+			has_full_control_of_state = 622
 		}
-		#has_full_control_of_state = 622
 		bypass = {
 			has_opinion_modifier = CHI_prc_reconciliation
 		}
