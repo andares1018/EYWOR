@@ -62,10 +62,14 @@ check_has_focus_tree_to_switch_to_fascism = {
 
 check_has_focus_tree_to_switch_to_democratic = {
 	AND = {
-		NOT = { has_idea = chiang }
-		NOT = { has_idea = chiang1 }
-		NOT = { has_idea = chiang2 }
-		NOT = { has_idea = chiang3 }
+		NOT = { 
+			OR = {
+				has_idea = chiang
+				has_idea = chiang1
+				has_idea = chiang2
+				has_idea = chiang3
+			}
+		}
 	}
 	NOT = { tag = MAN }
 	NOT = { tag = FRA }
@@ -130,10 +134,14 @@ check_has_focus_tree_to_switch_to_democratic = {
 
 check_has_focus_tree_to_switch_to_communism = {
 	AND = {
-		NOT = { has_idea = chiang }
-		NOT = { has_idea = chiang1 }
-		NOT = { has_idea = chiang2 }
-		NOT = { has_idea = chiang3 }
+		NOT = { 
+			OR = {
+				has_idea = chiang
+				has_idea = chiang1
+				has_idea = chiang2
+				has_idea = chiang3
+			}
+		}
 	}
 	NOT = { tag = PRC }
 	NOT = { tag = SIK }
@@ -175,10 +183,14 @@ check_has_focus_tree_to_switch_to_communism = {
 
 check_has_focus_tree_to_switch_to_n_socialism = {
 	AND = {
-		NOT = { has_idea = chiang }
-		NOT = { has_idea = chiang1 }
-		NOT = { has_idea = chiang2 }
-		NOT = { has_idea = chiang3 }
+		NOT = { 
+			OR = {
+				has_idea = chiang
+				has_idea = chiang1
+				has_idea = chiang2
+				has_idea = chiang3
+			}
+		}
 	}
 	NOT = { tag = JAP }
 	NOT = { tag = CHI }
@@ -216,85 +228,3 @@ JAP_or_friend_controls_big_part_of_CHI_or_peace = {
 
 ####
 
-check_has_focus_tree_to_switch_to_fascism = {
-	NOT = { tag = JAP }
-	NOT = { tag = GER }
-	NOT = { tag = MAN }
-	NOT = { tag = ITA }
-	NOT = { tag = CHI }
-	NOT = { tag = PRC }
-	NOT = {
-		AND = {
-			tag = SAF
-			has_dlc = "Together for Victory"
-		}
-	}
-	NOT = {
-		AND = {
-			tag = RAJ
-			has_dlc = "Together for Victory"
-		}
-	}
-}
-
-check_has_focus_tree_to_switch_to_democratic = {
-	NOT = { tag = MAN }
-	NOT = { tag = FRA }
-	NOT = { tag = USA }
-	NOT = { tag = ENG }
-	NOT = { tag = CAN }
-	NOT = { tag = SAF }
-	NOT = { tag = AUS }
-	NOT = { tag = NZL }
-	NOT = { tag = RAJ }
-	NOT = { tag = CZE }
-	NOT = {
-		AND = {
-			tag = HUN
-			has_dlc = "Death or Dishonor"
-		}
-	}
-	NOT = {
-		AND = {
-			OR = {
-				tag = JAP
-				tag = GER
-				is_warlord = yes
-			}
-			has_dlc = "Waking the Tiger"
-		}
-	}
-}
-
-check_has_focus_tree_to_switch_to_communism = {
-	NOT = { tag = PRC }
-	NOT = { tag = SIK }
-	NOT = { tag = MAN }
-	NOT = { tag = SOV }
-	NOT = {
-		AND = {
-			tag = RAJ
-			has_dlc = "Together for Victory"
-		}
-	}
-	NOT = {
-		AND = {
-			OR = {
-				tag = JAP
-				#tag = GER
-				is_warlord = yes
-			}
-			has_dlc = "Waking the Tiger"
-		}
-	}
-}
-
-PRC_is_not_infiltrating_a_state = {
-	custom_trigger_tooltip = {
-		tooltip = PRC_is_not_infiltrating_a_state
-		NOT = {
-			has_decision = send_in_the_partisans
-			has_decision = contact_the_partisans
-		}
-	}
-}

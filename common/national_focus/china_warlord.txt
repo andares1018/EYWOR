@@ -802,6 +802,7 @@ focus_tree = {
 			if = {
 				limit = {
 					tag = NEA
+					country_exists = PRC
 				}
 				unlock_decision_category_tooltip = CHI_xian_incident
 			}

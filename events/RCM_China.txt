@@ -3716,6 +3716,7 @@ country_event = {
 	is_triggered_only = yes
 	trigger = {
 		tag = CHI
+		country_exists = PRC
 		has_global_flag = tacit_truce_flag
 		#date > 1936.8.10
 		#date < 1937.11.15

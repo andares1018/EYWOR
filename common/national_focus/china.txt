@@ -3088,12 +3088,12 @@ focus_tree = {
 		}
 		bypass = {
 		}
-		cancel_if_invalid = yes
+		cancel_if_invalid = yes 
 		continue_if_invalid = no
 		available_if_capitulated = no
 		
 		completion_reward = {
-			custom_effect_tooltip = CHI_purchase_tanks_tt
+			#custom_effect_tooltip = CHI_purchase_tanks_tt
 			hidden_effect = {
 				if = {
 					limit = {

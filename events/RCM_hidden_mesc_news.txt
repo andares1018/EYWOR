@@ -50,7 +50,7 @@ news_event = {
 	}
 	immediate = {
 		761 = { set_demilitarized_zone = no }
-		PRC = {
+		NEA = {
 			country_event = {
 				id = EFM_Comchina.9015
 			}

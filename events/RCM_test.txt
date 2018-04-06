@@ -20,7 +20,7 @@ country_event = {
 	#	days = 0
 	#}
 	immediate = {
-		add_offsite_building = { type = arms_factory level = -1 }
+		
 	}
 	is_triggered_only = yes
 	option = { 
@@ -32,9 +32,9 @@ country_event = {
 	id = rcmtest.2
 	picture = GFX_report_event_test
 	hidden = yes
-	#trigger = {
-		
-	#}
+	trigger = {
+		tag = CHI
+	}
 	immediate = {
 		add_offsite_building = { type = arms_factory level = 1 }
 	}

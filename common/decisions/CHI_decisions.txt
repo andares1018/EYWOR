@@ -905,9 +905,16 @@
 				}
 			}
 			visible = {
+				country_exists = PRC
 				has_completed_focus = CHI_cooperation_with_the_communists
 				tag = NEA
 			}
+			cancel_trigger = {
+				NOT = {
+					country_exists = PRC
+				}
+			}
+			cance
 			cost = 50
 			days_remove = 80
 			fire_only_once = yes

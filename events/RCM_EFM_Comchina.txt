@@ -344,9 +344,11 @@ country_event = {
 		761 = { set_demilitarized_zone = yes }
 		hidden_effect = {
 			761 = { set_state_flag = I_choose_this_state_to_DMZ }
-			country_event = {
-				id = EFM_Comchina.9013
-			}
+			NEA = {
+				country_event = {
+					id = EFM_Comchina.9013
+				}
+			}			
 		}
 	}
 }
@@ -571,8 +573,9 @@ country_event = {
 
 	is_triggered_only = yes
 	option = {
+		name = EFM_Comchina.18.a
 		ai_chance = {
-			factor = 50
+			factor = 10
 			modifier = {
 				factor = 0
 				OR = {
@@ -584,12 +587,24 @@ country_event = {
 					tag = NEA
 				}
 			}
+			modifier = {
+				factor = 20
+				OR = {
+					ROOT = { has_government = communism }
+					tag = SHX
+					tag = TNG
+					tag = HMI
+					tag = NXM
+					tag = XSM
+				}
+			}
 		}
-		name = EFM_Comchina.18.a
+		
 	}
 	option = {
+		name = EFM_Comchina.18.b
 		ai_chance = {
-			factor = 50
+			factor = 30
 			modifier = {
 				factor = 100
 				OR = {
@@ -606,7 +621,7 @@ country_event = {
 				tag = SIC
 			}
 		}
-		name = EFM_Comchina.18.b
+		
 		FROM = {
 			add_to_faction = ROOT
 			country_event = { id = EFM_Comchina.19 days = 1 }
@@ -625,6 +640,49 @@ country_event = {
 			id = "PRC"
 			value = 200
 		}
+	}
+	option = {
+		name = EFM_Comchina.18.c
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				OR = {
+					ROOT = { has_government = communism }
+					tag = GXC
+					tag = GUD
+					tag = SIC
+					tag = SHD
+					tag = NEA
+				}
+			}
+			modifier = {
+				factor = 50
+				OR = {
+					ROOT = { has_government = communism }
+					tag = SHX
+					tag = TNG
+					tag = HMI
+					tag = NXM
+					tag = XSM
+				}
+			}
+		}
+		add_to_war = {
+			targeted_alliance = CHI enemy = PRC
+		}
+		set_country_flag = called_out_nationwide
+		add_ai_strategy = {
+			type = befriend
+			id = "CHI"
+			value = 200
+		}
+		add_ai_strategy = {
+			type = alliance
+			id = "CHI"
+			value = 200
+		}
+		
 	}
 }
 country_event = {
