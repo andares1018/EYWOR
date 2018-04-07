@@ -1228,17 +1228,20 @@ focus_tree = {
 				limit = {
 					num_of_controlled_states > 1
 				}
-				start_civil_war = {
-					ruling_party = fascism
-					ideology = communism
-					size = 0.5
-				}
+				custom_effect_tooltip = commie_civil_war_tt
+				
 				hidden_effect = {
+					start_civil_war = {
+						ruling_party = fascism
+						ideology = communism
+						size = 0.5
+					}
 					random_other_country = {
 						limit = {
 							original_tag = PRC
 							has_government = communism
 						}
+
 						set_equipment_fraction = 0.7
 						set_stability = 0.8
 					}

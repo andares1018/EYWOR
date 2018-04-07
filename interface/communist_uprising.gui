@@ -17,25 +17,24 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "title"
-			position = {x=14 y=6}
+			position = {x=-76.5 y=21}
 			font = "hoi_18mbs"
 			text = "[This.GetName]"
 			maxWidth = 340
 			maxHeight = 23
-			format = left
+			format = center
 		}
 		
 		buttonType = {
 			name = "communists_rise_up_in_state" 
-			position = {x=16.5 y=39.5}	
-			spriteType = "GFX_stateview_resistance_button"
+			position = {x=38 y=65}	
+			spriteType = "GFX_uprising_button"
 			pdx_tooltip = "COMMIE_UPRISING_TOOLTIP"
-			scale = 1.1
 		}
 		
 		buttonType = {
 			name = "communists_amass_support" 
-			position = {x=62 y=39.5}	
+			position = {x=103 y=65 }	
 			spriteType = "GFX_amass_support_button"
 			pdx_tooltip = "COMMIE_SUPPORT_TOOLTIP"
 		}

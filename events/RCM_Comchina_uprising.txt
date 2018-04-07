@@ -281,6 +281,14 @@ country_event = {
 			}
 			transfer_state = FROM.FROM.FROM
 		}
+		if = {
+			limit = {
+				FROM.FROM.FROM = {
+					state = 760
+				}
+			}
+			set_country_flag = PRC_west_expedition_victory
+		}
 		else = {
 			FROM.FROM = { ROOT = { annex_country = { target = PREV } } }
 		}

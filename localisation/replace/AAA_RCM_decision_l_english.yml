@@ -1,5 +1,5 @@
 ﻿l_english:
- TRIGGER_IS_BORDER_CONFLICT:0 "$STATE|H$ is affected by Communist Partisan Activities."
+ TRIGGER_IS_BORDER_CONFLICT:0 "$STATE|H$ is affected by §YCommunist Partisan Activities§!."
  TRIGGER_IS_NOT_BORDER_CONFLICT:0 "$STATE|H$ is not affected by Communist Partisan Activities."
  border_conflict_reconciled:0 "Communist Partisan Activities Reconciled"
  BORDER_WAR_ATTRITION:0 "Attrition from Communist Partisan Activities: $VAL|=-%$"

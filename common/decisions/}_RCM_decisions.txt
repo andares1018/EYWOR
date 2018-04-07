@@ -2043,6 +2043,13 @@ RCM_communist_infiltration = {
 
 		}
 		remove_effect = { #run effect when removed/finished
+			ROOT = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -100
+				}
+				add_manpower = -2000
+			}
 			every_state = {
 				limit = {
 					is_north_china_state_for_liberation = yes
@@ -2065,13 +2072,8 @@ RCM_communist_infiltration = {
 				}
 
 			}
-			ROOT = {
-				add_equipment_to_stockpile = {
-					type = infantry_equipment
-					amount = -100
-				}
-				add_manpower = -2000
-			}
+			custom_effect_tooltip = communist_partisan_effect_tt
+			
 		}
 		cancel_trigger = { #will abort
 
@@ -2141,6 +2143,13 @@ RCM_communist_infiltration = {
 
 		}
 		remove_effect = { #run effect when removed/finished
+			ROOT = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -50
+				}
+				add_manpower = -200
+			}
 			every_state = {
 				limit = {
 					is_MAN_state_for_liberation = yes
@@ -2162,16 +2171,11 @@ RCM_communist_infiltration = {
 					set_state_flag = commie_ridden_states
 				}
 			}
-			ROOT = {
-				add_equipment_to_stockpile = {
-					type = infantry_equipment
-					amount = -50
-				}
-				add_manpower = -200
-			}
+			custom_effect_tooltip = communist_partisan_effect_tt
+			
 		}
 		cancel_trigger = { #will abort
-
+  
 		}
 		modifier = { #active during the course of the decision
 			political_power_gain = -0.25

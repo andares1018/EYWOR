@@ -152,4 +152,5 @@
  chiang_ruling_idea:0 "\n§YCollaborationist Kuomintang§! becomes the ruling party.\nPublic elections will not be held.\n"
  warlord_generic_communist:0 "Focus Tree of Communist Warlords"
  warlord_generic_nationalist:0 "Focus Tree of Nationalist Warlords"
- commie_ridden_states_start_tt:0 "Will be affected by Communist Partisans.\n"
+ commie_ridden_states_start_tt:0 "Will be affected by §YCommunist Partisans Activities§!.\n"
+ commie_civil_war_tt:0 "The §YCommunist Supporters§! start a civil war.\n"

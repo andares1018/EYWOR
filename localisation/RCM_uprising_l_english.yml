@@ -30,6 +30,7 @@
  uprising_short_no_in:0 "stage uprisings"
  prepared_yes:0 "£trigger_yes §GYou are well prepared for this operation§!\n"
  prepared_no:0 "£trigger_no You are not yet prepared for this operation\n"
+ communist_partisan_effect_tt:0 "\n--------------\n£location_pointer §YCommunist Partisan Activities§! in a state inflict §RAdditional Attrition§! on the troops there and allow us to §MPerform Operations§! through a §YPop-up window§! upon clicking the state.\n"
  COMMIE_SUPPORT_TOOLTIP:0 "§YAmass Public Support§!\n\n§YPrerequisites:§!\nCost:[PRC.Getsupportavaiblility][This.Getalreadysupport]--------------\nThe public in [This.GetName] will support our cause.\n\n§YEffects when selected:§!\nGain Base War Support: §G+0.5%§!.[This.Getownernatorjap]"
  COMMIE_SUPPORT_TOOLTIP_nationalist_owner:0 "\n\n£location_pointer Note that with public support, we can §M[This.Getinforuprnoin]§! here when we are §Yprepared§!.\n"
  COMMIE_SUPPORT_TOOLTIP_jap_owner:0 "\nBecome the §Yowner and controller§! of §Y[This.GetName]§! when the enemies here are §Ypushed back§!."

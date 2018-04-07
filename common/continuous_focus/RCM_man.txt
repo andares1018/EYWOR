@@ -14,54 +14,7 @@ continuous_focus_palette = {
 			
 	position = { x = 50 y = 1100 }
 	
-	focus = {
-		id = MAN_continuous_counter_insurgency
-		
-		icon = GFX_goal_continuous_counter_insurgency
-		
-		available = {
-		}
-		
-		idea = idea_continuous_counter_insurgency
-		
-		ai_will_do = {
-			factor = 1
-		}
-		enabled = {
-			#has_completed_focus = CHI_counter_insurgency
-			#is_legit_china = yes
-			any_state = {
-				has_state_flag = commie_ridden_states
-				is_owned_by = ROOT
-			}
-		}
-		select_effect = {
-			hidden_effect = {
-				every_state = {
-					clr_state_flag = this_state_crack_down_@ROOT
-				}
-				random_owned_state = {
-					limit = {
-						is_controlled_by = ROOT
-						has_state_flag = commie_ridden_states
-					}
-					set_state_flag = this_state_crack_down_@ROOT
-					PRC = {
-						country_event = { days = 14 id = prc.14 }
-					}
-					ROOT = {
-						country_event = { days = 14 id = prc.14 }
-					}
-				}
-			}
-			custom_effect_tooltip = counter_insurgency_tt
-		}
-		supports_ai_strategy = ai_focus_naval
-		
-		daily_cost = 1
-		
-		available_if_capitulated = yes
-	}
+	
 		
 	focus = {
 		id = MAN_continuous_naval_production

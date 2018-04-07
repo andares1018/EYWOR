@@ -1472,12 +1472,7 @@ PRC_border_conflict_SHX_select = {
 				set_temp_variable = { test_defender_state_temp = id }
 				hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
 				any_neighbor_state = {
-					NOT = {
-						OR = {
-							state = 767
-							state = 621
-						}					
-					}
+					
 					hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
 					set_temp_variable = { test_attacker_state_temp = id }
 					ROOT = {
@@ -1514,12 +1509,7 @@ PRC_border_conflict_SHX_select = {
 					}					
 				}
 				any_neighbor_state = {
-					NOT = {
-						OR = {
-							state = 767
-							state = 621
-						}					
-					}
+					
 					state = var:SHX.defender_state_vs_@ROOT
 				}
 			}
@@ -1565,12 +1555,7 @@ PRC_border_conflict_SHX = {
 				}
 				hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
 				any_neighbor_state = {
-					NOT = {
-						OR = {
-							state = 767
-							state = 621
-						}					
-					}
+					
 					is_fully_controlled_by = ROOT
 					has_ROOT_at_least_1_div_in_current_state_scope = yes
 					hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
@@ -1590,12 +1575,7 @@ PRC_border_conflict_SHX = {
 				hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
 				has_ROOT_at_least_1_div_in_current_state_scope = yes
 				any_neighbor_state = {
-					NOT = {
-						OR = {
-							state = 767
-							state = 621
-						}					
-					}
+					
 					state = var:SHX.defender_state_vs_@ROOT
 				}
 			}

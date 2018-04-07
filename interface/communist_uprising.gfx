@@ -11,5 +11,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_amass_support_button"
 		texturefile = "gfx/interface/amass_support_button.dds"
-	}	
+	}
+	spriteType = {
+		name = "GFX_uprising_button"
+		texturefile = "gfx/interface/uprising_button.dds"
+	}
+	
 }

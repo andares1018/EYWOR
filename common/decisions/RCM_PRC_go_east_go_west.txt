@@ -14,65 +14,9 @@ RCM_border_clashes = {
 		available = {
 			
 		}
-		target_trigger = {
-			always = no
-		}
 		days_re_enable = 400
 		visible = {
-			NOT = {
-				AND = {
-					has_completed_focus = PRC_East_conquest
-					has_completed_focus = PRC_Western_expedition
-				}
-			}
-			FROM = { exists = yes }
-			NOT = { has_war_with = FROM }
-			FROM = { has_not_initiated_border_incident_with_ROOT = yes }
-			FROM = {
-				NOT = {
-					is_subject_of = ROOT
-				}
-				NOT = {
-					is_in_faction_with = ROOT
-				}
-			}
-			
-			any_state = {
-				is_owned_and_controlled_by = FROM
-				OR = {
-					AND = {
-						ROOT = { is_ai = yes }
-						OR = {
-							is_core_of = ROOT
-							is_claimed_by = ROOT
-						}
-						
-						ROOT = { has_opinion = { target = FROM value < 80 } }
-					}
-					
-					ROOT = { is_ai = no }
-				}
-				
-				any_neighbor_state = {
-					is_fully_controlled_by = ROOT
-				}
-			}
-			
-			NOT = {
-				is_subject_of = FROM
-			}
-
-			OR = {
-				NOT = { has_border_war_with = FROM }
-				any_state = {
-					is_owned_and_controlled_by = FROM
-					hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
-					any_neighbor_state = {
-						hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
-						is_fully_controlled_by = ROOT
-					}
-				}
-			}
+			always = no
 		}
 
 		target_trigger = {
@@ -301,7 +245,7 @@ RCM_border_clashes = {
 		allowed = { always = no } #Activated from effect
 
 		available = {
-			hidden_trigger = { always = no }
+			#hidden_trigger = { always = no }
 		}
 
 		highlight_states = {
@@ -347,7 +291,7 @@ RCM_border_clashes = {
 		allowed = { always = no } #Activated from effect
 
 		available = {
-			hidden_trigger = { always = no }
+			#hidden_trigger = { always = no }
 		}
 
 		highlight_states = {
