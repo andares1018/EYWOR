@@ -16,6 +16,9 @@ set_technology = {
 	gw_artillery = 1
 }
 add_stability = -0.15
+add_war_support = -0.1
+add_ideas = FIC_economic_crisis
+add_ideas = FIC_iliterate_population
 1939.1.1 = {
 
 	add_political_power = 1198

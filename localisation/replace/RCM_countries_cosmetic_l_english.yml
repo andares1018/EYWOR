@@ -35,8 +35,6 @@
  XSM_HUI_fascism:0 "Hui Hui State"
  XSM_HUI_fascism_DEF:0 "The Hui Hui State"
  XSM_HUI_fascism_ADJ:0 "Hui Hui"
- FIC_subject:0 "$OVERLORDADJ$ Indochina"
- FIC_subject_DEF:0 "The $OVERLORDADJ$ Indochina"
  SST_UK_democratic:0 "Straits Settlements"
  SST_UK_democratic_DEF:0 "The Straits Settlements"
  SHX_CLQ_neutrality:0 "Shanxi Clique"

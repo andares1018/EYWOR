@@ -1,0 +1,479 @@
+focus_tree = {
+	id = Indochina
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = FIC
+		}
+	}
+	default = no
+	continuous_focus_position = { x = 50 y = 1200 }
+	
+	focus = {
+		id = FIC_colonial_loan
+		icon = GFX_focus_government_bailout
+		cost = 10
+		x = 3
+		y = 0
+
+	}
+	focus = {
+		id = FIC_help_peasants
+		icon = GFX_goal_generic_improve_relations
+		cost = 10
+		prerequisite = {
+			focus = FIC_colonial_loan
+		}
+		x = 3
+		y = 1
+
+	}
+	focus = {
+		id = FIC_hydraulic_works
+		icon = GFX_goal_generic_construction
+		cost = 10
+		prerequisite = {
+			focus = FIC_help_peasants
+		}
+		x = 3
+		y = 2
+
+	}
+	focus = {
+		id = FIC_transindochinese_railway
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10
+		prerequisite = {
+			focus = FIC_hydraulic_works
+		}
+		x = 3
+		y = 3
+
+	}
+	focus = {
+		id = FIC_small_scale_industrialisation
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10
+		prerequisite = {
+			focus = FIC_transindochinese_railway
+		}
+		x = 2
+		y = 4
+
+	}
+	focus = {
+		id = FIC_develop_hanoi_arsenal
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10
+		prerequisite = {
+			focus = FIC_transindochinese_railway
+		}
+		x = 4
+		y = 4
+
+	}
+	focus = {
+		id = FIC_exploit_resources
+		icon = GFX_goal_generic_construction2
+		cost = 10
+		prerequisite = {
+			focus = FIC_small_scale_industrialisation
+		}
+		prerequisite = {
+			focus = FIC_develop_hanoi_arsenal
+		}
+		x = 3
+		y = 5
+
+	}
+	focus = {
+		id = FIC_payback_colonial_loan
+		icon = GFX_draft_focus
+		cost = 10
+		prerequisite = {
+			focus = FIC_exploit_resources
+		}
+		x = 3
+		y = 6
+
+	}
+	focus = {
+		id = FIC_support_french_war_effort
+		icon = GFX_focus_chi_reach_out_to_france
+		cost = 10
+		prerequisite = {
+			focus = FIC_payback_colonial_loan
+		}
+		x = 3
+		y = 7
+
+	}
+	focus = {
+		id = FIC_reduce_illiteracy
+		icon = GFX_goal_generic_propaganda
+		cost = 10
+		prerequisite = {
+			focus = FIC_help_peasants
+		}
+		x = 6
+		y = 2
+
+	}
+	focus = {
+		id = FIC_expand_hanoi_univ
+		icon = GFX_focus_research
+		cost = 10
+		prerequisite = {
+			focus = FIC_train_indigenous_officers
+		}
+		prerequisite = {
+			focus = FIC_reduce_illiteracy
+		}
+		x = 7
+		y = 3
+	}
+	focus = {
+		id = FIC_french_indigenous_schools
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 10
+		prerequisite = {
+			focus = FIC_expand_hanoi_univ
+		}
+		x = 7
+		y = 4
+
+	}
+	focus = {
+		id = FIC_modern_school_system
+		icon = GFX_focus_research2
+		cost = 10
+		prerequisite = {
+			focus = FIC_french_indigenous_schools
+		}
+		x = 7
+		y = 5
+
+	}
+	focus = {
+		id = FIC_strengthen_military_intel
+		icon = GFX_goal_counter_intellegence
+		cost = 10
+		x = 12
+		y = 0
+
+	}
+	focus = {
+		id = FIC_increase_mil_spending
+		icon = GFX_goal_generic_build_tank
+		cost = 10
+		prerequisite = {
+			focus = FIC_strengthen_military_intel
+		}
+		x = 12
+		y = 1
+
+	}
+	focus = {
+		id = FIC_train_indigenous_officers
+		icon = GFX_focus_generic_military_academy
+		cost = 10
+		prerequisite = {
+			focus = FIC_increase_mil_spending
+		}
+		x = 8
+		y = 2
+
+	}
+	focus = {
+		id = FIC_defence_of_indochina
+		icon = GFX_goal_generic_defence
+		cost = 10
+		prerequisite = {
+			focus = FIC_increase_mil_spending
+		}
+		x = 12
+		y = 2
+
+	}
+	focus = {
+		id = FIC_expand_saigon_nav_arsenal
+		icon = GFX_goal_generic_build_navy
+		cost = 10
+		prerequisite = {
+			focus = FIC_defence_of_indochina
+		}
+		x = 10
+		y = 3
+
+	}
+	focus = {
+		id = FIC_request_convoys
+		icon = GFX_focus_generic_destroyer
+		cost = 10
+		prerequisite = {
+			focus = FIC_expand_saigon_nav_arsenal
+		}
+		x = 10
+		y = 4
+
+	}
+	focus = {
+		id = FIC_army_expansion
+		icon = GFX_focus_chi_army_reform
+		cost = 10
+		prerequisite = {
+			focus = FIC_defence_of_indochina
+		}
+		x = 12
+		y = 3
+
+	}
+	focus = {
+		id = FIC_request_tanks
+		icon = GFX_goal_generic_army_tanks
+		cost = 10
+		prerequisite = {
+			focus = FIC_army_expansion
+		}
+		x = 12
+		y = 4
+
+	}
+	focus = {
+		id = FIC_expand_tan_son_nhat_airport
+		icon = GFX_goal_generic_build_airforce
+		cost = 10
+		prerequisite = {
+			focus = FIC_defence_of_indochina
+		}
+		x = 14
+		y = 3
+
+	}
+	focus = {
+		id = FIC_request_planes
+		icon = GFX_goal_generic_air_fighter2
+		cost = 10
+		prerequisite = {
+			focus = FIC_expand_tan_son_nhat_airport
+		}
+		x = 14
+		y = 4
+
+	}
+	focus = {
+		id = FIC_colonial_reforms
+		icon = GFX_focus_generic_self_management
+		cost = 10
+		x = 21
+		y = 0
+
+	}
+	focus = {
+		id = FIC_end_repressions
+		icon = GFX_goal_tripartite_pact
+		cost = 10
+		prerequisite = {
+			focus = FIC_colonial_reforms
+		}
+		x = 21
+		y = 1
+
+	}
+	focus = {
+		id = FIC_improve_workers_condition
+		icon = GFX_goal_generic_consumer_goods
+		cost = 10
+		prerequisite = {
+			focus = FIC_end_repressions
+		}
+		x = 21
+		y = 2
+
+	}
+	focus = {
+		id = FIC_individual_freedoms
+		icon = GFX_goal_support_democracy
+		cost = 10
+		prerequisite = {
+			focus = FIC_improve_workers_condition
+		}
+		x = 0
+		y = 1
+		relative_position_id = FIC_improve_workers_condition
+
+	}
+	focus = {
+		id = FIC_allow_syndicates
+		icon = GFX_goal_befriend_soviet
+		cost = 10
+		prerequisite = {
+			focus = FIC_individual_freedoms
+		}
+		x = 21
+		y = 4
+
+	}
+	focus = {
+		id = FIC_indochina_fights_on
+		icon = GFX_goal_generic_military_sphere
+		cost = 10
+		prerequisite = {
+			focus = FIC_allow_syndicates
+		}
+		mutually_exclusive = {
+			focus = FIC_at_the_helm_of_indochina
+		}
+		x = 17
+		y = 5
+
+	}
+	focus = {
+		id = FIC_support_china
+		icon = GFX_focus_MON_KMT_ties
+		cost = 10
+		prerequisite = {
+			focus = FIC_indochina_fights_on
+		}
+		x = 15
+		y = 6
+
+	}
+	focus = {
+		id = FIC_cooperate_with_britain
+		icon = GFX_focus_chi_british_cooperation
+		cost = 10
+		prerequisite = {
+			focus = FIC_indochina_fights_on
+		}
+		x = 19
+		y = 6
+
+	}
+	focus = {
+		id = FIC_ally_local_leaders
+		icon = GFX_focus_RAJ_lions_of_the_great_war
+		cost = 10
+		prerequisite = {
+			focus = FIC_indochina_fights_on
+		}
+		x = 17
+		y = 6
+
+	}
+	focus = {
+		id = FIC_finance_guerilleros
+		icon = GFX_focus_prc_infiltration
+		cost = 10
+		prerequisite = {
+			focus = FIC_ally_local_leaders
+		}
+		x = 17
+		y = 7
+
+	}
+	focus = {
+		id = FIC_at_the_helm_of_indochina
+		icon = GFX_goal_support_fascism
+		cost = 10
+		prerequisite = {
+			focus = FIC_allow_syndicates
+		}
+		mutually_exclusive = {
+			focus = FIC_indochina_fights_on
+		}
+		x = 25
+		y = 5
+
+	}
+	focus = {
+		id = FIC_defend_against_siam
+		icon = GFX_focus_generic_provoke_border_clashes
+		cost = 10
+		prerequisite = {
+			focus = FIC_indochina_fights_on
+			focus = FIC_at_the_helm_of_indochina
+		}
+		x = 21
+		y = 6
+
+	}
+	focus = {
+		id = FIC_ask_senegalese_troops
+		icon = GFX_goal_generic_axis_build_infantry
+		cost = 10
+		prerequisite = {
+			focus = FIC_at_the_helm_of_indochina
+		}
+		x = 23
+		y = 6
+
+	}
+	focus = {
+		id = FIC_strengthen_general_security
+		icon = GFX_focus_MEN_espionage
+		cost = 10
+		prerequisite = {
+			focus = FIC_at_the_helm_of_indochina
+		}
+		x = 25
+		y = 6
+
+	}
+	focus = {
+		id = FIC_support_laotian_renovation_movement
+		icon = GFX_goal_tfv_saf_support_ossebrandwag
+		cost = 10
+		prerequisite = {
+			focus = FIC_at_the_helm_of_indochina
+		}
+		x = 27
+		y = 6
+
+	}
+	focus = {
+		id = FIC_dirigisme
+		icon = GFX_focus_generic_industry_2
+		cost = 10
+		prerequisite = {
+			focus = FIC_strengthen_general_security
+		}
+		x = 25
+		y = 7
+
+	}
+	focus = {
+		id = FIC_encourage_local_patriotisms
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		prerequisite = {
+			focus = FIC_dirigisme
+		}
+		x = 23
+		y = 8
+
+	}
+	focus = {
+		id = FIC_youth_organisations
+		icon = GFX_focus_generic_little_entente
+		cost = 10
+		prerequisite = {
+			focus = FIC_dirigisme
+		}
+		x = 27
+		y = 8
+
+	}
+	focus = {
+		id = FIC_indigenous_civil_servants
+		icon = GFX_focus_generic_treaty
+		cost = 10
+		prerequisite = {
+			focus = FIC_dirigisme
+		}
+		x = 25
+		y = 8
+
+	}
+}
