@@ -2,6 +2,8 @@
 ####TRW COMPAT
 
 ######
+set_global_flag = jnc_exists
+set_global_flag = rfm_exists
 CHI = {
 	set_autonomy = {
 		target = NEA
@@ -150,6 +152,8 @@ ENG = {
 			election_frequency = 48
 			elections_allowed = no
 		}
+		complete_national_focus = CHI_secure_internal_politics
+		complete_national_focus = CHI_cooperation_with_the_nationalists
 	}
 
 }
@@ -231,7 +235,7 @@ if = {
 			unbalanced_industry
 			iliterate_population
 			no_proper_equipment_design
-			CHI_incompetent_officers
+			#CHI_incompetent_officers
 			CHI_hyper_inflation_1
 		}
 	}

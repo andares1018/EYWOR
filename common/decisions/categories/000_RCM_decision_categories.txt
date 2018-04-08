@@ -3,11 +3,12 @@ RCM_border_clashes = {
 	icon = border_conflicts
 }
 JAP_bribe_the_tokko = {
-    icon = 
+    icon = generic_propaganda
+    picture = GFX_decision_cat_generic_tokko
     allowed = {
-        tao = JAP
+        tag = JAP
     }
-
+  	
     visible = {
     }
 }

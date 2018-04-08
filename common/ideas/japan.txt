@@ -1,10 +1,92 @@
 ideas = {
 	country = {
+
+		JAP_bribe_the_tokko_befriended = {
+			allowed = {
+				always = no
+			}
+			picture = generic_secret_police
+			allowed_civil_war = {
+				NOT = {
+					OR = {
+						has_government = democratic
+						has_government = communism
+						has_government = n_socialism
+					}
+				}
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.25
+				drift_defence_factor = 0.5
+			}
+		}
+		JAP_bribe_the_tokko_1 = {
+			allowed = {
+				always = no
+			}
+			picture = generic_secret_police
+			allowed_civil_war = {
+				NOT = {
+					OR = {
+						has_government = democratic
+						has_government = communism
+						has_government = n_socialism
+					}
+				}
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.25
+				drift_defence_factor = 0.5
+			}
+		}
+		JAP_bribe_the_tokko_2 = {
+			allowed = {
+				always = no
+			}
+			picture = generic_secret_police
+			allowed_civil_war = {
+				NOT = {
+					OR = {
+						has_government = democratic
+						has_government = communism
+						has_government = n_socialism
+					}
+				}
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.1
+				drift_defence_factor = 0.25
+			}
+		}
+		JAP_bribe_the_tokko_3 = {
+			allowed = {
+				always = no
+			}
+			picture = generic_secret_police
+			allowed_civil_war = {
+				NOT = {
+					OR = {
+						has_government = democratic
+						has_government = communism
+						has_government = n_socialism
+					}
+				}
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.05
+				#drift_defence_factor = 0.2
+			}
+		}
+
 		reformed_colonial_administration = {
 			allowed = {
 				always = no
 			}
-			picture = idea_generic_political_support
+			picture = generic_political_support
 			allowed_civil_war = {
 				NOT = {
 					OR = {
@@ -2045,4 +2127,5 @@ ideas = {
 			traits = { rocket_scientist }
 		}
 	}
-}
+}
+

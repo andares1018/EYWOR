@@ -1974,16 +1974,17 @@ economy_decisions = {
 			has_idea = unstable_economy
 		}
 		complete_effect = { #run effect on selection
-			swap_ideas = {
-				remove_idea = unstable_economy
-				add_idea = civilian_economy
-			}
+
 		}
 		remove_trigger = { #will run remove effect and abort
 
 		}
 		remove_effect = { #run effect when removed/finished
-
+			swap_ideas = {
+				remove_idea = unstable_economy
+				add_idea = civilian_economy
+			}
+			set_country_flag = has_taken_monetary_reform_decision
 		}
 		cancel_trigger = { #will abort
 
@@ -2209,7 +2210,7 @@ RCM_communist_infiltration = {
 		}
 		complete_effect = { #run effect on selection
 
-		}
+		} 
 		remove_trigger = { #will run remove effect and abort
 
 		}
@@ -2292,4 +2293,55 @@ RCM_communist_crackdown = {
 			factor = 50
 		}
 	}
+}
+JAP_bribe_the_tokko = {
+    JAP_bribe_the_tokko_decision = {
+
+        icon = generic_political_discourse
+
+        available = {
+            has_political_power > 99
+        }
+
+        cost = 0
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        days_remove = 30
+
+        visible = {
+        	tag = JAP
+        	has_idea = JAP_bribe_the_tokko_1
+            NOT = { has_idea = JAP_bribe_the_tokko_3 }
+            NOT = { has_completed_focus = jap_placate_military_focus }
+            NOT = { has_completed_focus = JAP_strengthen_civilian_government }
+        }
+        remove_effect = {
+            if = {
+                limit = { has_idea = JAP_bribe_the_tokko_1 }
+                swap_ideas = {
+                    remove_idea = JAP_bribe_the_tokko_1
+                    add_idea = JAP_bribe_the_tokko_2
+                }
+                custom_effect_tooltip = pm_ass_lowered_tt
+            }
+            else_if = {
+                limit = { has_idea = JAP_bribe_the_tokko_2 }
+                swap_ideas = {
+                    remove_idea = JAP_bribe_the_tokko_2
+                    add_idea = JAP_bribe_the_tokko_3
+                }
+                custom_effect_tooltip = pm_ass_free_tt
+            }
+        }
+        modifier = {
+        	political_power_gain = -0.25
+        }
+        complete_effect = {
+
+        }
+    }
+}
 }

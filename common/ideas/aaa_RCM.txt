@@ -68,7 +68,11 @@ ideas = {
 			}
 			
 			allowed_to_remove = {
-				has_completed_focus = CHI_monetary_reform
+				custom_trigger_tooltip = {
+					tooltip = has_taken_monetary_reform_decision_tt
+					has_country_flag = has_taken_monetary_reform_decision
+				}
+				#has_completed_focus = CHI_monetary_reform
 			}
 			
 			cancel_if_invalid = no

@@ -13,7 +13,7 @@ add_ideas = {
 	limited_exports
 	limited_conscription
 	partial_economic_mobilisation
-
+	JAP_bribe_the_tokko_1
 	JAP_zaibatsus
 	JAP_duplicate_research_efforts
 	emperor_showa

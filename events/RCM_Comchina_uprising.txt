@@ -15,23 +15,24 @@ state_event = {
 	is_triggered_only = yes
 	fire_only_once = no
 	immediate = {
-		owner = {
-			set_country_flag = i_have_been_notified
-		}
-		every_country = {
-			limit = {
-				OR = {
-					is_warlord = yes
-					tag = CHI
-				}
-				NOT = {
-					has_government = communism
-				}
+		hidden_effect = {
+			owner = {
+				set_country_flag = i_have_been_notified
 			}
-			country_event = RCM_communist_uprising_country.1
+			every_country = {
+				limit = {
+					OR = {
+						is_warlord = yes
+						tag = CHI
+					}
+					NOT = {
+						has_government = communism
+					}
+				}
+				country_event = RCM_communist_uprising_country.1
+			}
 		}
 	}
-
 
 
 	option = {
@@ -124,15 +125,17 @@ state_event = {
 	}
 	is_triggered_only = yes
 	immediate = {
-		owner = {
-			every_other_country = {
-				limit = {
-					OR = {
-						is_warlord = yes
-						tag = CHI
+		hidden_effect = {
+			owner = {
+				every_other_country = {
+					limit = {
+						OR = {
+							is_warlord = yes
+							tag = CHI
+						}
 					}
+					country_event = RCM_communist_uprising_country.2
 				}
-				country_event = RCM_communist_uprising_country.2
 			}
 		}
 	}

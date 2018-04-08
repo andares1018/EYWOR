@@ -66,6 +66,10 @@
  #JAP_form_MEN_mission:0 "Form Puppet Governments in China"
  JAP_form_MEN:0 "Puppet for the Mongols"
 
+ JAP_bribe_the_tokko:0 "Influence the Tokkō"
+ JAP_bribe_the_tokko_desc:0 "The political climate in Japan is very tense now. With the every growing military and shady secret police, a political reform can never happen. However, we might be able to influence some of those groups to further our cause.\n\n§YTake this decision once or multiple times can lower the chance of Prime Minister's assassination in the case of a reform.§!"
+ JAP_bribe_the_tokko_decision:0 "Influence the Tokkō"
+ #JAP_bribe_the_tokko_decision_desc:0 "Influence the Tokkō"
  ###
  CHI_sue_for_peace_JAP:0 "Offer Peace to Japan"
  lushan_declaration:0 "lushan Declaration"

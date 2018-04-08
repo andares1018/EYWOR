@@ -434,7 +434,7 @@ news_event = {
 		name = news.401.a
 	}
 }
-#gov_strengthen ass event
+#gov_strengthen assassinatin event
 news_event = {
 	id = news.404
 	hidden = yes
@@ -446,6 +446,9 @@ news_event = {
 		focus_progress = {
 			focus = JAP_strengthen_civilian_government
 			progress > 0.1
+		}
+		NOT = {
+			has_idea = JAP_bribe_the_tokko_3
 		}
 	}
 	immediate = {
@@ -480,7 +483,8 @@ news_event = {
 					}
 				}
 			}
-		}		
+		}
+				
 	}
 	option = {
 	}
@@ -498,9 +502,14 @@ news_event = {
 			focus = JAP_strengthen_civilian_government
 			progress > 0.5
 		}
+		NOT = {
+			has_idea = JAP_bribe_the_tokko_3
+		}
 	}
 	immediate = {
 		random_list = {
+			10 = {
+			}
 			20 = { 
 				news_event = { id = news.410 }
 				set_country_flag = pm_killed 
@@ -518,7 +527,7 @@ news_event = {
 				unlock_national_focus = jap_placate_military_focus
 				unlock_national_focus = pressure_pm_focus				
 			}
-			80 = { 
+			70 = { 
 				news_event = { id = news.408 } 
 				create_country_leader = {
 					name = "Koki Hirota"
@@ -549,10 +558,11 @@ news_event = {
 			focus = JAP_strengthen_civilian_government
 			progress > 0.8
 		}
+		has_idea = JAP_bribe_the_tokko_1
 	}
 	immediate = {
 		random_list = {
-			30 = { 
+			50 = { 
 				news_event = { id = news.410 }
 				set_country_flag = pm_killed 
 				kill_country_leader = yes
@@ -569,7 +579,7 @@ news_event = {
 				unlock_national_focus = jap_placate_military_focus
 				unlock_national_focus = pressure_pm_focus
 			}
-			70 = {
+			50 = {
 				news_event = { id = news.409 } 
 				create_country_leader = {
 					name = "Koki Hirota"

@@ -18,7 +18,7 @@
  appeasement_policy:0 "Appeasement Policy"
  CHI_german_style_training_idea:0 "German-style Training"
  unstable_economy:0 "Silver Standard Economy"
- unstable_economy_desc:0 "Silver has always been a major form of currency in China, however The US silver purchase act of 1934 created an intolerable demand on China's silver coins, and China's silver standard economy has taken a huge hit because of that."
+ unstable_economy_desc:0 "Silver has always been a major form of currency in China, however The US silver purchase act of 1934 created an intolerable demand on China's silver coins, and China's silver standard economy has taken a huge hit because of that.\n"
  CHI_Isolationism_idea:0 "Isolationism"
  CHI_International_Legion:0 "International Legion"
  CHI_inch_blood_1:0 "A Thousand of Youth, a Thousand of Troops"
@@ -288,6 +288,14 @@
  prince_de_defect_desc:0 "Prince Demchugdongrub, the leader of the Pailingmiao Council, has shown signs of defection. Maybe we should do something about it.\n--------------\nCompleting §YSplit Pailingmiao Council§! focus in time may stop a complete defection in Inner-Mongolia."
  prepared_for_operation:0 "Prepared for Operation"
  prepared_for_operation_desc:0 "We are now well prepared for initiating an partisan campaign to spread our sphere of influence."
+ JAP_bribe_the_tokko_1:0 "Tokkō"
+ JAP_bribe_the_tokko_1_desc:0 "Tokkō, short for Tokubetsu Kōtō Keisatsu, is a police force established in 1911 in Japan, specifically to investigate and control political groups and ideologies deemed to be a threat to public order.\n--------------\n§RPrime Minister has a high chance of being assassinated§! in the case of a reform."
+ JAP_bribe_the_tokko_2:0 "Tokkō lobbied"
+ JAP_bribe_the_tokko_2_desc:0 "Tokkō, short for Tokubetsu Kōtō Keisatsu, is a police force established in 1911 in Japan, specifically to investigate and control political groups and ideologies deemed to be a threat to public order.\n--------------\n§RPrime Minister has a Small chance of being assassinated§! in the case of a reform."
+ JAP_bribe_the_tokko_3:0 "Tokkō Bribed"
+ JAP_bribe_the_tokko_3_desc:0 "Tokkō, short for Tokubetsu Kōtō Keisatsu, is a police force established in 1911 in Japan, specifically to investigate and control political groups and ideologies deemed to be a threat to public order.\n--------------\n§YPrime Minister is free from assassination§! in the case of a reform."
+ JAP_bribe_the_tokko_befriended:0 "Tokkō Befriended"
+ JAP_bribe_the_tokko_befriended_desc:0 "Tokkō, short for Tokubetsu Kōtō Keisatsu, is a police force established in 1911 in Japan, specifically to investigate and control political groups and ideologies deemed to be a threat to public order.\n"
  ####COMPANIES#####
  naval_aircraft_agency:0 "Naval Aircraft Agency"
  idea_guangdong_arsenal:0 "Guangdong Arsenal"
@@ -403,3 +411,4 @@
  saionji_kinmochi:0 "Saionji Kinmochi"
 
  ###commie stuff
+###TOKKO

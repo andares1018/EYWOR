@@ -51,7 +51,7 @@ if = {
 		has_dlc = "Waking the Tiger"
 	}
 	add_ideas = {
-		CHI_incompetent_officers
+		#CHI_incompetent_officers
 		CHI_hyper_inflation_1
 	}
 }

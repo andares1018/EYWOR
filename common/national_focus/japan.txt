@@ -68,7 +68,24 @@ focus_tree = {
 				}
 				remove_ideas = JAP_military_outweighs_the_government_idea
 			}
-			custom_effect_tooltip = assassinate_possibility
+			if = {
+				limit = {
+					has_idea = JAP_bribe_the_tokko_1
+				}
+				custom_effect_tooltip = assassinate_possibility_high
+			}
+			else_if = {
+				limit = {
+					has_idea = JAP_bribe_the_tokko_2
+				}
+				custom_effect_tooltip = assassinate_possibility_low
+			}
+			else_if = {
+				limit = {
+					has_idea = JAP_bribe_the_tokko_3
+				}
+				custom_effect_tooltip = assassinate_possibility_none
+			}
 		}
 		available = {
 			custom_trigger_tooltip = {
@@ -2192,6 +2209,11 @@ focus_tree = {
 				traits = { popular_figurehead }
 			}
 			add_political_power = 120
+			custom_effect_tooltip = blank_line
+			swap_ideas = {
+				add_idea = JAP_bribe_the_tokko_befriended
+				remove_idea = JAP_bribe_the_tokko_1
+			}
 			hidden_effect = {
 				remove_ideas = fumimaro_konoe
 				set_country_flag = konoe_cabinet_lol
@@ -3133,6 +3155,11 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_ideas = kokutai_gensoku
+			custom_effect_tooltip = blank_line
+			swap_ideas = {
+				add_idea = JAP_bribe_the_tokko_befriended
+				remove_idea = JAP_bribe_the_tokko_1
+			}
 		}
 	}
 	focus = {

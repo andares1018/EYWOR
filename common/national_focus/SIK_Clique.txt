@@ -1513,6 +1513,9 @@ focus_tree = {
 		prerequisite = {
 			focus = SIK_reception_CCP
 		}
+		allow_branch = {
+			is_ai = yes
+		}
 		mutually_exclusive = {
 			focus = SIK_Join_the_comintern
 		}
@@ -1988,7 +1991,10 @@ focus_tree = {
 					id = Sinkiang.74
 					days = 1
 				}
+				change_tag_from = SIK
 			}
+
+			
 		}
 		available = {
 			SIK = {
