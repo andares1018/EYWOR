@@ -72,7 +72,7 @@
  #JAP_bribe_the_tokko_decision_desc:0 "Influence the Tokkō"
  ###
  CHI_sue_for_peace_JAP:0 "Offer Peace to Japan"
- lushan_declaration:0 "lushan Declaration"
+ lushan_declaration:0 "Lushan Declaration"
  lushan_declaration_desc:0 "Our country is at war. A powerful speech is needed to united this fragmented country."
  opposition_clashes_with_CHI:0 "Opposition Clashes with Central Authorities"
  opposition_clashes_with_CHI_desc:0 "The conflict between the growing oppositional power, [scp_war_opposition_leader.GetName] and the central authority leading by [WTT_current_china_leader.GetLeader] has now escalated into a full blown civil war. Is there still hope for this fragmented nation?"

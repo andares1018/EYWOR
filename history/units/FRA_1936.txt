@@ -1,4 +1,5 @@
 ﻿##### Division Templates #####
+###MODDED : REMOVED FAR EAST TROOPS### 
 division_template = {
 	name = "Division d'Infanterie"		
 	# Represents: Division d'Infanterie (Series A and B), Div. d'Inf. Coloniale, 
@@ -717,38 +718,6 @@ units = {
 
 	}
 
-
-	##### Indochina Theatre #####
-	### Army Group: Troupes d'Indochine ### -- Saigon
-	division= {	
-		name = "Division de Tonkin"
-		location = 4401
-		division_template = "Division d'Infanterie" 	# Colonial unit, reserve equipment
-		force_equipment_variants = { infantry_equipment_0 = { owner = "FRA" } }
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
-
-	}
-	division= {	
-		name = "Division de Cochinchine-Cambodge"
-		location = 4075
-		division_template = "Division d'Infanterie" 	# Colonial unit, reserve equipment
-		force_equipment_variants = { infantry_equipment_0 = { owner = "FRA" } }
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
-
-	}
-	division= {	
-		name = "Brigade d'Annam-Laos"	
-		location = 7376
-		division_template = "Brigade Coloniale" 	# Colonial unit, reserve equipment
-		force_equipment_variants = { infantry_equipment_0 = { owner = "FRA" } }
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
-
-	}
-
-
 	### METRPOLITAN FRANCE ###
 	navy = {				
 		name = "1ère Région Navale"			
@@ -983,15 +952,7 @@ units = {
 		ship = { name = "Requin" definition = submarine equipment = { submarine_1 = { amount = 1 owner = FRA } } }				
 		ship = { name = "Marsouin" definition = submarine equipment = { submarine_1 = { amount = 1 owner = FRA } } }				
 		ship = { name = "Narval" definition = submarine equipment = { submarine_1 = { amount = 1 owner = FRA } } }				
-	}				
-
-	### FAR EAST ###				
-	navy = {				
-		name = "Flotte du Extrême Orient"			
-		location = 4401 # Saigon			
-		ship = { name = "Suffren" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = FRA } } }
-		ship = { name = "Lamotte-Picquet" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = FRA } } }
-	}
+	}							
 }
 
 ### Air Wings

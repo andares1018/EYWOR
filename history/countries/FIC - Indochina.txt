@@ -9,16 +9,22 @@ set_technology = {
 	gwtank = 1
 	early_fighter = 1
 	early_bomber = 1
-	mass_assault = 1
+	trench_warfare = 1
 	fleet_in_being = 1
 	early_destroyer = 1
 	early_light_cruiser = 1
+	early_heavy_cruiser = 1
 	gw_artillery = 1
 }
 add_stability = -0.15
 add_war_support = -0.1
-add_ideas = FIC_economic_crisis
-add_ideas = FIC_iliterate_population
+
+add_ideas = {
+	FIC_economic_crisis
+	FIC_iliterate_population
+	no_proper_equipment_design
+}
+
 1939.1.1 = {
 
 	add_political_power = 1198
@@ -158,5 +164,78 @@ create_country_leader = {
 	expire = "1936.9.15"
 	ideology = despotism
 }
+
+create_country_leader = {
+	name = "Bùi Quang Chiêu"
+	desc = ""
+	picture = "Portrait_Indochina_Bui_Quang_Chieu.dds"
+	expire = "1953.3.1"
+	ideology = conservatism
+}
+
+create_country_leader = {
+	name = "Cuong Đe"
+	desc = ""
+	picture = "Portrait_Indochina_Cuong_De.dds"
+	expire = "1953.3.1"
+	ideology = fascism_ideology #collabrationism ?
+}
+
+create_country_leader = {
+	name = "Nguyen Ai Quoc"
+	desc = ""
+	picture = "Portrait_Indochina_Nguyen_Ai_Quoc.dds"
+	expire = "1953.3.1"
+	ideology = democratic_centralism
+}
+
+create_country_leader = { #not the best choice but...
+	name = "Phan Boi Châu"
+	desc = ""
+	picture = "Portrait_Indochina_Phan_Boi_Chau.dds"
+	expire = "1953.3.1"
+	ideology = n_socialism_ideology
+}
+
+create_corps_commander = {
+	name = "Eugène Mordant"
+    picture = "Portrait_Indochina_Eugene_Mordant"
+	traits = { career_officer infantry_officer trait_reckless }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Gabriel Sabattier"
+    picture = "Portrait_Indochina_Gabriel_Sabattier.dds"
+	traits = { career_officer }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Marcel Alessandri"
+    picture = "Portrait_Indochina_Marcel_Alessandri.dds"
+	traits = { career_officer war_hero infantry_officer }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_navy_leader = {
+	name = "Régis Bérenger"
+	picture = "Portrait_Indochina_Regis_Berenger.dds"
+	traits = { superior_tactician }
+	skill = 3
+}
+
 
 

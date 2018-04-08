@@ -1,5 +1,6 @@
 ﻿l_english:
  ###EVENTS###
+ 
  rcmindochina.1.t:0 "A new Governor-General Appointed"
  rcmindochina.1.d:0 "The new government of Léon Blum has chosen to appoint Jules Brévié, former governor of French West Africa, as governor of French Indochina, in order to appease the social agitation in the colony. He will replace the unpopular René Robin."
  rcmindochina.1.a:0 "Wish him luck."
@@ -107,8 +108,20 @@
  FIC_indigenous_civil_servants:0 "Indigenous Civil Servants"
  FIC_indigenous_civil_servants_desc:0 "-"
  
+ ###PARTIES###
+ 
+ FIC_neutrality_party:0 "Colonial Administration"
+ FIC_democratic_party:0 "Constitutionalist Party"
+ FIC_democratic_party_col:0 "Colonial Administration"
+ FIC_fascism_party:0 "Phuc Quoc Hoi"
+ FIC_fascism_party_col:0 "Colonial Administration"
+ FIC_communism_party:0 "PCI"
+ FIC_communism_party_long:0 "Indochinese Communist Party"
+ FIC_n_socialism_party:0 "VNQDĐ"
+ FIC_n_socialism_party_long:0 "Viet Nam Quoc Dân Đang"
  
  ###DECISIONS###
+ 
  VIC_indochinese_politics:0 "Indochinese Politics"
  VIC_remove_catroux:0 "Remove Georges Catroux"
  VIC_remove_catroux_desc:0 "To avoid the defection of our Empire to the traitorous gaullist mercenaries, we should appoint loyal governors in our colonies. Jean Decoux is one of them."
@@ -120,6 +133,7 @@
  
  ###IDEAS###
  #General
+ 
  FIC_friendly_invasion:0 "'Friendly'Invasion"
  FIC_friendly_invasion_desc:0 "Due to the recently signed Tripartite Pact between the German Riech and Japan, the Japanese Empire should be our friend instead of enemy. However, they are now using that fact against us and preparing an attack on the Indochinese Peninsula. Knowing that if they launch an offensive operation against Indochina Germany mostly likely won't even care, despite our allegiance towards its ally, Germany."
  FIC_economic_crisis:0 "Economic Crisis"
@@ -147,6 +161,7 @@
  fic_resource_effort_desc:0 ""
  
  #Ministers
+ 
  FIC_pierre_louis_dreyfus:0 "Pierre Louis-Dreyfus"
  FIC_pierre_lefaucheux:0 "Pierre Lefaucheux"
  FIC_michel_boudier:0 "Michel Boudier"
