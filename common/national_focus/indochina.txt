@@ -16,6 +16,11 @@ focus_tree = {
 		cost = 10
 		x = 3
 		y = 0
+		
+		completion_reward = {
+		add_political_power = 25
+		add_ideas = FIC_colonial_loan_idea
+		}
 
 	}
 	focus = {
@@ -27,7 +32,17 @@ focus_tree = {
 		}
 		x = 3
 		y = 1
-
+		
+		completion_reward = {
+		swap_ideas = {
+		remove_idea = FIC_economic_crisis
+		add_idea = FIC_economic_crisis_1
+		}
+		swap_ideas = {
+		remove_idea = FIC_colonial_loan_idea
+		add_idea = FIC_colonial_loan_1
+		}
+		}
 	}
 	focus = {
 		id = FIC_hydraulic_works
@@ -39,6 +54,17 @@ focus_tree = {
 		x = 3
 		y = 2
 
+		completion_reward = {
+		swap_ideas = {
+		remove_idea = FIC_economic_crisis_1
+		add_idea = FIC_economic_crisis_2
+		}
+		swap_ideas = {
+		remove_idea = FIC_colonial_loan_1
+		add_idea = FIC_colonial_loan_2
+		}
+		}
+		
 	}
 	focus = {
 		id = FIC_transindochinese_railway
@@ -49,7 +75,14 @@ focus_tree = {
 		}
 		x = 3
 		y = 3
-
+		
+		completion_reward = {
+		swap_ideas = {
+		remove_idea = FIC_colonial_loan_2
+		add_idea = FIC_colonial_loan_3
+		}
+		unlock_decision_category_tooltip = fic_transindochinese_rail_decision
+		}
 	}
 	focus = {
 		id = FIC_small_scale_industrialisation
@@ -60,6 +93,44 @@ focus_tree = {
 		}
 		x = 2
 		y = 4
+		
+		completion_reward = {
+		if = { 
+		limit = { has_idea = FIC_colonial_loan_3 }
+		swap_ideas = {
+		remove_idea = FIC_colonial_loan_3
+		add_idea = FIC_colonial_loan_4
+		}
+		}
+		if = { 
+		limit = { has_idea = FIC_colonial_loan_4 }
+		swap_ideas = {
+		remove_idea = FIC_colonial_loan_4
+		add_idea = FIC_colonial_loan_5
+		}
+		}
+		swap_ideas = {
+		remove_idea = FIC_economic_crisis_2
+		add_idea = FIC_economic_crisis_3
+		}
+		random_owned_controlled_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+		}
+		
+		}
 
 	}
 	focus = {
@@ -71,8 +142,43 @@ focus_tree = {
 		}
 		x = 4
 		y = 4
-
+		
+		completion_reward = {
+		if = { 
+		limit = { has_idea = FIC_colonial_loan_3 }
+		swap_ideas = {
+		remove_idea = FIC_colonial_loan_3
+		add_idea = FIC_colonial_loan_4
+		}
+		}
+		
+		if = { 
+		limit = { has_idea = FIC_colonial_loan_4 }
+		swap_ideas = {
+		remove_idea = FIC_colonial_loan_4
+		add_idea = FIC_colonial_loan_5
+		}
+		}
+		
+		random_owned_controlled_state = {
+			limit = {
+				is_fully_controlled_by = ROOT
+				free_building_slots = {
+					building = arms_factory
+					size > 0
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
 	}
+}
+
 	focus = {
 		id = FIC_exploit_resources
 		icon = GFX_goal_generic_construction2
@@ -85,7 +191,17 @@ focus_tree = {
 		}
 		x = 3
 		y = 5
-
+		
+		completion_reward = {
+		remove_ideas = FIC_economic_crisis_3
+		add_ideas = fic_resource_effort
+		if = {
+			limit = {
+				has_dlc = "Waking the Tiger"
+				}
+				unlock_decision_category_tooltip = prospect_for_resources
+			}
+		}
 	}
 	focus = {
 		id = FIC_payback_colonial_loan
@@ -96,7 +212,12 @@ focus_tree = {
 		}
 		x = 3
 		y = 6
-
+		completion_reward = {
+		swap_ideas = {
+		remove_idea = FIC_colonial_loan_5
+		add_idea = FIC_colonial_loan_6
+		}
+		}
 	}
 	focus = {
 		id = FIC_support_french_war_effort
@@ -107,7 +228,16 @@ focus_tree = {
 		}
 		x = 3
 		y = 7
-
+		
+		available = {
+			is_puppet_of = FRA
+			FRA = { has_war = yes }
+		}
+		
+		completion_reward = {
+		add_ideas = fic_support_war
+		FRA = { add_ideas = fic_indochinese_manpower }
+		}
 	}
 	focus = {
 		id = FIC_reduce_illiteracy
@@ -118,7 +248,22 @@ focus_tree = {
 		}
 		x = 6
 		y = 2
-
+		
+		completion_reward = {
+		swap_ideas = {
+		remove_idea = FIC_iliterate_population
+		add_idea = FIC_iliterate_population_1
+		}
+		add_popularity = {
+		ideology = democratic
+		popularity = 0.03
+		}
+		add_popularity = {
+		ideology = communism
+		popularity = 0.03
+		}
+		add_political_power = -50
+		}
 	}
 	focus = {
 		id = FIC_expand_hanoi_univ
@@ -132,6 +277,19 @@ focus_tree = {
 		}
 		x = 7
 		y = 3
+		
+		completion_reward = {
+		add_research_slot = 1
+		add_popularity = {
+		ideology = democratic
+		popularity = 0.03
+		}
+		add_popularity = {
+		ideology = communism
+		popularity = 0.03
+		}
+		add_political_power = -50
+		}
 	}
 	focus = {
 		id = FIC_french_indigenous_schools
@@ -142,6 +300,21 @@ focus_tree = {
 		}
 		x = 7
 		y = 4
+		completion_reward = {
+		swap_ideas = {
+		remove_idea = FIC_iliterate_population_1
+		add_idea = FIC_iliterate_population_2
+		}
+		add_popularity = {
+		ideology = democratic
+		popularity = 0.03
+		}
+		add_popularity = {
+		ideology = communism
+		popularity = 0.03
+		}
+		add_political_power = 25
+		}
 
 	}
 	focus = {
@@ -153,6 +326,20 @@ focus_tree = {
 		}
 		x = 7
 		y = 5
+		
+		completion_reward = {
+		add_research_slot = 1
+		remove_ideas = FIC_iliterate_population_2
+		add_political_power = -100
+		add_popularity = {
+		ideology = democratic
+		popularity = 0.03
+		}
+		add_popularity = {
+		ideology = communism
+		popularity = 0.03
+		}
+		}
 
 	}
 	focus = {

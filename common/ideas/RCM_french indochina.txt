@@ -26,7 +26,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = idea_chi_emergency_bailout_alt
+			picture = GFX_idea_idea_chi_emergency_bailout
 
 			modifier = {
 			consumer_goods_factor = -0.3
@@ -40,7 +40,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = idea_chi_emergency_bailout_alt
+			picture = GFX_idea_idea_chi_emergency_bailout
 
 			modifier = {
 			consumer_goods_factor = -0.25
@@ -55,7 +55,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = idea_chi_emergency_bailout_alt
+			picture = GFX_idea_idea_chi_emergency_bailout
 
 			modifier = {
 			consumer_goods_factor = -0.2
@@ -70,7 +70,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = idea_chi_emergency_bailout_alt
+			picture = GFX_idea_idea_chi_emergency_bailout
 
 			modifier = {
 			consumer_goods_factor = -0.15
@@ -85,7 +85,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = idea_chi_emergency_bailout_alt
+			picture = GFX_idea_idea_chi_emergency_bailout
 
 			modifier = {
 			consumer_goods_factor = -0.1
@@ -100,7 +100,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = idea_chi_emergency_bailout_alt
+			picture = GFX_idea_idea_chi_emergency_bailout
 
 			modifier = {
 			consumer_goods_factor = -0.05
@@ -115,7 +115,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = idea_chi_emergency_bailout_alt
+			picture = GFX_idea_idea_chi_emergency_bailout
 
 			modifier = {
 			consumer_goods_factor = 0.35
@@ -137,6 +137,57 @@ ideas = {
 			industrial_capacity_factory = -0.3
 			production_speed_buildings_factor = -0.25
 			production_factory_max_efficiency_factor = -0.2
+			}
+		}
+		
+		FIC_economic_crisis_1 = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = raj_risk_of_famine
+
+			modifier = {
+			consumer_goods_factor = 0.25
+			industrial_capacity_factory = -0.25
+			production_speed_buildings_factor = -0.2
+			production_factory_max_efficiency_factor = -0.15
+			}
+		}
+		
+		FIC_economic_crisis_2 = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = raj_risk_of_famine
+
+			modifier = {
+			consumer_goods_factor = 0.15
+			industrial_capacity_factory = -0.15
+			production_speed_buildings_factor = -0.15
+			production_factory_max_efficiency_factor = -0.1
+			}
+		}
+		
+		FIC_economic_crisis_3 = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = raj_risk_of_famine
+
+			modifier = {
+			consumer_goods_factor = 0.05
+			industrial_capacity_factory = -0.05
+			production_speed_buildings_factor = -0.05
+			production_factory_max_efficiency_factor = -0.05
 			}
 		}
 		
@@ -203,6 +254,58 @@ ideas = {
 			research_bonus = {
 				electronics = -0.12
 				nuclear = -0.2
+			}
+		}
+		
+		fic_support_war = {
+			allowed = {
+				always = no
+			}
+			
+			available = {
+			is_puppet_of = FRA
+			FRA = { has_war = yes }
+			}
+
+			removal_cost = -1
+
+			picture = generic_deal_with_the_devil
+
+			modifier = {
+			war_support_factor = 0.1
+			consumer_goods_factor = -0.05
+			conscription_factor	= -0.5
+			}
+		}
+		
+		fic_indochinese_manpower = {
+			allowed = {
+				always = no
+			}
+			
+			available = {
+			FIC = { is_puppet_of = ROOT }
+			has_war = yes 
+			}
+
+			removal_cost = -1
+
+			picture = idea_generic_reserve_divisions
+
+			modifier = {
+			conscription = 0.005
+			consumer_goods_factor = -0.03
+			}
+		}
+		
+		fic_resource_effort = {
+			removal_cost = -1
+			picture = resource_commitee
+			allowed = {
+				always = no
+			}
+			modifier = {
+				local_resources_factor = 0.05
 			}
 		}
 		
