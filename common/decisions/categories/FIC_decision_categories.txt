@@ -14,3 +14,13 @@ VIC_indochinese_politics = {
 		}
 	}
 }
+
+fic_transindochinese_rail_decision = {
+	allowed = {
+		original_tag = FIC
+	}
+
+	visible = {
+		has_completed_focus = FIC_transindochinese_railway
+	}
+}

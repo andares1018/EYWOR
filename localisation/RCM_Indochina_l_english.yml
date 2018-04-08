@@ -112,6 +112,9 @@
  VIC_indochinese_politics:0 "Indochinese Politics"
  VIC_remove_catroux:0 "Remove Georges Catroux"
  VIC_remove_catroux_desc:0 "To avoid the defection of our Empire to the traitorous gaullist mercenaries, we should appoint loyal governors in our colonies. Jean Decoux is one of them."
+ fic_transindochinese_rail_decision:0 "The Trans-Indochinese Railway"
+ FIC_transindochinese_railway_dec:0 "Build the Trans-Indochinese Railway"
+ FIC_transindochinese_railway_dec_desc:0 "Expanding our infrastructures is crucial for our economy"
 
  ###FLAGS###
  
@@ -121,6 +124,9 @@
  FIC_friendly_invasion_desc:0 "Due to the recently signed Tripartite Pact between the German Riech and Japan, the Japanese Empire should be our friend instead of enemy. However, they are now using that fact against us and preparing an attack on the Indochinese Peninsula. Knowing that if they launch an offensive operation against Indochina Germany mostly likely won't even care, despite our allegiance towards its ally, Germany."
  FIC_economic_crisis:0 "Economic Crisis"
  FIC_economic_crisis_desc:0 ""
+ FIC_economic_crisis_1:0 "Economic Crisis"
+ FIC_economic_crisis_2:0 "Economic Crisis"
+ FIC_economic_crisis_3:0 "Economic Crisis"
  FIC_strikes:0 "Widespread Strikes"
  FIC_strikes_desc:0 ""
  FIC_colonial_loan_idea:0 "Colonial Loan"
@@ -133,6 +139,13 @@
  FIC_iliterate_population:0 "Illiterate Population"
  FIC_iliterate_population_1:0 "Illiterate Population"
  FIC_iliterate_population_2:0 "Illiterate Population"
+ fic_support_war:0 "Supporting the Métropole"
+ fic_support_war_desc:0 ""
+ fic_indochinese_manpower:0 "Indochinese Manpower"
+ fic_indochinese_manpower_desc:0 ""
+ fic_resource_effort:0 "Resource Prospection"
+ fic_resource_effort_desc:0 ""
+ 
  #Ministers
  FIC_pierre_louis_dreyfus:0 "Pierre Louis-Dreyfus"
  FIC_pierre_lefaucheux:0 "Pierre Lefaucheux"
