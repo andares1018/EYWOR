@@ -199,7 +199,7 @@ create_country_leader = { #not the best choice but...
 
 create_corps_commander = {
 	name = "Eugène Mordant"
-    picture = "Portrait_Indochina_Eugene_Mordant"
+    picture = "Portrait_Indochina_Eugene_Mordant.dds"
 	traits = { career_officer infantry_officer trait_reckless }
 	skill = 3
 	attack_skill = 2
@@ -225,7 +225,7 @@ create_corps_commander = {
 	traits = { career_officer war_hero infantry_officer }
 	skill = 3
 	attack_skill = 3
-	defense_skill = 3
+	defense_skill = 2
 	planning_skill = 3
 	logistics_skill = 3
 }
@@ -235,6 +235,10 @@ create_navy_leader = {
 	picture = "Portrait_Indochina_Regis_Berenger.dds"
 	traits = { superior_tactician }
 	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
 }
 
 

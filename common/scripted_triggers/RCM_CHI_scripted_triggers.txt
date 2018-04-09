@@ -254,6 +254,7 @@ is_originally_warlord = { #Does not include sinkiang
 		original_tag = HMI
 	}
 }
+
 is_north_china_state_for_liberation = {
 	OR = {
 		state = 597

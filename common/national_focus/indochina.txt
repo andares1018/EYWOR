@@ -348,7 +348,8 @@ focus_tree = {
 		cost = 10
 		x = 12
 		y = 0
-
+		completion_reward = {
+		}
 	}
 	focus = {
 		id = FIC_increase_mil_spending

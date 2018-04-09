@@ -30,6 +30,13 @@ focus_tree = {
 				}
 			}
 		}
+		available = {
+			divisions_in_border_state = {
+				state = 622
+				border_state = 789
+				size > 0
+			}
+		}
 		completion_reward = {
 			for_tracking_ten_comp_foc = yes
 			add_political_power = 60

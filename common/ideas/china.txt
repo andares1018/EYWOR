@@ -1084,7 +1084,7 @@ ideas = {
 			}
 			modifier = {
 				fascism_acceptance = 70
-				fascism_drift = 0.02
+				fascism_drift = 0.05
 				stability_factor = 0.08
 			}
 		}
@@ -1844,6 +1844,7 @@ ideas = {
 				army_morale_factor = 0.1
 				army_defence_factor = 0.1
 				army_attack_factor = 0.1
+				max_command_power = 20
 			}
 		}
 		CHI_new_equal_treaty = {

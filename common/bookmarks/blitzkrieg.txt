@@ -259,7 +259,22 @@ bookmarks = {
 				YUG_the_ik_3
 			}
 		}
-		
+
+		"FIC"={
+			minor = yes
+			history = "FIC_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				FIC_colonial_loan_idea
+				FIC_iliterate_population_2
+				fic_indochinese_manpower
+			}
+			focuses = {
+				FIC_colonial_loan
+				FIC_strengthen_military_intel
+				FIC_develop_hanoi_arsenal
+			}
+		}
 		
 		"MON"={
 			minor = yes

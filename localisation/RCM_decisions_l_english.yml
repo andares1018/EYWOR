@@ -67,7 +67,7 @@
  JAP_form_MEN:0 "Puppet for the Mongols"
 
  JAP_bribe_the_tokko:0 "Influence the Tokkō"
- JAP_bribe_the_tokko_desc:0 "The political climate in Japan is very tense now. With the every growing military and shady secret police, a political reform can never happen. However, we might be able to influence some of those groups to further our cause.\n\n§YTake this decision once or multiple times can lower the chance of Prime Minister's assassination in the case of a reform.§!"
+ JAP_bribe_the_tokko_desc:0 "The political climate in Japan is very tense now. With the ever growing military and shady secret police, a political reform can never happen. However, we might be able to influence some of those groups to further our cause.\n\n§YTake this decision once or multiple times can lower the chance of Prime Minister's assassination in the case of a reform.§!"
  JAP_bribe_the_tokko_decision:0 "Influence the Tokkō"
  #JAP_bribe_the_tokko_decision_desc:0 "Influence the Tokkō"
  ###
@@ -86,7 +86,7 @@
  national_infra_decision_desc:0 "Infrastructure is the foundation of our society, indrustry, and most importantly, our great nation. Thus, in order to prosper we must first rebuild our national infrastructure from the ground up."
 
  northeast_infra_effort:0 "Infrastructure Effort in the Northeast"
- north_china_infra_effort:0 "Infrastructure Effort in Norht China"
+ north_china_infra_effort:0 "Infrastructure Effort in North China"
  central_china_infra_effort:0 "Infrastructure Effort in Central China"
  south_china_infra_effort:0 "Infrastructure Effort in South China"
  west_china_infra_effort:0 "Infrastructure Effort in West China"

@@ -212,7 +212,7 @@ focus_tree = {
 		completion_reward = {
 			army_experience = 15
 			add_political_power = 50
-			unlock_decision_category_tooltip = CHI_army_reform
+			#unlock_decision_category_tooltip = CHI_army_reform
 		}
 	}
 	focus = {

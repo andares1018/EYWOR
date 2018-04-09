@@ -33,7 +33,7 @@ country_event = {
 	picture = GFX_report_event_test
 	hidden = yes
 	trigger = {
-		tag = CHI
+		is_originally_warlord = yes
 	}
 	immediate = {
 		add_offsite_building = { type = arms_factory level = 1 }

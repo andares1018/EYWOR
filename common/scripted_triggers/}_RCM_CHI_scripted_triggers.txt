@@ -13,6 +13,7 @@
 #	}
 # 
 #	THIS FILE IS FOR TRIGGERS SPECIFICALLY FOR THE CHI TAG
+
 is_potentially_communist_china = {
 	OR = {
 		is_originally_warlord = yes
