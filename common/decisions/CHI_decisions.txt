@@ -914,7 +914,6 @@
 					country_exists = PRC
 				}
 			}
-			cance
 			cost = 50
 			days_remove = 80
 			fire_only_once = yes

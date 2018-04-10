@@ -28,17 +28,6 @@ RCM_border_clashes = {
 				state = FROM.defender_state_vs_@ROOT
 				AND = {
 					is_owned_and_controlled_by = FROM
-					OR = {
-						AND = {
-							ROOT = { is_ai = yes }
-							OR = {
-								is_core_of = ROOT
-								is_claimed_by = ROOT
-							}
-						}
-						
-						ROOT = { is_ai = no }
-					}
 					
 					set_temp_variable = { var:test_state_temp = id }
 					hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
@@ -127,17 +116,7 @@ RCM_border_clashes = {
 					random_owned_controlled_state = {
 						prioritize = { 789 }
 						limit = {
-							OR = {
-								AND = {
-									ROOT = { is_ai = yes }
-									OR = {
-										is_core_of = ROOT
-										is_claimed_by = ROOT
-									}
-								}
-						
-								ROOT = { is_ai = no }
-							}
+							
 							
 							set_temp_variable = { test_defender_state_temp = id }
 							hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
@@ -200,17 +179,7 @@ RCM_border_clashes = {
 				random_state = {
 					limit = {
 						is_owned_and_controlled_by = FROM
-						OR = {
-							AND = {
-								ROOT = { is_ai = yes }
-								OR = {
-									is_core_of = ROOT
-									is_claimed_by = ROOT
-								}
-							}
-					
-							ROOT = { is_ai = no }
-						}
+						
 						
 						hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
 						any_neighbor_state = {

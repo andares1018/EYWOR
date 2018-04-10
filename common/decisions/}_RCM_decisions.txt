@@ -2344,4 +2344,3 @@ JAP_bribe_the_tokko = {
         }
     }
 }
-}

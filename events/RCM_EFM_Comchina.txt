@@ -387,7 +387,7 @@ country_event = { # DMZ loop # SEND THIS TO THE LOOP COUNTRY
 		}
 		ROOT = {
 			country_event = {
-				days = 1 id = EFM_Comchina.9014
+				days = 2 id = EFM_Comchina.9014
 			}
 		}
 	}
