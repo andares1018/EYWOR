@@ -280,7 +280,7 @@ bookmarks = {
 			focuses = {
 				FIC_colonial_loan
 				FIC_strengthen_military_intel
-				FIC_develop_hanoi_arsenal
+				FIC_colonial_reforms
 			}
 		}
 		"MON"={

@@ -26,7 +26,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = GFX_idea_idea_chi_emergency_bailout
+			picture = idea_chi_emergency_bailout
 
 			modifier = {
 			consumer_goods_factor = -0.3
@@ -40,7 +40,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = GFX_idea_idea_chi_emergency_bailout
+			picture = idea_chi_emergency_bailout
 
 			modifier = {
 			consumer_goods_factor = -0.25
@@ -55,7 +55,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = GFX_idea_idea_chi_emergency_bailout
+			picture = idea_chi_emergency_bailout
 
 			modifier = {
 			consumer_goods_factor = -0.2
@@ -70,7 +70,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = GFX_idea_idea_chi_emergency_bailout
+			picture = idea_chi_emergency_bailout
 
 			modifier = {
 			consumer_goods_factor = -0.15
@@ -85,7 +85,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = GFX_idea_idea_chi_emergency_bailout
+			picture = idea_chi_emergency_bailout
 
 			modifier = {
 			consumer_goods_factor = -0.1
@@ -100,7 +100,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = GFX_idea_idea_chi_emergency_bailout
+			picture = idea_chi_emergency_bailout
 
 			modifier = {
 			consumer_goods_factor = -0.05
@@ -115,7 +115,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = GFX_idea_idea_chi_emergency_bailout
+			picture = idea_chi_emergency_bailout
 
 			modifier = {
 			consumer_goods_factor = 0.35
@@ -290,7 +290,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = idea_generic_reserve_divisions
+			picture = generic_reserve_divisions
 
 			modifier = {
 			conscription = 0.005
