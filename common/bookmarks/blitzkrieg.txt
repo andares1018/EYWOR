@@ -266,7 +266,7 @@ bookmarks = {
 			ideology = neutrality
 			ideas = {
 				FIC_colonial_loan_idea
-				FIC_iliterate_population_2
+				FIC_iliterate_population
 				fic_indochinese_manpower
 			}
 			focuses = {

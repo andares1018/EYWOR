@@ -31,11 +31,18 @@ focus_tree = {
 			}
 		}
 		available = {
-			divisions_in_border_state = {
-				state = 622
-				border_state = 789
-				size > 0
-			}
+			OR = {
+				divisions_in_border_state = {
+					state = 622
+					border_state = 789
+					size > 0
+				}
+				divisions_in_border_state = {
+					state = 788
+					border_state = 789
+					size > 0
+				}
+			}			
 		}
 		completion_reward = {
 			for_tracking_ten_comp_foc = yes

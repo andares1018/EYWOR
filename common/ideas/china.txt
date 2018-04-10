@@ -825,6 +825,26 @@ ideas = {
 			}
 		}
 		##CHINA IDEAS
+		CHI_take_them_all = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_volunteer_expedition_bonus
+
+			modifier = {
+				army_speed_factor = -0.02
+				equipment_capture_factor = 0.05
+				org_loss_when_moving = -0.05
+			}
+		}
 		prince_de_defect = {
 			allowed = {
 				always = no

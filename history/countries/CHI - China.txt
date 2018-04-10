@@ -34,7 +34,7 @@ add_ideas = {
 	the_blueshirts
 	central_club
 	CHI_nanking_decade_idea
-	CHI_t_v_soong
+	
 	
 	unstable_economy
 	
@@ -95,7 +95,7 @@ set_convoys = 40
 		tot_economic_mobilisation
 		service_by_requirement
 		closed_economy
-
+		CHI_t_v_soong
 		#ministers
 		CHI_chen_shaokuan
 		claire_lee_chennault_chi
