@@ -26,7 +26,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = GFX_idea_idea_chi_emergency_bailout
+			picture = idea_chi_emergency_bailout
 
 			modifier = {
 			consumer_goods_factor = -0.3
@@ -40,7 +40,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = GFX_idea_idea_chi_emergency_bailout
+			picture = idea_chi_emergency_bailout
 
 			modifier = {
 			consumer_goods_factor = -0.25
@@ -55,7 +55,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = GFX_idea_idea_chi_emergency_bailout
+			picture = idea_chi_emergency_bailout
 
 			modifier = {
 			consumer_goods_factor = -0.2
@@ -70,7 +70,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = GFX_idea_idea_chi_emergency_bailout
+			picture = idea_chi_emergency_bailout
 
 			modifier = {
 			consumer_goods_factor = -0.15
@@ -85,7 +85,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = GFX_idea_idea_chi_emergency_bailout
+			picture = idea_chi_emergency_bailout
 
 			modifier = {
 			consumer_goods_factor = -0.1
@@ -100,7 +100,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = GFX_idea_idea_chi_emergency_bailout
+			picture = idea_chi_emergency_bailout
 
 			modifier = {
 			consumer_goods_factor = -0.05
@@ -115,7 +115,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = GFX_idea_idea_chi_emergency_bailout
+			picture = idea_chi_emergency_bailout
 
 			modifier = {
 			consumer_goods_factor = 0.35
@@ -290,7 +290,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = idea_generic_reserve_divisions
+			picture = generic_reserve_divisions
 
 			modifier = {
 			conscription = 0.005
@@ -306,6 +306,36 @@ ideas = {
 			}
 			modifier = {
 				local_resources_factor = 0.05
+			}
+		}
+		
+		fic_strengthened_mil_intel = {
+			removal_cost = -1
+			picture = generic_spy_intel
+			allowed = {
+				always = no
+			}
+			modifier = {
+				political_power_gain = 0.1
+				drift_defence_factor = 0.1
+				foreign_subversive_activites = -0.1
+				decryption = 0.25
+				encryption = 0.25
+			}
+		}
+		
+		fic_indigenous_officers = {
+			removal_cost = -1
+			picture = generic_spy_intel
+			allowed = {
+				always = no
+			}
+			modifier = {
+			experience_gain_army = 0.03
+			army_morale_factor = 0.1
+			army_core_defence_factor = 0.05
+			army_core_attack_factor = 0.05
+			max_command_power = 10
 			}
 		}
 		

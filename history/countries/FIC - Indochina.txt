@@ -83,34 +83,36 @@ add_ideas = {
 	}
 	oob = "FIC_1939"	
 	set_politics = {
-		parties = {
-			democratic = {
-				popularity = 20
-			}
-
-			fascism = {
-				popularity = 0
-			}
-
-			communism = {
-				popularity = 0
-			}
-			
-			n_socialism = {
-				popularity = 0
-			}
-			
-			neutrality = {
-				popularity = 80
-			}
+	
+	parties = {
+		fascism = {
+			popularity = 5
 		}
-		ruling_party = neutrality
-		last_election = "1936.1.1"
-		election_frequency = 48
-		elections_allowed = no
+		democratic = {
+			popularity = 18
+		}
+
+		n_socialism = {
+			popularity = 7
+		}
+		
+		communism = {
+			popularity = 3
+		}
+		
+		neutrality = {
+			popularity = 67
+		}
 	}
+
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+	}
+	
 	create_country_leader = {
-		name = "Joseph-Jules Brévié"
+		name = "Jules Brévié"
 		desc = ""
 		picture = "Portrait_Indochina_Joseph_Jules_Brevie.dds"
 		expire = "1939.8.23"
@@ -125,28 +127,26 @@ FRA = {
 		freedom_level = 0.35
 	}
 }
-
-set_politics = {
-
+	set_politics = {
+	
 	parties = {
-		democratic = {
-			popularity = 20
-		}
-
 		fascism = {
-			popularity = 0
+			popularity = 5
+		}
+		democratic = {
+			popularity = 18
 		}
 
-		communism = {
-			popularity = 0
+		n_socialism = {
+			popularity = 7
 		}
 		
-		n_socialism = {
-			popularity = 0
+		communism = {
+			popularity = 3
 		}
 		
 		neutrality = {
-			popularity = 80
+			popularity = 67
 		}
 	}
 
@@ -154,8 +154,7 @@ set_politics = {
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = no
-}
-
+	}
 
 create_country_leader = {
 	name = "René Robin"
@@ -235,10 +234,6 @@ create_navy_leader = {
 	picture = "Portrait_Indochina_Regis_Berenger.dds"
 	traits = { superior_tactician }
 	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 2
 }
 
 

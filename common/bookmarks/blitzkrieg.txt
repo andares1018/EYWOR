@@ -262,7 +262,7 @@ bookmarks = {
 
 		"FIC"={
 			minor = yes
-			history = "FIC_GATHERING_STORM_DESC"
+			history = "FIC_BLITZKRIEG_DESC"
 			ideology = neutrality
 			ideas = {
 				FIC_colonial_loan_idea
@@ -270,9 +270,9 @@ bookmarks = {
 				fic_indochinese_manpower
 			}
 			focuses = {
-				FIC_colonial_loan
-				FIC_strengthen_military_intel
-				FIC_develop_hanoi_arsenal
+				FIC_indochina_fights_on
+				FIC_defend_against_siam
+				FIC_at_the_helm_of_indochina
 			}
 		}
 		
