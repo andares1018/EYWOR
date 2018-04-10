@@ -309,6 +309,36 @@ ideas = {
 			}
 		}
 		
+		fic_strengthened_mil_intel = {
+			removal_cost = -1
+			picture = generic_spy_intel
+			allowed = {
+				always = no
+			}
+			modifier = {
+				political_power_gain = 0.1
+				drift_defence_factor = 0.1
+				foreign_subversive_activites = -0.1
+				decryption = 0.25
+				encryption = 0.25
+			}
+		}
+		
+		fic_indigenous_officers = {
+			removal_cost = -1
+			picture = generic_spy_intel
+			allowed = {
+				always = no
+			}
+			modifier = {
+			experience_gain_army = 0.03
+			army_morale_factor = 0.1
+			army_core_defence_factor = 0.05
+			army_core_attack_factor = 0.05
+			max_command_power = 10
+			}
+		}
+		
 		FIC_strikes = {
 			allowed = {
 				always = no

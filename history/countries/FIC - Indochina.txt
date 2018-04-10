@@ -85,6 +85,9 @@ add_ideas = {
 	set_politics = {
 	
 	parties = {
+		fascism = {
+			popularity = 5
+		}
 		democratic = {
 			popularity = 18
 		}
@@ -93,10 +96,6 @@ add_ideas = {
 			popularity = 7
 		}
 		
-		fascism = {
-			popularity = 5
-		}
-
 		communism = {
 			popularity = 3
 		}
@@ -128,21 +127,20 @@ FRA = {
 		freedom_level = 0.35
 	}
 }
-set_politics = {
-
+	set_politics = {
+	
 	parties = {
-		democratic = {
-			popularity = 18
-		}
-		
-		n_socialism = {
-			popularity = 7
-		}
-
 		fascism = {
 			popularity = 5
 		}
+		democratic = {
+			popularity = 18
+		}
 
+		n_socialism = {
+			popularity = 7
+		}
+		
 		communism = {
 			popularity = 3
 		}
@@ -156,7 +154,7 @@ set_politics = {
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = no
-}
+	}
 
 create_country_leader = {
 	name = "René Robin"

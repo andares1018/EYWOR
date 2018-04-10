@@ -61,10 +61,16 @@
  FIC_expand_saigon_nav_arsenal_desc:0 "-"
  FIC_request_convoys:0 "Request Convoys"
  FIC_request_convoys_desc:0 "-"
+ FIC_navy_reorganization:0 "Naval Reorganization"
+ FIC_navy_reorganization_desc:0 "-"
  FIC_army_expansion:0 "Army Expansion"
  FIC_army_expansion_desc:0 "-"
  FIC_request_tanks:0 "Request Tanks"
  FIC_request_tanks_desc:0 "-"
+ FIC_new_rifles:0 "New Rifles"
+ FIC_new_rifles_desc:0 "-"
+ FIC_air_reorganization:0 "Air Reorganization"
+ FIC_air_reorganization_desc:0 "-"
  FIC_expand_tan_son_nhat_airport:0 "Expand Tan Son Nhat Airport"
  FIC_expand_tan_son_nhat_airport_desc:0 "-"
  FIC_request_planes:0 "Request Planes"
@@ -159,6 +165,10 @@
  fic_indochinese_manpower_desc:0 ""
  fic_resource_effort:0 "Resource Prospection"
  fic_resource_effort_desc:0 ""
+ fic_strengthened_mil_intel:0 "Strengthened Military Intelligence"
+ fic_strengthened_mil_intel_desc:0 ""
+ fic_indigenous_officers:0 "Indigenous Officers"
+ fic_indigenous_officers_desc:0 ""
  
  #Ministers
  
