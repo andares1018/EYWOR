@@ -354,6 +354,7 @@ ideas = {
 
 			
 			allowed = {
+				always = no
 				OR = {
 					is_originally_warlord = yes
 					tag = MAN
@@ -404,6 +405,7 @@ ideas = {
 
 			
 			allowed = {
+				always = no
 				OR = {
 					is_literally_china = yes
 					tag = MAN
@@ -482,143 +484,7 @@ ideas = {
 			
 		designer = yes		
 
-		CHI_camco_1 = {
-
-			picture = CHI_camco
-
-			available = {
-				if = {
-					limit = {
-						has_dlc = "Waking the Tiger"
-					}
-					has_completed_focus = CHI_camco
-				}
-			}
-
-			allowed = {
-				has_DLC = "Waking the Tiger"
-				OR = {
-					is_literally_china = yes
-				}
-				NOT = {
-					tag = CHI
-				}
-				NOT = {
-					tag = PRC
-				}
-			}
-			
-			research_bonus = {
-				air_equipment = 0.10
-			}
-			
-			traits = { medium_aircraft_manufacturer }
-			
-			# assembled hawk II and hawk III fighter bombers as well as the Vultee V-11 ground attackers
-						
-			ai_will_do = {
-				factor = 1
-			}
-		}
-
-		CHI_camco_2 = {
-
-			cost = 50
-
-			picture = CHI_camco
-
-			available = {
-				if = {
-					limit = {
-						has_dlc = "Waking the Tiger"
-					}
-					has_completed_focus = CHI_local_fighter_production
-				}
-			}
-
-			allowed = {
-				has_DLC = "Waking the Tiger"
-				OR = {
-					is_literally_china = yes
-				}
-				NOT = {
-					tag = CHI
-				}
-				NOT = {
-					tag = PRC
-				}
-			}
-			
-			research_bonus = {
-				air_equipment = 0.10
-			}
-
-			equipment_bonus = {
-				fighter_equipment = {
-					air_agility = 0.05
-					air_attack = 0.1
-				}
-			}
-			
-			traits = { medium_aircraft_manufacturer }
-			
-			# assembled hawk II and hawk III fighter bombers as well as the Vultee V-11 ground attackers
-						
-			ai_will_do = {
-				factor = 1
-			}
-		}
-
-		CHI_camco_3 = {
-
-			picture = CHI_camco
-
-			cost = 50
-
-			available = {
-				has_completed_focus = CHI_local_bomber_production
-			}
-
-			allowed = {
-				has_DLC = "Waking the Tiger"
-				OR = {
-					is_literally_china = yes
-				}
-				NOT = {
-					tag = CHI
-				}
-				NOT = {
-					tag = PRC
-				}
-			}
-
-			equipment_bonus = {
-				fighter_equipment = {
-					air_agility = 0.05
-					air_attack = 0.1
-				}
-				tac_bomber_equipment = {
-					air_range = 0.1
-					air_ground_attack = 0.1
-				}
-				CAS_equipment = {
-					air_range = 0.1
-					air_ground_attack = 0.1
-				}
-			}
-			
-			research_bonus = {
-				air_equipment = 0.10
-			}
-			
-			traits = { medium_aircraft_manufacturer }
-			
-			# assembled hawk II and hawk III fighter bombers as well as the Vultee V-11 ground attackers
-						
-			ai_will_do = {
-				factor = 1
-			}
-		}
+		
 	}
 	industrial_concern = {
 		MAN_showa_steel_works = {

@@ -3239,7 +3239,16 @@ ideas = {
 			picture = kiangnan_shipyeard
 
 			allowed = {
-				original_tag = CHI
+				OR = {
+					original_tag = CHI
+					original_tag = PRC
+					original_tag = MAN
+					original_tag = SIK
+					is_originally_warlord = yes
+				}
+			}
+			available = {
+				is_legit_china = yes
 			}
 
 			research_bonus = {
@@ -3254,7 +3263,16 @@ ideas = {
 		CHI_minsheng = {
 			picture = minsheng
 			allowed = {
-				original_tag = CHI
+				OR = {
+					original_tag = CHI
+					original_tag = PRC
+					original_tag = MAN
+					original_tag = SIK
+					is_originally_warlord = yes
+				}
+			}
+			available = {
+				is_legit_china = yes
 			}
 
 			research_bonus = {
@@ -3270,7 +3288,13 @@ ideas = {
 		CHI_hamburg_america_line_idea = {
 			picture = hamburg_america_line_idea
 			allowed = {
-				original_tag = CHI
+				OR = {
+					original_tag = CHI
+					original_tag = PRC
+					original_tag = MAN
+					original_tag = SIK
+					is_originally_warlord = yes
+				}
 			}
 			available = {
 				has_idea = Carlowitz_Co_idea
@@ -3315,9 +3339,16 @@ ideas = {
 		eurasia_aviation_corp = {
 
 			allowed = {
-				original_tag = CHI
+				OR = {
+					original_tag = CHI
+					#original_tag = PRC
+					#original_tag = MAN
+					#original_tag = SIK
+					is_originally_warlord = yes
+				}
 			}
 			available = {
+				is_legit_china = yes
 				OR = {
 					has_government = neutrality
 					has_government = democratic
@@ -3336,9 +3367,16 @@ ideas = {
 		}
 		camco = {
 			allowed = {
-				original_tag = CHI
+				OR = {
+					original_tag = CHI
+					#original_tag = PRC
+					#original_tag = MAN
+					#original_tag = SIK
+					is_originally_warlord = yes
+				}
 			}
 			available = {
+				is_legit_china = yes
 				NOT = { has_war_with = USA }
 				NOT = { is_in_faction_with = GER }
 			}
@@ -3358,7 +3396,16 @@ ideas = {
 		cnac = {
 
 			allowed = {
-				original_tag = CHI
+				OR = {
+					original_tag = CHI
+					#original_tag = PRC
+					#original_tag = MAN
+					#original_tag = SIK
+					is_originally_warlord = yes
+				}
+			}
+			available = {
+				is_legit_china = yes
 			}
 
 			research_bonus = {
@@ -3373,9 +3420,16 @@ ideas = {
 
 			picture = generic_naval_manufacturer_3
 			allowed = {
-				original_tag = CHI
+				OR = {
+					original_tag = CHI
+					original_tag = PRC
+					#original_tag = MAN
+					original_tag = SIK
+					is_originally_warlord = yes
+				}
 			}
 			available = {
+				is_legit_china = yes
 				#controls_state = 595
 				controls_state = 764
 			}
@@ -3416,15 +3470,16 @@ ideas = {
 
 			picture = generic_infantry_equipment_manufacturer_2
 			allowed = {
-				original_tag = CHI
+				OR = {
+					original_tag = CHI
+					original_tag = PRC
+					original_tag = MAN
+					original_tag = SIK
+					is_originally_warlord = yes
+				}
 			}
 			available = {
-				OR = {
-					is_in_faction_with = GUD
-					has_global_flag = joined_chi_@GUD
-					has_full_control_of_state = 593
-				}
-				NOT = { JAP = { controls_state = 593 } }
+				has_full_control_of_state = 593
 			}
 			cost = 150
 			removal_cost = 10
@@ -3440,7 +3495,13 @@ ideas = {
 
 			picture = generic_infantry_equipment_manufacturer_2
 			allowed = {
-				original_tag = CHI
+				OR = {
+					original_tag = CHI
+					original_tag = PRC
+					original_tag = MAN
+					original_tag = SIK
+					is_originally_warlord = yes
+				}
 			}
 
 			cost = 150
@@ -3461,9 +3522,17 @@ ideas = {
 
 			picture = generic_artillery_manufacturer_2
 			allowed = {
-				original_tag = CHI
+				OR = {
+					original_tag = CHI
+					original_tag = PRC
+					original_tag = MAN
+					original_tag = SIK
+					is_originally_warlord = yes
+				}
 			}
-
+			available = {
+				is_legit_china = yes
+			}
 			cost = 150
 			removal_cost = 10
 
@@ -3478,7 +3547,13 @@ ideas = {
 
 			picture = generic_infantry_equipment_manufacturer_2
 			allowed = {
-				original_tag = CHI
+				OR = {
+					original_tag = CHI
+					original_tag = PRC
+					original_tag = MAN
+					original_tag = SIK
+					is_originally_warlord = yes
+				}
 			}
 			cost = 150
 			removal_cost = 10
@@ -3496,7 +3571,13 @@ ideas = {
 
 			picture = generic_infantry_equipment_manufacturer_2
 			allowed = {
-				original_tag = CHI
+				OR = {
+					original_tag = CHI
+					original_tag = PRC
+					original_tag = MAN
+					original_tag = SIK
+					is_originally_warlord = yes
+				}
 			}
 			cost = 50
 			removal_cost = 10
@@ -3519,7 +3600,13 @@ ideas = {
 		CHI_goodyear_tires_idea = {
 			picture = goodyear_tires_idea
 			allowed = {
-				original_tag = CHI
+				OR = {
+					original_tag = CHI
+					original_tag = PRC
+					original_tag = MAN
+					original_tag = SIK
+					is_originally_warlord = yes
+				}
 			}
 			available = {
 				has_idea = Carlowitz_Co_idea
@@ -3747,7 +3834,19 @@ ideas = {
 		academia_sinica = {
 
 			allowed = {
-				original_tag = CHI
+				OR = {
+					original_tag = CHI
+					original_tag = PRC
+					original_tag = MAN
+					original_tag = SIK
+					is_originally_warlord = yes
+				}
+			}
+			available = {
+				is_legit_china = yes
+				NOT = {
+					has_government = communism
+				}
 			}
 
 			research_bonus = {
@@ -3759,11 +3858,17 @@ ideas = {
 			traits = { electronics_concern }
 		}
 		Carlowitz_Co_idea = {
-
 			allowed = {
-				original_tag = CHI
+				OR = {
+					original_tag = CHI
+					original_tag = PRC
+					original_tag = MAN
+					original_tag = SIK
+					is_originally_warlord = yes
+				}
 			}
 			available = {
+				is_legit_china = yes
 				NOT = {
 					OR = {
 						has_war_with = GER
@@ -3784,7 +3889,16 @@ ideas = {
 		qishuyan_machinery = {
 
 			allowed = {
-				original_tag = CHI
+				OR = {
+					original_tag = CHI
+					original_tag = PRC
+					original_tag = MAN
+					original_tag = SIK
+					is_originally_warlord = yes
+				}
+			}
+			available = {
+				is_legit_china = yes
 			}
 
 			research_bonus = {
@@ -3798,9 +3912,16 @@ ideas = {
 		roc_avdc = {
 
 			allowed = {
-				original_tag = CHI
+				OR = {
+					original_tag = CHI
+					#original_tag = PRC
+					#original_tag = MAN
+					#original_tag = SIK
+					is_originally_warlord = yes
+				}
 			}
 			available = {
+				is_legit_china = yes
 				OR = {
 					has_government = neutrality
 					has_government = democratic
@@ -3819,7 +3940,13 @@ ideas = {
 		CHI_krupp = {
 			picture = krupp
 			allowed = {
-				original_tag = CHI
+				OR = {
+					original_tag = CHI
+					original_tag = PRC
+					original_tag = MAN
+					original_tag = SIK
+					is_originally_warlord = yes
+				}
 			}
 			available = {
 				has_idea = Carlowitz_Co_idea

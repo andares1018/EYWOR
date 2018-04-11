@@ -99,6 +99,8 @@ focus_tree = {
 					}
 				}
 			}
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = MAN_south_manchuria_railway_company
 		}
 
 	}
@@ -2439,7 +2441,9 @@ focus_tree = {
 			}
 		}
 		available = {
-			#compare_autonomy_progress_ratio > #compare_autonomy_progress_ratio > 0.75#compare_autonomy_progress_ratio > 0.75#compare_autonomy_progress_ratio > 0.75
+			#compare_autonomy_progress_ratio > #compare_autonomy_progress_ratio > 0.75
+#compare_autonomy_progress_ratio > 0.75
+#compare_autonomy_progress_ratio > 0.75
 		}
 		#compare_autonomy_progress_ratio > #compare_autonomy_progress_ratio > 0.75
 		#compare_autonomy_progress_ratio > 0.75

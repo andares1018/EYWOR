@@ -37,12 +37,7 @@ is_using_generic_idea = {
 			OR = {
 				tag = CHI 
 				tag = PRC 
-				#tag = MAN 
-				#tag = SHX 
-				#tag = XSM 
-				#tag = GXC 
-				#tag = YUN 
-				#tag = SIK 
+				is_originally_warlord = yes
 			}
 		}
 	}

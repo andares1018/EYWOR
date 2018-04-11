@@ -508,7 +508,7 @@ ideas = {
 			picture = generic_industrial_concern_2			
 			
 			available = {
-				
+				has_completed_focus = MAN_South_Manchuria_Railway
 			}
 
 			allowed = {

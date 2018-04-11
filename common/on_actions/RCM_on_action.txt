@@ -44,7 +44,6 @@ on_actions = {
 						any_country = {
 							is_warlord = yes
 							has_war_with = CHI
-
 						}
 					}
 					FROM = {
@@ -52,17 +51,16 @@ on_actions = {
 							hours = 3 id = rcmchina.331 #emergenecy peace
 						}
 					}
-					else_if = {
-						limit = {
-							AND = {
-								NOT = {
-									is_in_faction_with = CHI
-								}
-								is_faction_leader = yes
-							}
-						}
-
-					}
+					#else_if = {
+					#	limit = {
+					#		AND = {
+					#			NOT = {
+					#				is_in_faction_with = CHI
+					#			}
+					#			is_faction_leader = yes
+					#		}
+					#	}
+					#}
 					else = {
 						FROM = {
 							country_event = {
@@ -580,7 +578,7 @@ on_actions = {
 						set_global_flag = jnc_exists
 						set_global_flag = rfm_exists
 						set_global_flag = rrc_exists
-						set_cosmetic_flag = RRC
+						set_cosmetic_tag = RRC
 						create_country_leader = {
 							name = "Wang Jingwei"
 							desc = "POLITICS_WANG_JINGWEI_DESC"
@@ -608,4 +606,27 @@ on_actions = {
 		effect = {
 		}
 	}
+	on_daily = {
+		effect = {
+			random_state = {
+				limit = {
+					has_state_flag = I_choose_this_state_to_DMZ
+					NOT = {
+						is_demilitarized_zone = yes
+					}
+				}
+				set_demilitarized_zone = yes
+			}
+			random_state = {
+				limit = {
+					is_demilitarized_zone = yes
+					NOT = {
+						has_state_flag = I_choose_this_state_to_DMZ
+					}
+				}
+				set_demilitarized_zone = no
+			}
+		}
+	}
+	
 }

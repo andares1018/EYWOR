@@ -1310,6 +1310,13 @@ reenable_duration = {
 
 PRC_border_conflict_NXM_select = {
 	hidden_effect = {
+		clear_variable = test_defender_state_temp
+		clear_variable = test_attacker_state_temp
+		clear_variable = defender_state_temp
+		clear_variable = attack_dir_state_temp
+		clear_variable = attacker_state_temp
+		clear_event_target = defender_state
+		clear_event_target = attacker_state
 		random_state = {
 			limit = {
 				state = 760
@@ -1320,7 +1327,7 @@ PRC_border_conflict_NXM_select = {
 					ROOT = {
 						divisions_in_border_state = {
 							state = var:test_attacker_state_temp
-							border_state = var:test_defender_state_temp
+							border_state = 760
 							size > 0
 						}
 					}
@@ -1335,16 +1342,15 @@ PRC_border_conflict_NXM_select = {
 		random_state = {
 			limit = {
 				is_fully_controlled_by = ROOT
-				hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
+				#hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
 				set_temp_variable = { attack_dir_state_temp = id }
 				ROOT = {
 					divisions_in_border_state = {
 						state = var:attack_dir_state_temp
-						border_state = var:NXM.defender_state_vs_@ROOT
+						border_state = 760
 						size > 0
 					}
-				}
-				
+				}				
 				any_neighbor_state = {
 					state = 760
 				}
@@ -1384,27 +1390,55 @@ PRC_border_conflict_NXM = {
 			set_temp_variable = { attacker_state_temp = id }
 		}
 	}
-	activate_targeted_decision = {
-		target = NXM
-		decision = RCM_escalate_incident_to_border_conflict
+	start_border_war = {
+		change_state_after_war = no
+		attacker = {
+			state = var:NXM.attacker_state_vs_@ROOT
+			num_provinces = 4
+			on_win = RCM_border_conflict_won_attacker.1
+			on_lose = RCM_border_conflict_lost_attacker.1
+			on_cancel = RCM_border_conflict_canceled_attacker.1
+		}
+		
+		defender = {
+			state = 760
+			num_provinces = 4
+			on_win = RCM_border_conflict_won_defender.1
+			on_lose = RCM_border_conflict_lost_defender.1
+			on_cancel = RCM_border_conflict_canceled_defender.1
+		}
 	}
+	hidden_effect = { NXM = { remove_targeted_decision = { target = ROOT decision = RCM_border_conflict_escalation_warning_defender } } }
+	NXM = {
+		activate_targeted_decision = { target = ROOT decision = RCM_border_conflict_escalate_conflict }
+		activate_targeted_decision = { target = ROOT decision = RCM_border_conflict_time_until_cancelled }
+	}
+	activate_targeted_decision = { target = NXM decision = RCM_border_conflict_escalate_conflict }
+	activate_targeted_decision = { target = NXM decision = RCM_border_conflict_time_until_cancelled }
 }
 PRC_border_conflict_SHX_select = {
+	clear_variable = test_defender_state_temp
+	clear_variable = test_attacker_state_temp
+	clear_variable = defender_state_temp
+	clear_variable = attack_dir_state_temp
+	clear_variable = attacker_state_temp
+	clear_event_target = defender_state
+	clear_event_target = attacker_state
 	hidden_effect = {
 		789 = {
-			limit = {
-				set_temp_variable = { test_defender_state_temp = id }
-				any_neighbor_state = {
-					set_temp_variable = { test_attacker_state_temp = id }
+			set_temp_variable = { test_defender_state_temp = id }
+			random_neighbor_state = {
+				limit = {
 					ROOT = {
 						divisions_in_border_state = {
 							state = var:test_attacker_state_temp
-							border_state = 
+							border_state = 789
 							size > 0
 						}
 					}
 					is_fully_controlled_by = ROOT
 				}
+				set_temp_variable = { test_attacker_state_temp = id }
 			}
 			save_event_target_as = defender_state
 			set_variable = { SHX.defender_state_vs_@ROOT = id }
@@ -1418,7 +1452,7 @@ PRC_border_conflict_SHX_select = {
 				ROOT = {
 					divisions_in_border_state = {
 						state = var:attack_dir_state_temp
-						border_state = var:SHX.defender_state_vs_@ROOT
+						border_state = 789
 						size > 0
 					}
 				}
@@ -1447,16 +1481,15 @@ PRC_border_conflict_SHX = {
 			save_event_target_as = attacker_state 
 		}
 		789 = {
-			limit = {
-				is_owned_and_controlled_by = SHX
-				hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
-				any_neighbor_state = {
-					
-					is_fully_controlled_by = ROOT
-					has_ROOT_at_least_1_div_in_current_state_scope = yes
-					hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
-				}
-			}
+			#limit = {
+			#	is_owned_and_controlled_by = SHX
+			#	hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
+			#	any_neighbor_state = {
+			#		is_fully_controlled_by = ROOT
+			#		has_ROOT_at_least_1_div_in_current_state_scope = yes
+			#		hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
+			#	}
+			#}
 			set_temp_variable = { defender_state_temp = id }
 		}
 		random_state = {
@@ -1465,15 +1498,35 @@ PRC_border_conflict_SHX = {
 				hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
 				has_ROOT_at_least_1_div_in_current_state_scope = yes
 				any_neighbor_state = {
-					
 					state = 789
 				}
 			}
 			set_temp_variable = { attacker_state_temp = id }
 		}
 	}
-	activate_targeted_decision = {
-		target = SHX
-		decision = RCM_escalate_incident_to_border_conflict
+	start_border_war = {
+		change_state_after_war = no
+		attacker = {
+			state = var:SHX.attacker_state_vs_@ROOT
+			num_provinces = 4
+			on_win = RCM_border_conflict_won_attacker.1
+			on_lose = RCM_border_conflict_lost_attacker.1
+			on_cancel = RCM_border_conflict_canceled_attacker.1
+		}
+		
+		defender = {
+			state = 789
+			num_provinces = 4
+			on_win = RCM_border_conflict_won_defender.1
+			on_lose = RCM_border_conflict_lost_defender.1
+			on_cancel = RCM_border_conflict_canceled_defender.1
+		}
 	}
+	hidden_effect = { SHX = { remove_targeted_decision = { target = ROOT decision = RCM_border_conflict_escalation_warning_defender } } }
+	SHX = {
+		activate_targeted_decision = { target = ROOT decision = RCM_border_conflict_escalate_conflict }
+		activate_targeted_decision = { target = ROOT decision = RCM_border_conflict_time_until_cancelled }
+	}
+	activate_targeted_decision = { target = SHX decision = RCM_border_conflict_escalate_conflict }
+	activate_targeted_decision = { target = SHX decision = RCM_border_conflict_time_until_cancelled }
 }

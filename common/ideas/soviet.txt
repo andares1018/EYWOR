@@ -1377,31 +1377,11 @@ ideas = {
 			
 			
 			allowed = {
-				OR = {
-					original_tag = SOV
-					AND = {
-						is_literally_china = yes
-						has_dlc = "Waking the Tiger"
-					}
-				}
+				original_tag = SOV
 			}
 
 			available = {
-				if = {
-					limit = {
-						OR = {
-							is_literally_china = yes
-							tag = MAN
-						}
-					}
-					OR = {
-						has_completed_focus = WRL_joint_tank_development
-						has_completed_focus = CHI_joint_tank_development
-					}
-					NOT = {
-						has_war_with = SOV
-					}
-				}
+				
 			}
 			
 			research_bonus = {

@@ -344,11 +344,11 @@ country_event = {
 		761 = { set_demilitarized_zone = yes }
 		hidden_effect = {
 			761 = { set_state_flag = I_choose_this_state_to_DMZ }
-			NEA = {
-				country_event = {
-					id = EFM_Comchina.9013
-				}
-			}			
+			#NEA = {
+			#	country_event = {
+			#		id = EFM_Comchina.9013
+			#	}
+			#}			
 		}
 	}
 }
@@ -367,89 +367,89 @@ country_event = {
 		add_stability = -0.05
 	}
 }
-country_event = { # DMZ loop # SEND THIS TO THE LOOP COUNTRY
-	id = EFM_Comchina.9013
-	hidden = yes
-	is_triggered_only = yes
-	trigger = {
-		NOT = {
-			has_country_flag = DMZ_you_shall_stop_now_flag
-		}
-	}
-	immediate = {
-		every_state = {
-			limit = {
-				is_demilitarized_zone = yes
-				has_state_flag = I_choose_this_state_to_DMZ #set it when setting a new DMZ
-			}
-			set_state_flag = DMZ_state_flag@ROOT
-			clr_state_flag = I_choose_this_state_to_DMZ
-		}
-		ROOT = {
-			country_event = {
-				days = 2 id = EFM_Comchina.9014
-			}
-		}
-	}
-	option = {
-	}
-}
-country_event = { # DMZ loop
-	id = EFM_Comchina.9014
-	hidden = yes
-	is_triggered_only = yes
-	trigger = {
-		any_state = {
-			#is_demilitarized_zone = yes
-			has_state_flag = DMZ_state_flag@ROOT
-		}
-		NOT = {
-			has_country_flag = DMZ_you_shall_stop_now_flag
-		}
-	}
-	immediate = {
-		every_state = {
-			limit = {
-				is_demilitarized_zone = yes
-				has_state_flag = DMZ_state_flag@ROOT
-			}
-			#set_demilitarized_zone = no
-			set_demilitarized_zone = yes
-		}
-		every_state = {
-			limit = {
-				is_demilitarized_zone = no
-				has_state_flag = DMZ_state_flag@ROOT
-			}
-			set_demilitarized_zone = yes
-		}
-		ROOT = {
-			country_event = {
-				id = EFM_Comchina.9013
-			}
-		}
-	}
-	option = {
-	}
-}
-country_event = { # DMZ loop stop# SEND THIS TO THE LOOP COUNTRY
-	id = EFM_Comchina.9015
-	hidden = yes
-	is_triggered_only = yes
-	immediate = {
-		every_state = {
-			limit = {
-				is_demilitarized_zone = yes
-				has_state_flag = DMZ_state_flag@ROOT
-			}
-			set_demilitarized_zone = no
-			clr_state_flag = DMZ_state_flag@ROOT
-		}
-		set_country_flag = DMZ_you_shall_stop_now_flag
-	}
-	option = {
-	}
-}
+#country_event = { # DMZ loop # SEND THIS TO THE LOOP COUNTRY
+#	id = EFM_Comchina.9013
+#	hidden = yes
+#	is_triggered_only = yes
+#	trigger = {
+#		NOT = {
+#			has_country_flag = DMZ_you_shall_stop_now_flag
+#		}
+#	}
+#	immediate = {
+#		every_state = {
+#			limit = {
+#				is_demilitarized_zone = yes
+#				has_state_flag = I_choose_this_state_to_DMZ #set it when setting a new DMZ
+#			}
+#			set_state_flag = DMZ_state_flag@ROOT
+#			clr_state_flag = I_choose_this_state_to_DMZ
+#		}
+#		ROOT = {
+#			country_event = {
+#				days = 2 id = EFM_Comchina.9014
+#			}
+#		}
+#	}
+#	option = {
+#	}
+#}
+#country_event = { # DMZ loop
+#	id = EFM_Comchina.9014
+#	hidden = yes
+#	is_triggered_only = yes
+#	trigger = {
+#		any_state = {
+#			#is_demilitarized_zone = yes
+#			has_state_flag = DMZ_state_flag@ROOT
+#		}
+#		NOT = {
+#			has_country_flag = DMZ_you_shall_stop_now_flag
+#		}
+#	}
+#	immediate = {
+#		every_state = {
+#			limit = {
+#				is_demilitarized_zone = yes
+#				has_state_flag = DMZ_state_flag@ROOT
+#			}
+#			#set_demilitarized_zone = no
+#			set_demilitarized_zone = yes
+#		}
+#		every_state = {
+#			limit = {
+#				is_demilitarized_zone = no
+#				has_state_flag = DMZ_state_flag@ROOT
+#			}
+#			set_demilitarized_zone = yes
+#		}
+#		ROOT = {
+#			country_event = {
+#				id = EFM_Comchina.9013
+#			}
+#		}
+#	}
+#	option = {
+#	}
+#}
+#country_event = { # DMZ loop stop# SEND THIS TO THE LOOP COUNTRY
+#	id = EFM_Comchina.9015
+#	hidden = yes
+#	is_triggered_only = yes
+#	immediate = {
+#		every_state = {
+#			limit = {
+#				is_demilitarized_zone = yes
+#				has_state_flag = DMZ_state_flag@ROOT
+#			}
+#			set_demilitarized_zone = no
+#			clr_state_flag = DMZ_state_flag@ROOT
+#		}
+#		set_country_flag = DMZ_you_shall_stop_now_flag
+#	}
+#	option = {
+#	}
+#}
 # SOV Support PRC if they win NXM
 country_event = {
 	id = EFM_Comchina.14

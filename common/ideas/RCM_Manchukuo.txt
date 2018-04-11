@@ -639,19 +639,6 @@ ideas = {
 	}
 		industrial_concern = {
 
-		south_manchuria_railway = {
-			picture = generic_industrial_concern_1
-			allowed = {
-				original_tag = MAN
-			}
-
-			research_bonus = {
-				industry = 0.10
-			}
-
-			traits = { industrial_concern }
-		}
-
 
 		mtt = {
 			picture = generic_electronics_concern_1
@@ -665,20 +652,6 @@ ideas = {
 			}
 
 			traits = { electronics_concern }
-		}
-		showa_steel_works = {
-			picture = generic_industrial_concern_2
-
-			allowed = {
-				original_tag = MAN
-			}
-
-			research_bonus = {
-				industry = 0.05
-				synth_resources = 0.1
-			}
-
-			traits = { refinery_concern }
 		}
 	}
 	materiel_manufacturer = {

@@ -4566,6 +4566,9 @@ country_event = {
 	}
 	option = {#emergency peace!
 		name = rcmchina.331.a
+		ai_chance = {
+			factor = 100
+		}
 		if = {
 			limit = {
 				NOT = {
@@ -4653,6 +4656,9 @@ country_event = {
 	}
 	option = {#no thanks
 		name = rcmchina.331.b
+		ai_chance = {
+			factor = 0
+		}
 	}
 }
 #other warlords
@@ -4928,10 +4934,6 @@ country_event = {
 	option = {
 		ai_chance = {
 			factor = 30
-			modifier = {
-				add = 20
-				has_idea = CHI_Revolution_Exported_idea
-			}
 		}
 		name = rcmchina.340.b
 		CHI = { country_event = { id = rcmchina.342 days = 7 } }
@@ -4963,10 +4965,7 @@ country_event = {
 	option = {
 		ai_chance = {
 			factor = 50
-			modifier = {
-				add = 25
-				has_idea = CHI_Revolution_Exported_idea
-			}
+			
 		}
 		name = rcmchina.341.b
 		TIB = { country_event = { id = rcmchina.344 days = 7 } }
@@ -5015,10 +5014,6 @@ country_event = {
 	option = {
 		ai_chance = {
 			factor = 70
-			modifier = {
-				add = 20
-				has_idea = CHI_Revolution_Exported_idea
-			}
 		}
 		name = rcmchina.344.a
 		CHI = { country_event = { id = rcmchina.342 days = 7 } }
