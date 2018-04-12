@@ -326,7 +326,7 @@ ideas = {
 		
 		fic_indigenous_officers = {
 			removal_cost = -1
-			picture = generic_spy_intel
+			picture = generic_spy_political
 			allowed = {
 				always = no
 			}
@@ -336,6 +336,71 @@ ideas = {
 			army_core_defence_factor = 0.05
 			army_core_attack_factor = 0.05
 			max_command_power = 10
+			}
+		}
+		
+		fic_repression = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_spy_coup
+
+			modifier = {
+			drift_defence_factor = 0.25
+			stability_factor = 0.1
+			political_power_gain = 0.1
+			}
+		}
+		
+		fic_repression_1 = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_spy_coup
+
+			modifier = {
+			drift_defence_factor = 0.1
+			stability_factor = 0.05
+			}
+		}
+		
+		fic_better_working_conditions = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_goods_red_bonus
+
+			modifier = {
+			industrial_capacity_factory = -0.1
+			stability_factor = 0.05
+			production_factory_max_efficiency_factor = 0.05
+			}
+		}
+		
+		fic_better_working_conditions_1 = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_goods_red_bonus
+
+			modifier = {
+			industrial_capacity_factory = -0.05
+			stability_factor = 0.075
+			production_factory_max_efficiency_factor = 0.05
+			drift_defence_factor = -0.1
+			production_factory_efficiency_gain_factor = 0.05
 			}
 		}
 		
@@ -355,6 +420,60 @@ ideas = {
 			production_factory_max_efficiency_factor = -0.15
 			stability_factor = -0.1
 			political_power_gain = -0.2
+			}
+		}
+		
+		FIC_strikes_1 = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = generic_production_bonus
+
+			modifier = {
+			consumer_goods_factor = 0.15
+			industrial_capacity_factory = -0.15
+			production_speed_buildings_factor = -0.15
+			production_factory_max_efficiency_factor = -0.1
+			stability_factor = -0.1
+			political_power_gain = -0.2
+			}
+		}
+		
+		FIC_strikes_2 = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = generic_production_bonus
+
+			modifier = {
+			consumer_goods_factor = 0.1
+			industrial_capacity_factory = -0.1
+			production_speed_buildings_factor = -0.1
+			production_factory_max_efficiency_factor = -0.1
+			stability_factor = -0.05
+			political_power_gain = -0.1
+			}
+		}
+		
+		FIC_strikes_3 = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = generic_production_bonus
+
+			modifier = {
+			consumer_goods_factor = 0.05
+			industrial_capacity_factory = -0.05
+			production_speed_buildings_factor = -0.05
+			production_factory_max_efficiency_factor = -0.05
+			stability_factor = -0.05
+			political_power_gain = -0.1
 			}
 		}
 	}

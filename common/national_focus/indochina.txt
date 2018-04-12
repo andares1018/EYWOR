@@ -213,10 +213,8 @@ focus_tree = {
 		x = 3
 		y = 6
 		completion_reward = {
-		swap_ideas = {
-		remove_idea = FIC_colonial_loan_5
-		add_idea = FIC_colonial_loan_6
-		}
+		remove_ideas = FIC_colonial_loan_5
+		add_timed_idea = { idea = FIC_colonial_loan_6 days = 300 }
 		}
 	}
 	focus = {
@@ -596,7 +594,17 @@ focus_tree = {
 		cost = 10
 		x = 21
 		y = 0
-
+		available = {
+		has_idea = FIC_strikes
+		NOT = { has_country_leader = { ruling_only = yes name = "René Robin" } }
+		}
+		completion_reward = {
+		add_political_power = 25
+		swap_ideas = {
+		remove_idea = FIC_strikes
+		add_idea = FIC_strikes_1
+		}
+		}
 	}
 	focus = {
 		id = FIC_end_repressions
@@ -607,6 +615,21 @@ focus_tree = {
 		}
 		x = 21
 		y = 1
+		completion_reward = {
+		swap_ideas = {
+		remove_idea = FIC_strikes_1
+		add_idea = FIC_strikes_2
+		}
+		swap_ideas = {
+		remove_idea = fic_repression
+		add_idea = fic_repression_1
+		}
+		add_political_power = -25
+		add_popularity = {
+		ideology = neutrality
+		popularity = -0.05
+		}
+		}
 
 	}
 	focus = {
@@ -618,6 +641,13 @@ focus_tree = {
 		}
 		x = 21
 		y = 2
+		completion_reward = {	
+		swap_ideas = {
+		remove_idea = FIC_strikes_2
+		add_idea = FIC_strikes_3
+		}
+		add_ideas = fic_better_working_conditions
+		}
 
 	}
 	focus = {
@@ -630,6 +660,11 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = FIC_improve_workers_condition
+		
+		completion_reward = {
+		remove_ideas = fic_repression_1
+		add_political_power = 25
+		}
 
 	}
 	focus = {
@@ -641,7 +676,14 @@ focus_tree = {
 		}
 		x = 21
 		y = 4
-
+		
+		completion_reward = {
+		swap_ideas = {
+		remove_idea = fic_better_working_conditions
+		add_idea = fic_better_working_conditions_1
+		}
+		remove_ideas = FIC_strikes_3
+		}
 	}
 	focus = {
 		id = FIC_indochina_fights_on

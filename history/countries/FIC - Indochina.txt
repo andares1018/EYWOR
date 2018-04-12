@@ -23,6 +23,7 @@ add_ideas = {
 	FIC_economic_crisis
 	FIC_iliterate_population
 	no_proper_equipment_design
+	fic_repression
 }
 
 1939.1.1 = {

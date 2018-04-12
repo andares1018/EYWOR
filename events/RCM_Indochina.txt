@@ -164,3 +164,18 @@ country_event = {
 		name = rcmindochina.6.a #ok
 	}
 }
+
+#strikes
+country_event = {
+	id = rcmindochina.7
+	title = rcmindochina.7.t
+	desc = rcmindochina.7.d
+	picture = GFX_idk
+	is_triggered_only = yes
+	
+	option = {
+		name = rcmindochina.7.a #ok
+		add_political_power = -100
+		add_ideas = FIC_strikes
+	}
+}

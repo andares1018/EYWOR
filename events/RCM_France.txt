@@ -28,6 +28,7 @@ country_event = {
 		set_politics = { ruling_party = n_socialism elections_allowed = yes }
 		hidden_effect = {
 		FIC = { country_event = { days = 100 id = rcmindochina.1 } } #new colonial governor appointed
+		FIC = { country_event = { days = 1 id = rcmindochina.7 } } #strikes
 		}
 		
 	}

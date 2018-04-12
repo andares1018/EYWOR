@@ -20,6 +20,9 @@
  rcmindochina.6.t:0 "Indochina defects"
  rcmindochina.6.d:0 "General Georges Catroux has announced his defection to the gaullist traitors. Indochina is now under their control, but surely not for long."
  rcmindochina.6.a:0 "He will be punished like all his gaullist friends."
+ rcmindochina.7.t:0 "Strikes!"
+ rcmindochina.7.d:0 "The recent economic recovery and the victory of the Popular Front has caused widespread strikes among indochinese workers, asking for better wages."
+ rcmindochina.7.a:0 "We need to maintain the colonial order."
 
  ###FOCUSES###
  
@@ -149,6 +152,9 @@
  FIC_economic_crisis_3:0 "Economic Crisis"
  FIC_strikes:0 "Widespread Strikes"
  FIC_strikes_desc:0 ""
+ FIC_strikes_1:0 "Widespread Strikes"
+ FIC_strikes_2:0 "Widespread Strikes"
+ FIC_strikes_3:0 "Widespread Strikes"
  FIC_colonial_loan_idea:0 "Colonial Loan"
  FIC_colonial_loan_1:0 "Colonial Loan"
  FIC_colonial_loan_2:0 "Colonial Loan"
@@ -159,6 +165,9 @@
  FIC_iliterate_population:0 "Illiterate Population"
  FIC_iliterate_population_1:0 "Illiterate Population"
  FIC_iliterate_population_2:0 "Illiterate Population"
+ fic_repression:0 "Repressions"
+ fic_repression_desc:0 ""
+ fic_repression_1:0 "Repressions"
  fic_support_war:0 "Supporting the Métropole"
  fic_support_war_desc:0 ""
  fic_indochinese_manpower:0 "Indochinese Manpower"
@@ -169,6 +178,9 @@
  fic_strengthened_mil_intel_desc:0 ""
  fic_indigenous_officers:0 "Indigenous Officers"
  fic_indigenous_officers_desc:0 ""
+ fic_better_working_conditions:0 "Better Working Conditions"
+ fic_better_working_conditions_desc:0 ""
+ fic_better_working_conditions_1:0 "Better Working Conditions"
  
  #Ministers
  
