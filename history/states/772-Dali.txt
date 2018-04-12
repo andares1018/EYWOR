@@ -1,7 +1,12 @@
 state={
 	id=772
 	name="STATE_772"
-	
+	resources={
+		#tungsten=20.000
+		steel=7.000
+		#chromium=4.000
+	}
+
 	history={
 		owner = YUN
 		add_core_of = YUN

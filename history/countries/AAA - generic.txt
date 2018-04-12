@@ -223,22 +223,22 @@ if = {
 			CHI_ineffective_bureaucracy_warlord
 		}
 	}
-	every_country = {
-		limit = {
-			OR = {
-				is_warlord = yes
-				tag = PRC
-			}
-		}
-		add_ideas = {
-
-			incompetent_heavy_industry
-			unbalanced_industry
-			iliterate_population
-			no_proper_equipment_design
-			#CHI_incompetent_officers
-			CHI_hyper_inflation_1
-		}
-	}
+	#every_country = {
+	#	limit = {
+	#		OR = {
+	#			is_warlord = yes
+	#			tag = PRC
+	#		}
+	#	}
+	#	add_ideas = {
+#
+	#		#incompetent_heavy_industry
+	#		#unbalanced_industry
+	#		#iliterate_population
+	#		#no_proper_equipment_design
+	#		#CHI_incompetent_officers
+	#		#CHI_hyper_inflation_1
+	#	}
+	#}
 
 }

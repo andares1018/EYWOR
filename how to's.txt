@@ -84,6 +84,8 @@ all_XXX = { <= All means All, no exception, so this trigger will be hard to use
 			}
 		}
 ====================================
+build ic cost idea don't works when added in history file
+====================================
 #base-factor error:
 	NO mtth along with is_triggered_only
 ====================================

@@ -20,7 +20,7 @@ country_event = {
 	option = { #join
 		name = prc.1.a
 		ai_chance = {
-			base = 0
+			factor = 0
 			modifier = {
 				factor = 200
 				OR = {
@@ -30,9 +30,6 @@ country_event = {
 					}
 					is_historical_focus_on = yes
 				}
-			}
-			modifier = {
-				factor = 80
 				NOT = {
 					OR = {
 						tag = XSM
@@ -70,7 +67,7 @@ country_event = {
 	option = { #not join
 		name = prc.1.b
 		ai_chance = {
-			base = 20
+			factor = 20
 			modifier = {
 				factor = 100
 				OR = {

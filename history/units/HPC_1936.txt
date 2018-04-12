@@ -72,14 +72,14 @@ units = {
 		location = 9843
 		division_template = "Bubing Shi"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.1
+		start_equipment_factor = 0.7
 	}
 	division = {
 		name = "38 Bubing Shi"
 		location = 10068
 		division_template = "Bubing Shi"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.1
+		start_equipment_factor = 0.7
 	}
 	division = {
 		name = "132 Bubing Shi"
@@ -92,42 +92,42 @@ units = {
 		location = 9843
 		division_template = "Independent Infantry Brigade" 
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.1
+		start_equipment_factor = 0.9
 	}
 	division = {
 		name = "Independent 40 Brigade"
 		location = 9843
 		division_template = "Independent Infantry Brigade" 
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.1
+		start_equipment_factor = 0.9
 	}
 	division = {
 		name = "Di 9 Jibing Shi"
 		location = 10068
 		start_experience_factor = 0.1
 		division_template = "Jibing Shi" 
-		start_equipment_factor = 0.1
+		start_equipment_factor = 0.9
 	}
 	division = {
 		name = "Independent Cavalry 13 Brigade"
 		location = 9843
 		division_template = "Independent Cavalry Brigade"
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.1
+		start_equipment_factor = 0.7
 	}
 	division = {
 		name = "Tehwu Lu"	
 		location = 9843
 		division_template = "Tehwu Lu"
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.1
+		start_equipment_factor = 0.9
 	}
 	division = {
 		name = "Hebei Bao An Dui"
 		location = 9843
 		division_template = "Bao An Dui"
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.1
+		start_equipment_factor = 0.7
 	}
 }
 

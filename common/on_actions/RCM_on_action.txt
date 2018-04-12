@@ -606,6 +606,45 @@ on_actions = {
 		effect = {
 		}
 	}
+	on_startup = {
+		effect = {
+			every_country = {
+				limit = {
+					OR = {
+						is_warlord = yes
+						tag = PRC
+						tag = CHI
+					}
+				}
+				add_ideas = {
+					incompetent_heavy_industry
+					unbalanced_industry
+					iliterate_population
+					no_proper_equipment_design
+				}
+			}
+			CHI = {
+				add_ideas = {
+					the_blueshirts
+					central_club
+					CHI_nanking_decade_idea
+				}
+			}
+			every_country = {
+				limit = {
+					OR = {
+						is_warlord = yes
+						tag = PRC
+						tag = CHI
+					}
+					has_dlc = "Waking the Tiger"
+				}
+				add_ideas = {
+					CHI_hyper_inflation_1
+				}
+			}			
+		}		
+	}
 	on_daily = {
 		effect = {
 			random_state = {

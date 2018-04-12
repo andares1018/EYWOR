@@ -43,73 +43,103 @@ units = {
 	#Guangxi units - 15 divisions
 	division = {
 		name = "Di 1 Bubing Shi"
-		location = 1047
-		start_experience_factor = 0.1
+		location = 9997
+		start_experience_factor = 0.2
 		division_template = "Bubing Shi"
-		start_equipment_factor = 0.3
+		start_equipment_factor = 0.8
 
 	}
 	division = {
 		name = "Di 2 Bubing Shi"
-		location = 1047
+		location = 12014
 		division_template = "Bubing Shi"
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
 
 	}
 	division = {
 		name = "Di 3 Bubing Shi"
-		location = 1047
+		location = 9970
 		division_template = "Bubing Shi"
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
 
 	}
 	division = {
 		name = "Di 4 Bubing Shi"
-		location = 1047
+		location = 1120
 		division_template = "Bubing Shi"
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
 
 	}
 	division = {
 		name = "Di 5 Bubing Shi"
-		location = 1047
+		location = 1162
 		division_template = "Bubing Shi"
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
 
 	}
 	division = {
 		name = "Di 6 Bubing Shi"
-		location = 1047
+		location = 1078
 		division_template = "Bubing Shi"
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
+		start_equipment_factor = 0.5
 	}
 	division = {
 		name = "Di 7 Bubing Shi"
-		location = 1047
+		location = 7141
 		start_experience_factor = 0.1
 		division_template = "Bubing Shi"
-		start_equipment_factor = 0.3
+		start_equipment_factor = 0.9
 
 	}
 	division = {
 		name = "Di 8 Bubing Shi"
-		location = 1047
+		location = 7182
 		division_template = "Bubing Shi"
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
+		start_equipment_factor = 0.9
 
 	}
+	
 	division = {
 		name = "Di 9 Bubing Shi"
 		location = 1047
 		division_template = "Bubing Shi"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+	
+	division = {
+		name = "Di 10 Bubing Shi"
+		location = 10121
+		division_template = "Bubing Shi"
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "Di 11 Bubing Shi"
+		location = 11983
+		division_template = "Bubing Shi"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "Di 12 Bubing Shi"
+		location = 1087
+		division_template = "Bubing Shi"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "Di 13 Bubing Shi"
+		location = 1070
+		division_template = "Bubing Shi"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
 	}
 }
 

@@ -162,7 +162,7 @@ add_ideas = {
 	Long_March_1
 	PRC_no_skilled_personnel_1
 	no_proper_equipment_design
-	incompetent_heavy_industry
+	#incompetent_heavy_industry
 	unbalanced_industry
 	iliterate_population
 	PRC_Poor_Air

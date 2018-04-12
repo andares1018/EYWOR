@@ -44,28 +44,28 @@ units = {
 		name = "8 Lujun Shi"
 		location = 10841
 		division_template = "Bubing Shi"
-		start_equipment_factor = 0.3
-
+		start_equipment_factor = 0.9
+		start_experience_factor = 0.2
 	}
 	## 14th Army ##
 	division = {
 		name = "14 Duli Lu"
-		location = 10841
+		location = 1918
 		division_template = "Duli Bubing Lu"
-		start_equipment_factor = 0.3
-
+		start_equipment_factor = 0.9
+		start_experience_factor = 0.2
 	}
 	division = {
 		name = "27 Duli Lu"
-		location = 10841
+		location = 7988
 		division_template = "Duli Bubing Lu"		# Reorganized German-trained division (frontline infantry, better equipment and highest experience)
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
 		start_equipment_factor = 0.7
 
 	}
 	division = {
 		name = "2 Duli Lu"
-		location = 10841
+		location = 2067
 		division_template = "Duli Bubing Lu"		# Reorganized German-trained division (frontline infantry, better equipment and highest experience)
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.7
@@ -73,7 +73,7 @@ units = {
 	}
 	division = {
 		name = "25 Duli Lu"
-		location = 10841
+		location = 10726
 		division_template = "Duli Bubing Lu"		# Reorganized German-trained division (frontline infantry, better equipment and highest experience)
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.7

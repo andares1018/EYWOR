@@ -1,6 +1,12 @@
 state={
 	id=782
 	name="STATE_782"
+	resources={
+		#tungsten=20.000
+		steel=5.000
+		#chromium=4.000
+	}
+
 	provinces={
 		1918 7988 8104 10903 12724 12837 
 	}

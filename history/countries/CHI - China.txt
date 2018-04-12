@@ -27,13 +27,8 @@ add_ideas = {
 	CHI_kmt
 	appeasement_policy
 	chiang
-	incompetent_heavy_industry
-	unbalanced_industry
-	iliterate_population
-	no_proper_equipment_design
-	the_blueshirts
-	central_club
-	CHI_nanking_decade_idea
+	#incompetent_heavy_industry
+	
 	
 	
 	unstable_economy
@@ -46,15 +41,7 @@ add_ideas = {
 	#communist_pressure
 	#collectivist_ethos_focus
 }
-if = {
-	limit = {
-		has_dlc = "Waking the Tiger"
-	}
-	add_ideas = {
-		#CHI_incompetent_officers
-		CHI_hyper_inflation_1
-	}
-}
+
 
 set_convoys = 40
 

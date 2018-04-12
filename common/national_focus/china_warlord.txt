@@ -74,11 +74,6 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
 		completion_reward = {
 			add_political_power = 120
 			hidden_effect = {
@@ -303,11 +298,6 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
 		completion_reward = {
 			custom_effect_tooltip = CHI_cooperation_with_the_nationalists_effect_tooltip
 			CHI = { add_opinion_modifier = { modifier = CHI_cooperation_with_the_nationalists_positive target = ROOT } }
@@ -411,11 +401,6 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
-
 		completion_reward = {
 			if = {
 				limit = {
@@ -453,11 +438,6 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
 		completion_reward = {
 			add_stability = 0.1
 		}
@@ -489,11 +469,6 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
-
 		completion_reward = {
 			remove_ideas = PRC_government_corruption
 		}
@@ -525,11 +500,6 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
 		completion_reward = {
 			add_ideas = CHI_embrace_the_opium_trade
 		}
@@ -560,11 +530,6 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
 		completion_reward = {
 			every_owned_state = {
 				limit = {
@@ -600,11 +565,6 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
-
 		completion_reward = {
 			remove_ideas = CHI_ineffective_bureaucracy_warlord
 		}
@@ -656,11 +616,6 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
 		completion_reward = {
 			custom_effect_tooltip = enable_power_struggle
 			WTT_setup_political_struggle = yes
@@ -697,11 +652,6 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
 		completion_reward = {
 			load_focus_tree = warlord_generic_nationalist
 			set_cosmetic_tag = CHI_warlord_leader
@@ -769,11 +719,6 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
 		completion_reward = {
 			custom_effect_tooltip = CHI_cooperation_with_the_communists_effect_tooltip
 			SOV = {
@@ -835,11 +780,6 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
 		completion_reward = {
 			every_owned_state = {
 				limit = {
@@ -879,11 +819,6 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
 		completion_reward = {
 			add_ideas = CHI_ideological_education
 		}
@@ -914,11 +849,6 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
 		completion_reward = {
 			add_ideas = CHI_land_value_tax
 		}
@@ -949,11 +879,6 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
-
 		completion_reward = {
 			remove_ideas = PRC_government_corruption
 		}
@@ -984,11 +909,6 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
-
 		completion_reward = {
 			remove_ideas = CHI_ineffective_bureaucracy_warlord
 		}
@@ -1039,11 +959,6 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
 		completion_reward = {
 			set_politics = { ruling_party = communism elections_allowed = no }
 			add_opinion_modifier = { target = SOV modifier = CHI_join_the_chinese_soviet }
@@ -1103,11 +1018,6 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
 		completion_reward = {
 			custom_effect_tooltip = CHI_the_yanan_incident_effect_tt
 			save_event_target_as = warlord
@@ -1150,11 +1060,6 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
-
 		completion_reward = {
 			CHI = { add_opinion_modifier = { modifier = CHI_opposition target = ROOT } }
 			if = {
@@ -1224,11 +1129,6 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
-
 		completion_reward = {
 			custom_effect_tooltip = CHI_institute_cross_border_raids_effect_tooltip
 			set_country_flag = CHI_institute_cross_border_raids
@@ -1261,11 +1161,6 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
 		completion_reward = {
 			add_ideas = CHI_public_works
 		}
@@ -1296,11 +1191,6 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
 		completion_reward = {
 			add_ideas = CHI_labor_reform
 		}
@@ -1331,11 +1221,6 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
 		completion_reward = {
 			add_ideas = CHI_rural_militias
 		}
@@ -1366,11 +1251,6 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
 		completion_reward = {
 			add_ideas = CHI_war_taxes
 		}
@@ -1408,11 +1288,6 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
 		completion_reward = {
 			unlock_decision_category_tooltip = CHI_seek_japanese_support
 		}
@@ -1443,77 +1318,8 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
 		completion_reward = {
-			if = {
-				limit = { ROOT = { tag = GXC } }
-				create_field_marshal = {
-					name = "Li Zongren"
-					gfx = GFX_portrait_li_zongren
-					traits = { infantry_officer } # Many warlord battles as a junior commander
-					skill = 3
-					attack_skill = 4
-					defense_skill = 3
-					planning_skill = 2
-					logistics_skill = 2					
-				}
-			}
-			else_if = {
-				limit = { ROOT = { tag = YUN } }
-				create_field_marshal = {
-					name = "Long Yun"
-					gfx = GFX_portrait_yun_long_yun				
-					traits = { war_hero } # Fought in the Xinhai Revolution, showed personal bravery fighting Japan
-					skill = 3
-					attack_skill = 4
-					defense_skill = 3
-					planning_skill = 2
-					logistics_skill = 2
-				}
-			}
-			else_if = {
-				limit = { ROOT = { tag = SHX } }
-				create_field_marshal = {
-					name = "Yan Xishan"
-					gfx = GFX_portrait_yan_xishan
-					traits = { career_officer } # Educated at officer schools in China and Japan
-					skill = 3
-					attack_skill = 4
-					defense_skill = 3
-					planning_skill = 2
-					logistics_skill = 2
-				}
-			}
-			else_if = {
-				limit = { ROOT = { tag = XSM } }
-				create_field_marshal = {
-					name = "Ma Bufang"
-					gfx = GFX_portrait_xsm_ma_bufang
-					traits = { cavalry_officer } # Raised 30,000 Muslim Cavalrymen
-					skill = 3
-					attack_skill = 4
-					defense_skill = 3
-					planning_skill = 2
-					logistics_skill = 2
-				}
-			}
-			else_if = {
-				limit = { ROOT = { tag = SIK } }
-				create_field_marshal = {
-					name = "Sheng Shicai"
-					gfx = GFX_portrait_sheng_shicai
-					traits = { politically_connected } # Studied political economy, played Stalin and Chiang against one another
-					skill = 3
-					attack_skill = 4
-					defense_skill = 3
-					planning_skill = 2
-					logistics_skill = 2
-				}
-			}
+			add_country_leader_trait = generallissimo
 		}
 	}
 
@@ -1542,11 +1348,6 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
 		completion_reward = {
 			add_stability = 0.1
 		}
@@ -1578,11 +1379,6 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
 		completion_reward = {
 			custom_effect_tooltip = CHI_provoke_border_clashes_effect_tooltip
 			set_country_flag = CHI_provoke_border_clashes
@@ -1615,11 +1411,6 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
 		completion_reward = {
 			add_ideas = CHI_defensive_posture
 		}
@@ -1689,11 +1480,6 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
 		completion_reward = {
 			every_state = {
 				limit = {
@@ -1807,11 +1593,6 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
 		completion_reward = {
 			add_research_slot = 1
 		}
@@ -1903,11 +1684,6 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
 		completion_reward = {
 			add_ideas = CHI_long_term_economic_planning
 		}
@@ -1938,11 +1714,6 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
 		completion_reward = {
 			add_tech_bonus = {
 				name = CHI_local_arms_development
@@ -1978,11 +1749,6 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
 		completion_reward = {
 			add_tech_bonus = {
 				name = CHI_heavy_weapons_development
