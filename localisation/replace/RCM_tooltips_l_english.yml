@@ -108,6 +108,8 @@
  7_infra_trigger_tt:0 "Is controlled by our government, and has at least §Y7 infrastructure§! in the state"
  debuff_tt:0 "§MThe following debuff will be active during the focus:§!\n"
  CHI_defense_of_sichuan_forts:0 "Add §G28§! forts in §YSichuan§!"
+ border_war_NXM_tt:0 "Starts a border war with §Y[NXM.GetName]§!."
+ border_war_SHX_tt:0 "Starts a border war with §Y[SHX.GetName]§!."
  #partisan_effect_neglected:0 "§YEffect of partisans on the client state in the roughly eastern part of China proper will be neglected by gaining complete ownership on the newly-conquered states.\nHowever, foreign government can still instigate uprisings within the client state with§! §Rcontinuous focus§Y.§!"
  partisan_effect_neglected:0 "§MEffect of partisans on the client state in the roughly eastern part of China proper will be neglected by gaining complete ownership on the newly-conquered states."
  PRC_restart_CHI_war:0 "The §YChinese Civil War§! is about to break out"

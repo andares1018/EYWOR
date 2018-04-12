@@ -1315,44 +1315,45 @@ PRC_border_conflict_NXM_select = {
 		clear_variable = defender_state_temp
 		clear_variable = attack_dir_state_temp
 		clear_variable = attacker_state_temp
-		clear_event_target = defender_state
-		clear_event_target = attacker_state
-		random_state = {
-			limit = {
-				state = 760
-				set_temp_variable = { test_defender_state_temp = id }
-				any_neighbor_state = {
-					hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
-					set_temp_variable = { test_attacker_state_temp = id }
-					ROOT = {
-						divisions_in_border_state = {
-							state = var:test_attacker_state_temp
-							border_state = 760
-							size > 0
-						}
+		NXM = {
+			random_owned_controlled_state = {
+				limit = {
+					state = 760
+					set_temp_variable = { test_defender_state_temp = id }
+					#hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
+					any_neighbor_state = {
+						#hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
+						set_temp_variable = { test_attacker_state_temp = id }
+						#ROOT = {
+						#	divisions_in_border_state = {
+						#		state = var:test_attacker_state_temp
+						#		border_state = var:test_defender_state_temp
+						#		size > 0
+						#	}
+						#}
+						#is_fully_controlled_by = ROOT
 					}
-					is_fully_controlled_by = ROOT
 				}
+				save_event_target_as = defender_state
+				set_variable = { NXM.defender_state_vs_@ROOT = id }
+				set_temp_variable = { defender_state_temp = id }
+				set_state_flag = border_incident_active
 			}
-			save_event_target_as = defender_state
-			set_variable = { NXM.defender_state_vs_@ROOT = id }
-			set_temp_variable = { defender_state_temp = id }
-			set_state_flag = border_incident_active
 		}
 		random_state = {
 			limit = {
 				is_fully_controlled_by = ROOT
-				#hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
+				hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
 				set_temp_variable = { attack_dir_state_temp = id }
 				ROOT = {
 					divisions_in_border_state = {
 						state = var:attack_dir_state_temp
-						border_state = 760
+						border_state = var:NXM.defender_state_vs_@ROOT
 						size > 0
 					}
-				}				
+				}
 				any_neighbor_state = {
-					state = 760
+					state = var:NXM.defender_state_vs_@ROOT
 				}
 			}
 			save_event_target_as = attacker_state
@@ -1367,6 +1368,7 @@ PRC_border_conflict_NXM_select = {
 		activate_targeted_decision = { target = ROOT decision = RCM_border_conflict_incident_warning_defender }				
 	}
 }
+
 PRC_border_conflict_NXM = {
 	hidden_effect = {
 		var:NXM.defender_state_vs_@ROOT = {
@@ -1375,7 +1377,16 @@ PRC_border_conflict_NXM = {
 		var:NXM.attacker_state_vs_@ROOT = {
 			save_event_target_as = attacker_state 
 		}
-		760 = {
+		random_state = {
+			limit = {
+				is_owned_and_controlled_by = NXM
+				hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
+				any_neighbor_state = {
+					is_fully_controlled_by = ROOT
+					has_ROOT_at_least_1_div_in_current_state_scope = yes
+					hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
+				}
+			}
 			set_temp_variable = { defender_state_temp = id }
 		}
 		random_state = {
@@ -1384,12 +1395,13 @@ PRC_border_conflict_NXM = {
 				hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
 				has_ROOT_at_least_1_div_in_current_state_scope = yes
 				any_neighbor_state = {
-					state = 760
+					state = var:NXM.defender_state_vs_@ROOT
 				}
 			}
 			set_temp_variable = { attacker_state_temp = id }
 		}
 	}
+
 	start_border_war = {
 		change_state_after_war = no
 		attacker = {
@@ -1401,7 +1413,7 @@ PRC_border_conflict_NXM = {
 		}
 		
 		defender = {
-			state = 760
+			state = var:NXM.defender_state_vs_@ROOT
 			num_provinces = 4
 			on_win = RCM_border_conflict_won_defender.1
 			on_lose = RCM_border_conflict_lost_defender.1
@@ -1422,42 +1434,46 @@ PRC_border_conflict_SHX_select = {
 	clear_variable = defender_state_temp
 	clear_variable = attack_dir_state_temp
 	clear_variable = attacker_state_temp
-	clear_event_target = defender_state
-	clear_event_target = attacker_state
 	hidden_effect = {
-		789 = {
-			set_temp_variable = { test_defender_state_temp = id }
-			random_neighbor_state = {
+		SHX = {
+			random_owned_controlled_state = {
 				limit = {
-					ROOT = {
-						divisions_in_border_state = {
-							state = var:test_attacker_state_temp
-							border_state = 789
-							size > 0
-						}
+					state = 789
+					set_temp_variable = { test_defender_state_temp = id }
+					#hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
+					any_neighbor_state = {
+						#hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
+						set_temp_variable = { test_attacker_state_temp = id }
+						#ROOT = {
+						#	divisions_in_border_state = {
+						#		state = var:test_attacker_state_temp
+						#		border_state = var:test_defender_state_temp
+						#		size > 0
+						#	}
+						#}
+						#is_fully_controlled_by = ROOT
 					}
-					is_fully_controlled_by = ROOT
 				}
-				set_temp_variable = { test_attacker_state_temp = id }
+				save_event_target_as = defender_state
+				set_variable = { SHX.defender_state_vs_@ROOT = id }
+				set_temp_variable = { defender_state_temp = id }
+				set_state_flag = border_incident_active
 			}
-			save_event_target_as = defender_state
-			set_variable = { SHX.defender_state_vs_@ROOT = id }
-			set_temp_variable = { defender_state_temp = id }
-			set_state_flag = border_incident_active
 		}
 		random_state = {
 			limit = {
 				is_fully_controlled_by = ROOT
+				hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
 				set_temp_variable = { attack_dir_state_temp = id }
 				ROOT = {
 					divisions_in_border_state = {
 						state = var:attack_dir_state_temp
-						border_state = 789
+						border_state = var:SHX.defender_state_vs_@ROOT
 						size > 0
 					}
 				}
 				any_neighbor_state = {
-					state = 789
+					state = var:SHX.defender_state_vs_@ROOT
 				}
 			}
 			save_event_target_as = attacker_state
@@ -1480,16 +1496,17 @@ PRC_border_conflict_SHX = {
 		var:SHX.attacker_state_vs_@ROOT = {
 			save_event_target_as = attacker_state 
 		}
-		789 = {
-			#limit = {
-			#	is_owned_and_controlled_by = SHX
-			#	hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
-			#	any_neighbor_state = {
-			#		is_fully_controlled_by = ROOT
-			#		has_ROOT_at_least_1_div_in_current_state_scope = yes
-			#		hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
-			#	}
-			#}
+		random_state = {
+			limit = {
+				state = 789
+				is_owned_and_controlled_by = SHX
+				hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
+				any_neighbor_state = {
+					is_fully_controlled_by = ROOT
+					has_ROOT_at_least_1_div_in_current_state_scope = yes
+					hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
+				}
+			}
 			set_temp_variable = { defender_state_temp = id }
 		}
 		random_state = {
@@ -1498,7 +1515,7 @@ PRC_border_conflict_SHX = {
 				hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
 				has_ROOT_at_least_1_div_in_current_state_scope = yes
 				any_neighbor_state = {
-					state = 789
+					state = var:SHX.defender_state_vs_@ROOT
 				}
 			}
 			set_temp_variable = { attacker_state_temp = id }
@@ -1515,7 +1532,7 @@ PRC_border_conflict_SHX = {
 		}
 		
 		defender = {
-			state = 789
+			state = var:SHX.defender_state_vs_@ROOT
 			num_provinces = 4
 			on_win = RCM_border_conflict_won_defender.1
 			on_lose = RCM_border_conflict_lost_defender.1

@@ -1,7 +1,7 @@
 objectTypes = {
 
 	pdxmesh = {
-		name = "EHB_infantry_weapon_rifle_mesh"
+		name = "RFM_infantry_weapon_rifle_mesh"
 		file = "gfx/models/units/MEN_infantry.mesh"
 		
 		animation = { id = "idle"			type = "GER_infantry_rifle_idle_animation" }
@@ -28,7 +28,7 @@ objectTypes = {
 	}	
 
 	pdxmesh = {
-		name = "EHB_infantry_weapon_mg_mesh"
+		name = "RFM_infantry_weapon_mg_mesh"
 		file = "gfx/models/units/MEN_infantry.mesh"
 		
 		animation = { id = "idle"			type = "GER_infantry_mg_idle_animation" }

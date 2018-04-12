@@ -22,7 +22,7 @@ entity = {
 #####
 entity = {
 	name = "NEA_artillery_entity"
-	name = "SHX_artillery_entity"
+	clone = "SHX_artillery_entity"
 
 }
 
@@ -34,7 +34,7 @@ entity = {
 #####
 entity = {
 	name = "HPC_artillery_entity"
-	name = "SHX_artillery_entity"
+	clone = "SHX_artillery_entity"
 
 }
 
@@ -46,7 +46,7 @@ entity = {
 #####
 entity = {
 	name = "SHD_artillery_entity"
-	name = "SHX_artillery_entity"
+	clone = "SHX_artillery_entity"
 
 }
 
@@ -58,7 +58,7 @@ entity = {
 #####
 entity = {
 	name = "PLM_artillery_entity"
-	name = "SHX_artillery_entity"
+	clone = "SHX_artillery_entity"
 
 }
 

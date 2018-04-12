@@ -32,9 +32,6 @@ focus_tree = {
 		}
 		available = {
 			NOT = {
-				has_decision = RCM_escalate_incident_to_border_conflict
-			}
-			NOT = {
 				has_border_war = yes
 			}
 			OR = {
@@ -57,7 +54,10 @@ focus_tree = {
 				limit = {
 					has_dlc = "Waking the Tiger"
 				}
-				PRC_border_conflict_SHX = yes
+				custom_effect_tooltip = border_war_SHX_tt
+				hidden_effect = {
+					PRC_border_conflict_SHX = yes
+				}				
 			}
 			else = {
 				custom_effect_tooltip = a_war_will_be_declared_at_start_of_focus_SHX_tt
@@ -263,7 +263,10 @@ focus_tree = {
 				limit = {
 					has_dlc = "Waking the Tiger"
 				}
-				PRC_border_conflict_NXM = yes
+				custom_effect_tooltip = border_war_NXM_tt
+				hidden_effect = {
+					PRC_border_conflict_NXM = yes
+				}
 			}
 			else = {
 				custom_effect_tooltip = a_war_will_be_declared_at_start_of_focus_NXM_1_tt
@@ -313,9 +316,6 @@ focus_tree = {
 			NOT = {
 				has_border_war = yes
 			}		
-			NOT = {
-				has_decision = RCM_escalate_incident_to_border_conflict
-			}
 			OR = {
 				divisions_in_border_state = {
 					state = 622

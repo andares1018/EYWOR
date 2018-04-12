@@ -3246,6 +3246,8 @@ focus_tree = {
 		cost = 10.00
 		prerequisite = {
 			focus = CHI_german_training_method
+			focus = CHI_allies_help_diplo_focus
+			focus = CHI_the_soviet_volunteer_group
 		}
 		mutually_exclusive = {
 			focus = CHI_Faction_Research
@@ -3462,6 +3464,8 @@ focus_tree = {
 		icon = GFX_goal_generic_military_sphere
 		cost = 10.00
 		prerequisite = {
+			focus = CHI_german_training_method
+			focus = CHI_allies_help_diplo_focus
 			focus = CHI_the_soviet_volunteer_group
 		}
 		mutually_exclusive = {
@@ -3793,7 +3797,9 @@ focus_tree = {
 		icon = GFX_goal_tfv_generic_tech_sharing
 		cost = 10.00
 		prerequisite = {
+			focus = CHI_german_training_method
 			focus = CHI_allies_help_diplo_focus
+			focus = CHI_the_soviet_volunteer_group
 		}
 		mutually_exclusive = {
 			focus = CHI_Isolationism

@@ -166,7 +166,7 @@ ideas = {
 			picture = generic_army_europe_2 
 
 			available = {
-				has_completed_focus = CHI_give_falkenhausen_citizenship
+				#has_completed_focus = CHI_give_falkenhausen_citizenship
 				NOT = { has_global_flag = falkenhausen_recalled }
 			}
 			
@@ -192,7 +192,7 @@ ideas = {
 			picture = CHI_claire_chennault
 
 			available = {
-				has_completed_focus = CHI_hire_chennault
+				#has_completed_focus = CHI_hire_chennault
 				NOT = { has_idea = CHI_claire_lee_chennault_air_theorist }
 				NOT = { has_war_with = USA }
 			}
@@ -237,7 +237,7 @@ ideas = {
 			picture = CHI_claire_chennault		
 			
 			available = {
-				has_completed_focus = CHI_hire_chennault
+				#has_completed_focus = CHI_hire_chennault
 				NOT = { has_idea = CHI_claire_lee_chennault_air_chief }
 				NOT = { has_war_with = USA }
 			}
@@ -328,6 +328,7 @@ ideas = {
 
 			
 			allowed = {
+				always = no
 				OR = {
 					is_literally_china = yes
 					tag = MAN
@@ -449,10 +450,7 @@ ideas = {
 			}
 			
 			available = {
-				OR = {
-					has_completed_focus = CHI_chinese_panzers
-					has_idea = german_advisors
-				}
+				has_idea = german_advisors
 				NOT = {
 					has_war_with = GER
 				}
@@ -473,7 +471,7 @@ ideas = {
 				modifier = { # CHI might lose the advisors, don't want the AI wasting PP
 					factor = 0
 					NOT = {
-						has_completed_focus = CHI_chinese_panzers
+						has_completed_focus = CHI_axis_help_diplo_focus
 					}
 				}
 			}

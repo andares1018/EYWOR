@@ -4,12 +4,12 @@
 #######
 	entity = {
 		name = "GUD_vehicle_infantry_rifle_entity"
-		name = "GXC_vehicle_infantry_rifle_entity"
+		clone = "GXC_vehicle_infantry_rifle_entity"
 	}
 
 	entity = {
 		name = "GUD_motorized_entity"
-		name = "GXC_motorized_entity"
+		clone = "GXC_motorized_entity"
 	}
 
 	entity = {
@@ -30,7 +30,7 @@
 
 	entity = {
 		name = "HPC_motorized_entity"
-		name = "SHX_motorized_entity"
+		clone = "SHX_motorized_entity"
 	}
 
 	entity = {
@@ -45,7 +45,7 @@
 
 	entity = {
 		name = "SHD_motorized_entity"
-		name = "SHX_motorized_entity"
+		clone = "SHX_motorized_entity"
 	}
 
 	entity = {
@@ -60,7 +60,7 @@
 
 	entity = {
 		name = "NEA_motorized_entity"
-		name = "SHX_motorized_entity"
+		clone = "SHX_motorized_entity"
 	}
 
 	entity = {

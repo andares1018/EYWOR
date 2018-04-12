@@ -140,9 +140,10 @@ leader_traits = {
 	mass_infantry_equipment_manufacturer = {
 		random = no
 		equipment_bonus = {
-			infantry_weapons = {
-				instant = yes
-				build_cost_ic = -0.25 soft_attack = -0.2 
+			infantry_equipment = {
+				reliability = -0.15
+				build_cost_ic = -0.2
+				#instant = yes
 			}
 		}	
 		ai_will_do = {
@@ -153,9 +154,11 @@ leader_traits = {
 	bad_infantry_equipment_manufacturer = {
 		random = no
 		equipment_bonus = {
-			infantry_weapons = {
-				instant = yes
-				build_cost_ic = -0.3 soft_attack = -0.4 
+			infantry_equipment = {
+				soft_attack = -0.1
+				reliability = -0.2
+				build_cost_ic = -0.3 
+				#instant = yes
 			}
 		}	
 		ai_will_do = {
@@ -166,9 +169,11 @@ leader_traits = {
 	slow_infantry_equipment_manufacturer = {
 		random = no
 		equipment_bonus = {
-			infantry_weapons = {
-				instant = yes
-				build_cost_ic = 0.2 soft_attack = 0.15 
+			infantry_equipment = {
+				soft_attack = 0.1
+				reliability = 0.1
+				build_cost_ic = 0.15 
+				#instant = yes
 			}
 		}	
 		ai_will_do = {

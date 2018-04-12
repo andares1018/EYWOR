@@ -236,7 +236,7 @@ objectTypes = {
 	###################
 	
 		pdxmesh = {
-		name = "SOV_infantry_rifle_mesh"
+		name = "MON_infantry_rifle_mesh"
 		file = "gfx/models/units/MON_infantry.mesh"
 
 		animation = { id = "idle"			type = "GER_infantry_rifle_idle_animation" }
