@@ -121,9 +121,9 @@
  
  FIC_neutrality_party:0 "Colonial Administration"
  FIC_democratic_party:0 "Constitutionalist Party"
- FIC_democratic_party_col:0 "Colonial Administration"
+ FIC_democratic_col:0 "Colonial Administration"
  FIC_fascism_party:0 "Phuc Quoc Hoi"
- FIC_fascism_party_col:0 "Colonial Administration"
+ FIC_fascism_col:0 "Colonial Administration"
  FIC_communism_party:0 "PCI"
  FIC_communism_party_long:0 "Indochinese Communist Party"
  FIC_n_socialism_party:0 "VNQDĐ"
@@ -181,6 +181,11 @@
  fic_better_working_conditions:0 "Better Working Conditions"
  fic_better_working_conditions_desc:0 ""
  fic_better_working_conditions_1:0 "Better Working Conditions"
+ fic_local_leaders_coop:0 "Cooperation with Local Leaders"
+ fic_local_leaders_coop_desc:0 ""
+ fic_guerrilleros:0 "Guerilleros"
+ fic_guerrilleros_desc:0 ""
+ fic_defend_vs_siam:0 "Defence Against Thailand"
  
  #Ministers
  

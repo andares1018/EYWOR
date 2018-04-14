@@ -581,6 +581,7 @@ prospect_for_resources = {
 		visible = {
 			owns_state = 671
 			controls_state = 671
+			if = { limit = { tag = FIC } has_completed_focus = FIC_exploit_resources }
 			671 = {
 				NOT = {
 					has_state_flag = tonkin_aluminium_developed

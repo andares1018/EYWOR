@@ -78,12 +78,16 @@ country_event = {
 		ideology = fascism
 		popularity = 0.6
 		}
+		set_party_name = {
+			ideology = fascism
+			name = FIC_fascism_col
+		}
 		create_country_leader = {
 		name = "Jean Decoux"
 			desc = "POLITICS_JEAN_DECOUX_DESC"
 			picture = "gfx/leaders/FIC/Portrait_Indochina_Jean_Decoux.dds"
 			expire = "1965.1.1"
-			ideology = fascism_ideology
+			ideology = collaborationism
 			traits = {
 			}
 		}
@@ -119,6 +123,10 @@ country_event = {
 			ideology = conservatism
 			traits = {
 			}
+		}
+		set_party_name = {
+			ideology = fascism
+			name = FIC_fascism_col
 		}
 		country_event = { days = 1 id = rcmindochina.5 } #free france informed
 		}

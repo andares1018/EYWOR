@@ -476,6 +476,69 @@ ideas = {
 			political_power_gain = -0.1
 			}
 		}
+
+		fic_local_leaders_coop = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = FRA_scw_intervention_nationalists_focus
+			
+			available = {
+			has_war_with = JAP
+			}
+			
+			modifier = {
+			political_power_gain = 0.1
+			stability_factor = 0.05
+			partisan_effect = 0.1
+			}
+		}
+		
+		fic_guerrilleros = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = FRA_scw_intervention_nationalists_focus
+			
+			available = {
+			has_war_with = JAP
+			}
+			
+			modifier = {
+			political_power_gain = 0.1
+			stability_factor = 0.05
+			partisan_effect = 0.25
+			army_core_attack_factor = 0.1
+			army_core_defence_factor = 0.1
+			}
+		}
+		
+		fic_defend_vs_siam = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = generic_wall_line
+			
+			available = {
+			has_war_with = JAP
+			}
+			
+			modifier = {
+			production_speed_bunker_factor = 0.1
+			}
+			
+			targeted_modifier = {
+				tag = SIA
+				defense_bonus_against = 0.1
+			}
+		}
+
 	}
 	political_advisor = {
 		FIC_earl_browder = {
