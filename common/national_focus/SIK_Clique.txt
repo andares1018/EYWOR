@@ -1554,6 +1554,7 @@ focus_tree = {
 		completion_reward = { 
 			country_event = Sinkiang.47
 			custom_effect_tooltip = after_the_rebellion_ended_tt
+			custom_effect_tooltip = new_parties_and_leaders_will_emerge_tt
 			custom_effect_tooltip = a_new_leader_ship_tt
 			effect_tooltip = {
 				if = {
@@ -3078,8 +3079,38 @@ focus_tree = {
 		x = 34
 		y = 8
 		completion_reward = {
-#set_cosmetic_tag = CBG
-			custom_effect_tooltip = SIK_Establish_government_tt
+			if = {
+				limit = {
+					#has_dlc = "Waking the Tiger"
+					OR = {
+						has_government = communism
+						communism > 0.5
+					}
+					NOT = { neutrality > 0.5 }
+				}
+				set_cosmetic_tag = PRC_proclaimed
+			}
+			else = {
+				set_cosmetic_tag = CHI_warlord_leader
+			}
+			if = {
+				limit = {
+					has_dlc = "Waking the Tiger"
+					OR = {
+						has_government = communism
+						communism > 0.5
+					}
+					NOT = { neutrality > 0.5 }
+				}
+				load_focus_tree = warlord_generic_communist
+			}
+			else_if = {
+				limit = {
+					has_dlc = "Waking the Tiger"
+				}
+				load_focus_tree = warlord_generic_nationalist
+			}
+			#custom_effect_tooltip = SIK_Establish_government_tt
 			if = {
 				limit = {
 					SIK = {
