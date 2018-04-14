@@ -1,0 +1,18 @@
+state={
+	id=815
+	name="STATE_815"
+	provinces={
+		12447 12460 
+	}
+	history={
+		owner = FIC
+		add_core_of = FIC
+		add_core_of = CAM
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	manpower=254789
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

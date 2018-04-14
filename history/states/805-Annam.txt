@@ -1,0 +1,18 @@
+state={
+	id=805
+	name="STATE_805"
+	provinces={
+		1248 4255 4379 7229 10137 10180 10309 
+	}
+	history={
+		owner = FIC
+		add_core_of = FIC
+		add_core_of = VIN
+		buildings = {
+			infrastructure = 3
+		}
+	}
+	manpower=821456
+	buildings_max_level_factor=1.000
+	state_category=town
+}

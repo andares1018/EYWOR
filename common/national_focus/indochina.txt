@@ -114,6 +114,7 @@ focus_tree = {
 		add_idea = FIC_economic_crisis_3
 		}
 		random_owned_controlled_state = {
+			prioritize = { 086 806 808 }
 				limit = {
 					is_fully_controlled_by = ROOT
 					free_building_slots = {
@@ -161,6 +162,7 @@ focus_tree = {
 		}
 		
 		random_owned_controlled_state = {
+			prioritize = { 671 }
 			limit = {
 				is_fully_controlled_by = ROOT
 				free_building_slots = {
@@ -697,6 +699,10 @@ focus_tree = {
 		}
 		x = 17
 		y = 5
+		available = {
+		has_country_leader = { ruling_only = yes name = "Georges Catroux" }
+		has_government = democratic
+		}
 
 	}
 	focus = {
