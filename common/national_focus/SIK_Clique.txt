@@ -10,7 +10,7 @@ focus_tree = {
 	default = no
 	focus = {
 		id = SIK_Soviet_support
-		icon = GFX_goal_generic_defence
+		icon = GFX_focus_chi_mission_to_the_soviet_union
 		cost = 10.00
 		x = 11
 		y = 0
@@ -92,7 +92,7 @@ focus_tree = {
 		id = SIK_Six_major_policies
 		icon = GFX_focus_generic_soviet_politics
 		cost = 10.00
-		x = 26
+		x = 28
 		y = 0
 		ai_will_do = {
 			factor = 5
@@ -105,7 +105,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SIK_Light_Industry
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_focus_generic_industry_2
 		cost = 10.00
 		prerequisite = {
 			focus = Sinkiang_Road_Construction
@@ -317,7 +317,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SIK_USSR_investment
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_focus_generic_industry_3
 		cost = 10.00
 		prerequisite = {
 			focus = SIK_Soviet_support
@@ -539,7 +539,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SIK_Oriental_instructor
-		icon = GFX_goal_demand_sudetenland
+		icon = GFX_focus_YUG_pan_slavic_congress
 		cost = 10.00
 		prerequisite = {
 			focus = SIK_White_army
@@ -699,7 +699,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SIK_Soviet_equipment2
-		icon = GFX_goal_generic_army_artillery2
+		icon = GFX_focus_generic_combined_arms
 		cost = 10.00
 		prerequisite = {
 			focus = SIK_Battlefield_equipment
@@ -995,7 +995,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SIK_Consolidate_regime
-		icon = GFX_focus_generic_self_management
+		icon = GFX_assembly_const_focus
 		cost = 10.00
 		prerequisite = {
 			focus = SIK_Six_major_policies
@@ -1003,59 +1003,20 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = SIK_Befriend_SOV
 		}
-		x = 21
+		x = 23
 		y = 1
 		ai_will_do = {
 			factor = 2
 		}
 		completion_reward = {
-			add_political_power = -50
-			add_popularity = {
-				ideology = communism
-				popularity = -0.025
-			}
+			add_political_power = 50
+			add_stability = 0.05
+			#add_popularity = {
+			#	ideology = communism
+			#	popularity = -0.025
+			#}
 		}
 		available = {
-		}
-	}
-	focus = {
-		id = SIK_Arrest_suspicious_people
-		icon = GFX_goal_generic_military_deal
-		cost = 10.00
-		prerequisite = {
-			focus = SIK_Consolidate_regime
-		}
-		x = 21
-		y = 2
-		ai_will_do = {
-			factor = 1
-		}
-		completion_reward = {
-			add_political_power = -50
-			add_popularity = {
-				ideology = communism
-				popularity = -0.025
-			}
-		}
-	}
-	focus = {
-		id = SIK_Forgery_offense
-		icon = GFX_goal_generic_forceful_treaty
-		cost = 10.00
-		prerequisite = {
-			focus = SIK_Arrest_suspicious_people
-		}
-		x = 21
-		y = 3
-		ai_will_do = {
-			factor = 1
-		}
-		completion_reward = {
-			add_political_power = -50
-			add_popularity = {
-				ideology = communism
-				popularity = -0.025
-			}
 		}
 	}
 	focus = {
@@ -1063,10 +1024,10 @@ focus_tree = {
 		icon = GFX_goal_anti_comintern_pact
 		cost = 10.00
 		prerequisite = {
-			focus = SIK_Forgery_offense
+			focus = SIK_Consolidate_regime
 		}
-		x = 21
-		y = 4
+		x = 23
+		y = 2
 		ai_will_do = {
 			factor = 10
 		}
@@ -1079,6 +1040,8 @@ focus_tree = {
 				ideology = communism
 				popularity = -0.05
 			}
+			custom_effect_tooltip = blank_line
+			custom_effect_tooltip = USSR_will_retaliate
 			hidden_effect = {
 				SOV = {
 					country_event = {
@@ -1111,8 +1074,8 @@ focus_tree = {
 			focus = SIK_Central_assignment
 			focus = SIK_Knock_down_the_sheng
 		}
-		x = 19
-		y = 5
+		x = 21
+		y = 3
 		ai_will_do = {
 			factor = 200
 		}
@@ -1126,8 +1089,48 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = SIK_Arrest_suspicious_people
+		icon = GFX_goal_generic_military_deal
+		cost = 10.00
+		prerequisite = {
+			focus = SIK_Keep_the_rule
+		}
+		x = 20
+		y = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = -50
+			add_popularity = {
+				ideology = communism
+				popularity = -0.025
+			}
+		}
+	}
+	focus = {
+		id = SIK_Forgery_offense
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = SIK_Keep_the_rule
+		}
+		x = 22
+		y = 4
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = -50
+			add_popularity = {
+				ideology = communism
+				popularity = -0.025
+			}
+		}
+	}
+	focus = {
 		id = SIK_Central_assignment
-		icon = GFX_focus_rom_parties_end
+		icon = GFX_focus_generic_military_mission
 		cost = 10.00
 		prerequisite = {
 			focus = SIK_Reduce_the_ussr_influence
@@ -1136,8 +1139,8 @@ focus_tree = {
 			focus = SIK_Keep_the_rule
 			focus = SIK_Knock_down_the_sheng
 		}
-		x = 21
-		y = 5
+		x = 23
+		y = 3
 		ai_will_do = {
 			factor = 10
 		}
@@ -1146,11 +1149,11 @@ focus_tree = {
 			add_political_power = 100
 			retire_country_leader = yes
 			if = {
-			limit = {
-				has_unit_leader = 2897
+				limit = {
+					has_unit_leader = 2897
+				}
+				remove_unit_leader = 2897
 			}
-			remove_unit_leader = 2897
-		}
 			set_politics = {
 				ruling_party = neutrality
 				elections_allowed = no
@@ -1164,52 +1167,56 @@ focus_tree = {
 				traits = {
 				}
 			}
-			set_party_name = {
-				ideology = communism
-				long_name = SIK_Xinjiang_defend_peace_and_democracy_alliance
-				name = SIK_Xinjiang_defend_peace_and_democracy_alliance
-			}
-			set_party_name = {
-				ideology = fascism
-				long_name = SIK_Yining_Liberation_Organization
-				name = SIK_Yining_Liberation_Organization
-			}
-			set_party_name = {
-				ideology = neutrality
-				long_name = SIK_China_nationalist_party
-				name = SIK_Kuomintang
-			}
-			set_party_name = {
-				ideology = democratic
-				long_name = SIK_Democratic_alliance
-				name = SIK_Democratic_alliance
-			}
-			remove_ideas = SIK_Autocracy
-			create_country_leader = {
-				name = "Abdulkerim Abbas"
-				desc = "POLITICS_ABDULKERIM_ABBAS_DESC"
-				picture = "Portrait_Sinkiang_Abdulkerim_Abbas.dds"
-				expire = "1965.1.1"
-				ideology = marxism
-				traits = { indomitable_perseverance }
-			}
-			create_country_leader = {
-				name = "Elihan Tore"
-				desc = "POLITICS_ELIHAN_TORE_DESC"
-				picture = "Portrait_Sinkiang_Elihan_Tore.dds"
-				expire = "1965.1.1"
-				ideology = rexism
-				traits = { inexperienced_imperialist  warmonger }
-			}
-			create_country_leader = {
-				name = "Masud Sabri"
-				desc = "POLITICS_MASUD_SABRI_DESC"
-				picture = "Portrait_Sinkiang_Masud_Sabri.dds"
-				expire = "1965.1.1"
-				ideology = conservatism
-				traits = {
+			custom_effect_tooltip = new_parties_and_leaders_will_emerge_tt
+			hidden_effect = {
+				set_cosmetic_tag = SIK_KMT
+				set_party_name = {
+					ideology = communism
+					long_name = SIK_Xinjiang_defend_peace_and_democracy_alliance_long
+					name = SIK_Xinjiang_defend_peace_and_democracy_alliance
 				}
-			}
+				set_party_name = {
+					ideology = fascism
+					long_name = SIK_Yining_Liberation_Organization_long
+					name = SIK_Yining_Liberation_Organization
+				}
+				set_party_name = {
+					ideology = neutrality
+					long_name = SIK_China_nationalist_party
+					name = SIK_Kuomintang
+				}
+				set_party_name = {
+					ideology = democratic
+					long_name = SIK_Democratic_alliance_long
+					name = SIK_Democratic_alliance
+				}
+				create_country_leader = {
+					name = "Abdulkerim Abbas"
+					desc = "POLITICS_ABDULKERIM_ABBAS_DESC"
+					picture = "Portrait_Sinkiang_Abdulkerim_Abbas.dds"
+					expire = "1965.1.1"
+					ideology = marxism
+					traits = { indomitable_perseverance }
+				}
+				create_country_leader = {
+					name = "Elihan Tore"
+					desc = "POLITICS_ELIHAN_TORE_DESC"
+					picture = "Portrait_Sinkiang_Elihan_Tore.dds"
+					expire = "1965.1.1"
+					ideology = rexism
+					traits = { inexperienced_imperialist  warmonger }
+				}
+				create_country_leader = {
+					name = "Masud Sabri"
+					desc = "POLITICS_MASUD_SABRI_DESC"
+					picture = "Portrait_Sinkiang_Masud_Sabri.dds"
+					expire = "1965.1.1"
+					ideology = conservatism
+					traits = {
+					}
+				}
+			}		
+			remove_ideas = SIK_Autocracy
 		}
 		available = {
 			has_country_leader = {
@@ -1223,14 +1230,32 @@ focus_tree = {
 		icon = GFX_focus_rom_royal_dictatorship
 		cost = 10.00
 		prerequisite = {
-			focus = SIK_Keep_the_rule
+			focus = SIK_Arrest_suspicious_people
 		}
-		x = 19
-		y = 6
+		prerequisite = {
+			focus = SIK_Forgery_offense
+		}
+		x = 21
+		y = 5
 		completion_reward = {
 			country_event = {
 				id = Sinkiang.78
-				
+			}
+			effect_tooltip = {
+				add_ideas = SIK_Sinkiang_King
+				if = {
+					limit = {
+						has_idea = SIK_Surrport
+					}
+					remove_ideas = SIK_Surrport
+				}
+				if = {
+					limit = {
+						has_idea = SIK_Weakened_ussr_influence
+					}
+					remove_ideas = SIK_Weakened_ussr_influence
+				}
+				remove_ideas = SIK_Soviet_supports_armed_groups
 			}
 		}
 		available = {
@@ -1241,7 +1266,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SIK_Knock_down_the_sheng
-		icon = GFX_focus_generic_concessions
+		icon = GFX_focus_SAF_colonialist_crusade
 		cost = 10.00
 		prerequisite = {
 			focus = SIK_Reduce_the_ussr_influence
@@ -1250,8 +1275,8 @@ focus_tree = {
 			focus = SIK_Keep_the_rule
 			focus = SIK_Central_assignment
 		}
-		x = 23
-		y = 5
+		x = 25
+		y = 3
 		ai_will_do = {
 			factor = 5
 			modifier = {
@@ -1282,49 +1307,9 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = SIK_Radical_approach
 		}
-		x = 22
-		y = 6
+		x = 24
+		y = 4
 		completion_reward = {
-			set_politics = {
-				ruling_party = neutrality
-				elections_allowed = no
-			}
-			retire_country_leader = yes
-			if = {
-			limit = {
-				has_unit_leader = 2897
-			}
-			remove_unit_leader = 2897
-		} 
-			set_party_name = {
-				ideology = communism
-				long_name = SIK_Xinjiang_defend_peace_and_democracy_alliance
-				name = SIK_Xinjiang_defend_peace_and_democracy_alliance
-			}
-			set_party_name = {
-				ideology = fascism
-				long_name = SIK_Yining_Liberation_Organization
-				name = SIK_Yining_Liberation_Organization
-			}
-			set_party_name = {
-				ideology = neutrality
-				long_name = SIK_China_nationalist_party
-				name = SIK_Kuomintang
-			}
-			set_party_name = {
-				ideology = democratic
-				long_name = SIK_Democratic_alliance
-				name = SIK_Democratic_alliance
-			}
-			remove_ideas = SIK_Autocracy
-			create_country_leader = {
-				name = "Abdulkerim Abbas"
-				desc = "POLITICS_ABDULKERIM_ABBAS_DESC"
-				picture = "Portrait_Sinkiang_Abdulkerim_Abbas.dds"
-				expire = "1965.1.1"
-				ideology = marxism
-				traits = { indomitable_perseverance }
-			}
 			create_country_leader = {
 				name = "Ospan Batyr"
 				desc = "POLITICS_OSPAN_BATYR_DESC"
@@ -1333,23 +1318,67 @@ focus_tree = {
 				ideology = despotism
 				traits = { spirit_of_genghis  anti_communist }
 			}
-			create_country_leader = {
-				name = "Elihan Tore"
-				desc = "POLITICS_ELIHAN_TORE_DESC"
-				picture = "Portrait_Sinkiang_Elihan_Tore.dds"
-				expire = "1965.1.1"
-				ideology = rexism
-				traits = { inexperienced_imperialist  warmonger }
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
 			}
-			create_country_leader = {
-				name = "Masud Sabri"
-				desc = "POLITICS_MASUD_SABRI_DESC"
-				picture = "Portrait_Sinkiang_Masud_Sabri.dds"
-				expire = "1965.1.1"
-				ideology = conservatism
-				traits = {
+			retire_country_leader = yes
+			if = {
+				limit = {
+					has_unit_leader = 2897
+				}
+				remove_unit_leader = 2897
+			}
+			custom_effect_tooltip = new_parties_and_leaders_will_emerge_tt
+			hidden_effect = {
+				set_party_name = {
+					ideology = communism
+					long_name = SIK_Xinjiang_defend_peace_and_democracy_alliance_long
+					name = SIK_Xinjiang_defend_peace_and_democracy_alliance
+				}
+				set_party_name = {
+					ideology = fascism
+					long_name = SIK_Yining_Liberation_Organization_long
+					name = SIK_Yining_Liberation_Organization
+				}
+				set_party_name = {
+					ideology = neutrality
+					long_name = SIK_China_nationalist_party
+					name = SIK_Kuomintang
+				}
+				set_party_name = {
+					ideology = democratic
+					long_name = SIK_Democratic_alliance_long
+					name = SIK_Democratic_alliance
+				}
+				create_country_leader = {
+					name = "Abdulkerim Abbas"
+					desc = "POLITICS_ABDULKERIM_ABBAS_DESC"
+					picture = "Portrait_Sinkiang_Abdulkerim_Abbas.dds"
+					expire = "1965.1.1"
+					ideology = marxism
+					traits = { indomitable_perseverance }
+				}
+				
+				create_country_leader = {
+					name = "Elihan Tore"
+					desc = "POLITICS_ELIHAN_TORE_DESC"
+					picture = "Portrait_Sinkiang_Elihan_Tore.dds"
+					expire = "1965.1.1"
+					ideology = rexism
+					traits = { inexperienced_imperialist  warmonger }
+				}
+				create_country_leader = {
+					name = "Masud Sabri"
+					desc = "POLITICS_MASUD_SABRI_DESC"
+					picture = "Portrait_Sinkiang_Masud_Sabri.dds"
+					expire = "1965.1.1"
+					ideology = conservatism
+					traits = {
+					}
 				}
 			}
+			remove_ideas = SIK_Autocracy
 		}
 		available = {
 			neutrality > 0.5
@@ -1364,7 +1393,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SIK_Befriend_SOV
-		icon = GFX_goal_tripartite_pact
+		icon = GFX_focus_chi_mission_to_the_soviet_union
 		cost = 10.00
 		prerequisite = {
 			focus = SIK_Six_major_policies
@@ -1372,7 +1401,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = SIK_Consolidate_regime
 		}
-		x = 26
+		x = 28
 		y = 1
 		ai_will_do = {
 			factor = 5
@@ -1410,7 +1439,7 @@ focus_tree = {
 			focus = SIK_Consolidate_regime
 			focus = SIK_Befriend_SOV
 		}
-		x = 23
+		x = 25
 		y = 2
 		ai_will_do = {
 			factor = 2
@@ -1463,8 +1492,134 @@ focus_tree = {
 		will_lead_to_war_with = TNG
 	}
 	focus = {
+		id = SIK_Radical_approach
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10.00
+		prerequisite = {
+			focus = SIK_Knock_down_the_sheng
+		}
+		mutually_exclusive = {
+			focus = SIK_Mild_method
+		}
+		x = 26
+		y = 4
+		completion_reward = {
+			country_event = {
+				id = Sinkiang.25
+			}
+			effect_tooltip = {
+				random_list = {
+					60 = {
+						country_event = { id = Sinkiang.27 days = 1 }
+						#if = {
+						#	limit = {
+						#		has_unit_leader = 2897
+						#	}
+						#	remove_unit_leader = 2897
+						#}
+					}
+					40 = {
+						country_event = { id = Sinkiang.26 days = 1 }
+					}
+				}
+			}
+		}
+		available = {
+			neutrality > 0.3
+			has_country_leader = {
+				name = "Sheng Shicai"
+			}
+		}
+	} 
+
+	focus = {
+		id = SIK_east_turkestan_council
+		icon = GFX_focus_MON_sinkiang_coup
+		cost = 10.00
+		prerequisite = {
+			focus = SIK_Radical_approach
+			focus = SIK_Mild_method
+		}
+		x = 25
+		y = 5
+		ai_will_do = {
+		}
+		available = {
+			#has_country_leader = {
+			#	name = "Zhang Zhizhong"
+			#}
+			has_idea = SIK_Soviet_supports_armed_groups
+			has_civil_war = no
+		}
+		completion_reward = { 
+			country_event = Sinkiang.47
+			custom_effect_tooltip = after_the_rebellion_ended_tt
+			custom_effect_tooltip = a_new_leader_ship_tt
+			effect_tooltip = {
+				if = {
+					limit = {
+						has_idea = SIK_Surrport
+					}
+					remove_ideas = SIK_Surrport
+				}
+				if = {
+					limit = {
+						has_idea = SIK_Weakened_ussr_influence
+					}
+					remove_ideas = SIK_Weakened_ussr_influence
+				}
+				remove_ideas = SIK_Soviet_supports_armed_groups
+			}
+		}
+		bypass = {
+		}
+	}
+	focus = {
+		id = SIK_preemptive_purge
+		icon = GFX_focus_RAJ_indian_gurkhas
+		cost = 10.00
+		prerequisite = {
+			focus = SIK_Central_assignment
+		}
+		x = 23	
+		y = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			#has_country_leader = {
+			#	name = "Zhang Zhizhong"
+			#}
+			has_idea = SIK_Soviet_supports_armed_groups
+			has_civil_war = no
+		}
+		completion_reward = { 
+			country_event = Sinkiang.47
+			custom_effect_tooltip = after_the_rebellion_ended_tt
+			#custom_effect_tooltip = a_new_leader_ship_tt
+			effect_tooltip = {
+				if = {
+					limit = {
+						has_idea = SIK_Surrport
+					}
+					remove_ideas = SIK_Surrport
+				}
+				if = {
+					limit = {
+						has_idea = SIK_Weakened_ussr_influence
+					}
+					remove_ideas = SIK_Weakened_ussr_influence
+				}
+				remove_ideas = SIK_Soviet_supports_armed_groups
+			}
+			
+		}
+		bypass = {
+		}
+	}
+	focus = {
 		id = SIK_reception_CCP
-		icon = GFX_focus_generic_join_comintern
+		icon = GFX_focus_chi_cooperation_with_the_communists
 		cost = 10.00
 		prerequisite = {
 			focus = SIK_Befriend_SOV
@@ -1472,7 +1627,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = SIK_Refused_entry
 		}
-		x = 25
+		x = 27
 		y = 2
 		ai_will_do = {
 			factor = 1
@@ -1507,382 +1662,13 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SIK_Firm_allies
-		icon = GFX_goal_generic_alliance
+		id = SIK_Integration_communist_party
+		icon = GFX_focus_chi_one_china_policy
 		cost = 10.00
 		prerequisite = {
-			focus = SIK_reception_CCP
-		}
-		allow_branch = {
-			is_ai = yes
-		}
-		mutually_exclusive = {
-			focus = SIK_Join_the_comintern
-		}
-		x = 24
-		y = 4
-		completion_reward = {
-			PRC = {
-				country_event = {
-					id = Sinkiang.64
-					days = 1
-				}
-			}
-			custom_effect_tooltip = SIK_Firm_allies_tt
-		}
-		available = {
-			OR = {
-				AND = {
-					is_subject = no
-					has_government = communism
-					communism > 0.75
-				}
-				AND = {
-					is_subject_of = PRC
-				}
-			}
-			OR = {
-				is_neighbor_of = PRC
-				any_other_country = {
-					is_in_faction_with = SIK
-					is_neighbor_of = PRC
-				}
-			}
-			PRC = {
-				exists = yes
-				is_puppet = no
-				NOT = {
-					has_war_with = SIK
-				}
-			}
-		}
-	}
-	focus = {
-		id = SIK_Radical_approach
-		icon = GFX_focus_generic_support_the_left_right
-		cost = 10.00
-		prerequisite = {
-			focus = SIK_Knock_down_the_sheng
-		}
-		mutually_exclusive = {
-			focus = SIK_Mild_method
-		}
-		x = 24
-		y = 6
-		completion_reward = {
-			country_event = {
-				id = Sinkiang.25
-				
-			}
-		}
-		available = {
-			neutrality > 0.3
-			has_country_leader = {
-				name = "Sheng Shicai"
-			}
-		}
-	}
-	focus = {
-		id = SIK_Mediate_internal_conflicts
-		icon = GFX_goal_generic_demand_territory
-		cost = 10.00
-		prerequisite = {
-			focus = SIK_Sinkiang_King
-			focus = SIK_Mild_method
-			focus = SIK_Radical_approach
-			focus = SIK_Central_assignment
-		}
-		x = 21
-		y = 7
-		completion_reward = {
-			remove_ideas = SIK_Conflict_with_the_local_people
-		}
-		available = {
-			has_civil_war = no
-			has_country_flag = SIK_Sinkiang_stable_political_situation
-		}
-		bypass = {
-			OR = {
-				AND = {
-					has_country_leader = {
-						name = "Elihan Tore"
-					}
-					has_country_flag = SIK_Sinkiang_stable_political_situation
-				}
-				AND = {
-					has_country_leader = {
-						name = "Sheng Shicai"
-					}
-					has_country_flag = SIK_Sinkiang_stable_political_situation
-				}
-			}
-		}
-	}
-	focus = {
-		id = SIK_Mationality_alleviate_policy
-		icon = GFX_goal_generic_national_unity
-		cost = 10.00
-		prerequisite = {
-			focus = SIK_Mediate_internal_conflicts
-		}
-		x = 18
-		y = 8
-		completion_reward = {
-			add_ideas = SIK_Reduced_ethnic_conflicts
-		}
-		available = {
-			OR = {
-				has_country_leader = {
-					name = "Abdulkerim Abbas"
-				}
-				has_country_leader = {
-					name = "Ehmetjan Qasimi"
-				}
-			}
-		}
-	}
-	focus = {
-		id = SIK_Plunder_economy
-		icon = GFX_goal_generic_trade
-		cost = 10.00
-		prerequisite = {
-			focus = SIK_Mediate_internal_conflicts
-		}
-		x = 20
-		y = 8
-		completion_reward = {
-			add_ideas = SIK_Plundered_the_local_economy
-		}
-		available = {
-			has_country_leader = {
-				name = "Sheng Shicai"
-			}
-		}
-	}
-	focus = {
-		id = SIK_New_monetary_policy
-		icon = GFX_goal_generic_intelligence_exchange
-		cost = 10.00
-		prerequisite = {
-			focus = SIK_Mediate_internal_conflicts
-		}
-		x = 22
-		y = 8
-		completion_reward = {
-			if = {
-				limit = {
-					has_idea = SIK_New_currency
-				}
-				swap_ideas = {
-					remove_idea = SIK_New_currency
-					add_idea = SIK_Monetary_unification
-				}
-			}
-			if = {
-				limit = {
-					NOT = {
-						has_idea = SIK_New_currency
-					}
-				}
-				add_ideas = SIK_Monetary_unification
-			}
-		}
-		available = {
-			OR = {
-				has_government = neutrality
-				has_government = democratic
-			}
-			NOT = {
-				has_country_leader = {
-					name = "Sheng Shicai"
-				}
-			}
-		}
-	}
-	focus = {
-		id = SIK_Turkic_land
-		icon = GFX_goal_generic_military_deal
-		cost = 10.00
-		prerequisite = {
-			focus = SIK_Mediate_internal_conflicts
-		}
-		x = 24
-		y = 8
-		completion_reward = {
-			add_ideas = SIK_Turkic_land
-			add_opinion_modifier = {
-				target = CHI
-				modifier = hostile_status
-			}
-			CHI = {
-				add_opinion_modifier = {
-					target = SIK
-					modifier = hostile_status
-				}
-			}
-			add_opinion_modifier = {
-				target = XSM
-				modifier = hostile_status
-			}
-			XSM = {
-				add_opinion_modifier = {
-					target = SIK
-					modifier = hostile_status
-				}
-			}
-		}
-		available = {
-			has_country_leader = {
-				name = "Elihan Tore"
-			}
-			is_subject = no
-		}
-	}
-	focus = {
-		id = SIK_Turkicization
-		icon = GFX_goal_molotov_ribbentrop_pact
-		cost = 10.00
-		prerequisite = {
-			focus = SIK_Turkic_land
-		}
-		x = 24
-		y = 9
-		completion_reward = {
-			add_ideas = SIK_Extensive_turkicism
-			add_timed_idea = {
-				idea = SIK_Kicking_out_different_nation
-				days = 730
-			}
-			if = {
-				limit = {
-					CHI = {
-						exists = yes
-						is_puppet = no
-					}
-				}
-				CHI = {
-					if = {
-						limit = { country_exists = SIK }
-						diplomatic_relation = {
-							country = SIK
-							relation = guarantee
-							active = no
-						}
-						diplomatic_relation = {
-							country = SIK
-							relation = non_aggression_pact
-							active = no
-						}
-						add_ai_strategy = {
-							type = conquer
-							id = "SIK"
-							value = 200
-						}
-					}
-				}
-			}
-			if = {
-				limit = {
-					XSM = {
-						exists = yes
-						is_puppet = no
-					}
-				}
-				XSM = {
-					diplomatic_relation = {
-						country = SIK
-						relation = guarantee
-						active = no
-					}
-					diplomatic_relation = {
-						country = SIK
-						relation = non_aggression_pact
-						active = no
-					}
-					add_ai_strategy = {
-						type = conquer
-						id = "SIK"
-						value = 200
-					}
-				}
-			}
-			if = {
-				limit = {
-					XSM = {
-						exists = yes
-					}
-				}
-				SIK = {
-					add_ai_strategy = {
-						type = conquer
-						id = "XSM"
-						value = 200
-					}
-				}
-			}
-		}
-		available = {
-			has_country_leader = {
-				name = "Elihan Tore"
-			}
-			is_subject = no
-		}
-	}
-	focus = {
-		id = SIK_Refused_entry
-		icon = GFX_goal_anti_comintern_pact
-		cost = 10.00
-		prerequisite = {
-			focus = SIK_Befriend_SOV
-		}
-		mutually_exclusive = {
 			focus = SIK_reception_CCP
 		}
 		x = 27
-		y = 2
-		ai_will_do = {
-			factor = 2
-		}
-		#modifier = {
-			#factor = 0
-			#is_historical_focus_on = yes
-			#PRC = {
-				# exists = yes
-				# is_puppet = no
-				# has_government = communism
-				#}
-			#}
-		completion_reward = {
-			PRC = {
-				country_event = {
-					id = Sinkiang.4
-					days = 1
-				}
-			}
-		}
-		available = {
-			country_exists = PRC
-		}
-		bypass = {
-			OR = {
-				has_war_with = PRC
-				PRC = {
-					exists = no
-				}
-				PRC = {
-					is_puppet = yes
-				}
-			}
-		}
-	}
-	focus = {
-		id = SIK_Integration_communist_party
-		icon = GFX_goal_generic_war_with_comintern
-		cost = 10.00
-		prerequisite = {
-			focus = SIK_reception_CCP
-		}
-		x = 25
 		y = 3
 		completion_reward = {
 			PRC = {
@@ -1913,6 +1699,53 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = SIK_Refused_entry
+		icon = GFX_goal_anti_comintern_pact
+		cost = 10.00
+		prerequisite = {
+			focus = SIK_Befriend_SOV
+		}
+		mutually_exclusive = {
+			focus = SIK_reception_CCP
+		}
+		x = 29
+		y = 2
+		ai_will_do = {
+			factor = 2
+		}
+#modifier = {
+#factor = 0
+#is_historical_focus_on = yes
+#PRC = {
+# exists = yes
+# is_puppet = no
+# has_government = communism
+#}
+#}
+		completion_reward = {
+			PRC = {
+				country_event = {
+					id = Sinkiang.4
+					days = 1
+				}
+			}
+		}
+		available = {
+			country_exists = PRC
+		}
+		bypass = {
+			OR = {
+				has_war_with = PRC
+				PRC = {
+					exists = no
+				}
+				PRC = {
+					is_puppet = yes
+				}
+			}
+		}
+	}
+	focus = {
 		id = SIK_Join_the_comintern
 		icon = GFX_goal_support_communism
 		cost = 10.00
@@ -1920,10 +1753,7 @@ focus_tree = {
 			focus = SIK_Integration_communist_party
 			focus = SIK_Refused_entry
 		}
-		mutually_exclusive = {
-			focus = SIK_Firm_allies
-		}
-		x = 26
+		x = 28
 		y = 4
 		completion_reward = {
 			SOV = {
@@ -1974,46 +1804,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SIK_Join_soviet_union
-		icon = GFX_goal_generic_alliance
-		cost = 10.00
-		prerequisite = {
-			focus = SIK_Join_the_comintern
-		}
-		mutually_exclusive = {
-			focus = SIK_Join_soviet_science_team
-		}
-		x = 25
-		y = 7
-		completion_reward = {
-			SOV = {
-				country_event = {
-					id = Sinkiang.74
-					days = 1
-				}
-				change_tag_from = SIK
-			}
-
-			
-		}
-		available = {
-			SIK = {
-				is_subject_of = SOV
-			}
-		}
-	}
-	focus = {
 		id = SIK_Join_soviet_science_team
 		icon = GFX_goal_tfv_generic_tech_sharing
 		cost = 10.00
 		prerequisite = {
 			focus = SIK_Join_the_comintern
 		}
-		mutually_exclusive = {
-			focus = SIK_Join_soviet_union
-		}
-		x = 27
-		y = 7
+		x = 28
+		y = 5
 		completion_reward = {
 			SOV = {
 				add_to_tech_sharing_group = comintern_research
@@ -2026,13 +1824,213 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = SIK_Mediate_internal_conflicts
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 10.00
+		prerequisite = {
+			focus = SIK_preemptive_purge
+			focus = SIK_Sinkiang_King
+			focus = SIK_east_turkestan_council
+			focus = SIK_Join_soviet_science_team
+		}
+		x = 23
+		y = 6
+		completion_reward = {
+			country_event = {
+				id = Sinkiang.100
+			}
+			remove_ideas = SIK_Conflict_with_the_local_people
+		}
+		available = {
+			has_civil_war = no
+			OR = {
+				NOT = {
+					OR = {
+						has_idea = SIK_Surrport
+						has_idea = SIK_Weakened_ussr_influence
+						has_idea = SIK_Soviet_supports_armed_groups
+					}
+				}
+				is_in_faction_with = SOV
+			}
+			#NOT = {
+			#	has_global_flag = SIK_three_areas_revolution
+			#}
+		}
+		bypass = {
+			OR = {
+				AND = {
+					has_country_leader = {
+						name = "Elihan Tore"
+					}
+					has_country_flag = SIK_Sinkiang_stable_political_situation
+				}
+				AND = {
+					has_country_leader = {
+						name = "Sheng Shicai"
+					}
+					has_country_flag = SIK_Sinkiang_stable_political_situation
+				}
+			}
+		}
+	}
+	focus = {
+		id = SIK_Turkic_land
+		icon = GFX_goal_generic_military_deal
+		cost = 10.00
+		prerequisite = {
+			focus = SIK_Mediate_internal_conflicts
+		}
+		mutually_exclusive = {
+			focus = SIK_Mationality_alleviate_policy
+		}
+		x = 24
+		y = 7
+		completion_reward = {
+			add_ideas = SIK_Turkic_land
+			add_opinion_modifier = {
+				target = CHI
+				modifier = hostile_status
+			}
+			CHI = {
+				add_opinion_modifier = {
+					target = SIK
+					modifier = hostile_status
+				}
+			}
+			add_opinion_modifier = {
+				target = XSM
+				modifier = hostile_status
+			}
+			XSM = {
+				add_opinion_modifier = {
+					target = SIK
+					modifier = hostile_status
+				}
+			}
+		}
+		available = {
+			NOT = {
+				OR = {
+					has_country_leader = {
+						name = "Zhang Zhizhong"
+					}
+					has_country_leader = {
+						name = "Sheng Shicai"
+					}
+				}
+			}
+			is_subject = no
+		}
+	}
+	focus = {
+		id = SIK_Mationality_alleviate_policy
+		icon = GFX_goal_generic_national_unity
+		cost = 10.00
+		prerequisite = {
+			focus = SIK_Mediate_internal_conflicts
+		}
+		mutually_exclusive = {
+			focus = SIK_Turkic_land
+		}
+		x = 26
+		y = 7
+		completion_reward = {
+			add_ideas = SIK_Reduced_ethnic_conflicts
+		}
+		available = {
+			NOT = {
+				OR = {
+					has_country_leader = {
+						name = "Zhang Zhizhong"
+					}
+					has_country_leader = {
+						name = "Sheng Shicai"
+					}
+					has_government = fascism
+				}
+			}
+
+		}
+	}
+	focus = {
+		id = SIK_Popularize_revolution_in_xibei
+		icon = GFX_goal_continuous_stage_uprisings
+		cost = 10.00
+		prerequisite = {
+			focus = SIK_Mediate_internal_conflicts
+		}
+		prerequisite = {
+			focus = SIK_Join_soviet_science_team
+		}
+		x = 28
+		y = 7
+		completion_reward = {
+			XSM = {
+				add_popularity = {
+					ideology = communism
+					popularity = 0.15
+				}
+				add_timed_idea = {
+					idea = communist_influence
+					days = 365
+				}
+			}
+		}
+		available = {
+			XSM = {
+				exists = yes
+				NOT = {
+					has_war_with = SIK
+					is_in_faction_with = SIK
+					has_government = communism
+				}
+			}
+		}
+		bypass = {
+			XSM = {
+				is_subject_of = SIK
+			}
+		}
+	}
+	focus = {
+		id = SIK_Puppet_san_ma_focus
+		icon = GFX_goal_generic_political_pressure
+		cost = 10.00
+		prerequisite = {
+			focus = SIK_Popularize_revolution_in_xibei
+		}
+		x = 28
+		y = 8
+		completion_reward = {
+			XSM = {
+				country_event = {
+					id = Sinkiang.67
+					days = 1
+				}
+			}
+		}
+		available = {
+			XSM = {
+				exists = yes
+				communism > 0.4
+				NOT = {
+					has_war_with = SIK
+					is_in_faction_with = SIK
+					has_government = communism
+					is_subject_of = SIK
+				}
+			}
+		}
+	}
+	focus = {
 		id = SIK_Befriend_CHI
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_focus_chi_cooperation_with_the_nationalists
 		cost = 10.00
 		prerequisite = {
 			focus = SIK_Six_major_policies
 		}
-		x = 31
+		x = 33
 		y = 1
 		ai_will_do = {
 			factor = 5
@@ -2080,7 +2078,7 @@ focus_tree = {
 			focus = SIK_Vigilant_ma_clique
 			focus = SIK_Truce_with_san_ma
 		}
-		x = 29
+		x = 31
 		y = 2
 		ai_will_do = {
 			factor = 0
@@ -2105,24 +2103,24 @@ focus_tree = {
 				}
 			}
 		}
-		#if = {
-			# limit = {
-				#  country_exists = HMI
-				# }
-			# create_wargoal = {
-				#  type = annex_everything
-				#  target = HMI
-				# }
-			#}
-		#if = {
-			# limit = {
-				#  country_exists = TNG
-				# }
-			# create_wargoal = {
-				#  type = annex_everything
-				#  target = TNG
-				# }
-			#}
+#if = {
+# limit = {
+#  country_exists = HMI
+# }
+# create_wargoal = {
+#  type = annex_everything
+#  target = HMI
+# }
+#}
+#if = {
+# limit = {
+#  country_exists = TNG
+# }
+# create_wargoal = {
+#  type = annex_everything
+#  target = TNG
+# }
+#}
 		available = {
 			is_subject = no
 			OR = {
@@ -2139,13 +2137,13 @@ focus_tree = {
 	}
 	focus = {
 		id = SIK_The_western_revolution
-		icon = GFX_goal_generic_attack_allies
+		icon = GFX_focus_chi_proclaim_rival_government
 		cost = 10.00
 		prerequisite = {
 			focus = SIK_Preemptive
 			focus = SIK_Refused_entry
 		}
-		x = 29
+		x = 30
 		y = 3
 		ai_will_do = {
 			factor = 0
@@ -2177,7 +2175,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SIK_Vigilant_ma_clique
-		icon = GFX_focus_generic_coastal_fort
+		icon = GFX_focus_national_defense
 		cost = 10.00
 		prerequisite = {
 			focus = SIK_Befriend_CHI
@@ -2186,7 +2184,7 @@ focus_tree = {
 			focus = SIK_Preemptive
 			focus = SIK_Truce_with_san_ma
 		}
-		x = 31
+		x = 33
 		y = 2
 		ai_will_do = {
 			factor = 10
@@ -2206,7 +2204,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = SIK_Advancing_China
 		}
-		x = 30
+		x = 32
 		y = 4
 		completion_reward = {
 			CHI = {
@@ -2259,12 +2257,11 @@ focus_tree = {
 		prerequisite = {
 			focus = SIK_Accept_chinese_rule
 		}
-		x = 29
+		x = 31
 		y = 5
 		completion_reward = {
 			country_event = {
 				id = Sinkiang.35
-				
 			}
 		}
 		available = {
@@ -2279,32 +2276,6 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SIK_Isolated_sinkiang
-		icon = GFX_focus_generic_strike_at_democracy2
-		cost = 10.00
-		prerequisite = {
-			focus = SIK_Negotiate_with_nanjing
-		}
-		mutually_exclusive = {
-			focus = SIK_Looking_for_our_faction
-		}
-		x = 28
-		y = 6
-		ai_will_do = {
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		completion_reward = {
-			add_ideas = SIK_Focus_on_sinkiang
-		}
-		available = {
-			is_subject = no
-			is_in_faction = no
-		}
-	}
-	focus = {
 		id = SIK_Looking_for_our_faction
 		icon = GFX_goal_anschluss
 		cost = 10.00
@@ -2314,7 +2285,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = SIK_Isolated_sinkiang
 		}
-		x = 30
+		x = 32
 		y = 6
 		ai_will_do = {
 			modifier = {
@@ -2348,7 +2319,7 @@ focus_tree = {
 			focus = SIK_Preemptive
 			focus = SIK_Vigilant_ma_clique
 		}
-		x = 33
+		x = 35
 		y = 2
 		ai_will_do = {
 			factor = 1
@@ -2395,7 +2366,7 @@ focus_tree = {
 		prerequisite = {
 			focus = SIK_Truce_with_san_ma
 		}
-		x = 33
+		x = 35
 		y = 3
 		completion_reward = {
 			create_faction = "Xibei_joint_province"
@@ -2464,7 +2435,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SIK_Advancing_China
-		icon = GFX_focus_generic_support_the_left_right
+		icon = GFX_focus_chi_one_china_policy
 		cost = 10.00
 		prerequisite = {
 			focus = SIK_Cooperation_with_san_ma
@@ -2474,7 +2445,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = SIK_Accept_chinese_rule
 		}
-		x = 32
+		x = 34
 		y = 4
 		ai_will_do = {
 			modifier = {
@@ -2526,7 +2497,7 @@ focus_tree = {
 		prerequisite = {
 			focus = SIK_Cooperation_with_san_ma
 		}
-		x = 34
+		x = 36
 		y = 4
 		completion_reward = {
 			if = {
@@ -2582,7 +2553,7 @@ focus_tree = {
 		prerequisite = {
 			focus = SIK_Joint_mining_resource_plan
 		}
-		x = 33
+		x = 35
 		y = 5
 		completion_reward = {
 			if = {
@@ -2636,12 +2607,12 @@ focus_tree = {
 	}
 	focus = {
 		id = SIK_Sinkiang_Era
-		icon = GFX_goal_generic_forceful_treaty
+		icon = GFX_focus_MON_sinkiang_coup
 		cost = 10.00
 		prerequisite = {
 			focus = SIK_Advancing_China
 		}
-		x = 32
+		x = 34
 		y = 6
 		completion_reward = {
 			every_country = {
@@ -2707,7 +2678,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = SIK_Recognition_manchu_nationalities
 		}
-		x = 33
+		x = 35
 		y = 7
 		completion_reward = {
 			every_state = {
@@ -2720,7 +2691,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SIK_Recognition_manchu_nationalities
-		icon = GFX_goal_molotov_ribbentrop_pact
+		icon = GFX_goal_support_man
 		cost = 10.00
 		prerequisite = {
 			focus = SIK_Sinkiang_Era
@@ -2728,7 +2699,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = SIK_Recapture_the_northeast
 		}
-		x = 31
+		x = 33
 		y = 7
 		completion_reward = {
 			add_opinion_modifier = {
@@ -2773,7 +2744,7 @@ focus_tree = {
 		prerequisite = {
 			focus = SIK_Joint_mining_resource_plan
 		}
-		x = 35
+		x = 37
 		y = 5
 		completion_reward = {
 			if = {
@@ -2863,7 +2834,7 @@ focus_tree = {
 			focus = SIK_Drilling_for_oil
 			focus = SIK_Mining_mined
 		}
-		x = 34
+		x = 36
 		y = 6
 		completion_reward = {
 			every_other_country = {
@@ -2896,70 +2867,204 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SIK_Popularize_revolution_in_xibei
-		icon = GFX_goal_generic_national_unity
+		id = SIK_Plunder_economy
+		icon = GFX_goal_generic_trade
 		cost = 10.00
 		prerequisite = {
-			focus = SIK_Join_the_comintern
+			focus = SIK_Mediate_internal_conflicts
 		}
-		x = 26
-		y = 5
+		x = 20
+		y = 7
 		completion_reward = {
-			XSM = {
-				add_popularity = {
-					ideology = communism
-					popularity = 0.15
-				}
-				add_timed_idea = {
-					idea = communist_influence
-					days = 365
-				}
-			}
+			add_ideas = SIK_Plundered_the_local_economy
 		}
 		available = {
-			XSM = {
-				exists = yes
-				NOT = {
-					has_war_with = SIK
-					is_in_faction_with = SIK
-					has_government = communism
-				}
-			}
-		}
-		bypass = {
-			XSM = {
-				is_subject_of = SIK
+			has_country_leader = {
+				name = "Sheng Shicai"
 			}
 		}
 	}
 	focus = {
-		id = SIK_Puppet_san_ma_focus
-		icon = GFX_goal_generic_political_pressure
+		id = SIK_New_monetary_policy
+		icon = GFX_goal_generic_intelligence_exchange
 		cost = 10.00
 		prerequisite = {
-			focus = SIK_Popularize_revolution_in_xibei
+			focus = SIK_Mediate_internal_conflicts
 		}
-		x = 26
-		y = 6
+		x = 22
+		y = 7
 		completion_reward = {
-			XSM = {
-				country_event = {
-					id = Sinkiang.67
-					days = 1
+			if = {
+				limit = {
+					has_idea = SIK_New_currency
+				}
+				swap_ideas = {
+					remove_idea = SIK_New_currency
+					add_idea = SIK_Monetary_unification
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_idea = SIK_New_currency
+					}
+				}
+				add_ideas = SIK_Monetary_unification
+			}
+		}
+		available = {
+			has_country_leader = {
+				name = "Zhang Zhizhong"
+			}
+		}
+	}
+	focus = {
+		id = SIK_Turkicization
+		icon = GFX_goal_molotov_ribbentrop_pact
+		cost = 10.00
+		prerequisite = {
+			focus = SIK_Turkic_land
+		}
+		x = 24
+		y = 8
+		completion_reward = {
+			add_ideas = SIK_Extensive_turkicism
+			add_timed_idea = {
+				idea = SIK_Kicking_out_different_nation
+				days = 730
+			}
+			if = {
+				limit = {
+					CHI = {
+						exists = yes
+						is_puppet = no
+					}
+				}
+				CHI = {
+					if = {
+						limit = {
+							country_exists = SIK
+						}
+						diplomatic_relation = {
+							country = SIK
+							relation = guarantee
+							active = no
+						}
+						diplomatic_relation = {
+							country = SIK
+							relation = non_aggression_pact
+							active = no
+						}
+						add_ai_strategy = {
+							type = conquer
+							id = "SIK"
+							value = 200
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					XSM = {
+						exists = yes
+						is_puppet = no
+					}
+				}
+				XSM = {
+					diplomatic_relation = {
+						country = SIK
+						relation = guarantee
+						active = no
+					}
+					diplomatic_relation = {
+						country = SIK
+						relation = non_aggression_pact
+						active = no
+					}
+					add_ai_strategy = {
+						type = conquer
+						id = "SIK"
+						value = 200
+					}
+				}
+			}
+			if = {
+				limit = {
+					XSM = {
+						exists = yes
+					}
+				}
+				SIK = {
+					add_ai_strategy = {
+						type = conquer
+						id = "XSM"
+						value = 200
+					}
 				}
 			}
 		}
 		available = {
-			XSM = {
-				exists = yes
-				communism > 0.4
-				NOT = {
-					has_war_with = SIK
-					is_in_faction_with = SIK
-					has_government = communism
-					is_subject_of = SIK
+			NOT = {
+				OR = {
+					has_country_leader = {
+						name = "Zhang Zhizhong"
+					}
+					has_country_leader = {
+						name = "Sheng Shicai"
+					}
 				}
 			}
+			is_subject = no
+		}
+	}
+	focus = {
+		id = SIK_Join_soviet_union
+		icon = GFX_goal_befriend_soviet
+		cost = 10.00
+		prerequisite = {
+			focus = SIK_Puppet_san_ma_focus
+		}
+		x = 28
+		y = 9
+		completion_reward = {
+			SOV = {
+				country_event = {
+					id = Sinkiang.74
+					days = 1
+				}
+				change_tag_from = SIK
+			}
+		}
+		available = {
+			SIK = {
+				is_subject_of = SOV
+			}
+		}
+	}
+	focus = {
+		id = SIK_Isolated_sinkiang
+		icon = GFX_goal_generic_fortify_city
+		cost = 10.00
+		prerequisite = {
+			focus = SIK_Negotiate_with_nanjing
+		}
+		mutually_exclusive = {
+			focus = SIK_Looking_for_our_faction
+		}
+		x = 30
+		y = 6
+		ai_will_do = {
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		completion_reward = {
+			add_ideas = SIK_Focus_on_sinkiang
+		}
+		available = {
+			is_subject = no
+			is_in_faction = no
 		}
 	}
 	focus = {
@@ -2970,10 +3075,10 @@ focus_tree = {
 			focus = SIK_Recognition_manchu_nationalities
 			focus = SIK_Recapture_the_northeast
 		}
-		x = 32
+		x = 34
 		y = 8
 		completion_reward = {
-			#set_cosmetic_tag = CBG
+#set_cosmetic_tag = CBG
 			custom_effect_tooltip = SIK_Establish_government_tt
 			if = {
 				limit = {
@@ -3019,6 +3124,14 @@ focus_tree = {
 		}
 		available = {
 			OR = {
+				has_country_leader = {
+					name = "Zhang Zhizhong"
+				}
+				has_country_leader = {
+					name = "Sheng Shicai"
+				}
+			}
+			OR = {
 				controls_state = 605
 				controls_state = 608
 				controls_state = 613
@@ -3033,7 +3146,7 @@ focus_tree = {
 			focus = SIK_Plunder_economy
 		}
 		x = 20
-		y = 9
+		y = 8
 		completion_reward = {
 			add_ideas = SIK_Trade_in_xinjiang_smuggling
 		}
@@ -3051,7 +3164,7 @@ focus_tree = {
 			focus = SIK_Weapons_smuggling
 		}
 		x = 20
-		y = 10
+		y = 9
 		completion_reward = {
 			if = {
 				limit = {
@@ -3085,20 +3198,14 @@ focus_tree = {
 			focus = SIK_New_monetary_policy
 		}
 		x = 22
-		y = 9
+		y = 8
 		completion_reward = {
 			add_ideas = SIK_Stable_politics
 			add_political_power = 100
 		}
 		available = {
-			OR = {
-				has_government = neutrality
-				has_government = democratic
-			}
-			NOT = {
-				has_country_leader = {
-					name = "Sheng Shicai"
-				}
+			has_country_leader = {
+				name = "Zhang Zhizhong"
 			}
 		}
 	}
@@ -3110,19 +3217,13 @@ focus_tree = {
 			focus = SIK_Stable_political_situation
 		}
 		x = 22
-		y = 10
+		y = 9
 		completion_reward = {
 			add_ideas = SIK_Repression_guerrillas
 		}
 		available = {
-			OR = {
-				has_government = neutrality
-				has_government = democratic
-			}
-			NOT = {
-				has_country_leader = {
-					name = "Sheng Shicai"
-				}
+			has_country_leader = {
+				name = "Zhang Zhizhong"
 			}
 		}
 	}
@@ -3133,55 +3234,61 @@ focus_tree = {
 		prerequisite = {
 			focus = SIK_Mationality_alleviate_policy
 		}
-		x = 18
-		y = 9
+		x = 26
+		y = 8
 		completion_reward = {
 			add_ideas = SIK_Malpractice_reform
 		}
 		available = {
-			OR = {
-				has_country_leader = {
-					name = "Abdulkerim Abbas"
-				}
-				has_country_leader = {
-					name = "Ehmetjan Qasimi"
+			NOT = {
+				OR = {
+					has_country_leader = {
+						name = "Zhang Zhizhong"
+					}
+					has_country_leader = {
+						name = "Sheng Shicai"
+					}
+					has_government = fascism
 				}
 			}
 		}
 	}
 	focus = {
 		id = SIK_Coalition_government
-		icon = GFX_focus_generic_soviet_politics
+		icon = GFX_goal_generic_national_unity
 		cost = 10.00
 		prerequisite = {
 			focus = SIK_Malpractice_reform
 		}
-		x = 18
-		y = 10
+		x = 26
+		y = 9
 		completion_reward = {
 			add_ideas = SIK_Sinkiang_coalition_government
 			add_political_power = 100
 		}
 		available = {
-			OR = {
-				has_country_leader = {
-					name = "Abdulkerim Abbas"
-				}
-				has_country_leader = {
-					name = "Ehmetjan Qasimi"
+			NOT = {
+				OR = {
+					has_country_leader = {
+						name = "Zhang Zhizhong"
+					}
+					has_country_leader = {
+						name = "Sheng Shicai"
+					}
+					has_government = fascism
 				}
 			}
 		}
 	}
 	focus = {
 		id = SIK_Turks_in_Central_Asia
-		icon = GFX_goal_generic_occupy_states_ongoing_war
+		icon = GFX_focus_RAJ_indian_gentlemen_offcers
 		cost = 10.00
 		prerequisite = {
 			focus = SIK_Turkicization
 		}
 		x = 24
-		y = 10
+		y = 9
 		completion_reward = {
 			add_ideas = SIK_Turkic_compatriots
 			if = {
@@ -3200,20 +3307,27 @@ focus_tree = {
 			}
 		}
 		available = {
-			has_country_leader = {
-				name = "Elihan Tore"
+			NOT = {
+				OR = {
+					has_country_leader = {
+						name = "Zhang Zhizhong"
+					}
+					has_country_leader = {
+						name = "Sheng Shicai"
+					}
+				}
 			}
 			is_subject = no
 		}
 	}
 	focus = {
 		id = SIK_Join_anti_Japanese_front
-		icon = GFX_goal_generic_position_armies
+		icon = GFX_focus_last_ditch
 		cost = 10.00
 		prerequisite = {
 			focus = SIK_Befriend_CHI
 		}
-		x = 35
+		x = 37
 		y = 2
 		completion_reward = {
 			CHI = {

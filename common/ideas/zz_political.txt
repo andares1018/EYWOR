@@ -16,6 +16,7 @@ ideas = {
 					}
 					has_completed_focus = NZL_the_lee_affair
 				}
+				
 			}
 			traits = { communist_revolutionary }
 			on_add = {
@@ -48,6 +49,16 @@ ideas = {
 						has_completed_focus = NZL_constitution_amendment_act
 					}
 				}
+				if = {
+					limit = {
+						original_tag = SIK
+					}
+					NOT = {
+						has_country_leader = {
+							name = "Sheng Shicai"
+						}
+					}
+				}
 			}
 			traits = { democratic_reformer }
 			on_add = {
@@ -77,6 +88,16 @@ ideas = {
 					}
 					has_completed_focus = NZL_in_the_darkness
 				}
+				if = {
+					limit = {
+						original_tag = SIK
+					}
+					NOT = {
+						has_country_leader = {
+							name = "Sheng Shicai"
+						}
+					}
+				}
 			}
 			traits = { fascist_demagogue }
 			on_add = {
@@ -97,6 +118,18 @@ ideas = {
 				NOT = { OR = { tag = CHI tag = JAP } }
 				NOT = {
 					has_available_idea_with_traits = { idea = socialist_idealist limit = 1 }
+				}
+			}
+			available = {
+				if = {
+					limit = {
+						original_tag = SIK
+					}
+					NOT = {
+						has_country_leader = {
+							name = "Sheng Shicai"
+						}
+					}
 				}
 			}
 			traits = { socialist_idealist }

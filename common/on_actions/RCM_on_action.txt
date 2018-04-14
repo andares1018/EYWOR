@@ -607,13 +607,28 @@ on_actions = {
 		}
 	}
 	on_startup = {
-		effect = {
+		effect = { #can't use history, cause build_ic_cost doesn't work there
+			CHI = {
+				if = {
+					limit = {
+						date > 1937.1.1
+					}
+					add_ideas = {
+						incompetent_heavy_industry
+						iliterate_population
+						no_proper_equipment_design
+					}
+				}
+			}
 			every_country = {
 				limit = {
 					OR = {
 						is_warlord = yes
 						tag = PRC
-						tag = CHI
+						AND = {
+							tag = CHI
+							date < 1937.1.1
+						}
 					}
 				}
 				add_ideas = {
@@ -627,7 +642,16 @@ on_actions = {
 				add_ideas = {
 					the_blueshirts
 					central_club
-					CHI_nanking_decade_idea
+				}
+			}
+			if = {
+				limit = {
+					date < 1937.1.1
+				}
+				CHI = {
+					add_ideas = {
+						CHI_nanking_decade_idea
+					}
 				}
 			}
 			every_country = {

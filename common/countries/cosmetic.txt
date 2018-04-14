@@ -22,6 +22,10 @@ FIC_FRA = {
 	color = rgb { 57 113 228 }
 	color_ui = rgb { 74 147 255 }
 }
+SIK_KMT = {
+	color = rgb { 255 231 91 }
+	color_ui = rgb { 255 231 91 }
+}
 ####
 PLM_SUI = {
 	color = rgb { 112  32  45 }

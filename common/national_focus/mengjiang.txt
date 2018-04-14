@@ -1996,12 +1996,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = MEN_independence_war_tt
 			hidden_effect = {
-				random_other_country = {
-					limit = {
-						has_war = no
-						is_puppet = no
-					}
-					puppet = ECA
+				JAP = {
 					end_puppet = ECA
 				}
 				declare_war_on = {

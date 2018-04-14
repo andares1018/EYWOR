@@ -1,0 +1,37 @@
+﻿division_template = {
+	name = "Guerrillas"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+	}
+}
+
+units = {
+
+	division = {
+		name = "1 Ili Force"
+		location = 7866
+		division_template = "Guerrillas"
+	}
+	division = {
+		name = "2 Ili Force"
+		location = 7866
+		division_template = "Guerrillas"
+	}
+	division = {
+		name = "3 Ili Force"
+		location = 12601
+		division_template = "Guerrillas"
+	}
+	division = {
+		name = "4 Ili Force"
+		location = 12601
+		division_template = "Guerrillas"
+	}
+	division = {
+		name = "5 Ili Force"
+		location = 7850
+		division_template = "Guerrillas"
+	}
+}

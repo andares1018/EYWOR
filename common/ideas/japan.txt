@@ -122,7 +122,7 @@ ideas = {
 				conscription = 0.02
 				ai_join_ally_desire_factor = -10000
 				join_faction_tension = 3.0
-				#ai_get_ally_desire_factor = -10000
+				ai_get_ally_desire_factor = -10000
 			}
 		}
 		JAP_military_is_the_government_idea = {
@@ -146,7 +146,7 @@ ideas = {
 				army_org_factor = -0.05
 				research_time_factor = 0.01
 				ai_join_ally_desire_factor = -10000
-				#ai_get_ally_desire_factor = -10000
+				ai_get_ally_desire_factor = -10000
 			}
 		}
 		JAP_military_outweighs_the_government_idea = {
@@ -170,7 +170,7 @@ ideas = {
 				army_org_factor = -0.15
 				research_time_factor = 0.025
 				ai_join_ally_desire_factor = -10000
-				#ai_get_ally_desire_factor = -10000
+				ai_get_ally_desire_factor = -10000
 			}
 		}
 		JAP_military_outweighs_the_government_idea_good = {
@@ -194,7 +194,7 @@ ideas = {
 				army_org_factor = -0.10
 				research_time_factor = 0.01
 				ai_join_ally_desire_factor = -10000
-				#ai_get_ally_desire_factor = -10000
+				ai_get_ally_desire_factor = -10000
 			}
 		}
 		JAP_military_outweighs_the_government_idea_bad = {
@@ -218,7 +218,7 @@ ideas = {
 				army_org_factor = -0.20
 				research_time_factor = 0.03
 				ai_join_ally_desire_factor = -10000
-				#ai_get_ally_desire_factor = -10000
+				ai_get_ally_desire_factor = -10000
 			}
 		}
 		JAP_expansionist_propaganda = {

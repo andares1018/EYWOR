@@ -605,3 +605,56 @@ natchi_war_production = {
 		value = 9999
 	}
 }
+sino_sov_friend = {
+	enable = {
+		tag = CHI
+		has_war_with = JAP
+		NOT = {
+			has_war_with = SOV
+		}
+	}
+	abort = {
+		OR = {
+			has_war_with = SOV
+			NOT = {
+				has_war_with = JAP
+			}
+		}
+	}
+	ai_strategy = {
+		type = befriend
+		id = "SOV"
+		value = 80
+	}
+}
+diplo_effort_CHI = {
+	enable = {
+		tag = CHI
+		has_idea = CHI_diplomatic_effort_idea
+	}
+	abort = {
+		NOT = {
+			has_idea = CHI_diplomatic_effort_idea
+		}
+	}
+	ai_strategy = {
+		type = befriend
+		id = "ENG"
+		value = 60
+	}
+	ai_strategy = {
+		type = befriend
+		id = "SOV"
+		value = 60
+	}
+	ai_strategy = {
+		type = befriend
+		id = "GER"
+		value = 60
+	}
+	ai_strategy = {
+		type = befriend
+		id = "USA"
+		value = 60
+	}
+}

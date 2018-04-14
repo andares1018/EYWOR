@@ -233,8 +233,8 @@ country_event = {
 			}
 			remove_unit_leader = 2897
 		}
-		set_party_name = { ideology = communism long_name = SIK_Xinjiang_defend_peace_and_democracy_alliance name = SIK_Xinjiang_defend_peace_and_democracy_alliance }
-		set_party_name = { ideology = fascism long_name = SIK_Yining_Liberation_Organization name = SIK_Yining_Liberation_Organization }
+		set_party_name = { ideology = communism name = SIK_Xinjiang_defend_peace_and_democracy_alliance long_name = SIK_Xinjiang_defend_peace_and_democracy_alliance_long }
+		set_party_name = { ideology = fascism long_name = SIK_Yining_Liberation_Organization_long name = SIK_Yining_Liberation_Organization }
 		set_party_name = { ideology = neutrality long_name = SIK_China_nationalist_party name = SIK_Kuomintang }
 		set_party_name = { ideology = democratic long_name = SIK_Democratic_alliance name = SIK_Democratic_alliance }
 		remove_ideas = SIK_Autocracy
@@ -290,7 +290,7 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = Sinkiang.14.a
-		set_party_name = { ideology = fascism long_name = SIK_Yining_Liberation_Organization name = SIK_Yining_Liberation_Organization }
+		set_party_name = { ideology = fascism long_name = SIK_Yining_Liberation_Organization_long name = SIK_Yining_Liberation_Organization }
 		create_country_leader = {
 			name = "Ospan Batyr"
 			desc = "POLITICS_OSPAN_BATYR_DESC"
@@ -409,16 +409,16 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
-		ai_chance = { factor = 95 }
+		ai_chance = { factor = 100 }
 		name = Sinkiang.16.a
 		FROM = {
 			country_event = { id = Sinkiang.17 days = 1 }
 		}
 	}
-	option = {
-		ai_chance = { factor = 5 }
-		name = Sinkiang.16.b
-	}
+	#option = {
+	#	ai_chance = { factor = 0 }
+	#	name = Sinkiang.16.b
+	#}
 }
 country_event = {
 	id = Sinkiang.17
@@ -724,8 +724,8 @@ country_event = {
 			}
 			remove_unit_leader = 2897
 		}
-		set_party_name = { ideology = communism long_name = SIK_Xinjiang_defend_peace_and_democracy_alliance name = SIK_Xinjiang_defend_peace_and_democracy_alliance }
-		set_party_name = { ideology = fascism long_name = SIK_Yining_Liberation_Organization name = SIK_Yining_Liberation_Organization }
+		set_party_name = { ideology = communism name = SIK_Xinjiang_defend_peace_and_democracy_alliance long_name = SIK_Xinjiang_defend_peace_and_democracy_alliance_long }
+		set_party_name = { ideology = fascism long_name = SIK_Yining_Liberation_Organization_long name = SIK_Yining_Liberation_Organization }
 		set_party_name = { ideology = neutrality long_name = SIK_China_nationalist_party name = SIK_Kuomintang }
 		set_party_name = { ideology = democratic long_name = SIK_Democratic_alliance name = SIK_Democratic_alliance }
 		remove_ideas = SIK_Autocracy
@@ -815,8 +815,8 @@ country_event = {
 			ideology = neutrality
 			popularity = 0.1
 		}
-		set_party_name = { ideology = communism long_name = SIK_Xinjiang_defend_peace_and_democracy_alliance name = SIK_Xinjiang_defend_peace_and_democracy_alliance }
-		set_party_name = { ideology = fascism long_name = SIK_Yining_Liberation_Organization name = SIK_Yining_Liberation_Organization }
+		set_party_name = { ideology = communism name = SIK_Xinjiang_defend_peace_and_democracy_alliance long_name = SIK_Xinjiang_defend_peace_and_democracy_alliance_long }
+		set_party_name = { ideology = fascism long_name = SIK_Yining_Liberation_Organization_long name = SIK_Yining_Liberation_Organization }
 		set_party_name = { ideology = neutrality long_name = SIK_China_nationalist_party name = SIK_Kuomintang }
 		set_party_name = { ideology = democratic long_name = SIK_Democratic_alliance name = SIK_Democratic_alliance }
 		remove_ideas = SIK_Autocracy
@@ -941,8 +941,8 @@ country_event = {
 				popularity = 0.1
 			}
 		}
-		set_party_name = { ideology = communism long_name = SIK_Xinjiang_defend_peace_and_democracy_alliance name = SIK_Xinjiang_defend_peace_and_democracy_alliance }
-		set_party_name = { ideology = fascism long_name = SIK_Yining_Liberation_Organization name = SIK_Yining_Liberation_Organization }
+		set_party_name = { ideology = communism name = SIK_Xinjiang_defend_peace_and_democracy_alliance long_name = SIK_Xinjiang_defend_peace_and_democracy_alliance_long }
+		set_party_name = { ideology = fascism long_name = SIK_Yining_Liberation_Organization_long name = SIK_Yining_Liberation_Organization }
 		set_party_name = { ideology = neutrality long_name = SIK_China_nationalist_party name = SIK_Kuomintang }
 		set_party_name = { ideology = democratic long_name = SIK_Democratic_alliance name = SIK_Democratic_alliance }
 		remove_ideas = SIK_Autocracy
@@ -1228,7 +1228,8 @@ country_event = {
 			ideology = despotism
 			traits = {  }
 		}
-		set_global_flag = SIK_The_sinkiang_crisis
+		set_cosmetic_tag = SIK_KMT
+		#set_global_flag = SIK_The_sinkiang_crisis
 		hidden_effect = {
 			news_event = { hours = 6 id = news.1035 }
 		}
@@ -1241,26 +1242,21 @@ country_event = {
 	desc = Sinkiang.47.d
 	picture = GFX_report_event_three_areas_revolution_2
 	
-	fire_only_once = yes
-	mean_time_to_happen = {
-		days = 90
-	}
-	
-	trigger = {
-		tag = SIK
-		has_global_flag = SIK_The_sinkiang_crisis
-		has_civil_war = no
-	}
+	#fire_only_once = yes
+	is_triggered_only = yes
 	
 	option = {
+		trigger = {
+			has_completed_focus = SIK_Central_assignment
+		}
 		ai_chance = { factor = 30 }
 		name = Sinkiang.47.a
 		start_civil_war = {
 			ruling_party = neutrality
 			ideology = fascism
 			size = 0.5
-			capital = 752
-			states = { 752 }
+			capital = 797
+			states = { 797 619 287 801 795 759 }
 		}
 		hidden_effect = {
 			random_other_country = {
@@ -1366,17 +1362,20 @@ country_event = {
 		}
 	}
 	option = {
-		ai_chance = { factor = 70 }
+		#ai_chance = { factor = 70 }
+		trigger = {
+			has_completed_focus = SIK_Knock_down_the_sheng
+		}
 		name = Sinkiang.47.b
 		hidden_effect = {
-			set_capital = 752
+			set_capital = 796
 		}
 		start_civil_war = {
 			ruling_party = fascism
 			ideology = neutrality
 			size = 0.5
 			capital = 617
-			states = { 287 617 618 619 751 753 754 796 797 798 799 800 801 }
+			states = { 617 618 758 796 798 799 800 }
 		}
 		hidden_effect = {
 			random_other_country = {
@@ -1497,14 +1496,14 @@ country_event = {
 			original_tag = SIK
 			tag = SIK
 		}
-		owns_state = 752
+		owns_state = 796
 		has_global_flag = SIK_three_areas_revolution
 	}
 	option = {
 		name = Sinkiang.48.a
 		ROOT = {
-			transfer_state = 754
-			hidden_effect = { load_oob = ETR_Guerrillas_754 }
+			transfer_state = 796
+			hidden_effect = { load_oob = ETR_Guerrillas_796 }
 		}
 	}
 }
@@ -1527,10 +1526,8 @@ country_event = {
 	option = {
 		name = Sinkiang.49.a
 		ROOT = {
-			transfer_state = 618
-			transfer_state = 798
 			transfer_state = 799
-			hidden_effect = { load_oob = ETR_Guerrillas_618 }
+			hidden_effect = { load_oob = ETR_Guerrillas_799 }
 		}
 	}
 }
@@ -1557,9 +1554,16 @@ country_event = {
 	option = {
 		ai_chance = { factor = 90 }
 		name = Sinkiang.50.a
-		every_other_country = {
+		random_other_country = {
 			limit = {
-				owns_state = 617
+				OR = {
+					has_country_leader = {
+						name = "Zhang Zhizhong"
+					}
+					has_country_leader = {
+						name = "Sheng Shicai"
+					}
+				}
 			}
 			country_event = { id = Sinkiang.51 days = 10 }
 			country_event = { id = Sinkiang.52 days = 20 }
@@ -2550,12 +2554,12 @@ country_event = {
 		}
 		set_party_name = {
 			ideology = communism
-			long_name = SIK_Xinjiang_defend_peace_and_democracy_alliance
+			long_name = SIK_Xinjiang_defend_peace_and_democracy_alliance_long
 			name = SIK_Xinjiang_defend_peace_and_democracy_alliance
 		}
 		set_party_name = {
 			ideology = fascism
-			long_name = SIK_Yining_Liberation_Organization
+			long_name = SIK_Yining_Liberation_Organization_long
 			name = SIK_Yining_Liberation_Organization
 		}
 		set_party_name = {
@@ -2626,19 +2630,19 @@ country_event = {
 	desc = Sinkiang.100.d
 	picture = GFX_report_event_generic_research_lab
 	fire_only_once = yes
-	
-	trigger = {
-		tag = SIK
-		has_civil_war = no
-		NOT = {
-			has_idea = SIK_Surrport
-			has_idea = SIK_Weakened_ussr_influence
-			has_idea = SIK_Soviet_supports_armed_groups
-		}
-		NOT = {
-			has_global_flag = SIK_three_areas_revolution
-		}
-	}
+	is_triggered_only = yes
+	#trigger = {
+	#	tag = SIK
+	#	has_civil_war = no
+	#	NOT = {
+	#		has_idea = SIK_Surrport
+	#		has_idea = SIK_Weakened_ussr_influence
+	#		has_idea = SIK_Soviet_supports_armed_groups
+	#	}
+	#	NOT = {
+	#		has_global_flag = SIK_three_areas_revolution
+	#	}
+	#}
 	
 	mean_time_to_happen = {
 		days = 10
@@ -2646,7 +2650,7 @@ country_event = {
 	
 	option = {
 		name = Sinkiang.100.a
-		set_country_flag = SIK_Sinkiang_stable_political_situation
+		add_stability = 0.1
 	}
 }
 # Win the civil war (Government)
@@ -2863,8 +2867,11 @@ country_event = {
 				remove_unit_leader = 2895
 			}
 		}
-		hidden_effect = {
-			news_event = { hours = 6 id = news.1039 }
+		#hidden_effect = {
+		#	news_event = { hours = 6 id = news.1039 }
+		#}
+		country_event = {
+			days = 2 id = Sinkiang.104
 		}
 		set_global_flag = SIK_Eastern_turkistan
 	}
@@ -2876,47 +2883,40 @@ country_event = {
 	desc = Sinkiang.104.d
 	picture = GFX_report_event_generic_conference
 	fire_only_once = yes
-	
-	trigger = {
-		OR = {
-			original_tag = SIK
-			tag = SIK
-		}
-		has_global_flag = SIK_Eastern_turkistan
-	}
+	is_triggered_only = yes
 	
 	immediate = {
 		hidden_effect = {
 			SIK = {
-				set_party_name = { ideology = communism long_name = ETR_Turkistan_communist_party name = ETR_Turkistan_communist_party }
-				set_party_name = { ideology = fascism long_name = ETR_Turkestan_First_Party name = ETR_Turkestan_First_Party }
-				set_party_name = { ideology = neutrality long_name = ETR_Turkestan_nationalist_party name = ETR_Turkestan_nationalist_party }
-				set_party_name = { ideology = democratic long_name = ETR_Turkestan_Democratic_alliance name = ETR_Turkestan_Democratic_alliance }
+				set_party_name = { ideology = communism long_name = ETR_Turkestan_communist_party_long name = ETR_Turkestan_communist_party }
+				set_party_name = { ideology = fascism long_name = ETR_Turkestan_First_Party_long name = ETR_Turkestan_First_Party }
+				set_party_name = { ideology = neutrality long_name = ETR_Turkestan_nationalist_party_long name = ETR_Turkestan_nationalist_party }
+				set_party_name = { ideology = democratic long_name = ETR_Turkestan_Democratic_alliance_long name = ETR_Turkestan_Democratic_alliance }
 			}
 			SIK = {
 				create_country_leader = {
-					name = "Eastern Turkistan Council"
+					name = "East Turkestan Council"
 					picture = "Portrait_Eastern_turkistan_council.dds"
 					expire = "1965.1.1"
 					ideology = conservatism
 					traits = { }
 				}
 				create_country_leader = {
-					name = "Eastern Turkistan Council"
+					name = "East Turkestan Council"
 					picture = "Portrait_Eastern_turkistan_council.dds"
 					expire = "1965.1.1"
 					ideology = rexism
 					traits = { }
 				}
 				create_country_leader = {
-					name = "Eastern Turkistan Council"
+					name = "East Turkestan Council"
 					picture = "Portrait_Eastern_turkistan_council.dds"
 					expire = "1965.1.1"
 					ideology = centrism
 					traits = { }
 				}
 				create_country_leader = {
-					name = "Eastern Turkistan Council"
+					name = "East Turkestan Council"
 					picture = "Portrait_Eastern_turkistan_council.dds"
 					expire = "1965.1.1"
 					ideology = leninism
@@ -2995,6 +2995,7 @@ country_event = {
 		}
 	}
 }
+
 # China and Eastern turkistan
 country_event = {
 	id = Sinkiang.105

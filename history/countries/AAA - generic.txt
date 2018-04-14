@@ -193,6 +193,7 @@ every_country = {
 every_country = {
 	limit = {
 		NOT = {
+			tag = FIC
 			tag = JAP
 			OR = {
 				has_government = democratic
@@ -204,7 +205,7 @@ every_country = {
 		parties = {
 			n_socialism = {
 				popularity = 0
-				banned = yes
+				banned = no
 			}
 		}
 	}
