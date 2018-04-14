@@ -2430,7 +2430,7 @@ unit_731_cat = {
 	}
 }
 political_actions = {
-	PLM_political_effort = {
+	PLM_political_effort_decision = {
 		icon = generic_political_discourse
 	     fire_only_once = yes
 	     days_remove = 20 # Stays for 5 days before being removed

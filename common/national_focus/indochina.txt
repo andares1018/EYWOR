@@ -846,7 +846,7 @@ focus_tree = {
 		has_country_leader = { ruling_only = yes name = "Jean Decoux" }
 		has_government = fascism
 		}
-		x = 25
+		x = 24
 		y = 5
 
 	}

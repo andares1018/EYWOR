@@ -116,6 +116,12 @@
  FIC_youth_organisations_desc:0 "-"
  FIC_indigenous_civil_servants:0 "Indigenous Civil Servants"
  FIC_indigenous_civil_servants_desc:0 "-"
+ FIC_ship_blueprint:0 "Ship Blueprints"
+ FIC_ship_blueprint_desc:0 "-"
+ FIC_tank_blueprint:0 "Tank Blueprints"
+ FIC_tank_blueprint_desc:0 "-"
+ FIC_aircraft_blueprint:0 "Aircraft Blueprints"
+ FIC_aircraft_blueprint_desc:0 "-"
  
  ###PARTIES###
  
@@ -199,3 +205,5 @@
  FIC_georges_catroux_theo:0 "Georges Catroux"
  FIC_michel_boudier_theo:0 "Michel Boudier"
  FIC_jean_decoux_theo:0 "Jean Decoux"
+
+
