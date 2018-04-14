@@ -8,9 +8,17 @@ JAP_bribe_the_tokko = {
     allowed = {
         tag = JAP
     }
-  	
+
     visible = {
     }
 }
+unit_731_cat = {
+    icon = ger_mefo_bills
+    picture = GFX_decision_cat_generic_tokko
+    allowed = {
+        tag = MAN
+    }
 
-
+    visible = {
+    }
+}

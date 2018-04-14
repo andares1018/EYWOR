@@ -4256,6 +4256,12 @@ country_event = {
 			factor = 100
 		}
 		set_country_flag = im_warlord_now
+		if = {
+			limit = {
+				has_dlc = "Waking the Tiger"
+			}
+			load_focus = china_warlord_focus
+		}
 		create_country_leader = {
 			name = "Fu Zuoyi"
 			desc = "POLITICS_FU_ZUOYI_DESC"

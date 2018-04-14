@@ -5,6 +5,9 @@ focus_tree = {
 		modifier = {
 			add = 10
 			tag = PLM
+			NOT = {
+				has_dlc = "Waking the Tiger"
+			}
 		}
 	}
 	default = no
