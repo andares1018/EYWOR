@@ -86,6 +86,8 @@
  ##############
  PLM_political_effort:0 "Suiyuan Mongol Political Commitee"
  PLM_political_effort_desc:0 "Now the treanous faction within the Council has fled, it's time to reorganize the Council into something that's more stable, and most importantly, something that works."
+ PLM_political_effort_decision:0 "Suiyuan Mongol Political Commitee"
+ PLM_political_effort_decision_desc:0 "Now the treanous faction within the Council has fled, it's time to reorganize the Council into something that's more stable, and most importantly, something that works."
  ###TOOLTIP
  suiyuan_MPC_rename_tt:0 "§YPailingmiao Council§! will be renamed §YSuiyuan Mongol Political Commitee§!.\n"
  SHX_CLQ_rename_tt:0 "Our §Ycountry name§! will be renamed §YShanxi Clique§!.\n"

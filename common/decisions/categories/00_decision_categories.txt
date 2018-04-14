@@ -13,7 +13,7 @@ SAF_anti_colonialist_crusade = {
 }
 
 war_measures = {
-	icon = generic_propaganda
+	icon = category_generic_propaganda
 
 	visible = {
 		has_war = yes

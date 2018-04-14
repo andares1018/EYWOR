@@ -2074,7 +2074,7 @@ RCM_communist_infiltration = {
 
 			}
 			custom_effect_tooltip = communist_partisan_effect_tt
-			
+
 		}
 		cancel_trigger = { #will abort
 
@@ -2173,10 +2173,10 @@ RCM_communist_infiltration = {
 				}
 			}
 			custom_effect_tooltip = communist_partisan_effect_tt
-			
+
 		}
 		cancel_trigger = { #will abort
-  
+
 		}
 		modifier = { #active during the course of the decision
 			political_power_gain = -0.25
@@ -2210,7 +2210,7 @@ RCM_communist_infiltration = {
 		}
 		complete_effect = { #run effect on selection
 
-		} 
+		}
 		remove_trigger = { #will run remove effect and abort
 
 		}
@@ -2343,4 +2343,113 @@ JAP_bribe_the_tokko = {
 
         }
     }
+}
+
+unit_731_cat = {
+	men_sun_remove_expose = {
+	     icon = generic_break_treaty
+
+	     fire_only_once = yes
+	     days_remove = 20 # Stays for 5 days before being removed
+	    # days_re_enable = 5 # Will show up in the interface and can be selected again after 5 days
+	     cost = 200
+	     highlight_states = { #These states will be highlighted
+
+	     }
+	     visible = { #can see
+	          has_idea = men_behind_the_sun
+			hidden_trigger = {
+				NOT = {
+	 		    		has_country_flag = mutually_exclusive_a
+	 	    		}
+			}
+	     }
+	     available = { #can do
+			has_stability > 0.7
+	     }
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = mutually_exclusive_b
+			}
+		}
+	     remove_effect = { #run effect when removed/finished
+			remove_ideas = men_behind_the_sun
+			add_stability = -0.1
+			add_war_support = 0.1
+	     }
+	     cancel_trigger = { #will abort
+
+	     }
+	     modifier = { #active during the course of the decision
+
+	     }
+	     ai_will_do = {
+	          factor = 1
+	     }
+	}
+	men_sun_remove_cover_up = {
+	     icon = generic_political_discourse
+	     fire_only_once = yes
+	     days_remove = 50 # Stays for 5 days before being removed
+	     #days_re_enable = 5 # Will show up in the interface and can be selected again after 5 days
+	     cost = 50
+	     highlight_states = { #These states will be highlighted
+
+	     }
+
+	     visible = { #can see
+	          has_idea = men_behind_the_sun
+			hidden_trigger = {
+				NOT = {
+	 		    		has_country_flag = mutually_exclusive_b
+	 	    		}
+			}
+	     }
+	     available = { #can do
+			#has_stability > 0.7
+	     }
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = mutually_exclusive_a
+			}
+		}
+	     remove_effect = { #run effect when removed/finished
+			remove_ideas = men_behind_the_sun
+			add_stability = 0.1
+			add_war_support = -0.1
+	     }
+	     cancel_trigger = { #will abort
+
+	     }
+	     modifier = { #active during the course of the decision
+
+	     }
+	     ai_will_do = {
+	          factor = 100
+	     }
+	}
+}
+political_actions = {
+	PLM_political_effort = {
+		icon = generic_political_discourse
+	     fire_only_once = yes
+	     days_remove = 20 # Stays for 5 days before being removed
+	     #days_re_enable = 5 # Will show up in the interface and can be selected again after 5 days
+	     cost = 50
+		available = {
+			has_global_flag = de_wang_defect_flag
+		}
+		visible = {
+			tag = PLM
+			has_dlc = "Waking the Tiger"
+		}
+		remove_effect = {
+			add_political_power = 120
+			SHX = {
+				country_event = {
+					days = 1 id = rcmchina.322
+				}
+			}
+		}
+	}
 }
