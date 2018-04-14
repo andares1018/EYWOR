@@ -26,6 +26,14 @@ SIK_KMT = {
 	color = rgb { 255 231 91 }
 	color_ui = rgb { 255 231 91 }
 }
+RSK = {
+	color = rgb { 71 190 152 }
+	color_ui = rgb { 222 247 198 }
+}
+ETR = {
+	color = rgb { 71 190 152 }
+	color_ui = rgb { 222 247 198 }
+}
 ####
 PLM_SUI = {
 	color = rgb { 112  32  45 }
