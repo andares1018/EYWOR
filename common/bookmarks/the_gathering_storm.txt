@@ -299,7 +299,7 @@ bookmarks = {
 		}
 		"ECA"={
 			minor = yes
-			history = "WARLORDS_BLITZKRIEG_DESC"
+			history = "WARLORDS_GATHERING_STORM_DESC"
 			ideology = fascism
 			ideas = {
 				MON_nomadic
@@ -361,7 +361,7 @@ bookmarks = {
 		
 		"HMI"={
 			minor = yes
-			history = "WARLORDS_BLITZKRIEG_DESC"
+			history = "WARLORDS_GATHERING_STORM_DESC"
 			ideology = neutrality
 			ideas = {
 				CHI_long_term_economic_planning
@@ -377,7 +377,7 @@ bookmarks = {
 		
 		"TNG"={
 			minor = yes
-			history = "WARLORDS_BLITZKRIEG_DESC"
+			history = "WARLORDS_GATHERING_STORM_DESC"
 			ideology = neutrality
 			ideas = {
 				CHI_long_term_economic_planning
@@ -393,7 +393,7 @@ bookmarks = {
 		
 		"SHX"={
 			minor = yes
-			history = "WARLORDS_BLITZKRIEG_DESC"
+			history = "WARLORDS_GATHERING_STORM_DESC"
 			ideology = neutrality
 			ideas = {
 				CHI_long_term_economic_planning
@@ -407,9 +407,24 @@ bookmarks = {
 			}
 		}
 		
+		"PLM"={
+			minor = yes
+			history = "PLM_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				CHI_long_term_economic_planning
+				CHI_public_works
+				CHI_embrace_the_opium_trade
+			}
+			focuses = {
+				CHI_join_the_republican_government
+				CHI_power_struggle
+				CHI_heavy_weapons_development
+			}
+		}
 		"YUN"={
 			minor = yes
-			history = "WARLORDS_BLITZKRIEG_DESC"
+			history = "WARLORDS_GATHERING_STORM_DESC"
 			ideology = neutrality
 			ideas = {
 				CHI_long_term_economic_planning
@@ -425,7 +440,7 @@ bookmarks = {
 		
 		"GXC"={
 			minor = yes
-			history = "WARLORDS_BLITZKRIEG_DESC"
+			history = "WARLORDS_GATHERING_STORM_DESC"
 			ideology = neutrality
 			ideas = {
 				CHI_long_term_economic_planning
@@ -441,7 +456,7 @@ bookmarks = {
 		
 		"GUD"={
 			minor = yes
-			history = "WARLORDS_BLITZKRIEG_DESC"
+			history = "WARLORDS_GATHERING_STORM_DESC"
 			ideology = neutrality
 			ideas = {
 				CHI_long_term_economic_planning
@@ -457,7 +472,7 @@ bookmarks = {
 		
 		"XSM"={
 			minor = yes
-			history = "WARLORDS_BLITZKRIEG_DESC"
+			history = "WARLORDS_GATHERING_STORM_DESC"
 			ideology = neutrality
 			ideas = {
 				CHI_long_term_economic_planning
@@ -473,7 +488,7 @@ bookmarks = {
 		
 		"NXM"={
 			minor = yes
-			history = "WARLORDS_BLITZKRIEG_DESC"
+			history = "WARLORDS_GATHERING_STORM_DESC"
 			ideology = neutrality
 			ideas = {
 				CHI_long_term_economic_planning
@@ -489,7 +504,7 @@ bookmarks = {
 		
 		"SIC"={
 			minor = yes
-			history = "WARLORDS_BLITZKRIEG_DESC"
+			history = "WARLORDS_GATHERING_STORM_DESC"
 			ideology = neutrality
 			ideas = {
 				CHI_long_term_economic_planning
@@ -505,7 +520,7 @@ bookmarks = {
 		
 		"XIK"={
 			minor = yes
-			history = "WARLORDS_BLITZKRIEG_DESC"
+			history = "WARLORDS_GATHERING_STORM_DESC"
 			ideology = neutrality
 			ideas = {
 				CHI_long_term_economic_planning
@@ -521,7 +536,7 @@ bookmarks = {
 		
 		"HPC"={
 			minor = yes
-			history = "WARLORDS_BLITZKRIEG_DESC"
+			history = "WARLORDS_GATHERING_STORM_DESC"
 			ideology = neutrality
 			ideas = {
 				CHI_long_term_economic_planning
@@ -537,7 +552,7 @@ bookmarks = {
 		
 		"SHD"={
 			minor = yes
-			history = "WARLORDS_BLITZKRIEG_DESC"
+			history = "WARLORDS_GATHERING_STORM_DESC"
 			ideology = neutrality
 			ideas = {
 				CHI_long_term_economic_planning
@@ -553,7 +568,7 @@ bookmarks = {
 		
 		"NEA"={
 			minor = yes
-			history = "WARLORDS_BLITZKRIEG_DESC"
+			history = "WARLORDS_GATHERING_STORM_DESC"
 			ideology = neutrality
 			ideas = {
 				CHI_long_term_economic_planning

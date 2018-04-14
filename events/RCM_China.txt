@@ -30,8 +30,8 @@ country_event = {
 		}
 	}
 	#mean_time_to_happen = {
-	#	days = 15
-	#}
+		#	days = 15
+		#}
 	option = {
 		name = rcmchina.112.a
 		ai_chance = { factor = 100 }
@@ -439,8 +439,8 @@ country_event = {
 				is_subject_of = CHI
 				is_warlord = yes
 				OR = {
-				has_autonomy_state = autonomy_dominion
-				has_autonomy_state = autonomy_puppet
+					has_autonomy_state = autonomy_dominion
+					has_autonomy_state = autonomy_puppet
 				}
 			}
 			end_puppet = PREV
@@ -702,10 +702,10 @@ country_event = {
 			}
 			every_country = {
 				limit = {
-                    is_in_faction_with = CHI
+					is_in_faction_with = CHI
 					capital_scope = { is_on_continent = asia }
-                    NOT = { tag = CHI }
-                }
+					NOT = { tag = CHI }
+				}
 				if = {
 					limit = { CHI = { is_faction_leader = yes } }
 					white_peace = SOV
@@ -725,31 +725,31 @@ country_event = {
 					}
 				}
 
-            }
+			}
 			every_country = {
 				limit = {
-                    is_in_faction_with = SOV
-                    NOT = { tag = SOV }
-                }
+					is_in_faction_with = SOV
+					NOT = { tag = SOV }
+				}
 				white_peace = CHI
-            }
+			}
 			every_country = {
 				limit = {
-                   has_country_flag = peace_sov_@ROOT
-                }
+					has_country_flag = peace_sov_@ROOT
+				}
 				add_to_faction = CHI
-            }
+			}
 			if = {
 				limit = {
-				country_exists = MON
-				MON = { is_in_faction_with = SOV }
+					country_exists = MON
+					MON = { is_in_faction_with = SOV }
 				}
 				annex_country = { target = MON transfer_troops = yes }
 			}
 			if = {
 				limit = {
-				country_exists = SIK
-				SIK = { is_in_faction_with = SOV }
+					country_exists = SIK
+					SIK = { is_in_faction_with = SOV }
 				}
 				annex_country = { target = SIK transfer_troops = yes }
 			}
@@ -801,8 +801,8 @@ country_event = {
 					limit = {
 						AND = {
 							OR = {
-							is_owned_by = SOV
-							is_owned_by = PRC
+								is_owned_by = SOV
+								is_owned_by = PRC
 							}
 							OR = {
 								is_controlled_by = CHI
@@ -831,40 +831,40 @@ country_event = {
 				add_opinion_modifier = { target = CHI modifier = liberator }
 				if = {
 					limit =  { CHI = { has_government = democratic }
-				}
-				set_politics = {
-					ruling_party = democratic
-					elections_allowed = yes
+					}
+					set_politics = {
+						ruling_party = democratic
+						elections_allowed = yes
 					}
 				}
 				if = {
 					limit =  { CHI = { has_government = communism }
-				}
-				set_politics = {
-					ruling_party = communism
-					elections_allowed = no
+					}
+					set_politics = {
+						ruling_party = communism
+						elections_allowed = no
 					}
 				}
 				if = {
 					limit =  { CHI = { has_government = fascism }
-				}
-				set_politics = {
-					ruling_party = fascism
-					elections_allowed = no
+					}
+					set_politics = {
+						ruling_party = fascism
+						elections_allowed = no
 					}
 				}
 				if = {
 					limit =  { CHI = { has_government = neutrality }
-				}
-				set_politics = {
-					ruling_party = neutrality
-					elections_allowed = no
+					}
+					set_politics = {
+						ruling_party = neutrality
+						elections_allowed = no
 					}
 				}
 				CHI = {
 					puppet = MON
 				}
- 			}
+			}
 			CHI = {
 				white_peace = SOV
 				white_peace = PRC
@@ -876,15 +876,15 @@ country_event = {
 			if = {
 				limit = { country_exists = PRC }
 				CHI = {
-				annex_country = { target = PRC }
+					annex_country = { target = PRC }
 				}
 			}
 			every_country = {
 				limit = {
-                    is_in_faction_with = CHI
+					is_in_faction_with = CHI
 					capital_scope = { is_on_continent = asia }
-                    NOT = { tag = CHI }
-                }
+					NOT = { tag = CHI }
+				}
 				if = {
 					limit = { CHI = { is_faction_leader = yes } }
 					white_peace = SOV
@@ -904,24 +904,24 @@ country_event = {
 					}
 				}
 
-            }
+			}
 			every_country = {
 				limit = {
-                    is_in_faction_with = SOV
-                    NOT = { tag = SOV }
-                }
+					is_in_faction_with = SOV
+					NOT = { tag = SOV }
+				}
 				white_peace = CHI
-            }
+			}
 			every_country = {
 				limit = {
-                   has_country_flag = peace_sov_@ROOT
-                }
+					has_country_flag = peace_sov_@ROOT
+				}
 				add_to_faction = CHI
-            }
+			}
 			if = {
 				limit = {
-				country_exists = SIK
-				SIK = { is_in_faction_with = SOV }
+					country_exists = SIK
+					SIK = { is_in_faction_with = SOV }
 				}
 				annex_country = { target = SIK transfer_troops = no }
 			}
@@ -957,8 +957,8 @@ country_event = {
 					limit = {
 						AND = {
 							OR = {
-							is_owned_by = SOV
-							is_owned_by = PRC
+								is_owned_by = SOV
+								is_owned_by = PRC
 							}
 							OR = {
 								is_controlled_by = CHI
@@ -1006,15 +1006,15 @@ country_event = {
 			if = {
 				limit = { country_exists = PRC }
 				CHI = {
-				annex_country = { target = PRC }
+					annex_country = { target = PRC }
 				}
 			}
 			every_country = {
 				limit = {
-                    is_in_faction_with = CHI
+					is_in_faction_with = CHI
 					capital_scope = { is_on_continent = asia }
-                    NOT = { tag = CHI }
-                }
+					NOT = { tag = CHI }
+				}
 				if = {
 					limit = { CHI = { is_faction_leader = yes } }
 					white_peace = SOV
@@ -1034,27 +1034,27 @@ country_event = {
 					}
 				}
 
-            }
+			}
 			every_country = {
 				limit = {
-                    is_in_faction_with = SOV
-                    NOT = { tag = SOV }
-                }
+					is_in_faction_with = SOV
+					NOT = { tag = SOV }
+				}
 				white_peace = CHI
-            }
+			}
 			every_country = {
 				limit = {
-                   has_country_flag = peace_sov_@ROOT
-                }
+					has_country_flag = peace_sov_@ROOT
+				}
 				add_to_faction = CHI
-            }
+			}
 
 			every_state = {
 				limit = {
 					AND = {
 						OR = {
-						is_owned_by = SOV
-						is_owned_by = PRC
+							is_owned_by = SOV
+							is_owned_by = PRC
 						}
 						OR = {
 							is_controlled_by = CHI
@@ -1270,7 +1270,7 @@ country_event = {
 						original_tag = XSM
 					}
 				}
-			XSM = { transfer_state = 793 }
+				XSM = { transfer_state = 793 }
 			}
 			if = {
 				limit = {
@@ -1929,9 +1929,9 @@ country_event = {
 		FROM = {
 			country_event = { days = 2 id = rcmchina.255 }
 			#add_relation_modifier = {
-			#	target = GER
-			#	modifier = CHI_license_axis_equipment
-			#}
+				#	target = GER
+				#	modifier = CHI_license_axis_equipment
+				#}
 			add_offsite_building = { type = industrial_complex level = 1 }
 			add_offsite_building = { type = arms_factory level = 1 }
 			if = {
@@ -1941,9 +1941,9 @@ country_event = {
 					}
 				}
 				#add_relation_modifier = {
-				#	target = ITA
-				#	modifier = CHI_license_axis_equipment
-				#}
+					#	target = ITA
+					#	modifier = CHI_license_axis_equipment
+					#}
 
 			}
 			add_tech_bonus = {
@@ -1984,9 +1984,9 @@ country_event = {
 		ai_chance = { factor = 100 }
 		effect_tooltip = {
 			#add_relation_modifier = {
-			#	target = GER
-			#	modifier = CHI_license_axis_equipment
-			#}
+				#	target = GER
+				#	modifier = CHI_license_axis_equipment
+				#}
 			add_offsite_building = { type = industrial_complex level = 1 }
 			add_offsite_building = { type = arms_factory level = 1 }
 			if = {
@@ -1996,9 +1996,9 @@ country_event = {
 					}
 				}
 				#add_relation_modifier = {
-				#	target = ITA
-				#	modifier = CHI_license_axis_equipment
-				#}
+					#	target = ITA
+					#	modifier = CHI_license_axis_equipment
+					#}
 			}
 			add_tech_bonus = {
 				name = infantry_equipment_ger
@@ -2053,9 +2053,9 @@ country_event = {
 		FROM = {
 			country_event = { days = 2  id = rcmchina.258 }
 			#add_relation_modifier = {
-			#	target = SOV
-			#	modifier = CHI_license_comintern_equipment
-			#}
+				#	target = SOV
+				#	modifier = CHI_license_comintern_equipment
+				#}
 			add_offsite_building = { type = industrial_complex level = 1 }
 			add_offsite_building = { type = arms_factory level = 1 }
 			add_tech_bonus = {
@@ -2102,9 +2102,9 @@ country_event = {
 		ai_chance = { factor = 100 }
 		effect_tooltip = {
 			#add_relation_modifier = {
-			#	target = SOV
-			#	modifier = CHI_license_comintern_equipment
-			#}
+				#	target = SOV
+				#	modifier = CHI_license_comintern_equipment
+				#}
 			add_offsite_building = { type = industrial_complex level = 1 }
 			add_offsite_building = { type = arms_factory level = 1 }
 			add_tech_bonus = {
@@ -2157,9 +2157,9 @@ country_event = {
 		FROM = {
 			country_event = { days = 2 id = rcmchina.261 }
 			#add_relation_modifier = {
-			#	target = ENG
-			#	modifier = CHI_license_allies_equipment
-			#}
+				#	target = ENG
+				#	modifier = CHI_license_allies_equipment
+				#}
 			add_offsite_building = { type = industrial_complex level = 1 }
 			add_offsite_building = { type = arms_factory level = 1 }
 			if = {
@@ -2169,9 +2169,9 @@ country_event = {
 					}
 				}
 				#add_relation_modifier = {
-				#	target = FRA
-				#	modifier = CHI_license_allies_equipment
-				#}
+					#	target = FRA
+					#	modifier = CHI_license_allies_equipment
+					#}
 			}
 			add_tech_bonus = {
 				name = dd_bonus
@@ -2218,9 +2218,9 @@ country_event = {
 		effect_tooltip = {
 			ENG = {
 				#add_relation_modifier = {
-				#	target = ENG
-				#	modifier = CHI_license_allies_equipment
-				#}
+					#	target = ENG
+					#	modifier = CHI_license_allies_equipment
+					#}
 				add_offsite_building = { type = industrial_complex level = 1 }
 				add_offsite_building = { type = arms_factory level = 1 }
 				if = {
@@ -2230,9 +2230,9 @@ country_event = {
 						}
 					}
 					#add_relation_modifier = {
-					#	target = FRA
-					#	modifier = CHI_license_allies_equipment
-					#}
+						#	target = FRA
+						#	modifier = CHI_license_allies_equipment
+						#}
 				}
 			}
 			add_tech_bonus = {
@@ -5640,14 +5640,14 @@ country_event = {
 }
 #AntiJApdisband
 country_event = {
-     id = rcmchina.359
-     title = rcmchina.359.t
-     desc = rcmchina.359.d
-     picture = GFX_report_event_chinese_soldiers_02
-     hidden = no
-     trigger = {
+	id = rcmchina.359
+	title = rcmchina.359.t
+	desc = rcmchina.359.d
+	picture = GFX_report_event_chinese_soldiers_02
+	hidden = no
+	trigger = {
 		has_global_flag = northwest_united
-          OR = {
+		OR = {
 			NOT = {
 				country_exists = NEA
 			}
@@ -5660,18 +5660,48 @@ country_event = {
 		NOT = {
 			tag = event_target:WTT_current_china_leader
 		}
-     }
-     is_triggered_only = no
-     fire_only_once = no
-     immediate = {
+	}
+	is_triggered_only = no
+	fire_only_once = no
+	immediate = {
 
-     }
-     mean_time_to_happen = {
-          days = 0
-     }
+	}
+	mean_time_to_happen = {
+		days = 0
+	}
 
-     option = {
-          name = rcmchina.359.a
-	    	dismantle_faction = yes
-     }
+	option = {
+		name = rcmchina.359.a
+		dismantle_faction = yes
+	}
+}
+
+#proclaim as china
+country_event = {
+	id = rcmchina.360
+	title = rcmchina.360.t
+	desc = rcmchina.360.d
+	picture = GFX_report_event_chinese_soldiers_02
+	hidden = no
+	is_triggered_only = yes
+	fire_only_once = no
+	immediate = {
+
+	}
+	mean_time_to_happen = {
+		days = 0
+	}
+
+	option = {
+		name = rcmchina.360.a
+		dismantle_faction = yes
+		set_cosmetic_tag = CHI_second_republic
+		add_war_support = 0.05
+		add_stability = 0.05
+	}
+	option = {
+		name = rcmchina.360.b
+		dismantle_faction = yes
+		add_political_power = 50
+	}
 }

@@ -1,0 +1,72 @@
+﻿###########################
+# Chinese Events BORDER WARS ADDED SOUTHERN SHAANXI #ID = 743#
+###########################
+
+add_namespace = rcmgeneric
+
+# test on annex
+#seek peace
+country_event = {
+	id = rcmgeneric.1
+	picture = GFX_report_event_test
+	title = rcmgeneric.1.t
+	desc = rcmgeneric.1.d
+	is_triggered_only = yes
+	immediate = {
+		
+	}
+	is_triggered_only = yes
+	option = { 
+		name = rcmgeneric.1.a
+		ai_chance = {
+			factor = 100
+		}
+		FROM = {
+			country_event = rcmgeneric.2
+		}
+		white_peace = FROM
+	}
+	option = { 
+		name = rcmgeneric.1.b
+		ai_chance = {
+			factor = 0
+		}
+		FROM = {
+			country_event = rcmgeneric.3
+		}
+	}
+}
+#accepted
+country_event = {
+	id = rcmgeneric.2
+	picture = GFX_report_event_test
+	title = rcmgeneric.2.t
+	desc = rcmgeneric.2.d
+	is_triggered_only = yes
+	immediate = {
+		
+	}
+	is_triggered_only = yes
+	option = { 
+		name = rcmgeneric.2.a
+		effect_tooltip = {
+			white_peace = FROM
+		}
+	}
+}
+#refused
+country_event = {
+	id = rcmgeneric.3
+	picture = GFX_report_event_test
+	title = rcmgeneric.3.t
+	desc = rcmgeneric.3.d
+	is_triggered_only = yes
+	immediate = {
+		
+	}
+	is_triggered_only = yes
+	option = { 
+		name = rcmgeneric.3.a
+		
+	}
+}

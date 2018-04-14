@@ -2429,7 +2429,7 @@ unit_731_cat = {
 	     }
 	}
 }
-political_actions = {
+PLM_political_effort_decision_cat = {
 	PLM_political_effort_decision = {
 		icon = generic_political_discourse
 	     fire_only_once = yes
@@ -2450,6 +2450,48 @@ political_actions = {
 					days = 1 id = rcmchina.322
 				}
 			}
+			custom_effect_tooltip = if_approved_tt
+			effect_tooltip = {
+				load_focus_tree = warlord_generic_nationalist
+			}
 		}
+	}
+}
+MAN_CHI_peace = {
+	MAN_CHI_peace_decision = {
+	     icon = generic_political_discourse
+	     fire_only_once = yes
+	     days_remove = 5 # Stays for 5 days before being removed
+	     days_re_enable = 5 # Will show up in the interface and can be selected again after 5 days
+	     cost = 25
+	     target_trigger = { #FROM is target
+	          FROM = {
+	               tag = event_target:WTT_current_china_leader
+	          }
+	     }
+	     war_with_target_on_remove = no #will give warning (not yet tested)
+	     highlight_states = { #These states will be highlighted
+
+	     }
+	     visible = { #can see
+	          tag = MAN
+			has_war_with = JAP
+			has_war_with = CHI
+	     }
+	     available = { #can do
+			tag = MAN
+			has_war_with = JAP
+			has_war_with = CHI
+	     }
+	     complete_effect = { #run effect on selection
+	          FROM = {
+				country_event = rcmgeneric.1
+			}
+	     }
+
+
+	     ai_will_do = {
+	          factor = 100
+	     }
 	}
 }

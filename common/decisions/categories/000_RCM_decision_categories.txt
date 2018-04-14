@@ -18,7 +18,13 @@ unit_731_cat = {
     allowed = {
         tag = MAN
     }
-
     visible = {
+
     }
+}
+PLM_political_effort_decision_cat = {
+
+}
+MAN_CHI_peace = {
+
 }

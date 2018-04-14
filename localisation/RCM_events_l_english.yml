@@ -416,3 +416,16 @@
  rcmpolitical.41.t:0 "Socialist Movement Goes Silent"
  rcmpolitical.41.d:0 "After a few months of loud opposition against [Root.GetLeader]'s regime, calling for social reforms and more liberal laws on minimum wage and corporate regulations, the movement seems to have fallen apart. People now express more concern about the stability of [Root.GetName] if such reforms were to take place, with those who clamor for socialism being seen more as troublemakers than everything else.\n\nMore mysteriously, many of the leading figures of the movement appear to have gone missing or stopped their work suddenly. Perhaps some of them chose to go into exile when they saw the failure of their efforts. Regardless, the [Root.GetRulingParty] government denies all knowledge and involvement."
  rcmpolitical.41.a:0 "What a bunch of utopian eggheads."
+ #########
+ #GENERIC#
+ #########
+ rcmgeneric.1.t:0 "[From.GetName] Seeks Peace with Us"
+ rcmgeneric.1.d:0 "After months of warfare and battle, for one reason or another, [From.GetName] has decided to seek peace with us. What measures should we take in response?"
+ rcmgeneric.1.a:0 "Sure."
+ rcmgeneric.1.b:0 "No! We shall fight!"
+ rcmgeneric.2.t:0 "[From.GetName] Accepted our Request"
+ rcmgeneric.2.d:0 "[From.GetName] has accepted our request to reach a peace deal. This is a great diplomatic development for our country!"
+ rcmgeneric.2.a:0 "Excellent!"
+ rcmgeneric.3.t:0 "[From.GetName] Refused our Request"
+ rcmgeneric.3.d:0 "[From.GetName] has refused our good will for reaching a preace agreement. Those goons will pay for their foolish decision. We'll fight until the end."
+ rcmgeneric.3.a:0 "Damn them!"
