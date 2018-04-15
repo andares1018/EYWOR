@@ -2548,16 +2548,18 @@ focus_tree = {
 				threat = 1
 				name = southern_expansion
 			}
-			JAP = {
-				add_opinion_modifier = {
-					target = FIC
-					modifier = embargo
-				}
-			}
-			create_wargoal = {
-				type = puppet_wargoal_focus
-				target = FIC
-			}
+			#JAP = {
+			#	add_opinion_modifier = {
+			#		target = FIC
+			#		modifier = embargo
+			#	}
+			#}
+			#create_wargoal = {
+			#	type = puppet_wargoal_focus
+			#	target = FIC
+			#}
+			
+			FIC = { country_event = rcmindochina.13 }
 
 			hidden_effect = {
 				news_event = {

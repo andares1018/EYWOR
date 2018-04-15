@@ -305,3 +305,68 @@ country_event = {
 		add_political_power = -25
 	}
 }
+
+#JAP demand bases
+country_event = {
+	id = rcmindochina.13
+	title = rcmindochina.13.t
+	desc = rcmindochina.13.d
+	picture = GFX_idk
+	is_triggered_only = yes
+	
+	option = {
+		name = rcmindochina.13.a #accept
+		ai_chance = {
+			factor = 45
+			modifier = {
+			factor = 1000
+			has_government = fascism
+			}
+			modifier = {
+			factor = 0
+			has_government = democratic
+			}
+		}
+		JAP = { add_to_faction = ROOT }
+		if = { limit = { NOT = { has_idea = FIC_friendly_invasion } } add_ideas = FIC_friendly_invasion }
+	}
+	
+	option = {
+		name = rcmindochina.13.b #refuse
+		ai_chance = {
+			factor = 55
+			modifier = {
+			factor = 1000
+			has_government = democratic
+			}
+			modifier = {
+			factor = 0
+			has_government = fascism
+			}
+		}
+		JAP = { country_event = rcmindochina.14 }
+	}
+}
+
+#FIC refuses
+country_event = {
+	id = rcmindochina.14
+	title = rcmindochina.14.t
+	desc = rcmindochina.14.d
+	picture = GFX_idk
+	is_triggered_only = yes
+	
+	option = {
+		name = rcmindochina.14.a #ok
+		JAP = {
+			add_opinion_modifier = {
+				target = FIC
+				modifier = embargo
+			}
+		}
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = FIC
+		}
+	}
+}
