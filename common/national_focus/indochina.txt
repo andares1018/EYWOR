@@ -56,6 +56,9 @@ focus_tree = {
 		cost = 10.00
 		x = 20
 		y = 0
+		ai_will_do = {
+		factor = 10
+		}
 		available = {
 			has_idea = FIC_strikes
 			NOT = {
@@ -986,6 +989,10 @@ focus_tree = {
 		}
 		x = 4
 		y = 4
+		
+		available = {
+		num_of_factories > 5
+		}
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = FIC_iliterate_population_1
