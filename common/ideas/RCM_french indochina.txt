@@ -370,6 +370,22 @@ ideas = {
 			}
 		}
 		
+		fic_repression_2 = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_spy_coup
+
+			modifier = {
+			drift_defence_factor = 0.2
+			stability_factor = 0.05
+			political_power_gain = 0.1
+			}
+		}
+		
 		fic_better_working_conditions = {
 			allowed = {
 				always = no
@@ -514,6 +530,50 @@ ideas = {
 			partisan_effect = 0.25
 			army_core_attack_factor = 0.1
 			army_core_defence_factor = 0.1
+			}
+		}
+			
+		fic_local_patriotisms = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = FRA_scw_intervention_nationalists_focus
+				
+			modifier = {
+			political_power_gain = 0.05
+			war_support_factor = 0.05
+			partisan_effect = 0.05
+			}
+		}
+		
+		fic_organize_youth = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = chi_army_corruption2
+				
+			modifier = {
+			conscription = 0.01
+			}
+		}
+		
+		fic_ind_servants = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = generic_disjointed_gov
+				
+			modifier = {
+			consumer_goods_factor = -0.03
+			political_power_gain = 0.1
+			stability_factor = 0.05
+			conscription_factor = 0.05
 			}
 		}
 		

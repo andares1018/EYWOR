@@ -123,6 +123,10 @@
  FIC_aircraft_blueprint:0 "Aircraft Blueprints"
  FIC_aircraft_blueprint_desc:0 "-"
  
+ ###TOOLTIPS###
+ 
+ fic_sen_brigades:0 "You will get two Senegalese Brigades"
+ 
  ###PARTIES###
  
  FIC_neutrality_party:0 "Colonial Administration"
@@ -171,9 +175,10 @@
  FIC_iliterate_population:0 "Illiterate Population"
  FIC_iliterate_population_1:0 "Illiterate Population"
  FIC_iliterate_population_2:0 "Illiterate Population"
- fic_repression:0 "Repressions"
+ fic_repression:0 "Repression"
  fic_repression_desc:0 ""
- fic_repression_1:0 "Repressions"
+ fic_repression_1:0 "Repression"
+ fic_repression_2:0 "Repression"
  fic_support_war:0 "Supporting the Métropole"
  fic_support_war_desc:0 ""
  fic_indochinese_manpower:0 "Indochinese Manpower"
@@ -192,6 +197,13 @@
  fic_guerrilleros:0 "Guerilleros"
  fic_guerrilleros_desc:0 ""
  fic_defend_vs_siam:0 "Defence Against Thailand"
+ fic_defend_vs_siam_desc:0 ""
+ fic_local_patriotisms:0 "Supported Local Patriotisms"
+ fic_local_patriotisms_desc:0 ""
+ fic_organize_youth:0 "Youth Organizations"
+ fic_organize_youth_desc:0 ""
+ fic_ind_servants:0 "Indigenous Civil Servants"
+ fic_ind_servants_desc:0 ""
  
  #Ministers
  

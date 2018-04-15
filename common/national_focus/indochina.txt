@@ -9,6 +9,7 @@ focus_tree = {
 	}
 	continuous_focus_position = { x = 50 y = 1200 }
 	default = no
+	
 	focus = {
 		id = FIC_colonial_loan
 		icon = GFX_focus_government_bailout
@@ -166,7 +167,7 @@ focus_tree = {
 				add_idea = FIC_economic_crisis_3
 			}
 			random_owned_controlled_state = {
-				prioritize = { 086  806  808 }
+				prioritize = { 286  806  808 }
 				limit = {
 					is_fully_controlled_by = ROOT
 					free_building_slots = {
@@ -717,6 +718,11 @@ focus_tree = {
 		x = 14
 		y = 6
 		available = {
+		has_country_leader = {
+			ruling_only = yes
+			name = "Georges Catroux"
+		}
+		has_government = democratic
 		CHI = { 
 		country_exists = yes
 		has_war_with = JAP
@@ -768,6 +774,11 @@ focus_tree = {
 		y = 6
 		available = {
 		has_war_with = JAP
+		has_country_leader = {
+			ruling_only = yes
+			name = "Georges Catroux"
+		}
+		has_government = democratic
 		}
 		completion_reward = {
 		add_political_power = -100
@@ -797,6 +808,11 @@ focus_tree = {
 		}
 		available = {
 		has_war_with = JAP
+		has_country_leader = {
+			ruling_only = yes
+			name = "Georges Catroux"
+		}
+		has_government = democratic
 		}
 		x = 16
 		y = 7
@@ -818,6 +834,11 @@ focus_tree = {
 		x = 18
 		y = 6
 		available = {
+		has_country_leader = {
+			ruling_only = yes
+			name = "Georges Catroux"
+		}
+		has_government = democratic
 		ENG = { 
 		country_exists = yes 
 		is_in_faction_with = FIC
@@ -848,7 +869,14 @@ focus_tree = {
 		}
 		x = 24
 		y = 5
-
+		completion_reward = {
+		add_stability = 0.05
+		add_political_power = 25
+		add_popularity = {
+		ideology = fascism
+		popularity = 0.05
+		}
+		}
 	}
 	focus = {
 		id = FIC_defend_against_siam
@@ -878,7 +906,20 @@ focus_tree = {
 		}
 		x = 22
 		y = 6
-
+		available = {
+		has_country_leader = { ruling_only = yes name = "Jean Decoux" }
+		has_government = fascism
+		any_country = {
+				OR = { tag = FRA original_tag = FRA }
+				has_government = fascism
+				controls_state = 268
+			}	
+		}
+		
+		completion_reward = {
+		custom_effect_tooltip = fic_sen_brigades
+		hidden_effect = { load_oob = "FIC_Sen_Brigades" }
+		}
 	}
 	focus = {
 		id = FIC_strengthen_general_security
@@ -889,6 +930,16 @@ focus_tree = {
 		}
 		x = 24
 		y = 6
+		
+		available = {
+		has_country_leader = { ruling_only = yes name = "Jean Decoux" }
+		has_government = fascism
+		}
+		
+		completion_reward = {
+		add_political_power = 25
+		add_ideas = fic_repression_2
+		}
 
 	}
 	focus = {
@@ -900,7 +951,31 @@ focus_tree = {
 		}
 		x = 24
 		y = 7
-
+		
+		available = {
+		has_country_leader = { ruling_only = yes name = "Jean Decoux" }
+		has_government = fascism
+		}
+		
+		completion_reward = {
+		random_owned_controlled_state = {
+				prioritize = { 286 671 808 }
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
 	}
 	focus = {
 		id = FIC_french_indigenous_schools
@@ -941,6 +1016,9 @@ focus_tree = {
 		}
 		x = 4
 		y = 5
+		available = {
+		num_of_factories > 30
+		}
 		completion_reward = {
 			add_research_slot = 1
 			remove_ideas = FIC_iliterate_population_2
@@ -971,7 +1049,31 @@ focus_tree = {
 		}
 		x = 26
 		y = 6
-
+		
+		available = {
+		NOT = { controls_state = 809 controls_state = 810 }
+		has_country_leader = { ruling_only = yes name = "Jean Decoux" }
+		has_government = fascism
+		}
+		
+		completion_reward = {
+		add_political_power = 25
+		SIA = {
+		add_stability = -0.05
+		}
+		809 = {
+		damage_building = {
+		type = infrastructure
+		damage = 1
+		}
+		}
+		810 = {
+		damage_building = {
+		type = infrastructure
+		damage = 1
+		}
+		}
+		}
 	}
 	focus = {
 		id = FIC_encourage_local_patriotisms
@@ -982,6 +1084,16 @@ focus_tree = {
 		}
 		x = 22
 		y = 8
+		available = {
+		has_country_leader = { ruling_only = yes name = "Jean Decoux" }
+		has_government = fascism
+		}
+		
+		completion_reward = {
+		add_war_support = 0.05
+		add_political_power = -50
+		add_ideas = fic_local_patriotisms
+		}
 
 	}
 	focus = {
@@ -993,6 +1105,15 @@ focus_tree = {
 		}
 		x = 26
 		y = 8
+		available = {
+		has_country_leader = { ruling_only = yes name = "Jean Decoux" }
+		has_government = fascism
+		}
+		
+		completion_reward = {
+		add_ideas = fic_organize_youth
+		add_manpower = 10000
+		}
 
 	}
 	focus = {
@@ -1004,6 +1125,14 @@ focus_tree = {
 		}
 		x = 24
 		y = 8
+		available = {
+		has_country_leader = { ruling_only = yes name = "Jean Decoux" }
+		has_government = fascism
+		}
+		
+		completion_reward = {
+		add_ideas = fic_ind_servants
+		}
 
 	}
 	focus = {
