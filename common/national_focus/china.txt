@@ -195,9 +195,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		allow_branch = {
-			has_dlc = "Waking the Tiger"
-		}
 		completion_reward = {
 			add_timed_idea = {
 				idea = CHI_diplomatic_effort_idea
