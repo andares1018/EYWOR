@@ -1,0 +1,993 @@
+﻿############################
+#WARLORD RCM non EAST FOCUS EVENTS #
+############################
+
+###################
+# N.E.ARMY EVENTS #
+###################
+
+add_namespace = nea
+#kmt refuse, cliques consider joining
+country_event = {
+	id = nea.1
+	title = nea.1.t
+	desc = nea.1.d
+	picture = GFX_report_event_china_flag
+	is_triggered_only = yes
+	option = { #join
+		name = nea.1.a
+		ai_chance = {
+			base = 80
+			modifier = {
+				factor = 200
+				is_historical_focus_on = yes
+			}
+		}
+		every_other_country = {
+			limit = {
+				is_in_faction_with = event_target:scp_war_opposition_leader
+			}
+			country_event = { days = 3 id = nea.2 }
+		}
+	}
+	option = { #not join
+		name = nea.1.b
+		trigger = {
+			NOT = {
+				TAG = PRC
+			}
+		}
+		ai_chance = {
+			base = 20
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						has_global_flag = gud_ready
+						GXC = { has_offensive_war_with = CHI }
+					}
+					AND = {
+						OR = {
+							tag = GUD
+							tag = GXC
+							tag = SIC
+							tag = SHD
+						}
+						is_historical_focus_on = yes
+					}
+				}
+			}
+			modifier = {
+				factor = 100
+				OR = {
+					tag = SHX
+					tag = YUN
+					tag = HPC
+					tag = XIK
+					tag = PLM
+					tag = XSM
+					tag = NXM
+					tag = TNG
+					tag = HMI
+				}
+			}
+		}
+	}
+}
+###join prc fight chiang###
+country_event = {
+	id = nea.2
+	title = nea.2.t
+	desc = nea.2.d
+	picture = GFX_report_event_chinese_soldiers_02
+	is_triggered_only = yes
+	option = {
+		name = nea.2.a
+		trigger = {
+			TAG = PRC
+		}
+	}
+	option = {
+		name = nea.2.b
+		trigger = { is_faction_leader = yes }
+		ROOT = {
+			add_to_faction = FROM
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					FROM = {
+						is_subject_of = event_target:WTT_current_china_leader
+					}
+				}
+				event_target:WTT_current_china_leader = {
+					end_puppet = FROM
+				}
+			}
+		}
+		FROM = {
+			add_to_war = { targeted_alliance = ROOT enemy = event_target:WTT_current_china_leader }
+		}
+	}
+	option = {
+		name = nea.2.c
+		trigger = { TAG = event_target:WTT_current_china_leader }
+	}
+}
+####
+country_event = {
+	id = nea.3
+	title = nea.3.t
+	desc = nea.3.d
+	picture = GFX_report_event_china_flag
+	fire_only_once = yes
+	trigger = {
+		#tag = NEA
+		is_warlord = yes
+		NOT = {
+			has_war_with = CHI
+			is_subject_of = CHI
+		}
+		owns_state = 598
+		#has_country_flag = yang_hucheng_in_charge
+	}
+	option = {
+		name = nea.3.a
+		every_state = {
+			limit = {
+				#is_owned_by = ROOT
+				is_core_of = PRC
+			}
+			add_core_of = ROOT
+		}
+		set_capital = 598
+		hidden_effect = {
+			set_cosmetic_tag = CHI
+			every_country = {
+				clear_global_event_target = WTT_current_china_leader
+			}
+			save_global_event_target_as = WTT_current_china_leader
+			#set_party_name = {
+			#	ideology = neutrality
+			#	long_name = NEA_CHI_neutrality_party_long
+			#	name = NEA_CHI_neutrality_party
+			#}
+		}
+	}
+}
+#switch back to normal after civ war
+country_event = {
+	id = nea.4
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		tag = CHI
+		#has_country_flag = im_counter_coup
+		is_legit_china = yes
+		has_civil_war = no
+	}
+	immediate = {
+		clr_country_flag = im_civ_war_exception
+	}
+	option = {
+	}
+}
+country_event = {
+	id = nea.5
+	hidden = yes
+	trigger = {
+		OR = {
+			tag = NEA
+			tag = CHI
+		}
+		NOT = {
+			country_exists = PRC
+		}
+	}
+	immediate = {
+		country_event = EFM_Comchina.9015
+	}
+	is_triggered_only = yes
+	option = { 
+	}
+}
+
+
+#==================================================================
+#==================================================================
+################
+# HEBEI EVENTS #
+################
+
+add_namespace = hpc
+
+# chi declared hpc indep
+country_event = {
+	id = hpc.1
+	title = hpc.1.t
+	desc = hpc.1.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+	option = {
+		name = gud.1.a #accept, supposed to be gud
+		ai_chance = {
+		base = 80
+			modifier = {
+				factor = 150
+				is_historical_focus_on = yes
+			}
+		}
+		GXC = {
+			country_event = { days = 5 id = gxc.2 }
+		}
+	}
+	option = {
+		name = gud.1.b #refuse
+		ai_chance = {
+		base = 20
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		GXC = {
+			country_event = { days = 5 id = gxc.3 }
+		}
+	}
+}
+
+country_event = {
+	id = hpc.2
+	title = {
+		text = hpc.2.t
+		trigger = {
+			NOT = {
+				any_other_country = {
+					OR = {
+						has_war_with = HPC
+						has_completed_focus = CHI_conquer_focus
+					}
+					is_legit_china = yes
+				}
+			}
+		}
+	}
+	title = {
+		text = hpc.2.t_war
+		trigger = {
+			any_other_country = {
+				OR = {
+					has_war_with = HPC
+					has_completed_focus = CHI_conquer_focus
+				}
+				is_legit_china = yes
+			}
+		}
+	}
+	desc = {
+		text = hpc.2.d
+		trigger = {
+			NOT = {
+				any_other_country = {
+					OR = {
+						has_war_with = HPC
+						has_completed_focus = CHI_conquer_focus
+					}
+					is_legit_china = yes
+				}
+			}
+		}
+	}
+	desc = {
+		text = hpc.2.d_war
+		trigger = {
+			any_other_country = {
+				OR = {
+					has_war_with = HPC
+					has_completed_focus = CHI_conquer_focus
+				}
+				is_legit_china = yes
+			}
+		}
+	}
+	picture = GFX_report_event_chinese_soldiers_running
+
+	is_triggered_only = yes
+
+	option = {
+		name = hpc.2.a
+		ai_chance = {
+			base = 80
+			modifier = {
+				factor = 100
+				OR = {
+					is_historical_focus_on = yes
+					any_other_country = {
+						OR = {
+							has_war_with = HPC
+							has_completed_focus = CHI_conquer_focus
+						}
+						is_legit_china = yes
+					}
+				}
+			}
+		}
+		set_global_flag = hpc_pro_jap
+		JAP = {
+			country_event = { id = rcmjapan.2 }
+		}
+		effect_tooltip = {
+			country_event = { days = 15 id = news.1302 }
+			JAP = {
+				give_guarantee = HPC
+			}
+		}
+	}
+	option = {
+		name = hpc.2.b
+		ai_chance = {
+			base = 5
+			modifier = {
+				factor = 0
+				OR = {
+					is_historical_focus_on = yes
+					any_other_country = {
+						OR = {
+							has_war_with = HPC
+							has_completed_focus = CHI_conquer_focus
+						}
+						is_legit_china = yes
+					}
+				}
+			}
+		}
+		JAP = {
+			country_event = { id = rcmjapan.1 }
+		}
+	}
+}
+#puppeted by china cuz china allies with jap
+country_event = {
+	id = hpc.3
+	title = hpc.3.t
+	desc = hpc.3.d
+	picture = GFX_report_event_japanese_chinese_surrender
+	is_triggered_only = yes
+	option = {
+		name = hpc.3.a
+	}
+}
+#CHI & HPC at war, trigger hpc.2
+country_event = {
+	id = hpc.4
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		tag = HPC
+		any_other_country = {
+			has_war_with = ROOT
+			is_legit_china = yes
+		}
+		is_puppet = no
+		NOT = {
+			has_country_flag = called_out_nationwide
+		}
+		NOT = {
+			is_subject_of = JAP
+		}
+	}
+	immediate = {
+		country_event = {
+			id = hpc.2
+		}
+	}
+	option = {
+	}
+}
+
+
+#==================================================================
+#==================================================================
+##################
+# GUANGXI EVENTS #
+##################
+
+add_namespace = gxc
+
+# GXC offer GUD 2g
+country_event = {
+	id = gxc.1
+	title = gxc.1.t
+	desc = gxc.1.d
+	picture = GFX_report_event_japanese_chinese_surrender
+	is_triggered_only = yes
+	
+	option = {
+		name = gxc.1.a
+		GUD = {
+			country_event = { days = 10 id = gud.1 }
+		}
+	}
+}
+#GUD accept war chi
+country_event = {
+	id = gxc.2
+	title = gxc.2.t
+	desc = gxc.2.d
+	picture = GFX_report_event_chinese_japanese_handshake
+	is_triggered_only = yes
+	
+	#mean_time_to_happen = {
+		#	days = 10
+		#}
+	
+	option = {
+		name = gxc.2.a
+		GXC = { country_event = { days = 5 id = gxc.13 } }#form anti-jap army
+		CHI = { country_event = { days = 5 id = gxc.13 } }
+	}
+}
+#GUD refuse war chi
+country_event = {
+	id = gxc.3
+	title = gxc.3.t
+	desc = gxc.3.d
+	picture = GFX_report_event_chinese_officers
+	
+	#mean_time_to_happen = {
+		#	days = 10
+		#}
+	
+	is_triggered_only = yes
+	option = {
+		name = gxc.3.a
+	}
+}
+
+#chi offer peace
+country_event = {
+	id = gxc.4
+	title = gxc.4.t
+	desc = gxc.4.d
+	picture = GFX_report_event_chinese_officers
+	
+	#mean_time_to_happen = {
+		#	days = 10
+		#}
+	
+	is_triggered_only = yes
+	option = { #peace#accept
+		name = gxc.4.a
+		ai_chance = {
+			base = 70 	
+			modifier = {
+				factor = 200
+				is_historical_focus_on = yes
+			}
+		}
+		CHI = {
+			country_event = { days = 5 id = rcmchina.237 }#GXC accept peace
+			add_political_power = 50
+		}
+		GUD = { country_event = { id = gxc.6 } }
+		set_country_flag = gxc_accept_peace
+		dismantle_faction = yes
+	}
+	option = { #war
+		name = gxc.4.b
+		ai_chance = { factor = 30 }
+		CHI = {
+			country_event = { days = 5 id = rcmchina.238 }
+		}
+	}
+}
+
+#chi war
+country_event = {
+	id = gxc.5
+	title = gxc.5.t
+	desc = gxc.5.d
+	picture = GFX_report_event_chiang_speech
+	is_triggered_only = yes
+	option = {
+		name = gxc.5.a
+		effect_tooltip = {
+			create_wargoal = {
+				type = annex_everything
+				target = CHI
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				declare_war_on = { target = CHI type = annex_everything }
+				else = {
+					create_wargoal = {
+						type = annex_everything
+						target = CHI
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				GUD = { is_in_faction_with = GXC }
+				has_global_flag = gud_ready
+			}
+			GUD = { add_to_war = { targeted_alliance = GXC enemy = CHI } }
+		}
+	}
+}
+#(seen by GUD)gxc accepted chi's peace offer#
+country_event = {
+	id = gxc.6
+	title = gxc.6.t
+	desc = gxc.6.d
+	picture = GFX_report_event_chinese_soldiers_02
+	is_triggered_only = yes
+	option = {
+		name = gxc.6.a
+	}
+}
+country_event = {
+	id = gxc.7
+	title = gxc.7.t
+	desc = gxc.7.d
+	picture = GFX_report_event_chinese_soldiers_02
+	is_triggered_only = yes
+	option = {
+		name = gxc.7.a
+	}
+}
+#GUD make peace with chi
+country_event = {
+	id = gxc.8
+	title = gxc.8.t
+	desc = gxc.8.d
+	picture = GFX_report_event_chinese_officers
+	
+	is_triggered_only = yes
+	option = {
+		name = gxc.8.a
+		trigger = { has_country_flag = gxc_accept_peace }
+	}
+	option = {
+		name = gxc.8.b
+		trigger = { NOT = { has_country_flag = gxc_accept_peace } }
+	}
+	
+}
+
+
+###join antijapsalvarmy###
+country_event = {
+	id = gxc.11
+	title = gxc.11.t
+	desc = gxc.11.d
+	picture = GFX_report_event_chinese_soldiers_02
+	is_triggered_only = yes
+	option = {
+		name = gxc.11.a
+		trigger = { original_tag = GXC }
+		GXC = {
+			add_to_faction = FROM
+			FROM = { add_to_war = { targeted_alliance = GXC enemy = CHI } }
+		}
+	}
+	option = {
+		name = gxc.11.b
+		trigger = { original_tag = CHI }
+	}
+}
+country_event = {
+	id = gxc.12
+	title = gxc.12.t
+	desc = gxc.12.d
+	picture = GFX_report_event_chinese_soldiers_02
+	trigger = {
+		OR = {
+			original_tag = CHI
+			original_tag = GXC
+		}
+		NOT = { has_country_flag = liangguang_faction }
+		has_global_flag = gud_ready
+		GXC = { has_offensive_war_with = CHI }
+	}
+	mean_time_to_happen = {
+		days = 0
+	}
+	option = {
+		name = gxc.12.a
+		trigger = { original_tag = GXC }
+		if = {
+			limit = { GXC = { is_faction_leader = no } }
+				set_rule = { can_create_factions = yes }
+				GXC = { create_faction = "anti_jap_salv_army" }
+				add_to_faction = GUD
+				GUD = { add_to_war = { targeted_alliance = GXC enemy = CHI } }
+		}
+		if = {
+			limit = { GXC = { is_faction_leader = yes } }
+				add_to_faction = GUD
+				GUD = { add_to_war = { targeted_alliance = GXC enemy = CHI } }
+		}
+		set_country_flag = liangguang_faction
+	}
+	option = {
+		name = gxc.12.b
+		trigger = { TAG = CHI }
+		set_country_flag = liangguang_faction
+	}
+}
+#form anti_jap_salv_army#
+country_event = {
+	id = gxc.13
+	title = gxc.13.t
+	desc = {
+		text = gxc.13.d_chi
+		trigger = { TAG = CHI }
+	}
+	desc = {
+		text = gxc.13.d_gxc
+		trigger = { TAG = GXC }
+	}
+	picture = GFX_report_event_chinese_soldiers_02
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = gxc.13.a
+		trigger = { TAG = GXC }
+		set_rule = { can_create_factions = yes }
+		create_faction = "anti_jap_salv_army"
+		add_to_faction = GUD
+		CHI = {
+			country_event = { days = 10 id = rcmchina.234 }
+		}
+	}
+	option = {
+		name = gxc.13.b
+		trigger = { TAG = CHI }
+	}
+}
+
+#CHI_buy_gxc succ
+country_event = {
+	id = gxc.14
+	title = gxc.14.t
+	picture = GFX_report_event_bai_bribed
+	desc = {
+		text = gxc.14.d_chi
+		trigger = { TAG = CHI }
+	}
+	desc = {
+		text = gxc.14.d
+		trigger = { NOT = { TAG = CHI } }
+	}
+	is_triggered_only = yes
+	immediate = {
+		set_global_flag = buy_gxc
+	}
+	option = {
+		name = gxc.14.a
+		trigger = { TAG = CHI }
+		annex_country = { target = GXC transfer_troops = yes }
+		create_field_marshal = {
+			name = "Bai Chongxi"
+			portrait_path = "gfx/leaders/CHI/Portrait_China_Bai.dds"
+			traits = { inspirational_leader }
+			skill = 3
+		}
+	}
+	option = {
+		name = gxc.14.b
+		trigger = {
+			NOT = { TAG = CHI }
+		}
+		dismantle_faction = yes
+	}
+}
+#CHI_buy_gxc fail
+country_event = {
+	id = gxc.15
+	title = gxc.15.t
+	picture = GFX_report_event_bai_not_bribed
+	desc = {
+		text = gxc.15.d_chi
+		trigger = { original_tag = CHI }
+	}
+	desc = {
+		text = gxc.15.d
+		trigger = { NOT = { original_tag = CHI } }
+	}
+	is_triggered_only = yes
+	option = {
+		name = gxc.15.a
+		trigger = { original_tag = CHI }
+	}
+	option = {
+		name = gxc.15.b
+		trigger = {
+			NOT = { original_tag = CHI }
+		}
+		if = {#war!!!
+			limit = { original_tag = GXC }
+			effect_tooltip = {
+				create_wargoal = {
+					type = annex_everything
+					target = CHI
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						is_ai = yes
+					}
+					declare_war_on = { target = CHI type = annex_everything }
+					else = {
+						create_wargoal = {
+							type = annex_everything
+							target = CHI
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#==================================================================
+#==================================================================
+####################
+# GUANGDONG EVENTS #
+####################
+add_namespace = gud
+
+# GUD choose to join liangguang or not
+country_event = {
+	id = gud.1
+	title = gud.1.t
+	desc = gud.1.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = { 
+		name = gud.1.a #accept
+		ai_chance = { 
+		base = 80 	
+			modifier = {
+				factor = 150
+				is_historical_focus_on = yes
+			}
+		}
+		GXC = {
+			country_event = { days = 5 id = gxc.2 }
+		}
+	}
+	option = { 
+		name = gud.1.b #refuse
+		ai_chance = { 
+		base = 20 	
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		GXC = {
+			country_event = { days = 5 id = gxc.3 }
+		}
+	}
+}
+#Chi offer peace
+country_event = {
+	id = gud.2
+	title = gud.2.t
+	desc = gud.2.d
+	picture = GFX_report_event_chinese_officers
+	
+	#mean_time_to_happen = {
+	#	days = 10
+	#}
+
+	is_triggered_only = yes
+
+	option = { #accept
+		name = gud.2.a
+		ai_chance = { factor = 50 } 
+		CHI = {
+			country_event = { days = 5 id = rcmchina.235 }
+		}
+		add_political_power = 50
+		GXC = { 
+			country_event = { id = gxc.8 } 
+			remove_from_faction = GUD
+		}
+	}
+	option = { #refuse
+		name = gud.2.b
+		ai_chance = { factor = 50 } 
+		CHI = {
+			country_event = { days = 5 id = rcmchina.236 }
+		}
+	}
+}
+
+#chi war
+country_event = {
+	id = gud.3
+	title = gud.3.t
+	desc = gud.3.d
+	picture = GFX_report_event_chinese_soldiers_02
+	is_triggered_only = yes
+	option = {
+		name = gud.3.a
+		if = {
+			limit = { GXC = { has_war_with = CHI } }
+			add_to_war = { targeted_alliance = GXC enemy = CHI }
+			GXC = { 
+				if = { limit = { GXC = { is_faction_leader = no } } 
+					set_rule = { can_create_factions = yes } 
+					create_faction = "anti_jap_salv_army"
+					add_to_faction = GUD 
+				}
+				if = { limit = { GXC = { is_faction_leader = yes } } 
+					add_to_faction = GUD 
+				}
+			}
+		}
+		if = {
+			limit = { GXC = { NOT = { has_war_with = CHI } } }
+			set_global_flag = gud_ready
+		}
+	}
+}
+
+#CHI_buy_gud successful (bribing success)
+country_event = {
+	id = gud.4
+	title = gud.4.t
+	picture = GFX_report_event_huang_2g_bribed
+	desc = { 
+		text = gud.4.d_chi
+		trigger = { TAG = CHI }
+	}
+	desc = { 
+		text = gud.4.d
+		trigger = { NOT = { TAG = CHI } }
+	}
+	is_triggered_only = yes
+	immediate = {
+		set_global_flag = buy_gud
+	}
+	option = {
+		name = gud.4.a
+		trigger = { original_tag = CHI }
+		annex_country = { target = GUD transfer_troops = yes }
+		add_ideas = CHI_huang_guangrei
+		set_country_flag = haung_guangrei_defects
+	}
+	option = {
+		name = gud.4.b
+		trigger = { 
+			NOT = { original_tag = CHI } 
+			NOT = { original_tag = GXC } 
+		}
+	}
+	option = {
+		name = gud.4.c
+		trigger = { 
+			original_tag = GXC
+		}
+		ai_chance = { 
+			base = 50 	
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		CHI = { country_event = { days = 10 id = rcmchina.233 } }
+	}
+	option = {
+		name = gud.4.e
+		trigger = { 
+			original_tag = GXC 
+		}
+		ai_chance = { 
+			base = 50 	
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		dismantle_faction = yes
+		CHI = { country_event = { days = 5 id = rcmchina.242 } }
+	}
+}
+#CHI_buy_gud fail
+country_event = {
+	id = gud.5
+	title = gud.5.t
+	picture = GFX_report_event_huang_2g_bribed
+	desc = { 
+		text = gud.5.d_chi
+		trigger = { original_tag = CHI }
+	}
+	desc = { 
+		text = gud.5.d
+		trigger = { NOT = { original_tag = CHI } }
+	}
+	is_triggered_only = yes
+	option = {
+		name = gud.5.a
+		trigger = { TAG = CHI }
+	}
+	option = {
+		name = gud.5.b
+		trigger = { 
+			NOT = { original_tag = CHI } 
+			NOT = { original_tag = GXC }
+		}	
+	}
+	option = {
+		name = gud.5.c
+		trigger = { 
+			TAG = GXC
+		}
+		hidden_effect = {
+			CHI = { country_event = { days = 10 id = rcmchina.233 } }
+		}
+	}
+}
+
+#==================================================================
+#==================================================================
+##################
+# NINGXIA EVENTS #
+##################
+
+add_namespace = nxm
+
+# I'm Gansu Now
+country_event = {
+	id = nxm.1
+	title = nxm.1.t
+	desc = nxm.1.d
+	picture = GFX_report_event_ma_hongkui_ousted
+	fire_only_once = yes
+	trigger = {
+		NOT = {
+			has_country_flag = im_gansu_ma_clique_now
+		}
+		tag = NXM
+		NOT = {
+			owns_state = 760
+		}
+		owns_state = 283
+		owns_state = 792
+	}
+	
+	option = {
+		name = nxm.1.a
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Ma Hongbin"
+			desc = "POLITICS_MA_HONGBIN_DESC"
+			picture = "gfx/leaders/MON/Portrait_Ma_Hongbin.dds"
+			expire = "1952.1.1"
+			ideology = despotism
+			traits = {
+			}
+		}
+		hidden_effect = {
+			set_cosmetic_tag = NXM_GAN
+			set_country_flag = im_gansu_ma_clique_now
+		}
+	}
+}
+
+
+
+

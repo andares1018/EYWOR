@@ -24,3 +24,5 @@
  EFFECT_UNLOCK_DECISION_CATEGORY:0 "Unlocks £decision_icon_small $NAME|H$ Decisions."
  CHI_instigate_xian_incident:0 "Stage Xi'an Incident"
  CHI_instigate_xian_incident_desc:0 "Despite our constant pleading, [CHI.GetLeader] still wouldn't prioritize fending off the Japanese over eradicating the communists. It's time to try something new."
+ Join_our_Discord:0 "§MJoin our Discord!§!"
+ Modding_Coop:0 "§MModding Coop§!"

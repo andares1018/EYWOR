@@ -407,21 +407,22 @@ bookmarks = {
 			}
 		}
 		
-		"PLM"={
-			minor = yes
-			history = "PLM_GATHERING_STORM_DESC"
-			ideology = neutrality
-			ideas = {
-				CHI_long_term_economic_planning
-				CHI_public_works
-				CHI_embrace_the_opium_trade
-			}
-			focuses = {
-				CHI_join_the_republican_government
-				CHI_power_struggle
-				CHI_heavy_weapons_development
-			}
-		}
+		#"PLM"={
+		#	minor = yes
+		#	history = "PLM_GATHERING_STORM_DESC"
+		#	ideology = neutrality
+		#	ideas = {
+		#		CHI_long_term_economic_planning
+		#		CHI_public_works
+		#		CHI_embrace_the_opium_trade
+		#	}
+		#	focuses = {
+		#		CHI_join_the_republican_government
+		#		CHI_power_struggle
+		#		CHI_heavy_weapons_development
+		#	}
+		#}
+		
 		"YUN"={
 			minor = yes
 			history = "WARLORDS_GATHERING_STORM_DESC"

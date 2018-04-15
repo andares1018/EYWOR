@@ -1,5 +1,5 @@
 ﻿###########################
-# Chinese Events BORDER WARS ADDED SOUTHERN SHAANXI #ID = 743#
+# Chinese Events 
 ###########################
 
 add_namespace = RCM_communist_uprising

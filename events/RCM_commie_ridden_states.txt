@@ -1,8 +1,8 @@
 ﻿###########################
-# Chinese Events COMMIE RIDDEN STATES BORDER WAR SETTING (the yellow lines)
+# Chinese Events COMMIE RIDDEN STATES BORDER WAR SETTING (the yellow lines) TODO: MAKE THIS ON DAILY
 ###########################
 add_namespace = borderwar_news
-news_event = { #MAN
+news_event = { 
 	id = borderwar_news.1
 	hidden = yes
 	#is_triggered_only = yes
@@ -100,7 +100,7 @@ news_event = { #MAN
 	option = {
 	}
 }
-news_event = { #MAN
+news_event = { 
 	id = borderwar_news.2
 	hidden = yes
 	is_triggered_only = yes

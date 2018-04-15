@@ -2441,14 +2441,7 @@ focus_tree = {
 			}
 		}
 		available = {
-			#compare_autonomy_progress_ratio > #compare_autonomy_progress_ratio > 0.75
-#compare_autonomy_progress_ratio > 0.75
-#compare_autonomy_progress_ratio > 0.75
 		}
-		#compare_autonomy_progress_ratio > #compare_autonomy_progress_ratio > 0.75
-		#compare_autonomy_progress_ratio > 0.75
-		#compare_autonomy_progress_ratio > 0.75
-		#compare_autonomy_progress_ratio > 0.75
 		bypass = {
 			is_subject = no
 		}

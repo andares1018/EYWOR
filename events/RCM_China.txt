@@ -1,7 +1,1326 @@
-﻿###########################
-# Chinese Events
-###########################
+﻿###################################
+# Chinese MODIFIED VANILLA Events #
+###################################
 add_namespace = rcmchina
+# HPC
+country_event = {
+	id = rcmchina.1
+	title = rcmchina.1.t
+	desc = rcmchina.1.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	is_triggered_only = yes
+
+	immediate = { CHI = { set_global_flag = marco_polo } }
+	option = { #
+		name = rcmchina.1.a
+		ai_chance = {
+			factor = 55
+			modifier = {
+				factor = 60
+				is_historical_focus_on = yes
+			}
+		}
+		effect_tooltip = {
+			JAP = { country_event = { days = 5 id = rcmjapan.1 } }
+		}
+		hidden_effect = {
+			JAP = { country_event = { days = 5 id = rcmjapan.1 } }
+		}
+	}
+	option = { #
+		name = rcmchina.1.b
+		ai_chance = {
+			factor = 45
+			modifier = {
+				factor = 40
+				is_historical_focus_on = yes
+			}
+		}
+		HPC = {
+			country_event = { days = 5 id = hpc.2 }
+		}
+		custom_effect_tooltip = if_they_accept
+		effect_tooltip = {
+			JAP = {
+				country_event = { id = rcmjapan.2 }
+			}
+			JAP = {
+				give_guarantee = HPC
+			}
+		}
+	}
+}
+# Germany Withdraws Advisors
+country_event = {
+	id = rcmchina.2
+	title = rcmchina.2.t
+	desc = rcmchina.2.d
+	picture = GFX_report_event_chinese_army_training
+	is_triggered_only = yes
+	option = {
+		name = rcmchina.2.a
+		set_country_flag = falkenhausen_recalled
+		remove_ideas = german_advisors
+	}
+}
+# Chinese - German Relations Poor, Mission Recalled
+country_event = {
+	id = rcmchina.3
+	title = rcmchina.3.t
+	desc = rcmchina.3.d
+	picture = GFX_report_event_chinese_soldiers
+	is_triggered_only = yes
+	immediate = {
+		set_country_flag = falkenhausen_recalled
+	}
+	option = {
+		name = rcmchina.3.a
+	}
+}
+# China is at war with Germany, Advisors Detained
+country_event = {
+	id = rcmchina.4
+	title = rcmchina.4.t
+	desc = rcmchina.4.d
+	picture = GFX_report_event_german_detained_china
+	is_triggered_only = yes
+	immediate = {
+		set_country_flag = falkenhausen_recalled
+	}
+	option = {
+		name = rcmchina.4.a
+	}
+}
+# Mao is gaining ground, loses his Cornered Fox trait
+country_event = {
+	id = rcmchina.5
+	title = rcmchina.5.t
+	desc = rcmchina.5.d
+	picture = GFX_report_event_chinese_officers
+	fire_only_once = yes
+	mean_time_to_happen = {
+		days = 0
+	}
+	trigger = {
+		tag = PRC
+		num_of_controlled_states > 2
+	}
+	option = {
+		name = rcmchina.5.a
+		remove_country_leader_trait = cornered_fox
+		remove_ideas = one_last_stand
+	}
+}
+# Kuomintang Offensive
+country_event = {
+	id = rcmchina.6
+	title = rcmchina.6.t
+	desc = rcmchina.6.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	fire_only_once = yes
+	mean_time_to_happen = {
+		days = 100
+	}
+	trigger = {
+		always = no
+		tag = CHI
+		NOT = { has_country_flag = nineteen_thirtynine_start }
+		NOT = { has_global_flag = CHI_attack_comm }
+		NOT = { has_war_with = PRC }
+		any_neighbor_country = {
+			tag = PRC
+			has_opinion_modifier = hostile_status
+		}
+	}
+	immediate = { set_country_flag = CCW_offensive_executed }
+	option = {
+		name = rcmchina.6.a
+		effect_tooltip = {
+			custom_effect_tooltip = rcmchina.6.tt
+			random_list = {
+				70 = {
+					country_event = { id = rcmchina.9 days = 1 }
+					add_political_power = 200
+					add_manpower = -10000
+				}
+				30 = {
+					country_event = { id = rcmchina.10 days = 1 }
+					add_political_power = -100
+					add_manpower = -50000
+				}
+			}
+			custom_effect_tooltip = rcmchina.6.tt_2
+			country_event = { id = rcmchina.8 days = 1 }
+			add_political_power = 100
+		}
+		hidden_effect = {
+			PRC = {
+				set_country_flag = CCW_major_attack
+				country_event = { id = rcmchina.7 days = 1 }
+			}
+		}
+	}
+	option = {
+		name = rcmchina.6.b
+		effect_tooltip = {
+			custom_effect_tooltip = rcmchina.6.tt
+			random_list = {
+				50 = {
+					country_event = { id = rcmchina.9 days = 1 }
+					add_political_power = 100
+					add_manpower = -1000
+				}
+				50 = {
+					country_event = { id = rcmchina.10 days = 1 }
+					add_political_power = -50
+					add_manpower = -5000
+				}
+			}
+			custom_effect_tooltip = rcmchina.6.tt_2
+			country_event = { id = rcmchina.8 days = 1 }
+			add_political_power = 50
+		}
+		hidden_effect = {
+			PRC = {
+				set_country_flag = CCW_medium_attack
+				country_event = { id = rcmchina.7 days = 1 }
+			}
+		}
+	}
+	option = {
+		name = rcmchina.6.c
+		effect_tooltip = {
+			custom_effect_tooltip = rcmchina.6.tt
+			random_list = {
+				30 = {
+					country_event = { id = rcmchina.9 days = 1 }
+					add_political_power = 50
+					add_manpower = -100
+				}
+				70 = {
+					country_event = { id = rcmchina.10 days = 1 }
+					add_political_power = -25
+					add_manpower = -500
+				}
+			}
+			custom_effect_tooltip = rcmchina.6.tt_2
+			country_event = { id = rcmchina.8 days = 1 }
+			add_political_power = 25
+		}
+		hidden_effect = {
+			PRC = {
+				set_country_flag = CCW_minor_attack
+				country_event = { id = rcmchina.7 days = 1 }
+			}
+		}
+	}
+}
+country_event = {
+	id = rcmchina.7
+	title = rcmchina.7.t
+	desc = rcmchina.7.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	is_triggered_only = yes
+	option = {
+		name = rcmchina.7.a
+		ai_chance = { factor = 80 }
+		effect_tooltip = {
+			random_list = {
+				50 = {
+					country_event = { id = rcmchina.11 }
+					add_political_power = -75
+					add_manpower = -5000
+				}
+				50 = {
+					country_event = { id = rcmchina.12 }
+					add_political_power = 150
+					add_manpower = -1000
+				}
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = { has_country_flag = CCW_major_attack }
+				CHI = {
+					random_list = {
+						70 = {
+							country_event = { id = rcmchina.9 }
+						}
+						30 = {
+							country_event = { id = rcmchina.10 }
+						}
+					}
+				}
+			}
+			if = {
+				limit = { has_country_flag = CCW_medium_attack }
+				CHI = {
+					random_list = {
+						50 = {
+							country_event = { id = rcmchina.9 }
+						}
+						50 = {
+							country_event = { id = rcmchina.10 }
+						}
+					}
+				}
+			}
+			if = {
+				limit = { has_country_flag = CCW_minor_attack }
+				CHI = {
+					random_list = {
+						30 = {
+							country_event = { id = rcmchina.9 }
+						}
+						70 = {
+							country_event = { id = rcmchina.10 }
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = rcmchina.7.b
+		ai_chance = { factor = 20 }
+		CHI = { country_event = { id = rcmchina.8 days = 1 } }
+		add_political_power = -50
+	}
+}
+country_event = {
+	id = rcmchina.8
+	title = rcmchina.8.t
+	desc = rcmchina.8.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	is_triggered_only = yes
+	option = {
+		name = rcmchina.8.a
+		if = {
+			limit = { PRC = { has_country_flag = CCW_major_attack } }
+			add_political_power = 100
+		}
+		if = {
+			limit = { PRC = { has_country_flag = CCW_medium_attack } }
+			add_political_power = 50
+		}
+		if = {
+			limit = { PRC = { has_country_flag = CCW_minor_attack } }
+			add_political_power = 25
+		}
+		PRC = {
+			clr_country_flag = CCW_major_attack
+			clr_country_flag = CCW_medium_attack
+			clr_country_flag = CCW_minor_attack
+		}
+	}
+}
+country_event = {
+	id = rcmchina.9
+	title = rcmchina.9.t
+	desc = rcmchina.9.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	is_triggered_only = yes
+	option = {
+		name = rcmchina.9.a
+		if = {
+			limit = { PRC = { has_country_flag = CCW_major_attack } }
+			add_political_power = 200
+			add_manpower = -10000
+		}
+		if = {
+			limit = { PRC = { has_country_flag = CCW_medium_attack } }
+			add_political_power = 100
+			add_manpower = -1000
+		}
+		if = {
+			limit = { PRC = { has_country_flag = CCW_minor_attack } }
+			add_political_power = 50
+			add_manpower = -100
+		}
+		PRC = {
+			country_event = { id = rcmchina.11 }
+			clr_country_flag = CCW_major_attack
+			clr_country_flag = CCW_medium_attack
+			clr_country_flag = CCW_minor_attack
+		}
+	}
+}
+country_event = {
+	id = rcmchina.10
+	title = rcmchina.10.t
+	desc = rcmchina.10.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	is_triggered_only = yes
+	option = {
+		name = rcmchina.10.a
+		if = {
+			limit = { PRC = { has_country_flag = CCW_major_attack } }
+			add_political_power = -100
+			add_manpower = -50000
+		}
+		if = {
+			limit = { PRC = { has_country_flag = CCW_medium_attack } }
+			add_political_power = -50
+			add_manpower = -5000
+		}
+		if = {
+			limit = { PRC = { has_country_flag = CCW_minor_attack } }
+			add_political_power = -25
+			add_manpower = -500
+		}
+		PRC = {
+			country_event = { id = rcmchina.12 }
+			clr_country_flag = CCW_major_attack
+			clr_country_flag = CCW_medium_attack
+			clr_country_flag = CCW_minor_attack
+		}
+	}
+}
+country_event = {
+	id = rcmchina.11
+	title = rcmchina.11.t
+	desc = rcmchina.11.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	is_triggered_only = yes
+	option = {
+		name = rcmchina.11.a
+		add_political_power = -75
+		add_manpower = -5000
+	}
+}
+country_event = {
+	id = rcmchina.12
+	title = rcmchina.12.t
+	desc = rcmchina.12.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	is_triggered_only = yes
+	option = {
+		name = rcmchina.12.a
+		add_political_power = 150
+		add_manpower = -1000
+	}
+}
+# Border War
+country_event = {
+	id = rcmchina.13
+	title = rcmchina.13.t
+	desc = rcmchina.13.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	fire_only_once = yes
+	trigger = {
+		always = no
+		NOT = { has_global_flag = CHI_attack_com }
+		has_country_flag = CCW_offensive_executed
+		has_opinion_modifier = hostile_status
+		OR = {
+			divisions_in_state = {
+				state = 743
+				size > 0
+			}
+			divisions_in_state = {
+				state = 761
+				size > 0
+			}
+		}
+		PRC = {
+			divisions_in_state = {
+				state = 622
+				size > 0
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 21
+	}
+	immediate = {
+		hidden_effect = {
+			PRC = { country_event = { id = rcmchina.18 } }
+		}
+	}
+	option = {
+		name = rcmchina.13.a
+		if = {
+			limit = {
+				OR = {
+					divisions_in_state = {
+						state = 743
+						size > 0
+					}
+					divisions_in_state = {
+						state = 761
+						size > 0
+					}
+				}
+			}
+			743 = { set_border_war = yes }
+		}
+		622 = { set_border_war = yes }
+	}
+	option = {
+		name = rcmchina.13.b
+		ai_chance = { factor = 0 }
+		add_political_power = -50
+	}
+}
+# CHI loses Border War
+country_event = {
+	id = rcmchina.14
+	title = rcmchina.14.t
+	desc = rcmchina.14.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	is_triggered_only = yes
+	trigger = {
+		tag = CHI
+	}
+	immediate = {
+		hidden_effect = {
+			743 = {
+				if = {
+					limit = { is_border_conflict = yes }
+					set_border_war = no
+				}
+			}
+			761 = {
+				if = {
+					limit = { is_border_conflict = yes }
+					set_border_war = no
+				}
+			}
+			622 = {
+				if = {
+					limit = { is_border_conflict = yes }
+					set_border_war = no
+				}
+			}
+		}
+	}
+	option = {
+		name = rcmchina.14.a
+		add_political_power = -100
+		add_stability = -0.05
+		PRC = { country_event = { id = rcmchina.15 } }
+	}
+}
+# PRC wins Border War
+country_event = {
+	id = rcmchina.15
+	title = rcmchina.15.t
+	desc = rcmchina.15.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	is_triggered_only = yes
+	option = {
+		name = rcmchina.15.a
+		add_political_power = 100
+		add_stability = 0.05
+	}
+}
+# PRC loses Border War
+country_event = {
+	id = rcmchina.16
+	title = rcmchina.16.t
+	desc = rcmchina.16.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	is_triggered_only = yes
+	trigger = {
+		tag = PRC
+	}
+	immediate = {
+		hidden_effect = {
+			743 = {
+				if = {
+					limit = { is_border_conflict = yes }
+					set_border_war = no
+				}
+			}
+			761 = {
+				if = {
+					limit = { is_border_conflict = yes }
+					set_border_war = no
+				}
+			}
+		}
+	}
+	option = {
+		name = rcmchina.16.a
+		add_political_power = -100
+		add_stability = -0.05
+		CHI = { country_event = { id = rcmchina.17 } }
+	}
+}
+# CHI wins Border War
+country_event = {
+	id = rcmchina.17
+	title = rcmchina.17.t
+	desc = rcmchina.17.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	is_triggered_only = yes
+	option = {
+		name = rcmchina.17.a
+		add_political_power = 100
+		add_stability = 0.05
+	}
+}
+# Border War Starts (PRC)
+country_event = {
+	id = rcmchina.18
+	title = rcmchina.18.t
+	desc = rcmchina.18.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	is_triggered_only = yes
+	option = {
+		name = rcmchina.18.a
+		effect_tooltip = {
+			622 = { set_border_war = yes }
+			CHI = {
+				if = {
+					limit = {
+						OR = {
+							divisions_in_state = {
+								state = 743
+								size > 0
+							}
+							divisions_in_state = {
+								state = 761
+								size > 0
+							}
+						}
+					}
+					743 = { set_border_war = yes }
+					761 = { set_border_war = yes }
+				}
+			}
+		}
+	}
+}
+# Japan attacks - Chinese Popular Front forms
+country_event = {
+	id = rcmchina.100
+	title = rcmchina.100.t
+	desc = rcmchina.100.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+	option = {
+		name = rcmchina.100.a
+		if = {
+			limit = {
+				NOT = { is_in_faction = yes }
+			}
+			create_faction = chinese_united_front
+		}
+		if = {
+			limit = {
+				NOT = {
+					HPC = {
+						is_subject_of = JAP
+					}
+				}
+			}
+			add_to_faction = HPC
+			add_to_war = { targeted_alliance = HPC enemy = JAP }
+		}
+		set_global_flag = JAP_attacks_CHI_unites
+		every_country = {
+			limit = {
+				is_warlord = yes
+				NOT = {
+					AND = {
+						OR = {
+							tag = HMI
+							tag = TNG
+						}
+						has_war_with = SIK
+					}
+				}
+				NOT = { has_country_flag = china101_fired }
+				has_global_flag = JAP_attacks_CHI_unites
+				OR = {
+					HPC = {
+						has_war_with = JAP
+					}
+					any_other_country = {
+						is_legit_china = yes
+						has_war_with = JAP
+					}
+					AND = {
+						HPC = {
+							is_puppet_of = JAP
+						}
+						event_target:WTT_current_china_leader = {
+							has_war_with = JAP
+						}
+					}
+				}
+				JAP = { has_offensive_war = yes }
+				NOT = {
+					is_subject_of = JAP
+				}
+				NOT = {
+					has_war_with = event_target:WTT_current_china_leader
+				}
+				OR = {
+					is_in_faction = no
+					owns_state = 614
+					tag = SHD
+				}
+				OR = {
+					has_war = no
+					has_war_with = JAP
+				}
+			}
+			country_event = { id = rcmchina.101 }
+		}
+	}
+}
+# Japan attacks - Chinese Popular Front forms
+country_event = {
+	id = rcmchina.101
+	title = rcmchina.101.t
+	desc = rcmchina.101.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = china101_fired
+	}
+
+	option = {#join united front (Sichuan)
+		name = rcmchina.101.a
+		ai_chance = {
+			base = 0
+			modifier = {
+				factor = 100
+				tag = SIC
+			}
+		}
+		random_other_country = {
+			limit = {
+				is_legit_china = yes
+			}
+			if = {
+				limit = {
+					is_faction_leader = yes
+				}
+				add_to_faction = ROOT
+				set_autonomy = {
+					target = ROOT
+					autonomous_state = autonomy_dominion
+					freedom_level = 0.1
+				}
+				else = {
+					random_other_country = {
+						limit = {
+							is_in_faction_with = CHI
+							is_faction_leader = yes
+						}
+						add_to_faction = ROOT
+					}
+				}
+			}
+		}
+		hidden_effect =	{
+			add_popularity = {
+				ideology = neutrality
+				popularity = 1
+			}
+		}
+		custom_effect_tooltip = stop_subject_war_end_tt
+		add_to_war = { targeted_alliance = CHI enemy = JAP }
+		hidden_effect = {
+			random_other_country = {
+				limit = {
+					is_legit_china = yes
+				}
+				country_event = { id = rcmchina.106 }
+			}
+		}
+	}
+	option = {#join united front (no puppet, default)
+		name = rcmchina.101.g
+		ai_chance = {
+			base = 0
+			modifier = {
+				factor = 100
+				NOT = {
+					OR = {
+						tag = HPC
+						tag = HMI
+						tag = TNG
+						tag = SHD
+						tag = NEA
+						tag = SIC
+					}
+				}
+			}
+		}
+		random_other_country = {
+			limit = {
+				is_legit_china = yes
+			}
+			if = {
+				limit = {
+					is_faction_leader = yes
+				}
+				add_to_faction = ROOT
+				else = {
+					random_other_country = {
+						limit = {
+							is_in_faction_with = PREV
+							is_faction_leader = yes
+						}
+						add_to_faction = ROOT
+					}
+				}
+			}
+			#set_autonomy = {
+			#	target = ROOT
+			#	autonomous_state = autonomy_dominion
+			#	freedom_level = 0.1
+			#}
+			add_to_war = { targeted_alliance = CHI enemy = JAP }
+		}
+		hidden_effect = {
+			random_other_country = {
+				limit = {
+					is_legit_china = yes
+				}
+				country_event = { id = rcmchina.106 }
+			}
+		}
+	}
+	option = {
+		name = rcmchina.101.b
+		trigger = {
+			NOT = { TAG = SHD }
+			NOT = { TAG = HPC }
+		}
+		ai_chance = {
+			base = 0
+			modifier = {
+				factor = 100
+				tag = NEA
+			}
+		}
+		custom_effect_tooltip = GAME_OVER_TT
+		hidden_effect = {
+			random_other_country = {
+				limit = {
+					is_legit_china = yes
+				}
+				global_every_army_leader = {
+					limit = {
+						OWNER = { tag = ROOT }
+					}
+					set_nationality = PREV
+				}
+			}
+			set_global_flag = joined_chi_@ROOT
+			random_other_country = {
+				limit = {
+					is_legit_china = yes
+				}
+				country_event = { id = rcmchina.103 }
+				annex_country = { target = ROOT transfer_troops = yes }
+			}
+		}
+	}
+	option = {
+		name = rcmchina.101.c
+		trigger = {
+			OR = {
+				TAG = HPC
+				TAG = SHD
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+		custom_effect_tooltip = GAME_OVER_TT
+		hidden_effect = {
+			event_target:WTT_current_china_leader = {
+				country_event = { id = rcmchina.103 }
+				annex_country = { target = ROOT transfer_troops = yes }
+			}
+			if = {
+				limit = {
+					TAG = HPC
+				}
+				transfer_state = 614
+				transfer_state = 608
+				event_target:WTT_current_china_leader = {
+					annex_country = { target = HPC transfer_troops = yes }
+					every_owned_state = { remove_core_of = HPC }
+					global_every_army_leader = {
+						limit = {
+							OWNER = { tag = ROOT }
+						}
+						set_nationality = PREV
+					}
+					set_global_flag = joined_chi_@ROOT
+				}
+				else = {
+					event_target:WTT_current_china_leader = {
+						global_every_army_leader = {
+							limit = {
+								OWNER = { tag = ROOT }
+							}
+							set_nationality = PREV
+						}
+						set_global_flag = joined_chi_@ROOT
+					}
+				}
+			}
+		}
+	}
+	option = {#do nothing
+		name = rcmchina.101.e
+		trigger = { TAG = HPC }
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {#do nothing
+		name = rcmchina.101.e
+		trigger = {
+			OR = {
+				TAG = HMI
+				TAG = TNG
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {#do nothing
+		name = rcmchina.101.f
+		trigger = { NOT = { TAG = HPC } }
+		ai_chance = {
+			factor = 0
+		}
+		add_political_power = -30
+	}
+}
+# Japan attack - Sinkiang can join if they want to
+country_event = {
+	id = rcmchina.102
+	title = rcmchina.102.t
+	desc = rcmchina.102.d
+	picture = GFX_report_event_chinese_officers
+	fire_only_once = yes
+	trigger = {
+		has_global_flag = JAP_attacks_CHI_unites
+		tag = SIK
+		GER = { has_war_with = SOV }
+		OR = {
+			any_other_country = {
+				is_legit_china = yes
+				has_war_with = JAP
+			}
+			NEA = {
+				has_war_with = JAP
+				has_country_flag = yang_hucheng_in_charge
+			}
+		}
+		any_other_country = {
+			is_legit_china = yes
+			NOT = { has_war_with = SIK }
+		}
+		JAP = { has_offensive_war = yes }
+		is_puppet = no
+		AND = {
+			has_war = no
+			is_in_faction = no
+		}
+	}
+	mean_time_to_happen = {
+		days = 7
+	}
+	option = {
+		name = rcmchina.102.a
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 50
+				SOV = {
+					has_war_with = GER
+				}
+				GER = {
+					is_in_faction_with = JAP
+				}
+			}
+		}
+		custom_effect_tooltip = GAME_OVER_TT
+		hidden_effect = {
+			CHI = { country_event = { id = rcmchina.103 } }
+			CHI = { annex_country = { target = ROOT transfer_troops = yes } }
+		}
+	}
+	option = {
+		name = rcmchina.102.b
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 50
+				SOV = {
+					has_war_with = GER
+				}
+				GER = {
+					is_in_faction_with = JAP
+				}
+				is_in_faction = no
+			}
+		}
+		CHI = { add_to_faction = ROOT }
+	}
+	option = {
+		ai_chance = {
+			factor = 10
+		}
+		name = rcmchina.102.c
+		#Nothing
+	}
+}
+# FROM joins China (annex)(to CHI)
+country_event = {
+	id = rcmchina.103
+	title = rcmchina.103.t
+	desc = rcmchina.103.d
+	picture = GFX_report_event_chinese_army_training
+	is_triggered_only = yes
+	option = {
+		name = rcmchina.103.a
+	}
+}
+# PRC option to join China faction
+country_event = {
+	id = rcmchina.104
+	title = rcmchina.104.t
+	desc = rcmchina.104.d
+	picture = GFX_report_event_chinese_army_training
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = PRC
+		#has_global_flag = CHI_unite_PRC
+		any_other_country = {
+			is_legit_china = yes
+			has_war_with = JAP
+			is_faction_leader = yes
+		}
+		JAP = { has_offensive_war = yes }
+		NOT = {
+			is_puppet = yes
+		}
+		#has_war = no
+	}
+
+	immediate = {
+		set_global_flag = CHI_unite_PRC_so_no_more_questions
+	}
+
+	#mean_time_to_happen = {
+	#	days = 3
+	#}
+	option = {
+		ai_chance = { factor = 100 }
+		name = rcmchina.104.a
+		set_country_flag = PRC_joined_CHI_against_JAP
+		random_other_country = {
+			limit = {
+				is_legit_china = yes
+			}
+			country_event = { id = rcmchina.106 }
+			add_to_faction = ROOT
+			PRC = { add_opinion_modifier = { target = PREV modifier = unstable_alliance } }
+			add_opinion_modifier = { target = PRC modifier = unstable_alliance }
+			add_to_war = {
+				targeted_alliance = PREV
+				enemy = JAP
+			}
+		}
+
+		if = {
+			limit = { NOT = { has_war_with = SOV } }
+			custom_effect_tooltip = rcmchina.104_PRC_SOV_reinforcements
+		}
+		custom_effect_tooltip = chinese_sov_rep_dissolves
+		hidden_effect = {
+			set_cosmetic_tag = PRC_SGN
+			if = {
+				limit = {
+					NOT = { has_war_with = SOV }
+					any_other_country = {
+						OR = {
+							tag = ROOT
+							is_in_faction_with = ROOT
+						}
+						controls_state = 621
+						#no need 763
+					}
+				}
+				#load_oob = "PRC_SOV_reinforcements"
+			}
+		}
+	}
+	#Nothing
+	option = {
+		ai_chance = { factor = 0 }
+		name = rcmchina.104.b
+	}
+}
+# PRC annexs SHX (puppet option for player)
+#country_event = {
+#	id = rcmchina.105
+#	title = rcmchina.105.t
+#	desc = rcmchina.105.d
+#	picture = GFX_report_event_generic_sign_treaty2
+#
+#	is_triggered_only = yes
+#
+#	option = {
+#		ai_chance = { factor = 100 }
+#		name = rcmchina.105.a
+#		FROM = { annex_country = { target = ROOT transfer_troops = yes } }
+#		custom_effect_tooltip = GAME_OVER_TT
+#	}
+#
+#	#Nothing
+#	option = {
+#		ai_chance = { factor = 0 }
+#		FROM = { puppet = ROOT }
+#		name = rcmchina.105.b
+#	}
+#}
+# China - Info that warlord has joined faction
+country_event = {
+	id = rcmchina.106
+	title = rcmchina.106.t
+	desc = rcmchina.106.d
+	picture = GFX_report_event_chinese_army_training
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					FROM = {
+						tag = PRC
+					}
+				}
+				FROM = {
+					add_to_war = {
+						targeted_alliance = ROOT
+						enemy = JAP
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = rcmchina.106.a
+	}
+}
+# China turns communist / Communists break off from warlords
+country_event = {
+	id = rcmchina.200
+	title = rcmchina.200.t
+	desc = rcmchina.200.d
+	picture = GFX_report_event_generic_sign_treaty1
+	mean_time_to_happen = {
+		days = 0
+	}
+	trigger = {
+		#NOT = { original_tag = CHI }
+		#is_independent_china_or_warlord = yes
+		#has_government = communism
+		#PRC = {
+		#	exists = yes
+		#	has_government = communism
+		#}
+		has_country_flag = no_flag_til_it_works
+	}
+	option = {
+		name = rcmchina.200.a
+		hidden_effect = { PRC = { country_event = { id = rcmchina.201 } } }
+		effect_tooltip = {
+			PRC = {
+				annex_country = { target = ROOT transfer_troops = yes }
+			}
+		}
+		custom_effect_tooltip = GAME_OVER_TT
+	}
+}
+# PRC annexes communist revolters from warlords
+country_event = {
+	id = rcmchina.201
+	title = rcmchina.201.t
+	desc = rcmchina.201.d
+	picture = GFX_report_event_generic_sign_treaty1
+	is_triggered_only = yes
+	option = {
+		name = rcmchina.201.a
+		if = {
+			limit = {
+				FROM = {
+					has_civil_war = yes
+				}
+			}
+			random_other_country = {
+				limit = {
+					#NOT = { original_tag = CHI }
+					#is_independent_china_or_warlord = yes
+					#has_war_with = FROM
+					has_country_flag = no_flag_til_it_works
+				}
+				create_wargoal = { target = ROOT type = annex_everything }
+			}
+		}
+		PRC = {
+			annex_country = { target = FROM transfer_troops = yes }
+		}
+	}
+}
+#CHI event - PRC takes control of a CHI state - Communist uprising
+country_event = {
+	id = rcmchina.202
+	title = rcmchina.202.t
+	desc = rcmchina.202.d
+	picture = GFX_report_event_chinese_soldiers
+	trigger = {
+		original_tag = CHI
+		has_government = neutrality
+		has_idea = CHI_communist_uprisings
+		PRC = {
+			exists = yes
+			has_government = communism
+		}
+		communism > 0.3
+	}
+	mean_time_to_happen = {
+		days = 270
+		modifier = {
+			factor = 0.5
+			communism > 0.5
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					any_neighbor_state = {
+						owner = { tag = PRC }
+					}
+				}
+				save_event_target_as = CHI_communist_state
+			}
+		}
+	}
+	option = {
+		name = rcmchina.202.a
+		PRC = {
+			transfer_state = event_target:CHI_communist_state
+			country_event = { id = rcmchina.203 days = 1 }
+		}
+		add_popularity = {
+			ideology = communism
+			popularity = -0.15
+		}
+	}
+}
+#PRC event - takes control of a CHI state - Communist uprising
+country_event = {
+	id = rcmchina.203
+	title = rcmchina.203.t
+	desc = rcmchina.203.d
+	picture = GFX_report_event_chinese_soldiers
+	is_triggered_only = yes
+	option = {
+		name = rcmchina.203.a
+		effect_tooltip = {
+			CHI = {
+				add_popularity = {
+					ideology = communism
+					popularity = -0.15
+				}
+			}
+		}
+	}
+}
+#Move capital if PRC wins civil war
+country_event = {
+	id = rcmchina.204
+	title = rcmchina.204.t
+	desc = rcmchina.204.d
+	picture = GFX_report_event_chinese_soldiers
+	fire_only_once = yes
+	trigger = {
+		always = no
+		tag = PRC
+		NOT = {
+			country_exists = CHI
+		}
+		OR = {
+			owns_state = 608 #Beiping
+			owns_state = 613 #Nanjing
+		}
+	}
+	mean_time_to_happen = {
+		days = 10
+	}
+	#Move to Beiping
+	option = {
+		name = rcmchina.204.a
+		ai_chance = {
+			base = 90
+			modifier = {
+				factor = 0
+				NOT = { 608 = { is_controlled_by = PRC } }
+			}
+		}
+		trigger = {
+			owns_state = 608
+		}
+		set_capital = 608
+	}
+	#Move to Nanjing
+	option = {
+		name = rcmchina.204.b
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				NOT = { 613 = { is_controlled_by = PRC } }
+			}
+		}
+		trigger = {
+			owns_state = 613
+		}
+		set_capital = 613
+	}
+	#Stay where you are
+	option = {
+		name = rcmchina.204.c
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 1
+				NOT = { 608 = { is_controlled_by = PRC } }
+				NOT = { 613 = { is_controlled_by = PRC } }
+			}
+		}
+	}
+}
+
+
+######################################
+######################################
+######################################
+######################################
+##### Chinese NEWLY ADDED Events #####
+######################################
+######################################
+######################################
+######################################
+
+
 
 #Japan declared war, PRC notified
 country_event = {
