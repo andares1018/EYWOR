@@ -866,6 +866,9 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = FIC_indochina_fights_on
 		}
+		ai_will_do = {
+		factor = 10
+		}
 		available = {
 		has_country_leader = { ruling_only = yes name = "Jean Decoux" }
 		has_government = fascism
@@ -884,7 +887,6 @@ focus_tree = {
 	focus = {
 		id = FIC_defend_against_siam
 		icon = GFX_focus_generic_provoke_border_clashes
-
 		cost = 2
 		prerequisite = {
 			focus = FIC_indochina_fights_on
@@ -892,6 +894,9 @@ focus_tree = {
 		}
 		x = 20
 		y = 6
+		ai_will_do = {
+		factor = 10
+		}
 		available = {
 		has_war_with = SIA
 		}

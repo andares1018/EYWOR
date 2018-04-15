@@ -24,3 +24,14 @@ fic_transindochinese_rail_decision = {
 		has_completed_focus = FIC_transindochinese_railway
 	}
 }
+
+fic_franco_siam_war = {
+	allowed = {
+	
+	}
+
+	visible = {
+		FIC = { OR = { is_puppet = no has_government = democratic } }
+		has_global_flag = fall_of_france
+	}
+}

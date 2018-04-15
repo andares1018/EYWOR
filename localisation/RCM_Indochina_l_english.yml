@@ -23,6 +23,24 @@
  rcmindochina.7.t:0 "Strikes!"
  rcmindochina.7.d:0 "The recent economic recovery and the victory of the Popular Front has caused widespread strikes among indochinese workers, asking for better wages."
  rcmindochina.7.a:0 "We need to maintain the colonial order."
+ rcmindochina.8.t:0 "Japan enforces a ceasefire"
+ rcmindochina.8.d:0 "Japan is proposing his mediation in our conflict between us and the french. Rejecting this offer will have consequences..."
+ rcmindochina.8.a:0 "We have no choice but to comply"
+ rcmindochina.8.b:0 "Refuse"
+ rcmindochina.9.t:0 "Thailand refuses!"
+ rcmindochina.9.d:0 "The weak nation of Thailand has refused our mediation! Altough we can't take military measures against them, they will be punished."
+ rcmindochina.9.a:0 "After all, if they want to lose that war..."
+ rcmindochina.10.t:0 "Thailand proposes peace"
+ rcmindochina.10.d:0 "After our crushing naval victory at Ko Chang, we have received a peace offer from Thailand. Even if we can't win this war, it's sill much more favorable to us than we expected."
+ rcmindochina.10.a:0 "Accept it"
+ rcmindochina.10.b:0 "We won't be dishonored again."
+ rcmindochina.11.t:0 "French Indochina accepts!"
+ rcmindochina.11.d:0 "The Indochinese government has accepted our peace offer. We will recover some of the territories we lost at the end of the 19th century, but we will have to pay war reparations."
+ rcmindochina.11.a:0 "An asian nation has defeated western imperialism"
+ rcmindochina.12.t:0 "French Indochina refuses!"
+ rcmindochina.12.d:0 "Indochina has refused our generous peace offer. We will have to pursue the fight."
+ rcmindochina.12.a:0 "The war will soon be over..."
+ 
 
  ###FOCUSES###
  
@@ -132,8 +150,10 @@
  FIC_neutrality_party:0 "Colonial Administration"
  FIC_democratic_party:0 "Constitutionalist Party"
  FIC_democratic_col:0 "Colonial Administration"
+ FIC_democratic_col_long:0 "Colonial Administration"
  FIC_fascism_party:0 "Phuc Quoc Hoi"
  FIC_fascism_col:0 "Colonial Administration"
+ FIC_fascism_col_long:0 "Colonial Administration"
  FIC_communism_party:0 "PCI"
  FIC_communism_party_long:0 "Indochinese Communist Party"
  FIC_n_socialism_party:0 "VNQDĐ"
@@ -147,6 +167,11 @@
  fic_transindochinese_rail_decision:0 "The Trans-Indochinese Railway"
  FIC_transindochinese_railway_dec:0 "Build the Trans-Indochinese Railway"
  FIC_transindochinese_railway_dec_desc:0 "Expanding our infrastructures is crucial for our economy"
+ fic_franco_siam_war:0 "Franco-Thai War"
+ SIA_attack_fic:0 "Attack French Indochina"
+ SIA_attack_fic_desc:0 "At the end of the 19th century, France stole us various territories in Laos and Cambodia. But France is now weak, and maybe we have the opportunity of reclaiming those lost territories."
+ JAP_peace_fic_sia:0 "Enforce Ceasefire in Indochina"
+ JAP_peace_fic_sia_desc:0 "Thailand has recently started a war against French Indochina, but after the early conquests we are now afraid that the situation may become favorable to the french. We need to enforce a ceasefire between them."
 
  ###FLAGS###
  
@@ -204,6 +229,8 @@
  fic_organize_youth_desc:0 ""
  fic_ind_servants:0 "Indigenous Civil Servants"
  fic_ind_servants_desc:0 ""
+ fic_war_rep_from_sia:0 "War Reparations from Thailand"
+ fic_war_rep_from_sia_desc:0 ""
  
  #Ministers
  

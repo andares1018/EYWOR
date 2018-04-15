@@ -598,6 +598,20 @@ ideas = {
 				defense_bonus_against = 0.1
 			}
 		}
+		
+		fic_war_rep_from_sia = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_goods_red_bonus
+
+			modifier = {
+			consumer_goods_factor = -0.05
+			}
+		}
 
 	}
 	political_advisor = {
