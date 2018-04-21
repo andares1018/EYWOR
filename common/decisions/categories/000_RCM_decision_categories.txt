@@ -28,3 +28,7 @@ PLM_political_effort_decision_cat = {
 MAN_CHI_peace = {
 
 }
+invade_indochina_cat = {
+	icon = jap_southern_expansion
+	priority = 100
+}

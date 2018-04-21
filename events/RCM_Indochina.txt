@@ -15,10 +15,10 @@ country_event = {
 	option = {
 		name = rcmindochina.1.a
 		hidden_effect = {
-		kill_country_leader = yes
+			kill_country_leader = yes
 		}
 		create_country_leader = {
-		name = "Jules Brévié"
+			name = "Jules Brévié"
 			desc = "POLITICS_JULES_BREVIE_DESC"
 			picture = "gfx/leaders/FIC/Portrait_Indochina_Joseph_Jules_Brevie.dds"
 			expire = "1965.1.1"
@@ -39,16 +39,16 @@ country_event = {
 	is_triggered_only = no
 	fire_only_once = yes
 	trigger = {
-	tag = FIC
-	date > 1939.8.1
+		tag = FIC
+		date > 1939.8.1
 	}
 	option = {
 		name = rcmindochina.2.a
 		hidden_effect = {
-		kill_country_leader = yes
+			kill_country_leader = yes
 		}
 		create_country_leader = {
-		name = "Georges Catroux"
+			name = "Georges Catroux"
 			desc = "POLITICS_GEORGES_CATROUX_DESC"
 			picture = "gfx/leaders/FIC/Portrait_Indochina_Georges_Catroux.dds"
 			expire = "1965.1.1"
@@ -71,12 +71,19 @@ country_event = {
 	option = {
 		name = rcmindochina.3.a
 		hidden_effect = {
-		kill_country_leader = yes
+			random_other_country = {
+				limit = {
+					original_tag = FRA
+					has_government = fascism
+				}
+				puppet = ROOT
+			}
+			kill_country_leader = yes
 		}
 		set_politics = { ruling_party = fascism }
 		add_popularity = {
-		ideology = fascism
-		popularity = 0.6
+			ideology = fascism
+			popularity = 0.6
 		}
 		set_party_name = {
 			ideology = fascism
@@ -84,7 +91,7 @@ country_event = {
 			long_name = FIC_fascism_col_long
 		}
 		create_country_leader = {
-		name = "Jean Decoux"
+			name = "Jean Decoux"
 			desc = "POLITICS_JEAN_DECOUX_DESC"
 			picture = "gfx/leaders/FIC/Portrait_Indochina_Jean_Decoux.dds"
 			expire = "1965.1.1"
@@ -108,17 +115,17 @@ country_event = {
 	option = {
 		name = rcmindochina.4.a #defect
 		every_country = {
-		limit = {
-		OR = { 
-		original_tag = FRA
-		tag = FRA 
-		}
-		NOT = { has_government = fascism }
-		}
-		puppet = FIC
+			limit = {
+				OR = { 
+					original_tag = FRA
+					tag = FRA 
+				}
+				NOT = { has_government = fascism }
+			}
+			puppet = FIC
 		}
 		create_country_leader = {
-		name = "Georges Catroux"
+			name = "Georges Catroux"
 			desc = "POLITICS_GEORGES_CATROUX_DESC"
 			picture = "gfx/leaders/FIC/Portrait_Indochina_Georges_Catroux.dds"
 			expire = "1965.1.1"
@@ -133,14 +140,11 @@ country_event = {
 		}
 		country_event = { days = 1 id = rcmindochina.5 } #free france informed
 		every_country = {
-		limit = {
-		OR = { 
-		original_tag = FRA
-		tag = FRA 
-		}
-		has_government = fascism 
-		} 
-		country_event = { days = 1 id = rcmindochina.6 } #vichy informed
+			limit = {
+				original_tag = FRA
+				has_government = fascism 
+			} 
+			country_event = { days = 1 id = rcmindochina.6 } #vichy informed
 		}	
 	}
 	
@@ -253,8 +257,8 @@ country_event = {
 		ai_chance = {
 			factor = 45
 			modifier = {
-			factor = 10
-			is_historical_focus_on = yes
+				factor = 10
+				is_historical_focus_on = yes
 			}
 		}
 		SIA = { country_event = rcmindochina.11 }
@@ -313,22 +317,33 @@ country_event = {
 	desc = rcmindochina.13.d
 	picture = GFX_idk
 	is_triggered_only = yes
-	
+	immediate = {
+	}
 	option = {
 		name = rcmindochina.13.a #accept
 		ai_chance = {
 			factor = 45
 			modifier = {
-			factor = 1000
-			has_government = fascism
+				factor = 1000
+				has_government = fascism
 			}
 			modifier = {
-			factor = 0
-			has_government = democratic
+				factor = 0
+				has_government = democratic
 			}
 		}
-		JAP = { add_to_faction = ROOT }
-		if = { limit = { NOT = { has_idea = FIC_friendly_invasion } } add_ideas = FIC_friendly_invasion }
+		effect_tooltip = {
+			JAP = {
+				transfer_state = 728
+				transfer_state = 803
+				transfer_state = 671
+				give_military_access = FIC
+			}
+		}
+		add_ideas = FIC_friendly_invasion
+		JAP = { 
+			country_event = rcmindochina.15
+		}
 	}
 	
 	option = {
@@ -336,14 +351,15 @@ country_event = {
 		ai_chance = {
 			factor = 55
 			modifier = {
-			factor = 1000
-			has_government = democratic
+				factor = 1000
+				has_government = democratic
 			}
 			modifier = {
-			factor = 0
-			has_government = fascism
+				factor = 0
+				has_government = fascism
 			}
 		}
+		add_ideas = FIC_friendly_invasion
 		JAP = { country_event = rcmindochina.14 }
 	}
 }
@@ -368,5 +384,69 @@ country_event = {
 			type = puppet_wargoal_focus
 			target = FIC
 		}
+		
+		effect_tooltip = {
+			FIC = {
+				add_ideas = FIC_friendly_invasion
+			}
+			random_other_country = {
+				limit = {
+					original_tag = FRA
+					has_government = fascism
+				}
+				add_ideas = FIC_friendly_invasion
+			}
+		}
+	}
+}
+#FIC accepts
+country_event = {
+	id = rcmindochina.15
+	title = rcmindochina.15.t
+	desc = rcmindochina.15.d
+	picture = GFX_idk
+	is_triggered_only = yes
+	
+	option = {
+		name = rcmindochina.15.a #ok
+		JAP = {
+			transfer_state = 728
+			transfer_state = 803
+			transfer_state = 671
+			give_military_access = FIC
+		}
+		random_other_country = {
+			limit = {
+				original_tag = FRA
+				has_government = fascism
+			}
+			country_event = rcmindochina.16
+		}
+		effect_tooltip = {
+			FIC = {
+				add_ideas = FIC_friendly_invasion
+			}
+			random_other_country = {
+				limit = {
+					original_tag = FRA
+					has_government = fascism
+				}
+				add_ideas = FIC_friendly_invasion
+			}
+		}		
+		set_country_flag = invade_indochina_flag
+		unlock_decision_tooltip = invade_indochina
+	}
+}
+#to VIC
+country_event = {
+	id = rcmindochina.16
+	title = rcmindochina.16.t
+	desc = rcmindochina.16.d
+	picture = GFX_idk
+	is_triggered_only = yes
+	option = {
+		add_ideas = FIC_friendly_invasion
+		name = rcmindochina.16.a #ok
 	}
 }

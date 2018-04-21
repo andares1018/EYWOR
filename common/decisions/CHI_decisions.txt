@@ -21,7 +21,7 @@
 					owns_state = 525
 					owns_state = 527
 				}
-				
+
 				KOR = {
 					exists = no
 				}
@@ -620,7 +620,7 @@
 							}
 						}
 					}
-				}
+				} 
 			}
 			visible = {
 				NOT = { has_global_flag = CHI_burma_3 }
@@ -725,7 +725,7 @@
 				}
 			}
 		}
-		
+
 
 		CHI_expand_the_airlift = {
 			icon = generic_construction
@@ -930,7 +930,7 @@
 		}
 	}
 	operations = {
-		
+
 	}
 	prestigious_projects = {
 		CHI_build_a_carrier = {

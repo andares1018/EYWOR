@@ -33,7 +33,7 @@ units = {
 		location = 10880
 		division_template = "Juntuán"		# Red Army had only 3 divisions but reinforced them heavily with new recruits during the war
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.7
+		start_equipment_factor = 0.8
 
 	}
 	division = {
@@ -41,7 +41,7 @@ units = {
 		location = 7314
 		division_template = "Juntuán"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.7
+		start_equipment_factor = 0.8
 
 	}
 	division = {
@@ -49,7 +49,7 @@ units = {
 		location = 7659
 		division_template = "Renmin Jundui"		# Militia used to reinforce divisions (poorer training and equipment)
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.7
+		start_equipment_factor = 0.8
 
 	}
 	division = {
@@ -57,7 +57,7 @@ units = {
 		location = 7314
 		division_template = "Renmin Jundui"		# Militia used to reinforce divisions (poorer training and equipment)
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.7
+		start_equipment_factor = 0.9
 
 	}
 	division = {
@@ -65,7 +65,7 @@ units = {
 		location = 7659
 		division_template = "Renmin Jundui"		# Militia used to reinforce divisions (poorer training and equipment)
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.7
+		start_equipment_factor = 0.9
 
 	}
 	division = {
@@ -73,7 +73,7 @@ units = {
 		location = 4074
 		division_template = "Juntuán"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.7
+		start_equipment_factor = 0.9
 
 	}
 	division = {
@@ -81,7 +81,7 @@ units = {
 		location = 10367
 		division_template = "Juntuán"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.7
+		start_equipment_factor = 0.9
 
 	}
 	division = {
@@ -89,7 +89,7 @@ units = {
 		location = 1531
 		division_template = "Renmin Jundui"		# Militia used to reinforce divisions (poorer training and equipment)
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.7
+		start_equipment_factor = 0.9
 
 	}
 	division = {
@@ -97,7 +97,7 @@ units = {
 		location = 1034
 		division_template = "Renmin Jundui"		# Militia used to reinforce divisions (poorer training and equipment)
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.7
+		start_equipment_factor = 0.9
 
 	}
 	division = {
@@ -105,7 +105,7 @@ units = {
 		location = 1034
 		division_template = "Renmin Jundui"		# Militia used to reinforce divisions (poorer training and equipment)
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.7
+		start_equipment_factor = 0.9
 
 	}
 	division = {
@@ -113,7 +113,7 @@ units = {
 		location = 7208
 		division_template = "Juntuán"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.7
+		start_equipment_factor = 0.9
 
 	}
 	division = {
@@ -121,7 +121,7 @@ units = {
 		location = 5007
 		division_template = "Juntuán"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.7
+		start_equipment_factor = 0.8
 
 	}
 	division = {
@@ -129,7 +129,7 @@ units = {
 		location = 5007
 		division_template = "Renmin Jundui"		# Militia used to reinforce divisions (poorer training and equipment)
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.7
+		start_equipment_factor = 0.8
 
 	}
 	division = {
@@ -137,7 +137,7 @@ units = {
 		location = 12713
 		division_template = "Renmin Jundui"		# Militia used to reinforce divisions (poorer training and equipment)
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.7
+		start_equipment_factor = 0.8
 
 	}
 	division = {
@@ -145,7 +145,7 @@ units = {
 		location = 12713
 		division_template = "Renmin Jundui"		# Militia used to reinforce divisions (poorer training and equipment)
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.7
+		start_equipment_factor = 0.8
 
 	}
 	division = {
@@ -153,7 +153,7 @@ units = {
 		location = 5092
 		division_template = "Juntuán"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.5
+		start_equipment_factor = 0.9
 
 	}
 	division = {
@@ -161,7 +161,7 @@ units = {
 		location = 5092
 		division_template = "Juntuán"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.5
+		start_equipment_factor = 0.8
 
 	}
 	

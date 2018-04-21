@@ -4,49 +4,67 @@
  rcmindochina.1.t:0 "A new Governor-General Appointed"
  rcmindochina.1.d:0 "The new government of Léon Blum has chosen to appoint Jules Brévié, former governor of French West Africa, as governor of French Indochina, in order to appease the social agitation in the colony. He will replace the unpopular René Robin."
  rcmindochina.1.a:0 "Wish him luck."
- rcmindochina.2.t:0 "Georges Catroux appointed as Governor-General of Indochina"
+ rcmindochina.2.t:0 "Georges Catroux Appointed as Governor-General of Indochina"
  rcmindochina.2.d:0 "With tensions rising both in Europe and in Asia, the French government has sent a strong signal, announcing the appointment of Général Catroux as new Governor-General of Indochina. France seems ready to defend her Empire."
  rcmindochina.2.a:0 "France will fight for her Empire, and her Empire will fight for France."
- rcmindochina.3.t:0 "Jean Decoux appointed as Governor-General of Indochina"
+ rcmindochina.3.t:0 "Jean Decoux Appointed as Governor-General of Indochina"
  rcmindochina.3.d:0 "The Pétain Government has announced the nomination of the admiral Jean Decoux as Governor-General of Indochina,in order to ensure the loyalty of her colony."
  rcmindochina.3.a:0 "He will have to work hard in those troubled times."
+ 
  rcmindochina.4.t:0 "Defect to Free France?"
  rcmindochina.4.d:0 "Governor-General Georges Catroux has shown sympathy to the Free French cause,and rumors says his days in office will soon be over. If there's a time to act, it's now."
  rcmindochina.4.a:0 "Indochina will answer De Gaulle's call."
  rcmindochina.4.b:0 "It's too risky."
- rcmindochina.5.t:0 "Indochina joins us!"
+ 
+ rcmindochina.5.t:0 "Indochina Joins Us!"
  rcmindochina.5.d:0 "Governor-General Georges Catroux has announced his decision to join Free France. We can now count on Indochinese resources in our struggle for Libération."
  rcmindochina.5.a:0 "Great."
- rcmindochina.6.t:0 "Indochina defects"
+ rcmindochina.6.t:0 "Indochina Defects"
  rcmindochina.6.d:0 "General Georges Catroux has announced his defection to the gaullist traitors. Indochina is now under their control, but surely not for long."
  rcmindochina.6.a:0 "He will be punished like all his gaullist friends."
+ 
  rcmindochina.7.t:0 "Strikes!"
  rcmindochina.7.d:0 "The recent economic recovery and the victory of the Popular Front has caused widespread strikes among indochinese workers, asking for better wages."
  rcmindochina.7.a:0 "We need to maintain the colonial order."
- rcmindochina.8.t:0 "Japan enforces a ceasefire"
+ 
+ rcmindochina.8.t:0 "Japan Enforces a Ceasefire"
  rcmindochina.8.d:0 "Japan is proposing his mediation in our conflict between us and the french. Rejecting this offer will have consequences..."
- rcmindochina.8.a:0 "We have no choice but to comply"
- rcmindochina.8.b:0 "Refuse"
- rcmindochina.9.t:0 "Thailand refuses!"
+ rcmindochina.8.a:0 "We have no choice but to comply."
+ rcmindochina.8.b:0 "We shall refuse."
+ 
+ rcmindochina.9.t:0 "Thailand Refuses!"
  rcmindochina.9.d:0 "The weak nation of Thailand has refused our mediation! Altough we can't take military measures against them, they will be punished."
  rcmindochina.9.a:0 "After all, if they want to lose that war..."
- rcmindochina.10.t:0 "Thailand proposes peace"
+ 
+ rcmindochina.10.t:0 "Thailand Proposes Peace"
  rcmindochina.10.d:0 "After our crushing naval victory at Ko Chang, we have received a peace offer from Thailand. Even if we can't win this war, it's sill much more favorable to us than we expected."
- rcmindochina.10.a:0 "Accept it"
+ rcmindochina.10.a:0 "Accept it."
  rcmindochina.10.b:0 "We won't be dishonored again."
- rcmindochina.11.t:0 "French Indochina accepts!"
+ 
+ rcmindochina.11.t:0 "French Indochina Accepts!"
  rcmindochina.11.d:0 "The Indochinese government has accepted our peace offer. We will recover some of the territories we lost at the end of the 19th century, but we will have to pay war reparations."
- rcmindochina.11.a:0 "An asian nation has defeated western imperialism"
- rcmindochina.12.t:0 "French Indochina refuses!"
+ rcmindochina.11.a:0 "An Asian nation has defeated western imperialism!"
+ 
+ rcmindochina.12.t:0 "French Indochina Refuses!"
  rcmindochina.12.d:0 "Indochina has refused our generous peace offer. We will have to pursue the fight."
  rcmindochina.12.a:0 "The war will soon be over..."
- rcmindochina.13.t:0 "Japan demand bases"
+ 
+ rcmindochina.13.t:0 "Japan Demand Bases"
  rcmindochina.13.d:0 "Japan has requested to use airbases in Tonkin, and the right to station troops there. Accepting will give them control over the region, but refusing could mean war..."
- rcmindochina.13.a:0 "Give them bases"
- rcmindochina.13.b:0 "Refuse"
- rcmindochina.14.t:0 "French Indochina refuses!"
+ rcmindochina.13.a:0 "Give them bases."
+ rcmindochina.13.b:0 "We will refuse."
+ 
+ rcmindochina.14.t:0 "French Indochina Refuses!"
  rcmindochina.14.d:0 "Indochina has refused to grant us airbases in Tonkin. We have to invade them now."
  rcmindochina.14.a:0 "They won't stand long against the Empire"
+ 
+ rcmindochina.15.t:0 "French Indochina Accepts"
+ rcmindochina.15.d:0 "Indochina has accepted our request to grant us airbases in Tonkin and concede us Guangzhouwan. This is a great step towards our dominance in the South East Asia region."
+ rcmindochina.15.a:0 "Exellent!"
+ 
+ rcmindochina.16.t:0 "Japan Intervenes Indochina"
+ rcmindochina.16.d:0 "Japan has decided to intervene and making demands in Indochina. The Germans doesn't seem to care. We might lose our puppets. This is a difficult time for the French people."
+ rcmindochina.16.a:0 "Oh no!"
  
 
  ###FOCUSES###
@@ -185,7 +203,7 @@
  ###IDEAS###
  #General
  
- FIC_friendly_invasion:0 "'Friendly'Invasion"
+ FIC_friendly_invasion:0 "'Friendly' Invasion"
  FIC_friendly_invasion_desc:0 "Due to the recently signed Tripartite Pact between the German Reich and Japan, the Japanese Empire should be our friend instead of enemy. However, they are now using that fact against us and preparing an attack on the Indochinese Peninsula. Knowing that if they launch an offensive operation against Indochina Germany mostly likely won't even care, despite our allegiance towards its ally, Germany."
  FIC_economic_crisis:0 "Economic Crisis"
  FIC_economic_crisis_desc:0 ""

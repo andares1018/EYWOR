@@ -601,6 +601,9 @@ liangguang_incident = {
 				has_government = neutrality
 			}
 			has_completed_focus = CHI_opposition
+			NOT = {
+				has_global_flag = nineteen_thirtynine_start
+			}
 			tag = GXC
 		}
 
@@ -2243,9 +2246,9 @@ RCM_communist_crackdown = {
 
 		available = { #can do
 			any_state = {
-			    is_controlled_by = ROOT
-			    has_state_flag = commie_ridden_states
-			    #set_temp_variable = { communist_crackdown_temp = id }
+				is_controlled_by = ROOT
+				has_state_flag = commie_ridden_states
+				#set_temp_variable = { communist_crackdown_temp = id }
 			}
 		}
 		visible = { #can see
@@ -2256,9 +2259,9 @@ RCM_communist_crackdown = {
 				has_government = communism
 			}
 			any_state = {
-			    is_controlled_by = ROOT
-			    has_state_flag = commie_ridden_states
-		    	}
+				is_controlled_by = ROOT
+				has_state_flag = commie_ridden_states
+			}
 		}
 
 
@@ -2295,147 +2298,147 @@ RCM_communist_crackdown = {
 	}
 }
 JAP_bribe_the_tokko = {
-    JAP_bribe_the_tokko_decision = {
+	JAP_bribe_the_tokko_decision = {
 
-        icon = generic_political_discourse
+		icon = generic_political_discourse
 
-        available = {
-            has_political_power > 99
-        }
+		available = {
+			has_political_power > 99
+		}
 
-        cost = 0
+		cost = 0
 
-        ai_will_do = {
-            factor = 1
-        }
+		ai_will_do = {
+			factor = 1
+		}
 
-        days_remove = 30
+		days_remove = 30
 
-        visible = {
-        	tag = JAP
-        	has_idea = JAP_bribe_the_tokko_1
-            NOT = { has_idea = JAP_bribe_the_tokko_3 }
-            NOT = { has_completed_focus = jap_placate_military_focus }
-            NOT = { has_completed_focus = JAP_strengthen_civilian_government }
-        }
-        remove_effect = {
-            if = {
-                limit = { has_idea = JAP_bribe_the_tokko_1 }
-                swap_ideas = {
-                    remove_idea = JAP_bribe_the_tokko_1
-                    add_idea = JAP_bribe_the_tokko_2
-                }
-                custom_effect_tooltip = pm_ass_lowered_tt
-            }
-            else_if = {
-                limit = { has_idea = JAP_bribe_the_tokko_2 }
-                swap_ideas = {
-                    remove_idea = JAP_bribe_the_tokko_2
-                    add_idea = JAP_bribe_the_tokko_3
-                }
-                custom_effect_tooltip = pm_ass_free_tt
-            }
-        }
-        modifier = {
-        	political_power_gain = -0.25
-        }
-        complete_effect = {
+		visible = {
+			tag = JAP
+			has_idea = JAP_bribe_the_tokko_1
+			NOT = { has_idea = JAP_bribe_the_tokko_3 }
+			NOT = { has_completed_focus = jap_placate_military_focus }
+			NOT = { has_completed_focus = JAP_strengthen_civilian_government }
+		}
+		remove_effect = {
+			if = {
+				limit = { has_idea = JAP_bribe_the_tokko_1 }
+				swap_ideas = {
+					remove_idea = JAP_bribe_the_tokko_1
+					add_idea = JAP_bribe_the_tokko_2
+				}
+				custom_effect_tooltip = pm_ass_lowered_tt
+			}
+			else_if = {
+				limit = { has_idea = JAP_bribe_the_tokko_2 }
+				swap_ideas = {
+					remove_idea = JAP_bribe_the_tokko_2
+					add_idea = JAP_bribe_the_tokko_3
+				}
+				custom_effect_tooltip = pm_ass_free_tt
+			}
+		}
+		modifier = {
+			political_power_gain = -0.25
+		}
+		complete_effect = {
 
-        }
-    }
+		}
+	}
 }
 
 unit_731_cat = {
 	men_sun_remove_expose = {
-	     icon = generic_break_treaty
+		icon = generic_break_treaty
 
-	     fire_only_once = yes
-	     days_remove = 20 # Stays for 5 days before being removed
-	    # days_re_enable = 5 # Will show up in the interface and can be selected again after 5 days
-	     cost = 200
-	     highlight_states = { #These states will be highlighted
+		fire_only_once = yes
+		days_remove = 20 # Stays for 5 days before being removed
+		# days_re_enable = 5 # Will show up in the interface and can be selected again after 5 days
+		cost = 200
+		highlight_states = { #These states will be highlighted
 
-	     }
-	     visible = { #can see
-	          has_idea = men_behind_the_sun
+		}
+		visible = { #can see
+			has_idea = men_behind_the_sun
 			hidden_trigger = {
 				NOT = {
-	 		    		has_country_flag = mutually_exclusive_a
-	 	    		}
+					has_country_flag = mutually_exclusive_a
+				}
 			}
-	     }
-	     available = { #can do
+		}
+		available = { #can do
 			has_stability > 0.7
-	     }
+		}
 		complete_effect = {
 			hidden_effect = {
 				set_country_flag = mutually_exclusive_b
 			}
 		}
-	     remove_effect = { #run effect when removed/finished
+		remove_effect = { #run effect when removed/finished
 			remove_ideas = men_behind_the_sun
 			add_stability = -0.1
 			add_war_support = 0.1
-	     }
-	     cancel_trigger = { #will abort
+		}
+		cancel_trigger = { #will abort
 
-	     }
-	     modifier = { #active during the course of the decision
+		}
+		modifier = { #active during the course of the decision
 
-	     }
-	     ai_will_do = {
-	          factor = 1
-	     }
+		}
+		ai_will_do = {
+			factor = 1
+		}
 	}
 	men_sun_remove_cover_up = {
-	     icon = generic_political_discourse
-	     fire_only_once = yes
-	     days_remove = 50 # Stays for 5 days before being removed
-	     #days_re_enable = 5 # Will show up in the interface and can be selected again after 5 days
-	     cost = 50
-	     highlight_states = { #These states will be highlighted
+		icon = generic_political_discourse
+		fire_only_once = yes
+		days_remove = 50 # Stays for 5 days before being removed
+		#days_re_enable = 5 # Will show up in the interface and can be selected again after 5 days
+		cost = 50
+		highlight_states = { #These states will be highlighted
 
-	     }
+		}
 
-	     visible = { #can see
-	          has_idea = men_behind_the_sun
+		visible = { #can see
+			has_idea = men_behind_the_sun
 			hidden_trigger = {
 				NOT = {
-	 		    		has_country_flag = mutually_exclusive_b
-	 	    		}
+					has_country_flag = mutually_exclusive_b
+				}
 			}
-	     }
-	     available = { #can do
+		}
+		available = { #can do
 			#has_stability > 0.7
-	     }
+		}
 		complete_effect = {
 			hidden_effect = {
 				set_country_flag = mutually_exclusive_a
 			}
 		}
-	     remove_effect = { #run effect when removed/finished
+		remove_effect = { #run effect when removed/finished
 			remove_ideas = men_behind_the_sun
 			add_stability = 0.1
 			add_war_support = -0.1
-	     }
-	     cancel_trigger = { #will abort
+		}
+		cancel_trigger = { #will abort
 
-	     }
-	     modifier = { #active during the course of the decision
+		}
+		modifier = { #active during the course of the decision
 
-	     }
-	     ai_will_do = {
-	          factor = 100
-	     }
+		}
+		ai_will_do = {
+			factor = 100
+		}
 	}
 }
 PLM_political_effort_decision_cat = {
 	PLM_political_effort_decision = {
 		icon = generic_political_discourse
-	     fire_only_once = yes
-	     days_remove = 20 # Stays for 5 days before being removed
-	     #days_re_enable = 5 # Will show up in the interface and can be selected again after 5 days
-	     cost = 50
+		fire_only_once = yes
+		days_remove = 20 # Stays for 5 days before being removed
+		#days_re_enable = 5 # Will show up in the interface and can be selected again after 5 days
+		cost = 50
 		available = {
 			has_global_flag = de_wang_defect_flag
 		}
@@ -2459,39 +2462,102 @@ PLM_political_effort_decision_cat = {
 }
 MAN_CHI_peace = {
 	MAN_CHI_peace_decision = {
-	     icon = generic_political_discourse
-	     fire_only_once = yes
-	     days_remove = 5 # Stays for 5 days before being removed
-	     days_re_enable = 5 # Will show up in the interface and can be selected again after 5 days
-	     cost = 25
-	     target_trigger = { #FROM is target
-	          FROM = {
-	               tag = event_target:WTT_current_china_leader
-	          }
-	     }
-	     war_with_target_on_remove = no #will give warning (not yet tested)
-	     highlight_states = { #These states will be highlighted
+		icon = generic_political_discourse
+		fire_only_once = yes
+		days_remove = 5 # Stays for 5 days before being removed
+		days_re_enable = 5 # Will show up in the interface and can be selected again after 5 days
+		cost = 25
+		target_trigger = { #FROM is target
+			FROM = {
+				tag = event_target:WTT_current_china_leader
+			}
+		}
+		war_with_target_on_remove = no #will give warning (not yet tested)
+		highlight_states = { #These states will be highlighted
 
-	     }
-	     visible = { #can see
-	          tag = MAN
-			has_war_with = JAP
-			has_war_with = CHI
-	     }
-	     available = { #can do
+		}
+		visible = { #can see
 			tag = MAN
 			has_war_with = JAP
 			has_war_with = CHI
-	     }
-	     complete_effect = { #run effect on selection
-	          FROM = {
+		}
+		available = { #can do
+			tag = MAN
+			has_war_with = JAP
+			has_war_with = CHI
+		}
+		complete_effect = { #run effect on selection
+			FROM = {
 				country_event = rcmgeneric.1
 			}
-	     }
+		}
 
 
-	     ai_will_do = {
-	          factor = 100
-	     }
+		ai_will_do = {
+			factor = 100
+		}
+	}
+}
+invade_indochina_cat = {
+	invade_indochina = {
+		icon = generic_political_discourse
+		fire_only_once = yes
+		days_remove = 50 # Stays for 5 days before being removed
+		#days_re_enable = 0 # Will show up in the interface and can be selected again after 5 days
+		cost = 20
+		highlight_states = { #These states will be highlighted
+
+		}
+		target_trigger = {
+			FROM = {
+				tag = FIC
+			}
+		}
+		war_with_target_on_remove = yes
+		visible = { #can see
+			has_country_flag = invade_indochina_flag
+			country_exists = FIC
+			FIC = {
+				NOT = {
+					OR = {
+						is_subject_of = ROOT
+						is_in_faction_with = ROOT
+					}
+				}
+			}
+		}
+		available = { #can do
+			GER = {
+				has_war_with = SOV
+			}
+			country_exists = FIC
+		}
+		complete_effect = { #run effect on selection
+
+		}
+		remove_trigger = { #will run remove effect and abort
+
+		}
+		remove_effect = { #run effect when removed/finished
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = FIC
+			}
+		}
+		cancel_trigger = { #will abort
+
+		}
+		modifier = { #active during the course of the decision
+
+		}
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 0
+				FIC = {
+					is_ai = no
+				}
+			}
+		}
 	}
 }

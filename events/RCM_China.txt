@@ -103,7 +103,7 @@ country_event = {
 	}
 	trigger = {
 		tag = PRC
-		num_of_controlled_states > 2
+		num_of_controlled_states > 4
 	}
 	option = {
 		name = rcmchina.5.a
@@ -124,7 +124,7 @@ country_event = {
 	trigger = {
 		always = no
 		tag = CHI
-		NOT = { has_country_flag = nineteen_thirtynine_start }
+		NOT = { has_global_flag = nineteen_thirtynine_start }
 		NOT = { has_global_flag = CHI_attack_comm }
 		NOT = { has_war_with = PRC }
 		any_neighbor_country = {
@@ -3744,7 +3744,7 @@ country_event = {
 	trigger = {
 		tag = CHI
 		date > 1937.6.8
-		NOT = { has_country_flag = nineteen_thirtynine_start }
+		NOT = { has_global_flag = nineteen_thirtynine_start }
 		NOT = { is_in_faction_with = GER }
 		NOT = { is_in_faction_with = JAP }
 		NOT = { has_government = communism }

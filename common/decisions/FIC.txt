@@ -56,7 +56,7 @@ political_actions = {
 
 fic_transindochinese_rail_decision = {
 
-FIC_transindochinese_railway_dec = {
+	FIC_transindochinese_railway_dec = {
 		icon = generic_construction
 		fire_only_once = yes
 		days_remove = 300 # Stays for 5 days before being removed
@@ -86,10 +86,10 @@ FIC_transindochinese_railway_dec = {
 			custom_trigger_tooltip = {
 				tooltip = does_not_meet_pre
 				NOT = {
-				controls_state = 286
-				controls_state = 670
-				controls_state = 671
-				controls_state = 741
+					controls_state = 286
+					controls_state = 670
+					controls_state = 671
+					controls_state = 741
 				}
 			}
 		}
@@ -106,42 +106,53 @@ fic_franco_siam_war = {
 	SIA_attack_fic = {
 		icon = jap_conquer_china
 		visible = {
-		tag = SIA
+			tag = SIA
 		}
 		available = {
-		FIC = { OR = { is_puppet = no has_government = democratic } }
-		has_global_flag = fall_of_france
+			FIC = { OR = { is_puppet = no has_government = democratic } }
+			has_global_flag = fall_of_france
 		}
 		is_good = no
 		fire_only_once = yes
 		ai_will_do = {
 			factor = 1000
 		}
-		days_remove = 0
-		cost = 0
-		complete_effect = {
-		add_state_claim = 809
-		add_state_claim = 810
-		add_state_claim = 815
-		add_state_claim = 816
-		declare_war_on = {
-			type = annex_everything
-			target = FIC
+		target_trigger = {
+			FROM = {
+				tag = FIC
+			}
 		}
+		war_with_target_on_remove = yes
+		days_remove = 25
+		cost = 10
+		complete_effect = {
+			add_state_claim = 809
+			add_state_claim = 810
+			add_state_claim = 815
+			add_state_claim = 816
+			declare_war_on = {
+				type = annex_everything
+				target = FIC
+			}
 		}
 	}
 	
 	JAP_peace_fic_sia = {
 		icon = jap_conquer_china
 		visible = {
-		tag = JAP
+			tag = JAP
+		}
+		target_trigger = {
+			FROM = {
+				tag = FIC
+			}
 		}
 		available = {
-		SIA = {
-		controls_state = 815
-		controls_state = 816
-		has_war_with = FIC
-		}
+			SIA = {
+				controls_state = 815
+				controls_state = 816
+				has_war_with = FIC
+			}
 		}
 		is_good = no
 		fire_only_once = yes
@@ -151,7 +162,7 @@ fic_franco_siam_war = {
 		days_remove = 0
 		cost = 0
 		complete_effect = {
-		SIA = { country_event = rcmindochina.8 }
+			SIA = { country_event = rcmindochina.8 }
 		}
 	}
 }

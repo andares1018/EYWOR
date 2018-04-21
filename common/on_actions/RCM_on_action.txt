@@ -28,7 +28,7 @@ on_actions = {
 						tag = JAP
 					}
 					NOT = {
-						has_country_flag = nineteen_thirtynine_start
+						has_global_flag = nineteen_thirtynine_start
 					}
 					NOT = {
 						has_global_flag = jap_war_chi
@@ -218,9 +218,6 @@ on_actions = {
 				limit = {
 					AND = {
 						TAG = FIC
-						FROM =  {
-							TAG = JAP
-						}
 					}
 				}
 				drop_cosmetic_tag = yes
@@ -248,7 +245,7 @@ on_actions = {
 		effect = {
 			if = {
 				limit = {
-					TAG = XSM
+					tag = XSM
 					FROM = {
 						has_government = fascism
 					}
@@ -257,10 +254,8 @@ on_actions = {
 			}
 			if = {
 				limit = {
-					AND = {
-						TAG = FIC
-						is_subject_of = JAP
-					}
+					tag = FIC
+					is_subject_of = JAP
 				}
 				set_cosmetic_tag = FIC_JAP
 				create_country_leader = {
@@ -270,6 +265,16 @@ on_actions = {
 					expire = "1936.9.15"
 					ideology = fascism_ideology
 				}
+			}
+			if = {
+				limit = {
+					tag = FIC
+					FROM = {
+						original_tag = FRA
+						has_government = fascism
+					}
+				}
+				set_cosmetic_tag = FIC_FRA
 			}
 			########
 			#MODDEDv #this huge section is for Japan to expand its current puppets in PC instead of spamming clique puppets like "yuNNAn eMiPiRe"
@@ -504,6 +509,16 @@ on_actions = {
 					ideology = fascism_ideology
 				}
 			}
+			if = {
+				limit = {
+					tag = FIC
+					FROM = {
+						original_tag = FRA
+						has_government = fascism
+					}
+				}
+				set_cosmetic_tag = FIC_FRA
+			}
 			#MODDED^
 		}
 	}
@@ -515,9 +530,6 @@ on_actions = {
 				limit = {
 					AND = {
 						TAG = FIC
-						FROM =  {
-							TAG = JAP
-						}
 					}
 				}
 				drop_cosmetic_tag = yes

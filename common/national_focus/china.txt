@@ -59,7 +59,7 @@ focus_tree = {
 		}
 		bypass = {
 			hidden_trigger = {
-				has_country_flag = nineteen_thirtynine_start
+				has_global_flag = nineteen_thirtynine_start
 			}
 		}
 		cancel = {
