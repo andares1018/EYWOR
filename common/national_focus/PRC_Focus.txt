@@ -3414,7 +3414,7 @@ focus_tree = {
 		completion_reward = {
 			for_tracking_ten_comp_foc = yes
 			add_research_slot = 1
-			custom_effect_tooltip = enable_specialized_training_focus_tt
+			unlock_decision_tooltip = PRC_specialized_training_decision
 		}
 		#custom_effect_tooltip = PRC_continuous_specialized_training_program_tt
 		available = {

@@ -670,7 +670,7 @@ on_actions = {
 				limit = {
 					OR = {
 						is_warlord = yes
-						tag = PRC
+						#tag = PRC
 						AND = {
 							tag = CHI
 							date < 1937.1.1

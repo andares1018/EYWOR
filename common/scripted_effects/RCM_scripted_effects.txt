@@ -1547,3 +1547,39 @@ PRC_border_conflict_SHX = {
 	activate_targeted_decision = { target = SHX decision = RCM_border_conflict_escalate_conflict }
 	activate_targeted_decision = { target = SHX decision = RCM_border_conflict_time_until_cancelled }
 }
+
+PRC_personnel_shortage_down = {
+	if = {
+		limit = {
+			has_idea = PRC_no_skilled_personnel_1
+		}
+		swap_ideas = {
+			remove_idea = PRC_no_skilled_personnel_1
+			add_idea = PRC_no_skilled_personnel_2
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = PRC_no_skilled_personnel_2
+		}
+		swap_ideas = {
+			remove_idea = PRC_no_skilled_personnel_2
+			add_idea = PRC_no_skilled_personnel_3
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = PRC_no_skilled_personnel_3
+		}
+		swap_ideas = {
+			remove_idea = PRC_no_skilled_personnel_3
+			add_idea = PRC_no_skilled_personnel_4
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = PRC_no_skilled_personnel_4
+		}
+		remove_ideas = PRC_no_skilled_personnel_4
+	}
+}
