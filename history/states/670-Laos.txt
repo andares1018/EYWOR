@@ -7,9 +7,11 @@ state={
 		add_core_of = FIC
 		owner = FIC
 		add_core_of = LAO
+		victory_points = {
+		1464 5
+		}
 		buildings = {
 			infrastructure = 2
-
 		}
 
 	}
