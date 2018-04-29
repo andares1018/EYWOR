@@ -280,8 +280,16 @@ peace_with_japan_land_partition = {
 		JAP = {
 			white_peace = NEA
 		}
-		annex_country = { target = MAN transfer_troops = no }
-		annex_country = { target = EHB transfer_troops = no }
+		every_state = {
+			limit = {
+				is_core_of = ROOT
+				is_controlled_by = ROOT
+				is_owned_by_jap_or_its_puppet = yes
+			}
+			ROOT = {
+				transfer_state = PREV
+			}
+		}
 		if = {
 			limit = {
 				HPC = {
@@ -290,12 +298,14 @@ peace_with_japan_land_partition = {
 			}
 			annex_country = { target = HPC transfer_troops = no }
 		}
-		annex_country = { target = CCP transfer_troops = no }
-		annex_country = { target = ECA transfer_troops = no }
-		annex_country = { target = RFM transfer_troops = no }
 	}
 	every_state = {
 		limit = {
+			NOT = {
+				owner = {
+					tag = PRC
+				}
+			}
 			OR = {
 				AND = {
 					OR = {
@@ -304,24 +314,15 @@ peace_with_japan_land_partition = {
 						state = 757
 					}
 					is_owned_by_jap_or_its_puppet = yes
-					NOT = {
-						has_global_flag = inner_mong_turned_red
-					}
 				}
 				AND = {
 					is_northeast_china_state = yes
 					NOT = { state = 757 }#east chahar
 					is_owned_by_jap_or_its_puppet = yes
-					NOT = {
-						has_global_flag = dongbei_turned_red
-					}
 				}
 				AND = {
 					is_north_china_state_for_liberation = yes
 					is_owned_by_jap_or_its_puppet = yes
-					NOT = {
-						has_global_flag = north_china_turned_red
-					}
 				}
 				is_owned_by = ROOT
 				state = 524
@@ -343,37 +344,27 @@ peace_with_japan_land_partition = {
 						state = 612
 						state = 757
 					}
-					OR = {
-						is_owned_by_jap_or_its_puppet = yes
-						is_owned_by = ROOT
-					}
-					has_global_flag = inner_mong_turned_red
+					is_owned_by_jap_or_its_puppet = yes
 				}
 				AND = {
 					is_northeast_china_state = yes
 					NOT = { state = 757 }#east chahar
-					OR = {
-						is_owned_by_jap_or_its_puppet = yes
-						is_owned_by = ROOT
-					}
-					has_global_flag = dongbei_turned_red
+					is_owned_by_jap_or_its_puppet = yes
 				}
 				AND = {
 					is_north_china_state_for_liberation = yes
-					OR = {
-						is_owned_by_jap_or_its_puppet = yes
-						is_owned_by = ROOT
-					}
-					has_global_flag = north_china_turned_red
+					is_owned_by_jap_or_its_puppet = yes
 				}
-				is_owned_by = PRC
+				is_owned_by = ROOT
+				state = 524
 			}
 			OR = {
-				is_core_of = PRC
-				is_claimed_by = PRC
+				is_core_of = ROOT
+				is_claimed_by = ROOT
 			}
 		}
 		PRC = { transfer_state = PREV }
+		set_state_flag = PRC_states
 	}
 }
 create_mengjiang = {

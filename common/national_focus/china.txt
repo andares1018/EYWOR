@@ -353,17 +353,6 @@ focus_tree = {
 				has_war_with = JAP
 				has_global_flag = CHI_unite_PRC
 			}
-			has_country_flag = yang_hucheng_in_charge
-			if = {
-				limit = {
-					NOT = {
-						tag = CHI
-					}
-				}
-				NOT = {
-					has_country_flag = yang_hucheng_in_charge
-				}
-			}
 		}
 		bypass = {
 
