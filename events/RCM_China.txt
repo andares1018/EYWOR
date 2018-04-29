@@ -4066,24 +4066,15 @@ country_event = {
 								state = 757
 							}
 							is_owned_by_jap_or_its_puppet = yes
-							NOT = {
-								has_global_flag = inner_mong_turned_red
-							}
 						}
 						AND = {
 							is_northeast_china_state = yes
 							NOT = { state = 757 }#east chahar
 							is_owned_by_jap_or_its_puppet = yes
-							NOT = {
-								has_global_flag = dongbei_turned_red
-							}
 						}
 						AND = {
 							is_north_china_state_for_liberation = yes
 							is_owned_by_jap_or_its_puppet = yes
-							NOT = {
-								has_global_flag = north_china_turned_red
-							}
 						}
 						is_owned_by = FROM
 					}
