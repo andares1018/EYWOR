@@ -6184,8 +6184,23 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = rcmjapan.104.a
-		add_timed_idea = {
-			days = 420 idea = JAP_expansionist_propaganda
+		add_ideas = JAP_expansionist_propaganda_1
+		hidden_effect = {
+			country_event = {
+				days = 80 id = news_mesc.5
+			}
+			country_event = {
+				days = 160 id = news_mesc.5
+			}
+			country_event = {
+				days = 240 id = news_mesc.5
+			}
+			country_event = {
+				days = 320 id = news_mesc.5
+			}
+			country_event = {
+				days = 400 id = news_mesc.5
+			}
 		}
 	}
 }

@@ -109,3 +109,54 @@ news_event = {
 	option = {
 	}
 }
+news_event = {
+	id = news_mesc.5
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = {
+				has_idea = JAP_expansionist_propaganda_1
+			}
+			swap_idea = {
+				remove_idea = JAP_expansionist_propaganda_1
+				add_idea = JAP_expansionist_propaganda_2
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = JAP_expansionist_propaganda_2
+			}
+			swap_idea = {
+				remove_idea = JAP_expansionist_propaganda_2
+				add_idea = JAP_expansionist_propaganda_3
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = JAP_expansionist_propaganda_3
+			}
+			swap_idea = {
+				remove_idea = JAP_expansionist_propaganda_3
+				add_idea = JAP_expansionist_propaganda_4
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = JAP_expansionist_propaganda_4
+			}
+			swap_idea = {
+				remove_idea = JAP_expansionist_propaganda_4
+				add_idea = JAP_expansionist_propaganda_5
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = JAP_expansionist_propaganda_5
+			}
+			remove_ideas = JAP_expansionist_propaganda_5
+		}
+	}
+	option = {
+	}
+}

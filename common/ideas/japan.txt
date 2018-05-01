@@ -221,7 +221,9 @@ ideas = {
 				ai_get_ally_desire_factor = -10000
 			}
 		}
-		JAP_expansionist_propaganda = {
+		
+		##PROP
+		JAP_expansionist_propaganda_1 = {
 			picture = jap_prop_idea
 			allowed = {
 				always = no
@@ -237,12 +239,104 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				army_attack_factor  = 0.20
+				army_attack_factor  = 0.25
 				army_org_factor = 0.35
 				army_morale_factor = 0.5
 				political_power_factor = 0.25
 			}
 		}
+		JAP_expansionist_propaganda_2 = {
+			picture = jap_prop_idea
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = {
+					OR = {
+						has_government = democratic
+						has_government = communism
+						has_government = n_socialism
+					}
+				}
+			}
+			removal_cost = -1
+			modifier = {
+				army_attack_factor  = 0.2
+				army_org_factor = 0.28
+				army_morale_factor = 0.4
+				political_power_factor = 0.2
+			}
+		}
+		JAP_expansionist_propaganda_3 = {
+			picture = jap_prop_idea
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = {
+					OR = {
+						has_government = democratic
+						has_government = communism
+						has_government = n_socialism
+					}
+				}
+			}
+			removal_cost = -1
+			modifier = {
+				army_attack_factor  = 0.15
+				army_org_factor = 0.21
+				army_morale_factor = 0.3
+				political_power_factor = 0.15
+			}
+		}
+		JAP_expansionist_propaganda_4 = {
+			picture = jap_prop_idea
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = {
+					OR = {
+						has_government = democratic
+						has_government = communism
+						has_government = n_socialism
+					}
+				}
+			}
+			removal_cost = -1
+			modifier = {
+				army_attack_factor  = 0.1
+				army_org_factor = 0.14
+				army_morale_factor = 0.2
+				political_power_factor = 0.1
+			}
+		}
+		JAP_expansionist_propaganda_5 = {
+			picture = jap_prop_idea
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = {
+					OR = {
+						has_government = democratic
+						has_government = communism
+						has_government = n_socialism
+					}
+				}
+			}
+			removal_cost = -1
+			modifier = {
+				army_attack_factor  = 0.05
+				army_org_factor = 0.07
+				army_morale_factor = 0.1
+				political_power_factor = 0.05
+			}
+		}
+		
+		
+		
+		#####
 		new_order = {
 			allowed = {
 				always = no

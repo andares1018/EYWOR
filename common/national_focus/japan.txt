@@ -1838,11 +1838,9 @@ focus_tree = {
 				id = rcmjapan.104
 			}
 			effect_tooltip = {
-				add_timed_idea = {
-					days = 420
-					idea = JAP_expansionist_propaganda
-				}
+				add_ideas = JAP_expansionist_propaganda_1
 			}
+			custom_effect_tooltip = this_will_wear_off_over_time
 			add_named_threat = {
 				threat = 1
 				name = aggressive_china_politics_focus

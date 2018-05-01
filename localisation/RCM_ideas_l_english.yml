@@ -271,6 +271,14 @@
  Demchugdongrub_new_leader:0 "\n§YPrince Demchugdongrub§! will become the new leader of [Root.GetName]."
  MEN_nanking_aid:0 "Military Aid from Nanking"
  JAP_expansionist_propaganda:0 "Expansionist Propaganda"
+ JAP_expansionist_propaganda_1:0 "Expansionist Propaganda"
+ JAP_expansionist_propaganda_2:0 "Expansionist Propaganda"
+ JAP_expansionist_propaganda_3:0 "Expansionist Propaganda"
+ JAP_expansionist_propaganda_4:0 "Expansionist Propaganda"
+ JAP_expansionist_propaganda_5:0 "Expansionist Propaganda"
+
+ this_will_wear_off_over_time:0 "§MThis perk will wear off over time.§!\n"
+
  JAP_military_outweighs_the_government_idea:0 "Military Outweighs the Government"
  JAP_military_outweighs_the_government_idea_desc:0 "With the rise of militarism and the clash of factions within the military, the government of Japan has become less and less competent. Without a functional government, the military of Japan has also fallen into a chaotic state."
  JAP_military_outweighs_the_government_idea_good:0 "Military Outweighs the Government"
