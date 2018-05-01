@@ -335,37 +335,6 @@ peace_with_japan_land_partition = {
 		ROOT = { transfer_state = PREV }
 		set_state_flag = CHI_states
 	}
-	every_state = {
-		limit = {
-			OR = {
-				AND = {
-					OR = {
-						state = 611
-						state = 612
-						state = 757
-					}
-					is_owned_by_jap_or_its_puppet = yes
-				}
-				AND = {
-					is_northeast_china_state = yes
-					NOT = { state = 757 }#east chahar
-					is_owned_by_jap_or_its_puppet = yes
-				}
-				AND = {
-					is_north_china_state_for_liberation = yes
-					is_owned_by_jap_or_its_puppet = yes
-				}
-				is_owned_by = ROOT
-				state = 524
-			}
-			OR = {
-				is_core_of = ROOT
-				is_claimed_by = ROOT
-			}
-		}
-		PRC = { transfer_state = PREV }
-		set_state_flag = PRC_states
-	}
 }
 create_mengjiang = {
 	custom_effect_tooltip = MEN_reform

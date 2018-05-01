@@ -457,6 +457,12 @@ country_event = {
 	desc = EFM_Comchina.14.d
 	picture = GFX_report_event_british_artillery
 	trigger = {
+		country_exists = SOV
+		SOV = {
+			is_puppet = no
+			has_government = communism
+		}
+		has_government = communism
 		tag = PRC
 		PRC = {
 			exists = yes
@@ -481,7 +487,7 @@ country_event = {
 	mean_time_to_happen = {
 		days = 50
 	}
-
+	fire_only_once = yes
 	option = {
 		name = EFM_Comchina.14.a
 		add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 1000 producer = SOV }

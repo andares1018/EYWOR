@@ -9,31 +9,30 @@ foreign_politics = {
 					has_idea = CHI_arc
 				}
 			}
-			FROM = {
-				surrender_progress < 0.2 # if they are losing, lets not allow it
-			}
 			custom_trigger_tooltip = {
 				tooltip = JAP_sue_for_peace_TT
-				NOT = {
-					controls_state = 525
-					controls_state = 527
-				}
-				NOT = {
-					any_state = {
-						is_owned_by = ROOT
-						is_core_of = CHI
-						NOT = {
-							state = 524
-						}
-						OR = {
-							is_controlled_by = JAP
-							AND = {
-								is_controlled_by = ECA
-								ECA = { is_subject_of = JAP }
+				JAP = {
+					NOT = {
+						controls_state = 525
+						controls_state = 527
+					}
+					NOT = {
+						any_state = {
+							is_owned_by = ROOT
+							is_core_of = CHI
+							NOT = {
+								state = 524
 							}
-							AND = {
-								is_controlled_by = MAN
-								MAN = { is_subject_of = JAP }
+							OR = {
+								is_controlled_by = JAP
+								AND = {
+									is_controlled_by = ECA
+									ECA = { is_subject_of = JAP }
+								}
+								AND = {
+									is_controlled_by = MAN
+									MAN = { is_subject_of = JAP }
+								}
 							}
 						}
 					}

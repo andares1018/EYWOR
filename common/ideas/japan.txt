@@ -237,8 +237,9 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
+				army_attack_factor  = 0.20
 				army_org_factor = 0.35
-				army_morale_factor = 0.45
+				army_morale_factor = 0.5
 				political_power_factor = 0.25
 			}
 		}

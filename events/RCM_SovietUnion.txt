@@ -172,6 +172,16 @@ country_event = {
 					army_chief_offensive_2
 				}
 			}
+			create_country_leader = {
+				name = "Chen Guofu"
+				desc = ""
+				picture = "Portrait_Chen_Guofu.dds"
+				expire = "1965.1.1"
+				ideology = rexism
+				traits = {
+
+				}
+			}
 			set_country_flag = he_yingqin_in_charge
 			hidden_effect = {
 				add_ideas = CHI_he_yingqin
@@ -324,6 +334,16 @@ country_event = {
 				ideology = despotism
 				traits = {
 					army_chief_offensive_2
+				}
+			}
+			create_country_leader = {
+				name = "Chen Guofu"
+				desc = ""
+				picture = "Portrait_Chen_Guofu.dds"
+				expire = "1965.1.1"
+				ideology = rexism
+				traits = {
+
 				}
 			}
 			set_country_flag = he_yingqin_in_charge
