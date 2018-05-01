@@ -6186,19 +6186,19 @@ country_event = {
 		name = rcmjapan.104.a
 		add_ideas = JAP_expansionist_propaganda_1
 		hidden_effect = {
-			country_event = {
+			news_event = {
 				days = 80 id = news_mesc.5
 			}
-			country_event = {
+			news_event = {
 				days = 160 id = news_mesc.5
 			}
-			country_event = {
+			news_event = {
 				days = 240 id = news_mesc.5
 			}
-			country_event = {
+			news_event = {
 				days = 320 id = news_mesc.5
 			}
-			country_event = {
+			news_event = {
 				days = 400 id = news_mesc.5
 			}
 		}

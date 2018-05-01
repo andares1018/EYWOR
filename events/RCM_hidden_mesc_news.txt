@@ -118,7 +118,7 @@ news_event = {
 			limit = {
 				has_idea = JAP_expansionist_propaganda_1
 			}
-			swap_idea = {
+			swap_ideas = {
 				remove_idea = JAP_expansionist_propaganda_1
 				add_idea = JAP_expansionist_propaganda_2
 			}
@@ -127,7 +127,7 @@ news_event = {
 			limit = {
 				has_idea = JAP_expansionist_propaganda_2
 			}
-			swap_idea = {
+			swap_ideas = {
 				remove_idea = JAP_expansionist_propaganda_2
 				add_idea = JAP_expansionist_propaganda_3
 			}
@@ -136,7 +136,7 @@ news_event = {
 			limit = {
 				has_idea = JAP_expansionist_propaganda_3
 			}
-			swap_idea = {
+			swap_ideas = {
 				remove_idea = JAP_expansionist_propaganda_3
 				add_idea = JAP_expansionist_propaganda_4
 			}
@@ -145,7 +145,7 @@ news_event = {
 			limit = {
 				has_idea = JAP_expansionist_propaganda_4
 			}
-			swap_idea = {
+			swap_ideas = {
 				remove_idea = JAP_expansionist_propaganda_4
 				add_idea = JAP_expansionist_propaganda_5
 			}
