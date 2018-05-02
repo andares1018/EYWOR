@@ -5151,6 +5151,12 @@ country_event = {
 				traits = {
 				}
 			}
+			if = {
+				limit = {
+					has_unit_leader = 3050
+				}
+				remove_unit_leader = 3050
+			}
 		}
 	}
 	option = {#submit

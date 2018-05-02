@@ -2184,7 +2184,7 @@ shared_focus = {
 	}
 	available = {
 		has_hyper_inflation = yes
-		has_idea_with_trait = financial_expert
+		#has_idea_with_trait = financial_expert
 	}
 	bypass = {
 

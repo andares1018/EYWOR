@@ -3380,7 +3380,7 @@ country_event = {
 			limit = {
 				OR = {
 					is_core_of = CHI
-					is_claimed_by = JAP
+					is_claimed_by = CHI
 				}
 				is_controlled_by_jap_or_its_puppet = yes
 				NOT = { has_state_flag = jap_starting_land }
