@@ -620,6 +620,12 @@ on_actions = {
 	}
 	on_startup = {
 		effect = { #can't use history, cause build_ic_cost doesn't work there
+			every_state = {
+				limit = {
+					is_core_of = CHI
+				}
+				set_state_flag = china_core_state
+			}
 			CHI = {
 				if = {
 					limit = {

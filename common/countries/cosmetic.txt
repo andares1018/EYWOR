@@ -555,9 +555,17 @@ GER_german_monarchy = {
 #	color = rgb { 24 115 222 }
 #	color_ui = rgb { 93 157 231 }
 #}
-CHI_second_republic = {
+#CHI_second_republic = {
+#	color = rgb { 24 115 222 }
+#	color_ui = rgb { 93 157 231 }
+#}
+CHI_second_republic_blue = {
 	color = rgb { 24 115 222 }
 	color_ui = rgb { 93 157 231 }
+}
+CHI_second_republic_red = {
+	color = rgb { 196 82 108 }
+	color_ui = rgb { 196 82 108 }
 }
 MAN_restored = {
 	color = rgb { 237 152 18 }

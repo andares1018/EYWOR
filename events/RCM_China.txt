@@ -7010,8 +7010,29 @@ country_event = {
 
 	option = {
 		name = rcmchina.360.a
-		dismantle_faction = yes
+		dismantle_faction = yes		
 		set_cosmetic_tag = CHI_second_republic
+		if = {
+			limit = {
+				has_dlc = "Waking the Tiger"
+				OR = {
+					has_government = communism
+					communism > 0.5
+				}
+				NOT = { neutrality > 0.5 }
+			}
+			hidden_effect = {
+				set_cosmetic_tag = CHI_second_republic_red
+			}
+		}
+		else_if = {
+			limit = {
+				has_dlc = "Waking the Tiger"
+			}
+			hidden_effect = {
+				set_cosmetic_tag = CHI_second_republic_blue
+			}
+		}
 		add_war_support = 0.05
 		add_stability = 0.05
 	}
