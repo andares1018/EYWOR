@@ -108,7 +108,7 @@ prepared_for_operation_decision_desc:0 "Sufficient preparations are needed in or
 RCM_communist_crackdown:0 "Crack Down the Partisans"
 RCM_communist_crackdown_desc:0 "The communist partisans have infiltrated our territories during this time of unrest. We need to take action quickly before it's too late. We need to crack them down hard, and sweep every single one of them out of our territories!"
 prepared_for_operation_tt:0 "Gains National Spirits §YPrepare for Operation§!, which grants §Gone time use§! of §MStage Uprisings§! or §MInfiltration Campaign§!."
-RCM_communist_infiltration_tt:0 "\n§YPartisan Offensive§! can stir up Communist Partisan Activities in different states.\n\n§MOperations can be lauched on in the affected state of choice through a panel that will appear next to the state window.§!"
+RCM_communist_infiltration_tt:0 "\n§YPartisan Offensive§! can stir up Communist Partisan Activities in different states.\n\n§MOperations can be launched in an affected state of choice through a panel that will appear next to the state window.§!"
 RCM_communist_crackdown_decison:0 "Crack Down the Communists"
 unit_731_cat:0 "Men Behind the Sun"
 unit_731_cat_desc:0 "Alleged Japanese Human Experiment on Chinese civilians for biological warfare has caused widespread public unrest in Manchukuo. What measures should we take in response?"

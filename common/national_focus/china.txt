@@ -5222,9 +5222,7 @@ focus_tree = {
 			add_ideas = CHI_navy_reorganized
 		}
 		available = {
-			NOT = {
-				country_exists = JAP
-			}
+			
 		}
 
 	}

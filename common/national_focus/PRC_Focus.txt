@@ -390,8 +390,10 @@ focus_tree = {
 			hidden_trigger = {
 				ai_cont_foc_prc = yes
 			}
-			num_of_controlled_states > 10
-			num_of_factories > 20
+			OR = {
+				num_of_controlled_states > 5
+				num_of_factories > 15
+			}			
 			NOT = {
 				has_war_with = JAP
 			}
@@ -2397,7 +2399,7 @@ focus_tree = {
 			}
 		}
 		available = {
-			has_war_support > 0.7
+			#has_war_support > 0.7
 			#hidden_trigger = {
 				# ai_cont_foc_prc = yes
 				#}

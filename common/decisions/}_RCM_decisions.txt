@@ -2003,10 +2003,9 @@ RCM_communist_infiltration = {
 	send_in_the_partisans = {
 		icon = infiltrate_state
 		fire_only_once = no
-		cost = 50
-		days_remove = 70 # Stays for 5 days before being removed
-		days_re_enable = 5 # Will show up in the interface and can be selected again after 5 days
-		cost = 75
+		cost = 45
+		days_remove = 60 # Stays for 5 days before being removed
+		#days_re_enable = 5 # Will show up in the interface and can be selected again after 5 days
 		highlight_states = { #These states will be highlighted
 
 		}
@@ -2092,8 +2091,8 @@ RCM_communist_infiltration = {
 		icon = infiltrate_state
 		fire_only_once = no
 		days_remove = 50 # Stays for 5 days before being removed
-		days_re_enable = 5 # Will show up in the interface and can be selected again after 5 days
-		cost = 50
+		#days_re_enable = 5 # Will show up in the interface and can be selected again after 5 days
+		cost = 25
 		highlight_states = { #These states will be highlighted
 
 		}
@@ -2192,7 +2191,7 @@ RCM_communist_infiltration = {
 		fire_only_once = no
 		days_remove = 40 # Stays for 5 days before being removed
 		days_re_enable = 0 # Will show up in the interface and can be selected again after 5 days
-		cost = 50
+		cost = 25
 		highlight_states = { #These states will be highlighted
 
 		}
@@ -2239,7 +2238,7 @@ RCM_communist_crackdown = {
 	RCM_communist_crackdown_decison = {
 		icon = generic_political_discourse
 		fire_only_once = no
-		days_remove = 70 # Stays for 5 days before being removed
+		days_remove = 60 # Stays for 5 days before being removed
 		days_re_enable = 25 # Will show up in the interface and can be selected again after 5 days
 		cost = 50
 
