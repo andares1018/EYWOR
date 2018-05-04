@@ -1,0 +1,369 @@
+ideas = {
+
+	political_advisor = {
+
+		KOR_cho_bongam = {
+
+			picture = generic_political_advisor_asia_1
+			
+			allowed = {
+				original_tag = KOR
+			}
+			
+			traits = { progressive_activist }
+		}
+
+		KOR_shin_ikhui = {
+
+			picture = generic_political_advisor_asia_2
+				
+			allowed = {
+				original_tag = KOR
+			}
+			
+			traits = { popular_figurehead }
+		}
+
+		KOR_cho_byeongok = {
+
+			picture = generic_political_advisor_asia_3
+			
+			allowed = {
+				original_tag = KOR
+			}
+			
+			traits = { smooth_talking_charmer }
+		}
+		
+		KOR_kim_byeongro = {
+
+			picture = generic_political_advisor_asia_1
+			
+			allowed = {
+				original_tag = KOR
+			}
+			
+			traits = { democratic_reformer }
+		}
+		
+		KOR_ahn_jaehong = {
+
+			picture = generic_political_advisor_asia_2
+			
+			allowed = {
+				original_tag = KOR
+			}
+			
+			traits = { compassionate_gentleman }
+		}
+		
+		KOR_jang_myeon = {
+
+			picture = generic_political_advisor_asia_3
+			
+			allowed = {
+				original_tag = KOR
+			}
+			
+			traits = { ideological_crusader }
+		}
+		
+		KOR_yi_suntak = {
+
+			picture = generic_political_advisor_asia_1
+			
+			allowed = {
+				original_tag = KOR
+			}
+			
+			traits = { captain_of_industry }
+		}
+		
+		KOR_yi_beomsok = {
+
+			picture = generic_political_advisor_asia_2
+			
+			allowed = {
+				original_tag = KOR
+			}
+			
+			traits = { fascist_demagogue }
+		}
+		
+		KOR_lee_siyeong = {
+
+			picture = generic_political_advisor_asia_3
+			
+			allowed = {
+				original_tag = KOR
+			}
+			
+			traits = { silent_workhorse }
+		}
+		
+		KOR_jang_taeksang = {
+
+			picture = generic_political_advisor_asia_1
+			
+			allowed = {
+				original_tag = KOR
+			}
+			
+			traits = { backroom_backstabber }
+		}
+		
+		KOR_park_heonyong = {
+
+			picture = generic_political_advisor_asia_2
+			
+			allowed = {
+				original_tag = KOR
+			}
+			
+			traits = { communist_revolutionary }
+		}
+		
+		KOR_cho_dongho = {
+
+			picture = generic_political_advisor_asia_3
+			
+			allowed = {
+				original_tag = KOR
+			}
+			
+			traits = { socialist_idealist }
+		}
+	}
+
+	theorist = {
+		KOR_lee_hyeonggeun = {
+
+			picture = generic_army_asia_2
+			
+			allowed = {
+				original_tag = KOR
+			}
+			
+			research_bonus = {
+				land_doctrine = 0.07
+			}
+			
+			traits = { military_theorist }
+		}
+		
+		KOR_choi_yongdeok = {
+
+			picture = generic_air_asia_2
+			
+			allowed = {
+				original_tag = KOR
+			}
+			
+			research_bonus = {
+				air_doctrine = 0.07
+			}
+			
+			traits = { air_warfare_theorist }
+		}
+
+	}	
+
+	army_chief = {
+		
+		KOR_chae_byeongdeok = {
+			
+			picture = generic_army_asia_1
+
+			allowed = {
+				original_tag = KOR
+			}
+			traits = { army_chief_old_guard }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+
+		KOR_lee_eungjun = {
+
+			picture = generic_army_asia_3
+			
+			allowed = {
+				original_tag = KOR
+			}
+			
+			traits = { army_chief_offensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		KOR_kim_hongil = {
+
+			picture = generic_army_asia_2
+			
+			allowed = {
+				original_tag = KOR
+			}
+			
+			traits = { army_chief_defensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+	}
+	
+	navy_chief = {
+		
+		KOR_soon_wonil = {
+			
+			picture = generic_navy_asia_1
+
+			allowed = {
+				original_tag = KOR
+			}
+					
+			traits = { navy_chief_reform_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+
+		KOR_park_okgyu = {
+			
+			picture = generic_navy_asia_3
+
+			allowed = {
+				original_tag = KOR
+			}
+					
+			traits = { navy_chief_decisive_battle_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	air_chief = {
+		
+		KOR_kim_jeongryeol = {
+			
+			picture = generic_air_asia_2
+			
+			allowed = {
+				original_tag = KOR
+			}
+			
+			traits = { air_chief_ground_support_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+
+		KOR_kim_sin = {
+
+			picture = generic_air_asia_3
+			
+			allowed = {
+				original_tag = KOR
+			}
+			
+			traits = { air_chief_reform_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	high_command = {
+
+		KOR_lee_jongchan = {
+
+			picture = generic_army_asia_3
+			
+			allowed = {
+				original_tag = KOR
+			}
+			
+			traits = { army_logistics_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		KOR_shin_hyeonjun = {
+
+			picture = generic_army_asia_1
+			
+			allowed = {
+				original_tag = KOR
+			}
+			
+			traits = { navy_amphibious_assault_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		KOR_jeong_ilgwon = {
+
+			picture = generic_air_asia_3
+			
+			allowed = {
+				original_tag = KOR
+			}
+			
+			traits = { army_regrouping_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+
+		KOR_jang_deokchang = {
+
+			picture = generic_navy_asia_1
+			
+			allowed = {
+				original_tag = KOR
+			}
+			
+			traits = { air_air_superiority_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		KOR_kim_seokwon = {
+
+			picture = generic_army_asia_2
+			
+			allowed = {
+				original_tag = KOR
+			}
+			
+			traits = { army_infantry_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+
+
+}

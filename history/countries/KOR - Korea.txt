@@ -36,23 +36,24 @@ set_politics = {
 	elections_allowed = yes
 }
 
+
 create_country_leader = {
-	name = "Syngman Rhee"
+	name = "Yi Un"
 	desc = ""
-	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_land_1.dds"
+	picture = "gfx/leaders/KOR/Portrait_Korea_Yi_Un.dds"
 	expire = "1965.1.1"
-	ideology = conservatism
+	ideology = fascism_ideology #collaborationnism?
 	traits = {
 		#
 	}
 }
 
 create_country_leader = {
-	name = "Yi Kang"
+	name = "Syngman Rhee"
 	desc = ""
-	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_land_1.dds"
+	picture = "gfx/leaders/KOR/Portrait_Korea_Syngman_Rhee.dds"
 	expire = "1965.1.1"
-	ideology = despotism
+	ideology = conservatism
 	traits = {
 		#
 	}
@@ -70,22 +71,33 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Kim Gu"
+	name = "Kim Il-sung"
 	desc = ""
-	picture = "gfx/leaders/KOR/Portrait_Kim_Gu.dds"
+	picture = "gfx/leaders/KOR/Portrait_Korea_Kim_Il-sung.dds"
 	expire = "1965.1.1"
-	ideology = despotism
+	ideology = marxism
 	traits = {
 		#
 	}
 }
 
 create_country_leader = {
-	name = "Yi Un"
+	name = "Yi Kang"
 	desc = ""
-	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_land_1.dds"
+	picture = "gfx/leaders/KOR/Portrait_Korea_Yi_Kang.dds"
 	expire = "1965.1.1"
-	ideology = fascism_ideology
+	ideology = despotism #collaborationnism?
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Kim Gu"
+	desc = ""
+	picture = "gfx/leaders/KOR/Portrait_Kim_Gu.dds"
+	expire = "1965.1.1"
+	ideology = despotism
 	traits = {
 		#
 	}
