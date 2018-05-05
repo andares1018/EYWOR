@@ -53,6 +53,17 @@ create_country_leader = {
 	desc = ""
 	picture = "gfx/leaders/KOR/Portrait_Korea_Syngman_Rhee.dds"
 	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Syngman Rhee"
+	desc = ""
+	picture = "gfx/leaders/KOR/Portrait_Korea_Syngman_Rhee.dds"
+	expire = "1965.1.1"
 	ideology = conservatism
 	traits = {
 		#
