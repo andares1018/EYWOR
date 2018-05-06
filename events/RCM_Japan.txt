@@ -1478,14 +1478,6 @@ country_event = {
 			FIC = {
 				set_rule = { can_join_factions = no }
 			}
-			SIA = {
-				annex_country = { target = FIC }
-				release = FIC
-			}
-			FIC = {
-				load_oob = FIC_1939
-				load_oob = FIC_1939
-			}
 		}
 	}
 	option = {

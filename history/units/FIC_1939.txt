@@ -1,5 +1,5 @@
 ﻿division_template = {
-	name = "Division Infanterie"		
+	name = "Division d'Infanterie"		
 	# Represents: Division Infanterie (Series A and B), Div. d'Inf. Coloniale, 
 	#	Div. d'Inf. Nord-Africaine, Div. d'Inf. de Forteresse
 	# Difference is their equipment
@@ -32,13 +32,13 @@ division_template = {
 	priority = 0
 }
 
-
 units = {
-	##### Troupes d'Indochine (CO: Catroux) #####
+	##### Indochina Theatre #####
+	### Army Group: Troupes d'Indochine ### -- Saigon
 	division= {	
-		name = "Division de Tonkin"
-		location = 4075
-		division_template = "Division Infanterie" 			# Reserve Division (low experience, reserve equip)
+		name = "Division du Tonkin"
+		location = 4401
+		division_template = "Division d'Infanterie" 	# Colonial unit, reserve equipment
 		force_equipment_variants = { infantry_equipment_0 = { owner = "FIC" } }
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.3
@@ -46,8 +46,8 @@ units = {
 	}
 	division= {	
 		name = "Division de Cochinchine-Cambodge"
-		location = 4401
-		division_template = "Division Infanterie" 			# Reserve Division (low experience, reserve equip)
+		location = 4075
+		division_template = "Division d'Infanterie" 	# Colonial unit, reserve equipment
 		force_equipment_variants = { infantry_equipment_0 = { owner = "FIC" } }
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.3
@@ -56,14 +56,20 @@ units = {
 	division= {	
 		name = "Brigade d'Annam-Laos"	
 		location = 7376
-		division_template = "Brigade Coloniale"				# Reserve Brigade (low experience, reserve equip)
+		division_template = "Brigade Coloniale" 	# Colonial unit, reserve equipment
 		force_equipment_variants = { infantry_equipment_0 = { owner = "FIC" } }
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.3
 
 	}
+	
+	navy = {				
+		name = "Flotte d'Extrême Orient"			
+		location = 4401 # Saigon			
+		ship = { name = "Suffren" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = FIC } } }
+		ship = { name = "Lamotte-Picquet" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = FIC } } }
+	}
 }
-
 ##### STARTING PRODUCTION #####
 instant_effect = {
 	add_equipment_production = {

@@ -1382,14 +1382,6 @@ units = {
 		ship = { name = "Pascal" definition = submarine equipment = { submarine_1 = { amount = 1 owner = FRA version_name = "Redoutable Class" } } }
 		ship = { name = "Henri Poincaré" definition = submarine equipment = { submarine_1 = { amount = 1 owner = FRA version_name = "Redoutable Class" } } }
 	}
-
-	### FAR EAST ###				
-	navy = {				
-		name = "Flotte du Extrême Orient"			# CO: Decoux
-		location = 4401 # Saigon			
-		ship = { name = "Suffren" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = FRA } } }
-		ship = { name = "Lamotte-Picquet" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = FRA } } }
-	}
 }
 	
 ### Air Wings

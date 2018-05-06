@@ -244,8 +244,6 @@ country_event = {
 			}
 			FIC = {
 				set_cosmetic_tag = FIC_FRA
-			#	load_oob = FIC_1939
-			#	load_oob = FIC_1939
 			}
 		}
 		#####MODDED#####
@@ -278,10 +276,6 @@ country_event = {
 			FIC = {
 				set_cosmetic_tag = FIC_FRA
 			}
-			#FIC = {
-			#	load_oob = FIC_1939
-			#	load_oob = FIC_1939
-			#}
 		}
 		#####MODDED#####
 		set_global_flag = fall_of_france
@@ -293,14 +287,14 @@ country_event = {
 		ai_chance = {
 			factor = 15
 			modifier = {
-				factor = 0.5
+				factor = 0
 				is_historical_focus_on = yes
 			}
 		}
 		#####MODDED#####vvv
 		FRA = { end_puppet = FIC }
 		remove_from_faction = FIC
-		hidden_effect = {
+		#hidden_effect = {
 			#every_country = {
 			#	limit = {
 			#		is_in_faction_with = GER
@@ -315,11 +309,7 @@ country_event = {
 			#	annex_country = { target = FIC }
 			#	release = FIC
 			#}
-			#FIC = {
-			#	load_oob = FIC_1939
-			#	load_oob = FIC_1939
-			#}
-		}
+		#}
 		#####MODDED#####
 		ENG = {
 			country_event = france.11
@@ -1029,8 +1019,8 @@ country_event = {
 		ai_chance = { 
 			factor = 50 
 			modifier = {
-				is_historical_focus_on = yes
 				factor = 0
+				is_historical_focus_on = yes
 			}
 		}
 		FRA = {

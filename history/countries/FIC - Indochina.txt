@@ -32,22 +32,42 @@ add_ideas = {
 	
 	
 	#generic focuses
-	complete_national_focus = army_effort
-	complete_national_focus = equipment_effort
-	complete_national_focus = motorization_effort
-	complete_national_focus = aviation_effort
-	complete_national_focus = naval_effort
-	complete_national_focus = flexible_navy
-	complete_national_focus = industrial_effort
-	complete_national_focus = construction_effort
-	complete_national_focus = production_effort
+	complete_national_focus = FIC_colonial_loan
+	complete_national_focus = FIC_help_peasants
+	complete_national_focus = FIC_hydraulic_works
+	complete_national_focus = FIC_transindochinese_railway
+	complete_national_focus = FIC_small_scale_industrialisation
+	complete_national_focus = FIC_develop_hanoi_arsenal
+	complete_national_focus = FIC_exploit_resources
+	complete_national_focus = FIC_payback_colonial_loan
+	complete_national_focus = FIC_strengthen_military_intel
+	complete_national_focus = FIC_increase_mil_spending
+	complete_national_focus = FIC_reduce_illiteracy
+	complete_national_focus = FIC_train_indigenous_officers
+	complete_national_focus = FIC_expand_hanoi_univ
+	complete_national_focus = FIC_defence_of_indochina
+	complete_national_focus = FIC_colonial_reforms
+	complete_national_focus = FIC_end_repressions
+	complete_national_focus = FIC_improve_workers_condition
+	complete_national_focus = FIC_individual_freedoms
+	complete_national_focus = FIC_allow_syndicates
 
 	add_ideas = {
 		#laws
-		tot_economic_mobilisation
+		partial_economic_mobilisation
 		service_by_requirement
-		closed_economy
+		fic_indigenous_officers
+		FIC_iliterate_population_1
+		fic_resource_effort
+		fic_strengthened_mil_intel
+		fic_better_working_conditions_1
 	}
+	
+	remove_ideas = {
+		FIC_economic_crisis
+		FIC_iliterate_population
+		
+	}	
 
 	set_technology = {
 		#doctrines
