@@ -3,6 +3,7 @@
 oob = "FIC_1936"
 
 set_research_slots = 3
+set_convoys = 5
 
 set_technology = {
 	infantry_weapons = 1
@@ -29,6 +30,7 @@ add_ideas = {
 1939.1.1 = {
 
 	add_political_power = 1198
+	set_stability = 0.65
 	
 	
 	#generic focuses
@@ -66,7 +68,6 @@ add_ideas = {
 	remove_ideas = {
 		FIC_economic_crisis
 		FIC_iliterate_population
-		
 	}	
 
 	set_technology = {
@@ -240,6 +241,18 @@ create_corps_commander = {
 }
 
 create_corps_commander = {
+	name = "Jean-Robert de Rendinger"
+    picture = "Portrait_Indochina_Jean_Robert_de_Rendinger.dds"
+	traits = { career_officer infantry_officer }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+
+create_corps_commander = {
 	name = "Marcel Alessandri"
     picture = "Portrait_Indochina_Marcel_Alessandri.dds"
 	traits = { career_officer war_hero infantry_officer }
@@ -255,6 +268,13 @@ create_navy_leader = {
 	picture = "Portrait_Indochina_Regis_Berenger.dds"
 	traits = { superior_tactician }
 	skill = 3
+}
+
+create_navy_leader = {
+	name = "Jules Terreaux"
+	picture = "Portrait_France_Generic_navy_2.dds"
+	traits = {  }
+	skill = 2
 }
 
 

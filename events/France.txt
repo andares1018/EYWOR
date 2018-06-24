@@ -294,13 +294,13 @@ country_event = {
 		#####MODDED#####vvv
 		FRA = { end_puppet = FIC }
 		remove_from_faction = FIC
-		#hidden_effect = {
-			#every_country = {
-			#	limit = {
-			#		is_in_faction_with = GER
-			#	}
-			#	white_peace = FIC
-			#}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_in_faction_with = GER
+				}
+				white_peace = FIC
+			}
 			#every_country = {
 			#	limit = {
 			#		original_tag = FRA
@@ -309,7 +309,7 @@ country_event = {
 			#	annex_country = { target = FIC }
 			#	release = FIC
 			#}
-		#}
+		}
 		#####MODDED#####
 		ENG = {
 			country_event = france.11
