@@ -227,7 +227,7 @@ country_event = {
 		set_global_flag = fall_of_france
 		#####MODDED#####vvv
 		FRA = { end_puppet = FIC }
-		remove_from_faction = FIC
+		ENG = { remove_from_faction = FIC }
 		hidden_effect = {
 			every_country = {
 				limit = {
@@ -258,7 +258,7 @@ country_event = {
 		}
 		#####MODDED#####vvv
 		FRA = { end_puppet = FIC }
-		remove_from_faction = FIC
+		ENG = { remove_from_faction = FIC }
 		hidden_effect = {
 			every_country = {
 				limit = {
@@ -293,7 +293,7 @@ country_event = {
 		}
 		#####MODDED#####vvv
 		FRA = { end_puppet = FIC }
-		remove_from_faction = FIC
+		ENG = { remove_from_faction = FIC }
 		hidden_effect = {
 			every_country = {
 				limit = {

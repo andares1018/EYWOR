@@ -71,13 +71,6 @@ country_event = {
 	option = {
 		name = rcmindochina.3.a
 		hidden_effect = {
-			random_other_country = {
-				limit = {
-					original_tag = FRA
-					has_government = fascism
-				}
-				puppet = ROOT
-			}
 			kill_country_leader = yes
 		}
 		set_politics = { ruling_party = fascism }

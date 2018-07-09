@@ -756,4 +756,33 @@ spriteTypes = {
 		name = "GFX_idea_MEN_limited_war"
 		texturefile = "gfx/interface/ideas/MEN_limited_war.dds"
 	}
+	######KOR#####
+	spriteType = {
+		name = "GFX_idea_cho_byeongok"
+		texturefile = "gfx/interface/ideas/idea_cho_byeongok.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_cho_dong_ho"
+		texturefile = "gfx/interface/ideas/idea_cho_dong_ho.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_jang_taeksang"
+		texturefile = "gfx/interface/ideas/idea_jang_taeksang.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_lee_siyeong"
+		texturefile = "gfx/interface/ideas/idea_lee_siyeong.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_park_heon_young"
+		texturefile = "gfx/interface/ideas/idea_park_heon_young.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_yi_beom_seok"
+		texturefile = "gfx/interface/ideas/idea_yi_beom_seok.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_kim_byeongro"
+		texturefile = "gfx/interface/ideas/idea_kim_byeongro.dds"
+	}
 }
