@@ -210,10 +210,18 @@ create_country_leader = {
 	ideology = democratic_centralism
 }
 
-create_country_leader = { #not the best choice but...
-	name = "Phan Boi Châu"
+#create_country_leader = { #not the best choice but...
+#	name = "Phan Boi Châu"
+#	desc = ""
+#	picture = "Portrait_Indochina_Phan_Boi_Chau.dds"
+#	expire = "1953.3.1"
+#	ideology = n_socialism_ideology
+#}
+
+create_country_leader = {
+	name = "Nguyen Tuong Tam"
 	desc = ""
-	picture = "Portrait_Indochina_Phan_Boi_Chau.dds"
+	picture = "Portrait_Indochina_Nguyen_Tuong_Tam.dds"
 	expire = "1953.3.1"
 	ideology = n_socialism_ideology
 }
