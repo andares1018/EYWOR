@@ -378,40 +378,43 @@ country_event = {
 	}
 	option = {}
 }
-country_event = {
-	id = rcmjapan.28
-	hidden = yes
-	trigger = {
-		tag = MAN
-		has_full_control_of_state = 608
-	}
-	mean_time_to_happen = {
-		days = 0
-	}
-	immediate = {
-		hidden_effect = {
-			JAP = { set_state_controller = 608 }
-		}
-	}
-	option = {}
-}
-country_event = {
-	id = rcmjapan.29
-	hidden = yes
-	trigger = {
-		tag = MAN
-		has_full_control_of_state = 611
-	}
-	mean_time_to_happen = {
-		days = 0
-	}
-	immediate = {
-		hidden_effect = {
-			ECA = { set_state_controller = 611 }
-		}
-	}
-	option = {}
-}
+#country_event = {
+#	id = rcmjapan.28
+#	hidden = yes
+#	trigger = {
+#		tag = MAN
+#		has_full_control_of_state = 608
+#		has_war_together_with = JAP
+#	}
+#	mean_time_to_happen = {
+#		days = 0
+#	}
+#	immediate = {
+#		hidden_effect = {
+#			JAP = { set_state_controller = 608 }
+#		}
+#	}
+#	option = {}
+#}
+#country_event = {
+#	id = rcmjapan.29
+#	hidden = yes
+#	trigger = {
+#		tag = MAN
+#		has_full_control_of_state = 611
+#		has_war_together_with = JAP
+
+#	}
+#	mean_time_to_happen = {
+#		days = 0
+#	}
+#	immediate = {
+#		hidden_effect = {
+#			ECA = { set_state_controller = 611 }
+#		}
+#	}
+#	option = {}
+#}
 country_event = {
 	id = rcmjapan.30
 	hidden = yes
@@ -5227,8 +5230,7 @@ country_event = {
 		ai_chance = {
 			factor = 0
 		}
-		set_country_flag = no_rebuild_MEJ
-	}
+		set_country_flag = no_rebuild_NSG
 }
 #SCG rebuild #SCG
 country_event = {
@@ -5290,7 +5292,7 @@ country_event = {
 		ai_chance = {
 			factor = 0
 		}
-		set_country_flag = no_rebuild_MEJ
+		set_country_flag = no_rebuild_SCG
 	}
 }
 ######################

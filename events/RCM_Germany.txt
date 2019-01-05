@@ -66,14 +66,22 @@ country_event = {
 			factor = 70
 			modifier = {
 				factor = 0
-				CHI = {
-					GER_will_support = yes
-				}
-				JAP = {
-					NOT = {
-						GER_will_support = yes
+				OR = {
+					AND = {
+						CHI = {
+							GER_will_support = yes
+						}
+						JAP = {
+							NOT = {
+								GER_will_support = yes
+							}
+						}
 					}
+					CHI = {
+						has_idea = CHI_german_coop
+					}		
 				}
+				
 			}
 			modifier = {
 				factor = 50
@@ -114,9 +122,14 @@ country_event = {
 			factor = 30
 			modifier = {
 				factor = 100
-				CHI = {
-					GER_will_support = yes
-				}
+				OR = {
+					CHI = {
+						has_idea = CHI_german_coop
+					}
+					CHI = {
+						GER_will_support = yes
+					}
+				}				
 			}
 			modifier = {
 				factor = 50

@@ -3095,6 +3095,15 @@ focus_tree = {
 				#}
 				load_focus_tree = warlord_generic_communist
 			}
+			else_if = {
+				limit = {
+					has_dlc = "Waking the Tiger"
+				}
+				#hidden_effect = {
+				#	set_cosmetic_tag = CHI_second_republic_blue
+				#}
+				load_focus_tree = warlord_generic_nationalist
+			}
 			every_state = {
 				limit = {
 					has_state_flag = china_core_state
@@ -3116,15 +3125,7 @@ focus_tree = {
 				}
 				add_core_of = ROOT			
 			}
-			else_if = {
-				limit = {
-					has_dlc = "Waking the Tiger"
-				}
-				#hidden_effect = {
-				#	set_cosmetic_tag = CHI_second_republic_blue
-				#}
-				load_focus_tree = warlord_generic_nationalist
-			}
+
 			#custom_effect_tooltip = SIK_Establish_government_tt
 			
 		}

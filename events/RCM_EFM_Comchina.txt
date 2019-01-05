@@ -1964,16 +1964,16 @@ country_event = {  #start training
 				limit = {
 					has_idea = PRC_no_skilled_personnel_1
 				}
-				set_country_flag = {
+				add_timed_idea = {
 					idea = training_program_marker_1 days = 360
 				}
-				set_country_flag = {
+				add_timed_idea = {
 					idea = training_program_marker_2 days = 270
 				}
-				set_country_flag = {
+				add_timed_idea = {
 					idea = training_program_marker_3 days = 180
 				}
-				set_country_flag = {
+				add_timed_idea = {
 					idea = training_program_marker_4 days = 90
 				}
 			}
@@ -1981,13 +1981,13 @@ country_event = {  #start training
 				limit = {
 					has_idea = PRC_no_skilled_personnel_2
 				}
-				set_country_flag = {
+				add_timed_idea = {
 					idea = training_program_marker_2 days = 270
 				}
-				set_country_flag = {
+				add_timed_idea = {
 					idea = training_program_marker_3 days = 180
 				}
-				set_country_flag = {
+				add_timed_idea = {
 					idea = training_program_marker_4 days = 90
 				}
 			}
@@ -1995,10 +1995,10 @@ country_event = {  #start training
 				limit = {
 					has_idea = PRC_no_skilled_personnel_3
 				}
-				set_country_flag = {
+				add_timed_idea = {
 					idea = training_program_marker_3 days = 180
 				}
-				set_country_flag = {
+				add_timed_idea = {
 					idea = training_program_marker_4 days = 90
 				}
 			}
@@ -2006,7 +2006,7 @@ country_event = {  #start training
 				limit = {
 					has_idea = PRC_no_skilled_personnel_4
 				}
-				set_country_flag = {
+				add_timed_idea = {
 					idea = training_program_marker_4 days = 90
 				}
 			}

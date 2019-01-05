@@ -2518,12 +2518,13 @@ focus_tree = {
 			remove_ideas = { central_club  the_blueshirts }
 		}
 		available = {
+			
+			neutrality < 0.40
+			fascism < 0.30
 			OR = {
 				n_socialism > 0.40
 				communism > 0.40
 			}
-			neutrality < 0.40
-			fascism < 0.30
 		}
 		bypass = {
 			AND = {

@@ -103,7 +103,7 @@ create_country_leader = {
 	desc = "POLITICS_LIU_XIANG_DESC"
 	picture = "Portrait_Sichuan_Liu_Xiang.dds"
 	expire = "1938.1.20"
-	id = 3050
+
 	ideology = despotism
 }
 create_country_leader = {
@@ -132,6 +132,7 @@ create_field_marshal = {
 	portrait_path = "gfx/leaders/SIC/Portrait_Sichuan_Liu_Xiang.dds"
 	traits = { infantry_officer offensive_doctrine }
 	skill = 3
+	id = 3050
 	attack_skill = 3
 	defense_skill = 2
 	planning_skill = 3

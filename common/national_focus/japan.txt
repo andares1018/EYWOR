@@ -2584,21 +2584,21 @@ focus_tree = {
 				is_in_faction_with = FIC
 			}
 		}
-		bypass = {
-			OR = {
-				NOT = {
-					country_exists = FIC
-				}
-				has_war_with = FIC
-				AND = {
-					has_completed_focus = oust_germans_focus
-					NOT = {
-						has_global_flag = falkenhausen_recalled
-					}
-				}
-			}
-
-		}
+		#bypass = {
+		#	OR = {
+		#	#	NOT = {
+		#			country_exists = FIC
+		#		}
+		#		has_war_with = FIC
+		#		AND = {
+		#			has_completed_focus = oust_germans_focus
+		#			NOT = {
+		#				has_global_flag = falkenhausen_recalled
+		#			}
+		#		}
+		#	}
+#
+		#}
 	}
 	focus = {
 		id = JAP_exploit_the_southern_resource_area

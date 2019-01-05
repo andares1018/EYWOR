@@ -5576,7 +5576,7 @@ country_event = {
 			limit = {
 				has_dlc = "Waking the Tiger"
 			}
-			load_focus = china_warlord_focus
+			load_focus_tree = china_warlord_focus
 		}
 		create_country_leader = {
 			name = "Fu Zuoyi"
