@@ -1058,12 +1058,6 @@ focus_tree = {
 		prerequisite = {
 			focus = man_infra
 		}
-		prerequisite = {
-			focus = man_infra
-		}
-		prerequisite = {
-			focus = man_infra
-		}
 		x = 1
 		y = 1
 		relative_position_id = man_infra

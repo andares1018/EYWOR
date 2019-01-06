@@ -5231,6 +5231,7 @@ country_event = {
 			factor = 0
 		}
 		set_country_flag = no_rebuild_NSG
+	}
 }
 #SCG rebuild #SCG
 country_event = {
