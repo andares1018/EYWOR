@@ -50,7 +50,7 @@ set_politics = {
 create_country_leader = {
 	name = "Sukarno"
 	desc = ""
-	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_land_5.dds"
+	picture = "gfx/leaders/INS/Portrait_Indonesia_Sukarno.dds"
 	expire = "1953.3.1"
 	ideology = socialism #Marhaenism his own unique mix of stuff
 	traits = {
@@ -59,20 +59,9 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "A. T. van Starkenborgh Stachouwer"
-	desc = ""
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_2.dds"
-	expire = "1953.3.1"
-	ideology = conservatism 
-	traits = {
-		
-	}
-}
-
-create_country_leader = {
 	name = "Amir Sjarifuddin Harahap"
 	desc = ""
-	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_1.dds"
+	picture = "gfx/leaders/INS/Portrait_Asia_Generic_1.dds"
 	expire = "1953.3.1"
 	ideology = marxism
 	traits = {
@@ -83,7 +72,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Suharto"
 	desc = ""
-	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_fascism.dds"
+	picture = "gfx/leaders/INS/Portrait_Indonesia_Suharto.dds"
 	expire = "1953.3.1"
 	ideology = fascism_ideology # except for no connection to catholicism, this party perfectly fits into falangism 
 	traits = {
@@ -92,11 +81,11 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "E. T. van Starkenborgh Stachouwer"
+	name = "Bonifacius de Jonge"
 	desc = ""
-	picture = "gfx/leaders/INS/Portrait_Edzard_Tjarda_van_Starkenborgh_Stachouwer.dds"
+	picture = "gfx/leaders/INS/Portrait_Indonesia_Bonifacius_De_Jonge.dds"
 	expire = "1953.3.1"
-	ideology = despotism
+	ideology = despotism 
 	traits = {
 		
 	}

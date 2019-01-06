@@ -256,5 +256,9 @@ spriteTypes = {
 		name = "GFX_news_event_operation_august_storm"
 		texturefile = "gfx/event_pictures/news_event_august_storm.dds"
 	}
+	spriteType = {
+		name = "GFX_report_event_burma_government_house"
+		texturefile = "gfx/event_pictures/burma_government_house.dds"
+	}
 	
 }
