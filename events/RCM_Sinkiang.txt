@@ -2090,18 +2090,18 @@ country_event = {
 	
 	is_triggered_only = yes
 	option = {
-		ai_chance = { factor = 70 }
+		ai_chance = { factor = 40 }
 		name = Sinkiang.70.a
 		FROM = { country_event = { id = Sinkiang.73 days = 1 } }
 	}
+	#option = {
+	#	ai_chance = { factor = 0 }
+	#	name = Sinkiang.70.b
+	#	FROM = { country_event = { id = Sinkiang.71 days = 1 } }
+	#}
 	option = {
-		ai_chance = { factor = 20 }
-		name = Sinkiang.70.b
-		FROM = { country_event = { id = Sinkiang.71 days = 1 } }
-	}
-	option = {
-		ai_chance = { factor = 10 }
-		name = Sinkiang.70.b
+		ai_chance = { factor = 60 }
+		name = Sinkiang.70.c
 		FROM = { country_event = { id = Sinkiang.72 days = 1 } }
 	}
 }

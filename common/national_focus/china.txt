@@ -368,7 +368,7 @@ focus_tree = {
 	focus = {
 		id = CHI_order_destroyers
 		icon = GFX_goal_generic_navy_anti_submarine
-		cost = 10.00
+		cost = 8.00
 		prerequisite = {
 			focus = ack_hiro_sen_focus
 		}
@@ -402,7 +402,7 @@ focus_tree = {
 	focus = {
 		id = CHI_light_cruiser_project
 		icon = GFX_goal_generic_navy_cruiser
-		cost = 10.00
+		cost = 8.00
 		prerequisite = {
 			focus = CHI_order_destroyers
 		}
@@ -433,7 +433,7 @@ focus_tree = {
 	focus = {
 		id = CHI_modern_submarines
 		icon = GFX_goal_generic_navy_submarine
-		cost = 10.00
+		cost = 8.00
 		prerequisite = {
 			focus = CHI_order_destroyers
 		}
@@ -464,7 +464,7 @@ focus_tree = {
 	focus = {
 		id = CHI_investment_into_shipbuilding
 		icon = GFX_goal_generic_construct_naval_dockyard
-		cost = 10.00
+		cost = 8.00
 		prerequisite = {
 			focus = CHI_light_cruiser_project
 			focus = CHI_modern_submarines
@@ -520,7 +520,7 @@ focus_tree = {
 	focus = {
 		id = CHI_train_marines
 		icon = GFX_goal_generic_amphibious_assault
-		cost = 10.00
+		cost = 8.00
 		prerequisite = {
 			focus = CHI_investment_into_shipbuilding
 		}
@@ -552,7 +552,7 @@ focus_tree = {
 	focus = {
 		id = CHI_heavy_cruiser_project
 		icon = GFX_goal_generic_navy_battleship
-		cost = 10.00
+		cost = 8.00
 		prerequisite = {
 			focus = CHI_light_cruiser_project
 		}
@@ -583,7 +583,7 @@ focus_tree = {
 	focus = {
 		id = CHI_coastal_patrol_planes
 		icon = GFX_goal_generic_air_naval_bomber
-		cost = 10.00
+		cost = 8.00
 		prerequisite = {
 			focus = CHI_modern_submarines
 		}
@@ -614,7 +614,7 @@ focus_tree = {
 	focus = {
 		id = CHI_naval_aviation
 		icon = GFX_goal_generic_navy_carrier
-		cost = 10.00
+		cost = 8.00
 		prerequisite = {
 			focus = CHI_heavy_cruiser_project
 			focus = CHI_coastal_patrol_planes
@@ -650,7 +650,7 @@ focus_tree = {
 	focus = {
 		id = CHI_carrier_air_wing
 		icon = GFX_goal_generic_occupy_start_war
-		cost = 10.00
+		cost = 8.00
 		prerequisite = {
 			focus = CHI_naval_aviation
 		}
@@ -919,7 +919,7 @@ focus_tree = {
 	focus = {
 		id = government_reorganization
 		icon = GFX_goal_generic_demand_territory
-		cost = 10.00
+		cost = 8.00
 		prerequisite = {
 			focus = ban_communism
 			focus = wang_coup
@@ -945,7 +945,7 @@ focus_tree = {
 	focus = {
 		id = military_indoctrination
 		icon = GFX_goal_generic_propaganda
-		cost = 10.00
+		cost = 8.00
 		prerequisite = {
 			focus = CHI_strengthen_chiangs_rule
 		}
@@ -972,7 +972,7 @@ focus_tree = {
 	focus = {
 		id = CHI_Faction_Research_jap
 		icon = GFX_goal_tfv_generic_tech_sharing
-		cost = 10.00
+		cost = 8.00
 		prerequisite = {
 			focus = government_reorganization
 		}
@@ -1088,7 +1088,7 @@ focus_tree = {
 	focus = {
 		id = an_inch_of_mountain_an_inch_of_blood
 		icon = GFX_focus_generic_little_entente
-		cost = 10.00
+		cost = 8.00
 		prerequisite = {
 			focus = CHI_lushan_focus
 		}
@@ -1422,7 +1422,7 @@ focus_tree = {
 	focus = {
 		id = CHI_take_what_we_can_take
 		icon = GFX_goal_generic_small_arms
-		cost = 10.00
+		cost = 8.00
 		prerequisite = {
 			focus = CHI_lushan_focus
 		}
@@ -1818,7 +1818,7 @@ focus_tree = {
 	focus = {
 		id = CHI_scorched_earth_tactics
 		icon = GFX_focus_generic_strike_at_democracy1
-		cost = 10.00
+		cost = 8.00
 		prerequisite = {
 			focus = big_rear_plan
 		}
@@ -1848,7 +1848,7 @@ focus_tree = {
 	focus = {
 		id = last-ditch_effort
 		icon = GFX_focus_last_ditch
-		cost = 10.00
+		cost = 8.00
 		prerequisite = {
 			focus = CHI_scorched_earth_tactics
 		}
@@ -2321,7 +2321,7 @@ focus_tree = {
 	focus = {
 		id = rethink_socialist_values
 		icon = GFX_focus_prc_agrarian_socialism
-		cost = 10.00
+		cost = 8.00
 		prerequisite = {
 			focus = apologize_for_the_purge
 		}
@@ -2344,7 +2344,7 @@ focus_tree = {
 	focus = {
 		id = zhang_lan_doctrine
 		icon = GFX_zhang_lan_focus
-		cost = 10.00
+		cost = 8.00
 		prerequisite = {
 			focus = rethink_socialist_values
 		}
@@ -2377,7 +2377,7 @@ focus_tree = {
 	focus = {
 		id = socialist_realism
 		icon = GFX_goal_generic_production2
-		cost = 10.00
+		cost = 8.00
 		prerequisite = {
 			focus = zhang_lan_doctrine
 		}
@@ -2400,7 +2400,7 @@ focus_tree = {
 	focus = {
 		id = qixiang_doctrine
 		icon = GFX_qixiang_focus
-		cost = 10.00
+		cost = 8.00
 		prerequisite = {
 			focus = rethink_socialist_values
 		}
@@ -2428,7 +2428,7 @@ focus_tree = {
 	focus = {
 		id = land_reform
 		icon = GFX_goal_generic_position_armies
-		cost = 10.00
+		cost = 8.00
 		prerequisite = {
 			focus = zhang_lan_doctrine
 			focus = qixiang_doctrine
@@ -2650,7 +2650,7 @@ focus_tree = {
 	focus = {
 		id = CHI_workers_culture
 		icon = GFX_focus_YUG_pan_slavic_congress
-		cost = 10.00
+		cost = 8.00
 		prerequisite = {
 			focus = qixiang_doctrine
 		}
@@ -2878,7 +2878,7 @@ focus_tree = {
 	focus = {
 		id = found_mbis
 		icon = GFX_focus_juntong
-		cost = 10.00
+		cost = 8.00
 		prerequisite = {
 			focus = strengthen_bs
 		}
@@ -2903,7 +2903,7 @@ focus_tree = {
 	focus = {
 		id = espionage_network
 		icon = GFX_goal_espionage_network
-		cost = 10.00
+		cost = 8.00
 		prerequisite = {
 			focus = found_mbis
 		}
@@ -4392,7 +4392,7 @@ focus_tree = {
 	focus = {
 		id = CHI_liberty_ethos
 		icon = GFX_goal_support_democracy
-		cost = 10.00
+		cost = 7.00
 		prerequisite = {
 			focus = democratism_focus
 		}
@@ -4619,7 +4619,7 @@ focus_tree = {
 	focus = {
 		id = CHI_whampoa_rifle
 		icon = GFX_focus_secret_rearmament
-		cost = 10.00
+		cost = 8.00
 		prerequisite = {
 			focus = CHI_reform_military_academy
 		}
@@ -4877,7 +4877,7 @@ focus_tree = {
 	focus = {
 		id = CHI_internal_air_focus
 		icon = GFX_goal_generic_air_production
-		cost = 10.00
+		cost = 8.00
 		prerequisite = {
 			focus = CHI_technical_school_focus
 		}
@@ -4950,7 +4950,7 @@ focus_tree = {
 	focus = {
 		id = CHI_land_focus
 		icon = GFX_goal_generic_air_fighter
-		cost = 10.00
+		cost = 8.00
 		prerequisite = {
 			focus = CHI_internal_air_focus
 		}
@@ -4967,7 +4967,7 @@ focus_tree = {
 	focus = {
 		id = CHI_coast_focus
 		icon = GFX_goal_generic_air_naval_bomber
-		cost = 10.00
+		cost = 8.00
 		prerequisite = {
 			focus = CHI_internal_air_focus
 		}
@@ -5062,7 +5062,7 @@ focus_tree = {
 	focus = {
 		id = CHI_internal_navy_focus
 		icon = GFX_goal_generic_navy_battleship
-		cost = 10.00
+		cost = 8.00
 		prerequisite = {
 			focus = CHI_study_foreign_ship
 		}
@@ -6957,7 +6957,7 @@ focus_tree = {
 	focus = {
 		id = found_cbis
 		icon = GFX_focus_jongtong
-		cost = 10.00
+		cost = 8.00
 		prerequisite = {
 			focus = strengthen_cc
 		}
@@ -7032,6 +7032,10 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.2
+			}
 			if = {
 				limit = {
 					NOT = {
@@ -7070,10 +7074,7 @@ focus_tree = {
 					remove_idea = CBIS
 				}
 			}
-			add_popularity = {
-				ideology = neutrality
-				popularity = 0.2
-			}
+			
 		}
 		available = {
 

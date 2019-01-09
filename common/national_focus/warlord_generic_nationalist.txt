@@ -1291,8 +1291,26 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_political_power = 100
-			custom_effect_tooltip = enable_ci_focus_tt
-			custom_effect_tooltip = warning_ci_tt
+			random_state = {
+				limit = { #can do
+					is_controlled_by = ROOT
+					has_state_flag = commie_ridden_states
+					#state = var:communist_crackdown_temp
+				}
+				state_event = RCM_communist_uprising.3
+				clr_state_flag = commie_ridden_states
+				set_border_war = no
+			}
+			random_state = {
+				limit = { #can do
+					is_controlled_by = ROOT
+					has_state_flag = commie_ridden_states
+					#state = var:communist_crackdown_temp
+				}
+				state_event = RCM_communist_uprising.3
+				clr_state_flag = commie_ridden_states
+				set_border_war = no
+			}
 		}
 	}
 	focus = {

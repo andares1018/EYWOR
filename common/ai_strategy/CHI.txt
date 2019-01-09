@@ -286,19 +286,19 @@ ger_actually_love_china = {
 	ai_strategy = {
 		type = befriend
 		id = "CHI"
-		value = 50
+		value = 30
 	}
 	
 	ai_strategy = {
 		type = antagonize
 		id = "CHI"
-		value = -100
+		value = -80
 	}
 	
 	ai_strategy = {
 		type = conquer
 		id = "CHI"
-		value = -150
+		value = -100
 	}
 }
 

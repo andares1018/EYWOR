@@ -937,7 +937,7 @@ JAP_pacific_guardian = {
 		}
 
 		complete_effect = {
-			HOL = { country_event = { id = wtt_japan.1 } }
+			HOL = { country_event = { id = rcmjapan.108 } }
 		}
 	}
 
@@ -971,7 +971,7 @@ JAP_pacific_guardian = {
 		}
 
 		complete_effect = {
-			ENG = { country_event = { id = wtt_japan.1 } }
+			ENG = { country_event = { id = rcmjapan.108 } }
 		}
 	}
 
@@ -980,14 +980,9 @@ JAP_pacific_guardian = {
 		icon = jap_pacific_guardian
 
 		available = {
-			FRA = {
+			FIC = {
 				#has_capitulated = yes
-				OR = {
-					has_full_control_of_state = 670
-					has_full_control_of_state = 671
-					has_full_control_of_state = 286
-					has_full_control_of_state = 741
-				}
+				is_subject_of = FRA
 			}
 		}
 
@@ -1007,8 +1002,8 @@ JAP_pacific_guardian = {
 			factor = 1
 		}
 
-		complete_effect = {
-			FRA = { country_event = { id = wtt_japan.1 } }
+		complete_effect = { 
+			FRA = { country_event = { id = rcmjapan.108 } }
 		}
 	}
 }

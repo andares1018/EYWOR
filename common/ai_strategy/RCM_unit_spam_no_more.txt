@@ -16,12 +16,12 @@
 ###UNIT LIMITER### - Should be added in the "default" AI strategy file
 production_unit_0_ratios = {
 	enable = {
-		OR = {
-			NOT = {
-				tag = GER
-			}
-			has_completed_focus = GER_end_of_czechoslovakia
-		}
+		#OR = {
+		#	NOT = {
+		#		tag = GER
+		#	}
+		#	has_completed_focus = GER_end_of_czechoslovakia
+		#}
 		NOT = {
 			OR = {
 				tag = JAP
@@ -30,7 +30,7 @@ production_unit_0_ratios = {
 			}
 		}
 		AND = {
-			num_of_factories < 0
+			num_of_military_factories < 1
 			num_divisions > 0
 		}
 	}
@@ -44,7 +44,7 @@ production_unit_0_ratios = {
 				}
 			}
 			AND = {
-				num_of_factories < 0
+				num_of_military_factories < 1
 				num_divisions > 0
 			}
 		}
@@ -77,12 +77,12 @@ production_unit_0_ratios = {
 }
 production_unit_5_ratios = {
 	enable = {
-		OR = {
-			NOT = {
-				tag = GER
-			}
-			has_completed_focus = GER_end_of_czechoslovakia
-		}
+		#OR = {
+		#	NOT = {
+		#		tag = GER
+		#	}
+		#	has_completed_focus = GER_end_of_czechoslovakia
+		#}
 		NOT = {
 			OR = {
 				tag = JAP
@@ -91,7 +91,7 @@ production_unit_5_ratios = {
 			}
 		}
 		AND = {
-			num_of_factories < 5
+			num_of_military_factories < 5
 			num_divisions > 5
 		}
 	}
@@ -105,7 +105,7 @@ production_unit_5_ratios = {
 				}
 			}
 			AND = {
-				num_of_factories < 5
+				num_of_military_factories < 5
 				num_divisions > 5
 			}
 		}
@@ -138,12 +138,12 @@ production_unit_5_ratios = {
 }
 production_unit_10_ratios = {
 	enable = {
-		OR = {
-			NOT = {
-				tag = GER
-			}
-			has_completed_focus = GER_end_of_czechoslovakia
-		}
+		#OR = {
+		#	NOT = {
+		#		tag = GER
+		#	}
+		#	has_completed_focus = GER_end_of_czechoslovakia
+		#}
 		NOT = {
 			OR = {
 				tag = JAP
@@ -152,7 +152,7 @@ production_unit_10_ratios = {
 			}
 		}
 		AND = {
-			num_of_factories < 10
+			num_of_military_factories < 10
 			num_divisions > 10
 		}
 	}
@@ -166,7 +166,7 @@ production_unit_10_ratios = {
 				}
 			}
 			AND = {
-				num_of_factories < 10
+				num_of_military_factories < 10
 				num_divisions > 10
 			}
 		}
@@ -199,12 +199,12 @@ production_unit_10_ratios = {
 }
 production_unit_15_ratios = {
 	enable = {
-		OR = {
-			NOT = {
-				tag = GER
-			}
-			has_completed_focus = GER_end_of_czechoslovakia
-		}
+		#OR = {
+		#	NOT = {
+		#		tag = GER
+		#	}
+		#	has_completed_focus = GER_end_of_czechoslovakia
+		#}
 		NOT = {
 			OR = {
 				tag = JAP
@@ -213,7 +213,7 @@ production_unit_15_ratios = {
 			}
 		}
 		AND = {
-			num_of_factories < 15
+			num_of_military_factories < 15
 			num_divisions > 15
 		}
 	}
@@ -227,7 +227,7 @@ production_unit_15_ratios = {
 				}
 			}
 			AND = {
-				num_of_factories < 15
+				num_of_military_factories < 15
 				num_divisions > 15
 			}
 		}
@@ -260,12 +260,12 @@ production_unit_15_ratios = {
 }
 production_unit_20_ratios = {
 	enable = {
-		OR = {
-			NOT = {
-				tag = GER
-			}
-			has_completed_focus = GER_end_of_czechoslovakia
-		}
+		#OR = {
+		#	NOT = {
+		#		tag = GER
+		#	}
+		#	has_completed_focus = GER_end_of_czechoslovakia
+		#}
 		NOT = {
 			OR = {
 				tag = JAP
@@ -274,7 +274,7 @@ production_unit_20_ratios = {
 			}
 		}
 		AND = {
-			num_of_factories < 20
+			num_of_military_factories < 20
 			num_divisions > 20
 		}
 	}
@@ -288,7 +288,7 @@ production_unit_20_ratios = {
 				}
 			}
 			AND = {
-				num_of_factories < 20
+				num_of_military_factories < 20
 				num_divisions > 20
 			}
 		}
@@ -321,12 +321,12 @@ production_unit_20_ratios = {
 }
 production_unit_25_ratios = {
 	enable = {
-		OR = {
-			NOT = {
-				tag = GER
-			}
-			has_completed_focus = GER_end_of_czechoslovakia
-		}
+		#OR = {
+		#	NOT = {
+		#		tag = GER
+		#	}
+		#	has_completed_focus = GER_end_of_czechoslovakia
+		#}
 		NOT = {
 			OR = {
 				tag = JAP
@@ -335,7 +335,7 @@ production_unit_25_ratios = {
 			}
 		}
 		AND = {
-			num_of_factories < 25
+			num_of_military_factories < 25
 			num_divisions > 25
 		}
 	}
@@ -349,7 +349,7 @@ production_unit_25_ratios = {
 				}
 			}
 			AND = {
-				num_of_factories < 25
+				num_of_military_factories < 25
 				num_divisions > 25
 			}
 		}
@@ -382,12 +382,12 @@ production_unit_25_ratios = {
 }
 production_unit_30_ratios = {
 	enable = {
-		OR = {
-			NOT = {
-				tag = GER
-			}
-			has_completed_focus = GER_end_of_czechoslovakia
-		}
+		#OR = {
+		#	NOT = {
+		#		tag = GER
+		#	}
+		#	has_completed_focus = GER_end_of_czechoslovakia
+		#}
 		NOT = {
 			OR = {
 				tag = JAP
@@ -396,7 +396,7 @@ production_unit_30_ratios = {
 			}
 		}
 		AND = {
-			num_of_factories < 30
+			num_of_military_factories < 30
 			num_divisions > 30
 		}
 	}
@@ -410,7 +410,7 @@ production_unit_30_ratios = {
 				}
 			}
 			AND = {
-				num_of_factories < 30
+				num_of_military_factories < 30
 				num_divisions > 30
 			}
 		}
@@ -443,12 +443,12 @@ production_unit_30_ratios = {
 }
 production_unit_35_ratios = {
 	enable = {
-		OR = {
-			NOT = {
-				tag = GER
-			}
-			has_completed_focus = GER_end_of_czechoslovakia
-		}
+		#OR = {
+		#	NOT = {
+		#		tag = GER
+		#	}
+		#	has_completed_focus = GER_end_of_czechoslovakia
+		#}
 		NOT = {
 			OR = {
 				tag = JAP
@@ -457,7 +457,7 @@ production_unit_35_ratios = {
 			}
 		}
 		AND = {
-			num_of_factories < 35
+			num_of_military_factories < 35
 			num_divisions > 35
 		}
 	}
@@ -471,7 +471,7 @@ production_unit_35_ratios = {
 				}
 			}
 			AND = {
-				num_of_factories < 35
+				num_of_military_factories < 35
 				num_divisions > 35
 			}
 		}
@@ -504,12 +504,12 @@ production_unit_35_ratios = {
 }
 production_unit_40_ratios = {
 	enable = {
-		OR = {
-			NOT = {
-				tag = GER
-			}
-			has_completed_focus = GER_end_of_czechoslovakia
-		}
+		#OR = {
+		#	NOT = {
+		#		tag = GER
+		#	}
+		#	has_completed_focus = GER_end_of_czechoslovakia
+		#}
 		NOT = {
 			OR = {
 				tag = JAP
@@ -518,7 +518,7 @@ production_unit_40_ratios = {
 			}
 		}
 		AND = {
-			num_of_factories < 40
+			num_of_military_factories < 40
 			num_divisions > 40
 		}
 	}
@@ -532,7 +532,7 @@ production_unit_40_ratios = {
 				}
 			}
 			AND = {
-				num_of_factories < 40
+				num_of_military_factories < 40
 				num_divisions > 40
 			}
 		}
@@ -565,12 +565,12 @@ production_unit_40_ratios = {
 }
 production_unit_45_ratios = {
 	enable = {
-		OR = {
-			NOT = {
-				tag = GER
-			}
-			has_completed_focus = GER_end_of_czechoslovakia
-		}
+		#OR = {
+		#	NOT = {
+		#		tag = GER
+		#	}
+		#	has_completed_focus = GER_end_of_czechoslovakia
+		#}
 		NOT = {
 			OR = {
 				tag = JAP
@@ -579,7 +579,7 @@ production_unit_45_ratios = {
 			}
 		}
 		AND = {
-			num_of_factories < 45
+			num_of_military_factories < 45
 			num_divisions > 45
 		}
 	}
@@ -593,7 +593,7 @@ production_unit_45_ratios = {
 				}
 			}
 			AND = {
-				num_of_factories < 45
+				num_of_military_factories < 45
 				num_divisions > 45
 			}
 		}
@@ -626,12 +626,12 @@ production_unit_45_ratios = {
 }
 production_unit_50_ratios = {
 	enable = {
-		OR = {
-			NOT = {
-				tag = GER
-			}
-			has_completed_focus = GER_end_of_czechoslovakia
-		}
+		#OR = {
+		#	NOT = {
+		#		tag = GER
+		#	}
+		#	has_completed_focus = GER_end_of_czechoslovakia
+		#}
 		NOT = {
 			OR = {
 				tag = JAP
@@ -640,7 +640,7 @@ production_unit_50_ratios = {
 			}
 		}
 		AND = {
-			num_of_factories < 50
+			num_of_military_factories < 50
 			num_divisions > 50
 		}
 	}
@@ -654,7 +654,7 @@ production_unit_50_ratios = {
 				}
 			}
 			AND = {
-				num_of_factories < 50
+				num_of_military_factories < 50
 				num_divisions > 50
 			}
 		}
@@ -687,12 +687,12 @@ production_unit_50_ratios = {
 }
 production_unit_55_ratios = {
 	enable = {
-		OR = {
-			NOT = {
-				tag = GER
-			}
-			has_completed_focus = GER_end_of_czechoslovakia
-		}
+		#OR = {
+		#	NOT = {
+		#		tag = GER
+		#	}
+		#	has_completed_focus = GER_end_of_czechoslovakia
+		#}
 		NOT = {
 			OR = {
 				tag = JAP
@@ -701,7 +701,7 @@ production_unit_55_ratios = {
 			}
 		}
 		AND = {
-			num_of_factories < 55
+			num_of_military_factories < 55
 			num_divisions > 55
 		}
 	}
@@ -715,7 +715,7 @@ production_unit_55_ratios = {
 				}
 			}
 			AND = {
-				num_of_factories < 55
+				num_of_military_factories < 55
 				num_divisions > 55
 			}
 		}
@@ -748,12 +748,12 @@ production_unit_55_ratios = {
 }
 production_unit_60_ratios = {
 	enable = {
-		OR = {
-			NOT = {
-				tag = GER
-			}
-			has_completed_focus = GER_end_of_czechoslovakia
-		}
+		#OR = {
+		#	NOT = {
+		#		tag = GER
+		#	}
+		#	has_completed_focus = GER_end_of_czechoslovakia
+		#}
 		NOT = {
 			OR = {
 				tag = JAP
@@ -762,7 +762,7 @@ production_unit_60_ratios = {
 			}
 		}
 		AND = {
-			num_of_factories < 60
+			num_of_military_factories < 60
 			num_divisions > 60
 		}
 	}
@@ -776,7 +776,7 @@ production_unit_60_ratios = {
 				}
 			}
 			AND = {
-				num_of_factories < 60
+				num_of_military_factories < 60
 				num_divisions > 60
 			}
 		}
@@ -809,12 +809,12 @@ production_unit_60_ratios = {
 }
 production_unit_65_ratios = {
 	enable = {
-		OR = {
-			NOT = {
-				tag = GER
-			}
-			has_completed_focus = GER_end_of_czechoslovakia
-		}
+		#OR = {
+		#	NOT = {
+		#		tag = GER
+		#	}
+		#	has_completed_focus = GER_end_of_czechoslovakia
+		#}
 		NOT = {
 			OR = {
 				tag = JAP
@@ -823,7 +823,7 @@ production_unit_65_ratios = {
 			}
 		}
 		AND = {
-			num_of_factories < 65
+			num_of_military_factories < 65
 			num_divisions > 65
 		}
 	}
@@ -837,7 +837,7 @@ production_unit_65_ratios = {
 				}
 			}
 			AND = {
-				num_of_factories < 65
+				num_of_military_factories < 65
 				num_divisions > 65
 			}
 		}
@@ -870,12 +870,12 @@ production_unit_65_ratios = {
 }
 production_unit_70_ratios = {
 	enable = {
-		OR = {
-			NOT = {
-				tag = GER
-			}
-			has_completed_focus = GER_end_of_czechoslovakia
-		}
+		#OR = {
+		#	NOT = {
+		#		tag = GER
+		#	}
+		#	has_completed_focus = GER_end_of_czechoslovakia
+		#}
 		NOT = {
 			OR = {
 				tag = JAP
@@ -884,7 +884,7 @@ production_unit_70_ratios = {
 			}
 		}
 		AND = {
-			num_of_factories < 70
+			num_of_military_factories < 70
 			num_divisions > 70
 		}
 	}
@@ -898,7 +898,7 @@ production_unit_70_ratios = {
 				}
 			}
 			AND = {
-				num_of_factories < 70
+				num_of_military_factories < 70
 				num_divisions > 70
 			}
 		}
@@ -931,12 +931,12 @@ production_unit_70_ratios = {
 }
 production_unit_75_ratios = {
 	enable = {
-		OR = {
-			NOT = {
-				tag = GER
-			}
-			has_completed_focus = GER_end_of_czechoslovakia
-		}
+		#OR = {
+		#	NOT = {
+		#		tag = GER
+		#	}
+		#	has_completed_focus = GER_end_of_czechoslovakia
+		#}
 		NOT = {
 			OR = {
 				tag = JAP
@@ -945,7 +945,7 @@ production_unit_75_ratios = {
 			}
 		}
 		AND = {
-			num_of_factories < 75
+			num_of_military_factories < 75
 			num_divisions > 75
 		}
 	}
@@ -959,7 +959,7 @@ production_unit_75_ratios = {
 				}
 			}
 			AND = {
-				num_of_factories < 75
+				num_of_military_factories < 75
 				num_divisions > 75
 			}
 		}
@@ -992,12 +992,12 @@ production_unit_75_ratios = {
 }
 production_unit_80_ratios = {
 	enable = {
-		OR = {
-			NOT = {
-				tag = GER
-			}
-			has_completed_focus = GER_end_of_czechoslovakia
-		}
+		#OR = {
+		#	NOT = {
+		#		tag = GER
+		#	}
+		#	has_completed_focus = GER_end_of_czechoslovakia
+		#}
 		NOT = {
 			OR = {
 				tag = JAP
@@ -1006,7 +1006,7 @@ production_unit_80_ratios = {
 			}
 		}
 		AND = {
-			num_of_factories < 80
+			num_of_military_factories < 80
 			num_divisions > 80
 		}
 	}
@@ -1020,7 +1020,7 @@ production_unit_80_ratios = {
 				}
 			}
 			AND = {
-				num_of_factories < 80
+				num_of_military_factories < 80
 				num_divisions > 80
 			}
 		}
@@ -1053,12 +1053,12 @@ production_unit_80_ratios = {
 }
 production_unit_85_ratios = {
 	enable = {
-		OR = {
-			NOT = {
-				tag = GER
-			}
-			has_completed_focus = GER_end_of_czechoslovakia
-		}
+		#OR = {
+		#	NOT = {
+		#		tag = GER
+		#	}
+		#	has_completed_focus = GER_end_of_czechoslovakia
+		#}
 		NOT = {
 			OR = {
 				tag = JAP
@@ -1067,7 +1067,7 @@ production_unit_85_ratios = {
 			}
 		}
 		AND = {
-			num_of_factories < 85
+			num_of_military_factories < 85
 			num_divisions > 85
 		}
 	}
@@ -1081,7 +1081,7 @@ production_unit_85_ratios = {
 				}
 			}
 			AND = {
-				num_of_factories < 85
+				num_of_military_factories < 85
 				num_divisions > 85
 			}
 		}
@@ -1114,12 +1114,12 @@ production_unit_85_ratios = {
 }
 production_unit_90_ratios = {
 	enable = {
-		OR = {
-			NOT = {
-				tag = GER
-			}
-			has_completed_focus = GER_end_of_czechoslovakia
-		}
+		#OR = {
+		#	NOT = {
+		#		tag = GER
+		#	}
+		#	has_completed_focus = GER_end_of_czechoslovakia
+		#}
 		NOT = {
 			OR = {
 				tag = JAP
@@ -1128,7 +1128,7 @@ production_unit_90_ratios = {
 			}
 		}
 		AND = {
-			num_of_factories < 90
+			num_of_military_factories < 90
 			num_divisions > 90
 		}
 	}
@@ -1142,7 +1142,7 @@ production_unit_90_ratios = {
 				}
 			}
 			AND = {
-				num_of_factories < 90
+				num_of_military_factories < 90
 				num_divisions > 90
 			}
 		}
@@ -1175,12 +1175,12 @@ production_unit_90_ratios = {
 }
 production_unit_95_ratios = {
 	enable = {
-		OR = {
-			NOT = {
-				tag = GER
-			}
-			has_completed_focus = GER_end_of_czechoslovakia
-		}
+		#OR = {
+		#	NOT = {
+		#		tag = GER
+		#	}
+		#	has_completed_focus = GER_end_of_czechoslovakia
+		#}
 		NOT = {
 			OR = {
 				tag = JAP
@@ -1189,7 +1189,7 @@ production_unit_95_ratios = {
 			}
 		}
 		AND = {
-			num_of_factories < 95
+			num_of_military_factories < 95
 			num_divisions > 95
 		}
 	}
@@ -1203,7 +1203,7 @@ production_unit_95_ratios = {
 				}
 			}
 			AND = {
-				num_of_factories < 95
+				num_of_military_factories < 95
 				num_divisions > 95
 			}
 		}
@@ -1236,12 +1236,12 @@ production_unit_95_ratios = {
 }
 production_unit_100_ratios = {
 	enable = {
-		OR = {
-			NOT = {
-				tag = GER
-			}
-			has_completed_focus = GER_end_of_czechoslovakia
-		}
+		#OR = {
+		#	NOT = {
+		#		tag = GER
+		#	}
+		#	has_completed_focus = GER_end_of_czechoslovakia
+		#}
 		NOT = {
 			OR = {
 				tag = JAP
@@ -1250,7 +1250,7 @@ production_unit_100_ratios = {
 			}
 		}
 		AND = {
-			num_of_factories < 100
+			num_of_military_factories < 100
 			num_divisions > 100
 		}
 	}
@@ -1264,7 +1264,7 @@ production_unit_100_ratios = {
 				}
 			}
 			AND = {
-				num_of_factories < 100
+				num_of_military_factories < 100
 				num_divisions > 100
 			}
 		}
@@ -1297,12 +1297,12 @@ production_unit_100_ratios = {
 }
 production_unit_105_ratios = {
 	enable = {
-		OR = {
-			NOT = {
-				tag = GER
-			}
-			has_completed_focus = GER_end_of_czechoslovakia
-		}
+		#OR = {
+		#	NOT = {
+		#		tag = GER
+		#	}
+		#	has_completed_focus = GER_end_of_czechoslovakia
+		#}
 		NOT = {
 			OR = {
 				tag = JAP
@@ -1311,7 +1311,7 @@ production_unit_105_ratios = {
 			}
 		}
 		AND = {
-			num_of_factories < 105
+			num_of_military_factories < 105
 			num_divisions > 105
 		}
 	}
@@ -1325,7 +1325,7 @@ production_unit_105_ratios = {
 				}
 			}
 			AND = {
-				num_of_factories < 105
+				num_of_military_factories < 105
 				num_divisions > 105
 			}
 		}
@@ -1358,12 +1358,12 @@ production_unit_105_ratios = {
 }
 production_unit_110_ratios = {
 	enable = {
-		OR = {
-			NOT = {
-				tag = GER
-			}
-			has_completed_focus = GER_end_of_czechoslovakia
-		}
+		#OR = {
+		#	NOT = {
+		#		tag = GER
+		#	}
+		#	has_completed_focus = GER_end_of_czechoslovakia
+		#}
 		NOT = {
 			OR = {
 				tag = JAP
@@ -1372,7 +1372,7 @@ production_unit_110_ratios = {
 			}
 		}
 		AND = {
-			num_of_factories < 110
+			num_of_military_factories < 110
 			num_divisions > 110
 		}
 	}
@@ -1386,7 +1386,7 @@ production_unit_110_ratios = {
 				}
 			}
 			AND = {
-				num_of_factories < 110
+				num_of_military_factories < 110
 				num_divisions > 110
 			}
 		}
@@ -1419,12 +1419,12 @@ production_unit_110_ratios = {
 }
 production_unit_115_ratios = {
 	enable = {
-		OR = {
-			NOT = {
-				tag = GER
-			}
-			has_completed_focus = GER_end_of_czechoslovakia
-		}
+		#OR = {
+		#	NOT = {
+		#		tag = GER
+		#	}
+		#	has_completed_focus = GER_end_of_czechoslovakia
+		#}
 		NOT = {
 			OR = {
 				tag = JAP
@@ -1433,7 +1433,7 @@ production_unit_115_ratios = {
 			}
 		}
 		AND = {
-			num_of_factories < 115
+			num_of_military_factories < 115
 			num_divisions > 115
 		}
 	}
@@ -1447,7 +1447,7 @@ production_unit_115_ratios = {
 				}
 			}
 			AND = {
-				num_of_factories < 115
+				num_of_military_factories < 115
 				num_divisions > 115
 			}
 		}
@@ -1480,12 +1480,12 @@ production_unit_115_ratios = {
 }
 production_unit_120_ratios = {
 	enable = {
-		OR = {
-			NOT = {
-				tag = GER
-			}
-			has_completed_focus = GER_end_of_czechoslovakia
-		}
+		#OR = {
+		#	NOT = {
+		#		tag = GER
+		#	}
+		#	has_completed_focus = GER_end_of_czechoslovakia
+		#}
 		NOT = {
 			OR = {
 				tag = JAP
@@ -1494,7 +1494,7 @@ production_unit_120_ratios = {
 			}
 		}
 		AND = {
-			num_of_factories < 120
+			num_of_military_factories < 120
 			num_divisions > 120
 		}
 	}
@@ -1508,7 +1508,7 @@ production_unit_120_ratios = {
 				}
 			}
 			AND = {
-				num_of_factories < 120
+				num_of_military_factories < 120
 				num_divisions > 120
 			}
 		}
@@ -1541,12 +1541,12 @@ production_unit_120_ratios = {
 }
 production_unit_125_ratios = {
 	enable = {
-		OR = {
-			NOT = {
-				tag = GER
-			}
-			has_completed_focus = GER_end_of_czechoslovakia
-		}
+		#OR = {
+		#	NOT = {
+		#		tag = GER
+		#	}
+		#	has_completed_focus = GER_end_of_czechoslovakia
+		#}
 		NOT = {
 			OR = {
 				tag = JAP
@@ -1555,7 +1555,7 @@ production_unit_125_ratios = {
 			}
 		}
 		AND = {
-			num_of_factories < 125
+			num_of_military_factories < 125
 			num_divisions > 125
 		}
 	}
@@ -1569,7 +1569,7 @@ production_unit_125_ratios = {
 				}
 			}
 			AND = {
-				num_of_factories < 125
+				num_of_military_factories < 125
 				num_divisions > 125
 			}
 		}
@@ -1602,12 +1602,12 @@ production_unit_125_ratios = {
 }
 production_unit_130_ratios = {
 	enable = {
-		OR = {
-			NOT = {
-				tag = GER
-			}
-			has_completed_focus = GER_end_of_czechoslovakia
-		}
+		#OR = {
+		#	NOT = {
+		#		tag = GER
+		#	}
+		#	has_completed_focus = GER_end_of_czechoslovakia
+		#}
 		NOT = {
 			OR = {
 				tag = JAP
@@ -1616,7 +1616,7 @@ production_unit_130_ratios = {
 			}
 		}
 		AND = {
-			num_of_factories < 130
+			num_of_military_factories < 130
 			num_divisions > 130
 		}
 	}
@@ -1630,7 +1630,7 @@ production_unit_130_ratios = {
 				}
 			}
 			AND = {
-				num_of_factories < 130
+				num_of_military_factories < 130
 				num_divisions > 130
 			}
 		}
@@ -1663,12 +1663,12 @@ production_unit_130_ratios = {
 }
 production_unit_135_ratios = {
 	enable = {
-		OR = {
-			NOT = {
-				tag = GER
-			}
-			has_completed_focus = GER_end_of_czechoslovakia
-		}
+		#OR = {
+		#	NOT = {
+		#		tag = GER
+		#	}
+		#	has_completed_focus = GER_end_of_czechoslovakia
+		#}
 		NOT = {
 			OR = {
 				tag = JAP
@@ -1677,7 +1677,7 @@ production_unit_135_ratios = {
 			}
 		}
 		AND = {
-			num_of_factories < 135
+			num_of_military_factories < 135
 			num_divisions > 135
 		}
 	}
@@ -1691,7 +1691,7 @@ production_unit_135_ratios = {
 				}
 			}
 			AND = {
-				num_of_factories < 135
+				num_of_military_factories < 135
 				num_divisions > 135
 			}
 		}
@@ -1724,12 +1724,12 @@ production_unit_135_ratios = {
 }
 production_unit_140_ratios = {
 	enable = {
-		OR = {
-			NOT = {
-				tag = GER
-			}
-			has_completed_focus = GER_end_of_czechoslovakia
-		}
+		#OR = {
+		#	NOT = {
+		#		tag = GER
+		#	}
+		#	has_completed_focus = GER_end_of_czechoslovakia
+		#}
 		NOT = {
 			OR = {
 				tag = JAP
@@ -1738,7 +1738,7 @@ production_unit_140_ratios = {
 			}
 		}
 		AND = {
-			num_of_factories < 140
+			num_of_military_factories < 140
 			num_divisions > 140
 		}
 	}
@@ -1752,7 +1752,7 @@ production_unit_140_ratios = {
 				}
 			}
 			AND = {
-				num_of_factories < 140
+				num_of_military_factories < 140
 				num_divisions > 140
 			}
 		}
@@ -1785,12 +1785,12 @@ production_unit_140_ratios = {
 }
 production_unit_145_ratios = {
 	enable = {
-		OR = {
-			NOT = {
-				tag = GER
-			}
-			has_completed_focus = GER_end_of_czechoslovakia
-		}
+		#OR = {
+		#	NOT = {
+		#		tag = GER
+		#	}
+		#	has_completed_focus = GER_end_of_czechoslovakia
+		#}
 		NOT = {
 			OR = {
 				tag = JAP
@@ -1799,7 +1799,7 @@ production_unit_145_ratios = {
 			}
 		}
 		AND = {
-			num_of_factories < 145
+			num_of_military_factories < 145
 			num_divisions > 145
 		}
 	}
@@ -1813,7 +1813,7 @@ production_unit_145_ratios = {
 				}
 			}
 			AND = {
-				num_of_factories < 145
+				num_of_military_factories < 145
 				num_divisions > 145
 			}
 		}
@@ -1846,12 +1846,12 @@ production_unit_145_ratios = {
 }
 production_unit_150_ratios = {
 	enable = {
-		OR = {
-			NOT = {
-				tag = GER
-			}
-			has_completed_focus = GER_end_of_czechoslovakia
-		}
+		#OR = {
+		#	NOT = {
+		#		tag = GER
+		#	}
+		#	has_completed_focus = GER_end_of_czechoslovakia
+		#}
 		NOT = {
 			OR = {
 				tag = JAP
@@ -1860,7 +1860,7 @@ production_unit_150_ratios = {
 			}
 		}
 		AND = {
-			num_of_factories < 150
+			num_of_military_factories < 150
 			num_divisions > 150
 		}
 	}
@@ -1874,7 +1874,7 @@ production_unit_150_ratios = {
 				}
 			}
 			AND = {
-				num_of_factories < 150
+				num_of_military_factories < 150
 				num_divisions > 150
 			}
 		}
@@ -1907,12 +1907,12 @@ production_unit_150_ratios = {
 }
 production_unit_155_ratios = {
 	enable = {
-		OR = {
-			NOT = {
-				tag = GER
-			}
-			has_completed_focus = GER_end_of_czechoslovakia
-		}
+		#OR = {
+		#	NOT = {
+		#		tag = GER
+		#	}
+		#	has_completed_focus = GER_end_of_czechoslovakia
+		#}
 		NOT = {
 			OR = {
 				tag = JAP
@@ -1921,7 +1921,7 @@ production_unit_155_ratios = {
 			}
 		}
 		AND = {
-			num_of_factories < 155
+			num_of_military_factories < 155
 			num_divisions > 155
 		}
 	}
@@ -1935,7 +1935,7 @@ production_unit_155_ratios = {
 				}
 			}
 			AND = {
-				num_of_factories < 155
+				num_of_military_factories < 155
 				num_divisions > 155
 			}
 		}
@@ -1968,12 +1968,12 @@ production_unit_155_ratios = {
 }
 production_unit_160_ratios = {
 	enable = {
-		OR = {
-			NOT = {
-				tag = GER
-			}
-			has_completed_focus = GER_end_of_czechoslovakia
-		}
+		#OR = {
+		#	NOT = {
+		#		tag = GER
+		#	}
+		#	has_completed_focus = GER_end_of_czechoslovakia
+		#}
 		NOT = {
 			OR = {
 				tag = JAP
@@ -1982,7 +1982,7 @@ production_unit_160_ratios = {
 			}
 		}
 		AND = {
-			num_of_factories < 160
+			num_of_military_factories < 160
 			num_divisions > 160
 		}
 	}
@@ -1996,7 +1996,7 @@ production_unit_160_ratios = {
 				}
 			}
 			AND = {
-				num_of_factories < 160
+				num_of_military_factories < 160
 				num_divisions > 160
 			}
 		}
@@ -2029,12 +2029,12 @@ production_unit_160_ratios = {
 }
 production_unit_165_ratios = {
 	enable = {
-		OR = {
-			NOT = {
-				tag = GER
-			}
-			has_completed_focus = GER_end_of_czechoslovakia
-		}
+		#OR = {
+		#	NOT = {
+		#		tag = GER
+		#	}
+		#	has_completed_focus = GER_end_of_czechoslovakia
+		#}
 		NOT = {
 			OR = {
 				tag = JAP
@@ -2043,7 +2043,7 @@ production_unit_165_ratios = {
 			}
 		}
 		AND = {
-			num_of_factories < 165
+			num_of_military_factories < 165
 			num_divisions > 165
 		}
 	}
@@ -2057,7 +2057,7 @@ production_unit_165_ratios = {
 				}
 			}
 			AND = {
-				num_of_factories < 165
+				num_of_military_factories < 165
 				num_divisions > 165
 			}
 		}
@@ -2090,12 +2090,12 @@ production_unit_165_ratios = {
 }
 production_unit_170_ratios = {
 	enable = {
-		OR = {
-			NOT = {
-				tag = GER
-			}
-			has_completed_focus = GER_end_of_czechoslovakia
-		}
+		#OR = {
+		#	NOT = {
+		#		tag = GER
+		#	}
+		#	has_completed_focus = GER_end_of_czechoslovakia
+		#}
 		NOT = {
 			OR = {
 				tag = JAP
@@ -2104,7 +2104,7 @@ production_unit_170_ratios = {
 			}
 		}
 		AND = {
-			num_of_factories < 170
+			num_of_military_factories < 170
 			num_divisions > 170
 		}
 	}
@@ -2118,7 +2118,7 @@ production_unit_170_ratios = {
 				}
 			}
 			AND = {
-				num_of_factories < 170
+				num_of_military_factories < 170
 				num_divisions > 170
 			}
 		}
@@ -2151,12 +2151,12 @@ production_unit_170_ratios = {
 }
 production_unit_175_ratios = {
 	enable = {
-		OR = {
-			NOT = {
-				tag = GER
-			}
-			has_completed_focus = GER_end_of_czechoslovakia
-		}
+		#OR = {
+		#	NOT = {
+		#		tag = GER
+		#	}
+		#	has_completed_focus = GER_end_of_czechoslovakia
+		#}
 		NOT = {
 			OR = {
 				tag = JAP
@@ -2165,7 +2165,7 @@ production_unit_175_ratios = {
 			}
 		}
 		AND = {
-			num_of_factories < 175
+			num_of_military_factories < 175
 			num_divisions > 175
 		}
 	}
@@ -2179,7 +2179,7 @@ production_unit_175_ratios = {
 				}
 			}
 			AND = {
-				num_of_factories < 175
+				num_of_military_factories < 175
 				num_divisions > 175
 			}
 		}
@@ -2212,12 +2212,12 @@ production_unit_175_ratios = {
 }
 production_unit_180_ratios = {
 	enable = {
-		OR = {
-			NOT = {
-				tag = GER
-			}
-			has_completed_focus = GER_end_of_czechoslovakia
-		}
+		#OR = {
+		#	NOT = {
+		#		tag = GER
+		#	}
+		#	has_completed_focus = GER_end_of_czechoslovakia
+		#}
 		NOT = {
 			OR = {
 				tag = JAP
@@ -2226,7 +2226,7 @@ production_unit_180_ratios = {
 			}
 		}
 		AND = {
-			num_of_factories < 180
+			num_of_military_factories < 180
 			num_divisions > 180
 		}
 	}
@@ -2240,7 +2240,7 @@ production_unit_180_ratios = {
 				}
 			}
 			AND = {
-				num_of_factories < 180
+				num_of_military_factories < 180
 				num_divisions > 180
 			}
 		}
@@ -2273,12 +2273,12 @@ production_unit_180_ratios = {
 }
 production_unit_185_ratios = {
 	enable = {
-		OR = {
-			NOT = {
-				tag = GER
-			}
-			has_completed_focus = GER_end_of_czechoslovakia
-		}
+		#OR = {
+		#	NOT = {
+		#		tag = GER
+		#	}
+		#	has_completed_focus = GER_end_of_czechoslovakia
+		#}
 		NOT = {
 			OR = {
 				tag = JAP
@@ -2287,7 +2287,7 @@ production_unit_185_ratios = {
 			}
 		}
 		AND = {
-			num_of_factories < 185
+			num_of_military_factories < 185
 			num_divisions > 185
 		}
 	}
@@ -2301,7 +2301,7 @@ production_unit_185_ratios = {
 				}
 			}
 			AND = {
-				num_of_factories < 185
+				num_of_military_factories < 185
 				num_divisions > 185
 			}
 		}
@@ -2334,12 +2334,12 @@ production_unit_185_ratios = {
 }
 production_unit_190_ratios = {
 	enable = {
-		OR = {
-			NOT = {
-				tag = GER
-			}
-			has_completed_focus = GER_end_of_czechoslovakia
-		}
+		#OR = {
+		#	NOT = {
+		#		tag = GER
+		#	}
+		#	has_completed_focus = GER_end_of_czechoslovakia
+		#}
 		NOT = {
 			OR = {
 				tag = JAP
@@ -2348,7 +2348,7 @@ production_unit_190_ratios = {
 			}
 		}
 		AND = {
-			num_of_factories < 190
+			num_of_military_factories < 190
 			num_divisions > 190
 		}
 	}
@@ -2362,7 +2362,7 @@ production_unit_190_ratios = {
 				}
 			}
 			AND = {
-				num_of_factories < 190
+				num_of_military_factories < 190
 				num_divisions > 190
 			}
 		}
@@ -2395,12 +2395,12 @@ production_unit_190_ratios = {
 }
 production_unit_195_ratios = {
 	enable = {
-		OR = {
-			NOT = {
-				tag = GER
-			}
-			has_completed_focus = GER_end_of_czechoslovakia
-		}
+		#OR = {
+		#	NOT = {
+		#		tag = GER
+		#	}
+		#	has_completed_focus = GER_end_of_czechoslovakia
+		#}
 		NOT = {
 			OR = {
 				tag = JAP
@@ -2409,7 +2409,7 @@ production_unit_195_ratios = {
 			}
 		}
 		AND = {
-			num_of_factories < 195
+			num_of_military_factories < 195
 			num_divisions > 195
 		}
 	}
@@ -2423,7 +2423,7 @@ production_unit_195_ratios = {
 				}
 			}
 			AND = {
-				num_of_factories < 195
+				num_of_military_factories < 195
 				num_divisions > 195
 			}
 		}
@@ -2456,12 +2456,12 @@ production_unit_195_ratios = {
 }
 production_unit_200_ratios = {
 	enable = {
-		OR = {
-			NOT = {
-				tag = GER
-			}
-			has_completed_focus = GER_end_of_czechoslovakia
-		}
+		#OR = {
+		#	NOT = {
+		#		tag = GER
+		#	}
+		#	has_completed_focus = GER_end_of_czechoslovakia
+		#}
 		NOT = {
 			OR = {
 				tag = JAP
@@ -2470,7 +2470,7 @@ production_unit_200_ratios = {
 			}
 		}
 		AND = {
-			num_of_factories < 200
+			num_of_military_factories < 200
 			num_divisions > 200
 		}
 	}
@@ -2484,7 +2484,7 @@ production_unit_200_ratios = {
 				}
 			}
 			AND = {
-				num_of_factories < 200
+				num_of_military_factories < 200
 				num_divisions > 200
 			}
 		}
@@ -2517,12 +2517,12 @@ production_unit_200_ratios = {
 }
 production_unit_205_ratios = {
 	enable = {
-		OR = {
-			NOT = {
-				tag = GER
-			}
-			has_completed_focus = GER_end_of_czechoslovakia
-		}
+		#OR = {
+		#	NOT = {
+		#		tag = GER
+		#	}
+		#	has_completed_focus = GER_end_of_czechoslovakia
+		#}
 		NOT = {
 			OR = {
 				tag = JAP
@@ -2531,7 +2531,7 @@ production_unit_205_ratios = {
 			}
 		}
 		AND = {
-			num_of_factories < 205
+			num_of_military_factories < 205
 			num_divisions > 205
 		}
 	}
@@ -2545,7 +2545,7 @@ production_unit_205_ratios = {
 				}
 			}
 			AND = {
-				num_of_factories < 205
+				num_of_military_factories < 205
 				num_divisions > 205
 			}
 		}
@@ -2578,12 +2578,12 @@ production_unit_205_ratios = {
 }
 production_unit_210_ratios = {
 	enable = {
-		OR = {
-			NOT = {
-				tag = GER
-			}
-			has_completed_focus = GER_end_of_czechoslovakia
-		}
+		#OR = {
+		#	NOT = {
+		#		tag = GER
+		#	}
+		#	has_completed_focus = GER_end_of_czechoslovakia
+		#}
 		NOT = {
 			OR = {
 				tag = JAP
@@ -2592,7 +2592,7 @@ production_unit_210_ratios = {
 			}
 		}
 		AND = {
-			num_of_factories < 210
+			num_of_military_factories < 210
 			num_divisions > 210
 		}
 	}
@@ -2606,7 +2606,7 @@ production_unit_210_ratios = {
 				}
 			}
 			AND = {
-				num_of_factories < 210
+				num_of_military_factories < 210
 				num_divisions > 210
 			}
 		}
@@ -2639,12 +2639,12 @@ production_unit_210_ratios = {
 }
 production_unit_215_ratios = {
 	enable = {
-		OR = {
-			NOT = {
-				tag = GER
-			}
-			has_completed_focus = GER_end_of_czechoslovakia
-		}
+		#OR = {
+		#	NOT = {
+		#		tag = GER
+		#	}
+		#	has_completed_focus = GER_end_of_czechoslovakia
+		#}
 		NOT = {
 			OR = {
 				tag = JAP
@@ -2653,7 +2653,7 @@ production_unit_215_ratios = {
 			}
 		}
 		AND = {
-			num_of_factories < 215
+			num_of_military_factories < 215
 			num_divisions > 215
 		}
 	}
@@ -2667,7 +2667,7 @@ production_unit_215_ratios = {
 				}
 			}
 			AND = {
-				num_of_factories < 215
+				num_of_military_factories < 215
 				num_divisions > 215
 			}
 		}
@@ -2700,12 +2700,12 @@ production_unit_215_ratios = {
 }
 production_unit_220_ratios = {
 	enable = {
-		OR = {
-			NOT = {
-				tag = GER
-			}
-			has_completed_focus = GER_end_of_czechoslovakia
-		}
+		#OR = {
+		#	NOT = {
+		#		tag = GER
+		#	}
+		#	has_completed_focus = GER_end_of_czechoslovakia
+		#}
 		NOT = {
 			OR = {
 				tag = JAP
@@ -2714,7 +2714,7 @@ production_unit_220_ratios = {
 			}
 		}
 		AND = {
-			num_of_factories < 220
+			num_of_military_factories < 220
 			num_divisions > 220
 		}
 	}
@@ -2728,7 +2728,7 @@ production_unit_220_ratios = {
 				}
 			}
 			AND = {
-				num_of_factories < 220
+				num_of_military_factories < 220
 				num_divisions > 220
 			}
 		}
@@ -2761,12 +2761,12 @@ production_unit_220_ratios = {
 }
 production_unit_225_ratios = {
 	enable = {
-		OR = {
-			NOT = {
-				tag = GER
-			}
-			has_completed_focus = GER_end_of_czechoslovakia
-		}
+		#OR = {
+		#	NOT = {
+		#		tag = GER
+		#	}
+		#	has_completed_focus = GER_end_of_czechoslovakia
+		#}
 		NOT = {
 			OR = {
 				tag = JAP
@@ -2775,7 +2775,7 @@ production_unit_225_ratios = {
 			}
 		}
 		AND = {
-			num_of_factories < 225
+			num_of_military_factories < 225
 			num_divisions > 225
 		}
 	}
@@ -2789,7 +2789,7 @@ production_unit_225_ratios = {
 				}
 			}
 			AND = {
-				num_of_factories < 225
+				num_of_military_factories < 225
 				num_divisions > 225
 			}
 		}
@@ -2822,12 +2822,12 @@ production_unit_225_ratios = {
 }
 production_unit_230_ratios = {
 	enable = {
-		OR = {
-			NOT = {
-				tag = GER
-			}
-			has_completed_focus = GER_end_of_czechoslovakia
-		}
+		#OR = {
+		#	NOT = {
+		#		tag = GER
+		#	}
+		#	has_completed_focus = GER_end_of_czechoslovakia
+		#}
 		NOT = {
 			OR = {
 				tag = JAP
@@ -2836,7 +2836,7 @@ production_unit_230_ratios = {
 			}
 		}
 		AND = {
-			num_of_factories < 230
+			num_of_military_factories < 230
 			num_divisions > 230
 		}
 	}
@@ -2850,7 +2850,7 @@ production_unit_230_ratios = {
 				}
 			}
 			AND = {
-				num_of_factories < 230
+				num_of_military_factories < 230
 				num_divisions > 230
 			}
 		}
@@ -2883,12 +2883,12 @@ production_unit_230_ratios = {
 }
 production_unit_235_ratios = {
 	enable = {
-		OR = {
-			NOT = {
-				tag = GER
-			}
-			has_completed_focus = GER_end_of_czechoslovakia
-		}
+		#OR = {
+		#	NOT = {
+		#		tag = GER
+		#	}
+		#	has_completed_focus = GER_end_of_czechoslovakia
+		#}
 		NOT = {
 			OR = {
 				tag = JAP
@@ -2897,7 +2897,7 @@ production_unit_235_ratios = {
 			}
 		}
 		AND = {
-			num_of_factories < 235
+			num_of_military_factories < 235
 			num_divisions > 235
 		}
 	}
@@ -2911,7 +2911,7 @@ production_unit_235_ratios = {
 				}
 			}
 			AND = {
-				num_of_factories < 235
+				num_of_military_factories < 235
 				num_divisions > 235
 			}
 		}
@@ -2944,12 +2944,12 @@ production_unit_235_ratios = {
 }
 production_unit_240_ratios = {
 	enable = {
-		OR = {
-			NOT = {
-				tag = GER
-			}
-			has_completed_focus = GER_end_of_czechoslovakia
-		}
+		#OR = {
+		#	NOT = {
+		#		tag = GER
+		#	}
+		#	has_completed_focus = GER_end_of_czechoslovakia
+		#}
 		NOT = {
 			OR = {
 				tag = JAP
@@ -2958,7 +2958,7 @@ production_unit_240_ratios = {
 			}
 		}
 		AND = {
-			num_of_factories < 240
+			num_of_military_factories < 240
 			num_divisions > 240
 		}
 	}
@@ -2972,7 +2972,7 @@ production_unit_240_ratios = {
 				}
 			}
 			AND = {
-				num_of_factories < 240
+				num_of_military_factories < 240
 				num_divisions > 240
 			}
 		}
@@ -3005,12 +3005,12 @@ production_unit_240_ratios = {
 }
 production_unit_245_ratios = {
 	enable = {
-		OR = {
-			NOT = {
-				tag = GER
-			}
-			has_completed_focus = GER_end_of_czechoslovakia
-		}
+		#OR = {
+		#	NOT = {
+		#		tag = GER
+		#	}
+		#	has_completed_focus = GER_end_of_czechoslovakia
+		#}
 		NOT = {
 			OR = {
 				tag = JAP
@@ -3019,7 +3019,7 @@ production_unit_245_ratios = {
 			}
 		}
 		AND = {
-			num_of_factories < 245
+			num_of_military_factories < 245
 			num_divisions > 245
 		}
 	}
@@ -3033,7 +3033,7 @@ production_unit_245_ratios = {
 				}
 			}
 			AND = {
-				num_of_factories < 245
+				num_of_military_factories < 245
 				num_divisions > 245
 			}
 		}
@@ -3066,12 +3066,12 @@ production_unit_245_ratios = {
 }
 production_unit_250_ratios = {
 	enable = {
-		OR = {
-			NOT = {
-				tag = GER
-			}
-			has_completed_focus = GER_end_of_czechoslovakia
-		}
+		#OR = {
+		#	NOT = {
+		#		tag = GER
+		#	}
+		#	has_completed_focus = GER_end_of_czechoslovakia
+		#}
 		NOT = {
 			OR = {
 				tag = JAP
@@ -3080,7 +3080,7 @@ production_unit_250_ratios = {
 			}
 		}
 		AND = {
-			num_of_factories < 250
+			num_of_military_factories < 250
 			num_divisions > 250
 		}
 	}
@@ -3094,7 +3094,7 @@ production_unit_250_ratios = {
 				}
 			}
 			AND = {
-				num_of_factories < 250
+				num_of_military_factories < 250
 				num_divisions > 250
 			}
 		}
@@ -3127,12 +3127,12 @@ production_unit_250_ratios = {
 }
 production_unit_255_ratios = {
 	enable = {
-		OR = {
-			NOT = {
-				tag = GER
-			}
-			has_completed_focus = GER_end_of_czechoslovakia
-		}
+		#OR = {
+		#	NOT = {
+		#		tag = GER
+		#	}
+		#	has_completed_focus = GER_end_of_czechoslovakia
+		#}
 		NOT = {
 			OR = {
 				tag = JAP
@@ -3141,7 +3141,7 @@ production_unit_255_ratios = {
 			}
 		}
 		AND = {
-			num_of_factories < 255
+			num_of_military_factories < 255
 			num_divisions > 255
 		}
 	}
@@ -3155,7 +3155,7 @@ production_unit_255_ratios = {
 				}
 			}
 			AND = {
-				num_of_factories < 255
+				num_of_military_factories < 255
 				num_divisions > 255
 			}
 		}
@@ -3188,12 +3188,12 @@ production_unit_255_ratios = {
 }
 production_unit_260_ratios = {
 	enable = {
-		OR = {
-			NOT = {
-				tag = GER
-			}
-			has_completed_focus = GER_end_of_czechoslovakia
-		}
+		#OR = {
+		#	NOT = {
+		#		tag = GER
+		#	}
+		#	has_completed_focus = GER_end_of_czechoslovakia
+		#}
 		NOT = {
 			OR = {
 				tag = JAP
@@ -3202,7 +3202,7 @@ production_unit_260_ratios = {
 			}
 		}
 		AND = {
-			num_of_factories < 260
+			num_of_military_factories < 260
 			num_divisions > 260
 		}
 	}
@@ -3216,7 +3216,7 @@ production_unit_260_ratios = {
 				}
 			}
 			AND = {
-				num_of_factories < 260
+				num_of_military_factories < 260
 				num_divisions > 260
 			}
 		}
@@ -3249,12 +3249,12 @@ production_unit_260_ratios = {
 }
 production_unit_265_ratios = {
 	enable = {
-		OR = {
-			NOT = {
-				tag = GER
-			}
-			has_completed_focus = GER_end_of_czechoslovakia
-		}
+		#OR = {
+		#	NOT = {
+		#		tag = GER
+		#	}
+		#	has_completed_focus = GER_end_of_czechoslovakia
+		#}
 		NOT = {
 			OR = {
 				tag = JAP
@@ -3263,7 +3263,7 @@ production_unit_265_ratios = {
 			}
 		}
 		AND = {
-			num_of_factories < 265
+			num_of_military_factories < 265
 			num_divisions > 265
 		}
 	}
@@ -3277,7 +3277,7 @@ production_unit_265_ratios = {
 				}
 			}
 			AND = {
-				num_of_factories < 265
+				num_of_military_factories < 265
 				num_divisions > 265
 			}
 		}
@@ -3310,12 +3310,12 @@ production_unit_265_ratios = {
 }
 production_unit_270_ratios = {
 	enable = {
-		OR = {
-			NOT = {
-				tag = GER
-			}
-			has_completed_focus = GER_end_of_czechoslovakia
-		}
+		#OR = {
+		#	NOT = {
+		#		tag = GER
+		#	}
+		#	has_completed_focus = GER_end_of_czechoslovakia
+		#}
 		NOT = {
 			OR = {
 				tag = JAP
@@ -3324,7 +3324,7 @@ production_unit_270_ratios = {
 			}
 		}
 		AND = {
-			num_of_factories < 270
+			num_of_military_factories < 270
 			num_divisions > 270
 		}
 	}
@@ -3338,7 +3338,7 @@ production_unit_270_ratios = {
 				}
 			}
 			AND = {
-				num_of_factories < 270
+				num_of_military_factories < 270
 				num_divisions > 270
 			}
 		}
@@ -3371,12 +3371,12 @@ production_unit_270_ratios = {
 }
 production_unit_275_ratios = {
 	enable = {
-		OR = {
-			NOT = {
-				tag = GER
-			}
-			has_completed_focus = GER_end_of_czechoslovakia
-		}
+		#OR = {
+		#	NOT = {
+		#		tag = GER
+		#	}
+		#	has_completed_focus = GER_end_of_czechoslovakia
+		#}
 		NOT = {
 			OR = {
 				tag = JAP
@@ -3385,7 +3385,7 @@ production_unit_275_ratios = {
 			}
 		}
 		AND = {
-			num_of_factories < 275
+			num_of_military_factories < 275
 			num_divisions > 275
 		}
 	}
@@ -3399,7 +3399,7 @@ production_unit_275_ratios = {
 				}
 			}
 			AND = {
-				num_of_factories < 275
+				num_of_military_factories < 275
 				num_divisions > 275
 			}
 		}
@@ -3432,12 +3432,12 @@ production_unit_275_ratios = {
 }
 production_unit_280_ratios = {
 	enable = {
-		OR = {
-			NOT = {
-				tag = GER
-			}
-			has_completed_focus = GER_end_of_czechoslovakia
-		}
+		#OR = {
+		#	NOT = {
+		#		tag = GER
+		#	}
+		#	has_completed_focus = GER_end_of_czechoslovakia
+		#}
 		NOT = {
 			OR = {
 				tag = JAP
@@ -3446,7 +3446,7 @@ production_unit_280_ratios = {
 			}
 		}
 		AND = {
-			num_of_factories < 280
+			num_of_military_factories < 280
 			num_divisions > 280
 		}
 	}
@@ -3460,7 +3460,7 @@ production_unit_280_ratios = {
 				}
 			}
 			AND = {
-				num_of_factories < 280
+				num_of_military_factories < 280
 				num_divisions > 280
 			}
 		}
@@ -3493,12 +3493,12 @@ production_unit_280_ratios = {
 }
 production_unit_285_ratios = {
 	enable = {
-		OR = {
-			NOT = {
-				tag = GER
-			}
-			has_completed_focus = GER_end_of_czechoslovakia
-		}
+		#OR = {
+		#	NOT = {
+		#		tag = GER
+		#	}
+		#	has_completed_focus = GER_end_of_czechoslovakia
+		#}
 		NOT = {
 			OR = {
 				tag = JAP
@@ -3507,7 +3507,7 @@ production_unit_285_ratios = {
 			}
 		}
 		AND = {
-			num_of_factories < 285
+			num_of_military_factories < 285
 			num_divisions > 285
 		}
 	}
@@ -3521,7 +3521,7 @@ production_unit_285_ratios = {
 				}
 			}
 			AND = {
-				num_of_factories < 285
+				num_of_military_factories < 285
 				num_divisions > 285
 			}
 		}
@@ -3554,12 +3554,12 @@ production_unit_285_ratios = {
 }
 production_unit_290_ratios = {
 	enable = {
-		OR = {
-			NOT = {
-				tag = GER
-			}
-			has_completed_focus = GER_end_of_czechoslovakia
-		}
+		#OR = {
+		#	NOT = {
+		#		tag = GER
+		#	}
+		#	has_completed_focus = GER_end_of_czechoslovakia
+		#}
 		NOT = {
 			OR = {
 				tag = JAP
@@ -3568,7 +3568,7 @@ production_unit_290_ratios = {
 			}
 		}
 		AND = {
-			num_of_factories < 290
+			num_of_military_factories < 290
 			num_divisions > 290
 		}
 	}
@@ -3582,7 +3582,7 @@ production_unit_290_ratios = {
 				}
 			}
 			AND = {
-				num_of_factories < 290
+				num_of_military_factories < 290
 				num_divisions > 290
 			}
 		}
@@ -3615,12 +3615,12 @@ production_unit_290_ratios = {
 }
 production_unit_295_ratios = {
 	enable = {
-		OR = {
-			NOT = {
-				tag = GER
-			}
-			has_completed_focus = GER_end_of_czechoslovakia
-		}
+		#OR = {
+		#	NOT = {
+		#		tag = GER
+		#	}
+		#	has_completed_focus = GER_end_of_czechoslovakia
+		#}
 		NOT = {
 			OR = {
 				tag = JAP
@@ -3629,7 +3629,7 @@ production_unit_295_ratios = {
 			}
 		}
 		AND = {
-			num_of_factories < 295
+			num_of_military_factories < 295
 			num_divisions > 295
 		}
 	}
@@ -3643,7 +3643,7 @@ production_unit_295_ratios = {
 				}
 			}
 			AND = {
-				num_of_factories < 295
+				num_of_military_factories < 295
 				num_divisions > 295
 			}
 		}

@@ -106,7 +106,7 @@ focus_tree = {
 	focus = {
 		id = PRC_Red_Army
 		icon = GFX_focus_YUG_pan_slavic_congress
-		cost = 10.00
+		cost = 7.15
 		x = 24
 		y = 0
 		ai_will_do = {
@@ -207,7 +207,7 @@ focus_tree = {
 		completion_reward = {
 			for_tracking_ten_comp_foc = yes
 			custom_effect_tooltip = PRC_End_of_Long_March_tt
-			add_political_power = 100
+			add_political_power = 250
 			hidden_effect = {
 				set_country_flag = long_end_prc
 			}
@@ -791,9 +791,9 @@ focus_tree = {
 			focus = PRC_Communication_with_hebei
 			focus = PRC_Join_the_war
 		}
-		mutually_exclusive = {
-			focus = PRC_Developing_Focus
-		}
+		#mutually_exclusive = {
+		#	focus = PRC_Developing_Focus
+		#}
 		x = 1
 		y = 4
 		ai_will_do = {
@@ -896,9 +896,9 @@ focus_tree = {
 		prerequisite = {
 			focus = PRC_Join_the_war
 		}
-		mutually_exclusive = {
-			focus = PRC_Confrontation_Focus
-		}
+		#mutually_exclusive = {
+		#	focus = PRC_Confrontation_Focus
+		#}
 		x = 5
 		y = 4
 		ai_will_do = {
@@ -1019,7 +1019,7 @@ focus_tree = {
 	focus = {
 		id = PRC_Peasant_class
 		icon = GFX_focus_generic_concessions
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = PRC_Forcing_Chiang_against_Japan
 		}
@@ -1148,7 +1148,7 @@ focus_tree = {
 	focus = {
 		id = PRC_Third_forces
 		icon = GFX_goal_tfv_burn_the_royal_portraits
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = PRC_West_road_army_victory
 		}
@@ -1175,7 +1175,7 @@ focus_tree = {
 	focus = {
 		id = PRC_Establish_authority
 		icon = GFX_focus_generic_support_the_left_right
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = PRC_Third_forces
 		}
@@ -1219,7 +1219,7 @@ focus_tree = {
 	focus = {
 		id = PRC_Rise_of_reactionaries
 		icon = GFX_goal_support_fascism
-		cost = 10.00
+		cost = 7.15
 		prerequisite = {
 			focus = PRC_military_junta
 		}
@@ -1320,7 +1320,7 @@ focus_tree = {
 	focus = {
 		id = PRC_CPC_First
 		icon = GFX_focus_prc_maoism
-		cost = 10.00
+		cost = 7.15
 		prerequisite = {
 			focus = PRC_End_of_Long_March
 		}
@@ -1364,7 +1364,7 @@ focus_tree = {
 	focus = {
 		id = PRC_Domestic_faction
 		icon = GFX_focus_generic_join_comintern
-		cost = 10.00
+		cost = 7.15
 		prerequisite = {
 			focus = PRC_CPC_First
 		}
@@ -1394,7 +1394,7 @@ focus_tree = {
 	focus = {
 		id = PRC_Route_struggle
 		icon = GFX_focus_generic_anti_fascist_diplomacy
-		cost = 10.00
+		cost = 7.15
 		prerequisite = {
 			focus = PRC_Domestic_faction
 		}
@@ -1414,7 +1414,7 @@ focus_tree = {
 	focus = {
 		id = PRC_Expand_United_front
 		icon = GFX_focus_chi_united_front
-		cost = 10.00
+		cost = 7.15
 		prerequisite = {
 			focus = PRC_End_of_Long_March
 		}
@@ -1462,7 +1462,7 @@ focus_tree = {
 	focus = {
 		id = PRC_International_faction
 		icon = GFX_goal_support_communism
-		cost = 10.00
+		cost = 7.15
 		prerequisite = {
 			focus = PRC_Expand_United_front
 		}
@@ -1502,7 +1502,7 @@ focus_tree = {
 	focus = {
 		id = PRC_Negate_stalinism
 		icon = GFX_goal_anti_comintern_pact
-		cost = 10.00
+		cost = 7.15
 		prerequisite = {
 			focus = PRC_End_of_Long_March
 		}
@@ -1560,7 +1560,7 @@ focus_tree = {
 	focus = {
 		id = PRC_Trotskyism_faction
 		icon = GFX_goal_support_fourth_int
-		cost = 10.00
+		cost = 7.15
 		prerequisite = {
 			focus = PRC_Negate_stalinism
 		}
@@ -1614,7 +1614,7 @@ focus_tree = {
 	focus = {
 		id = PRC_Working_class
 		icon = GFX_goal_generic_production
-		cost = 10.00
+		cost = 7.15
 		prerequisite = {
 			focus = PRC_International_faction
 			focus = PRC_Trotskyism_faction
@@ -1674,7 +1674,7 @@ focus_tree = {
 	focus = {
 		id = PRC_Centralisation
 		icon = GFX_focus_generic_self_management
-		cost = 10.00
+		cost = 7.15
 		prerequisite = {
 			focus = PRC_military_junta
 			focus = PRC_Republican
@@ -1708,7 +1708,7 @@ focus_tree = {
 	focus = {
 		id = PRC_Exclude_bureaucracy
 		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
-		cost = 10.00
+		cost = 7.15
 		prerequisite = {
 			focus = PRC_Trotskyism_faction
 		}
@@ -1776,7 +1776,7 @@ focus_tree = {
 	focus = {
 		id = PRC_Proletariat_and_democracy
 		icon = GFX_focus_YUG_pan_slavic_congress
-		cost = 10.00
+		cost = 7.15
 		prerequisite = {
 			focus = PRC_federation
 		}
@@ -1825,10 +1825,10 @@ focus_tree = {
 			hidden_trigger = {
 				ai_cont_foc_prc = yes
 			}
-			OR = {
-				has_country_flag = PRC_United_front_was_established
-				has_country_flag = PRC_Opposed_to_chiang
-			}
+			#OR = {
+			#	has_country_flag = PRC_United_front_was_established
+			#	has_country_flag = PRC_Opposed_to_chiang
+			#}
 			num_of_controlled_states > 5
 			is_subject = no
 		}
@@ -1837,7 +1837,7 @@ focus_tree = {
 	focus = {
 		id = PRC_Field_army
 		icon = GFX_goal_generic_military_sphere
-		cost = 10.00
+		cost = 7.15
 		prerequisite = {
 			focus = PRC_Red_Army
 		}
@@ -1984,7 +1984,7 @@ focus_tree = {
 	focus = {
 		id = PRC_Strategic_offensive
 		icon = GFX_goal_generic_army_doctrines
-		cost = 10.00
+		cost = 7.15
 		prerequisite = {
 			focus = PRC_Red_Army
 		}
@@ -2128,7 +2128,7 @@ focus_tree = {
 	focus = {
 		id = PRC_Type_81_ma
 		icon = GFX_goal_generic_small_arms
-		cost = 10.00
+		cost = 7.15
 		prerequisite = {
 			focus = PRC_Red_Army
 		}
@@ -3439,6 +3439,7 @@ focus_tree = {
 		completion_reward = {
 			for_tracking_ten_comp_foc = yes
 			remove_ideas = iliterate_population_2
+			#add_research_slot = 1
 		}
 		available = {
 			hidden_trigger = {
@@ -4611,7 +4612,7 @@ focus_tree = {
 	focus = {
 		id = PRC_daqing_oil_field
 		icon = GFX_goal_generic_oil_refinery
-		cost = 10.00
+		cost = 7.00
 		prerequisite = {
 			focus = PRC_refinery_technology_german
 		}
@@ -4710,10 +4711,10 @@ focus_tree = {
 			hidden_trigger = {
 				ai_cont_foc_prc = yes
 			}
-			OR = {
-				has_country_flag = PRC_United_front_was_established
-				has_country_flag = PRC_Opposed_to_chiang
-			}
+			#OR = {
+			#	has_country_flag = PRC_United_front_was_established
+			#	has_country_flag = PRC_Opposed_to_chiang
+			#}
 			OR = {
 				controls_state = 600
 				controls_state = 613
@@ -4948,6 +4949,7 @@ focus_tree = {
 		y = 9
 		completion_reward = {
 			for_tracking_ten_comp_foc = yes
+			add_research_slot = 1
 			every_other_country = {
 				limit = {
 					is_in_faction_with = PRC
@@ -5177,7 +5179,7 @@ focus_tree = {
 	focus = {
 		id = PRC_Democratic_centralism
 		icon = GFX_goal_support_communism
-		cost = 10.00
+		cost = 7.15
 		prerequisite = {
 			focus = PRC_Republican
 			focus = PRC_federation
@@ -5227,10 +5229,10 @@ focus_tree = {
 				ai_cont_foc_prc = yes
 			}
 			is_subject = no
-			OR = {
-				has_country_flag = PRC_United_front_was_established
-				has_country_flag = PRC_Opposed_to_chiang
-			}
+			#OR = {
+			#	has_country_flag = PRC_United_front_was_established
+			#	has_country_flag = PRC_Opposed_to_chiang
+			#}
 			OR = {
 				has_war_with = CHI
 				CHI = {
@@ -5894,6 +5896,7 @@ focus_tree = {
 		x = 12
 		y = 9
 		completion_reward = {
+			add_research_slot = 1
 			for_tracking_ten_comp_foc = yes
 			SOV = {
 				add_to_tech_sharing_group = comintern_research

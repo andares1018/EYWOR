@@ -4,7 +4,6 @@
  TRIGGER_IS_NOT_BORDER_CONFLICT:0 "$STATE|H$ is not affected by Communist Partisan Activities."
  border_conflict_reconciled:0 "Communist Partisan Activities Reconciled"
  BORDER_WAR_ATTRITION:0 "Attrition from Communist Partisan Activities: $VAL|=-%$"
-
  BORDER_WAR_HEADER:0 "§HCommunist Partisan Activities§!"
  BORDER_WAR_POWER:0 "The communist guerilla forces is wreaking havoc in this region. Troops in the state will suffer from §Radditional attrition§!.\n\nTake £decision_icon_small §Hdecisiones§!§MCrack Down the Communists§H to eliminate them. However, they will come back over time unless @PRCCommunist China is eliminated."
  BORDER_WAR_POWER_ENEMY:0 ""
@@ -16,6 +15,7 @@
 
  BORDER_WAR_HINT:0 ""
 
+ EFFECT_END_BORDER_WAR:0 "§YEnds the Communist Partisan Activities.§!"
  BORDER_WAR_NOT_OURS:0 "§HThere is Communist Partisan Activities in this state.§!"
  BORDER_WAR_POWER_DESC:0 "Combat values are defined by Divisions' Combat Strength and their Country's Doctrine Level"
  EFFECT_ADD_ACE:0 "$NAME|Y$ '$CALLSIGN|Y$' $SURNAME|Y$ becomes a flying Ace.\n"

@@ -77,16 +77,21 @@ set_convoys = 40
 	complete_national_focus = CHI_reorganize_nra
 	complete_national_focus = CHI_monetary_reform
 	complete_national_focus = CHI_streamlined_industry
+	complete_national_focus = national_poltical_council
+	complete_national_focus = constit_draft_focus
 	add_ideas = {
 		#laws
 		tot_economic_mobilisation
 		service_by_requirement
 		closed_economy
 		CHI_t_v_soong
+		carsun_chang
+		
 		#ministers
 		CHI_chen_shaokuan
 		claire_lee_chennault_chi
 		kiangnan_shipyard_group
+		
 	}
 
 	set_global_flag = fall_of_nanjing
