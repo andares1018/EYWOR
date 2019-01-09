@@ -1121,55 +1121,55 @@ country_event = {
 			}
 		}
 		287 = {
-			is_ownd_by_jap_or_its_puppet = yes
+			is_owned_by_jap_or_its_puppet = yes
 			#is_owned_by = JAP
 		}
 		617 = {
-			is_ownd_by_jap_or_its_puppet = yes
+			is_owned_by_jap_or_its_puppet = yes
 			#is_owned_by = JAP
 		}
 		796 = {
-			is_ownd_by_jap_or_its_puppet = yes
+			is_owned_by_jap_or_its_puppet = yes
 			#is_owned_by = JAP
 		}
 		797 = {
-			is_ownd_by_jap_or_its_puppet = yes
+			is_owned_by_jap_or_its_puppet = yes
 			#is_owned_by = JAP
 		}
 		800 = {
-			is_ownd_by_jap_or_its_puppet = yes
+			is_owned_by_jap_or_its_puppet = yes
 			#is_owned_by = JAP
 		}
 		801 = {
-			is_ownd_by_jap_or_its_puppet = yes
+			is_owned_by_jap_or_its_puppet = yes
 			#is_owned_by = JAP
 		}
 		618 = {
-			is_ownd_by_jap_or_its_puppet = yes
+			is_owned_by_jap_or_its_puppet = yes
 			#is_owned_by = JAP
 		}
 		798 = {
-			is_ownd_by_jap_or_its_puppet = yes
+			is_owned_by_jap_or_its_puppet = yes
 			#is_owned_by = JAP
 		}
 		799 = {
-			is_ownd_by_jap_or_its_puppet = yes
+			is_owned_by_jap_or_its_puppet = yes
 			#is_owned_by = JAP
 		}
 		758 = {
-			is_ownd_by_jap_or_its_puppet = yes
+			is_owned_by_jap_or_its_puppet = yes
 			#is_owned_by = JAP
 		}
 		759 = {
-			is_ownd_by_jap_or_its_puppet = yes
+			is_owned_by_jap_or_its_puppet = yes
 			#is_owned_by = JAP
 		}
 		795 = {
-			is_ownd_by_jap_or_its_puppet = yes
+			is_owned_by_jap_or_its_puppet = yes
 			#is_owned_by = JAP
 		}
 		619 = {
-			is_ownd_by_jap_or_its_puppet = yes
+			is_owned_by_jap_or_its_puppet = yes
 			#is_owned_by = JAP
 		}
 		NOT = {
