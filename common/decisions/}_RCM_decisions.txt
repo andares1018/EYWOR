@@ -1289,6 +1289,28 @@ political_actions = {
 			factor = 200
 		}
 	}
+	sedentarize_population = {
+		icon = generic_political_discourse
+		fire_only_once = yes
+		days_remove = 0 # Stays for 5 days before being removed
+		cost = 25
+		visible = { #can see
+			tag = event_target:WTT_current_china_leader
+			has_idea = MON_nomadic
+		}
+		available = { #can do
+			tag = event_target:WTT_current_china_leader
+			has_idea = MON_nomadic
+		}
+		complete_effect = { #run effect on selection
+			remove_ideas = MON_nomadic
+		}
+
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
 }
 foreign_politics = {
 	opposition_clashes_with_CHI = {
