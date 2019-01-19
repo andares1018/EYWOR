@@ -45,7 +45,7 @@ focus_tree = {
 					border_state = 789
 					size > 0
 				}
-			}			
+			}
 		}
 		completion_reward = {
 			for_tracking_ten_comp_foc = yes
@@ -57,7 +57,7 @@ focus_tree = {
 				custom_effect_tooltip = border_war_SHX_tt
 				hidden_effect = {
 					PRC_border_conflict_SHX = yes
-				}				
+				}
 			}
 			else = {
 				custom_effect_tooltip = a_war_will_be_declared_at_start_of_focus_SHX_tt
@@ -315,7 +315,7 @@ focus_tree = {
 		available = {
 			NOT = {
 				has_border_war = yes
-			}		
+			}
 			OR = {
 				divisions_in_border_state = {
 					state = 622
@@ -393,7 +393,7 @@ focus_tree = {
 			OR = {
 				num_of_controlled_states > 5
 				num_of_factories > 15
-			}			
+			}
 			NOT = {
 				has_war_with = JAP
 			}
@@ -1269,7 +1269,7 @@ focus_tree = {
 					num_of_controlled_states > 1
 				}
 				custom_effect_tooltip = commie_civil_war_tt
-				
+
 				hidden_effect = {
 					start_civil_war = {
 						ruling_party = fascism
@@ -2492,7 +2492,7 @@ focus_tree = {
 		}
 
 	}
-	
+
 	focus = {
 		id = PRC_PLA
 		icon = GFX_goal_generic_army_doctrines
@@ -3462,7 +3462,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			custom_effect_tooltip = unlock_focus_right
-			
+
 			swap_ideas = {
 				remove_idea = unbalanced_industry
 				add_idea = unbalanced_industry_1
@@ -3505,12 +3505,12 @@ focus_tree = {
 		}
 		completion_reward = {
 			custom_effect_tooltip = unlock_focus_right
-			
+
 			swap_ideas = {
 				remove_idea = unbalanced_industry_1
 				add_idea = unbalanced_industry_2
 			}
-			
+
 		}
 		available = {
 			has_tech = improved_machine_tools
@@ -3549,12 +3549,12 @@ focus_tree = {
 		}
 		completion_reward = {
 			custom_effect_tooltip = unlock_focus_right
-			
+
 			swap_ideas = {
 				remove_idea = unbalanced_industry_2
 				add_idea = unbalanced_industry_3
 			}
-			
+
 		}
 		available = {
 			has_tech = advanced_machine_tools
@@ -3592,7 +3592,7 @@ focus_tree = {
 			add_political_power = -100
 			custom_effect_tooltip = unlock_focus_right
 			remove_ideas = unbalanced_industry_3
-			
+
 		}
 		available = {
 			has_war = no

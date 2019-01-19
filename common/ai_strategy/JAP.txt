@@ -10,87 +10,87 @@
 # protect
 # influence
 
-less_trucks_4_u_JAP = {
-	enable = {
-		tag = JAP
-		date < 1939.1.1				
-	}
-	abort = { 
-		date > 1939.1.1
-	}
-
-	ai_strategy = { 
-		type = role_ratio
-		id = infantry
-		value = 80
-	}
-
-	ai_strategy = {
-		type = template_prio
-		id = motorized
-		value = -80
-	}
-
-	ai_strategy = {
-		type = template_prio
-		id = cavalry
-		value = -80
-	}
-
-	ai_strategy = {
-		type = template_prio
-		id = mountaineers
-		value = -80
-	}
-
-	ai_strategy = {
-		type = template_prio
-		id = infantry
-		value = 9999
-	}
-	
-		ai_strategy = {
-		type = equipment_production_factor
-		id = fighter
-		value = 20
-	}
-	
-	ai_strategy = {
-		type = equipment_production_factor
-		id = infantry
-		value = 10 #20 to 10
-	}
-	
-	ai_strategy = {
-		type = equipment_production_factor
-		id = artillery
-		value = 20 #10 to 20
-	}
-}					  
+#less_trucks_4_u_JAP = {
+#	enable = {
+#		tag = JAP
+#		date < 1939.1.1
+#	}
+#	abort = {
+#		date > 1939.1.1
+#	}
+#
+#	ai_strategy = {
+#		type = role_ratio
+#		id = infantry
+#		value = 80
+#	}
+#
+#	ai_strategy = {
+#		type = template_prio
+#		id = motorized
+#		value = -80
+#	}
+#
+#	ai_strategy = {
+#		type = template_prio
+#		id = cavalry
+#		value = -80
+#	}
+#
+#	ai_strategy = {
+#		type = template_prio
+#		id = mountaineers
+#		value = -80
+#	}
+#
+#	ai_strategy = {
+#		type = template_prio
+#		id = infantry
+#		value = 9999
+#	}
+#
+#		ai_strategy = {
+#		type = equipment_production_factor
+#		id = fighter
+#		value = 20
+#	}
+#
+#	ai_strategy = {
+#		type = equipment_production_factor
+#		id = infantry
+#		value = 10 #20 to 10
+#	}
+#
+#	ai_strategy = {
+#		type = equipment_production_factor
+#		id = artillery
+#		value = 20 #10 to 20
+#	}
+#}
 southern_expansion = {
 	enable = {
 		tag = JAP
 		has_completed_focus = southern_expansion_focus
 		OR = {
 			country_exists = HOL
-			country_exists = ENG	
+			country_exists = ENG
 		}
 	}
 	abort = {
 		NOT = {
 			country_exists = HOL
-			country_exists = ENG	
+			country_exists = ENG
 		}
 	}
-	
+
 	ai_strategy = {
 		type = antagonize
-		id = "HOL"			
+		id = "HOL"
 		value = 200
-	}		
+	}
 	ai_strategy = {
 		type = antagonize
-		id = "ENG"			
+		id = "ENG"
 		value = 100
 	}
 }
@@ -106,12 +106,12 @@ northern_expansion = {
 			country_exists = SOV
 		}
 	}
-	
+
 	ai_strategy = {
 		type = antagonize
-		id = "SOV"			
+		id = "SOV"
 		value = 200
-	}		
+	}
 }
 aggressive_china_politics = {
 	enable = {
@@ -124,10 +124,10 @@ aggressive_china_politics = {
 			country_exists = CHI
 		}
 	}
-	
+
 	ai_strategy = {
 		type = antagonize
-		id = "CHI"			
+		id = "CHI"
 		value = 50
 	}
 	ai_strategy = {
@@ -181,12 +181,12 @@ chinese_war = {
 			country_exists = CHI
 		}
 	}
-	
+
 	ai_strategy = {
 		type = antagonize
-		id = "CHI"			
+		id = "CHI"
 		value = 200
-	}		
+	}
 }
 
 strike_usa = {
@@ -200,41 +200,41 @@ strike_usa = {
 			country_exists = USA
 		}
 	}
-	
+
 	ai_strategy = {
 		type = antagonize
-		id = "USA"			
+		id = "USA"
 		value = 200
-	}		
+	}
 }
 
 germany_ally = {
 	enable = {
 		tag = JAP
-		has_completed_focus = axis_leanings_focus
+		has_completed_focus = JAP_sign_tripartite_pact
 		country_exists = GER
 	}
 	abort = {
 		NOT = { country_exists = GER }
 	}
-	
+
 	ai_strategy = {
 		type = befriend
-		id = "GER"			
+		id = "GER"
 		value = 200
 	}
 	ai_strategy = {
 		type = alliance
-		id = "GER"			
+		id = "GER"
 		value = 200
-	}	
+	}
 }
 JAP_template_design = {
 	enable = {
 		original_tag = JAP
-		date > 1940.1.1				
+		date > 1940.1.1
 	}
-	
+
 	ai_strategy = {
 		type = template_prio
 		id = infantry
@@ -252,7 +252,7 @@ JAP_template_design = {
 		id = cavalry
 		value = -100
 	}
-	
+
 	ai_strategy = {
 		type = template_prio
 		id = light_armor
@@ -264,7 +264,7 @@ JAP_template_design = {
 		id = medium_armor
 		value = 40
 	}
-	
+
 	ai_strategy = {
 		type = template_prio
 		id = modern_armor
@@ -282,10 +282,10 @@ JAP_template_design = {
 		id = paratroopers
 		value = -10
 	}
-	
+
 	ai_strategy = {
 		type = template_prio
 		id = mechanized
 		value = 10
 	}
-}					   
+}

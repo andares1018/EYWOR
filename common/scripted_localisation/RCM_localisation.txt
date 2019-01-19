@@ -29,10 +29,10 @@ defined_text = { # Country
 					any_neighbor_state = {
 						AND = {
 							owner = {
-								tag = PRC
+								tag = event_target:WTT_communist_china
 							}
 							controller = {
-								tag = PRC
+								tag = event_target:WTT_communist_china
 							}
 						}
 					}

@@ -409,7 +409,7 @@ country_event = {
 	fire_only_once = yes
 	trigger = {
 		always = no
-		NOT = { has_global_flag = CHI_attack_com }
+		NOT = { has_global_flag = CHI_Encirclement_Campaign_focus }
 		has_country_flag = CCW_offensive_executed
 		has_opinion_modifier = hostile_status
 		OR = {
@@ -1414,13 +1414,21 @@ country_event = {
 	picture = GFX_report_event_chinese_army_training
 	trigger = {
 		is_warlord = yes
-		CHI = { has_war_with = PRC }
+		is_subject = no #after the CCW, event to most warlords
+		event_target:WTT_current_china_leader = { has_war_with = event_target:WTT_communist_china }
 		has_country_flag = china101_fired
 		has_global_flag = china_split
 		NOT = {
-			has_war_with = JAP
+			OR = {
+				event_target:WTT_current_china_leader = {
+					has_government = communism
+				}
+				has_war_with = JAP
+				has_government = communism
+			}
 		}
 	}
+
 	immediate = {
 		if = {
 			limit = {
@@ -1437,32 +1445,34 @@ country_event = {
 	}
 	mean_time_to_happen = {
 		days = 0
-
 	}
 	option = {
 		name = rcmchina.211.a
 		ai_chance = {
-			factor = 100
-			modifier = {
-				factor = 0
-				has_country_flag = join_war_not_annex
-			}
+			factor = 0
+			#factor = 100
+			#modifier = {
+			#	factor = 0
+			#	has_country_flag = join_war_not_annex
+			#}
 		}
 		custom_effect_tooltip = GAME_OVER_TT
-		hidden_effect = { CHI = { annex_country = { target = ROOT transfer_troops = yes } } }
+		hidden_effect = { event_target:WTT_current_china_leader = { annex_country = { target = ROOT transfer_troops = yes } } }
 	}
 	option ={
 		name = rcmchina.211.b
 		ai_chance = {
-			factor = 0
-			modifier = {
-				factor = 100
-				has_country_flag = join_war_not_annex
-			}
+			factor = 100
+			#modifier = {
+			#	factor = 100
+			#	has_country_flag = join_war_not_annex
+			#}
 		}
-		add_to_war = { targeted_alliance = CHI enemy = PRC }
+		add_to_war = { targeted_alliance = event_target:WTT_current_china_leader enemy = event_target:WTT_communist_china }
 	}
 }
+
+
 # Civil war xsm gxc yun joins PRC (annex)
 country_event = {
 	id = rcmchina.212
@@ -1471,8 +1481,9 @@ country_event = {
 	picture = GFX_report_event_chinese_army_training
 	trigger = {
 		is_warlord = yes
-		PRC = { has_war_with = CHI }
-		has_war_with = CHI
+		is_subject = no
+		event_target:WTT_communist_china = { has_war_with = event_target:WTT_current_china_leader }
+		has_war_with = event_target:WTT_current_china_leader
 		has_country_flag = china101_fired
 		has_global_flag = china_split
 		NOT = { has_war_with = JAP }
@@ -1484,7 +1495,7 @@ country_event = {
 	option = {
 		name = rcmchina.212.a
 		ai_chance = { factor = 100 }
-		PRC = { country_event = { id =  rcmchina.218 } }
+		event_target:WTT_communist_china = { country_event = { id =  rcmchina.218 } }
 	}
 	option = {
 		name = rcmchina.212.b
@@ -1504,13 +1515,13 @@ country_event = {
 		tag = YUN
 		has_country_flag = china101_fired
 		has_global_flag = china_split
-		PRC = {
+		event_target:WTT_communist_china = {
 			NOT = {
 				has_war_with = JAP
 			}
 		}
-		country_exists = PRC
-		NOT = { has_war_with = PRC }
+		country_exists = event_target:WTT_communist_china
+		NOT = { has_war_with = event_target:WTT_communist_china }
 		OR = {
 			CHI = { num_of_controlled_states < 3 }
 			NOT = { country_exists = CHI }
@@ -1523,8 +1534,8 @@ country_event = {
 		}
 		custom_effect_tooltip = GAME_OVER_TT
 		hidden_effect = {
-			PRC = { country_event = { id =  rcmchina.217 } }
-			PRC = { annex_country = { target = YUN transfer_troops = yes } }
+			event_target:WTT_communist_china = { country_event = { id =  rcmchina.217 } }
+			event_target:WTT_communist_china = { annex_country = { target = YUN transfer_troops = yes } }
 		}
 	}
 	option = {
@@ -1543,6 +1554,7 @@ country_event = {
 	fire_only_once = yes
 	trigger = {
 		tag = XIK
+		is_subject = no
 		has_country_flag = china101_fired
 		has_global_flag = china_split
 		PRC = {
@@ -1593,6 +1605,7 @@ country_event = {
 			tag = GXC
 			tag = XSM
 		}
+		is_subject = no
 		NOT = { has_country_flag = nbtz_fired }
 		CHI = { has_country_flag = china101_fired }
 		has_global_flag = china_split
@@ -6287,7 +6300,7 @@ country_event = {
 	option = {
 		ai_chance = {
 			factor = 50
-			
+
 		}
 		name = rcmchina.341.b
 		TIB = { country_event = { id = rcmchina.344 days = 7 } }
@@ -6602,11 +6615,11 @@ country_event = {#second united front
 			add_opinion_modifier = {
 				target = CHI modifier = CHI_prc_pact
 			}
-		}		
+		}
 		CHI = {
 			add_opinion_modifier = {
 				target = PRC modifier = CHI_prc_pact
-			}			
+			}
 		}
 		diplomatic_relation = { country = CHI relation = non_aggression_pact }
 		hidden_effect = {
@@ -6679,10 +6692,10 @@ country_event = {#second united front #PRC ref
 		if = {
 			limit = {
 				NOT = {
-					has_completed_focus = CHI_attack_com
+					has_completed_focus = CHI_Encirclement_Campaign_focus
 				}
 			}
-			complete_national_focus = CHI_attack_com
+			complete_national_focus = CHI_Encirclement_Campaign_focus
 			else = {
 				create_wargoal = {
 					type = annex_everything target = FROM
@@ -6692,6 +6705,7 @@ country_event = {#second united front #PRC ref
 	}
 }
 
+######SECOND CENTRAL PLAIN WAR
 country_event = { ###second_central_plains_war
 	id = rcmchina.355
 	title = rcmchina.355.t
@@ -6705,7 +6719,7 @@ country_event = { ###second_central_plains_war
 			NOT = {
 				OR = {
 					tag = event_target:scp_war_opposition_leader
-					tag = event_target:WTT_current_china_leader
+					tag = event_target:scp_war_old_leader
 				}
 			}
 		}
@@ -6716,19 +6730,28 @@ country_event = { ###second_central_plains_war
 		if = {
 			limit = {
 				FROM = {
-					is_subject_of = event_target:WTT_current_china_leader
+					is_subject_of = event_target:scp_war_old_leader
 				}
 			}
 			end_puppet = FROM
 		}
-		add_to_faction = FROM
+		if = {
+			limit = {
+				is_faction_leader = no
+			}
+			create_faction = WRL_leader_generic_faction
+			add_to_faction = FROM
+			else = {
+				add_to_faction = FROM
+			}
+		}
 		FROM = {
-			add_to_war = { targeted_alliance = ROOT enemy = event_target:WTT_current_china_leader }
+			add_to_war = { targeted_alliance = ROOT enemy = event_target:scp_war_old_leader }
 		}
 	}
 	option = {
 		name = rcmchina.355.c
-		trigger = { TAG = event_target:WTT_current_china_leader }
+		trigger = { TAG = event_target:scp_war_old_leader }
 	} #Join opposition faction
 }
 country_event = { # JOIN Opposition totally
@@ -6744,7 +6767,7 @@ country_event = { # JOIN Opposition totally
 			NOT = {
 				OR = {
 					tag = event_target:scp_war_opposition_leader
-					tag = event_target:WTT_current_china_leader
+					tag = event_target:scp_war_old_leader
 				}
 			}
 		}
@@ -6758,10 +6781,10 @@ country_event = { # JOIN Opposition totally
 	}
 	option = {
 		name = rcmchina.356.c
-		trigger = { TAG = event_target:WTT_current_china_leader }
+		trigger = { TAG = event_target:scp_war_old_leader }
 	}
 }
-country_event = { #JOIN LEADER CHI
+country_event = { #JOIN OLD LEADER
 	id = rcmchina.357
 	title = rcmchina.357.t
 	desc = rcmchina.357.d
@@ -6774,17 +6797,17 @@ country_event = { #JOIN LEADER CHI
 			NOT = {
 				OR = {
 					tag = event_target:scp_war_opposition_leader
-					tag = event_target:WTT_current_china_leader
+					tag = event_target:scp_war_old_leader
 				}
 			}
 		}
 	}
 	option = {
 		name = rcmchina.357.b
-		trigger = { tag = event_target:WTT_current_china_leader }
+		trigger = { tag = event_target:scp_war_old_leader }
 		FROM = {
 			add_to_war = {
-				targeted_alliance = event_target:WTT_current_china_leader enemy = event_target:scp_war_opposition_leader
+				targeted_alliance = event_target:scp_war_old_leader enemy = event_target:scp_war_opposition_leader
 			}
 		}
 		hidden_effect = {
@@ -6848,7 +6871,7 @@ country_event = {
 					tag = NXM
 					tag = TNG
 					tag = HMI
-					tag = PRC
+					tag = CHI
 				}
 			}
 			modifier = {
@@ -6859,6 +6882,17 @@ country_event = {
 		every_other_country = {
 			limit = {
 				is_in_faction_with = event_target:scp_war_opposition_leader
+			}
+			if = {
+				limit = {
+					ROOT = {
+						is_subject_of = event_target:scp_war_old_leader
+						has_war_with = PREV
+					}
+				}
+				ROOT = {
+					white_peace = PREV
+				}
 			}
 			country_event = { days = 3 id = rcmchina.355 }
 		}
@@ -6872,7 +6906,7 @@ country_event = {
 				event_target:scp_war_opposition_leader = {
 					tag = NEA
 				}
-				tag = PRC
+				tag = event_target:scp_war_old_leader
 			}
 			modifier = {
 				factor = 50
@@ -6921,7 +6955,7 @@ country_event = {
 		name = rcmchina.358.e
 		trigger = {
 			NOT = {
-				TAG = PRC
+				TAG = event_target:scp_war_old_leader
 			}
 		}
 		ai_chance = {
@@ -6931,7 +6965,7 @@ country_event = {
 				OR = {
 					AND = {
 						has_global_flag = gud_ready
-						GXC = { has_offensive_war_with = CHI }
+						GXC = { has_offensive_war_with = event_target:scp_war_old_leader }
 					}
 					AND = {
 						OR = {
@@ -7011,34 +7045,24 @@ country_event = {
 	immediate = {
 
 	}
-	mean_time_to_happen = {
-		days = 0
-	}
 
 	option = {
 		name = rcmchina.360.a
-		dismantle_faction = yes		
-		set_cosmetic_tag = CHI_second_republic
+		custom_effect_tooltip = country_color_change
+		dismantle_faction = yes
 		if = {
 			limit = {
-				has_dlc = "Waking the Tiger"
 				OR = {
 					has_government = communism
+					has_government = n_socialism
 					communism > 0.5
+					n_socialism > 0.5
 				}
-				NOT = { neutrality > 0.5 }
 			}
-			hidden_effect = {
-				set_cosmetic_tag = CHI_second_republic_red
-			}
+			set_cosmetic_tag = CHI_second_republic_red
 		}
 		else_if = {
-			limit = {
-				has_dlc = "Waking the Tiger"
-			}
-			hidden_effect = {
-				set_cosmetic_tag = CHI_second_republic_blue
-			}
+			set_cosmetic_tag = CHI_second_republic_blue
 		}
 		add_war_support = 0.05
 		add_stability = 0.05
@@ -7046,6 +7070,199 @@ country_event = {
 	option = {
 		name = rcmchina.360.b
 		dismantle_faction = yes
+		set_cosmetic_tag = CHI_second_republic
+		add_war_support = 0.05
+		add_stability = 0.05
+	}
+	option = {
+		name = rcmchina.360.c
+		dismantle_faction = yes
 		add_political_power = 50
+	}
+}
+###  ##  # # ###     #  #  ##  ### ###  ##  #  #  ##  #       #   ###  ##  ###  ### ###   ## #  # ### ###
+ #  #  # # # #       ## # #  #  #   #  #  # ## # #  # #       #   #   #  # #  # #   #  # #   #  #  #  #  #
+ #  #### ##  ##      # ## ####  #   #  #  # # ## #### #       #   ##  #### #  # ##  ###   #  ####  #  ###
+ #  #  # # # #       #  # #  #  #   #  #  # #  # #  # #       #   #   #  # #  # #   #  #   # #  #  #  #
+ #  #  # # # ###     #  # #  #  #  ###  ##  #  # #  # ###     ### ### #  # ###  ### #  # ##  #  # ### #
+
+
+# Notification to WTT_current_china_leader that FROM has gained support and will take over leadership
+country_event = {
+	id = rcmchina.361
+	title = wtt_take_national_leadership.1.t
+	desc = wtt_take_national_leadership.1.desc
+	picture = GFX_report_event_china_politicians_captured
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			save_event_target_as = old_leader
+			clr_country_flag = wtt_political_struggle
+			if = {
+				limit = {
+					has_cosmetic_tag = CHI_warlord_leader # warlord took over before this happened
+				}
+				drop_cosmetic_tag = yes
+			}
+			if = {
+				limit = {
+					tag = CHI
+				}
+				set_cosmetic_tag = CHI_power_struggle_defeated
+			}
+			FROM = {
+				save_event_target_as = new_leader
+				CHI_negative_spirit_transfer = yes
+				if = {
+					limit = {
+						has_cosmetic_tag = CHI_power_struggle_defeated
+					}
+					drop_cosmetic_tag = yes
+					else = {
+						set_cosmetic_tag = CHI_warlord_leader
+					}
+				}
+				clear_global_event_target = WTT_current_china_leader
+				save_global_event_target_as = WTT_current_china_leader
+			}
+		}
+	}
+
+	#Accept
+	option = {
+		clr_global_flag = wtt_national_leadership_takeover_in_progress
+		name = wtt_take_national_leadership.1.a
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0
+				OR = {
+					has_stability > 0.6
+					has_war = no
+				}
+			}
+		}
+
+		every_country = {
+			limit = { has_war_with = ROOT }
+			FROM = { add_to_war = { targeted_alliance = ROOT enemy = PREV hostility_reason = asked_to_join } }
+		}
+		hidden_effect = {
+			every_owned_state = {
+				limit = {
+					NOT = {
+						is_fully_controlled_by = ROOT
+					}
+				}
+				FROM = {
+					set_state_owner = PREV
+				}
+			}
+			every_owned_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+				}
+				FROM = {
+					transfer_state = PREV
+				}
+			}
+		}
+
+
+		FROM = {
+			country_event = { id = wtt_take_national_leadership.2 }
+
+			effect_tooltip = {
+				annex_country = { target = ROOT transfer_troops = yes }
+			}
+
+			hidden_effect = {
+				news_event = { id = wtt_news.45 days = 3 }
+			}
+			WTT_political_struggle_recalculate_support = yes
+		}
+		custom_effect_tooltip = GAME_OVER_TT
+	}
+
+	#Refuse
+	option = {
+
+		name = wtt_take_national_leadership.1.b
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				has_war_with = JAP
+				surrender_progress > 0.25
+			}
+		}
+
+		hidden_effect = {
+			if = {
+				limit = {
+					is_faction_leader = yes
+					is_in_faction_with = FROM
+				}
+				every_country = {
+					limit = { is_in_faction_with = ROOT }
+					ROOT = { remove_from_faction = PREV }
+				}
+			}
+			else_if = {
+				limit = {
+					is_in_faction_with = FROM
+				}
+				random_country = {
+					limit = { is_in_faction_with = ROOT }
+					remove_from_faction = ROOT
+				}
+			}
+
+			#End political struggle
+			every_country = {
+				limit = { has_country_flag = wtt_political_struggle }
+				WTT_political_struggle_pause_current_country = yes
+			}
+		}
+
+
+		declare_war_on = { target = FROM type = annex_everything }
+		set_global_flag = wtt_war_over_national_leadership
+		set_country_flag = wtt_refused_giving_leadership
+		clr_global_flag = wtt_national_leadership_takeover_in_progress
+		add_ideas = CHI_illegal_regime
+		FROM = {
+			create_faction = WRL_leader_generic_faction
+			country_event = { id = wtt_take_national_leadership.3 }
+		}
+	}
+}
+
+#####RECLAIM NATIONAL LEADER Ship (Obsolete)
+country_event = {
+	id = rcmchina.362
+	title = rcmchina.362.t
+	desc = rcmchina.362.d
+	picture = GFX_report_event_china_flag
+	is_triggered_only = yes
+
+	option = {
+		name = rcmchina.362.a
+		#set_capital = 598
+		set_cosmetic_tag = CHI
+		remove_ideas = CHI_illegal_regime
+		hidden_effect = {
+			every_country = {
+				clear_global_event_target = WTT_current_china_leader
+			}
+			save_global_event_target_as = WTT_current_china_leader
+			#set_party_name = {
+			#	ideology = neutrality
+			#	long_name = NEA_CHI_neutrality_party_long
+			#	name = NEA_CHI_neutrality_party
+			#}
+		}
 	}
 }

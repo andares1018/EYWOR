@@ -114,45 +114,54 @@ country_event = {
 		trigger = { TAG = event_target:WTT_current_china_leader }
 	}
 }
-####
+####NEW NATIONAL LEADERSHIP, triggered when a non-CHI_power_struggle warlord won against old leader
 country_event = {
 	id = nea.3
 	title = nea.3.t
 	desc = nea.3.d
 	picture = GFX_report_event_china_flag
-	fire_only_once = yes
+	is_triggered_only = yes
 	trigger = {
-		#tag = NEA
-		is_warlord = yes
 		NOT = {
-			has_war_with = CHI
-			is_subject_of = CHI
+			has_global_flag = new_china_determined #used to stop multiple warlords from becoming china, in case of multiple warlords have similar war participationa against china
 		}
-		owns_state = 598
-		#has_country_flag = yang_hucheng_in_charge
 	}
+	#trigger = {
+	#	#tag = NEA
+	#	is_warlord = yes
+	#	NOT = {
+	#		tag = event_target:WTT_current_china_leader
+	#	}
+	#	NOT = {
+	#		has_war_with = event_target:WTT_current_china_leader
+	#		is_subject_of = event_target:WTT_current_china_leader
+	#	}
+	#	owns_state = 598
+	#	#has_country_flag = yang_hucheng_in_charge
+	#}
 	option = {
 		name = nea.3.a
 		every_state = {
 			limit = {
-				#is_owned_by = ROOT
 				is_core_of = PRC
 			}
 			add_core_of = ROOT
 		}
-		set_capital = 598
+		set_cosmetic_tag = CHI_warlord_leader
 		hidden_effect = {
-			set_cosmetic_tag = CHI
+			country_event = {
+				days = 2 id = nea.6 #to clear new_china_determined
+			}
 			every_country = {
 				clear_global_event_target = WTT_current_china_leader
+				clear_global_event_target = scp_war_old_leader
+				clear_global_event_target = scp_war_opposition_leader
 			}
 			save_global_event_target_as = WTT_current_china_leader
-			#set_party_name = {
-			#	ideology = neutrality
-			#	long_name = NEA_CHI_neutrality_party_long
-			#	name = NEA_CHI_neutrality_party
-			#}
+
+			clr_global_flag = wtt_war_over_national_leadership
 		}
+		WTT_restart_political_struggle = yes
 	}
 }
 #switch back to normal after civ war
@@ -188,7 +197,19 @@ country_event = {
 		country_event = EFM_Comchina.9015
 	}
 	is_triggered_only = yes
-	option = { 
+	option = {
+	}
+}
+#clear new china determine flag(used to choose a random new china after a central plain war, you want nea.3 only triggered once.)
+country_event = {
+	id = nea.6
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		clr_global_flag = new_china_determined
+	}
+
+	option = {
 	}
 }
 
@@ -401,7 +422,7 @@ country_event = {
 	desc = gxc.1.d
 	picture = GFX_report_event_japanese_chinese_surrender
 	is_triggered_only = yes
-	
+
 	option = {
 		name = gxc.1.a
 		GUD = {
@@ -416,11 +437,11 @@ country_event = {
 	desc = gxc.2.d
 	picture = GFX_report_event_chinese_japanese_handshake
 	is_triggered_only = yes
-	
+
 	#mean_time_to_happen = {
 		#	days = 10
 		#}
-	
+
 	option = {
 		name = gxc.2.a
 		GXC = { country_event = { days = 5 id = gxc.13 } }#form anti-jap army
@@ -433,11 +454,11 @@ country_event = {
 	title = gxc.3.t
 	desc = gxc.3.d
 	picture = GFX_report_event_chinese_officers
-	
+
 	#mean_time_to_happen = {
 		#	days = 10
 		#}
-	
+
 	is_triggered_only = yes
 	option = {
 		name = gxc.3.a
@@ -450,16 +471,16 @@ country_event = {
 	title = gxc.4.t
 	desc = gxc.4.d
 	picture = GFX_report_event_chinese_officers
-	
+
 	#mean_time_to_happen = {
 		#	days = 10
 		#}
-	
+
 	is_triggered_only = yes
 	option = { #peace#accept
 		name = gxc.4.a
 		ai_chance = {
-			base = 70 	
+			base = 70
 			modifier = {
 				factor = 200
 				is_historical_focus_on = yes
@@ -547,7 +568,7 @@ country_event = {
 	title = gxc.8.t
 	desc = gxc.8.d
 	picture = GFX_report_event_chinese_officers
-	
+
 	is_triggered_only = yes
 	option = {
 		name = gxc.8.a
@@ -557,7 +578,7 @@ country_event = {
 		name = gxc.8.b
 		trigger = { NOT = { has_country_flag = gxc_accept_peace } }
 	}
-	
+
 }
 
 
@@ -635,8 +656,8 @@ country_event = {
 	}
 	picture = GFX_report_event_chinese_soldiers_02
 	is_triggered_only = yes
-	
-	
+
+
 	option = {
 		name = gxc.13.a
 		trigger = { TAG = GXC }
@@ -754,10 +775,10 @@ country_event = {
 
 	is_triggered_only = yes
 
-	option = { 
+	option = {
 		name = gud.1.a #accept
-		ai_chance = { 
-		base = 80 	
+		ai_chance = {
+		base = 80
 			modifier = {
 				factor = 150
 				is_historical_focus_on = yes
@@ -767,10 +788,10 @@ country_event = {
 			country_event = { days = 5 id = gxc.2 }
 		}
 	}
-	option = { 
+	option = {
 		name = gud.1.b #refuse
-		ai_chance = { 
-		base = 20 	
+		ai_chance = {
+		base = 20
 			modifier = {
 				factor = 0
 				is_historical_focus_on = yes
@@ -787,7 +808,7 @@ country_event = {
 	title = gud.2.t
 	desc = gud.2.d
 	picture = GFX_report_event_chinese_officers
-	
+
 	#mean_time_to_happen = {
 	#	days = 10
 	#}
@@ -796,19 +817,19 @@ country_event = {
 
 	option = { #accept
 		name = gud.2.a
-		ai_chance = { factor = 50 } 
+		ai_chance = { factor = 50 }
 		CHI = {
 			country_event = { days = 5 id = rcmchina.235 }
 		}
 		add_political_power = 50
-		GXC = { 
-			country_event = { id = gxc.8 } 
+		GXC = {
+			country_event = { id = gxc.8 }
 			remove_from_faction = GUD
 		}
 	}
 	option = { #refuse
 		name = gud.2.b
-		ai_chance = { factor = 50 } 
+		ai_chance = { factor = 50 }
 		CHI = {
 			country_event = { days = 5 id = rcmchina.236 }
 		}
@@ -827,14 +848,14 @@ country_event = {
 		if = {
 			limit = { GXC = { has_war_with = CHI } }
 			add_to_war = { targeted_alliance = GXC enemy = CHI }
-			GXC = { 
-				if = { limit = { GXC = { is_faction_leader = no } } 
-					set_rule = { can_create_factions = yes } 
+			GXC = {
+				if = { limit = { GXC = { is_faction_leader = no } }
+					set_rule = { can_create_factions = yes }
 					create_faction = "anti_jap_salv_army"
-					add_to_faction = GUD 
+					add_to_faction = GUD
 				}
-				if = { limit = { GXC = { is_faction_leader = yes } } 
-					add_to_faction = GUD 
+				if = { limit = { GXC = { is_faction_leader = yes } }
+					add_to_faction = GUD
 				}
 			}
 		}
@@ -850,11 +871,11 @@ country_event = {
 	id = gud.4
 	title = gud.4.t
 	picture = GFX_report_event_huang_2g_bribed
-	desc = { 
+	desc = {
 		text = gud.4.d_chi
 		trigger = { TAG = CHI }
 	}
-	desc = { 
+	desc = {
 		text = gud.4.d
 		trigger = { NOT = { TAG = CHI } }
 	}
@@ -871,18 +892,18 @@ country_event = {
 	}
 	option = {
 		name = gud.4.b
-		trigger = { 
-			NOT = { original_tag = CHI } 
-			NOT = { original_tag = GXC } 
+		trigger = {
+			NOT = { original_tag = CHI }
+			NOT = { original_tag = GXC }
 		}
 	}
 	option = {
 		name = gud.4.c
-		trigger = { 
+		trigger = {
 			original_tag = GXC
 		}
-		ai_chance = { 
-			base = 50 	
+		ai_chance = {
+			base = 50
 			modifier = {
 				factor = 100
 				is_historical_focus_on = yes
@@ -892,11 +913,11 @@ country_event = {
 	}
 	option = {
 		name = gud.4.e
-		trigger = { 
-			original_tag = GXC 
+		trigger = {
+			original_tag = GXC
 		}
-		ai_chance = { 
-			base = 50 	
+		ai_chance = {
+			base = 50
 			modifier = {
 				factor = 0
 				is_historical_focus_on = yes
@@ -911,11 +932,11 @@ country_event = {
 	id = gud.5
 	title = gud.5.t
 	picture = GFX_report_event_huang_2g_bribed
-	desc = { 
+	desc = {
 		text = gud.5.d_chi
 		trigger = { original_tag = CHI }
 	}
-	desc = { 
+	desc = {
 		text = gud.5.d
 		trigger = { NOT = { original_tag = CHI } }
 	}
@@ -926,14 +947,14 @@ country_event = {
 	}
 	option = {
 		name = gud.5.b
-		trigger = { 
-			NOT = { original_tag = CHI } 
+		trigger = {
+			NOT = { original_tag = CHI }
 			NOT = { original_tag = GXC }
-		}	
+		}
 	}
 	option = {
 		name = gud.5.c
-		trigger = { 
+		trigger = {
 			TAG = GXC
 		}
 		hidden_effect = {
@@ -968,7 +989,7 @@ country_event = {
 		owns_state = 283
 		owns_state = 792
 	}
-	
+
 	option = {
 		name = nxm.1.a
 		retire_country_leader = yes
@@ -987,7 +1008,3 @@ country_event = {
 		}
 	}
 }
-
-
-
-

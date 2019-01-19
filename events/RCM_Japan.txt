@@ -1,4 +1,4 @@
-###########################
+﻿###########################
 # Japanese Events
 ###########################
 add_namespace = rcmjapan
@@ -909,7 +909,7 @@ country_event = {
 					}
 				}
 				owner = {
-					has_war_with = JAP					
+					has_war_with = JAP
 				}
 			}
 			JAP = { set_state_controller = PREV }
@@ -1408,8 +1408,8 @@ country_event = {
 			}
 			JAP = {
 				puppet = XSM
-			}			
-		}		
+			}
+		}
 	}
 }
 #####################################################################
@@ -6340,19 +6340,19 @@ country_event = {
 		add_ideas = JAP_expansionist_propaganda_1
 		hidden_effect = {
 			news_event = {
-				days = 80 id = news_mesc.5
-			}
-			news_event = {
-				days = 160 id = news_mesc.5
+				days = 120 id = news_mesc.5
 			}
 			news_event = {
 				days = 240 id = news_mesc.5
 			}
 			news_event = {
-				days = 320 id = news_mesc.5
+				days = 360 id = news_mesc.5
 			}
 			news_event = {
-				days = 400 id = news_mesc.5
+				days = 480 id = news_mesc.5
+			}
+			news_event = {
+				days = 600 id = news_mesc.5
 			}
 		}
 	}
@@ -6439,7 +6439,7 @@ country_event = {
 	picture = GFX_report_event_japanese_transport_soldiers
 
 	is_triggered_only = yes
-	
+
 	#Accept transfer puppet
 	#Checking for puppet in decision that fires event.
 	option = {
@@ -6486,7 +6486,7 @@ country_event = {
 	picture = GFX_report_event_generic_sign_treaty3
 
 	is_triggered_only = yes
-	
+
 	#Accept transfer puppet
 	#Checking for puppet in decision that fires event.
 	option = {
@@ -6514,8 +6514,8 @@ country_event = {
 			}
 			hidden_effect = {
 				news_event = { id = wtt_news.25 hours = 6 }
-			}		
-		}		
+			}
+		}
 	}
 }
 
@@ -6527,8 +6527,8 @@ country_event = {
 	picture = GFX_report_event_japanese_transport_soldiers
 
 	is_triggered_only = yes
-	
-	
+
+
 	option = {
 		name = wtt_japan.3.a
 		ai_chance = {

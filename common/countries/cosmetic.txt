@@ -1,4 +1,4 @@
-###EAST FOCUS
+##EAST FOCUS
 New_ROC = {
 	color = hsv { 0.18 0.6 0.9 }
 	color_ui = hsv { 0.18 0.6 0.9 }
@@ -551,10 +551,10 @@ GER_german_monarchy = {
 	color_ui = rgb { 115 115 115 }
 }
 
-#CHI_warlord_leader = {
-#	color = rgb { 24 115 222 }
-#	color_ui = rgb { 93 157 231 }
-#}
+CHI_warlord_leader = {
+	color = rgb { 24 115 222 }
+	color_ui = rgb { 93 157 231 }
+}
 #CHI_second_republic = {
 #	color = rgb { 24 115 222 }
 #	color_ui = rgb { 93 157 231 }
@@ -567,10 +567,10 @@ CHI_second_republic_red = {
 	color = rgb { 196 82 108 }
 	color_ui = rgb { 196 82 108 }
 }
-MAN_restored = {
-	color = rgb { 237 152 18 }
-	color_ui = rgb { 224 139 5 }
-}
+#MAN_restored = {
+#	color = rgb { 237 152 18 }
+#	color_ui = rgb { 224 139 5 }
+#}
 JAP_showa_restoration = {
 	color = rgb { 230 230 230 }
 }

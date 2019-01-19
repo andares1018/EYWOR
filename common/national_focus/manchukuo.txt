@@ -754,14 +754,16 @@ focus_tree = {
 		available_if_capitulated = yes
 		completion_reward = {
 			MAN_low_legitimacy_level_down = yes
-			add_timed_idea = {
-				idea = MAN_assertiveness
-				days = 365
-			}
-			add_autonomy_ratio = {
-				value = 0.5
-				localization = MAN_purge_the_general_affairs_council
-			}
+			#add_timed_idea = {
+			#	idea = MAN_assertiveness
+			#	days = 365
+			#}
+			#add_autonomy_ratio = {
+			#	value = 0.5
+			#	localization = MAN_purge_the_general_affairs_council
+			#}
+			add_stability = 0.1
+			unlock_decision_tooltip = MAN_prepare_to_seize_arms
 		}
 
 	}
@@ -869,10 +871,10 @@ focus_tree = {
 		y = 4
 		completion_reward = {
 			add_ideas = MAN_Imperial_Army_Focus
-			add_autonomy_ratio = {
-				value = 0.05
-				localization = MAN_Improve_autonomy
-			}
+			#add_autonomy_ratio = {
+			#	value = 0.05
+			#	localization = MAN_Improve_autonomy
+			#}
 		}
 
 	}
@@ -1033,7 +1035,7 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = MAN_Kwantung_Army_Focus
 			add_autonomy_ratio = {
-				value = -0.1
+				value = -0.03
 				localization = MAN_Improve_autonomy
 			}
 		}
@@ -1822,6 +1824,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			unlock_decision_tooltip = MAN_divert_machine_tools
 		}
 		completion_reward = {
 			random_owned_controlled_state = {
@@ -2036,7 +2039,9 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
+		
 		complete_tooltip = {
+			unlock_decision_tooltip = MAN_fund_underground_gun_shops
 			every_state = {
 				limit = {
 					has_state_flag = MAN_local_arms_procurement_AF
@@ -2050,6 +2055,7 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			unlock_decision_tooltip = MAN_fund_underground_gun_shops
 			random_owned_controlled_state = {
 				limit = {
 					is_core_of = ROOT
@@ -2113,7 +2119,8 @@ focus_tree = {
 		available_if_capitulated = yes
 		completion_reward = {
 			MAN_low_legitimacy_level_down = yes
-			add_ideas = MAN_bolster_nationalism
+			add_ideas = MAN_bolster_nationalism			
+			unlock_decision_tooltip = MAN_recruit_bandits_generic
 		}
 
 	}
@@ -2250,6 +2257,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		completion_reward = {
 			add_ideas = MAN_five_people_armies
+			unlock_decision_tooltip = MAN_raise_manchu_banner
 			custom_effect_tooltip = MAN_five_people_armies_tt
 			hidden_effect = {
 				division_template = {
@@ -2354,6 +2362,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		complete_tooltip = {
+			unlock_decision_tooltip = MAN_prepare_to_seize_arms
 			every_state = {
 				limit = {
 					has_state_flag = MAN_purge_the_general_affairs_council_2IC
@@ -2367,10 +2376,11 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			add_autonomy_ratio = {
-				value = 0.25
-				localization = MAN_purge_the_general_affairs_council
-			}
+			unlock_decision_tooltip = MAN_prepare_to_seize_arms
+			#add_autonomy_ratio = {
+			#	value = 0.25
+			#	localization = MAN_purge_the_general_affairs_council
+			#}
 			add_stability = 0.1
 			random_owned_controlled_state = {
 				limit = {

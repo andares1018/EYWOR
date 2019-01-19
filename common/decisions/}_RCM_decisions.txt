@@ -19,21 +19,11 @@ foreign_politics = {
 					NOT = {
 						any_state = {
 							is_owned_by = ROOT
-							is_core_of = CHI
+							has_state_flag = is_chinese_states_flag
 							NOT = {
 								state = 524
 							}
-							OR = {
-								is_controlled_by = JAP
-								AND = {
-									is_controlled_by = ECA
-									ECA = { is_subject_of = JAP }
-								}
-								AND = {
-									is_controlled_by = MAN
-									MAN = { is_subject_of = JAP }
-								}
-							}
+							is_controlled_by_jap_or_its_puppet = yes
 						}
 					}
 				}
@@ -629,6 +619,7 @@ liangguang_incident = {
 
 ###PUPPETS FORMING
 japan_form_CHI_puppets = {
+
 
 	###CCP
 	JAP_form_CCP_mission = { #great way
@@ -1298,8 +1289,19 @@ foreign_politics = {
 		target_trigger = {
 			FROM = {
 				is_warlord = yes
-				is_faction_leader = yes
-				has_war_with = event_target:WTT_current_china_leader
+				OR = {
+					AND = {
+						is_faction_leader = yes
+						has_war_with = event_target:WTT_current_china_leader
+					}
+					AND = {
+						tag = event_target:WTT_current_china_leader
+						any_enemy_country = {
+							has_idea = CHI_illegal_regime
+						}
+					}
+				}
+
 			}
 		}
 		visible = { #can see
@@ -1308,11 +1310,20 @@ foreign_politics = {
 				tag = PRC
 				tag = CHI
 			}
-			any_country = {
-				has_war_with = event_target:WTT_current_china_leader
-				is_originally_warlord = yes
-				is_faction_leader = yes
+			OR = {
+				#non political struggle
+				any_country = {
+					has_war_with = event_target:WTT_current_china_leader
+					is_originally_warlord = yes
+					is_faction_leader = yes
+				}
+				#political struggle
+				any_country = {
+					has_war_with = event_target:WTT_current_china_leader
+					has_idea = CHI_illegal_regime
+				}
 			}
+
 			NOT = {
 				OR = {
 					is_in_faction = yes
@@ -1330,6 +1341,15 @@ foreign_politics = {
 		complete_effect = { #run effect on selection
 			FROM = {
 				save_global_event_target_as = scp_war_opposition_leader
+				random_enemy_country = {
+					limit = {
+						OR = {
+							tag = event_target:WTT_current_china_leader
+							has_idea = CHI_illegal_regime
+						}
+					}
+					save_global_event_target_as = event_target:scp_war_old_leader
+				}
 			}
 			if = {
 				limit = {
@@ -1356,9 +1376,9 @@ recovery_effort = {
 	recover_from_the_long_march = {
 		icon = generic_nationalism
 		fire_only_once = no
-		days_remove = 85 # Stays for 5 days before being removed
-		days_re_enable = 35 # Will show up in the interface and can be selected again after 5 days
-		cost = 50
+		days_remove = 60 # Stays for 5 days before being removed
+		days_re_enable = 20 # Will show up in the interface and can be selected again after 5 days
+		cost = 35
 		highlight_states = { #These states will be highlighted
 
 		}
@@ -2010,7 +2030,7 @@ RCM_communist_infiltration = {
 
 		}
 		visible = { #can see
-			tag = PRC
+			tag = event_target:WTT_communist_china
 			has_country_flag = communist_infiltration
 			any_state = {
 				owner = {
@@ -2097,7 +2117,7 @@ RCM_communist_infiltration = {
 
 		}
 		visible = { #can see
-			tag = PRC
+			tag = event_target:WTT_communist_china
 			608 = {
 				OR = {
 					is_owned_by = ROOT
@@ -2196,7 +2216,7 @@ RCM_communist_infiltration = {
 
 		}
 		visible = { #can see
-			tag = PRC
+			tag = event_target:WTT_communist_china
 			has_country_flag = communist_infiltration
 
 		}
@@ -2250,7 +2270,7 @@ RCM_communist_crackdown = {
 			}
 		}
 		visible = { #can see
-			PRC = {
+			event_target:WTT_communist_china = {
 				has_government = communism
 			}
 			NOT = {

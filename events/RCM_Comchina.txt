@@ -20,17 +20,17 @@ country_event = {
 	option = { #join
 		name = prc.1.a
 		ai_chance = {
-			factor = 0
+			factor = 30
 			modifier = {
 				factor = 200
-				OR = {
+				OR = { #GUD with GXC or historical, don't let them miss the war!
 					AND = {
 						has_global_flag = gud_ready
 						GXC = { has_offensive_war_with = CHI }
 					}
 					is_historical_focus_on = yes
 				}
-				NOT = {
+				NOT = { #these warlords don't wanna join
 					OR = {
 						tag = XSM
 						tag = NXM
@@ -42,6 +42,21 @@ country_event = {
 						tag = YUN
 						tag = HPC
 					}
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					# don't let(factor) these join(option)
+					tag = XSM
+					tag = NXM
+					tag = HMI
+					tag = TNG
+					tag = SIK
+					tag = XIK
+					tag = SHX
+					tag = YUN
+					tag = HPC
 				}
 			}
 		}
@@ -67,10 +82,11 @@ country_event = {
 	option = { #not join
 		name = prc.1.b
 		ai_chance = {
-			factor = 20
-			modifier = {
+			factor = 15
+			modifier = { #these warlords won't join no matter what
 				factor = 100
 				OR = {
+					#they don't want join
 					tag = XSM
 					tag = NXM
 					tag = HMI
@@ -83,7 +99,20 @@ country_event = {
 			}
 			modifier = {
 				factor = 0
-				OR = {
+				NOT = { #Not these warlords, let them not join
+					OR = {
+						tag = XSM
+						tag = NXM
+						tag = HMI
+						tag = TNG
+						tag = SIK
+						tag = XIK
+						tag = SHX
+						tag = YUN
+						tag = HPC
+					}
+				}
+				OR = { #GUD with GXC or historical, don't let them miss the war!
 					AND = {
 						has_global_flag = gud_ready
 						GXC = { has_offensive_war_with = CHI }
@@ -516,418 +545,5 @@ country_event = {
 	#fire_only_once = yes
 	option = { #OH NO!
 		name = prc.11.a
-	}
-}
-#amass support
-country_event = {
-	id = prc.12
-	title = prc.12.t
-	desc = {
-		text = prc.12.d
-		trigger = {
-			TAG = PRC
-		}
-	}
-	desc = {
-		text = prc.12.d_CHI
-		trigger = {
-			NOT = {
-				TAG = PRC
-			}
-		}
-	}
-	picture = GFX_report_event_new_personnel_batch
-	is_triggered_only = yes
-	trigger = {
-		PRC = {
-			has_idea = idea_continuous_amass_public_support
-		}
-		OR = {
-			tag = PRC
-			AND = {
-				NOT = {
-					OR = {
-						tag = JAP
-						has_war_together_with = JAP
-						is_subject_of = JAP
-					}
-				}
-				any_owned_state = {
-					has_state_flag = this_state_amass_support
-					has_state_flag = commie_ridden_states
-				}
-			}
-		}
-	}
-	option = { #OH yea
-		name = prc.12.a
-		trigger = {
-			TAG = PRC
-		}
-		random_state = {
-			limit = {
-				OR = {
-					has_state_flag = commie_ridden_states
-					is_controlled_by = ROOT
-				}
-				has_state_flag = this_state_amass_support
-				NOT = {
-					is_owned_by = ROOT
-				}
-			}
-			ROOT = {
-				if = {
-					limit = {
-						NOT = {
-							OR = {
-								tag = JAP
-								has_war_together_with = JAP
-								is_subject_of = JAP
-							}
-						}
-					}
-					set_state_owner = PREV
-				}
-			}
-		}
-		hidden_effect = {
-			every_state = {
-				clr_state_flag = this_state_amass_support
-			}
-			random_state = {
-				limit = {
-					OR = {
-						has_state_flag = commie_ridden_states
-						is_controlled_by = ROOT
-					}
-					NOT = {
-						is_owned_by = ROOT
-					}
-					owner = {
-						OR = {
-							is_warlord = yes
-							is_legit_china = yes
-						}
-					}
-					controller = {
-						OR = {
-							is_warlord = yes
-							is_legit_china = yes
-						}
-					}
-				}
-				set_state_flag = this_state_amass_support
-				random_list = {
-					15 = {
-						PRC = {
-							country_event = { days = 16 id = prc.12 }
-						}
-						owner = {
-							country_event = { days = 16 id = prc.12 }
-						}
-					}
-					20 = {
-						PRC = {
-							country_event = { days = 15 id = prc.12 }
-						}
-						owner = {
-							country_event = { days = 15 id = prc.12 }
-						}
-					}
-					30 = {
-						PRC = {
-							country_event = { days = 14 id = prc.12 }
-						}
-						owner = {
-							country_event = { days = 14 id = prc.12 }
-						}
-					}
-					20 = {
-						PRC = {
-							country_event = { days = 13 id = prc.12 }
-						}
-						owner = {
-							country_event = { days = 13 id = prc.12 }
-						}
-					}
-					15 = {
-						PRC = {
-							country_event = { days = 12 id = prc.12 }
-						}
-						owner = {
-							country_event = { days = 12 id = prc.12 }
-						}
-					}
-				}
-			}
-		}
-	}
-	option = { #OH nah
-		name = prc.12.b
-		trigger = {
-			NOT = {
-				TAG = PRC
-			}
-		}
-		effect_tooltip = {
-			random_state = {
-				limit = {
-					has_state_flag = this_state_amass_support
-				}
-				PRC = {
-					set_state_owner = PREV
-				}
-			}
-		}
-	}
-}
-#uprisings
-country_event = {
-	id = prc.13
-	title = prc.13.t
-	desc = {
-		text = prc.13.d
-		trigger = {
-			TAG = PRC
-		}
-	}
-	desc = {
-		text = prc.13.d_CHI
-		trigger = {
-			NOT = {
-				TAG = PRC
-			}
-		}
-	}
-	picture = GFX_report_event_chinese_soldiers_running
-	is_triggered_only = yes
-	trigger = {
-		PRC = {
-			has_idea = idea_continuous_stage_uprisings
-		}
-		OR = {
-			tag = PRC
-			AND = {
-				NOT = {
-					tag = JAP
-				}
-				any_state = {
-					has_state_flag = commie_ridden_states
-					is_controlled_by = ROOT
-					has_state_flag = this_state_stage_uprisings
-				}
-			}
-		}
-	}
-	option = { #OH yeah
-		name = prc.13.a
-		trigger = {
-			TAG = PRC
-		}
-		random_state = {
-			limit = {
-				has_state_flag = this_state_stage_uprisings
-			}
-			ROOT = {
-				transfer_state = PREV
-			}
-		}
-		hidden_effect = {
-			every_state = {
-				clr_state_flag = this_state_stage_uprisings
-			}
-			random_state = {
-				limit = {
-					has_state_flag = commie_ridden_states
-					NOT = {
-						is_controlled_by = ROOT
-					}
-					is_owned_by = ROOT
-					controller = {
-						OR = {
-							is_warlord = yes
-							is_legit_china = yes
-						}
-					}
-				}
-				set_state_flag = this_state_stage_uprisings
-				random_list = {
-					15 = {
-						PRC = {
-							country_event = { days = 16 id = prc.13 }
-						}
-						controller = {
-							country_event = { days = 16 id = prc.13 }
-						}
-					}
-					20 = {
-						PRC = {
-							country_event = { days = 15 id = prc.13 }
-						}
-						controller = {
-							country_event = { days = 15 id = prc.13 }
-						}
-					}
-					30 = {
-						PRC = {
-							country_event = { days = 14 id = prc.13 }
-						}
-						controller = {
-							country_event = { days = 14 id = prc.13 }
-						}
-					}
-					20 = {
-						PRC = {
-							country_event = { days = 13 id = prc.13 }
-						}
-						controller = {
-							country_event = { days = 13 id = prc.13 }
-						}
-					}
-					15 = {
-						PRC = {
-							country_event = { days = 12 id = prc.13 }
-						}
-						controller = {
-							country_event = { days = 12 id = prc.13 }
-						}
-					}
-				}
-			}
-		}
-	}
-	option = { #OH nah
-		name = prc.13.b
-		trigger = {
-			NOT = {
-				TAG = PRC
-			}
-		}
-		effect_tooltip = {
-			random_state = {
-				limit = {
-					has_state_flag = this_state_stage_uprisings
-				}
-				PRC = {
-					transfer_state = PREV
-				}
-			}
-		}
-	}
-}
-#crack down
-country_event = {
-	id = prc.14
-	title = prc.14.t
-	desc = {
-		text = prc.14.d
-		trigger = {
-			TAG = PRC
-		}
-	}
-	desc = {
-		text = prc.14.d_CHI
-		trigger = {
-			NOT = {
-				TAG = PRC
-			}
-		}
-	}
-	is_triggered_only = yes
-	picture = GFX_report_event_china_flag
-	trigger = {
-		any_country = {
-			tag = FROM
-			has_idea = idea_continuous_counter_insurgency
-		}
-		OR = {
-			tag = FROM
-			tag = PRC
-		}
-	}
-	#fire_only_once = yes
-	option = { #OH YEA!
-		name = prc.14.a
-		trigger = {
-			TAG = FROM
-		}
-		random_owned_state = {
-			limit = {
-				has_state_flag = this_state_crack_down_@ROOT
-				has_state_flag = commie_ridden_states
-			}
-			clr_state_flag = commie_ridden_states
-			if = {
-				limit = {
-					PRC = {
-						controls_state = PREV
-					}
-				}
-				ROOT = {
-					set_state_controller = PREV
-				}
-			}
-			custom_effect_tooltip = remove_com_par_act_tt
-		}
-		hidden_effect = {
-			every_state = {
-				clr_state_flag = this_state_crack_down_@ROOT
-			}
-			random_state = {
-				limit = {
-					has_state_flag = commie_ridden_states
-					is_owned_by = ROOT
-				}
-				set_state_flag = this_state_crack_down_@ROOT
-				random_list = {
-					15 = {
-						PRC = {
-							country_event = { days = 16 id = prc.14 }
-						}
-						ROOT = {
-							country_event = { days = 16 id = prc.14 }
-						}
-					}
-					20 = {
-						PRC = {
-							country_event = { days = 15 id = prc.14 }
-						}
-						ROOT = {
-							country_event = { days = 15 id = prc.14 }
-						}
-					}
-					30 = {
-						PRC = {
-							country_event = { days = 14 id = prc.14 }
-						}
-						ROOT = {
-							country_event = { days = 14 id = prc.14 }
-						}
-					}
-					20 = {
-						PRC = {
-							country_event = { days = 13 id = prc.14 }
-						}
-						ROOT = {
-							country_event = { days = 13 id = prc.14 }
-						}
-					}
-					15 = {
-						PRC = {
-							country_event = { days = 12 id = prc.14 }
-						}
-						ROOT = {
-							country_event = { days = 12 id = prc.14 }
-						}
-					}
-				}
-			}
-		}
-	}
-	option = { #OH NO!
-		name = prc.14.b
-		trigger = {
-			TAG = PRC
-		}
 	}
 }

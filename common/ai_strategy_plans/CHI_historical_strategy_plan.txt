@@ -29,10 +29,10 @@ CHI_nationalist_historical_plan = {
 		big_rear_plan
 		CHI_foreign_help_focus
 		CHI_inst_reform_focus
-		kmt_reorganize_nra
-		CHI_attack_com
-		CHI_fight_focus
-		CHI_unite_focus
+		CHI_reorganize_nra
+		CHI_Encirclement_Campaign_focus
+		CHI_National_Defense_Council_focus
+		CHI_Second_United_Front_focus
 		CHI_lushan_focus
 		CHI_reinforce_new_life_movement
 		CHI_coast_infra_focus

@@ -85,7 +85,7 @@
  purge_political_advisor:0 "The following advisor(s) will be purged:\n"
  force_political_advisor:0 "The following advisors will be forced to retire:\n"
  justifying_on_china:0 "A §YMajor§! is justifying wargoal on us."
- emperor_influence:0 "§MHaving §!§Yadvisors§!§Mor§!§YChief of Army§!§M trusted by the Emperor, such as §!§GGenro§!§M and §!§GRoyal members§!§M in the government may influence his decision.§!\n"
+ emperor_influence:0 "§MHaving §!§Yadvisors§!§M or §!§YChief of Army§!§M trusted by the Emperor, such as §!§GGenro§!§M and §!§GRoyal members§!§M in the government may influence his decision.§!\n"
  unlock_focus_right:0 "§MThe industry will be balanced enough to handle§! §Yall the national focuses§! §Rto the right in the same row.§!\n\n"
  if_buy_succ:0 "§GIf successful:§!\n"
  #MESC
@@ -161,3 +161,5 @@
  commie_ridden_states_start_tt:0 "Will be affected by §YCommunist Partisans Activities§!.\n"
  commie_civil_war_tt:0 "The §YCommunist Supporters§! start a civil war.\n"
  has_taken_monetary_reform_decision_tt:0 "Has taken £decision_icon_small §HDecision§!: §HMonetary Reform§!.\n"
+
+ country_color_change:0 "§YCountry's color will change to blue or red depending on the ruling ideologies.§!."

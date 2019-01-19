@@ -109,7 +109,7 @@ country_event = {
 			remove_opinion_modifier = { target = PRC modifier = hostile_status }
 		}
 		set_global_flag = second_unite_bypass
-		CHI = { unlock_national_focus = CHI_peace_com }
+		CHI = { unlock_national_focus = CHI_Truce_of_the_Civil_War }
 		CHI = {
 			white_peace = PRC
 		}

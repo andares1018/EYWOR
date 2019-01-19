@@ -447,19 +447,29 @@ CHI_set_ally_strat_on_current_leader = {
 	}
 }
 
+remove_all_inflation = {
+	remove_ideas = {
+		CHI_hyper_inflation_1
+		CHI_hyper_inflation_2
+		CHI_hyper_inflation_3
+		CHI_hyper_inflation_4
+		CHI_hyper_inflation_5
+	}
+
+}
 CHI_negative_spirit_transfer = {
-	if = {
-		limit = {
-			event_target:old_leader = { has_idea = CHI_incompetent_officers }	
-		}
-		add_ideas = CHI_incompetent_officers
-	}
-	if = {
-		limit = {
-			event_target:old_leader = { has_idea = CHI_nine_power_treaty }	
-		}
-		add_ideas = CHI_nine_power_treaty
-	}
+	#if = {
+	#	limit = {
+	#		event_target:old_leader = { has_idea = CHI_incompetent_officers }	
+	#	}
+	#	add_ideas = CHI_incompetent_officers
+	#}
+	#if = {
+	#	limit = {
+	#		event_target:old_leader = { has_idea = CHI_nine_power_treaty }	
+	#	}
+	#	add_ideas = CHI_nine_power_treaty
+	#}
 	if = {
 		limit = {
 			event_target:old_leader = { has_idea = CHI_army_corruption_3 }	
@@ -478,21 +488,27 @@ CHI_negative_spirit_transfer = {
 		}
 		add_ideas = CHI_army_corruption_1
 	}
-	if = {
-		limit = {
-			event_target:old_leader = { has_idea = CHI_ineffective_bureaucracy }	
-		}
-		add_ideas = CHI_ineffective_bureaucracy
-	}
+	#if = {
+	#	limit = {
+	#		event_target:old_leader = { has_idea = CHI_ineffective_bureaucracy }	
+	#	}
+	#	add_ideas = CHI_ineffective_bureaucracy
+	#}
 	if = {
 		limit = {
 			event_target:old_leader = { has_idea = CHI_hyper_inflation_none }	
 		}
+		hidden_effect = {
+			remove_all_inflation = yes
+		}		
 		add_ideas = CHI_hyper_inflation_none
 	}
 	else_if = {
 		limit = {
 			event_target:old_leader = { has_idea = CHI_hyper_inflation_1 }	
+		}
+		hidden_effect = {
+			remove_all_inflation = yes
 		}
 		add_ideas = CHI_hyper_inflation_1
 	}
@@ -500,11 +516,17 @@ CHI_negative_spirit_transfer = {
 		limit = {
 			event_target:old_leader = { has_idea = CHI_hyper_inflation_2 }	
 		}
+		hidden_effect = {
+			remove_all_inflation = yes
+		}
 		add_ideas = CHI_hyper_inflation_2
 	}
 	else_if = {
 		limit = {
 			event_target:old_leader = { has_idea = CHI_hyper_inflation_3 }	
+		}
+		hidden_effect = {
+			remove_all_inflation = yes
 		}
 		add_ideas = CHI_hyper_inflation_3
 	}
@@ -512,11 +534,17 @@ CHI_negative_spirit_transfer = {
 		limit = {
 			event_target:old_leader = { has_idea = CHI_hyper_inflation_4 }	
 		}
+		hidden_effect = {
+			remove_all_inflation = yes
+		}
 		add_ideas = CHI_hyper_inflation_4
 	}
 	else_if = {
 		limit = {
 			event_target:old_leader = { has_idea = CHI_hyper_inflation_5 }	
+		}
+		hidden_effect = {
+			remove_all_inflation = yes
 		}
 		add_ideas = CHI_hyper_inflation_5
 	}

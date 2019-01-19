@@ -223,7 +223,7 @@ ideas = {
 				ai_get_ally_desire_factor = -10000
 			}
 		}
-		
+
 		##PROP
 		JAP_expansionist_propaganda_1 = {
 			picture = jap_prop_idea
@@ -241,10 +241,13 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				army_attack_factor  = 0.25
+				stability_factor = 0.25
+				war_support_factor = 0.15
+				army_attack_factor  = 0.5
+				army_defence_factor = 0.35
 				army_org_factor = 0.35
 				army_morale_factor = 0.5
-				political_power_factor = 0.25
+				political_power_factor = 0.5
 			}
 		}
 		JAP_expansionist_propaganda_2 = {
@@ -263,10 +266,13 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				army_attack_factor  = 0.2
+				stability_factor = 0.2
+				war_support_factor = 0.12
+				army_attack_factor  = 0.4
+				army_defence_factor = 0.28
 				army_org_factor = 0.28
 				army_morale_factor = 0.4
-				political_power_factor = 0.2
+				political_power_factor = 0.4
 			}
 		}
 		JAP_expansionist_propaganda_3 = {
@@ -285,10 +291,13 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				army_attack_factor  = 0.15
+				stability_factor = 0.15
+				war_support_factor = 0.09
+				army_attack_factor  = 0.3
+				army_defence_factor = 0.21
 				army_org_factor = 0.21
 				army_morale_factor = 0.3
-				political_power_factor = 0.15
+				political_power_factor = 0.3
 			}
 		}
 		JAP_expansionist_propaganda_4 = {
@@ -307,10 +316,13 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				army_attack_factor  = 0.1
+				stability_factor = 0.1
+				war_support_factor = 0.06
+				army_attack_factor  = 0.2
+				army_defence_factor = 0.14
 				army_org_factor = 0.14
 				army_morale_factor = 0.2
-				political_power_factor = 0.1
+				political_power_factor = 0.2
 			}
 		}
 		JAP_expansionist_propaganda_5 = {
@@ -329,15 +341,18 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				army_attack_factor  = 0.05
+				stability_factor = 0.05
+				war_support_factor = 0.03
+				army_attack_factor  = 0.1
+				army_defence_factor = 0.07
 				army_org_factor = 0.07
 				army_morale_factor = 0.1
-				political_power_factor = 0.05
+				political_power_factor = 0.1
 			}
 		}
-		
-		
-		
+
+
+
 		#####
 		new_order = {
 			allowed = {
@@ -514,9 +529,11 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
+				war_support_factor = 0.15
+				stability_factor = 0.15
 				industry_air_damage_factor = -0.1
-				army_org_factor = 0.05
-				army_morale_factor = 0.05
+				army_org_factor = 0.07
+				army_morale_factor = 0.07
 			}
 		}
 		officer_purged_jap = {
@@ -659,6 +676,8 @@ ideas = {
 			modifier = {
 				democratic_drift = -0.02
 				enemy_partisan_effect = -0.1
+				max_command_power = 20
+				command_power_gain = 0.25
 				political_power_factor = -0.05
 			}
 		}
@@ -719,7 +738,8 @@ ideas = {
 				army_morale_factor = 0.15
 				consumer_goods_factor = -0.05
 				industrial_capacity_factory = 0.05
-				stability_factor = 0.05
+				stability_factor = 0.07
+				war_support_factor = 0.07
 			}
 		}
 		the_long_lance = {
@@ -782,8 +802,68 @@ ideas = {
 				always = yes
 			}
 			removal_cost = -1
-			modifier = {
+			targeted_modifier = {
+				tag = CHI
 				justify_war_goal_time = 5
+			}
+			targeted_modifier = {
+				tag = PRC
+				justify_war_goal_time = 5
+			}
+			targeted_modifier = {
+				tag = HPC
+				justify_war_goal_time = 5
+			}
+			targeted_modifier = {
+				tag = SHX
+				justify_war_goal_time = 5
+			}
+			targeted_modifier = {
+				tag = SHD
+				justify_war_goal_time = 5
+			}
+			targeted_modifier = {
+				tag = XSM
+				justify_war_goal_time = 5
+			}
+			targeted_modifier = {
+				tag = NXM
+				justify_war_goal_time = 5
+			}
+			targeted_modifier = {
+				tag = YUN
+				justify_war_goal_time = 5
+			}
+			targeted_modifier = {
+				tag = GXC
+				justify_war_goal_time = 5
+			}
+			targeted_modifier = {
+				tag = GUD
+				justify_war_goal_time = 5
+			}
+			targeted_modifier = {
+				tag = XIK
+				justify_war_goal_time = 5
+			}
+			targeted_modifier = {
+				tag = SIC
+				justify_war_goal_time = 5
+			}
+			targeted_modifier = {
+				tag = TGN
+				justify_war_goal_time = 5
+			}
+			targeted_modifier = {
+				tag = HMI
+				justify_war_goal_time = 5
+			}
+			targeted_modifier = {
+				tag = SIK
+				justify_war_goal_time = 5
+			}
+			modifier = {
+
 			}
 		}
 		###WTT IDEAS
@@ -2225,4 +2305,3 @@ ideas = {
 		}
 	}
 }
-

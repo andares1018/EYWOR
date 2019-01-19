@@ -1894,7 +1894,7 @@ country_event = {
 			target = FROM modifier = CHI_prc_reconciliation
 		}
 		hidden_effect = {
-			FROM = { unlock_national_focus = CHI_peace_com }
+			FROM = { unlock_national_focus = CHI_Truce_of_the_Civil_War }
 		}
 		FROM = {
 			white_peace = PRC
@@ -1941,7 +1941,7 @@ country_event = {  #PRC refuse (to KMT)
 			limit = {
 				TAG = CHI
 			}
-			complete_national_focus = CHI_attack_com
+			complete_national_focus = CHI_Encirclement_Campaign_focus
 			else = {
 				create_wargoal = {
 					type = annex_everything target = FROM

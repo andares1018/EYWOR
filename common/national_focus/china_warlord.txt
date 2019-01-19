@@ -1,16 +1,16 @@
 focus_tree = {
 	id = china_warlord_focus
-	
+
 	country = {
 		factor = 0
-		
+
 		modifier = {
 			add = 50
 			is_originally_warlord = yes
 			has_dlc = "Waking the Tiger"
 		}
 	}
-	
+
 	default = no
 
 	continuous_focus_position = { x = 50 y = 1480 }
@@ -22,7 +22,7 @@ focus_tree = {
 #		mutually_exclusive = { focus =  }
 #		x = -3
 #		y = 0
-#		relative_position_id = 
+#		relative_position_id =
 #
 #		cost = 10
 #
@@ -33,7 +33,7 @@ focus_tree = {
 #		available = {
 #
 #		}
-#		
+#
 #		bypass = {
 #
 #		}
@@ -166,7 +166,7 @@ focus_tree = {
 				custom_effect_tooltip = CHI_anti_opposition_campaigns_effect_tooltip_no_communists
 			}
 			if = {
-				limit = {			
+				limit = {
 					AND = {
 						has_completed_focus = CHI_cooperation_with_the_communists
 						NOT = { any_other_country = { has_completed_focus = CHI_cooperation_with_the_nationalists } }
@@ -184,11 +184,11 @@ focus_tree = {
 						has_completed_focus = CHI_cooperation_with_the_nationalists
 						NOT = { any_other_country = { has_completed_focus = CHI_cooperation_with_the_communists } }
 					}
-				} 
+				}
 				custom_effect_tooltip = CHI_anti_opposition_campaigns_effect_tooltip_no_communists
 			}
 			if = {
-				limit = {			
+				limit = {
 					AND = {
 						has_completed_focus = CHI_cooperation_with_the_communists
 						NOT = { any_other_country = { has_completed_focus = CHI_cooperation_with_the_nationalists } }
@@ -202,7 +202,7 @@ focus_tree = {
 	focus = {
 		id = CHI_technological_cooperation
 		icon = GFX_goal_generic_scientific_exchange
-		prerequisite = { focus = CHI_cooperation_with_the_nationalists }		
+		prerequisite = { focus = CHI_cooperation_with_the_nationalists }
 		x = -1
 		y = 1
 		relative_position_id = CHI_cooperation_with_the_nationalists
@@ -239,7 +239,7 @@ focus_tree = {
 	focus = {
 		id = CHI_new_model_province
 		icon = GFX_goal_generic_construct_infrastructure
-		prerequisite = { focus = CHI_cooperation_with_the_nationalists }		
+		prerequisite = { focus = CHI_cooperation_with_the_nationalists }
 		x = 1
 		y = 1
 		relative_position_id = CHI_cooperation_with_the_nationalists
@@ -358,7 +358,7 @@ focus_tree = {
 				limit = {
 					is_controlled_by = ROOT
 				}
-				add_extra_state_shared_building_slots = 1 
+				add_extra_state_shared_building_slots = 1
 			}
 		}
 	}
@@ -420,7 +420,7 @@ focus_tree = {
 			NOT = { has_war_with = CHI }
 			if = {
 				limit = {
-					WTT_not_taking_over_national_leadership = no				
+					WTT_not_taking_over_national_leadership = no
 				}
 				WTT_not_taking_over_national_leadership = yes
 			}
@@ -477,15 +477,16 @@ focus_tree = {
 		available_if_capitulated = no
 		completion_reward = {
 			load_focus_tree = warlord_generic_nationalist
-			set_cosmetic_tag = CHI_warlord_leader
+			#set_cosmetic_tag = CHI_warlord_leader
+			#create_faction = WRL_leader_generic_faction
 			every_state = {
 				limit = {
-					is_core_of = CHI
+					has_state_flag = is_chinese_states_flag
 				}
 				add_core_of = ROOT
 			}
 		}
-	}	
+	}
 
 	#######################
 	##### Communists ######
@@ -574,14 +575,14 @@ focus_tree = {
 				}
 				unlock_decision_category_tooltip = CHI_xian_incident
 			}
-			
+
 		}
 	}
 
 	focus = {
 		id = CHI_land_redistribution
 		icon = GFX_goal_generic_soviet_construction
-		prerequisite = { focus = CHI_cooperation_with_the_communists }		
+		prerequisite = { focus = CHI_cooperation_with_the_communists }
 		x = 0
 		y = 1
 		relative_position_id = CHI_cooperation_with_the_communists
@@ -608,7 +609,7 @@ focus_tree = {
 				limit = {
 					is_controlled_by = ROOT
 				}
-				add_extra_state_shared_building_slots = 1 
+				add_extra_state_shared_building_slots = 1
 			}
 		}
 	}
@@ -768,10 +769,10 @@ focus_tree = {
 				any_neighbor_country = {
 					tag = event_target:WTT_communist_china
 				}
-			}			
+			}
 			NOT = { has_war_with = PRC }
 			NOT = { has_war_with = SOV }
-			SOV = { has_government = communism }			
+			SOV = { has_government = communism }
 			is_subject = no
 		}
 
@@ -873,7 +874,7 @@ focus_tree = {
 		}
 
 		available = {
-			
+
 		}
 
 		bypass = {
@@ -908,7 +909,7 @@ focus_tree = {
 				}
 			}
 			else_if = {
-				limit = { any_country = { is_in_faction_with = ROOT is_literally_china = yes } }				
+				limit = { any_country = { is_in_faction_with = ROOT is_literally_china = yes } }
 				random_country = {
 					limit = {
 						is_in_faction_with = ROOT
@@ -924,13 +925,13 @@ focus_tree = {
 				unlock_decision_category_tooltip = liangguang_incident
 			}
 		}
-		
+
 	}
 
 	focus = {
 		id = CHI_institute_cross_border_raids
 		icon = GFX_focus_generic_provoke_border_clashes
-		prerequisite = { focus = CHI_opposition }		
+		prerequisite = { focus = CHI_opposition }
 		x = 0
 		y = 1
 		relative_position_id = CHI_opposition
@@ -1269,7 +1270,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_ideas = CHI_rapid_mobilization	
+			add_ideas = CHI_rapid_mobilization
 		}
 	}
 
@@ -1306,20 +1307,24 @@ focus_tree = {
 		completion_reward = {
 			every_state = {
 				limit = {
-					is_core_of = CHI
+					has_state_flag = is_chinese_states_flag
 				}
 				add_core_of = ROOT
 			}
-			country_event = rcmchina.360
+			country_event = {
+				id = rcmchina.360
+			}
 			#Switch to dominant ideology or split into 2 focus
 			#set_cosmetic_tag = CHI_second_republic
 			if = {
 				limit = {
 					OR = {
 						has_government = communism
+						has_government = n_socialism
 						communism > 0.5
+						n_socialism > 0.5
 					}
-					NOT = { neutrality > 0.5 }
+					#NOT = { neutrality > 0.5 }
 				}
 				load_focus_tree = warlord_generic_communist
 			}

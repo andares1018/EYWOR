@@ -39,7 +39,7 @@ state_event = {
 		name = RCM_communist_uprising.1.a
 		trigger = {
 			owner = {
-				tag = PRC
+				tag = event_target:WTT_communist_china
 			}
 		}
 	}
@@ -48,7 +48,7 @@ state_event = {
 		trigger = {
 			owner = {
 				NOT = {
-					tag = PRC
+					tag = event_target:WTT_communist_china
 				}
 			}
 		}
@@ -62,7 +62,7 @@ country_event = {
 		text = RCM_communist_uprising.2.d
 		trigger = {
 			owner = {
-				tag = PRC
+				tag = event_target:WTT_communist_china
 			}
 		}
 	}
@@ -71,7 +71,7 @@ country_event = {
 		trigger = {
 			owner = {
 				NOT = {
-					tag = PRC
+					tag = event_target:WTT_communist_china
 				}
 			}
 		}
@@ -90,7 +90,7 @@ country_event = {
 		name = RCM_communist_uprising.2.a
 		trigger = {
 			owner = {
-				tag = PRC
+				tag = event_target:WTT_communist_china
 			}
 		}
 	}
@@ -99,7 +99,7 @@ country_event = {
 		trigger = {
 			owner = {
 				NOT = {
-					tag = PRC
+					tag = event_target:WTT_communist_china
 				}
 			}
 		}
@@ -112,14 +112,14 @@ state_event = {
 	desc = {
 		text = RCM_communist_uprising_country.2.d
 		trigger = {
-			TAG = PRC
+			TAG = event_target:WTT_communist_china
 		}
 	}
 	desc = {
 		text = RCM_communist_uprising_country.2.d_CHI
 		trigger = {
 			NOT = {
-				TAG = PRC
+				TAG = event_target:WTT_communist_china
 			}
 		}
 	}
@@ -153,7 +153,7 @@ state_event = {
 		name = RCM_communist_uprising_country.2.b
 		trigger = {
 			owner = {
-				TAG = PRC
+				TAG = event_target:WTT_communist_china
 			}
 		}
 	}
@@ -167,7 +167,7 @@ country_event = {
 	hidden = no
 	trigger = {
 		NOT = {
-			tag = PRC
+			tag = event_target:WTT_communist_china
 		}
 		is_in_faction_with = event_target:WTT_current_china_leader
 	}
@@ -183,7 +183,7 @@ country_event = {
 		name = RCM_communist_uprising.1.a
 		trigger = {
 			owner = {
-				tag = PRC
+				tag = event_target:WTT_communist_china
 			}
 		}
 	}
@@ -192,7 +192,7 @@ country_event = {
 		trigger = {
 			owner = {
 				NOT = {
-					tag = PRC
+					tag = event_target:WTT_communist_china
 				}
 			}
 		}
@@ -206,23 +206,23 @@ country_event = {
 	desc = {
 		text = RCM_communist_uprising_country.2.d
 		trigger = {
-			TAG = PRC
+			TAG = event_target:WTT_communist_china
 		}
 	}
 	desc = {
 		text = RCM_communist_uprising_country.2.d_CHI
 		trigger = {
 			NOT = {
-				TAG = PRC
+				TAG = event_target:WTT_communist_china
 			}
 		}
 	}
 	trigger = {
 		NOT = {
-			tag = PRC
+			tag = event_target:WTT_communist_china
 		}
 		OR = {
-			is_in_faction_with = PRC
+			is_in_faction_with = event_target:WTT_communist_china
 			is_in_faction_with = event_target:WTT_current_china_leader
 		}
 	}
@@ -238,7 +238,7 @@ country_event = {
 	option = { #OH NO!
 		name = RCM_communist_uprising_country.2.b
 		trigger = {
-			TAG = PRC
+			TAG = event_target:WTT_communist_china
 		}
 	}
 }

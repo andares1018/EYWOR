@@ -152,22 +152,22 @@
  reorganized_CHI_puppet_desc:0 "The two puppet states of the ROC are redundant now. We need a reorganized puppet state and with it, a reorganization of our control in China."
  oust_soviet:0 "Sever Sino-Soviet Ties"
  oust_soviet_desc:0 "Perhaps the Soviets expected it or not, we are going to launch our offensive. It seems Germany is also thinking in the same direction. Let us prepare a two front war."
- 
- 
+
+
 ###########
 ###China###
 ###########
- CHI_attack_com:0 "Encirclement Campaign"
- CHI_peace_com:0 "Truce of the Civil War"
- 
- 
- CHI_coast_focus:0 "Coast Focus" 
+ CHI_Encirclement_Campaign_focus:0 "Encirclement Campaign"
+ CHI_Truce_of_the_Civil_War:0 "Truce of the Civil War"
+
+
+ CHI_coast_focus:0 "Coast Focus"
  CHI_land_focus:0 "Land Focus"
  CHI_coast_focus_desc:0 "Let's concentrate our air forces on our coast to fight enemy aircraft carrier squadrons effectively."
  CHI_land_focus_desc:0 "Let's concentrate our air forces on targets in our inland regions to support our troops more effective."
  CHI_internal_air_focus:0 "Expansion of the Air Force"
  CHI_internal_air_focus_desc:0 "We should start to expand our air force to increase our preparedness against foreign threats."
- 
+
  CHI_technical_school_focus:0 "Study Western Aircraft Design"
  CHI_technical_school_focus_desc:0 "With the opening of the technical school for our air force, we can counteract the staff shortages with well-trained pilots and mechanics."
  #northwest
@@ -227,7 +227,7 @@
  CHI_navy_sunfall_focus:0 "Operation Sunfall:\nSea Route"
  CHI_navy_sunfall_focus_desc:0 "Even after our total victory in the North East China and Korea, Japan still won't give up and continuing to raid our coastal provinces. At this point, a total military takeover of the Japanese archipelago is inevitable now. Invading their ports from the sea is a slow, but safer way."
 
- 
+
 
  CHI_defend_river_focus:0 "Defense of the Yangtze River"
  CHI_defend_river_focus_desc:0 "Let's build a fastening belt behind the Yangtze River to prevent the Japanese and the Communists to push further ."
@@ -239,11 +239,11 @@
  CHI_nationalize_industry_ii_focus_desc:0 "If we were to nationalize more of our companies we could further enhance our weapons production ."
  CHI_nationalize_industry_iii_focus:0 "Nationalization of Companies III"
  CHI_nationalize_industry_iii_focus_desc:0 "If we were to nationalize more of our companies we could further enhance our weapons production ."
- 
- CHI_fight_focus:0 "National Defense Council"
- CHI_fight_focus_desc:0 "We need to stand Japan at every price, later we can also unite china under us."
- CHI_unite_focus:0 "Second United Front"
- CHI_unite_focus_desc:0 "Alone we cant stop the Japanese, we need to work together with the communists."
+
+ CHI_National_Defense_Council_focus:0 "National Defense Council"
+ CHI_National_Defense_Council_focus_desc:0 "We need to stand Japan at every price, later we can also unite china under us."
+ CHI_Second_United_Front_focus:0 "Second United Front"
+ CHI_Second_United_Front_focus_desc:0 "Alone we cant stop the Japanese, we need to work together with the communists."
  CHI_conquer_focus_desc:0 "Now it's the time to unite China. Only when we have a united country can we deal with the Japanese."
  CHI_conquer_focus:0 "Unite China"
  CHI_constitution_focus:0 "Constitution of the Republic of China"
@@ -270,14 +270,14 @@
  CHI_join_axis_desc:0 "Having several strong allies to fight on our side is never a bad thing."
  CHI_join_allies:0 "Join Allies"
  CHI_join_allies_desc:0 "Having several strong allies to fight on our side is never a bad thing."
- 
+
  CHI_academy_rf_focus:0 "Reform Academia Sinica"
  CHI_academy_ex_focus:0 "Expand Academia Sinica"
  CHI_academy_mp_focus:0 "Academia Sinica:\nMordern Physics"
- 
+
  CHI_monetary_reform:0 "Monetary Reform"
  CHI_monetary_reform_desc:0 "The economy of China is a mess right now. An monetary reform is needed for us to make any social or industrial progress."
- 
+
  ####buttom branch
  CHI_Isolationism:0 "Isolationism"
  CHI_Isolationism_desc:0 "We have enough problems of our own, we do not need further conflict. We will adopt a policy of neutrality."
@@ -324,7 +324,7 @@
  CHI_pressure_sic_focus:0 "Fate of Sichuan"
  northwest_infra:0 "Northwest Infrastructure"
  northwest_oil:0 "Northwest Oil Exploration"
- 
+
  #left branch
  recognize_their_government:0 "Recognize Their Government"
  apologize_for_the_purge:0 "Apologize for the Purge"
@@ -346,7 +346,7 @@
  incorporate_mao:0 "Incorporate Mao"
  join_comintern:0 "Join Comintern"
  join_allies_sol:0 "Join Allies"
- 
+
  #middle branch
  CHI_inst_reform_focus:0 "Institutional Reform"
  CHI_reinforce_new_life_movement:0 "Reinforce the New Life Movement"
@@ -357,7 +357,7 @@
  CHI_german_training_method:0 "German Training Method"
  CHI_the_soviet_volunteer_group:0 "Soviet Volunteer Group"
  CHI_invite_the_flying_tigers:0 "Flying Tigers"
- 
+
  #demo branch
  three_principle_of_the_people:0 "Three Principles of the People"
  democratism_focus:0 "Democratism"
@@ -371,7 +371,7 @@
  national_poltical_council:0 "National Political Council"
  constit_draft_focus:0 "Constitution Draft"
  assembly_of_the_constutients:0 "Assembly of the Constituent"
- 
+
  #fascist/reac branch
  one_party_tutelage:0 "One-Party Tutelage"
  strengthen_cc:0 "Strengthen the Central Club"
@@ -421,10 +421,10 @@
  CHI_whampoa_rifle:0 "Whampoa Rifle"
  CHI_reform_military_academy:0 "Reform Military Academy"
  CHI_extra_research_slot:0 "Extra Research Slot"
- 
+
  ##################DESC
- CHI_attack_com_desc:0 "Communism is the biggest threat in China. Only by eradicating it can the Republic of China defend any foreign threat."
- CHI_peace_com_desc:0 "Japan has become more and more aggressive. Fighting an enemy with an ally is far better than fighting two enemies at the same time."
+ CHI_Encirclement_Campaign_focus_desc:0 "Communism is the biggest threat in China. Only by eradicating it can the Republic of China defend any foreign threat."
+ CHI_Truce_of_the_Civil_War_desc:0 "Japan has become more and more aggressive. Fighting an enemy with an ally is far better than fighting two enemies at the same time."
  CHI_extra_research_slot_desc:0 "An expansion of our research facilities can help China as a whole."
  CHI_split_plm_focus:0 "Split Pailingmiao Council"
  CHI_split_plm_focus_desc:0 "Prince Demchugdongrub has shown some obvious sign of conspiring with the Japanese forces. It is best to suppress his influence within the Mongolia Political Committee, also known as the Pailingmiao council, before he does anything stupid."
@@ -447,7 +447,7 @@
  CHI_take_what_we_can_take_desc:0"As the war goes on, our guns are running short. We should hold on to the equipment we currently have and take as many firearms from our enemy as possible."
  last-ditch_effort_desc:0 "The situation is not looking good for us, but we the Chinese people will never back down and will fights on with everything we've got!"
  end_civil_war_desc:0 "-"
- 
+
  #left
  recognize_their_government_desc:0 "After the truce and the institutional reform, the political position of this country should be readjusted, too. With that in mind, recognizing the existence of the Communist Government can be a great way to restore harmony in China."
  apologize_for_the_purge_desc:0 "In order to unite the heart of the Chinese people, apologizing for the wrong doing of our government is essential. The Shanghai massacre of 1927 was a grave mistake, now it's time to make amends."
@@ -471,11 +471,11 @@
  CHI_reinforce_new_life_movement_desc:0 "-"
  CHI_revive_new_culture_movement_desc:0 "We must abolish traditional thought that holds our glorious nation back from progress and modernisation. Destroy temples, rotten old thought, anti communist sympathisers and create a new form of thought!"
  CHI_mission_to_the_soviet_union_desc:0 "We must send a groupo of trusted communsits to Moscow to further condolidate socialist principles as they have under Stalin for all areas of society and nationhood."
- CHI_sov_pact_desc:0 "The Soviets are under threat from Fascist powers and so are we. It seems convenient to work together to defeat our enemies of a free workers paradise."
+ CHI_sov_pact_focus_desc:0 "The Soviets are under threat from Fascist powers and so are we. It seems convenient to work together to defeat our enemies of a free workers paradise."
  CHI_german_training_method_desc:0 "The German army looks promising and we should follow in their footsteps to become just as strong for our upcoming conflicts. "
  sov_volunteer_group_desc:0 "With the war against Japan perhaps with the new Soviet volunteer groups participating in the war effort we can open up the people's hearts and minds to the glory of communism."
  flying_tigers_desc:0 "Our air force can be improved with aid from other countries, a powerful airforce that combats Japan can really change the winds of history."
- 
+
  #demo
  three_principle_of_the_people_desc:0 "Sun Yat Sen formed the New China on these fundamental thoughts. We must uphold them with dignity for the sake of our country."
  democratism_focus_desc:0 "Democracy is the true path to China and what the Chinese people deserve. For the sake of Sun Yat Sen's legacy let us give the people power."
@@ -489,7 +489,7 @@
  national_poltical_council_desc:0 "We must reorganise civilian matters with a new national political council that can help govern our country."
  constit_draft_focus_desc:0 "We must guarantee democracy should not fall to feudism and one party states as they are in this world, our consituition shall protect our people from Tyranny."
  assembly_of_the_constutients_desc:0 "-"
- 
+
  #right
  one_party_tutelage_desc:0 "The KMT will remain in power for the sake of China and we will make it strong once again."
  strengthen_cc_desc:0 "As the CC surround Chiang closely it makes sense to give them power and influence of the running of this country."
@@ -501,11 +501,14 @@
  political_indoctrination_desc:0 "Our Children! Our Students! Must learn the power and organisation of our government and our country! Let them believe in our principals of authorotarianism and propaganda."
  espionage_network_desc:0 "We must start to monitor our people to keep our government in power and we must also spy on foreign governments planning on throwing us out."
  CHI_yi_dang_zhi_guo_focus_desc:0 "-"
- 
+
  #INDUSTRY
  CHI_academy_rf_focus_desc:0 "Compared to other western nations, our state-run research center, Academia Sinica, is still fairly inefficient. A drastic reform is direly needed."
- CHI_academy_ex_focus_desc:0 "Despite the reformation, the scale of our laboratories is still limited. An expa"
+ CHI_academy_ex_focus_desc:0 "Despite the reformation, the scale of our laboratories is still limited. An expansion of the the laboratories can increase our research capacities in general."
  CHI_academy_mp_focus_desc:0 "A new Modern Physics department for Academia Sinica can help our country to arm ourselves with nuclear weapons, which can bolster our national security tremendously."
+ CHI_infrastructure_effort_i_desc:0 "-"
+ CHI_infrastructure_effort_ii_desc:0 "-"
+ CHI_infrastructure_effort_iii_desc:0 "-"
  CHI_modern_industrialization_desc:0 "Our industries are laughably outdated and haven't been researched or developed in decades, in such a situation we must contribute effort to modernise our industry for the sake of our economy and country."
  CHI_daqing_oil_field_desc:0 "-"
  CHI_refinery_technology_german_desc:0 "With German reinfery designs we can update our outdated and poorly structured refineries that waste valuable raw resources in the process."
@@ -516,7 +519,7 @@
  CHI_revive_hanyang_steelwork_focus_desc:0 "The Hanyang steelworks are poorly managed and with outdated equipment, perhaps if we employ more workers and fund improvements we can help with the war effort."
  CHI_powerhouse_of_the_east_desc:0 "Only China is a nation spanning over such vast land with access to endless deposits of rich quality reosurces and a massive population can create an industrial power. Its time to act on our assets and propell this nation into a bright future. We will become the greatest industrial power in Asia."
  CHI_public_school_program_focus_desc:0 "Educating our students is a priority. With the Literacy rate so low we must empower the children of the nation for a better future."
- CHI_compulsory_education_CHI_desc:0 "We must not let traditonal minded parents hold their children back from national and technological progress thus the need to enact laws to send the children to education they deserve."
+ CHI_compulsory_education_chi_desc:0 "We must not let traditonal minded parents hold their children back from national and technological progress thus the need to enact laws to send the children to education they deserve."
  CHI_modern_university_desc:0 "We need to introduce western thought into our universities and adopt newer ways of living and thinking. The Chinese traditional roles of thought are outdated for our country."
  CHI_reorganize_nra_desc:0 "The NRA which was once the beacon of military strenth in China is now incapable and laughable. We must work to make it back to its former glory!"
  CHI_reform_military_academy_desc:0 "Our military academies all form officers of corruption and incapability. Its time we reform the next generation of military officers in China."
@@ -535,7 +538,7 @@
  CHI_tungsten_effort_iii_focus_desc:0 "We are now steadily building tanks to fight on the battlfields and Tungsten businesses are bringing prosperity to China alike. Lets just pour more effort and further consolidate our posititon on the battlfield."
  CHI_streamlined_industry_desc:0 "In order to rebuild our delapitated industry, the improvement of industrial efficiency is one of the most essential steps to take."
  CHI_anshan_steelwork_focus_desc:0 "Now that we have reclaim the industrial heartland in the Northeast, Fengtien, we can put the complex and facilities that were once used to produce weapons against into proper use."
- 
+
  ###########
  nea_xian_incident:0 "Chinese Don't Fight Chinese"
  nea_xian_incident:0 "Despite our constant pleading, [CHI.GetLeader] still wouldn't prioritize fending off the Japanese over eradicating the communists. It's time to try something new."

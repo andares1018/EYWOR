@@ -9,7 +9,7 @@ set_research_slots = 3
 add_ideas = {
 	puyi
 	limited_exports
-	partial_economic_mobilisation
+	civilian_economy
 	#MAN_Kwantung_Army
 	#MAN_puppet_of_japan
 	#Manchuria_economy

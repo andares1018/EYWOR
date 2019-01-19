@@ -9,11 +9,11 @@ focus_tree = {
 	}
 	default = no
 	focus = {
-		id = CHI_attack_com
+		id = CHI_Encirclement_Campaign_focus
 		icon = GFX_focus_ger_bulwark_against_bolshevism
 		cost = 10.00
 		mutually_exclusive = {
-			focus = CHI_peace_com
+			focus = CHI_Truce_of_the_Civil_War
 		}
 		x = 9
 		y = 0
@@ -68,11 +68,11 @@ focus_tree = {
 
 	}
 	focus = {
-		id = CHI_peace_com
+		id = CHI_Truce_of_the_Civil_War
 		icon = GFX_focus_prc_social_democracy
 		cost = 5.00
 		mutually_exclusive = {
-			focus = CHI_attack_com
+			focus = CHI_Encirclement_Campaign_focus
 		}
 		x = 11
 		y = 0
@@ -275,7 +275,7 @@ focus_tree = {
 						id = news.2017
 					}
 				}
-				
+
 				if = {
 					limit = {
 						is_ai = yes
@@ -294,10 +294,10 @@ focus_tree = {
 		icon = GFX_focus_chi_collaboration_with_the_japanese
 		cost = 7.15
 		prerequisite = {
-			focus = CHI_attack_com
+			focus = CHI_Encirclement_Campaign_focus
 		}
 		mutually_exclusive = {
-			focus = CHI_fight_focus
+			focus = CHI_National_Defense_Council_focus
 		}
 		x = 8
 		y = 1
@@ -1109,17 +1109,46 @@ focus_tree = {
 
 	}
 	focus = {
+		id = CHI_dare_to_die_corps
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = an_inch_of_mountain_an_inch_of_blood }
+		x = 8
+		y = 7
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = CHI_50_cheaper_force_attack
+		}
+	}
+	focus = { #Operation Sunfall, air
 		id = CHI_air_arc_focus
 		icon = GFX_goal_generic_CAS
 		cost = 20.00
 		prerequisite = {
-			focus = an_inch_of_mountain_an_inch_of_blood
+			focus = CHI_dare_to_die_corps
 		}
 		mutually_exclusive = {
 			focus = CHI_navy_sunfall_focus
 		}
 		x = 7
-		y = 7
+		y = 8
 		ai_will_do = {
 			factor = 10
 		}
@@ -1164,13 +1193,70 @@ focus_tree = {
 		}
 
 	}
+	focus = {#Operation Sunfall, sea
+		id = CHI_navy_sunfall_focus
+		icon = GFX_goal_generic_navy_anti_submarine
+		cost = 20.00
+		prerequisite = {
+			focus = CHI_dare_to_die_corps
+		}
+		mutually_exclusive = {
+			focus = CHI_air_arc_focus
+		}
+		x = 9
+		y = 8
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_ideas = CHI_sunfall_sea
+			news_event = {
+				id = efm_news.1026
+			}
+			add_state_claim = 536
+			add_state_claim = 282
+			add_state_claim = 535
+			add_state_claim = 528
+			add_state_claim = 555
+			add_state_claim = 537
+			add_state_claim = 533
+			add_state_claim = 534
+			add_state_claim = 531
+			add_state_claim = 529
+			add_state_claim = 530
+			add_state_claim = 532
+		}
+		available = {
+			has_war_with = JAP
+			527 = {
+				is_controlled_by = CHI
+			}
+			525 = {
+				is_controlled_by = CHI
+			}
+			524 = {
+				is_controlled_by = CHI
+			}
+		}
+		bypass = {
+			OR = {
+				NOT = {
+					country_exists = JAP
+				}
+				JAP = {
+					is_puppet = yes
+				}
+			}
+		}
+
+	}
 	focus = {
-		id = CHI_fight_focus
+		id = CHI_National_Defense_Council_focus
 		icon = GFX_focus_national_defense
 		cost = 7.15
 		prerequisite = {
-			focus = CHI_peace_com
-			focus = CHI_attack_com
+			focus = CHI_Truce_of_the_Civil_War
+			focus = CHI_Encirclement_Campaign_focus
 		}
 		mutually_exclusive = {
 			focus = ack_hiro_sen_focus
@@ -1207,10 +1293,10 @@ focus_tree = {
 		cost = 14.29
 		prerequisite = {
 			focus = ack_hiro_sen_focus
-			focus = CHI_fight_focus
+			focus = CHI_National_Defense_Council_focus
 		}
 		prerequisite = {
-			focus = CHI_attack_com
+			focus = CHI_Encirclement_Campaign_focus
 		}
 		x = 9
 		y = 2
@@ -1330,63 +1416,7 @@ focus_tree = {
 		}
 
 	}
-	focus = {
-		id = CHI_navy_sunfall_focus
-		icon = GFX_goal_generic_navy_anti_submarine
-		cost = 20.00
-		prerequisite = {
-			focus = an_inch_of_mountain_an_inch_of_blood
-		}
-		mutually_exclusive = {
-			focus = CHI_air_arc_focus
-		}
-		x = 9
-		y = 7
-		ai_will_do = {
-			factor = 10
-		}
-		completion_reward = {
-			add_ideas = CHI_sunfall_sea
-			news_event = {
-				id = efm_news.1026
-			}
-			add_state_claim = 536
-			add_state_claim = 282
-			add_state_claim = 535
-			add_state_claim = 528
-			add_state_claim = 555
-			add_state_claim = 537
-			add_state_claim = 533
-			add_state_claim = 534
-			add_state_claim = 531
-			add_state_claim = 529
-			add_state_claim = 530
-			add_state_claim = 532
-		}
-		available = {
-			has_war_with = JAP
-			527 = {
-				is_controlled_by = CHI
-			}
-			525 = {
-				is_controlled_by = CHI
-			}
-			524 = {
-				is_controlled_by = CHI
-			}
-		}
-		bypass = {
-			OR = {
-				NOT = {
-					country_exists = JAP
-				}
-				JAP = {
-					is_puppet = yes
-				}
-			}
-		}
 
-	}
 	focus = {
 		id = two_fronts_war
 		icon = GFX_goal_generic_fortify_city
@@ -1395,7 +1425,7 @@ focus_tree = {
 			focus = CHI_conquer_focus
 		}
 		prerequisite = {
-			focus = CHI_fight_focus
+			focus = CHI_National_Defense_Council_focus
 		}
 		mutually_exclusive = {
 			focus = delaying_tactics
@@ -1433,14 +1463,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = CHI_unite_focus
+		id = CHI_Second_United_Front_focus
 		icon = GFX_focus_chi_united_front
 		cost = 7.15
 		prerequisite = {
-			focus = CHI_peace_com
+			focus = CHI_Truce_of_the_Civil_War
 		}
 		prerequisite = {
-			focus = CHI_fight_focus
+			focus = CHI_National_Defense_Council_focus
 		}
 		x = 11
 		y = 2
@@ -1481,7 +1511,7 @@ focus_tree = {
 		icon = GFX_focus_generic_coastal_fort
 		cost = 7.15
 		prerequisite = {
-			focus = CHI_unite_focus
+			focus = CHI_Second_United_Front_focus
 		}
 		x = 12
 		y = 3
@@ -1940,7 +1970,7 @@ focus_tree = {
 		icon = GFX_focus_MON_sinkiang_coup
 		cost = 5.00
 		prerequisite = {
-			focus = CHI_unite_focus
+			focus = CHI_Second_United_Front_focus
 		}
 		prerequisite = {
 			focus = CHI_split_plm_focus
@@ -2011,17 +2041,8 @@ focus_tree = {
 					is_historical_focus_on = no
 				}
 			}
-			OR = {
-				is_in_faction_with = XSM
-				NOT = {
-					country_exists = XSM
-				}
-			}
-			OR = {
-				is_in_faction_with = NXM
-				NOT = {
-					country_exists = NXM
-				}
+			any_neighbor_country = {
+				tag = SIK
 			}
 			JAP = {
 				has_war_with = CHI
@@ -2188,64 +2209,75 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			SIK = {
-				country_event = {
-					id = rcmchina.251
-				}
-			}
-			XSM = {
-				country_event = {
-					id = rcmchina.251
-				}
-			}
-			NXM = {
-				country_event = {
-					id = rcmchina.251
-				}
-			}
-			if = {
+			every_country = {
 				limit = {
-					country_exists = TNG
-				}
-				TNG = {
-					country_event = {
-						id = rcmchina.251
+					OR = {
+						tag = SIK
+						tag = XSM
+						tag = NXM
+						tag = TNG
+						tag = HMI
+					}
+					OR = {
+						is_subject = no
+						is_subject_of = ROOT
 					}
 				}
-			}
-			if = {
-				limit = {
-					country_exists = HMI
-				}
-				HMI = {
-					country_event = {
-						id = rcmchina.251
-					}
+				country_event = {
+					id = rcmchina.251
 				}
 			}
 			add_political_power = -100
 		}
 		available = {
-			is_in_faction_with = XSM
-			is_in_faction_with = NXM
 			OR = {
-				NOT = {
+				is_in_faction_with = XSM
+				XSM = {
+					is_subject_of = ROOT
+				}
+			}
+			OR = {
+				is_in_faction_with = NXM
+				NXM = {
+					is_subject_of = ROOT
+				}
+			}
+			if = {
+				limit = {
 					country_exists = SIK
+					is_subject = no
 				}
 				NOT = {
 					has_war_with = SIK
 				}
 			}
+			if = {
+				limit = {
+					country_exists = HMI
+					is_subject = no
+				}
+				NOT = {
+					has_war_with = HMI
+				}
+			}
+			if = {
+				limit = {
+					country_exists = TNG
+					is_subject = no
+				}
+				NOT = {
+					has_war_with = TNG
+				}
+			}
 			has_war_with = JAP
 		}
-
 	}
 	focus = {
 		id = apologize_for_the_purge
 		icon = GFX_focus_prc_social_democracy
 		cost = 5.00
 		prerequisite = {
-			focus = CHI_peace_com
+			focus = CHI_Truce_of_the_Civil_War
 		}
 		prerequisite = {
 			focus = CHI_inst_reform_focus
@@ -2289,7 +2321,7 @@ focus_tree = {
 		icon = GFX_focus_chi_cooperation_with_the_communists
 		cost = 5.00
 		prerequisite = {
-			focus = CHI_peace_com
+			focus = CHI_Truce_of_the_Civil_War
 		}
 		prerequisite = {
 			focus = CHI_inst_reform_focus
@@ -2518,7 +2550,7 @@ focus_tree = {
 			remove_ideas = { central_club  the_blueshirts }
 		}
 		available = {
-			
+
 			neutrality < 0.40
 			fascism < 0.30
 			OR = {
@@ -3691,7 +3723,7 @@ focus_tree = {
 						has_war_with = ROOT
 					}
 				}
-			}			
+			}
 		}
 		bypass = {
 
@@ -3752,7 +3784,7 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					NOT = { 
+					NOT = {
 						ENG = {
 							has_capitulated = no
 							exists = yes
@@ -3903,7 +3935,7 @@ focus_tree = {
 				OR = {
 					has_government = democratic
 					has_government = n_socialism
-				}				
+				}
 				has_opinion = {
 					target = ROOT
 					value > 49
@@ -5223,7 +5255,7 @@ focus_tree = {
 			add_ideas = CHI_navy_reorganized
 		}
 		available = {
-			
+
 		}
 
 	}
@@ -7074,7 +7106,7 @@ focus_tree = {
 					remove_idea = CBIS
 				}
 			}
-			
+
 		}
 		available = {
 

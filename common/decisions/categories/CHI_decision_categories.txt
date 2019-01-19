@@ -265,7 +265,11 @@ CHI_political_power_struggle = {
 	#######
 	allowed = {
 		is_literally_china = yes
-
+		#MODDEDv
+		NOT = {
+			tag = event_target:WTT_communist_china
+		}
+		#MODDED
 	}
 
 	visible = {

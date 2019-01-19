@@ -11,8 +11,8 @@ country_event = {
 	#Agree
 	option = {
 		name = MON.1.a
-		ai_chance = { 
-			factor = 10 
+		ai_chance = {
+			factor = 10
 			modifier = {
 				factor = 2
 				MON = { is_in_faction_with = JAP }
@@ -34,8 +34,8 @@ country_event = {
 				add_core_of = MON
 			}
 		}
-		MON = { 
-			annex_country = { target = ECA transfer_troops = yes } 
+		MON = {
+			annex_country = { target = ECA transfer_troops = yes }
 			add_opinion_modifier = {
 					target = JAP
 					modifier = transfered
@@ -51,11 +51,11 @@ country_event = {
 	option = {
 		name = MON.1.b
 		ai_chance = { factor = 20 }
-		MON = { 
-			country_event = { id = MON.2 } 
+		MON = {
+			country_event = { id = MON.2 }
 			add_opinion_modifier = {
 					target = JAP
-					modifier = refused_transfer 
+					modifier = refused_transfer
 			}
 		}
 	}
@@ -68,7 +68,7 @@ country_event = {
 	desc = MON.2.d
 	picture = GFX_report_event_mong_army_01
 	is_triggered_only = yes
-	
+
 	option = {
 		name = MON.2.a
 		add_popularity = {
@@ -86,11 +86,11 @@ country_event = {
 	picture = GFX_report_event_generic_sign_treaty1
 
 	is_triggered_only = yes
-	
+
 	option = {
 		name = MON.3.a
-		ai_chance = { 
-			factor = 12 
+		ai_chance = {
+			factor = 12
 			modifier = {
 				factor = 2
 				has_country_flag = demchugdongrub_khan
@@ -98,7 +98,7 @@ country_event = {
 		}
 		if = {
 			limit = { is_in_faction = no }
-			create_faction = "daitoa_kyoeiken" 
+			create_faction = "daitoa_kyoeiken"
 			add_to_faction = MON
 		}
 		if = {
@@ -106,12 +106,12 @@ country_event = {
 			add_to_faction = MON
 		}
 	}
-	
+
 	option = {
 		name = MON.3.b
 		ai_chance = { factor = 10 }
-		MON = { 
-			country_event = { id = MON.4 } 
+		MON = {
+			country_event = { id = MON.4 }
 		}
 	}
 }
@@ -123,7 +123,7 @@ country_event = {
 	desc = MON.4.d
 	picture = GFX_report_event_mong_army_01
 	is_triggered_only = yes
-		
+
 	option = {
 		name = MON.4.a
 	}
@@ -136,11 +136,11 @@ country_event = {
 	desc = MON.5.d
 	picture = GFX_report_event_japan_europe_pact
 	is_triggered_only = yes
-	
+
 	option = {
 		name = MON.5.a
-		ai_chance = { 
-			factor = 1 
+		ai_chance = {
+			factor = 1
 			modifier = {
 				factor = 10
 				ECA = { is_ai = no }
@@ -150,8 +150,8 @@ country_event = {
 	}
 	option = {
 		name = MON.5.b
-		ai_chance = { 
-			factor = 1 
+		ai_chance = {
+			factor = 1
 		}
 		create_country_leader = {
 			name = "Tserendondovyn Navaanneren"
@@ -173,9 +173,9 @@ country_event = {
 	desc = MON.6.d
 	picture = GFX_report_event_asian_politicians
 	fire_only_once = yes
-	
+
 	trigger = {
-		tag = MON 
+		tag = MON
 		has_government = democratic
 	}
 	mean_time_to_happen = {
@@ -210,7 +210,7 @@ country_event = {
 	fire_only_once = yes
 	picture = GFX_report_event_mong_amar
 	trigger = {
-		tag = MON 
+		tag = MON
 		has_government = communism
 		has_completed_focus = MON_repressions
 	}
@@ -300,7 +300,7 @@ country_event = {
 	option = {
 		name = MON.9.b
 		ai_chance = {
-			factor = 2	
+			factor = 2
 			modifier = {
 				factor = 2
 				strength_ratio = { tag = MON ratio > 1 }
@@ -319,7 +319,7 @@ country_event = {
 	desc = MON.10.d
 	picture = GFX_report_event_mong_army_02
 	is_triggered_only = yes
-	
+
 	option = {
 		name = MON.10.a
 		if = {
@@ -395,7 +395,7 @@ country_event = {
 	desc = MON.11.d
 	picture = GFX_report_event_mong_army_02
 	is_triggered_only = yes
-	
+
 	option = {
 		name = MON.11.a
 		add_political_power = 100
@@ -415,7 +415,7 @@ country_event = {
 			factor = 1
 			modifier = {
 				factor = 75
-				219 = { NOT = { is_controlled_by = SOV } } 	
+				219 = { NOT = { is_controlled_by = SOV } }
 			}
 		}
 		add_political_power = -150
@@ -463,8 +463,8 @@ country_event = {
 				AND = {
 					has_war = yes
 					any_enemy_country = {
-						strength_ratio = { 
-							tag = ROOT 
+						strength_ratio = {
+							tag = ROOT
 							ratio < 0.5
 						}
 					}
@@ -584,13 +584,13 @@ country_event = {
 	desc = MON.15.d
 	picture = GFX_report_mongol_gov
 	is_triggered_only = yes
-	
+
 	option = {
 		name = MON.15.a
 		JAP = {
 			if = {
 				limit = { is_in_faction = no }
-				create_faction = "daitoa_kyoeiken" 
+				create_faction = "daitoa_kyoeiken"
 				add_to_faction = MON
 			}
 			if = {
@@ -606,8 +606,8 @@ country_event = {
 				add_core_of = MON
 			}
 		}
-		MON = { 
-			annex_country = { target = ECA transfer_troops = yes } 
+		MON = {
+			annex_country = { target = ECA transfer_troops = yes }
 			add_opinion_modifier = {
 					target = JAP
 					modifier = transfered
@@ -630,12 +630,12 @@ country_event = {
 	title = MON.16.t
 	desc = MON.16.d
 	picture = GFX_report_event_mong_army_02
-	is_triggered_only = yes		
-	
+	is_triggered_only = yes
+
 	option = {
 		name = MON.16.a
-		ai_chance = { 
-			factor = 10 
+		ai_chance = {
+			factor = 10
 		}
 		MON = {
 			create_faction = "buddhist_faction"
@@ -650,11 +650,11 @@ country_event = {
 		hidden_effect = {
 			MON = { country_event = { id = MON.18 } }
 		}
-		ai_chance = { 
+		ai_chance = {
 			factor = 5
 			modifier = {
 				factor = 2
-				CHI = { has_completed_focus = KMT_tibet_friend }
+				CHI = { has_completed_focus = CHI_Befriend_Tibet }
 			}
 		}
 	}
@@ -665,8 +665,8 @@ country_event = {
 	title = MON.17.t
 	desc = MON.17.d
 	picture = GFX_report_event_mong_army_01
-	is_triggered_only = yes		
-	
+	is_triggered_only = yes
+
 	option = {
 		name = MON.17.a
 	}
@@ -677,8 +677,8 @@ country_event = {
 	title = MON.18.t
 	desc = MON.18.d
 	picture = GFX_report_event_mong_army_02
-	is_triggered_only = yes		
-	
+	is_triggered_only = yes
+
 	option = {
 		name = MON.18.a
 	}
@@ -785,18 +785,18 @@ country_event = {
 	desc = MON.25.d
 	option = {
 		name = MON.25.a
-		PRC = { 
+		PRC = {
 			country_event = { id = MON.28 }
 			transfer_state = 615
 			transfer_state = 789
 			transfer_state = 767
 			transfer_state = 802
 		}
-		MON = { 
-			country_event = { id = MON.28 } 
+		MON = {
+			country_event = { id = MON.28 }
 			if = {
 				limit = {
-					SHX = { 
+					SHX = {
 						owns_state = 621
 						owns_state = 763
 					}
@@ -820,14 +820,14 @@ country_event = {
 	picture = GFX_report_event_mong_army_01
 	option = {
 		name = MON.26.a
-		MON = { 
-			country_event = { id = MON.28 } 
+		MON = {
+			country_event = { id = MON.28 }
 			transfer_state = 616
 		}
-		PRC = { 
-			country_event = { id = MON.28 } 
- 			transfer_state = 283 
-			transfer_state = 792 
+		PRC = {
+			country_event = { id = MON.28 }
+ 			transfer_state = 283
+			transfer_state = 792
  			puppet = NXM
  		}
  		hidden_effect = {
@@ -970,7 +970,7 @@ country_event = {
 	option = {
 		name = MON.30.a
 		hidden_effect = {
-			country_event = { id = MON.31 days = 100 } 
+			country_event = { id = MON.31 days = 100 }
 		}
 	}
 	option = {
@@ -979,7 +979,7 @@ country_event = {
 		add_manpower = -3000
 		add_stability = -0.05
 		hidden_effect = {
-			country_event = { id = MON.31 days = 65 } 
+			country_event = { id = MON.31 days = 65 }
 		}
 	}
 	option = {
@@ -1204,7 +1204,7 @@ country_event = {
 		add_ideas = MON_provisional_government
 	}
 }
-#Àíøëþñ Òóâû:âûáîð 
+#Àíøëþñ Òóâû:âûáîð
 country_event = {
 	id = MON.41
 	title = MON.41.t
@@ -1213,10 +1213,10 @@ country_event = {
 	desc = MON.41.d
 	option = {
 		name = MON.41.a
-		ai_chance = { 
+		ai_chance = {
 			factor = 9
 		}
-		MON = { 
+		MON = {
 			annex_country = { target = TAN transfer_troops = yes }
 			country_event = { id = MON.42 }
 		}
@@ -1224,7 +1224,7 @@ country_event = {
 	option = {
 		name = MON.41.b
 		MON = { country_event = { id = MON.43 } }
-		ai_chance = { 
+		ai_chance = {
 			factor = 1
 		}
 	}
@@ -1564,18 +1564,18 @@ country_event = {
 					MON_rovs_support
 				}
 				if = {
-					limit = { 
+					limit = {
 						NOT = {
 							SIK = { is_puppet_of = MON }
 						}
 					}
-					transfer_state = 589 
+					transfer_state = 589
 					transfer_state = 586
 				}
 				if = {
-					limit = { 
+					limit = {
 						MON = {
-							owns_state = 564 
+							owns_state = 564
 							owns_state = 563
 							owns_state = 565
 						}
@@ -1641,8 +1641,8 @@ country_event = {
 	option = {
 		name = MON.52.b
 		set_country_flag = MAN_split
-		set_party_name = { 
-			ideology = democratic 
+		set_party_name = {
+			ideology = democratic
 			long_name = MON_liberal_MAN
 			name = MON_liberal_MAN_short
 		}
@@ -1655,8 +1655,8 @@ country_event = {
 			traits = { }
 		}
 		hidden_effect = {
-			set_party_name = { 
-				ideology = communism 
+			set_party_name = {
+				ideology = communism
 				long_name = MON_authoritarian_MAN
 				name = MON_authoritarian_MAN_short
 			}

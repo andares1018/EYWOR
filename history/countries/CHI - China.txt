@@ -19,6 +19,8 @@ set_variable = { var = duration_of_infra value = 120 } #teir 1
 set_variable = { var = duration_of_infra_reenable value = 70 }
 set_variable = { var = cost_of_infra_cf_minus_1 value = 11 } #teir 1
 set_variable = { var = cost_of_infra_cf value = 12 }
+
+add_stability = 0.1
 add_ideas = {
 	free_trade
 	german_advisors
@@ -27,12 +29,13 @@ add_ideas = {
 	CHI_kmt
 	appeasement_policy
 	chiang
+	CHI_army_corruption_1
 	#incompetent_heavy_industry
-	
-	
-	
+
+
+
 	unstable_economy
-	
+
 	#internationalism
 	#fascist_influence
 	#communist_influence
@@ -53,18 +56,19 @@ set_convoys = 40
 	set_global_flag = flying_tiger
 	remove_ideas = CHI_nanking_decade_idea
 	remove_ideas = prince_de_defect
+	remove_ideas = CHI_army_corruption_1
 	remove_ideas = german_advisors
 	add_political_power = 1198
 	set_global_flag = joined_chi_@HPC
 	set_country_flag = falkenhausen_recalled
-	complete_national_focus = CHI_fight_focus
-	complete_national_focus = CHI_unite_focus
+	complete_national_focus = CHI_National_Defense_Council_focus
+	complete_national_focus = CHI_Second_United_Front_focus
 	complete_national_focus = CHI_pressure_xinjiang
 	complete_national_focus = CHI_industry_focus
 	complete_national_focus = CHI_nationalize_industry_focus
 	complete_national_focus = CHI_nationalize_industry_ii_focus
 	complete_national_focus = CHI_government_bailout_focus
-	unlock_national_focus  = CHI_attack_com
+	unlock_national_focus  = CHI_Encirclement_Campaign_focus
 	complete_national_focus	= CHI_reinforce_new_life_movement
 	complete_national_focus = big_rear_plan
 	complete_national_focus = CHI_lushan_focus
@@ -80,18 +84,19 @@ set_convoys = 40
 	complete_national_focus = national_poltical_council
 	complete_national_focus = constit_draft_focus
 	add_ideas = {
+		CHI_army_corruption_3
 		#laws
 		tot_economic_mobilisation
 		service_by_requirement
 		closed_economy
 		CHI_t_v_soong
 		carsun_chang
-		
+
 		#ministers
 		CHI_chen_shaokuan
 		claire_lee_chennault_chi
 		kiangnan_shipyard_group
-		
+
 	}
 
 	set_global_flag = fall_of_nanjing

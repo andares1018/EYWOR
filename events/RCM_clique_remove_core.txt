@@ -36,17 +36,27 @@ country_event = {
 			every_state = {
 				remove_core_of = CHI
 			}
+
+			CHI = {
+				WTT_political_struggle_remove_current_country = yes
+			}
 		}
 		if = {
 			limit = { NOT = { country_exists = PRC } }
 			every_state = {
 				remove_core_of = PRC
 			}
+			#PRC = {
+			#	WTT_political_struggle_remove_current_country = yes
+			#}
 		}
 		if = {
 			limit = { NOT = { country_exists = GXC } }
 			every_state = {
 				remove_core_of = GXC
+			}
+			GXC = {
+				WTT_political_struggle_remove_current_country = yes
 			}
 		}
 		if = {
@@ -54,11 +64,17 @@ country_event = {
 			every_state = {
 				remove_core_of = YUN
 			}
+			YUN = {
+				WTT_political_struggle_remove_current_country = yes
+			}
 		}
 		if = {
 			limit = { NOT = { country_exists = SHX } }
 			every_state = {
 				remove_core_of = SHX
+			}
+			SHX = {
+				WTT_political_struggle_remove_current_country = yes
 			}
 		}
 		if = {
@@ -66,11 +82,17 @@ country_event = {
 			every_state = {
 				remove_core_of = XSM
 			}
+			XSM = {
+				WTT_political_struggle_remove_current_country = yes
+			}
 		}
 		if = {
 			limit = { NOT = { country_exists = XIK } }
 			every_state = {
 				remove_core_of = XIK
+			}
+			XIK = {
+				WTT_political_struggle_remove_current_country = yes
 			}
 		}
 		if = {
@@ -78,11 +100,17 @@ country_event = {
 			every_state = {
 				remove_core_of = GUD
 			}
+			GUD = {
+				WTT_political_struggle_remove_current_country = yes
+			}
 		}
 		if = {
 			limit = { NOT = { country_exists = HPC } }
 			every_state = {
 				remove_core_of = HPC
+			}
+			HPC = {
+				WTT_political_struggle_remove_current_country = yes
 			}
 		}
 		if = {
@@ -90,11 +118,17 @@ country_event = {
 			every_state = {
 				remove_core_of = SIC
 			}
+			SIC = {
+				WTT_political_struggle_remove_current_country = yes
+			}
 		}
 		if = {
 			limit = { NOT = { country_exists = PLM } }
 			every_state = {
 				remove_core_of = PLM
+			}
+			PLM = {
+				WTT_political_struggle_remove_current_country = yes
 			}
 		}
 		if = {
@@ -102,11 +136,17 @@ country_event = {
 			every_state = {
 				remove_core_of = MAN
 			}
+			#MAN = {
+			#	WTT_political_struggle_remove_current_country = yes
+			#}
 		}
 		if = {
 			limit = { NOT = { country_exists = NXM } }
 			every_state = {
 				remove_core_of = NXM
+			}
+			NXM = {
+				WTT_political_struggle_remove_current_country = yes
 			}
 		}
 		if = {
@@ -114,29 +154,44 @@ country_event = {
 			every_state = {
 				remove_core_of = SHD
 			}
+			SHD = {
+				WTT_political_struggle_remove_current_country = yes
+			}
 		}
 		if = {
 			limit = { NOT = { country_exists = ECA } }
 			every_state = {
 				remove_core_of = ECA
 			}
+			#ECA = {
+			#	WTT_political_struggle_remove_current_country = yes
+			#}
 		}
 		if = {
 			limit = { NOT = { country_exists = EHB } }
 			every_state = {
 				remove_core_of = EHB
 			}
+			#EHB = {
+			#	WTT_political_struggle_remove_current_country = yes
+			#}
 		}
 		if = {
 			limit = { NOT = { country_exists = RFM } }
 			every_state = {
 				remove_core_of = RFM
 			}
+			#RFM = {
+			#	WTT_political_struggle_remove_current_country = yes
+			#}
 		}
 		if = {
 			limit = { NOT = { country_exists = HMI } }
 			every_state = {
 				remove_core_of = HMI
+			}
+			HMI = {
+				WTT_political_struggle_remove_current_country = yes
 			}
 		}
 		if = {
@@ -144,11 +199,17 @@ country_event = {
 			every_state = {
 				remove_core_of = TNG
 			}
+			TNG = {
+				WTT_political_struggle_remove_current_country = yes
+			}
 		}
 		if = {
 			limit = { NOT = { country_exists = NEA } }
 			every_state = {
 				remove_core_of = NEA
+			}
+			NEA = {
+				WTT_political_struggle_remove_current_country = yes
 			}
 		}
 		if = {
@@ -156,12 +217,18 @@ country_event = {
 			every_state = {
 				remove_core_of = NSG
 			}
+			#NSG = {
+			#	WTT_political_struggle_remove_current_country = yes
+			#}
 		}
 		if = {
 			limit = { NOT = { country_exists = SCG } }
 			every_state = {
 				remove_core_of = SCG
 			}
+			#SCG = {
+			#	WTT_political_struggle_remove_current_country = yes
+			#}
 		}
 		set_global_flag = clique_loop
 		random_country = {
@@ -194,7 +261,7 @@ country_event = {
 		has_equipment = {
 			infantry_equipment > 199
 		}
-		has_war_with = JAP 
+		has_war_with = JAP
 		NOT = {
 			any_neighbor_country = {
 				has_war_with = ROOT

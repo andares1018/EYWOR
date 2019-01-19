@@ -1677,6 +1677,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+
 		available = {
 			OR = {
 				SHX = {
@@ -1717,6 +1718,45 @@ focus_tree = {
 					target = XSM
 				}
 			}
+		}
+
+	}
+	focus = {
+		id = PRC_partisan_offensive_WRL
+		icon = GFX_focus_prc_infiltration
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_exploit_the_weak_neighbours
+		}
+		x = 13
+		y = 3
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			#for_tracking_ten_comp_foc = yes
+			unlock_decision_category_tooltip = RCM_communist_infiltration
+			custom_effect_tooltip = RCM_communist_infiltration_tt
+			hidden_effect = {
+				set_country_flag = communist_infiltration
+			}
+		}
+		available = {
+			#has_war_support > 0.7
+			#hidden_trigger = {
+				# ai_cont_foc_prc = yes
+				#}
+			has_war_with = JAP
+		}
+		#any_other_country = { #player ROC OP, this will render PRC useless. Revisit when properly balanced
+			# is_neighbor_of = PRC
+			# has_war_with = PRC
+			#}
+		bypass = {
+			date > 1940.1.1
+			is_legit_china = yes
+			has_war = no
+			is_subject = no
 		}
 
 	}

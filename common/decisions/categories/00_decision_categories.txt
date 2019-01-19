@@ -61,9 +61,9 @@ recovery_effort = {
 	#picture = GFX_decision_cat_picture_chi_infiltration
 }
 RCM_communist_infiltration = {
-	allowed = {
-		tag = PRC
-	}
+	#allowed = {
+	#	tag = event_target:WTT_communist_china
+	#}
 	icon = infiltration
 	picture = GFX_decision_cat_picture_chi_infiltration
 }

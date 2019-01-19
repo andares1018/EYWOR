@@ -156,7 +156,7 @@ continent = {
 
 every_country = {
 	limit = {
-		OR = { 
+		OR = {
 			AND = {
 				capital_scope = { is_on_continent = asia }
 				is_puppet = no
@@ -179,8 +179,8 @@ every_country = {
 	political = {
 		#MODDEDv
 		n_socialism = {
-				male = { 
-					"gfx/leaders/Asia/Portrait_Asia_Generic_2.dds" 
+			male = {
+				"gfx/leaders/Asia/Portrait_Asia_Generic_2.dds" 
 			}
 		}
 		#MODDED^
