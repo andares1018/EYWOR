@@ -101,7 +101,7 @@ CHI_political_power_struggle = {
 								}
 								custom_trigger_tooltip = {
 									tooltip = more_political_support_than_current_leader
-									#check_variable = { total_political_support_points > WTT_current_china_leader.total_political_support_points } #Change tooltip if you change this
+									check_variable = { total_political_support_points > WTT_current_china_leader.total_political_support_points } #Change tooltip if you change this
 									has_civil_war = no
 								}
 								else = {
