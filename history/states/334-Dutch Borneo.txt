@@ -1,0 +1,27 @@
+
+state={
+	id=334
+	name="STATE_334"
+	resources={
+		rubber=36
+		oil=3
+	}
+
+	history={
+		owner = INS
+		add_core_of = INS
+		buildings = {
+			infrastructure = 2
+			1316 = {
+				naval_base = 1
+			}
+		}
+	}
+
+	provinces={
+		1230 1304 1316 2222 4279 4335 4409 7227 10282 12129 12955 
+	}
+	manpower=671121
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

@@ -79,6 +79,14 @@ ENG = {
 			target = BUR
 			autonomous_state = autonomy_colony
 		}
+		set_autonomy = {
+			target = BOR
+			autonomous_state = autonomy_colony
+		}
+		set_autonomy = {
+			target = SAR
+			autonomous_state = autonomy_colony
+		}
 		else = {
 			#puppet = NZL
 			#puppet = CAN
@@ -88,6 +96,8 @@ ENG = {
 			puppet = SST
 			puppet = RAJ
 			puppet = BUR
+			puppet = SAR
+			puppet = BOR
 		}
 	}
 

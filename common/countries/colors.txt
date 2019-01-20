@@ -581,6 +581,16 @@ SCG = {
 	color_ui = rgb { 255 120 71 }
 }
 
+BOR = {
+	color = rgb { 41  89  174 }
+	color_ui = rgb { 41  89  174 }
+}
+
+SAR = {
+	color = rgb { 255 185 15 }
+	color_ui = rgb { 255 185 15 }
+}
+
 ###
 D01 = {
 	color = rgb { 200 100 31 }

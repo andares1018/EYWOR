@@ -142,3 +142,7 @@
  ITA_democratic_party_long:0 "Partito Popolare Italiano"
  ITA_fascism_party_long:0 "Partito Nazionale Fascista"
  ITA_neutrality_party_long:0 "Partito Nazionale Monarchico"
+ BOR_neutrality_party:0 "Colonial Administration"
+ BOR_neutrality_party_long:0 "Colonial Administration"
+ SAR_neutrality_party:0 "Brooke Dynasty"
+ SAR_neutrality_party_long:0 "Brooke Dynasty"

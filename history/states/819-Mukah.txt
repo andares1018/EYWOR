@@ -1,0 +1,17 @@
+state={
+	id=819
+	name="STATE_819"
+	provinces={
+		2117 4396 7443 8091 12283 
+	}
+	history={
+		owner = SAR
+		add_core_of = SAR
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	manpower=257413
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

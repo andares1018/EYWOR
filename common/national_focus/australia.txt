@@ -3149,7 +3149,7 @@ focus_tree = {
 							is_owned_by = MAL
 						}
 						333 = {
-							is_owned_by = MAL
+							is_owned_by = SAR
 						}
 					}
 				}
