@@ -1669,9 +1669,9 @@ country_event = {
 	picture = GFX_report_event_japanese_officers
 	trigger = {
 		tag = JAP
-		NOT = { has_completed_focus = kodoha_purge }
+		NOT = { has_completed_focus = JAP_Sonno_Tokkan_focus }
 		focus_progress = {
-			focus = kodoha_purge
+			focus = JAP_Sonno_Tokkan_focus
 			progress > 0.15
 		}
 	}
@@ -1727,9 +1727,9 @@ country_event = {
 	picture = GFX_report_event_prince
 	trigger = {
 		tag = JAP
-		NOT = { has_completed_focus = kodoha_purge }
+		NOT = { has_completed_focus = JAP_Sonno_Tokkan_focus }
 		focus_progress = {
-			focus = kodoha_purge
+			focus = JAP_Sonno_Tokkan_focus
 			progress > 0.4
 		}
 	}
@@ -1772,9 +1772,9 @@ country_event = {
 	picture = GFX_report_event_last_genro
 	trigger = {
 		tag = JAP
-		NOT = { has_completed_focus = kodoha_purge }
+		NOT = { has_completed_focus = JAP_Sonno_Tokkan_focus }
 		focus_progress = {
-			focus = kodoha_purge
+			focus = JAP_Sonno_Tokkan_focus
 			progress > 0.65
 		}
 	}
@@ -3446,7 +3446,7 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			set_country_flag = china_refuse
-			unlock_national_focus = aggressive_china_politics
+			unlock_national_focus = JAP_aggressive_china_politics_focus
 			#complete_national_focus
 		}
 	}
@@ -3464,7 +3464,7 @@ country_event = {
 		tag = JAP
 		NOT = { has_country_flag = united_china }
 		has_global_flag = unite_china_jap_flag
-		has_completed_focus = unite_china
+		has_completed_focus = JAP_unite_china_focus
 		NOT = {
 			OR = {
 				has_war_with = PRC
@@ -6340,19 +6340,19 @@ country_event = {
 		add_ideas = JAP_expansionist_propaganda_1
 		hidden_effect = {
 			news_event = {
-				days = 120 id = news_mesc.5
+				days = 200 id = news_mesc.5
 			}
 			news_event = {
-				days = 240 id = news_mesc.5
-			}
-			news_event = {
-				days = 360 id = news_mesc.5
-			}
-			news_event = {
-				days = 480 id = news_mesc.5
+				days = 400 id = news_mesc.5
 			}
 			news_event = {
 				days = 600 id = news_mesc.5
+			}
+			news_event = {
+				days = 800 id = news_mesc.5
+			}
+			news_event = {
+				days = 1000 id = news_mesc.5
 			}
 		}
 	}

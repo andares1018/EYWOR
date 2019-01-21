@@ -667,7 +667,7 @@ japan_form_CHI_puppets = {
 			CCP_CREATION = yes
 		}
 		ai_will_do = {
-			factor = 100
+			factor = 1000
 		}
 	}
 
@@ -2358,7 +2358,7 @@ JAP_bribe_the_tokko = {
 			tag = JAP
 			has_idea = JAP_bribe_the_tokko_1
 			NOT = { has_idea = JAP_bribe_the_tokko_3 }
-			NOT = { has_completed_focus = jap_placate_military_focus }
+			NOT = { has_completed_focus = JAP_placate_military_focus }
 			NOT = { has_completed_focus = JAP_strengthen_civilian_government }
 		}
 		remove_effect = {

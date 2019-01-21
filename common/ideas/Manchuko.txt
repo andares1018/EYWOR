@@ -1,5 +1,5 @@
 ideas = {
-	
+
 	country = {
 		MAN_exiled_imperial_family = {
 
@@ -10,11 +10,11 @@ ideas = {
 			allowed_civil_war = {
 				has_government = fascism
 			}
-			
+
 			removal_cost = -1
 
 			picture = state_shintoism
-			
+
 			modifier = {
 				army_morale_factor = 0.1
 				stability_factor = 0.1
@@ -39,11 +39,11 @@ ideas = {
 			allowed_civil_war = {
 				original_tag = MAN
 			}
-			
+
 			removal_cost = -1
 
 			picture = chi_army_corruption2
-			
+
 			modifier = {
 				stability_factor = -0.1
 				war_support_factor = -0.1
@@ -59,11 +59,11 @@ ideas = {
 			allowed_civil_war = {
 				original_tag = MAN
 			}
-			
+
 			removal_cost = -1
 
 			picture = generic_secret_police
-			
+
 			modifier = {
 				political_advisor_cost_factor = 0.25
 				trade_laws_cost_factor = 0.25
@@ -73,7 +73,7 @@ ideas = {
 		}
 
 		MAN_low_legitimacy_5 = {
-			
+
 			name = MAN_low_legitimacy
 
 			allowed = {
@@ -83,18 +83,18 @@ ideas = {
 			allowed_civil_war = {
 				original_tag = MAN
 			}
-			
+
 			removal_cost = -1
 
 			picture = man_low_legitimacy
-			
+
 			modifier = {
-				stability_factor = -0.5
+				stability_factor = -0.25
 				war_support_factor = -0.25
 			}
 		}
 		MAN_low_legitimacy_4 = {
-			
+
 			name = MAN_low_legitimacy
 
 			allowed = {
@@ -104,18 +104,18 @@ ideas = {
 			allowed_civil_war = {
 				original_tag = MAN
 			}
-			
+
 			removal_cost = -1
 
 			picture = man_low_legitimacy2
-			
+
 			modifier = {
-				stability_factor = -0.4
+				stability_factor = -0.2
 				war_support_factor = -0.2
 			}
 		}
 		MAN_low_legitimacy_3 = {
-			
+
 			name = MAN_low_legitimacy
 
 			allowed = {
@@ -125,18 +125,18 @@ ideas = {
 			allowed_civil_war = {
 				original_tag = MAN
 			}
-			
+
 			removal_cost = -1
 
 			picture = man_low_legitimacy3
-			
+
 			modifier = {
-				stability_factor = -0.3
+				stability_factor = -0.15
 				war_support_factor = -0.15
 			}
 		}
 		MAN_low_legitimacy_2 = {
-			
+
 			name = MAN_low_legitimacy
 
 			allowed = {
@@ -146,18 +146,18 @@ ideas = {
 			allowed_civil_war = {
 				original_tag = MAN
 			}
-			
+
 			removal_cost = -1
 
 			picture = man_low_legitimacy4
-			
+
 			modifier = {
-				stability_factor = -0.2
+				stability_factor = -0.1
 				war_support_factor = -0.1
 			}
 		}
 		MAN_low_legitimacy_1 = {
-			
+
 			name = MAN_low_legitimacy
 
 			allowed = {
@@ -167,14 +167,14 @@ ideas = {
 			allowed_civil_war = {
 				original_tag = MAN
 			}
-			
+
 			removal_cost = -1
 
 			picture = man_low_legitimacy5
-			
+
 			modifier = {
-				stability_factor = -0.1
-				war_support_factor = -0.5
+				stability_factor = -0.05
+				war_support_factor = -0.05
 			}
 		}
 
@@ -187,11 +187,11 @@ ideas = {
 			allowed_civil_war = {
 				original_tag = MAN
 			}
-			
+
 			removal_cost = -1
 
 			picture = generic_army_war_college
-			
+
 			modifier = {
 				max_command_power = 25
 			}
@@ -206,11 +206,11 @@ ideas = {
 			allowed_civil_war = {
 				original_tag = MAN
 			}
-			
+
 			removal_cost = -1
 
 			picture = ast_naval_auxiliary_patrol
-			
+
 			modifier = {
 				industrial_capacity_factory = 0.05
 			}
@@ -225,11 +225,11 @@ ideas = {
 			allowed_civil_war = {
 				original_tag = MAN
 			}
-			
+
 			removal_cost = -1
 
 			picture = generic_war_preparation
-			
+
 			modifier = {
 				army_morale_factor = 0.05
 				army_core_attack_factor = 0.05
@@ -246,11 +246,11 @@ ideas = {
 			allowed_civil_war = {
 				original_tag = MAN
 			}
-			
+
 			removal_cost = -1
 
 			picture = generic_manpower_bonus
-			
+
 			modifier = {
 				conscription = 0.02
 			}
@@ -267,11 +267,11 @@ ideas = {
 			allowed_civil_war = {
 				original_tag = MAN
 			}
-			
+
 			removal_cost = -1
 
 			picture = man_five_year_plan_air
-			
+
 			research_bonus = { air_equipment = 0.1 }
 
 			modifier = {
@@ -290,13 +290,13 @@ ideas = {
 			allowed_civil_war = {
 				original_tag = MAN
 			}
-			
+
 			removal_cost = -1
 
 			picture = man_five_year_plan_tank
 
 			research_bonus = { armor = 0.05 }
-			
+
 			modifier = {
 				production_speed_arms_factory_factor = 0.05
 			}
@@ -312,11 +312,11 @@ ideas = {
 			allowed_civil_war = {
 				original_tag = MAN
 			}
-			
+
 			removal_cost = -1
 
 			picture = man_five_year_plan_industry
-			
+
 			research_bonus = { industry = 0.05 }
 			modifier = {
 				production_speed_industrial_complex_factor = 0.05
@@ -331,11 +331,11 @@ ideas = {
 			allowed_civil_war = {
 				original_tag = MAN
 			}
-			
+
 			removal_cost = -1
 
 			picture = generic_central_management
-			
+
 			equipment_bonus = {
 				infantry_equipment = {
 					build_cost_ic = -0.25
@@ -353,11 +353,11 @@ ideas = {
 			allowed_civil_war = {
 				original_tag = MAN
 			}
-			
+
 			removal_cost = -1
 
 			picture = generic_army_problems
-			
+
 			targeted_modifier = {
 				tag = MAN
 				attack_bonus_against = -0.1
@@ -373,11 +373,11 @@ ideas = {
 			allowed_civil_war = {
 				original_tag = MAN
 			}
-			
+
 			removal_cost = -1
 
 			picture = generic_army_problems
-			
+
 			targeted_modifier = {
 				tag = MAN
 				attack_bonus_against = -0.25
@@ -393,11 +393,11 @@ ideas = {
 			allowed_civil_war = {
 				original_tag = MAN
 			}
-			
+
 			removal_cost = -1
 			name = MAN_arms_seized_1
 			picture = generic_army_problems
-			
+
 			targeted_modifier = {
 				tag = MAN
 				attack_bonus_against = -0.4
@@ -414,11 +414,11 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			
+
 			removal_cost = -1
 
 			picture = chi_war_of_resistance
-			
+
 			targeted_modifier = {
 				tag = JAP
 				attack_bonus_against = 0.1
@@ -429,7 +429,7 @@ ideas = {
 
 	political_advisor = {
 
-	}	
+	}
 
 	army_chief = {
 
@@ -472,13 +472,13 @@ ideas = {
 				original_tag = MAN
 				NOT = { has_dlc = "Waking the Tiger" }
 			}
-			
+
 			research_bonus = {
 				air_equipment = 0.10
 			}
-			
+
 			traits = { light_aircraft_manufacturer }
-						
+
 			ai_will_do = {
 				factor = 1
 			}
@@ -498,13 +498,13 @@ ideas = {
 			}
 
 			cost = 75
-			
+
 			research_bonus = {
 				air_equipment = 0.10
 			}
-			
+
 			traits = { light_aircraft_manufacturer }
-						
+
 			ai_will_do = {
 				factor = 1
 			}
@@ -523,13 +523,13 @@ ideas = {
 			}
 
 			cost = 75
-			
+
 			research_bonus = {
 				air_equipment = 0.10
 			}
-			
+
 			traits = { medium_aircraft_manufacturer }
-						
+
 			ai_will_do = {
 				factor = 1
 			}
@@ -548,13 +548,13 @@ ideas = {
 			}
 
 			cost = 75
-			
+
 			research_bonus = {
 				air_equipment = 0.10
 			}
-			
+
 			traits = { heavy_aircraft_manufacturer }
-						
+
 			ai_will_do = {
 				factor = 1
 			}
@@ -564,8 +564,8 @@ ideas = {
 	industrial_concern = {
 		MAN_south_manchuria_railway_company = {
 
-			picture = generic_industrial_concern_2			
-			
+			picture = generic_industrial_concern_2
+
 			available = {
 				has_completed_focus = MAN_South_Manchuria_Railway
 			}
@@ -578,7 +578,7 @@ ideas = {
 			traits = {
 				construction_company
 			}
-			
+
 			ai_will_do = {
 				factor = 1
 			}

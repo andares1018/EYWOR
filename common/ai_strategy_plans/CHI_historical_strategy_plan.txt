@@ -29,11 +29,35 @@ CHI_nationalist_historical_plan = {
 		big_rear_plan
 		CHI_foreign_help_focus
 		CHI_inst_reform_focus
+		CHI_mission_to_the_soviet_union
+		CHI_infrastructure_effort_i
+		CHI_purchase_tanks
 		CHI_reorganize_nra
+		strengthen_cc
+		CHI_sov_pact
 		CHI_Encirclement_Campaign_focus
+		strengthen_bs
 		CHI_National_Defense_Council_focus
+		CHI_the_soviet_volunteer_group
+		CHI_axis_help_focus
+		found_cbis
+		found_mbis
 		CHI_Second_United_Front_focus
+		CHI_allies_help_focus
+		CHI_fighter_purchases
+		CHI_invite_the_flying_tigers
+		strengthen_the_kmt
+		CHI_allies_help_diplo_focus
+		CHI_infrastructure_effort_2
+		CHI_scorched_earth_tactics
+		political_indoctrination
+		CHI_take_what_we_can_take
+		CHI_dare_to_die_corps
+		CHI_public_school_program_focus
+		CHI_reform_military_academy
+		CHI_yi_dang_zhi_guo_focus
 		CHI_lushan_focus
+		CHI_streamlined_industry
 		CHI_reinforce_new_life_movement
 		CHI_coast_infra_focus
 		CHI_defend_river_focus
@@ -42,6 +66,7 @@ CHI_nationalist_historical_plan = {
 		last-ditch_effort
 		CHI_pressure_xinjiang
 		#CHI_offer_xinjiang
+		CHI_infrastructure_effort_3
 		national_poltical_council
 		constit_draft_focus
 		assembly_of_the_constutients

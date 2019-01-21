@@ -113,10 +113,10 @@ northern_expansion = {
 		value = 200
 	}
 }
-aggressive_china_politics = {
+JAP_aggressive_china_politics_focus = {
 	enable = {
 		tag = JAP
-		has_completed_focus = aggressive_china_politics
+		has_completed_focus = JAP_aggressive_china_politics_focus
 		country_exists = CHI
 	}
 	abort = {

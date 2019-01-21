@@ -205,10 +205,7 @@ focus_tree = {
 		x = 4
 		y = 3
 		available = {
-			NOT = {
-				has_war_with = GER
-				is_in_faction_with = ENG
-			}
+			RCM_GER_will_support = yes
 		}
 		completion_reward = {
 			GER = {
@@ -249,10 +246,6 @@ focus_tree = {
 				}
 			}
 		}
-		cancel = {
-			has_war_with = GER
-			is_in_faction_with = ENG
-		}
 	}
 	focus = {
 		id = WRL_chinese_general_staff
@@ -267,24 +260,12 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
+			RCM_GER_will_support = yes
 			NOT = {
 				has_global_flag = falkenhausen_recalled
 			}
-			if = {
-				limit = {
-					NOT = {
-						OR = {
-							has_government = neutrality
-							GER = {
-								has_government = ROOT
-							}
-						}
-					}
-				}
-				GER_will_support = yes
-			}
 		}
-		
+
 		bypass = {
 		}
 		cancel_if_invalid = yes
@@ -316,9 +297,9 @@ focus_tree = {
 			add_offsite_building = { type = arms_factory level = 2 }
 		}
 		available = {
-			GER_will_support = yes
+			RCM_GER_will_support = yes
 		}
-		
+
 	}
 	focus = {
 		id = WRL_german_training_method
@@ -337,24 +318,9 @@ focus_tree = {
 			unlock_decision_tooltip = CHI_60_divisions_plan
 		}
 		available = {
-			NOT = {
-				has_idea = CHI_incompetent_officers
-			}
+			RCM_GER_will_support = yes
 			NOT = {
 				has_global_flag = falkenhausen_recalled
-			}
-			if = {
-				limit = {
-					NOT = {
-						OR = {
-							has_government = neutrality
-							GER = {
-								has_government = ROOT
-							}
-						}
-					}
-				}
-				GER_will_support = yes
 			}
 		}
 		bypass = {
@@ -432,10 +398,7 @@ focus_tree = {
 			factor = 80
 		}
 		available = {
-			NOT = {
-				has_war_with = SOV
-				is_in_faction_with = JAP
-			}
+			RCM_SOV_will_support = yes
 		}
 		completion_reward = {
 			SOV = {
@@ -465,10 +428,6 @@ focus_tree = {
 				}
 			}
 		}
-		cancel = {
-			has_war_with = SOV
-			is_in_faction_with = JAP
-		}
 	}
 	focus = {
 		id = WRL_purchase_tanks
@@ -491,7 +450,7 @@ focus_tree = {
 			}
 		}
 		available = {
-			SOV_will_support = yes
+			RCM_SOV_will_support = yes
 		}
 		bypass = {
 		}
@@ -544,9 +503,7 @@ focus_tree = {
 			}
 		}
 		available = {
-			NOT = {
-				has_war_with = SOV
-			}
+			RCM_SOV_will_support = yes
 		}
 		bypass = {
 		}
@@ -568,7 +525,7 @@ focus_tree = {
 			}
 		}
 		available = {
-			SOV_will_support = yes
+			RCM_SOV_will_support = yes
 		}
 		bypass = {
 		}
@@ -621,10 +578,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			NOT = {
-				has_war_with = ENG
-				is_in_faction_with = GER
-			}
+			RCM_UK_will_support = yes
 		}
 		completion_reward = {
 			ENG = {
@@ -669,10 +623,6 @@ focus_tree = {
 				}
 			}
 		}
-		cancel = {
-			has_war_with = ENG
-			is_in_faction_with = GER
-		}
 	}
 	focus = {
 		id = WRL_fighter_purchases
@@ -691,10 +641,7 @@ focus_tree = {
 			}
 		}
 		available = {
-			OR = {
-				ENG_will_support = yes
-				USA_will_support = yes
-			}
+			RCM_USA_UK_will_support = yes
 		}
 		bypass = {
 		}
@@ -770,15 +717,7 @@ focus_tree = {
 			}
 		}
 		available = {
-			NOT = {
-				has_war_with = USA
-			}
-			NOT = {
-				has_war_with = ENG
-			}
-			NOT = {
-				is_in_faction_with = GER
-			}
+			RCM_USA_UK_will_support = yes
 			has_defensive_war_with = JAP
 		}
 	}
@@ -799,10 +738,7 @@ focus_tree = {
 			}
 		}
 		available = {
-			OR = {
-				FRA_will_support = yes
-				ENG_will_support = yes
-			}
+			RCM_USA_UK_will_support = yes
 		}
 		bypass = {
 		}
@@ -1416,12 +1352,7 @@ focus_tree = {
 			}
 			democratic > 0.5
 		}
-		cancel = {
-			OR = {
-				has_war_with = USA
-				has_war_with = ENG
-			}
-		}
+
 	}
 	focus = {
 		id = WRL_join_allies

@@ -1,5 +1,5 @@
 #	Example:
-# 
+#
 #	example_trigger = {
 #		tag = GER
 #		is_ai = no
@@ -11,7 +11,7 @@
 #	trigger = {
 #		example_trigger = yes
 #	}
-# 
+#
 #	THIS FILE IS FOR TRIGGERS SPECIFICALLY FOR THE CHI TAG
 
 is_using_generic_idea = {
@@ -35,8 +35,8 @@ is_using_generic_idea = {
 		}
 		NOT = {
 			OR = {
-				tag = CHI 
-				tag = PRC 
+				tag = CHI
+				tag = PRC
 				is_originally_warlord = yes
 			}
 		}
@@ -295,7 +295,7 @@ infra_ava_2_tr = {
 			size < 8
 		}
 		is_controlled_by = ROOT
-	} 
+	}
 }
 ###
 
@@ -307,7 +307,7 @@ infra_ava_3_tr = {
 			size < 5
 		}
 		is_controlled_by = ROOT
-	} 
+	}
 }
 ###
 
@@ -319,7 +319,7 @@ infra_bypass_1_tr = {
 			size < 8
 		}
 		is_controlled_by = ROOT
-	} 
+	}
 }
 
 ###
@@ -332,9 +332,9 @@ infra_bypass_2_tr = {
 			size < 5
 		}
 		is_controlled_by = ROOT
-	} 
+	}
 }
-### 
+###
 
 infra_bypass_3_tr = {
 	custom_trigger_tooltip = {
@@ -344,7 +344,7 @@ infra_bypass_3_tr = {
 			size < 1
 		}
 		is_controlled_by = ROOT
-	} 
+	}
 }
 ###
 hainan_trigger = {
@@ -355,7 +355,7 @@ hainan_trigger = {
 			building = infrastructure
 			size < 6
 		}
-	} 
+	}
 }
 alu_tung_trigger = {
 	custom_trigger_tooltip = {
@@ -365,7 +365,7 @@ alu_tung_trigger = {
 			building = infrastructure
 			size < 3
 		}
-	} 
+	}
 }
 7_infra_trigger = {
 	custom_trigger_tooltip = {
@@ -375,7 +375,7 @@ alu_tung_trigger = {
 			building = infrastructure
 			size < 4
 		}
-	} 
+	}
 }
 max_infra_trigger = {
 	custom_trigger_tooltip = {
@@ -385,7 +385,7 @@ max_infra_trigger = {
 			building = infrastructure
 			size < 1
 		}
-	} 
+	}
 }
 
 ai_cont_foc_prc = { #this is for AI to do continue focus
@@ -406,3 +406,300 @@ ai_cont_foc_prc = { #this is for AI to do continue focus
 	}
 }
 
+RCM_GER_will_support = {
+	country_exists = GER
+	NOT = {
+		has_war_with = GER
+	}
+	if = {
+		limit = {
+			NOT = {
+				SOV = {
+					OR = {
+						has_war_together_with = GER
+						is_in_faction_with = GER
+						has_non_aggression_pact_with = GER
+					}
+				}
+			}
+		}
+		NOT = {
+			is_in_faction_with = SOV
+		}
+	}
+	if = {
+		limit = {
+			NOT = {
+				ENG = {
+					OR = {
+						has_war_together_with = GER
+						is_in_faction_with = GER
+						has_non_aggression_pact_with = GER
+					}
+				}
+			}
+		}
+		NOT = {
+			is_in_faction_with = ENG
+		}
+	}
+	if = {
+		limit = {
+			NOT = {
+				USA = {
+					OR = {
+						has_war_together_with = GER
+						is_in_faction_with = GER
+						has_non_aggression_pact_with = GER
+					}
+				}
+			}
+		}
+		NOT = {
+			is_in_faction_with = USA
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				OR = {
+					has_government = neutrality
+					GER = {
+						has_government = ROOT
+					}
+				}
+			}
+		}
+		GER_will_support = yes
+	}
+}
+RCM_SOV_will_support = {
+	country_exists = SOV
+	NOT = {
+		has_war_with = SOV
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				JAP = {
+					OR = {
+						has_war_together_with = SOV
+						is_in_faction_with = SOV
+						has_non_aggression_pact_with = SOV
+					}
+				}
+			}
+		}
+		NOT = {
+			is_in_faction_with = JAP
+		}
+	}
+	if = {
+		limit = {
+			NOT = {
+				GER = {
+					OR = {
+						has_war_together_with = SOV
+						is_in_faction_with = SOV
+						has_non_aggression_pact_with = SOV
+					}
+				}
+			}
+		}
+		NOT = {
+			is_in_faction_with = GER
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				OR = {
+					has_government = neutrality
+					SOV = {
+						has_government = ROOT
+					}
+				}
+			}
+		}
+		SOV_will_support = yes
+	}
+}
+RCM_USA_UK_will_support = {
+	OR = {
+		AND = {
+			country_exists = ENG
+			NOT = {
+				has_war_with = ENG
+			}
+			if = {
+				limit = {
+					NOT = {
+						GER = {
+							OR = {
+								has_war_together_with = ENG
+								is_in_faction_with = ENG
+								has_non_aggression_pact_with = ENG
+							}
+						}
+					}
+				}
+				NOT = {
+					is_in_faction_with = GER
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							has_government = neutrality
+							ENG = {
+								has_government = ROOT
+							}
+						}
+					}
+				}
+				ENG_will_support = yes
+			}
+		}
+		AND = {
+			country_exists = USA
+			NOT = {
+				has_war_with = USA
+			}
+			if = {
+				limit = {
+					NOT = {
+						GER = {
+							OR = {
+								has_war_together_with = USA
+								is_in_faction_with = USA
+								has_non_aggression_pact_with = USA
+							}
+						}
+					}
+				}
+				NOT = {
+					is_in_faction_with = GER
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						JAP = {
+							OR = {
+								has_war_together_with = USA
+								is_in_faction_with = USA
+								has_non_aggression_pact_with = USA
+							}
+						}
+					}
+				}
+				NOT = {
+					is_in_faction_with = JAP
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							has_government = neutrality
+							USA = {
+								has_government = ROOT
+							}
+						}
+					}
+				}
+				USA_will_support = yes
+			}
+		}
+	}
+}
+RCM_UK_will_support = {
+	country_exists = ENG
+	NOT = {
+		has_war_with = ENG
+	}
+	if = {
+		limit = {
+			NOT = {
+				GER = {
+					OR = {
+						has_war_together_with = ENG
+						is_in_faction_with = ENG
+						has_non_aggression_pact_with = ENG
+					}
+				}
+			}
+		}
+		NOT = {
+			is_in_faction_with = GER
+		}
+	}
+	if = {
+		limit = {
+			NOT = {
+				OR = {
+					has_government = neutrality
+					ENG = {
+						has_government = ROOT
+					}
+				}
+			}
+		}
+		ENG_will_support = yes
+	}
+}
+RCM_USA_will_support = {
+	country_exists = USA
+	NOT = {
+		has_war_with = USA
+	}
+	if = {
+		limit = {
+			NOT = {
+				GER = {
+					OR = {
+						has_war_together_with = USA
+						is_in_faction_with = USA
+						has_non_aggression_pact_with = USA
+					}
+				}
+			}
+		}
+		NOT = {
+			is_in_faction_with = GER
+		}
+	}
+	if = {
+		limit = {
+			NOT = {
+				JAP = {
+					OR = {
+						has_war_together_with = USA
+						is_in_faction_with = USA
+						has_non_aggression_pact_with = USA
+					}
+				}
+			}
+		}
+		NOT = {
+			is_in_faction_with = JAP
+		}
+	}
+	if = {
+		limit = {
+			NOT = {
+				OR = {
+					has_government = neutrality
+					USA = {
+						has_government = ROOT
+					}
+				}
+			}
+		}
+		USA_will_support = yes
+	}
+}

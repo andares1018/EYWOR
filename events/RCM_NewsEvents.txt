@@ -467,7 +467,7 @@ news_event = {
 						dictator
 					}
 				}
-				unlock_national_focus = jap_placate_military_focus
+				unlock_national_focus = JAP_placate_military_focus
 				unlock_national_focus = pressure_pm_focus
 			}
 			90 = { 
@@ -524,7 +524,7 @@ news_event = {
 						dictator
 					}
 				}
-				unlock_national_focus = jap_placate_military_focus
+				unlock_national_focus = JAP_placate_military_focus
 				unlock_national_focus = pressure_pm_focus				
 			}
 			70 = { 
@@ -576,7 +576,7 @@ news_event = {
 						dictator
 					}
 				}
-				unlock_national_focus = jap_placate_military_focus
+				unlock_national_focus = JAP_placate_military_focus
 				unlock_national_focus = pressure_pm_focus
 			}
 			50 = {

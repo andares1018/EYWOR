@@ -103,13 +103,13 @@ add_opinion_modifier = { target = CHI modifier = hostile_status }
 		JAP_military_outweighs_the_government_idea_bad
 	}
 	remove_ideas = fumimaro_konoe
-	complete_national_focus = jap_placate_military_focus
+	complete_national_focus = JAP_placate_military_focus
 	complete_national_focus = JAP_purge_the_kodoha_faction
 	complete_national_focus = pressure_pm_focus
 	unlock_national_focus = JAP_intervene_in_china
-	complete_national_focus = konoe_cabinet
+	complete_national_focus = JAP_konoe_cabinet_focus
 	complete_national_focus = nat_mob_law
-	complete_national_focus = aggressive_china_politics
+	complete_national_focus = JAP_aggressive_china_politics_focus
 	complete_national_focus = spiritual_mobilization_focus
 	complete_national_focus = JAP_guide_the_zaibatsus
 	complete_national_focus = JAP_liaison_conference

@@ -3027,17 +3027,7 @@ focus_tree = {
 		x = 31
 		y = 3
 		available = {
-			GER = {
-				has_capitulated = no
-				has_opinion = {
-					target = ROOT
-					value > 24
-				}
-				exists = yes
-				NOT = {
-					has_war_with = ROOT
-				}
-			}
+			RCM_GER_will_support = yes
 		}
 		completion_reward = {
 			GER = {
@@ -3100,29 +3090,7 @@ focus_tree = {
 			NOT = {
 				has_global_flag = falkenhausen_recalled
 			}
-			if = {
-				limit = {
-					NOT = {
-						OR = {
-							has_government = neutrality
-							GER = {
-								has_government = ROOT
-							}
-						}
-					}
-				}
-				GER = {
-					has_capitulated = no
-					has_opinion = {
-						target = ROOT
-						value > 24
-					}
-					exists = yes
-					NOT = {
-						has_war_with = ROOT
-					}
-				}
-			}
+			RCM_GER_will_support = yes
 		}
 		bypass = {
 
@@ -3161,17 +3129,7 @@ focus_tree = {
 			NOT = {
 				has_global_flag = falkenhausen_recalled
 			}
-			GER = {
-				has_capitulated = no
-				has_opinion = {
-					target = ROOT
-					value > 49
-				}
-				exists = yes
-				NOT = {
-					has_war_with = ROOT
-				}
-			}
+			RCM_GER_will_support = yes
 			has_idea = kung_hsiang_hsi
 		}
 		cancel = {
@@ -3204,19 +3162,7 @@ focus_tree = {
 			NOT = {
 				has_global_flag = falkenhausen_recalled
 			}
-			if = {
-				limit = {
-					NOT = {
-						OR = {
-							has_government = neutrality
-							GER = {
-								has_government = ROOT
-							}
-						}
-					}
-				}
-				GER_will_support = yes
-			}
+			RCM_GER_will_support = yes
 		}
 		bypass = {
 
@@ -3334,17 +3280,7 @@ focus_tree = {
 			factor = 80
 		}
 		available = {
-			SOV = {
-				has_capitulated = no
-				has_opinion = {
-					target = ROOT
-					value > 24
-				}
-				exists = yes
-				NOT = {
-					has_war_with = ROOT
-				}
-			}
+			RCM_SOV_will_support = yes
 		}
 		completion_reward = {
 			SOV = {
@@ -3401,17 +3337,7 @@ focus_tree = {
 			}
 		}
 		available = {
-			SOV = {
-				has_capitulated = no
-				has_opinion = {
-					target = ROOT
-					value > 49
-				}
-				exists = yes
-				NOT = {
-					has_war_with = ROOT
-				}
-			}
+			RCM_SOV_will_support = yes
 		}
 		bypass = {
 
@@ -3461,17 +3387,7 @@ focus_tree = {
 			}
 		}
 		available = {
-			GER = {
-				has_capitulated = no
-				has_opinion = {
-					target = ROOT
-					value > 49
-				}
-				exists = yes
-				NOT = {
-					has_war_with = ROOT
-				}
-			}
+			RCM_SOV_will_support = yes
 		}
 		bypass = {
 
@@ -3515,9 +3431,7 @@ focus_tree = {
 			}
 		}
 		available = {
-			NOT = {
-				has_war_with = SOV
-			}
+			RCM_SOV_will_support = yes
 			has_idea = CHI_sov_pact
 		}
 		bypass = {
@@ -3622,17 +3536,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			ENG = {
-				has_capitulated = no
-				has_opinion = {
-					target = ROOT
-					value > 24
-				}
-				exists = yes
-				NOT = {
-					has_war_with = ROOT
-				}
-			}
+			RCM_UK_will_support = yes
 		}
 		completion_reward = {
 			ENG = {
@@ -3700,30 +3604,7 @@ focus_tree = {
 			}
 		}
 		available = {
-			OR = {
-				ENG = {
-					has_capitulated = no
-					has_opinion = {
-						target = ROOT
-						value > 49
-					}
-					exists = yes
-					NOT = {
-						has_war_with = ROOT
-					}
-				}
-				USA = {
-					has_capitulated = no
-					exists = yes
-					has_opinion = {
-						target = ROOT
-						value > 49
-					}
-					NOT = {
-						has_war_with = ROOT
-					}
-				}
-			}
+			RCM_USA_UK_will_support = yes
 		}
 		bypass = {
 
@@ -3883,20 +3764,7 @@ focus_tree = {
 			NOT = {
 				has_idea = CHI_sov_pact
 			}
-			USA = {
-				has_capitulated = no
-				has_opinion = {
-					target = ROOT
-					value > 49
-				}
-				exists = yes
-				NOT = {
-					has_war_with = ROOT
-				}
-				has_tech = fighter1
-				has_tech = tactical_bomber1
-				has_war_with = JAP
-			}
+			RCM_USA_will_support = yes
 			has_idea = claire_lee_chennault_chi
 		}
 		bypass = {
@@ -3929,68 +3797,10 @@ focus_tree = {
 			}
 		}
 		available = {
-			USA = {
-				has_capitulated = no
-				exists = yes
-				OR = {
-					has_government = democratic
-					has_government = n_socialism
-				}
-				has_opinion = {
-					target = ROOT
-					value > 49
-				}
-				NOT = {
-					has_war_with = ROOT
-				}
-			}
-			ENG = {
-				has_capitulated = no
-				exists = yes
-				OR = {
-					has_government = democratic
-					has_government = n_socialism
-				}
-				has_opinion = {
-					target = ROOT
-					value > 49
-				}
-				NOT = {
-					has_war_with = ROOT
-				}
-			}
-			NOT = {
-				is_in_faction_with = GER
-			}
+			RCM_USA_UK_will_support = yes
 			has_defensive_war_with = JAP
 		}
 		bypass = {
-			OR = {
-				USA = {
-					OR = {
-						has_capitulated = yes
-						exists = no
-						NOT = {
-							OR = {
-								has_government = democratic
-								has_government = n_socialism
-							}
-						}
-					}
-				}
-				ENG = {
-					OR = {
-						has_capitulated = yes
-						exists = no
-						NOT = {
-							OR = {
-								has_government = democratic
-								has_government = n_socialism
-							}
-						}
-					}
-				}
-			}
 		}
 
 	}

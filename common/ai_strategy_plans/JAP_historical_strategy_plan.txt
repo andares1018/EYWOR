@@ -18,32 +18,43 @@ JAP_historical_plan = {
 	ai_national_focuses = {
 		JAP_army_expansion_law #10
 		JAP_army_expansion #10
-		jap_placate_military_focus #5
-		JAP_purge_the_kodoha_faction #7		
+		JAP_placate_military_focus #5
+		JAP_purge_the_kodoha_faction #7
 		pressure_pm_focus #7
-		konoe_cabinet #10
-		JAP_spiritual_mobilization #October 20 1942
+		JAP_konoe_cabinet_focus #10
 		JAP_guide_the_zaibatsus
-		aggressive_china_politics #10
-		JAP_intervene_in_china #10
+		JAP_aggressive_china_politics_focus #10
+		JAP_intervene_in_china #10 1937 JUL 7
+		spiritual_mobilization_focus  #10 1937 sept 17
+		JAP_liaison_conference #10 1937 nov 27
+		nat_mob_law #10 1938 FEB 7
+		JAP_new_naval_estimates	#10
+		JAP_small_arms_modernization #10
+		oust_germans_focus
+		JAP_sign_tripartite_pact #August 30 1940
+		new_order_movement
 		southern_expansion_focus #November 20 1939
+		JAP_greater_east_asian_co_prosperity_sphere
 		tojo_cabinet_focus
 		strike_usa_focus
 		JAP_new_naval_estimates	#10
 		JAP_small_arms_modernization #10
+		student_movement_focus
+		industrial_effort_focus
 		JAP_supremacy_of_technology #10
 		JAP_fighter_modernization #10
-		JAP_carrier_warfare_experiments 10
+		JAP_Soviet_Japanese_Neutrality_Pact_focus
+		oust_soviet
+		JAP_carrier_warfare_experiments #10
 		JAP_cruiser_modernization #February 20 1938
-		unit_731
+		unit_731#October 20 1942
 		JAP_torpedo_cruisers #September 10 1939
 		JAP_agility_focus #January 30 1940
 		JAP_first_air_fleet #April 10 1940
 		JAP_the_zero #June 20 1940
-		JAP_sign_tripartite_pact #August 30 1940
 		JAP_bomber_modernization #November 10 1940
 		JAP_range_focus #January 20 1941
-		JAP_non_aggression_pact_with_the_soviet_union #March 30 1941
+		 #March 30 1941
 		JAP_modern_artillery #June 10 1941
 		JAP_secure_the_philippines #August 20 1941
 		southern_expansion_focus #October 30 1941
@@ -51,7 +62,6 @@ JAP_historical_plan = {
 		JAP_strategic_bomber_effort #March 20 1942
 		JAP_modern_escorts #May 30 1942
 		JAP_national_defense_state #August 10 1942
-
 		JAP_warrior_spirit #December 30 1942
 		JAP_coal_liquification #March 10 1943
 		JAP_exploit_the_southern_resource_area #May 20 1943

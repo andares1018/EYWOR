@@ -9,7 +9,7 @@ focus_tree = {
 	}
 	default = no
 	focus = {
-		id = jap_placate_military_focus
+		id = JAP_placate_military_focus
 		icon = GFX_goal_rhineland
 		cost = 5.00
 		mutually_exclusive = {
@@ -22,7 +22,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_command_power = 50
-			add_political_power = 100
+			add_political_power = 50
 			custom_effect_tooltip = blank_line
 			add_ideas = hisaichi_terauchi
 			custom_effect_tooltip = blank_line
@@ -50,11 +50,11 @@ focus_tree = {
 		icon = GFX_goal_generic_demand_territory
 		cost = 30
 		mutually_exclusive = {
-			focus = jap_placate_military_focus
+			focus = JAP_placate_military_focus
 		}
 		x = 2
 		y = 0
-		relative_position_id = jap_placate_military_focus
+		relative_position_id = JAP_placate_military_focus
 		ai_will_do = {
 			factor = 10
 			modifier = {
@@ -103,7 +103,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = kodoha_purge
+		id = JAP_Sonno_Tokkan_focus
 		icon = GFX_focus_AST_war_japan
 		cost = 25.00
 		x = 3
@@ -266,14 +266,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = def_taisei_demo_focus
+		id = JAP_Constitutional_Reform_focus
 		icon = GFX_goal_support_democracy
 		cost = 10.00
 		prerequisite = {
 			focus = JAP_strengthen_civilian_government
 		}
 		mutually_exclusive = {
-			focus = left_reform_focus
+			focus = JAP_left_reform_focus
 		}
 		x = 21
 		y = 1
@@ -300,18 +300,18 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = a_new_republic
+		id = JAP_a_new_republic_focus
 		icon = GFX_goal_generic_national_unity
 		cost = 20.00
 		prerequisite = {
-			focus = def_taisei_demo_focus
+			focus = JAP_Constitutional_Reform_focus
 		}
 		mutually_exclusive = {
 			focus = rebuild_constitutional_monarchy
 		}
 		x = 1
 		y = 1
-		relative_position_id = def_taisei_demo_focus
+		relative_position_id = JAP_Constitutional_Reform_focus
 		ai_will_do = {
 			factor = 10
 		}
@@ -339,14 +339,14 @@ focus_tree = {
 		icon = GFX_focus_jap_showa_restoration
 		cost = 20.00
 		prerequisite = {
-			focus = kodoha_purge
+			focus = JAP_Sonno_Tokkan_focus
 		}
 		mutually_exclusive = {
-			focus = a_new_empire_focus
+			focus = JAP_a_new_empire_focus
 		}
 		x = -1
 		y = 1
-		relative_position_id = kodoha_purge
+		relative_position_id = JAP_Sonno_Tokkan_focus
 		ai_will_do = {
 			factor = 10
 		}
@@ -397,18 +397,18 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = a_new_empire_focus
+		id = JAP_a_new_empire_focus
 		icon = GFX_focus_jap_cast_the_die
 		cost = 10.00
 		prerequisite = {
-			focus = kodoha_purge
+			focus = JAP_Sonno_Tokkan_focus
 		}
 		mutually_exclusive = {
 			focus = showa_restoration_focus
 		}
 		x = 1
 		y = 1
-		relative_position_id = kodoha_purge
+		relative_position_id = JAP_Sonno_Tokkan_focus
 		select_effect = {
 			add_ideas = a_new_empire
 		}
@@ -445,7 +445,7 @@ focus_tree = {
 		cost = 10.00
 		prerequisite = {
 			focus = showa_restoration_focus
-			focus = a_new_empire_focus
+			focus = JAP_a_new_empire_focus
 		}
 		mutually_exclusive = {
 			focus = JAP_intervene_in_china
@@ -453,7 +453,7 @@ focus_tree = {
 		}
 		x = 3
 		y = 1
-		relative_position_id = a_new_empire_focus
+		relative_position_id = JAP_a_new_empire_focus
 		ai_will_do = {
 			factor = 50
 		}
@@ -494,7 +494,7 @@ focus_tree = {
 		cost = 10.00
 		prerequisite = {
 			focus = showa_restoration_focus
-			focus = a_new_empire_focus
+			focus = JAP_a_new_empire_focus
 		}
 		x = 3
 		y = 2
@@ -775,12 +775,12 @@ focus_tree = {
 	focus = {
 		id = test_the_chinese_focus
 		icon = GFX_goal_generic_political_pressure
-		cost = 5.00
+		cost = 10.00
 		prerequisite = {
-			focus = jap_placate_military_focus
+			focus = JAP_placate_military_focus
 		}
 		mutually_exclusive = {
-			focus = aggressive_china_politics
+			focus = JAP_aggressive_china_politics_focus
 		}
 		x = 10
 		y = 1
@@ -815,14 +815,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = left_reform_focus
+		id = JAP_left_reform_focus
 		icon = GFX_goal_generic_army_doctrines
 		cost = 10.00
 		prerequisite = {
 			focus = JAP_strengthen_civilian_government
 		}
 		mutually_exclusive = {
-			focus = def_taisei_demo_focus
+			focus = JAP_Constitutional_Reform_focus
 		}
 		x = 29
 		y = 1
@@ -852,7 +852,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = fortress_man
+		id = JAP_fortress_manchuria_focus
 		icon = GFX_goal_generic_construct_military
 		cost = 10.00
 		prerequisite = {
@@ -1147,11 +1147,11 @@ focus_tree = {
 		icon = GFX_focus_SAF_colonialist_crusade
 		cost = 7.00
 		prerequisite = {
-			focus = jap_placate_military_focus
+			focus = JAP_placate_military_focus
 		}
 		x = 1
 		y = 1
-		relative_position_id = jap_placate_military_focus
+		relative_position_id = JAP_placate_military_focus
 		ai_will_do = {
 			factor = 80
 			modifier = {
@@ -1169,7 +1169,7 @@ focus_tree = {
 				ideology = despotism
 				traits = { dictator }
 			}
-			add_political_power = 120
+			add_political_power = 100
 		}
 		available = {
 			has_idea = hisaichi_terauchi
@@ -1180,14 +1180,14 @@ focus_tree = {
 		icon = GFX_goal_generic_air_doctrine
 		cost = 15.00
 		prerequisite = {
-			focus = def_taisei_demo_focus
+			focus = JAP_Constitutional_Reform_focus
 		}
 		mutually_exclusive = {
-			focus = a_new_republic
+			focus = JAP_a_new_republic_focus
 		}
 		x = -1
 		y = 1
-		relative_position_id = def_taisei_demo_focus
+		relative_position_id = JAP_Constitutional_Reform_focus
 		ai_will_do = {
 			factor = 10
 		}
@@ -1209,18 +1209,18 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = hire_back_sanzo
+		id = JAP_Release_Kyuichi_Tokuda_focus
 		icon = GFX_goal_tripartite_pact
 		cost = 10.00
 		prerequisite = {
-			focus = left_reform_focus
+			focus = JAP_left_reform_focus
 		}
 		mutually_exclusive = {
-			focus = agrarian_reform
+			focus = JAP_agrarian_reform_focus
 		}
 		x = 1
 		y = 1
-		relative_position_id = left_reform_focus
+		relative_position_id = JAP_left_reform_focus
 		ai_will_do = {
 			factor = 10
 		}
@@ -1248,11 +1248,11 @@ focus_tree = {
 		icon = GFX_goal_support_communism
 		cost = 10.00
 		prerequisite = {
-			focus = hire_back_sanzo
+			focus = JAP_Release_Kyuichi_Tokuda_focus
 		}
 		x = 0
 		y = 1
-		relative_position_id = hire_back_sanzo
+		relative_position_id = JAP_Release_Kyuichi_Tokuda_focus
 		ai_will_do = {
 			factor = 10
 		}
@@ -1642,14 +1642,14 @@ focus_tree = {
 		icon = GFX_goal_support_man
 		cost = 10.00
 		prerequisite = {
-			focus = fortress_man
+			focus = JAP_fortress_manchuria_focus
 		}
 		mutually_exclusive = {
 			focus = JAP_japanization_focus
 		}
 		x = -1
 		y = 1
-		relative_position_id = fortress_man
+		relative_position_id = JAP_fortress_manchuria_focus
 		ai_will_do = {
 			factor = 10
 		}
@@ -1700,7 +1700,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = unite_china
+		id = JAP_unite_china_focus
 		icon = GFX_focus_chi_one_china_policy
 		cost = 10.00
 		prerequisite = {
@@ -1813,11 +1813,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = aggressive_china_politics
+		id = JAP_aggressive_china_politics_focus
 		icon = GFX_goal_generic_construct_military
 		cost = 10.00
 		prerequisite = {
-			focus = jap_placate_military_focus
+			focus = JAP_placate_military_focus
 		}
 		mutually_exclusive = {
 			focus = test_the_chinese_focus
@@ -1833,13 +1833,17 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			country_event = {
-				id = rcmjapan.104
+			#country_event = {
+			#	id = rcmjapan.104
+			#}
+			#effect_tooltip = {
+			#	add_ideas = JAP_expansionist_propaganda_5
+			#}
+			add_timed_idea = {
+				days = 250
+				idea = JAP_expansionist_propaganda_5
 			}
-			effect_tooltip = {
-				add_ideas = JAP_expansionist_propaganda_1
-			}
-			custom_effect_tooltip = this_will_wear_off_over_time
+			#custom_effect_tooltip = this_will_wear_off_over_time
 			add_named_threat = {
 				threat = 1
 				name = aggressive_china_politics_focus
@@ -1937,9 +1941,12 @@ focus_tree = {
 		icon = GFX_goal_generic_major_war
 		cost = 10.00
 		prerequisite = {
-			focus = aggressive_china_politics
+			focus = JAP_aggressive_china_politics_focus
 			focus = test_the_chinese_focus
 		}
+		#prerequisite = {
+		#	focus = JAP_purge_the_kodoha_faction
+		#}
 		mutually_exclusive = {
 			focus = jap_revise_hiro_san
 		}
@@ -2056,6 +2063,7 @@ focus_tree = {
 			NOT = {
 				has_global_flag = CHI_accept_san_hiro
 				has_idea = peace_talk_with_china
+				has_idea = officer_purged_jap
 			}
 		}
 		bypass = {
@@ -2069,7 +2077,7 @@ focus_tree = {
 		cost = 10.00
 		prerequisite = {
 			focus = JAP_secure_china
-			focus = unite_china
+			focus = JAP_unite_china_focus
 		}
 		x = -1
 		y = 1
@@ -2130,7 +2138,7 @@ focus_tree = {
 			focus = JAP_non_aggression_pact_with_china
 		}
 		mutually_exclusive = {
-			focus = japan_soviet_pact
+			focus = JAP_Soviet_Japanese_Neutrality_Pact_focus
 		}
 		x = -1
 		y = 1
@@ -2163,11 +2171,11 @@ focus_tree = {
 		icon = GFX_focus_AST_war_japan
 		cost = 7.00
 		prerequisite = {
-			focus = jap_placate_military_focus
+			focus = JAP_placate_military_focus
 		}
 		x = -1
 		y = 1
-		relative_position_id = jap_placate_military_focus
+		relative_position_id = JAP_placate_military_focus
 		ai_will_do = {
 			factor = 80
 			modifier = {
@@ -2187,7 +2195,7 @@ focus_tree = {
 			custom_effect_tooltip = blank_line
 			set_country_flag = forced_to_retire_by_terauchi
 			add_timed_idea = {
-				days = 450
+				days = 250
 				idea = officer_purged_jap
 			}
 			hidden_effect = {
@@ -2202,15 +2210,16 @@ focus_tree = {
 					remove_unit_leader = 2003
 				}
 			}
-			add_political_power = 150
-			add_stability = -0.1
+			add_political_power = 100
+			add_stability = 0.05
+			add_war_support = -0.1
 		}
 		available = {
 			has_idea = hisaichi_terauchi
 		}
 	}
 	focus = {
-		id = konoe_cabinet
+		id = JAP_konoe_cabinet_focus
 		icon = GFX_goal_generic_cavalry
 		cost = 10.00
 		prerequisite = {
@@ -2241,11 +2250,34 @@ focus_tree = {
 				ideology = despotism
 				traits = { popular_figurehead }
 			}
-			add_political_power = 120
+			add_political_power = 150
 			custom_effect_tooltip = blank_line
-			swap_ideas = {
-				add_idea = JAP_bribe_the_tokko_befriended
-				remove_idea = JAP_bribe_the_tokko_1
+			if = {
+				limit = {
+					has_idea = JAP_bribe_the_tokko_1
+				}
+				swap_ideas = {
+					add_idea = JAP_bribe_the_tokko_befriended
+					remove_idea = JAP_bribe_the_tokko_1
+				}
+			}
+			if = {
+				limit = {
+					has_idea = JAP_bribe_the_tokko_2
+				}
+				swap_ideas = {
+					add_idea = JAP_bribe_the_tokko_befriended
+					remove_idea = JAP_bribe_the_tokko_2
+				}
+			}
+			if = {
+				limit = {
+					has_idea = JAP_bribe_the_tokko_3
+				}
+				swap_ideas = {
+					add_idea = JAP_bribe_the_tokko_befriended
+					remove_idea = JAP_bribe_the_tokko_3
+				}
 			}
 			hidden_effect = {
 				remove_ideas = fumimaro_konoe
@@ -2261,11 +2293,11 @@ focus_tree = {
 		icon = GFX_focus_jap_spiritual_mobilization
 		cost = 10.00
 		prerequisite = {
-			focus = konoe_cabinet
+			focus = JAP_konoe_cabinet_focus
 		}
 		x = 0
 		y = 1
-		relative_position_id = konoe_cabinet
+		relative_position_id = JAP_konoe_cabinet_focus
 		ai_will_do = {
 			factor = 80
 			modifier = {
@@ -2347,6 +2379,11 @@ focus_tree = {
 				date < 1938.8.15
 			}
 		}
+		available = {
+			has_war = yes
+			has_idea = tot_economic_mobilisation
+			num_of_factories > 150
+		}
 		select_effect = {
 			add_ideas = for_the_shintaisei
 			drop_cosmetic_tag = yes
@@ -2410,7 +2447,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = japan_soviet_pact
+		id = JAP_Soviet_Japanese_Neutrality_Pact_focus
 		icon = GFX_focus_chi_mission_to_the_soviet_union
 		cost = 2.00
 		prerequisite = {
@@ -2458,6 +2495,9 @@ focus_tree = {
 		}
 		available = {
 			NOT = {
+				has_war_with = SOV
+			}
+			GER = {
 				has_war_with = SOV
 			}
 		}
@@ -2717,7 +2757,7 @@ focus_tree = {
 				ideology = fascism_ideology
 				traits = { prince_of_terror }
 			}
-			add_political_power = 120
+			add_political_power = 150
 			hidden_effect = {
 				remove_ideas = hideki_tojo
 			}
@@ -2900,7 +2940,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = juneau_pact
+		id = JAP_Hull_Nomura_Pact_focus
 		icon = GFX_goal_generic_forceful_treaty
 		cost = 10.00
 		prerequisite = {
@@ -3004,7 +3044,7 @@ focus_tree = {
 		}
 		x = -1
 		y = 1
-		relative_position_id = tech_sharing_ger
+		relative_position_id = JAP_tech_sharing_ger_focus
 		ai_will_do = {
 			factor = 10
 		}
@@ -3047,18 +3087,18 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = agrarian_reform
+		id = JAP_agrarian_reform_focus
 		icon = GFX_focus_prc_agrarian_socialism
 		cost = 10.00
 		prerequisite = {
-			focus = left_reform_focus
+			focus = JAP_left_reform_focus
 		}
 		mutually_exclusive = {
-			focus = hire_back_sanzo
+			focus = JAP_Release_Kyuichi_Tokuda_focus
 		}
 		x = -1
 		y = 1
-		relative_position_id = left_reform_focus
+		relative_position_id = JAP_left_reform_focus
 		ai_will_do = {
 			factor = 10
 		}
@@ -3078,11 +3118,11 @@ focus_tree = {
 		icon = GFX_focus_generic_support_the_left_right
 		cost = 10.00
 		prerequisite = {
-			focus = agrarian_reform
+			focus = JAP_agrarian_reform_focus
 		}
 		x = -1
 		y = 1
-		relative_position_id = agrarian_reform
+		relative_position_id = JAP_agrarian_reform_focus
 		ai_will_do = {
 			factor = 10
 		}
@@ -3108,7 +3148,7 @@ focus_tree = {
 			focus = jap_com_rev
 		}
 		mutually_exclusive = {
-			focus = join_comintern
+			focus = JAP_join_comintern_focus
 		}
 		x = 0
 		y = 1
@@ -3177,7 +3217,7 @@ focus_tree = {
 		icon = GFX_goal_support_fascism
 		cost = 10.00
 		prerequisite = {
-			focus = a_new_empire_focus
+			focus = JAP_a_new_empire_focus
 			focus = showa_restoration_focus
 		}
 		x = -2
@@ -3274,7 +3314,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = asia_united
+		id = JAP_asia_united_focus
 		icon = GFX_goal_generic_cavalry
 		cost = 10.00
 		prerequisite = {
@@ -3285,7 +3325,7 @@ focus_tree = {
 			focus = imperial_glory_kodoha
 		}
 		mutually_exclusive = {
-			focus = join_axis
+			focus = JAP_Join_Axis_focus
 		}
 		x = -2
 		y = 1
@@ -3294,7 +3334,7 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			add_political_power = 150
+			add_political_power = 100
 			add_stability = 0.05
 		}
 		available = {
@@ -3333,7 +3373,7 @@ focus_tree = {
 			}
 			add_ideas = neutrality_idea
 			add_ideas = deterrence
-			add_political_power = 120
+			add_political_power = 100
 			add_stability = 0.1
 		}
 	}
@@ -3487,7 +3527,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = democracy_to_china
+		id = JAP_democracy_to_china_focus
 		icon = GFX_goal_generic_major_war
 		cost = 10.00
 		prerequisite = {
@@ -3533,7 +3573,7 @@ focus_tree = {
 			focus = JAP_west_pacific_treaty_organization
 		}
 		mutually_exclusive = {
-			focus = democracy_to_china
+			focus = JAP_democracy_to_china_focus
 		}
 		x = 2
 		y = 1
@@ -3559,7 +3599,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = tech_sharing_ger
+		id = JAP_tech_sharing_ger_focus
 		icon = GFX_goal_generic_scientific_exchange
 		cost = 10.00
 		prerequisite = {
@@ -3615,7 +3655,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = join_comintern
+		id = JAP_join_comintern_focus
 		icon = GFX_focus_generic_join_comintern
 		cost = 10.00
 		prerequisite = {
@@ -3691,12 +3731,12 @@ focus_tree = {
 		icon = GFX_goal_reorg_JAP
 		cost = 10.00
 		prerequisite = {
-			focus = asia_united
-			focus = join_axis
+			focus = JAP_asia_united_focus
+			focus = JAP_Join_Axis_focus
 		}
 		x = 1
 		y = 1
-		relative_position_id = rebuild_china
+		relative_position_id = JAP_rebuild_china_focus
 		ai_will_do = {
 			factor = 10
 		}
@@ -3781,7 +3821,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = join_axis
+		id = JAP_Join_Axis_focus
 		icon = GFX_focus_ger_reichskommisariats
 		cost = 10.00
 		prerequisite = {
@@ -3792,7 +3832,7 @@ focus_tree = {
 			focus = imperial_glory_kodoha
 		}
 		mutually_exclusive = {
-			focus = asia_united
+			focus = JAP_asia_united_focus
 		}
 		x = 0
 		y = 1
@@ -3842,11 +3882,11 @@ focus_tree = {
 		icon = GFX_goal_generic_dangerous_deal
 		cost = 10.00
 		prerequisite = {
-			focus = japan_soviet_pact
+			focus = JAP_Soviet_Japanese_Neutrality_Pact_focus
 		}
 		x = 0
 		y = 1
-		relative_position_id = japan_soviet_pact
+		relative_position_id = JAP_Soviet_Japanese_Neutrality_Pact_focus
 		bypass = {
 			NOT = {
 				country_exists = CHI
@@ -3906,7 +3946,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = socialist_construction
+		id = JAP_socialist_construction_focus
 		icon = GFX_goal_generic_soviet_construction
 		cost = 10.00
 		prerequisite = {
@@ -4080,7 +4120,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = liberate_china
+		id = JAP_liberate_china_focus
 		icon = GFX_focus_chi_one_china_policy
 		cost = 10.00
 		prerequisite = {
@@ -4110,15 +4150,15 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = rebuild_china
+		id = JAP_rebuild_china_focus
 		icon = GFX_goal_generic_construct_civilian
 		cost = 10.00
 		prerequisite = {
-			focus = asia_united
+			focus = JAP_asia_united_focus
 		}
 		x = 0
 		y = 1
-		relative_position_id = asia_united
+		relative_position_id = JAP_asia_united_focus
 		ai_will_do = {
 			factor = 10
 		}
@@ -4218,7 +4258,7 @@ focus_tree = {
 			focus = JAP_west_pacific_treaty_organization
 		}
 		mutually_exclusive = {
-			focus = democracy_to_china
+			focus = JAP_democracy_to_china_focus
 		}
 		x = -2
 		y = 1
@@ -4249,11 +4289,11 @@ focus_tree = {
 		icon = GFX_goal_generic_forceful_treaty
 		cost = 10.00
 		prerequisite = {
-			focus = hire_back_sanzo
+			focus = JAP_Release_Kyuichi_Tokuda_focus
 		}
 		x = 1
 		y = 1
-		relative_position_id = hire_back_sanzo
+		relative_position_id = JAP_Release_Kyuichi_Tokuda_focus
 		ai_will_do = {
 			factor = 1
 		}
@@ -4366,11 +4406,11 @@ focus_tree = {
 		icon = GFX_focus_generic_military_mission
 		cost = 10.00
 		prerequisite = {
-			focus = hire_back_sanzo
+			focus = JAP_Release_Kyuichi_Tokuda_focus
 		}
 		x = -1
 		y = 1
-		relative_position_id = hire_back_sanzo
+		relative_position_id = JAP_Release_Kyuichi_Tokuda_focus
 		ai_will_do = {
 			factor = 1
 		}
@@ -5009,11 +5049,11 @@ focus_tree = {
 		cost = 10.00
 		prerequisite = {
 			focus = JAP_cast_the_die
-			focus = socialist_construction
+			focus = JAP_socialist_construction_focus
 		}
 		x = 1
 		y = 1
-		relative_position_id = socialist_construction
+		relative_position_id = JAP_socialist_construction_focus
 		ai_will_do = {
 			factor = 3
 		}
@@ -5073,7 +5113,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construction2
 		cost = 10.00
 		prerequisite = {
-			focus = socialist_construction
+			focus = JAP_socialist_construction_focus
 		}
 		prerequisite = {
 			focus = JAP_nationalize_the_zaibatsus
@@ -5189,11 +5229,11 @@ focus_tree = {
 		icon = GFX_goal_generic_intelligence_exchange
 		cost = 10.00
 		prerequisite = {
-			focus = konoe_cabinet
+			focus = JAP_konoe_cabinet_focus
 		}
 		x = 2
 		y = 1
-		relative_position_id = konoe_cabinet
+		relative_position_id = JAP_konoe_cabinet_focus
 		ai_will_do = {
 			factor = 2
 		}
@@ -5408,11 +5448,11 @@ focus_tree = {
 		icon = GFX_focus_jap_zaibatsu
 		cost = 10.00
 		prerequisite = {
-			focus = konoe_cabinet
+			focus = JAP_konoe_cabinet_focus
 		}
 		x = -2
 		y = 1
-		relative_position_id = konoe_cabinet
+		relative_position_id = JAP_konoe_cabinet_focus
 		ai_will_do = {
 			factor = 3
 		}
@@ -5711,7 +5751,7 @@ focus_tree = {
 		icon = GFX_goal_anschluss
 		cost = 10.00
 		prerequisite = {
-			focus = a_new_empire_focus
+			focus = JAP_a_new_empire_focus
 			focus = showa_restoration_focus
 		}
 		mutually_exclusive = {
@@ -5824,11 +5864,11 @@ focus_tree = {
 		icon = GFX_goal_tfv_generic_tech_sharing
 		cost = 10.00
 		prerequisite = {
-			focus = join_axis
+			focus = JAP_Join_Axis_focus
 		}
 		x = 0
 		y = 1
-		relative_position_id = join_axis
+		relative_position_id = JAP_Join_Axis_focus
 		ai_will_do = {
 			factor = 1
 		}
@@ -5927,11 +5967,11 @@ focus_tree = {
 		icon = GFX_focus_jap_zaibatsu
 		cost = 10.00
 		prerequisite = {
-			focus = def_taisei_demo_focus
+			focus = JAP_Constitutional_Reform_focus
 		}
 		x = -3
 		y = 1
-		relative_position_id = def_taisei_demo_focus
+		relative_position_id = JAP_Constitutional_Reform_focus
 		allow_branch = {
 			has_dlc = "Waking the Tiger"
 		}
@@ -6054,7 +6094,7 @@ focus_tree = {
 		cost = 10.00
 		prerequisite = {
 			focus = rebuild_constitutional_monarchy
-			focus = a_new_republic
+			focus = JAP_a_new_republic_focus
 		}
 		x = 1
 		y = 1
@@ -7083,7 +7123,7 @@ focus_tree = {
 		icon = GFX_focus_jap_spiritual_mobilization
 		cost = 10.00
 		prerequisite = {
-			focus = fortress_man
+			focus = JAP_fortress_manchuria_focus
 			focus = JAP_develop_chinese_resources
 		}
 		mutually_exclusive = {
@@ -7091,7 +7131,7 @@ focus_tree = {
 		}
 		x = 1
 		y = 1
-		relative_position_id = fortress_man
+		relative_position_id = JAP_fortress_manchuria_focus
 		ai_will_do = {
 			factor = 10
 		}

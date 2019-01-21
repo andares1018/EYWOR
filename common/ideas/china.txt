@@ -370,7 +370,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				stability_weekly = 0.02
+				#stability_weekly = 0.02
 			}
 		}
 
@@ -389,8 +389,12 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				consumer_goods_factor = 0.02
+				consumer_goods_factor = 0.03
+				stability_factor = -0.03
 				industrial_capacity_factory = -0.05
+				industrial_capacity_dockyard = -0.05
+				local_resources_factor = -0.05
+				production_speed_buildings_factor = -0.05
 			}
 		}
 
@@ -410,8 +414,12 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				consumer_goods_factor = 0.04
-				industrial_capacity_factory = -0.10
+				consumer_goods_factor = 0.06
+				stability_factor = -0.06
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.1
+				local_resources_factor = -0.1
+				production_speed_buildings_factor = -0.1
 			}
 		}
 
@@ -430,8 +438,12 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				consumer_goods_factor = 0.08
+				consumer_goods_factor = 0.12
+				stability_factor = -0.09
 				industrial_capacity_factory = -0.15
+				industrial_capacity_dockyard = -0.15
+				local_resources_factor = -0.15
+				production_speed_buildings_factor = -0.15
 			}
 		}
 
@@ -450,8 +462,12 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				consumer_goods_factor = 0.16
-				industrial_capacity_factory = -0.20
+				consumer_goods_factor = 0.24
+				stability_factor = -0.12
+				industrial_capacity_factory = -0.2
+				industrial_capacity_dockyard = -0.2
+				local_resources_factor = -0.2
+				production_speed_buildings_factor = -0.2
 			}
 		}
 
@@ -470,8 +486,12 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				consumer_goods_factor = 0.32
+				consumer_goods_factor = 0.48
+				stability_factor = -0.15
 				industrial_capacity_factory = -0.25
+				industrial_capacity_dockyard = -0.25
+				local_resources_factor = -0.25
+				production_speed_buildings_factor = -0.25
 			}
 		}
 
@@ -1515,7 +1535,9 @@ ideas = {
 			}
 			modifier = {
 				line_change_production_efficiency_factor = -0.9
+				production_speed_buildings_factor = -0.48
 				industrial_capacity_factory = -0.36
+
 			}
 		}
 		unbalanced_industry_1 = {
@@ -1532,6 +1554,7 @@ ideas = {
 			}
 			modifier = {
 				line_change_production_efficiency_factor = -0.6
+				production_speed_buildings_factor = -0.32
 				industrial_capacity_factory = -0.24
 			}
 		}
@@ -1549,6 +1572,7 @@ ideas = {
 			}
 			modifier = {
 				line_change_production_efficiency_factor = -0.3
+				production_speed_buildings_factor = -0.16
 				industrial_capacity_factory = -0.12
 			}
 		}
@@ -1566,6 +1590,7 @@ ideas = {
 			}
 			modifier = {
 				line_change_production_efficiency_factor = -0.15
+				production_speed_buildings_factor = -0.08
 				industrial_capacity_factory = -0.06
 			}
 		}
@@ -2428,9 +2453,10 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
+				army_org_factor = 0.05
 				army_morale_factor = 0.05
 				army_core_defence_factor = 0.05
-				army_core_attack_factor = 0.025
+				army_core_attack_factor = 0.05
 				conscription = 0.005
 			}
 		}
@@ -2449,9 +2475,11 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
+
+				army_org_factor = 0.1
 				army_morale_factor = 0.1
 				army_core_defence_factor = 0.1
-				army_core_attack_factor = 0.05
+				army_core_attack_factor = 0.1
 				conscription = 0.01
 			}
 		}
@@ -2470,9 +2498,10 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
+				army_org_factor = 0.15
 				army_morale_factor = 0.15
 				army_core_defence_factor = 0.15
-				army_core_attack_factor = 0.075
+				army_core_attack_factor = 0.15
 				conscription = 0.015
 			}
 		}
@@ -2491,9 +2520,10 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
+				army_org_factor = 0.20
 				army_morale_factor = 0.20
 				army_core_defence_factor = 0.20
-				army_core_attack_factor = 0.1
+				army_core_attack_factor = 0.20
 				conscription = 0.020
 			}
 		}
@@ -2512,9 +2542,10 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
+				army_org_factor = 0.25
 				army_morale_factor = 0.25
 				army_core_defence_factor = 0.25
-				army_core_attack_factor = 0.125
+				army_core_attack_factor = 0.25
 				conscription = 0.025
 			}
 		}
@@ -2533,9 +2564,10 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
+				army_org_factor = 0.3
 				army_morale_factor = 0.3
 				army_core_defence_factor = 0.3
-				army_core_attack_factor = 0.15
+				army_core_attack_factor = 0.3
 				conscription = 0.03
 			}
 		}
@@ -2554,9 +2586,10 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
+				army_org_factor = 0.35
 				army_morale_factor = 0.35
 				army_core_defence_factor = 0.35
-				army_core_attack_factor = 0.175
+				army_core_attack_factor = 0.35
 				conscription = 0.035
 			}
 		}
@@ -2575,9 +2608,10 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
+				army_org_factor = 0.4
 				army_morale_factor = 0.4
 				army_core_defence_factor = 0.4
-				army_core_attack_factor = 0.2
+				army_core_attack_factor = 0.4
 				conscription = 0.04
 			}
 		}
@@ -2596,9 +2630,10 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
+				army_org_factor = 0.45
 				army_morale_factor = 0.45
 				army_core_defence_factor = 0.45
-				army_core_attack_factor = 0.25
+				army_core_attack_factor = 0.45
 				conscription = 0.045
 			}
 		}
@@ -2617,9 +2652,10 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
+				army_org_factor = 0.5
 				army_morale_factor = 0.5
 				army_core_defence_factor = 0.5
-				army_core_attack_factor = 0.25
+				army_core_attack_factor = 0.5
 				conscription = 0.05
 			}
 		}

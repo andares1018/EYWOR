@@ -370,11 +370,11 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				drift_defence_factor = 0.5
-				stability_factor = 0.35
-				war_support_factor = 0.25
-				stability_weekly = 0.001
+				stability_factor = 0.15
+				war_support_factor = 0.15
+				stability_weekly = 0.0005
 				#war support+?
-				political_power_factor = 0.5
+				political_power_factor = 0.2
 			}
 		}
 		jap_usa_pact = {
@@ -529,8 +529,8 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				war_support_factor = 0.15
-				stability_factor = 0.15
+				war_support_factor = 0.1
+				stability_factor = 0.1
 				industry_air_damage_factor = -0.1
 				army_org_factor = 0.07
 				army_morale_factor = 0.07
@@ -552,7 +552,9 @@ ideas = {
 				air_doctrine = -0.10
 			}
 			modifier = {
-				army_org_factor = -0.15
+				army_org_factor = -0.5
+				army_morale_factor = -0.5
+				army_attack_factor = -0.5
 			}
 		}
 		democracy_reclaimed = {
@@ -734,8 +736,8 @@ ideas = {
 			picture = generic_manpower_bonus
 			modifier = {
 				conscription = 0.025
-				army_org_factor = 0.15
-				army_morale_factor = 0.15
+				army_org_factor = 0.05
+				army_morale_factor = 0.05
 				consumer_goods_factor = -0.05
 				industrial_capacity_factory = 0.05
 				stability_factor = 0.07
@@ -1649,7 +1651,7 @@ ideas = {
 				original_tag = "JAP"
 			}
 			available = {
-				has_completed_focus = hire_back_sanzo
+				has_completed_focus = JAP_Release_Kyuichi_Tokuda_focus
 			}
 			traits = { communist_revolutionary }
 			on_add = {
@@ -1689,7 +1691,7 @@ ideas = {
 				original_tag = "JAP"
 			}
 			available = {
-				has_completed_focus = left_reform_focus
+				has_completed_focus = JAP_left_reform_focus
 			}
 			traits = { socialist_idealist }
 			on_add = {
@@ -1743,7 +1745,7 @@ ideas = {
 					tooltip = no_kanji
 					NOT = { has_idea_with_trait = strategic_mastermind }
 				}
-				has_completed_focus = konoe_cabinet
+				has_completed_focus = JAP_konoe_cabinet_focus
 				NOT = { has_country_flag = purged_by_kodoha }
 			}
 			allowed = {
@@ -1778,7 +1780,7 @@ ideas = {
 			allowed = {
 				original_tag = JAP
 				NOT = { has_country_flag = konoe_cabinet_lol }
-				NOT = { has_completed_focus = konoe_cabinet }
+				NOT = { has_completed_focus = JAP_konoe_cabinet_focus }
 			}
 			available = {
 				NOT = { has_country_flag = assed_by_tojo }
@@ -1790,7 +1792,7 @@ ideas = {
 		}
 		hisaichi_terauchi = {
 			available = {
-				has_completed_focus = jap_placate_military_focus
+				has_completed_focus = JAP_placate_military_focus
 				NOT = { has_country_flag = purged_by_kodoha }
 			}
 			allowed = {

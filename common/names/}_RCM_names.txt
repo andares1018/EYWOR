@@ -4,37 +4,16 @@
 # Assigning the callsign is random - may be assigned or not. If we use the callsign, it will never be assigned to anyone again. Callsigns are not obligatory to script.
 # Picking up a gender is random, and is influenced by the amount of names scripted.
 #MODDEDv
-SST = {
-	male = {
-		names = { Albert Alexander Alfred Archibald Arthur Bernard Charles Colbert
-			Colin Cyril David Donald Douglas Edmund Edward Fairfax  Francis
-			Geoffrey George Graham Henrey Herbert Horatio Hubert Hugh Ian
-			James Jeremy John Leopold Lester Martin Nigel Oswald Max
-			Percy Reginald Richard Robert Russell Stanley Thomas Wallace William Winston Zachary Jake
-		}
-	}
-	female = {
-		names = { Elizabeth Anne }
-	}
-	surnames = { 	Allenby Battemberg Beatty Beresford Brown Buller Butler Campbell Cardigan Churchill
-		Cochrane Cockburn Dundas Fisher French Gough Grant Grenfell Haig Murphy
-		Hamilton Hardinge Havelock Hope Jellicoe Kitchener Lyons Madden Milne Montgomery
-		Moresby Mundy Napier Plummer Ragland Roberts Seaton Seymour Collin
-		Smith Stewart Thesiger Tyron Tyrwhitt Williams Windsor Wolseley Wood Leiper Roberts
-		
-	}
-	callsigns = { }
-}
 
 FIC = {
 	male = {
-		names = {  
+		names = {
 			Achille Adolphe Adrien Aimable Alphonse Amédée Antoine Armand August Augustin
 			Charles Daniel Denis Édouard Elie Éttiene Eugène Félicien Félix Fernand
 			François Frédéric Georges Guillaume Gustave Henri Hubert Hugo Jacques Jean
 			Joseph Jules Julien Lazare Léopold Leroy Louis Lucien Matthieu Michel
 			Napoléon Nicolas Patrice Paul Philippe Pierre Robert Thibaut Thierry Thomas
-			
+
 		}
 	}
 	female = {
@@ -42,7 +21,7 @@ FIC = {
 	}
 	surnames = {
 		Anthoine "Baraguey d'Hilliers" Bazaine Billot Bosquet "Boué de Lapeyrère" Bouët-Willaumez Boulanger Bourbaki
-		Bugeaud Caillard Canrobert Courbet Cousin-Mountauban Davout "de Castellane" "de Castelnau" 
+		Bugeaud Caillard Canrobert Courbet Cousin-Mountauban Davout "de Castellane" "de Castelnau"
 		"de Langle de Cary" "de MacMahon" "de Montaignac" "de Saint Arnaud" d'Orleans Dubail Dubois Duchêne Dupetit-Thouars Exelmans
 		Foch Forey "Franchet d'Espèrey" Gallieni Gouraud Guillaumat Hamelin Harispe Hoche Humbert
 		Jaurès Joffre Lebouef Lyautey Murat "Ney d'Elchingen" Nivelle Péllissier Petain Vaillant
@@ -54,12 +33,12 @@ FIC = {
 CHI = {
 	male = {
 		names = { Wang Li Zhang Liu Lü Chen Huang Liang Luo Hsia Zhu Mao Hu Liao Tan Deng Yang Gao Xie Ma Kong Xu Pan Yu Lin Tsai Guo Zheng Wei Lai Fu Hong He Shen Qiu Wu Zhao Zhou Lan Lu Zhuang Qian Zeng Sui Weng Zhan Lian Chiang Qin Song Sun Fang Peng Han Ouyang }
-		
-		surnames = { Buoyang Weiluen Zhejia Dingwen Zhiguo Baili Weiguo Mingzhi Ying Wan-an Dawei Zhiguang Zhenghua Qin Denghua Minhao Guochang Jixiang Shixun Yixiang Hanning Dongying Zhongming Cheng Yaobang Mingmin Geng Lan Tingyen Wenyiao Guang Xun Guazhang Yunshan Yuzhang Dezheng Yuanliang Chengxiang Youren Kexian Linzheng Jiyuan Sucheng Xiadan Yuanhui Lingsheng Hongmou Zhengyu Zhiyu Yuanhui Yaoxiang Jingguo Shizeng Renjie Dongguo Shangzhi Ruoshui } 
+
+		surnames = { Buoyang Weiluen Zhejia Dingwen Zhiguo Baili Weiguo Mingzhi Ying Wan-an Dawei Zhiguang Zhenghua Qin Denghua Minhao Guochang Jixiang Shixun Yixiang Hanning Dongying Zhongming Cheng Yaobang Mingmin Geng Lan Tingyen Wenyiao Guang Xun Guazhang Yunshan Yuzhang Dezheng Yuanliang Chengxiang Youren Kexian Linzheng Jiyuan Sucheng Xiadan Yuanhui Lingsheng Hongmou Zhengyu Zhiyu Yuanhui Yaoxiang Jingguo Shizeng Renjie Dongguo Shangzhi Ruoshui }
 	}
 	female = {
 		names = { Wang Li Zhang Liu Lü Chen Huang Liang Luo Hsia Zhu Mao Hu Liao Tan Deng Yang Gao Xie Ma Kong Xu Pan Yu Lin Tsai Guo Zheng Wei Lai Fu Hong He Shen Qiu Wu Zhao Zhou Lan Lu Zhuang Qian Zeng Sui Weng Zhan Lian Chiang Qin Song Sun Fang Peng Han Ouyang }
-		
+
 		surnames = { Yahuei Yijun Xiouling Hueiru Jiaqi Shufen Meixiang Meixiou Yianting }
 	}
 	callsigns = { }
@@ -67,12 +46,12 @@ CHI = {
 EHB = {
 	male = {
 		names = { Wang Li Zhang Liu Lü Chen Huang Liang Luo Hsia Zhu Mao Hu Liao Tan Deng Yang Gao Xie Ma Kong Xu Pan Yu Lin Tsai Guo Zheng Wei Lai Fu Hong He Shen Qiu Wu Zhao Zhou Lan Lu Zhuang Qian Zeng Sui Weng Zhan Lian Chiang Qin Song Sun Fang Peng Han Ouyang }
-		
-		surnames = { Buoyang Weiluen Zhejia Dingwen Zhiguo Baili Weiguo Mingzhi Ying Wan-an Dawei Zhiguang Zhenghua Qin Denghua Minhao Guochang Jixiang Shixun Yixiang Hanning Dongying Zhongming Cheng Yaobang Mingmin Geng Lan Tingyen Wenyiao Guang Xun Guazhang Yunshan Yuzhang Dezheng Yuanliang Chengxiang Youren Kexian Linzheng Jiyuan Sucheng Xiadan Yuanhui Lingsheng Hongmou Zhengyu Zhiyu Yuanhui Yaoxiang Jingguo Shizeng Renjie Dongguo Shangzhi Ruoshui } 
+
+		surnames = { Buoyang Weiluen Zhejia Dingwen Zhiguo Baili Weiguo Mingzhi Ying Wan-an Dawei Zhiguang Zhenghua Qin Denghua Minhao Guochang Jixiang Shixun Yixiang Hanning Dongying Zhongming Cheng Yaobang Mingmin Geng Lan Tingyen Wenyiao Guang Xun Guazhang Yunshan Yuzhang Dezheng Yuanliang Chengxiang Youren Kexian Linzheng Jiyuan Sucheng Xiadan Yuanhui Lingsheng Hongmou Zhengyu Zhiyu Yuanhui Yaoxiang Jingguo Shizeng Renjie Dongguo Shangzhi Ruoshui }
 	}
 	female = {
 		names = { Wang Li Zhang Liu Lü Chen Huang Liang Luo Hsia Zhu Mao Hu Liao Tan Deng Yang Gao Xie Ma Kong Xu Pan Yu Lin Tsai Guo Zheng Wei Lai Fu Hong He Shen Qiu Wu Zhao Zhou Lan Lu Zhuang Qian Zeng Sui Weng Zhan Lian Chiang Qin Song Sun Fang Peng Han Ouyang }
-		
+
 		surnames = { Yahuei Yijun Xiouling Hueiru Jiaqi Shufen Meixiang Meixiou Yianting }
 	}
 	callsigns = { }
@@ -80,12 +59,12 @@ EHB = {
 GXC = {
 	male = {
 		names = { Wang Li Zhang Liu Lü Chen Huang Liang Luo Hsia Zhu Mao Hu Liao Tan Deng Yang Gao Xie Ma Kong Xu Pan Yu Lin Tsai Guo Zheng Wei Lai Fu Hong He Shen Qiu Wu Zhao Zhou Lan Lu Zhuang Qian Zeng Sui Weng Zhan Lian Chiang Qin Song Sun Fang Peng Han Ouyang }
-		
-		surnames = { Buoyang Weiluen Zhejia Dingwen Zhiguo Baili Weiguo Mingzhi Ying Wan-an Dawei Zhiguang Zhenghua Qin Denghua Minhao Guochang Jixiang Shixun Yixiang Hanning Dongying Zhongming Cheng Yaobang Mingmin Geng Lan Tingyen Wenyiao Guang Xun Guazhang Yunshan Yuzhang Dezheng Yuanliang Chengxiang Youren Kexian Linzheng Jiyuan Sucheng Xiadan Yuanhui Lingsheng Hongmou Zhengyu Zhiyu Yuanhui Yaoxiang Jingguo Shizeng Renjie Dongguo Shangzhi Ruoshui } 
+
+		surnames = { Buoyang Weiluen Zhejia Dingwen Zhiguo Baili Weiguo Mingzhi Ying Wan-an Dawei Zhiguang Zhenghua Qin Denghua Minhao Guochang Jixiang Shixun Yixiang Hanning Dongying Zhongming Cheng Yaobang Mingmin Geng Lan Tingyen Wenyiao Guang Xun Guazhang Yunshan Yuzhang Dezheng Yuanliang Chengxiang Youren Kexian Linzheng Jiyuan Sucheng Xiadan Yuanhui Lingsheng Hongmou Zhengyu Zhiyu Yuanhui Yaoxiang Jingguo Shizeng Renjie Dongguo Shangzhi Ruoshui }
 	}
 	female = {
 		names = { Wang Li Zhang Liu Lü Chen Huang Liang Luo Hsia Zhu Mao Hu Liao Tan Deng Yang Gao Xie Ma Kong Xu Pan Yu Lin Tsai Guo Zheng Wei Lai Fu Hong He Shen Qiu Wu Zhao Zhou Lan Lu Zhuang Qian Zeng Sui Weng Zhan Lian Chiang Qin Song Sun Fang Peng Han Ouyang }
-		
+
 		surnames = { Yahuei Yijun Xiouling Hueiru Jiaqi Shufen Meixiang Meixiou Yianting }
 	}
 	callsigns = { }
@@ -93,12 +72,12 @@ GXC = {
 PRC = {
 	male = {
 		names = { Wang Li Zhang Liu Lü Chen Huang Liang Luo Hsia Zhu Mao Hu Liao Tan Deng Yang Gao Xie Ma Kong Xu Pan Yu Lin Tsai Guo Zheng Wei Lai Fu Hong He Shen Qiu Wu Zhao Zhou Lan Lu Zhuang Qian Zeng Sui Weng Zhan Lian Chiang Qin Song Sun Fang Peng Han Ouyang }
-		
-		surnames = { Buoyang Weiluen Zhejia Dingwen Zhiguo Baili Weiguo Mingzhi Ying Wan-an Dawei Zhiguang Zhenghua Qin Denghua Minhao Guochang Jixiang Shixun Yixiang Hanning Dongying Zhongming Cheng Yaobang Mingmin Geng Lan Tingyen Wenyiao Guang Xun Guazhang Yunshan Yuzhang Dezheng Yuanliang Chengxiang Youren Kexian Linzheng Jiyuan Sucheng Xiadan Yuanhui Lingsheng Hongmou Zhengyu Zhiyu Yuanhui Yaoxiang Jingguo Shizeng Renjie Dongguo Shangzhi Ruoshui } 
+
+		surnames = { Buoyang Weiluen Zhejia Dingwen Zhiguo Baili Weiguo Mingzhi Ying Wan-an Dawei Zhiguang Zhenghua Qin Denghua Minhao Guochang Jixiang Shixun Yixiang Hanning Dongying Zhongming Cheng Yaobang Mingmin Geng Lan Tingyen Wenyiao Guang Xun Guazhang Yunshan Yuzhang Dezheng Yuanliang Chengxiang Youren Kexian Linzheng Jiyuan Sucheng Xiadan Yuanhui Lingsheng Hongmou Zhengyu Zhiyu Yuanhui Yaoxiang Jingguo Shizeng Renjie Dongguo Shangzhi Ruoshui }
 	}
 	female = {
 		names = { Wang Li Zhang Liu Lü Chen Huang Liang Luo Hsia Zhu Mao Hu Liao Tan Deng Yang Gao Xie Ma Kong Xu Pan Yu Lin Tsai Guo Zheng Wei Lai Fu Hong He Shen Qiu Wu Zhao Zhou Lan Lu Zhuang Qian Zeng Sui Weng Zhan Lian Chiang Qin Song Sun Fang Peng Han Ouyang }
-		
+
 		surnames = { Yahuei Yijun Xiouling Hueiru Jiaqi Shufen Meixiang Meixiou Yianting }
 	}
 	callsigns = { }
@@ -106,12 +85,12 @@ PRC = {
 SHX = {
 	male = {
 		names = { Wang Li Zhang Liu Lü Chen Huang Liang Luo Hsia Zhu Mao Hu Liao Tan Deng Yang Gao Xie Ma Kong Xu Pan Yu Lin Tsai Guo Zheng Wei Lai Fu Hong He Shen Qiu Wu Zhao Zhou Lan Lu Zhuang Qian Zeng Sui Weng Zhan Lian Chiang Qin Song Sun Fang Peng Han Ouyang }
-		
-		surnames = { Buoyang Weiluen Zhejia Dingwen Zhiguo Baili Weiguo Mingzhi Ying Wan-an Dawei Zhiguang Zhenghua Qin Denghua Minhao Guochang Jixiang Shixun Yixiang Hanning Dongying Zhongming Cheng Yaobang Mingmin Geng Lan Tingyen Wenyiao Guang Xun Guazhang Yunshan Yuzhang Dezheng Yuanliang Chengxiang Youren Kexian Linzheng Jiyuan Sucheng Xiadan Yuanhui Lingsheng Hongmou Zhengyu Zhiyu Yuanhui Yaoxiang Jingguo Shizeng Renjie Dongguo Shangzhi Ruoshui } 
+
+		surnames = { Buoyang Weiluen Zhejia Dingwen Zhiguo Baili Weiguo Mingzhi Ying Wan-an Dawei Zhiguang Zhenghua Qin Denghua Minhao Guochang Jixiang Shixun Yixiang Hanning Dongying Zhongming Cheng Yaobang Mingmin Geng Lan Tingyen Wenyiao Guang Xun Guazhang Yunshan Yuzhang Dezheng Yuanliang Chengxiang Youren Kexian Linzheng Jiyuan Sucheng Xiadan Yuanhui Lingsheng Hongmou Zhengyu Zhiyu Yuanhui Yaoxiang Jingguo Shizeng Renjie Dongguo Shangzhi Ruoshui }
 	}
 	female = {
 		names = { Wang Li Zhang Liu Lü Chen Huang Liang Luo Hsia Zhu Mao Hu Liao Tan Deng Yang Gao Xie Ma Kong Xu Pan Yu Lin Tsai Guo Zheng Wei Lai Fu Hong He Shen Qiu Wu Zhao Zhou Lan Lu Zhuang Qian Zeng Sui Weng Zhan Lian Chiang Qin Song Sun Fang Peng Han Ouyang }
-		
+
 		surnames = { Yahuei Yijun Xiouling Hueiru Jiaqi Shufen Meixiang Meixiou Yianting }
 	}
 	callsigns = { }
@@ -119,12 +98,12 @@ SHX = {
 XSM = {
 	male = {
 		names = { Sha Ma Sai Ha Han Mu Zheng Cai Guo }
-		
+
 		surnames = { Buoyang Weiluen Zhejia Dingwen Zhiguo Baili Weiguo Mingzhi Ying Wan-an Dawei Zhiguang Zhenghua Qin Denghua Minhao Guochang Jixiang Shixun Yixiang Hanning Dongying Zhongming Cheng Yaobang Mingmin Geng Lan Tingyen Wenyiao Guang Xun Guazhang Yunshan Yuzhang Dezheng Yuanliang Chengxiang Youren Kexian Linzheng Jiyuan Sucheng Xiadan Yuanhui Lingsheng Hongmou Zhengyu Zhiyu Yuanhui Yaoxiang Jingguo Shizeng Renjie Dongguo Shangzhi Ruoshui }
 	}
 	female = {
 		names = { Sha Ma Sai Ha Han Mu Zheng Cai Guo }
-		
+
 		surnames = { Yahuei Yijun Xiouling Hueiru Jiaqi Shufen Meixiang Meixiou Yianting }
 	}
 	callsigns = { }
@@ -132,15 +111,15 @@ XSM = {
 SIK = {
 	male = {
 		names = { Sha Ma Sai Ha Han Mu Zheng Cai Guo }
-		
+
 		surnames = { Buoyang Weiluen Zhejia Dingwen Zhiguo Baili Weiguo Mingzhi Ying Wan-an Dawei Zhiguang Zhenghua Qin Denghua Minhao Guochang Jixiang Shixun Yixiang Hanning Dongying Zhongming Cheng Yaobang Mingmin Geng Lan Tingyen Wenyiao Guang Xun Guazhang Yunshan Yuzhang Dezheng Yuanliang Chengxiang Youren Kexian Linzheng Jiyuan Sucheng Xiadan Yuanhui Lingsheng Hongmou Zhengyu Zhiyu Yuanhui Yaoxiang Jingguo Shizeng Renjie Dongguo Shangzhi Ruoshui }
 	}
 	female = {
 		names = { Sha Ma Sai Ha Han Mu Zheng Cai Guo }
-		
+
 		surnames = { Yahuei Yijun Xiouling Hueiru Jiaqi Shufen Meixiang Meixiou Yianting }
 	}
-	
+
 	callsigns = { }
 }
 HMI = {
@@ -166,12 +145,12 @@ TNG = {
 NXM = {
 	male = {
 		names = { Sha Ma Sai Ha Han Mu Zheng Cai Guo }
-		
+
 		surnames = { Buoyang Weiluen Zhejia Dingwen Zhiguo Baili Weiguo Mingzhi Ying Wan-an Dawei Zhiguang Zhenghua Qin Denghua Minhao Guochang Jixiang Shixun Yixiang Hanning Dongying Zhongming Cheng Yaobang Mingmin Geng Lan Tingyen Wenyiao Guang Xun Guazhang Yunshan Yuzhang Dezheng Yuanliang Chengxiang Youren Kexian Linzheng Jiyuan Sucheng Xiadan Yuanhui Lingsheng Hongmou Zhengyu Zhiyu Yuanhui Yaoxiang Jingguo Shizeng Renjie Dongguo Shangzhi Ruoshui }
 	}
 	female = {
 		names = { Sha Ma Sai Ha Han Mu Zheng Cai Guo }
-		
+
 		surnames = { Yahuei Yijun Xiouling Hueiru Jiaqi Shufen Meixiang Meixiou Yianting }
 	}
 	callsigns = { }
@@ -179,12 +158,12 @@ NXM = {
 SHD = {
 	male = {
 		names = { Wang Li Zhang Liu Lü Chen Huang Liang Luo Hsia Zhu Mao Hu Liao Tan Deng Yang Gao Xie Ma Kong Xu Pan Yu Lin Tsai Guo Zheng Wei Lai Fu Hong He Shen Qiu Wu Zhao Zhou Lan Lu Zhuang Qian Zeng Sui Weng Zhan Lian Chiang Qin Song Sun Fang Peng Han Ouyang }
-		
-		surnames = { Buoyang Weiluen Zhejia Dingwen Zhiguo Baili Weiguo Mingzhi Ying Wan-an Dawei Zhiguang Zhenghua Qin Denghua Minhao Guochang Jixiang Shixun Yixiang Hanning Dongying Zhongming Cheng Yaobang Mingmin Geng Lan Tingyen Wenyiao Guang Xun Guazhang Yunshan Yuzhang Dezheng Yuanliang Chengxiang Youren Kexian Linzheng Jiyuan Sucheng Xiadan Yuanhui Lingsheng Hongmou Zhengyu Zhiyu Yuanhui Yaoxiang Jingguo Shizeng Renjie Dongguo Shangzhi Ruoshui } 
+
+		surnames = { Buoyang Weiluen Zhejia Dingwen Zhiguo Baili Weiguo Mingzhi Ying Wan-an Dawei Zhiguang Zhenghua Qin Denghua Minhao Guochang Jixiang Shixun Yixiang Hanning Dongying Zhongming Cheng Yaobang Mingmin Geng Lan Tingyen Wenyiao Guang Xun Guazhang Yunshan Yuzhang Dezheng Yuanliang Chengxiang Youren Kexian Linzheng Jiyuan Sucheng Xiadan Yuanhui Lingsheng Hongmou Zhengyu Zhiyu Yuanhui Yaoxiang Jingguo Shizeng Renjie Dongguo Shangzhi Ruoshui }
 	}
 	female = {
 		names = { Wang Li Zhang Liu Lü Chen Huang Liang Luo Hsia Zhu Mao Hu Liao Tan Deng Yang Gao Xie Ma Kong Xu Pan Yu Lin Tsai Guo Zheng Wei Lai Fu Hong He Shen Qiu Wu Zhao Zhou Lan Lu Zhuang Qian Zeng Sui Weng Zhan Lian Chiang Qin Song Sun Fang Peng Han Ouyang }
-		
+
 		surnames = { Yahuei Yijun Xiouling Hueiru Jiaqi Shufen Meixiang Meixiou Yianting }
 	}
 	callsigns = { }
@@ -192,12 +171,12 @@ SHD = {
 YUN = {
 	male = {
 		names = { Wang Li Zhang Liu Lü Chen Huang Liang Luo Hsia Zhu Mao Hu Liao Tan Deng Yang Gao Xie Ma Kong Xu Pan Yu Lin Tsai Guo Zheng Wei Lai Fu Hong He Shen Qiu Wu Zhao Zhou Lan Lu Zhuang Qian Zeng Sui Weng Zhan Lian Chiang Qin Song Sun Fang Peng Han Ouyang }
-		
-		surnames = { Buoyang Weiluen Zhejia Dingwen Zhiguo Baili Weiguo Mingzhi Ying Wan-an Dawei Zhiguang Zhenghua Qin Denghua Minhao Guochang Jixiang Shixun Yixiang Hanning Dongying Zhongming Cheng Yaobang Mingmin Geng Lan Tingyen Wenyiao Guang Xun Guazhang Yunshan Yuzhang Dezheng Yuanliang Chengxiang Youren Kexian Linzheng Jiyuan Sucheng Xiadan Yuanhui Lingsheng Hongmou Zhengyu Zhiyu Yuanhui Yaoxiang Jingguo Shizeng Renjie Dongguo Shangzhi Ruoshui } 
+
+		surnames = { Buoyang Weiluen Zhejia Dingwen Zhiguo Baili Weiguo Mingzhi Ying Wan-an Dawei Zhiguang Zhenghua Qin Denghua Minhao Guochang Jixiang Shixun Yixiang Hanning Dongying Zhongming Cheng Yaobang Mingmin Geng Lan Tingyen Wenyiao Guang Xun Guazhang Yunshan Yuzhang Dezheng Yuanliang Chengxiang Youren Kexian Linzheng Jiyuan Sucheng Xiadan Yuanhui Lingsheng Hongmou Zhengyu Zhiyu Yuanhui Yaoxiang Jingguo Shizeng Renjie Dongguo Shangzhi Ruoshui }
 	}
 	female = {
 		names = { Wang Li Zhang Liu Lü Chen Huang Liang Luo Hsia Zhu Mao Hu Liao Tan Deng Yang Gao Xie Ma Kong Xu Pan Yu Lin Tsai Guo Zheng Wei Lai Fu Hong He Shen Qiu Wu Zhao Zhou Lan Lu Zhuang Qian Zeng Sui Weng Zhan Lian Chiang Qin Song Sun Fang Peng Han Ouyang }
-		
+
 		surnames = { Yahuei Yijun Xiouling Hueiru Jiaqi Shufen Meixiang Meixiou Yianting }
 	}
 	callsigns = { }
@@ -205,12 +184,12 @@ YUN = {
 XIK = {
 	male = {
 		names = { Wang Li Zhang Liu Lü Chen Huang Liang Luo Hsia Zhu Mao Hu Liao Tan Deng Yang Gao Xie Ma Kong Xu Pan Yu Lin Tsai Guo Zheng Wei Lai Fu Hong He Shen Qiu Wu Zhao Zhou Lan Lu Zhuang Qian Zeng Sui Weng Zhan Lian Chiang Qin Song Sun Fang Peng Han Ouyang }
-		
-		surnames = { Buoyang Weiluen Zhejia Dingwen Zhiguo Baili Weiguo Mingzhi Ying Wan-an Dawei Zhiguang Zhenghua Qin Denghua Minhao Guochang Jixiang Shixun Yixiang Hanning Dongying Zhongming Cheng Yaobang Mingmin Geng Lan Tingyen Wenyiao Guang Xun Guazhang Yunshan Yuzhang Dezheng Yuanliang Chengxiang Youren Kexian Linzheng Jiyuan Sucheng Xiadan Yuanhui Lingsheng Hongmou Zhengyu Zhiyu Yuanhui Yaoxiang Jingguo Shizeng Renjie Dongguo Shangzhi Ruoshui } 
+
+		surnames = { Buoyang Weiluen Zhejia Dingwen Zhiguo Baili Weiguo Mingzhi Ying Wan-an Dawei Zhiguang Zhenghua Qin Denghua Minhao Guochang Jixiang Shixun Yixiang Hanning Dongying Zhongming Cheng Yaobang Mingmin Geng Lan Tingyen Wenyiao Guang Xun Guazhang Yunshan Yuzhang Dezheng Yuanliang Chengxiang Youren Kexian Linzheng Jiyuan Sucheng Xiadan Yuanhui Lingsheng Hongmou Zhengyu Zhiyu Yuanhui Yaoxiang Jingguo Shizeng Renjie Dongguo Shangzhi Ruoshui }
 	}
 	female = {
 		names = { Wang Li Zhang Liu Lü Chen Huang Liang Luo Hsia Zhu Mao Hu Liao Tan Deng Yang Gao Xie Ma Kong Xu Pan Yu Lin Tsai Guo Zheng Wei Lai Fu Hong He Shen Qiu Wu Zhao Zhou Lan Lu Zhuang Qian Zeng Sui Weng Zhan Lian Chiang Qin Song Sun Fang Peng Han Ouyang }
-		
+
 		surnames = { Yahuei Yijun Xiouling Hueiru Jiaqi Shufen Meixiang Meixiou Yianting }
 	}
 	callsigns = { }
@@ -218,12 +197,12 @@ XIK = {
 NEA = {
 	male = {
 		names = { Wang Li Zhang Liu Lü Chen Huang Liang Luo Hsia Zhu Mao Hu Liao Tan Deng Yang Gao Xie Ma Kong Xu Pan Yu Lin Tsai Guo Zheng Wei Lai Fu Hong He Shen Qiu Wu Zhao Zhou Lan Lu Zhuang Qian Zeng Sui Weng Zhan Lian Chiang Qin Song Sun Fang Peng Han Ouyang }
-		
-		surnames = { Buoyang Weiluen Zhejia Dingwen Zhiguo Baili Weiguo Mingzhi Ying Wan-an Dawei Zhiguang Zhenghua Qin Denghua Minhao Guochang Jixiang Shixun Yixiang Hanning Dongying Zhongming Cheng Yaobang Mingmin Geng Lan Tingyen Wenyiao Guang Xun Guazhang Yunshan Yuzhang Dezheng Yuanliang Chengxiang Youren Kexian Linzheng Jiyuan Sucheng Xiadan Yuanhui Lingsheng Hongmou Zhengyu Zhiyu Yuanhui Yaoxiang Jingguo Shizeng Renjie Dongguo Shangzhi Ruoshui } 
+
+		surnames = { Buoyang Weiluen Zhejia Dingwen Zhiguo Baili Weiguo Mingzhi Ying Wan-an Dawei Zhiguang Zhenghua Qin Denghua Minhao Guochang Jixiang Shixun Yixiang Hanning Dongying Zhongming Cheng Yaobang Mingmin Geng Lan Tingyen Wenyiao Guang Xun Guazhang Yunshan Yuzhang Dezheng Yuanliang Chengxiang Youren Kexian Linzheng Jiyuan Sucheng Xiadan Yuanhui Lingsheng Hongmou Zhengyu Zhiyu Yuanhui Yaoxiang Jingguo Shizeng Renjie Dongguo Shangzhi Ruoshui }
 	}
 	female = {
 		names = { Wang Li Zhang Liu Lü Chen Huang Liang Luo Hsia Zhu Mao Hu Liao Tan Deng Yang Gao Xie Ma Kong Xu Pan Yu Lin Tsai Guo Zheng Wei Lai Fu Hong He Shen Qiu Wu Zhao Zhou Lan Lu Zhuang Qian Zeng Sui Weng Zhan Lian Chiang Qin Song Sun Fang Peng Han Ouyang }
-		
+
 		surnames = { Yahuei Yijun Xiouling Hueiru Jiaqi Shufen Meixiang Meixiou Yianting }
 	}
 	callsigns = { }
@@ -231,12 +210,12 @@ NEA = {
 SIC = {
 	male = {
 		names = { Wang Li Zhang Liu Lü Chen Huang Liang Luo Hsia Zhu Mao Hu Liao Tan Deng Yang Gao Xie Ma Kong Xu Pan Yu Lin Tsai Guo Zheng Wei Lai Fu Hong He Shen Qiu Wu Zhao Zhou Lan Lu Zhuang Qian Zeng Sui Weng Zhan Lian Chiang Qin Song Sun Fang Peng Han Ouyang }
-		
-		surnames = { Buoyang Weiluen Zhejia Dingwen Zhiguo Baili Weiguo Mingzhi Ying Wan-an Dawei Zhiguang Zhenghua Qin Denghua Minhao Guochang Jixiang Shixun Yixiang Hanning Dongying Zhongming Cheng Yaobang Mingmin Geng Lan Tingyen Wenyiao Guang Xun Guazhang Yunshan Yuzhang Dezheng Yuanliang Chengxiang Youren Kexian Linzheng Jiyuan Sucheng Xiadan Yuanhui Lingsheng Hongmou Zhengyu Zhiyu Yuanhui Yaoxiang Jingguo Shizeng Renjie Dongguo Shangzhi Ruoshui } 
+
+		surnames = { Buoyang Weiluen Zhejia Dingwen Zhiguo Baili Weiguo Mingzhi Ying Wan-an Dawei Zhiguang Zhenghua Qin Denghua Minhao Guochang Jixiang Shixun Yixiang Hanning Dongying Zhongming Cheng Yaobang Mingmin Geng Lan Tingyen Wenyiao Guang Xun Guazhang Yunshan Yuzhang Dezheng Yuanliang Chengxiang Youren Kexian Linzheng Jiyuan Sucheng Xiadan Yuanhui Lingsheng Hongmou Zhengyu Zhiyu Yuanhui Yaoxiang Jingguo Shizeng Renjie Dongguo Shangzhi Ruoshui }
 	}
 	female = {
 		names = { Wang Li Zhang Liu Lü Chen Huang Liang Luo Hsia Zhu Mao Hu Liao Tan Deng Yang Gao Xie Ma Kong Xu Pan Yu Lin Tsai Guo Zheng Wei Lai Fu Hong He Shen Qiu Wu Zhao Zhou Lan Lu Zhuang Qian Zeng Sui Weng Zhan Lian Chiang Qin Song Sun Fang Peng Han Ouyang }
-		
+
 		surnames = { Yahuei Yijun Xiouling Hueiru Jiaqi Shufen Meixiang Meixiou Yianting }
 	}
 	callsigns = { }
@@ -244,12 +223,12 @@ SIC = {
 GUD = {
 	male = {
 		names = { Wang Li Zhang Liu Lü Chen Huang Liang Luo Hsia Zhu Mao Hu Liao Tan Deng Yang Gao Xie Ma Kong Xu Pan Yu Lin Tsai Guo Zheng Wei Lai Fu Hong He Shen Qiu Wu Zhao Zhou Lan Lu Zhuang Qian Zeng Sui Weng Zhan Lian Chiang Qin Song Sun Fang Peng Han Ouyang }
-		
-		surnames = { Buoyang Weiluen Zhejia Dingwen Zhiguo Baili Weiguo Mingzhi Ying Wan-an Dawei Zhiguang Zhenghua Qin Denghua Minhao Guochang Jixiang Shixun Yixiang Hanning Dongying Zhongming Cheng Yaobang Mingmin Geng Lan Tingyen Wenyiao Guang Xun Guazhang Yunshan Yuzhang Dezheng Yuanliang Chengxiang Youren Kexian Linzheng Jiyuan Sucheng Xiadan Yuanhui Lingsheng Hongmou Zhengyu Zhiyu Yuanhui Yaoxiang Jingguo Shizeng Renjie Dongguo Shangzhi Ruoshui } 
+
+		surnames = { Buoyang Weiluen Zhejia Dingwen Zhiguo Baili Weiguo Mingzhi Ying Wan-an Dawei Zhiguang Zhenghua Qin Denghua Minhao Guochang Jixiang Shixun Yixiang Hanning Dongying Zhongming Cheng Yaobang Mingmin Geng Lan Tingyen Wenyiao Guang Xun Guazhang Yunshan Yuzhang Dezheng Yuanliang Chengxiang Youren Kexian Linzheng Jiyuan Sucheng Xiadan Yuanhui Lingsheng Hongmou Zhengyu Zhiyu Yuanhui Yaoxiang Jingguo Shizeng Renjie Dongguo Shangzhi Ruoshui }
 	}
 	female = {
 		names = { Wang Li Zhang Liu Lü Chen Huang Liang Luo Hsia Zhu Mao Hu Liao Tan Deng Yang Gao Xie Ma Kong Xu Pan Yu Lin Tsai Guo Zheng Wei Lai Fu Hong He Shen Qiu Wu Zhao Zhou Lan Lu Zhuang Qian Zeng Sui Weng Zhan Lian Chiang Qin Song Sun Fang Peng Han Ouyang }
-		
+
 		surnames = { Yahuei Yijun Xiouling Hueiru Jiaqi Shufen Meixiang Meixiou Yianting }
 	}
 	callsigns = { }
@@ -257,12 +236,12 @@ GUD = {
 HPC = {
 	male = {
 		names = { Wang Li Zhang Liu Lü Chen Huang Liang Luo Hsia Zhu Mao Hu Liao Tan Deng Yang Gao Xie Ma Kong Xu Pan Yu Lin Tsai Guo Zheng Wei Lai Fu Hong He Shen Qiu Wu Zhao Zhou Lan Lu Zhuang Qian Zeng Sui Weng Zhan Lian Chiang Qin Song Sun Fang Peng Han Ouyang }
-		
-		surnames = { Buoyang Weiluen Zhejia Dingwen Zhiguo Baili Weiguo Mingzhi Ying Wan-an Dawei Zhiguang Zhenghua Qin Denghua Minhao Guochang Jixiang Shixun Yixiang Hanning Dongying Zhongming Cheng Yaobang Mingmin Geng Lan Tingyen Wenyiao Guang Xun Guazhang Yunshan Yuzhang Dezheng Yuanliang Chengxiang Youren Kexian Linzheng Jiyuan Sucheng Xiadan Yuanhui Lingsheng Hongmou Zhengyu Zhiyu Yuanhui Yaoxiang Jingguo Shizeng Renjie Dongguo Shangzhi Ruoshui } 
+
+		surnames = { Buoyang Weiluen Zhejia Dingwen Zhiguo Baili Weiguo Mingzhi Ying Wan-an Dawei Zhiguang Zhenghua Qin Denghua Minhao Guochang Jixiang Shixun Yixiang Hanning Dongying Zhongming Cheng Yaobang Mingmin Geng Lan Tingyen Wenyiao Guang Xun Guazhang Yunshan Yuzhang Dezheng Yuanliang Chengxiang Youren Kexian Linzheng Jiyuan Sucheng Xiadan Yuanhui Lingsheng Hongmou Zhengyu Zhiyu Yuanhui Yaoxiang Jingguo Shizeng Renjie Dongguo Shangzhi Ruoshui }
 	}
 	female = {
 		names = { Wang Li Zhang Liu Lü Chen Huang Liang Luo Hsia Zhu Mao Hu Liao Tan Deng Yang Gao Xie Ma Kong Xu Pan Yu Lin Tsai Guo Zheng Wei Lai Fu Hong He Shen Qiu Wu Zhao Zhou Lan Lu Zhuang Qian Zeng Sui Weng Zhan Lian Chiang Qin Song Sun Fang Peng Han Ouyang }
-		
+
 		surnames = { Yahuei Yijun Xiouling Hueiru Jiaqi Shufen Meixiang Meixiou Yianting }
 	}
 	callsigns = { }
@@ -270,12 +249,12 @@ HPC = {
 MAN = {
 	male = {
 		names = { Wang Li Zhang Liu Lü Chen Huang Liang Luo Hsia Zhu Mao Hu Liao Tan Deng Yang Gao Xie Ma Kong Xu Pan Yu Lin Tsai Guo Zheng Wei Lai Fu Hong He Shen Qiu Wu Zhao Zhou Lan Lu Zhuang Qian Zeng Sui Weng Zhan Lian Chiang Qin Song Sun Fang Peng Han Ouyang }
-		
-		surnames = { Buoyang Weiluen Zhejia Dingwen Zhiguo Baili Weiguo Mingzhi Ying Wan-an Dawei Zhiguang Zhenghua Qin Denghua Minhao Guochang Jixiang Shixun Yixiang Hanning Dongying Zhongming Cheng Yaobang Mingmin Geng Lan Tingyen Wenyiao Guang Xun Guazhang Yunshan Yuzhang Dezheng Yuanliang Chengxiang Youren Kexian Linzheng Jiyuan Sucheng Xiadan Yuanhui Lingsheng Hongmou Zhengyu Zhiyu Yuanhui Yaoxiang Jingguo Shizeng Renjie Dongguo Shangzhi Ruoshui } 
+
+		surnames = { Buoyang Weiluen Zhejia Dingwen Zhiguo Baili Weiguo Mingzhi Ying Wan-an Dawei Zhiguang Zhenghua Qin Denghua Minhao Guochang Jixiang Shixun Yixiang Hanning Dongying Zhongming Cheng Yaobang Mingmin Geng Lan Tingyen Wenyiao Guang Xun Guazhang Yunshan Yuzhang Dezheng Yuanliang Chengxiang Youren Kexian Linzheng Jiyuan Sucheng Xiadan Yuanhui Lingsheng Hongmou Zhengyu Zhiyu Yuanhui Yaoxiang Jingguo Shizeng Renjie Dongguo Shangzhi Ruoshui }
 	}
 	female = {
 		names = { Wang Li Zhang Liu Lü Chen Huang Liang Luo Hsia Zhu Mao Hu Liao Tan Deng Yang Gao Xie Ma Kong Xu Pan Yu Lin Tsai Guo Zheng Wei Lai Fu Hong He Shen Qiu Wu Zhao Zhou Lan Lu Zhuang Qian Zeng Sui Weng Zhan Lian Chiang Qin Song Sun Fang Peng Han Ouyang }
-		
+
 		surnames = { Yahuei Yijun Xiouling Hueiru Jiaqi Shufen Meixiang Meixiou Yianting }
 	}
 	callsigns = { }
@@ -283,12 +262,12 @@ MAN = {
 CCP = {
 	male = {
 		names = { Wang Li Zhang Liu Lü Chen Huang Liang Luo Hsia Zhu Mao Hu Liao Tan Deng Yang Gao Xie Ma Kong Xu Pan Yu Lin Tsai Guo Zheng Wei Lai Fu Hong He Shen Qiu Wu Zhao Zhou Lan Lu Zhuang Qian Zeng Sui Weng Zhan Lian Chiang Qin Song Sun Fang Peng Han Ouyang }
-		
-		surnames = { Buoyang Weiluen Zhejia Dingwen Zhiguo Baili Weiguo Mingzhi Ying Wan-an Dawei Zhiguang Zhenghua Qin Denghua Minhao Guochang Jixiang Shixun Yixiang Hanning Dongying Zhongming Cheng Yaobang Mingmin Geng Lan Tingyen Wenyiao Guang Xun Guazhang Yunshan Yuzhang Dezheng Yuanliang Chengxiang Youren Kexian Linzheng Jiyuan Sucheng Xiadan Yuanhui Lingsheng Hongmou Zhengyu Zhiyu Yuanhui Yaoxiang Jingguo Shizeng Renjie Dongguo Shangzhi Ruoshui } 
+
+		surnames = { Buoyang Weiluen Zhejia Dingwen Zhiguo Baili Weiguo Mingzhi Ying Wan-an Dawei Zhiguang Zhenghua Qin Denghua Minhao Guochang Jixiang Shixun Yixiang Hanning Dongying Zhongming Cheng Yaobang Mingmin Geng Lan Tingyen Wenyiao Guang Xun Guazhang Yunshan Yuzhang Dezheng Yuanliang Chengxiang Youren Kexian Linzheng Jiyuan Sucheng Xiadan Yuanhui Lingsheng Hongmou Zhengyu Zhiyu Yuanhui Yaoxiang Jingguo Shizeng Renjie Dongguo Shangzhi Ruoshui }
 	}
 	female = {
 		names = { Wang Li Zhang Liu Lü Chen Huang Liang Luo Hsia Zhu Mao Hu Liao Tan Deng Yang Gao Xie Ma Kong Xu Pan Yu Lin Tsai Guo Zheng Wei Lai Fu Hong He Shen Qiu Wu Zhao Zhou Lan Lu Zhuang Qian Zeng Sui Weng Zhan Lian Chiang Qin Song Sun Fang Peng Han Ouyang }
-		
+
 		surnames = { Yahuei Yijun Xiouling Hueiru Jiaqi Shufen Meixiang Meixiou Yianting }
 	}
 	callsigns = { }
@@ -296,12 +275,12 @@ CCP = {
 RFM = {
 	male = {
 		names = { Wang Li Zhang Liu Lü Chen Huang Liang Luo Hsia Zhu Mao Hu Liao Tan Deng Yang Gao Xie Ma Kong Xu Pan Yu Lin Tsai Guo Zheng Wei Lai Fu Hong He Shen Qiu Wu Zhao Zhou Lan Lu Zhuang Qian Zeng Sui Weng Zhan Lian Chiang Qin Song Sun Fang Peng Han Ouyang }
-		
-		surnames = { Buoyang Weiluen Zhejia Dingwen Zhiguo Baili Weiguo Mingzhi Ying Wan-an Dawei Zhiguang Zhenghua Qin Denghua Minhao Guochang Jixiang Shixun Yixiang Hanning Dongying Zhongming Cheng Yaobang Mingmin Geng Lan Tingyen Wenyiao Guang Xun Guazhang Yunshan Yuzhang Dezheng Yuanliang Chengxiang Youren Kexian Linzheng Jiyuan Sucheng Xiadan Yuanhui Lingsheng Hongmou Zhengyu Zhiyu Yuanhui Yaoxiang Jingguo Shizeng Renjie Dongguo Shangzhi Ruoshui } 
+
+		surnames = { Buoyang Weiluen Zhejia Dingwen Zhiguo Baili Weiguo Mingzhi Ying Wan-an Dawei Zhiguang Zhenghua Qin Denghua Minhao Guochang Jixiang Shixun Yixiang Hanning Dongying Zhongming Cheng Yaobang Mingmin Geng Lan Tingyen Wenyiao Guang Xun Guazhang Yunshan Yuzhang Dezheng Yuanliang Chengxiang Youren Kexian Linzheng Jiyuan Sucheng Xiadan Yuanhui Lingsheng Hongmou Zhengyu Zhiyu Yuanhui Yaoxiang Jingguo Shizeng Renjie Dongguo Shangzhi Ruoshui }
 	}
 	female = {
 		names = { Wang Li Zhang Liu Lü Chen Huang Liang Luo Hsia Zhu Mao Hu Liao Tan Deng Yang Gao Xie Ma Kong Xu Pan Yu Lin Tsai Guo Zheng Wei Lai Fu Hong He Shen Qiu Wu Zhao Zhou Lan Lu Zhuang Qian Zeng Sui Weng Zhan Lian Chiang Qin Song Sun Fang Peng Han Ouyang }
-		
+
 		surnames = { Yahuei Yijun Xiouling Hueiru Jiaqi Shufen Meixiang Meixiou Yianting }
 	}
 	callsigns = { }
@@ -383,50 +362,129 @@ BUR = {
 			Hamilton Hardinge Havelock Hope Jellicoe Kitchener Lyons Madden Milne Montgomery
 			Moresby Mundy Napier Plummer Ragland Roberts Seaton Seymour Collin
 			Smith Stewart Thesiger Tyron Tyrwhitt Williams Windsor Wolseley Wood Leiper Roberts
-			
+
 		}
 	callsigns = { Stubborn Arrow "The King" Eagle Hangover Striker Chase "One Wing" Pickle Thief Thunder Lightning Storm Target Hawk Fox Dog Sparrow Sunrise "Night Owl" Butcher Cocky Hawkeye Killer Mick Brandy "The Baron" }
 }
-BOR = {
+SST_UK = {
 	male = {
 		names = { Albert Alexander Alfred Archibald Arthur Bernard Charles Colbert
 			Colin Cyril David Donald Douglas Edmund Edward Fairfax  Francis
 			Geoffrey George Graham Henrey Herbert Horatio Hubert Hugh Ian
 			James Jeremy John Leopold Lester Martin Nigel Oswald Max
 			Percy Reginald Richard Robert Russell Stanley Thomas Wallace William Winston Zachary Jake
-		}
+		  }
 	}
 	female = {
 		names = { Elizabeth Anne }
 	}
 	surnames = { 	Allenby Battemberg Beatty Beresford Brown Buller Butler Campbell Cardigan Churchill
-		Cochrane Cockburn Dundas Fisher French Gough Grant Grenfell Haig Murphy
-		Hamilton Hardinge Havelock Hope Jellicoe Kitchener Lyons Madden Milne Montgomery
-		Moresby Mundy Napier Plummer Ragland Roberts Seaton Seymour Collin
-		Smith Stewart Thesiger Tyron Tyrwhitt Williams Windsor Wolseley Wood Leiper Roberts
-		
+			Cochrane Cockburn Dundas Fisher French Gough Grant Grenfell Haig Murphy
+			Hamilton Hardinge Havelock Hope Jellicoe Kitchener Lyons Madden Milne Montgomery
+			Moresby Mundy Napier Plummer Ragland Roberts Seaton Seymour Collin
+			Smith Stewart Thesiger Tyron Tyrwhitt Williams Windsor Wolseley Wood Leiper Roberts
+
+		}
+	callsigns = { Stubborn Arrow "The King" Eagle Hangover Striker Chase "One Wing" Pickle Thief Thunder Lightning Storm Target Hawk Fox Dog Sparrow Sunrise "Night Owl" Butcher Cocky Hawkeye Killer Mick Brandy "The Baron" }
+}
+
+SST = {
+	male = {
+		names = { Albert Alexander Alfred Archibald Arthur Bernard Charles Colbert
+			Colin Cyril David Donald Douglas Edmund Edward Fairfax  Francis
+			Geoffrey George Graham Henrey Herbert Horatio Hubert Hugh Ian
+			James Jeremy John Leopold Lester Martin Nigel Oswald Max
+			Percy Reginald Richard Robert Russell Stanley Thomas Wallace William Winston Zachary Jake
+		  }
+	}
+	female = {
+		names = { Elizabeth Anne }
+	}
+	surnames = { 	Allenby Battemberg Beatty Beresford Brown Buller Butler Campbell Cardigan Churchill
+			Cochrane Cockburn Dundas Fisher French Gough Grant Grenfell Haig Murphy
+			Hamilton Hardinge Havelock Hope Jellicoe Kitchener Lyons Madden Milne Montgomery
+			Moresby Mundy Napier Plummer Ragland Roberts Seaton Seymour Collin
+			Smith Stewart Thesiger Tyron Tyrwhitt Williams Windsor Wolseley Wood Leiper Roberts
+
+		}
+	callsigns = { Stubborn Arrow "The King" Eagle Hangover Striker Chase "One Wing" Pickle Thief Thunder Lightning Storm Target Hawk Fox Dog Sparrow Sunrise "Night Owl" Butcher Cocky Hawkeye Killer Mick Brandy "The Baron" }
+}
+#SST = { #enable it when add the cosmetic tag
+#	male = {
+#		names = {
+#			Talaal Muneef Jameel Umar Naadir Adi Budiarto Suib Jati Putera Haarith Fat'hi Bassil Ali Raaji Daud Budi Putera Lokman Bayu
+#		}
+#	}
+#	female = {
+#		names = { Jawhara Widdad Insaaf Naseera Shaahira Melur Tipah Juwita Embun Cahaya  }
+#	}
+#	surnames = {
+#		Fareed Haashid Dhaafir Kamaal Abdul-Baasid Ahad Kamis Izzat Adiputera Osman Mahmood Sufyaan Hamdaan Muammar Abdul-Jaleel Jejaka Jaya Adi Sulung Teh Abdul-Azeez
+#	}
+#	callsigns = { }
+#}
+BOR_UK = {
+	male = {
+		names = { Albert Alexander Alfred Archibald Arthur Bernard Charles Colbert
+			Colin Cyril David Donald Douglas Edmund Edward Fairfax  Francis
+			Geoffrey George Graham Henrey Herbert Horatio Hubert Hugh Ian
+			James Jeremy John Leopold Lester Martin Nigel Oswald Max
+			Percy Reginald Richard Robert Russell Stanley Thomas Wallace William Winston Zachary Jake
+		  }
+	}
+	female = {
+		names = { Elizabeth Anne }
+	}
+	surnames = { 	Allenby Battemberg Beatty Beresford Brown Buller Butler Campbell Cardigan Churchill
+			Cochrane Cockburn Dundas Fisher French Gough Grant Grenfell Haig Murphy
+			Hamilton Hardinge Havelock Hope Jellicoe Kitchener Lyons Madden Milne Montgomery
+			Moresby Mundy Napier Plummer Ragland Roberts Seaton Seymour Collin
+			Smith Stewart Thesiger Tyron Tyrwhitt Williams Windsor Wolseley Wood Leiper Roberts
+
+		}
+	callsigns = { Stubborn Arrow "The King" Eagle Hangover Striker Chase "One Wing" Pickle Thief Thunder Lightning Storm Target Hawk Fox Dog Sparrow Sunrise "Night Owl" Butcher Cocky Hawkeye Killer Mick Brandy "The Baron" }
+}
+MAL_UK = {
+	male = {
+		names = {
+			Talaal Muneef Jameel Umar Naadir Adi Budiarto Suib Jati Putera Haarith Fat'hi Bassil Ali Raaji Daud Budi Putera Lokman Bayu
+		}
+	}
+	female = {
+		names = { Jawhara Widdad Insaaf Naseera Shaahira Melur Tipah Juwita Embun Cahaya  }
+	}
+	surnames = {
+		Fareed Haashid Dhaafir Kamaal Abdul-Baasid Ahad Kamis Izzat Adiputera Osman Mahmood Sufyaan Hamdaan Muammar Abdul-Jaleel Jejaka Jaya Adi Sulung Teh Abdul-Azeez
+	}
+	callsigns = { }
+}
+BOR = {
+	male = {
+		names = {
+			Talaal Muneef Jameel Umar Naadir Adi Budiarto Suib Jati Putera Haarith Fat'hi Bassil Ali Raaji Daud Budi Putera Lokman Bayu
+		}
+	}
+	female = {
+		names = { Jawhara Widdad Insaaf Naseera Shaahira Melur Tipah Juwita Embun Cahaya  }
+	}
+	surnames = {
+		Fareed Haashid Dhaafir Kamaal Abdul-Baasid Ahad Kamis Izzat Adiputera Osman Mahmood Sufyaan Hamdaan Muammar Abdul-Jaleel Jejaka Jaya Adi Sulung Teh Abdul-Azeez
 	}
 	callsigns = { }
 }
 SAR = {
 	male = {
-		names = { Albert Alexander Alfred Archibald Arthur Bernard Charles Colbert
-			Colin Cyril David Donald Douglas Edmund Edward Fairfax  Francis
-			Geoffrey George Graham Henrey Herbert Horatio Hubert Hugh Ian
-			James Jeremy John Leopold Lester Martin Nigel Oswald Max
-			Percy Reginald Richard Robert Russell Stanley Thomas Wallace William Winston Zachary Jake
+		names = {
+			Talaal Muneef Jameel Umar Naadir Adi Budiarto Suib Jati Putera Haarith Fat'hi Bassil Ali Raaji Daud Budi Putera Lokman Bayu
 		}
 	}
 	female = {
-		names = { Elizabeth Anne }
+		names = { Jawhara Widdad Insaaf Naseera Shaahira Melur Tipah Juwita Embun Cahaya  }
 	}
-	surnames = { 	Allenby Battemberg Beatty Beresford Brown Buller Butler Campbell Cardigan Churchill
-		Cochrane Cockburn Dundas Fisher French Gough Grant Grenfell Haig Murphy
-		Hamilton Hardinge Havelock Hope Jellicoe Kitchener Lyons Madden Milne Montgomery
-		Moresby Mundy Napier Plummer Ragland Roberts Seaton Seymour Collin
-		Smith Stewart Thesiger Tyron Tyrwhitt Williams Windsor Wolseley Wood Leiper Roberts
-		
+	surnames = {
+		Fareed Haashid Dhaafir Kamaal Abdul-Baasid Ahad Kamis Izzat Adiputera Osman Mahmood Sufyaan Hamdaan Muammar Abdul-Jaleel Jejaka Jaya Adi Sulung Teh Abdul-Azeez
 	}
 	callsigns = { }
 }
+
 #MODDED^
