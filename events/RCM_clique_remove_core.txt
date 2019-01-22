@@ -32,203 +32,379 @@ country_event = {
 	}
 	immediate = {
 		if = {
-			limit = { NOT = { country_exists = CHI } }
+			limit = { NOT = { has_global_flag = CHI_is_gone country_exists = CHI } }
 			every_state = {
 				remove_core_of = CHI
 			}
+			set_global_flag = CHI_is_gone
 
 			CHI = {
 				WTT_political_struggle_remove_current_country = yes
 			}
 		}
+		else_if = {
+			limit = {
+				country_exists = CHI
+				has_global_flag = CHI_is_gone
+			}
+			clr_global_flag = CHI_is_gone
+		}			
 		if = {
-			limit = { NOT = { country_exists = PRC } }
+			limit = { NOT = { has_global_flag = PRC_is_gone country_exists = PRC } }
 			every_state = {
 				remove_core_of = PRC
 			}
+			set_global_flag = PRC_is_gone
 			#PRC = {
 			#	WTT_political_struggle_remove_current_country = yes
 			#}
 		}
+		else_if = {
+			limit = {
+				country_exists = PRC
+				has_global_flag = PRC_is_gone
+			}
+			clr_global_flag = PRC_is_gone
+		}
 		if = {
-			limit = { NOT = { country_exists = GXC } }
+			limit = { NOT = { has_global_flag = GXC_is_gone country_exists = GXC } }
 			every_state = {
 				remove_core_of = GXC
 			}
+			set_global_flag = GXC_is_gone
 			GXC = {
 				WTT_political_struggle_remove_current_country = yes
 			}
 		}
+		else_if = {
+			limit = {
+				country_exists = GXC
+				has_global_flag = GXC_is_gone
+			}
+			clr_global_flag = GXC_is_gone
+		}
 		if = {
-			limit = { NOT = { country_exists = YUN } }
+			limit = { NOT = { has_global_flag = YUN_is_gone country_exists = YUN } }
 			every_state = {
 				remove_core_of = YUN
 			}
+			set_global_flag = YUN_is_gone
 			YUN = {
 				WTT_political_struggle_remove_current_country = yes
 			}
 		}
+		else_if = {
+			limit = {
+				country_exists = YUN
+				has_global_flag = YUN_is_gone
+			}
+			clr_global_flag = YUN_is_gone
+		}
 		if = {
-			limit = { NOT = { country_exists = SHX } }
+			limit = { NOT = { has_global_flag = SHX_is_gone country_exists = SHX } }
 			every_state = {
 				remove_core_of = SHX
 			}
+			set_global_flag = SHX_is_gone
 			SHX = {
 				WTT_political_struggle_remove_current_country = yes
 			}
 		}
+		else_if = {
+			limit = {
+				country_exists = SHX
+				has_global_flag = SHX_is_gone
+			}
+			clr_global_flag = SHX_is_gone
+		}
 		if = {
-			limit = { NOT = { country_exists = XSM } }
+			limit = { NOT = { has_global_flag = XSM_is_gone country_exists = XSM } }
 			every_state = {
 				remove_core_of = XSM
 			}
+			set_global_flag = XSM_is_gone
 			XSM = {
 				WTT_political_struggle_remove_current_country = yes
 			}
 		}
+		else_if = {
+			limit = {
+				country_exists = XSM
+				has_global_flag = XSM_is_gone
+			}
+			clr_global_flag = XSM_is_gone
+		}
 		if = {
-			limit = { NOT = { country_exists = XIK } }
+			limit = { NOT = { has_global_flag = XIK_is_gone country_exists = XIK } }
 			every_state = {
 				remove_core_of = XIK
 			}
+			set_global_flag = XIK_is_gone
 			XIK = {
 				WTT_political_struggle_remove_current_country = yes
 			}
 		}
+		else_if = {
+			limit = {
+				country_exists = XIK
+				has_global_flag = XIK_is_gone
+			}
+			clr_global_flag = XIK_is_gone
+		}
 		if = {
-			limit = { NOT = { country_exists = GUD } }
+			limit = { NOT = { has_global_flag = GUD_is_gone country_exists = GUD } }
 			every_state = {
 				remove_core_of = GUD
 			}
+			set_global_flag = GUD_is_gone
 			GUD = {
 				WTT_political_struggle_remove_current_country = yes
 			}
 		}
+		else_if = {
+			limit = {
+				country_exists = GUD
+				has_global_flag = GUD_is_gone
+			}
+			clr_global_flag = GUD_is_gone
+		}
 		if = {
-			limit = { NOT = { country_exists = HPC } }
+			limit = { NOT = { has_global_flag = HPC_is_gone country_exists = HPC } }
 			every_state = {
 				remove_core_of = HPC
 			}
+			set_global_flag = HPC_is_gone
 			HPC = {
 				WTT_political_struggle_remove_current_country = yes
 			}
 		}
+		else_if = {
+			limit = {
+				country_exists = HPC
+				has_global_flag = HPC_is_gone
+			}
+			clr_global_flag = HPC_is_gone
+		}
 		if = {
-			limit = { NOT = { country_exists = SIC } }
+			limit = { NOT = { has_global_flag = SIC_is_gone country_exists = SIC } }
 			every_state = {
 				remove_core_of = SIC
 			}
+			set_global_flag = SIC_is_gone
 			SIC = {
 				WTT_political_struggle_remove_current_country = yes
 			}
 		}
+		else_if = {
+			limit = {
+				country_exists = SIC
+				has_global_flag = SIC_is_gone
+			}
+			clr_global_flag = SIC_is_gone
+		}
 		if = {
-			limit = { NOT = { country_exists = PLM } }
+			limit = { NOT = { has_global_flag = PLM_is_gone country_exists = PLM } }
 			every_state = {
 				remove_core_of = PLM
 			}
+			set_global_flag = PLM_is_gone
 			PLM = {
 				WTT_political_struggle_remove_current_country = yes
 			}
 		}
+		else_if = {
+			limit = {
+				country_exists = PLM
+				has_global_flag = PLM_is_gone
+			}
+			clr_global_flag = PLM_is_gone
+		}
 		if = {
-			limit = { NOT = { country_exists = MAN } }
+			limit = { NOT = { has_global_flag = MAN_is_gone country_exists = MAN } }
 			every_state = {
 				remove_core_of = MAN
 			}
+			set_global_flag = MAN_is_gone
 			#MAN = {
 			#	WTT_political_struggle_remove_current_country = yes
 			#}
 		}
+		else_if = {
+			limit = {
+				country_exists = MAN
+				has_global_flag = MAN_is_gone
+			}
+			clr_global_flag = MAN_is_gone
+		}
 		if = {
-			limit = { NOT = { country_exists = NXM } }
+			limit = { NOT = { has_global_flag = NXM_is_gone country_exists = NXM } }
 			every_state = {
 				remove_core_of = NXM
 			}
+			set_global_flag = NXM_is_gone
 			NXM = {
 				WTT_political_struggle_remove_current_country = yes
 			}
 		}
+		else_if = {
+			limit = {
+				country_exists = NXM
+				has_global_flag = NXM_is_gone
+			}
+			clr_global_flag = NXM_is_gone
+		}
 		if = {
-			limit = { NOT = { country_exists = SHD } }
+			limit = { NOT = { has_global_flag = SHD_is_gone country_exists = SHD } }
 			every_state = {
 				remove_core_of = SHD
 			}
+			set_global_flag = SHD_is_gone
 			SHD = {
 				WTT_political_struggle_remove_current_country = yes
 			}
 		}
+		else_if = {
+			limit = {
+				country_exists = SHD
+				has_global_flag = SHD_is_gone
+			}
+			clr_global_flag = SHD_is_gone
+		}
 		if = {
-			limit = { NOT = { country_exists = ECA } }
+			limit = { NOT = { has_global_flag = ECA_is_gone country_exists = ECA } }
 			every_state = {
 				remove_core_of = ECA
 			}
+			set_global_flag = ECA_is_gone
 			#ECA = {
 			#	WTT_political_struggle_remove_current_country = yes
 			#}
 		}
+		else_if = {
+			limit = {
+				country_exists = ECA
+				has_global_flag = ECA_is_gone
+			}
+			clr_global_flag = ECA_is_gone
+		}
 		if = {
-			limit = { NOT = { country_exists = EHB } }
+			limit = { NOT = { has_global_flag = EHB_is_gone country_exists = EHB } }
 			every_state = {
 				remove_core_of = EHB
 			}
+			set_global_flag = EHB_is_gone
 			#EHB = {
 			#	WTT_political_struggle_remove_current_country = yes
 			#}
 		}
+		else_if = {
+			limit = {
+				country_exists = EHB
+				has_global_flag = EHB_is_gone
+			}
+			clr_global_flag = EHB_is_gone
+		}
 		if = {
-			limit = { NOT = { country_exists = RFM } }
+			limit = { NOT = { has_global_flag = RFM_is_gone country_exists = RFM } }
 			every_state = {
 				remove_core_of = RFM
 			}
+			set_global_flag = RFM_is_gone
 			#RFM = {
 			#	WTT_political_struggle_remove_current_country = yes
 			#}
 		}
+		else_if = {
+			limit = {
+				country_exists = RFM
+				has_global_flag = RFM_is_gone
+			}
+			clr_global_flag = RFM_is_gone
+		}
 		if = {
-			limit = { NOT = { country_exists = HMI } }
+			limit = { NOT = { has_global_flag = HMI_is_gone country_exists = HMI } }
 			every_state = {
 				remove_core_of = HMI
 			}
+			set_global_flag = HMI_is_gone
 			HMI = {
 				WTT_political_struggle_remove_current_country = yes
 			}
 		}
+		else_if = {
+			limit = {
+				country_exists = HMI
+				has_global_flag = HMI_is_gone
+			}
+			clr_global_flag = HMI_is_gone
+		}
 		if = {
-			limit = { NOT = { country_exists = TNG } }
+			limit = { NOT = { has_global_flag = TNG_is_gone country_exists = TNG } }
 			every_state = {
 				remove_core_of = TNG
 			}
+			set_global_flag = TNG_is_gone
 			TNG = {
 				WTT_political_struggle_remove_current_country = yes
 			}
 		}
+		else_if = {
+			limit = {
+				country_exists = TNG
+				has_global_flag = TNG_is_gone
+			}
+			clr_global_flag = TNG_is_gone
+		}
 		if = {
-			limit = { NOT = { country_exists = NEA } }
+			limit = { NOT = { has_global_flag = NEA_is_gone country_exists = NEA } }
 			every_state = {
 				remove_core_of = NEA
 			}
+			set_global_flag = NEA_is_gone
 			NEA = {
 				WTT_political_struggle_remove_current_country = yes
 			}
 		}
+		else_if = {
+			limit = {
+				country_exists = NEA
+				has_global_flag = NEA_is_gone
+			}
+			clr_global_flag = NEA_is_gone
+		}
 		if = {
-			limit = { NOT = { country_exists = NSG } }
+			limit = { NOT = { has_global_flag = NSG_is_gone country_exists = NSG } }
 			every_state = {
 				remove_core_of = NSG
 			}
+			set_global_flag = NSG_is_gone
 			#NSG = {
 			#	WTT_political_struggle_remove_current_country = yes
 			#}
 		}
+		else_if = {
+			limit = {
+				country_exists = NSG
+				has_global_flag = NSG_is_gone
+			}
+			clr_global_flag = NSG_is_gone
+		}
 		if = {
-			limit = { NOT = { country_exists = SCG } }
+			limit = { NOT = { has_global_flag = SCG_is_gone country_exists = SCG } }
 			every_state = {
 				remove_core_of = SCG
 			}
+			set_global_flag = SCG_is_gone
 			#SCG = {
 			#	WTT_political_struggle_remove_current_country = yes
 			#}
+		}
+		else_if = {
+			limit = {
+				country_exists = SCG
+				has_global_flag = SCG_is_gone
+			}
+			clr_global_flag = SCG_is_gone
 		}
 		set_global_flag = clique_loop
 		random_country = {
