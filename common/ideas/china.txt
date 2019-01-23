@@ -1030,10 +1030,10 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				army_morale_factor = 0.1
-				stability_factor = 0.1
-				stability_weekly = 0.002
-				war_support_factor = 0.002#war support+?
+				army_morale_factor = 0.05
+				stability_factor = 0.05
+				stability_weekly = 0.001
+				war_support_factor = 0.001#war support+?
 			}
 		}
 		new_life = {
@@ -1268,7 +1268,7 @@ ideas = {
 			}
 			modifier = {
 				enemy_partisan_effect = -0.25
-				political_power_factor = 0.025
+				political_power_factor = 0.05
 
 			}
 		}
@@ -1283,7 +1283,7 @@ ideas = {
 			}
 			modifier = {
 				enemy_partisan_effect = -0.25
-				political_power_factor = 0.025
+				political_power_factor = 0.05
 				foreign_subversive_activites = -0.4
 			}
 		}
@@ -1536,7 +1536,7 @@ ideas = {
 			modifier = {
 				line_change_production_efficiency_factor = -0.9
 				production_speed_buildings_factor = -0.48
-				industrial_capacity_factory = -0.36
+				industrial_capacity_factory = -0.48
 
 			}
 		}
@@ -1555,7 +1555,7 @@ ideas = {
 			modifier = {
 				line_change_production_efficiency_factor = -0.6
 				production_speed_buildings_factor = -0.32
-				industrial_capacity_factory = -0.24
+				industrial_capacity_factory = -0.32
 			}
 		}
 		unbalanced_industry_2 = {
@@ -1573,7 +1573,7 @@ ideas = {
 			modifier = {
 				line_change_production_efficiency_factor = -0.3
 				production_speed_buildings_factor = -0.16
-				industrial_capacity_factory = -0.12
+				industrial_capacity_factory = -0.16
 			}
 		}
 		unbalanced_industry_3 = {
@@ -1591,7 +1591,7 @@ ideas = {
 			modifier = {
 				line_change_production_efficiency_factor = -0.15
 				production_speed_buildings_factor = -0.08
-				industrial_capacity_factory = -0.06
+				industrial_capacity_factory = -0.08
 			}
 		}
 		#############

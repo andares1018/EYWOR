@@ -18,12 +18,19 @@ production_unit_0_ratios = {
 	enable = {
 		OR = {
 			NOT = {
-				tag = GER
+				OR = {
+					tag = GER
+					tag = SOV
+					tag = ENG
+				}
 			}
-			has_completed_focus = GER_danzig_or_war
+			GER = {
+				has_completed_focus = GER_danzig_or_war
+			}
 		}
 		NOT = {
 			OR = {
+				is_puppet_of = JAP
 				tag = JAP
 				is_legit_china = yes
 				tag = CHI
@@ -38,6 +45,7 @@ production_unit_0_ratios = {
 		NOT = {
 			NOT = {
 				OR = {
+					is_puppet_of = JAP
 					tag = JAP
 					is_legit_china = yes
 					tag = CHI
@@ -79,12 +87,19 @@ production_unit_5_ratios = {
 	enable = {
 		OR = {
 			NOT = {
-				tag = GER
+				OR = {
+					tag = GER
+					tag = SOV
+					tag = ENG
+				}
 			}
-			has_completed_focus = GER_danzig_or_war
+			GER = {
+				has_completed_focus = GER_danzig_or_war
+			}
 		}
 		NOT = {
 			OR = {
+				is_puppet_of = JAP
 				tag = JAP
 				is_legit_china = yes
 				tag = CHI
@@ -99,6 +114,7 @@ production_unit_5_ratios = {
 		NOT = {
 			NOT = {
 				OR = {
+					is_puppet_of = JAP
 					tag = JAP
 					is_legit_china = yes
 					tag = CHI
@@ -140,12 +156,19 @@ production_unit_10_ratios = {
 	enable = {
 		OR = {
 			NOT = {
-				tag = GER
+				OR = {
+					tag = GER
+					tag = SOV
+					tag = ENG
+				}
 			}
-			has_completed_focus = GER_danzig_or_war
+			GER = {
+				has_completed_focus = GER_danzig_or_war
+			}
 		}
 		NOT = {
 			OR = {
+				is_puppet_of = JAP
 				tag = JAP
 				is_legit_china = yes
 				tag = CHI
@@ -160,6 +183,7 @@ production_unit_10_ratios = {
 		NOT = {
 			NOT = {
 				OR = {
+					is_puppet_of = JAP
 					tag = JAP
 					is_legit_china = yes
 					tag = CHI
@@ -201,12 +225,19 @@ production_unit_15_ratios = {
 	enable = {
 		OR = {
 			NOT = {
-				tag = GER
+				OR = {
+					tag = GER
+					tag = SOV
+					tag = ENG
+				}
 			}
-			has_completed_focus = GER_danzig_or_war
+			GER = {
+				has_completed_focus = GER_danzig_or_war
+			}
 		}
 		NOT = {
 			OR = {
+				is_puppet_of = JAP
 				tag = JAP
 				is_legit_china = yes
 				tag = CHI
@@ -221,6 +252,7 @@ production_unit_15_ratios = {
 		NOT = {
 			NOT = {
 				OR = {
+					is_puppet_of = JAP
 					tag = JAP
 					is_legit_china = yes
 					tag = CHI
@@ -262,12 +294,19 @@ production_unit_20_ratios = {
 	enable = {
 		OR = {
 			NOT = {
-				tag = GER
+				OR = {
+					tag = GER
+					tag = SOV
+					tag = ENG
+				}
 			}
-			has_completed_focus = GER_danzig_or_war
+			GER = {
+				has_completed_focus = GER_danzig_or_war
+			}
 		}
 		NOT = {
 			OR = {
+				is_puppet_of = JAP
 				tag = JAP
 				is_legit_china = yes
 				tag = CHI
@@ -282,6 +321,7 @@ production_unit_20_ratios = {
 		NOT = {
 			NOT = {
 				OR = {
+					is_puppet_of = JAP
 					tag = JAP
 					is_legit_china = yes
 					tag = CHI
@@ -323,12 +363,19 @@ production_unit_25_ratios = {
 	enable = {
 		OR = {
 			NOT = {
-				tag = GER
+				OR = {
+					tag = GER
+					tag = SOV
+					tag = ENG
+				}
 			}
-			has_completed_focus = GER_danzig_or_war
+			GER = {
+				has_completed_focus = GER_danzig_or_war
+			}
 		}
 		NOT = {
 			OR = {
+				is_puppet_of = JAP
 				tag = JAP
 				is_legit_china = yes
 				tag = CHI
@@ -343,6 +390,7 @@ production_unit_25_ratios = {
 		NOT = {
 			NOT = {
 				OR = {
+					is_puppet_of = JAP
 					tag = JAP
 					is_legit_china = yes
 					tag = CHI
@@ -384,12 +432,19 @@ production_unit_30_ratios = {
 	enable = {
 		OR = {
 			NOT = {
-				tag = GER
+				OR = {
+					tag = GER
+					tag = SOV
+					tag = ENG
+				}
 			}
-			has_completed_focus = GER_danzig_or_war
+			GER = {
+				has_completed_focus = GER_danzig_or_war
+			}
 		}
 		NOT = {
 			OR = {
+				is_puppet_of = JAP
 				tag = JAP
 				is_legit_china = yes
 				tag = CHI
@@ -404,6 +459,7 @@ production_unit_30_ratios = {
 		NOT = {
 			NOT = {
 				OR = {
+					is_puppet_of = JAP
 					tag = JAP
 					is_legit_china = yes
 					tag = CHI
@@ -445,12 +501,19 @@ production_unit_35_ratios = {
 	enable = {
 		OR = {
 			NOT = {
-				tag = GER
+				OR = {
+					tag = GER
+					tag = SOV
+					tag = ENG
+				}
 			}
-			has_completed_focus = GER_danzig_or_war
+			GER = {
+				has_completed_focus = GER_danzig_or_war
+			}
 		}
 		NOT = {
 			OR = {
+				is_puppet_of = JAP
 				tag = JAP
 				is_legit_china = yes
 				tag = CHI
@@ -465,6 +528,7 @@ production_unit_35_ratios = {
 		NOT = {
 			NOT = {
 				OR = {
+					is_puppet_of = JAP
 					tag = JAP
 					is_legit_china = yes
 					tag = CHI
@@ -506,12 +570,19 @@ production_unit_40_ratios = {
 	enable = {
 		OR = {
 			NOT = {
-				tag = GER
+				OR = {
+					tag = GER
+					tag = SOV
+					tag = ENG
+				}
 			}
-			has_completed_focus = GER_danzig_or_war
+			GER = {
+				has_completed_focus = GER_danzig_or_war
+			}
 		}
 		NOT = {
 			OR = {
+				is_puppet_of = JAP
 				tag = JAP
 				is_legit_china = yes
 				tag = CHI
@@ -526,6 +597,7 @@ production_unit_40_ratios = {
 		NOT = {
 			NOT = {
 				OR = {
+					is_puppet_of = JAP
 					tag = JAP
 					is_legit_china = yes
 					tag = CHI
@@ -567,12 +639,19 @@ production_unit_45_ratios = {
 	enable = {
 		OR = {
 			NOT = {
-				tag = GER
+				OR = {
+					tag = GER
+					tag = SOV
+					tag = ENG
+				}
 			}
-			has_completed_focus = GER_danzig_or_war
+			GER = {
+				has_completed_focus = GER_danzig_or_war
+			}
 		}
 		NOT = {
 			OR = {
+				is_puppet_of = JAP
 				tag = JAP
 				is_legit_china = yes
 				tag = CHI
@@ -587,6 +666,7 @@ production_unit_45_ratios = {
 		NOT = {
 			NOT = {
 				OR = {
+					is_puppet_of = JAP
 					tag = JAP
 					is_legit_china = yes
 					tag = CHI
@@ -628,12 +708,19 @@ production_unit_50_ratios = {
 	enable = {
 		OR = {
 			NOT = {
-				tag = GER
+				OR = {
+					tag = GER
+					tag = SOV
+					tag = ENG
+				}
 			}
-			has_completed_focus = GER_danzig_or_war
+			GER = {
+				has_completed_focus = GER_danzig_or_war
+			}
 		}
 		NOT = {
 			OR = {
+				is_puppet_of = JAP
 				tag = JAP
 				is_legit_china = yes
 				tag = CHI
@@ -648,6 +735,7 @@ production_unit_50_ratios = {
 		NOT = {
 			NOT = {
 				OR = {
+					is_puppet_of = JAP
 					tag = JAP
 					is_legit_china = yes
 					tag = CHI
@@ -689,12 +777,19 @@ production_unit_55_ratios = {
 	enable = {
 		OR = {
 			NOT = {
-				tag = GER
+				OR = {
+					tag = GER
+					tag = SOV
+					tag = ENG
+				}
 			}
-			has_completed_focus = GER_danzig_or_war
+			GER = {
+				has_completed_focus = GER_danzig_or_war
+			}
 		}
 		NOT = {
 			OR = {
+				is_puppet_of = JAP
 				tag = JAP
 				is_legit_china = yes
 				tag = CHI
@@ -709,6 +804,7 @@ production_unit_55_ratios = {
 		NOT = {
 			NOT = {
 				OR = {
+					is_puppet_of = JAP
 					tag = JAP
 					is_legit_china = yes
 					tag = CHI
@@ -750,12 +846,19 @@ production_unit_60_ratios = {
 	enable = {
 		OR = {
 			NOT = {
-				tag = GER
+				OR = {
+					tag = GER
+					tag = SOV
+					tag = ENG
+				}
 			}
-			has_completed_focus = GER_danzig_or_war
+			GER = {
+				has_completed_focus = GER_danzig_or_war
+			}
 		}
 		NOT = {
 			OR = {
+				is_puppet_of = JAP
 				tag = JAP
 				is_legit_china = yes
 				tag = CHI
@@ -770,6 +873,7 @@ production_unit_60_ratios = {
 		NOT = {
 			NOT = {
 				OR = {
+					is_puppet_of = JAP
 					tag = JAP
 					is_legit_china = yes
 					tag = CHI
@@ -811,12 +915,19 @@ production_unit_65_ratios = {
 	enable = {
 		OR = {
 			NOT = {
-				tag = GER
+				OR = {
+					tag = GER
+					tag = SOV
+					tag = ENG
+				}
 			}
-			has_completed_focus = GER_danzig_or_war
+			GER = {
+				has_completed_focus = GER_danzig_or_war
+			}
 		}
 		NOT = {
 			OR = {
+				is_puppet_of = JAP
 				tag = JAP
 				is_legit_china = yes
 				tag = CHI
@@ -831,6 +942,7 @@ production_unit_65_ratios = {
 		NOT = {
 			NOT = {
 				OR = {
+					is_puppet_of = JAP
 					tag = JAP
 					is_legit_china = yes
 					tag = CHI
@@ -872,12 +984,19 @@ production_unit_70_ratios = {
 	enable = {
 		OR = {
 			NOT = {
-				tag = GER
+				OR = {
+					tag = GER
+					tag = SOV
+					tag = ENG
+				}
 			}
-			has_completed_focus = GER_danzig_or_war
+			GER = {
+				has_completed_focus = GER_danzig_or_war
+			}
 		}
 		NOT = {
 			OR = {
+				is_puppet_of = JAP
 				tag = JAP
 				is_legit_china = yes
 				tag = CHI
@@ -892,6 +1011,7 @@ production_unit_70_ratios = {
 		NOT = {
 			NOT = {
 				OR = {
+					is_puppet_of = JAP
 					tag = JAP
 					is_legit_china = yes
 					tag = CHI
@@ -933,12 +1053,19 @@ production_unit_75_ratios = {
 	enable = {
 		OR = {
 			NOT = {
-				tag = GER
+				OR = {
+					tag = GER
+					tag = SOV
+					tag = ENG
+				}
 			}
-			has_completed_focus = GER_danzig_or_war
+			GER = {
+				has_completed_focus = GER_danzig_or_war
+			}
 		}
 		NOT = {
 			OR = {
+				is_puppet_of = JAP
 				tag = JAP
 				is_legit_china = yes
 				tag = CHI
@@ -953,6 +1080,7 @@ production_unit_75_ratios = {
 		NOT = {
 			NOT = {
 				OR = {
+					is_puppet_of = JAP
 					tag = JAP
 					is_legit_china = yes
 					tag = CHI
@@ -994,12 +1122,19 @@ production_unit_80_ratios = {
 	enable = {
 		OR = {
 			NOT = {
-				tag = GER
+				OR = {
+					tag = GER
+					tag = SOV
+					tag = ENG
+				}
 			}
-			has_completed_focus = GER_danzig_or_war
+			GER = {
+				has_completed_focus = GER_danzig_or_war
+			}
 		}
 		NOT = {
 			OR = {
+				is_puppet_of = JAP
 				tag = JAP
 				is_legit_china = yes
 				tag = CHI
@@ -1014,6 +1149,7 @@ production_unit_80_ratios = {
 		NOT = {
 			NOT = {
 				OR = {
+					is_puppet_of = JAP
 					tag = JAP
 					is_legit_china = yes
 					tag = CHI
@@ -1055,12 +1191,19 @@ production_unit_85_ratios = {
 	enable = {
 		OR = {
 			NOT = {
-				tag = GER
+				OR = {
+					tag = GER
+					tag = SOV
+					tag = ENG
+				}
 			}
-			has_completed_focus = GER_danzig_or_war
+			GER = {
+				has_completed_focus = GER_danzig_or_war
+			}
 		}
 		NOT = {
 			OR = {
+				is_puppet_of = JAP
 				tag = JAP
 				is_legit_china = yes
 				tag = CHI
@@ -1075,6 +1218,7 @@ production_unit_85_ratios = {
 		NOT = {
 			NOT = {
 				OR = {
+					is_puppet_of = JAP
 					tag = JAP
 					is_legit_china = yes
 					tag = CHI
@@ -1116,12 +1260,19 @@ production_unit_90_ratios = {
 	enable = {
 		OR = {
 			NOT = {
-				tag = GER
+				OR = {
+					tag = GER
+					tag = SOV
+					tag = ENG
+				}
 			}
-			has_completed_focus = GER_danzig_or_war
+			GER = {
+				has_completed_focus = GER_danzig_or_war
+			}
 		}
 		NOT = {
 			OR = {
+				is_puppet_of = JAP
 				tag = JAP
 				is_legit_china = yes
 				tag = CHI
@@ -1136,6 +1287,7 @@ production_unit_90_ratios = {
 		NOT = {
 			NOT = {
 				OR = {
+					is_puppet_of = JAP
 					tag = JAP
 					is_legit_china = yes
 					tag = CHI
@@ -1177,12 +1329,19 @@ production_unit_95_ratios = {
 	enable = {
 		OR = {
 			NOT = {
-				tag = GER
+				OR = {
+					tag = GER
+					tag = SOV
+					tag = ENG
+				}
 			}
-			has_completed_focus = GER_danzig_or_war
+			GER = {
+				has_completed_focus = GER_danzig_or_war
+			}
 		}
 		NOT = {
 			OR = {
+				is_puppet_of = JAP
 				tag = JAP
 				is_legit_china = yes
 				tag = CHI
@@ -1197,6 +1356,7 @@ production_unit_95_ratios = {
 		NOT = {
 			NOT = {
 				OR = {
+					is_puppet_of = JAP
 					tag = JAP
 					is_legit_china = yes
 					tag = CHI
@@ -1238,12 +1398,19 @@ production_unit_100_ratios = {
 	enable = {
 		OR = {
 			NOT = {
-				tag = GER
+				OR = {
+					tag = GER
+					tag = SOV
+					tag = ENG
+				}
 			}
-			has_completed_focus = GER_danzig_or_war
+			GER = {
+				has_completed_focus = GER_danzig_or_war
+			}
 		}
 		NOT = {
 			OR = {
+				is_puppet_of = JAP
 				tag = JAP
 				is_legit_china = yes
 				tag = CHI
@@ -1258,6 +1425,7 @@ production_unit_100_ratios = {
 		NOT = {
 			NOT = {
 				OR = {
+					is_puppet_of = JAP
 					tag = JAP
 					is_legit_china = yes
 					tag = CHI
@@ -1299,12 +1467,19 @@ production_unit_105_ratios = {
 	enable = {
 		OR = {
 			NOT = {
-				tag = GER
+				OR = {
+					tag = GER
+					tag = SOV
+					tag = ENG
+				}
 			}
-			has_completed_focus = GER_danzig_or_war
+			GER = {
+				has_completed_focus = GER_danzig_or_war
+			}
 		}
 		NOT = {
 			OR = {
+				is_puppet_of = JAP
 				tag = JAP
 				is_legit_china = yes
 				tag = CHI
@@ -1319,6 +1494,7 @@ production_unit_105_ratios = {
 		NOT = {
 			NOT = {
 				OR = {
+					is_puppet_of = JAP
 					tag = JAP
 					is_legit_china = yes
 					tag = CHI
@@ -1360,12 +1536,19 @@ production_unit_110_ratios = {
 	enable = {
 		OR = {
 			NOT = {
-				tag = GER
+				OR = {
+					tag = GER
+					tag = SOV
+					tag = ENG
+				}
 			}
-			has_completed_focus = GER_danzig_or_war
+			GER = {
+				has_completed_focus = GER_danzig_or_war
+			}
 		}
 		NOT = {
 			OR = {
+				is_puppet_of = JAP
 				tag = JAP
 				is_legit_china = yes
 				tag = CHI
@@ -1380,6 +1563,7 @@ production_unit_110_ratios = {
 		NOT = {
 			NOT = {
 				OR = {
+					is_puppet_of = JAP
 					tag = JAP
 					is_legit_china = yes
 					tag = CHI
@@ -1421,12 +1605,19 @@ production_unit_115_ratios = {
 	enable = {
 		OR = {
 			NOT = {
-				tag = GER
+				OR = {
+					tag = GER
+					tag = SOV
+					tag = ENG
+				}
 			}
-			has_completed_focus = GER_danzig_or_war
+			GER = {
+				has_completed_focus = GER_danzig_or_war
+			}
 		}
 		NOT = {
 			OR = {
+				is_puppet_of = JAP
 				tag = JAP
 				is_legit_china = yes
 				tag = CHI
@@ -1441,6 +1632,7 @@ production_unit_115_ratios = {
 		NOT = {
 			NOT = {
 				OR = {
+					is_puppet_of = JAP
 					tag = JAP
 					is_legit_china = yes
 					tag = CHI
@@ -1482,12 +1674,19 @@ production_unit_120_ratios = {
 	enable = {
 		OR = {
 			NOT = {
-				tag = GER
+				OR = {
+					tag = GER
+					tag = SOV
+					tag = ENG
+				}
 			}
-			has_completed_focus = GER_danzig_or_war
+			GER = {
+				has_completed_focus = GER_danzig_or_war
+			}
 		}
 		NOT = {
 			OR = {
+				is_puppet_of = JAP
 				tag = JAP
 				is_legit_china = yes
 				tag = CHI
@@ -1502,6 +1701,7 @@ production_unit_120_ratios = {
 		NOT = {
 			NOT = {
 				OR = {
+					is_puppet_of = JAP
 					tag = JAP
 					is_legit_china = yes
 					tag = CHI
@@ -1543,12 +1743,19 @@ production_unit_125_ratios = {
 	enable = {
 		OR = {
 			NOT = {
-				tag = GER
+				OR = {
+					tag = GER
+					tag = SOV
+					tag = ENG
+				}
 			}
-			has_completed_focus = GER_danzig_or_war
+			GER = {
+				has_completed_focus = GER_danzig_or_war
+			}
 		}
 		NOT = {
 			OR = {
+				is_puppet_of = JAP
 				tag = JAP
 				is_legit_china = yes
 				tag = CHI
@@ -1563,6 +1770,7 @@ production_unit_125_ratios = {
 		NOT = {
 			NOT = {
 				OR = {
+					is_puppet_of = JAP
 					tag = JAP
 					is_legit_china = yes
 					tag = CHI
@@ -1604,12 +1812,19 @@ production_unit_130_ratios = {
 	enable = {
 		OR = {
 			NOT = {
-				tag = GER
+				OR = {
+					tag = GER
+					tag = SOV
+					tag = ENG
+				}
 			}
-			has_completed_focus = GER_danzig_or_war
+			GER = {
+				has_completed_focus = GER_danzig_or_war
+			}
 		}
 		NOT = {
 			OR = {
+				is_puppet_of = JAP
 				tag = JAP
 				is_legit_china = yes
 				tag = CHI
@@ -1624,6 +1839,7 @@ production_unit_130_ratios = {
 		NOT = {
 			NOT = {
 				OR = {
+					is_puppet_of = JAP
 					tag = JAP
 					is_legit_china = yes
 					tag = CHI
@@ -1665,12 +1881,19 @@ production_unit_135_ratios = {
 	enable = {
 		OR = {
 			NOT = {
-				tag = GER
+				OR = {
+					tag = GER
+					tag = SOV
+					tag = ENG
+				}
 			}
-			has_completed_focus = GER_danzig_or_war
+			GER = {
+				has_completed_focus = GER_danzig_or_war
+			}
 		}
 		NOT = {
 			OR = {
+				is_puppet_of = JAP
 				tag = JAP
 				is_legit_china = yes
 				tag = CHI
@@ -1685,6 +1908,7 @@ production_unit_135_ratios = {
 		NOT = {
 			NOT = {
 				OR = {
+					is_puppet_of = JAP
 					tag = JAP
 					is_legit_china = yes
 					tag = CHI
@@ -1726,12 +1950,19 @@ production_unit_140_ratios = {
 	enable = {
 		OR = {
 			NOT = {
-				tag = GER
+				OR = {
+					tag = GER
+					tag = SOV
+					tag = ENG
+				}
 			}
-			has_completed_focus = GER_danzig_or_war
+			GER = {
+				has_completed_focus = GER_danzig_or_war
+			}
 		}
 		NOT = {
 			OR = {
+				is_puppet_of = JAP
 				tag = JAP
 				is_legit_china = yes
 				tag = CHI
@@ -1746,6 +1977,7 @@ production_unit_140_ratios = {
 		NOT = {
 			NOT = {
 				OR = {
+					is_puppet_of = JAP
 					tag = JAP
 					is_legit_china = yes
 					tag = CHI
@@ -1787,12 +2019,19 @@ production_unit_145_ratios = {
 	enable = {
 		OR = {
 			NOT = {
-				tag = GER
+				OR = {
+					tag = GER
+					tag = SOV
+					tag = ENG
+				}
 			}
-			has_completed_focus = GER_danzig_or_war
+			GER = {
+				has_completed_focus = GER_danzig_or_war
+			}
 		}
 		NOT = {
 			OR = {
+				is_puppet_of = JAP
 				tag = JAP
 				is_legit_china = yes
 				tag = CHI
@@ -1807,6 +2046,7 @@ production_unit_145_ratios = {
 		NOT = {
 			NOT = {
 				OR = {
+					is_puppet_of = JAP
 					tag = JAP
 					is_legit_china = yes
 					tag = CHI
@@ -1848,12 +2088,19 @@ production_unit_150_ratios = {
 	enable = {
 		OR = {
 			NOT = {
-				tag = GER
+				OR = {
+					tag = GER
+					tag = SOV
+					tag = ENG
+				}
 			}
-			has_completed_focus = GER_danzig_or_war
+			GER = {
+				has_completed_focus = GER_danzig_or_war
+			}
 		}
 		NOT = {
 			OR = {
+				is_puppet_of = JAP
 				tag = JAP
 				is_legit_china = yes
 				tag = CHI
@@ -1868,6 +2115,7 @@ production_unit_150_ratios = {
 		NOT = {
 			NOT = {
 				OR = {
+					is_puppet_of = JAP
 					tag = JAP
 					is_legit_china = yes
 					tag = CHI
@@ -1909,12 +2157,19 @@ production_unit_155_ratios = {
 	enable = {
 		OR = {
 			NOT = {
-				tag = GER
+				OR = {
+					tag = GER
+					tag = SOV
+					tag = ENG
+				}
 			}
-			has_completed_focus = GER_danzig_or_war
+			GER = {
+				has_completed_focus = GER_danzig_or_war
+			}
 		}
 		NOT = {
 			OR = {
+				is_puppet_of = JAP
 				tag = JAP
 				is_legit_china = yes
 				tag = CHI
@@ -1929,6 +2184,7 @@ production_unit_155_ratios = {
 		NOT = {
 			NOT = {
 				OR = {
+					is_puppet_of = JAP
 					tag = JAP
 					is_legit_china = yes
 					tag = CHI
@@ -1970,12 +2226,19 @@ production_unit_160_ratios = {
 	enable = {
 		OR = {
 			NOT = {
-				tag = GER
+				OR = {
+					tag = GER
+					tag = SOV
+					tag = ENG
+				}
 			}
-			has_completed_focus = GER_danzig_or_war
+			GER = {
+				has_completed_focus = GER_danzig_or_war
+			}
 		}
 		NOT = {
 			OR = {
+				is_puppet_of = JAP
 				tag = JAP
 				is_legit_china = yes
 				tag = CHI
@@ -1990,6 +2253,7 @@ production_unit_160_ratios = {
 		NOT = {
 			NOT = {
 				OR = {
+					is_puppet_of = JAP
 					tag = JAP
 					is_legit_china = yes
 					tag = CHI
@@ -2031,12 +2295,19 @@ production_unit_165_ratios = {
 	enable = {
 		OR = {
 			NOT = {
-				tag = GER
+				OR = {
+					tag = GER
+					tag = SOV
+					tag = ENG
+				}
 			}
-			has_completed_focus = GER_danzig_or_war
+			GER = {
+				has_completed_focus = GER_danzig_or_war
+			}
 		}
 		NOT = {
 			OR = {
+				is_puppet_of = JAP
 				tag = JAP
 				is_legit_china = yes
 				tag = CHI
@@ -2051,6 +2322,7 @@ production_unit_165_ratios = {
 		NOT = {
 			NOT = {
 				OR = {
+					is_puppet_of = JAP
 					tag = JAP
 					is_legit_china = yes
 					tag = CHI
@@ -2092,12 +2364,19 @@ production_unit_170_ratios = {
 	enable = {
 		OR = {
 			NOT = {
-				tag = GER
+				OR = {
+					tag = GER
+					tag = SOV
+					tag = ENG
+				}
 			}
-			has_completed_focus = GER_danzig_or_war
+			GER = {
+				has_completed_focus = GER_danzig_or_war
+			}
 		}
 		NOT = {
 			OR = {
+				is_puppet_of = JAP
 				tag = JAP
 				is_legit_china = yes
 				tag = CHI
@@ -2112,6 +2391,7 @@ production_unit_170_ratios = {
 		NOT = {
 			NOT = {
 				OR = {
+					is_puppet_of = JAP
 					tag = JAP
 					is_legit_china = yes
 					tag = CHI
@@ -2153,12 +2433,19 @@ production_unit_175_ratios = {
 	enable = {
 		OR = {
 			NOT = {
-				tag = GER
+				OR = {
+					tag = GER
+					tag = SOV
+					tag = ENG
+				}
 			}
-			has_completed_focus = GER_danzig_or_war
+			GER = {
+				has_completed_focus = GER_danzig_or_war
+			}
 		}
 		NOT = {
 			OR = {
+				is_puppet_of = JAP
 				tag = JAP
 				is_legit_china = yes
 				tag = CHI
@@ -2173,6 +2460,7 @@ production_unit_175_ratios = {
 		NOT = {
 			NOT = {
 				OR = {
+					is_puppet_of = JAP
 					tag = JAP
 					is_legit_china = yes
 					tag = CHI
@@ -2214,12 +2502,19 @@ production_unit_180_ratios = {
 	enable = {
 		OR = {
 			NOT = {
-				tag = GER
+				OR = {
+					tag = GER
+					tag = SOV
+					tag = ENG
+				}
 			}
-			has_completed_focus = GER_danzig_or_war
+			GER = {
+				has_completed_focus = GER_danzig_or_war
+			}
 		}
 		NOT = {
 			OR = {
+				is_puppet_of = JAP
 				tag = JAP
 				is_legit_china = yes
 				tag = CHI
@@ -2234,6 +2529,7 @@ production_unit_180_ratios = {
 		NOT = {
 			NOT = {
 				OR = {
+					is_puppet_of = JAP
 					tag = JAP
 					is_legit_china = yes
 					tag = CHI
@@ -2275,12 +2571,19 @@ production_unit_185_ratios = {
 	enable = {
 		OR = {
 			NOT = {
-				tag = GER
+				OR = {
+					tag = GER
+					tag = SOV
+					tag = ENG
+				}
 			}
-			has_completed_focus = GER_danzig_or_war
+			GER = {
+				has_completed_focus = GER_danzig_or_war
+			}
 		}
 		NOT = {
 			OR = {
+				is_puppet_of = JAP
 				tag = JAP
 				is_legit_china = yes
 				tag = CHI
@@ -2295,6 +2598,7 @@ production_unit_185_ratios = {
 		NOT = {
 			NOT = {
 				OR = {
+					is_puppet_of = JAP
 					tag = JAP
 					is_legit_china = yes
 					tag = CHI
@@ -2336,12 +2640,19 @@ production_unit_190_ratios = {
 	enable = {
 		OR = {
 			NOT = {
-				tag = GER
+				OR = {
+					tag = GER
+					tag = SOV
+					tag = ENG
+				}
 			}
-			has_completed_focus = GER_danzig_or_war
+			GER = {
+				has_completed_focus = GER_danzig_or_war
+			}
 		}
 		NOT = {
 			OR = {
+				is_puppet_of = JAP
 				tag = JAP
 				is_legit_china = yes
 				tag = CHI
@@ -2356,6 +2667,7 @@ production_unit_190_ratios = {
 		NOT = {
 			NOT = {
 				OR = {
+					is_puppet_of = JAP
 					tag = JAP
 					is_legit_china = yes
 					tag = CHI
@@ -2397,12 +2709,19 @@ production_unit_195_ratios = {
 	enable = {
 		OR = {
 			NOT = {
-				tag = GER
+				OR = {
+					tag = GER
+					tag = SOV
+					tag = ENG
+				}
 			}
-			has_completed_focus = GER_danzig_or_war
+			GER = {
+				has_completed_focus = GER_danzig_or_war
+			}
 		}
 		NOT = {
 			OR = {
+				is_puppet_of = JAP
 				tag = JAP
 				is_legit_china = yes
 				tag = CHI
@@ -2417,6 +2736,7 @@ production_unit_195_ratios = {
 		NOT = {
 			NOT = {
 				OR = {
+					is_puppet_of = JAP
 					tag = JAP
 					is_legit_china = yes
 					tag = CHI
@@ -2458,12 +2778,19 @@ production_unit_200_ratios = {
 	enable = {
 		OR = {
 			NOT = {
-				tag = GER
+				OR = {
+					tag = GER
+					tag = SOV
+					tag = ENG
+				}
 			}
-			has_completed_focus = GER_danzig_or_war
+			GER = {
+				has_completed_focus = GER_danzig_or_war
+			}
 		}
 		NOT = {
 			OR = {
+				is_puppet_of = JAP
 				tag = JAP
 				is_legit_china = yes
 				tag = CHI
@@ -2478,6 +2805,7 @@ production_unit_200_ratios = {
 		NOT = {
 			NOT = {
 				OR = {
+					is_puppet_of = JAP
 					tag = JAP
 					is_legit_china = yes
 					tag = CHI
@@ -2519,12 +2847,19 @@ production_unit_205_ratios = {
 	enable = {
 		OR = {
 			NOT = {
-				tag = GER
+				OR = {
+					tag = GER
+					tag = SOV
+					tag = ENG
+				}
 			}
-			has_completed_focus = GER_danzig_or_war
+			GER = {
+				has_completed_focus = GER_danzig_or_war
+			}
 		}
 		NOT = {
 			OR = {
+				is_puppet_of = JAP
 				tag = JAP
 				is_legit_china = yes
 				tag = CHI
@@ -2539,6 +2874,7 @@ production_unit_205_ratios = {
 		NOT = {
 			NOT = {
 				OR = {
+					is_puppet_of = JAP
 					tag = JAP
 					is_legit_china = yes
 					tag = CHI
@@ -2580,12 +2916,19 @@ production_unit_210_ratios = {
 	enable = {
 		OR = {
 			NOT = {
-				tag = GER
+				OR = {
+					tag = GER
+					tag = SOV
+					tag = ENG
+				}
 			}
-			has_completed_focus = GER_danzig_or_war
+			GER = {
+				has_completed_focus = GER_danzig_or_war
+			}
 		}
 		NOT = {
 			OR = {
+				is_puppet_of = JAP
 				tag = JAP
 				is_legit_china = yes
 				tag = CHI
@@ -2600,6 +2943,7 @@ production_unit_210_ratios = {
 		NOT = {
 			NOT = {
 				OR = {
+					is_puppet_of = JAP
 					tag = JAP
 					is_legit_china = yes
 					tag = CHI
@@ -2641,12 +2985,19 @@ production_unit_215_ratios = {
 	enable = {
 		OR = {
 			NOT = {
-				tag = GER
+				OR = {
+					tag = GER
+					tag = SOV
+					tag = ENG
+				}
 			}
-			has_completed_focus = GER_danzig_or_war
+			GER = {
+				has_completed_focus = GER_danzig_or_war
+			}
 		}
 		NOT = {
 			OR = {
+				is_puppet_of = JAP
 				tag = JAP
 				is_legit_china = yes
 				tag = CHI
@@ -2661,6 +3012,7 @@ production_unit_215_ratios = {
 		NOT = {
 			NOT = {
 				OR = {
+					is_puppet_of = JAP
 					tag = JAP
 					is_legit_china = yes
 					tag = CHI
@@ -2702,12 +3054,19 @@ production_unit_220_ratios = {
 	enable = {
 		OR = {
 			NOT = {
-				tag = GER
+				OR = {
+					tag = GER
+					tag = SOV
+					tag = ENG
+				}
 			}
-			has_completed_focus = GER_danzig_or_war
+			GER = {
+				has_completed_focus = GER_danzig_or_war
+			}
 		}
 		NOT = {
 			OR = {
+				is_puppet_of = JAP
 				tag = JAP
 				is_legit_china = yes
 				tag = CHI
@@ -2722,6 +3081,7 @@ production_unit_220_ratios = {
 		NOT = {
 			NOT = {
 				OR = {
+					is_puppet_of = JAP
 					tag = JAP
 					is_legit_china = yes
 					tag = CHI
@@ -2763,12 +3123,19 @@ production_unit_225_ratios = {
 	enable = {
 		OR = {
 			NOT = {
-				tag = GER
+				OR = {
+					tag = GER
+					tag = SOV
+					tag = ENG
+				}
 			}
-			has_completed_focus = GER_danzig_or_war
+			GER = {
+				has_completed_focus = GER_danzig_or_war
+			}
 		}
 		NOT = {
 			OR = {
+				is_puppet_of = JAP
 				tag = JAP
 				is_legit_china = yes
 				tag = CHI
@@ -2783,6 +3150,7 @@ production_unit_225_ratios = {
 		NOT = {
 			NOT = {
 				OR = {
+					is_puppet_of = JAP
 					tag = JAP
 					is_legit_china = yes
 					tag = CHI
@@ -2824,12 +3192,19 @@ production_unit_230_ratios = {
 	enable = {
 		OR = {
 			NOT = {
-				tag = GER
+				OR = {
+					tag = GER
+					tag = SOV
+					tag = ENG
+				}
 			}
-			has_completed_focus = GER_danzig_or_war
+			GER = {
+				has_completed_focus = GER_danzig_or_war
+			}
 		}
 		NOT = {
 			OR = {
+				is_puppet_of = JAP
 				tag = JAP
 				is_legit_china = yes
 				tag = CHI
@@ -2844,6 +3219,7 @@ production_unit_230_ratios = {
 		NOT = {
 			NOT = {
 				OR = {
+					is_puppet_of = JAP
 					tag = JAP
 					is_legit_china = yes
 					tag = CHI
@@ -2885,12 +3261,19 @@ production_unit_235_ratios = {
 	enable = {
 		OR = {
 			NOT = {
-				tag = GER
+				OR = {
+					tag = GER
+					tag = SOV
+					tag = ENG
+				}
 			}
-			has_completed_focus = GER_danzig_or_war
+			GER = {
+				has_completed_focus = GER_danzig_or_war
+			}
 		}
 		NOT = {
 			OR = {
+				is_puppet_of = JAP
 				tag = JAP
 				is_legit_china = yes
 				tag = CHI
@@ -2905,6 +3288,7 @@ production_unit_235_ratios = {
 		NOT = {
 			NOT = {
 				OR = {
+					is_puppet_of = JAP
 					tag = JAP
 					is_legit_china = yes
 					tag = CHI
@@ -2946,12 +3330,19 @@ production_unit_240_ratios = {
 	enable = {
 		OR = {
 			NOT = {
-				tag = GER
+				OR = {
+					tag = GER
+					tag = SOV
+					tag = ENG
+				}
 			}
-			has_completed_focus = GER_danzig_or_war
+			GER = {
+				has_completed_focus = GER_danzig_or_war
+			}
 		}
 		NOT = {
 			OR = {
+				is_puppet_of = JAP
 				tag = JAP
 				is_legit_china = yes
 				tag = CHI
@@ -2966,6 +3357,7 @@ production_unit_240_ratios = {
 		NOT = {
 			NOT = {
 				OR = {
+					is_puppet_of = JAP
 					tag = JAP
 					is_legit_china = yes
 					tag = CHI
@@ -3007,12 +3399,19 @@ production_unit_245_ratios = {
 	enable = {
 		OR = {
 			NOT = {
-				tag = GER
+				OR = {
+					tag = GER
+					tag = SOV
+					tag = ENG
+				}
 			}
-			has_completed_focus = GER_danzig_or_war
+			GER = {
+				has_completed_focus = GER_danzig_or_war
+			}
 		}
 		NOT = {
 			OR = {
+				is_puppet_of = JAP
 				tag = JAP
 				is_legit_china = yes
 				tag = CHI
@@ -3027,6 +3426,7 @@ production_unit_245_ratios = {
 		NOT = {
 			NOT = {
 				OR = {
+					is_puppet_of = JAP
 					tag = JAP
 					is_legit_china = yes
 					tag = CHI
@@ -3068,12 +3468,19 @@ production_unit_250_ratios = {
 	enable = {
 		OR = {
 			NOT = {
-				tag = GER
+				OR = {
+					tag = GER
+					tag = SOV
+					tag = ENG
+				}
 			}
-			has_completed_focus = GER_danzig_or_war
+			GER = {
+				has_completed_focus = GER_danzig_or_war
+			}
 		}
 		NOT = {
 			OR = {
+				is_puppet_of = JAP
 				tag = JAP
 				is_legit_china = yes
 				tag = CHI
@@ -3088,6 +3495,7 @@ production_unit_250_ratios = {
 		NOT = {
 			NOT = {
 				OR = {
+					is_puppet_of = JAP
 					tag = JAP
 					is_legit_china = yes
 					tag = CHI
@@ -3129,12 +3537,19 @@ production_unit_255_ratios = {
 	enable = {
 		OR = {
 			NOT = {
-				tag = GER
+				OR = {
+					tag = GER
+					tag = SOV
+					tag = ENG
+				}
 			}
-			has_completed_focus = GER_danzig_or_war
+			GER = {
+				has_completed_focus = GER_danzig_or_war
+			}
 		}
 		NOT = {
 			OR = {
+				is_puppet_of = JAP
 				tag = JAP
 				is_legit_china = yes
 				tag = CHI
@@ -3149,6 +3564,7 @@ production_unit_255_ratios = {
 		NOT = {
 			NOT = {
 				OR = {
+					is_puppet_of = JAP
 					tag = JAP
 					is_legit_china = yes
 					tag = CHI
@@ -3190,12 +3606,19 @@ production_unit_260_ratios = {
 	enable = {
 		OR = {
 			NOT = {
-				tag = GER
+				OR = {
+					tag = GER
+					tag = SOV
+					tag = ENG
+				}
 			}
-			has_completed_focus = GER_danzig_or_war
+			GER = {
+				has_completed_focus = GER_danzig_or_war
+			}
 		}
 		NOT = {
 			OR = {
+				is_puppet_of = JAP
 				tag = JAP
 				is_legit_china = yes
 				tag = CHI
@@ -3210,6 +3633,7 @@ production_unit_260_ratios = {
 		NOT = {
 			NOT = {
 				OR = {
+					is_puppet_of = JAP
 					tag = JAP
 					is_legit_china = yes
 					tag = CHI
@@ -3251,12 +3675,19 @@ production_unit_265_ratios = {
 	enable = {
 		OR = {
 			NOT = {
-				tag = GER
+				OR = {
+					tag = GER
+					tag = SOV
+					tag = ENG
+				}
 			}
-			has_completed_focus = GER_danzig_or_war
+			GER = {
+				has_completed_focus = GER_danzig_or_war
+			}
 		}
 		NOT = {
 			OR = {
+				is_puppet_of = JAP
 				tag = JAP
 				is_legit_china = yes
 				tag = CHI
@@ -3271,6 +3702,7 @@ production_unit_265_ratios = {
 		NOT = {
 			NOT = {
 				OR = {
+					is_puppet_of = JAP
 					tag = JAP
 					is_legit_china = yes
 					tag = CHI
@@ -3312,12 +3744,19 @@ production_unit_270_ratios = {
 	enable = {
 		OR = {
 			NOT = {
-				tag = GER
+				OR = {
+					tag = GER
+					tag = SOV
+					tag = ENG
+				}
 			}
-			has_completed_focus = GER_danzig_or_war
+			GER = {
+				has_completed_focus = GER_danzig_or_war
+			}
 		}
 		NOT = {
 			OR = {
+				is_puppet_of = JAP
 				tag = JAP
 				is_legit_china = yes
 				tag = CHI
@@ -3332,6 +3771,7 @@ production_unit_270_ratios = {
 		NOT = {
 			NOT = {
 				OR = {
+					is_puppet_of = JAP
 					tag = JAP
 					is_legit_china = yes
 					tag = CHI
@@ -3373,12 +3813,19 @@ production_unit_275_ratios = {
 	enable = {
 		OR = {
 			NOT = {
-				tag = GER
+				OR = {
+					tag = GER
+					tag = SOV
+					tag = ENG
+				}
 			}
-			has_completed_focus = GER_danzig_or_war
+			GER = {
+				has_completed_focus = GER_danzig_or_war
+			}
 		}
 		NOT = {
 			OR = {
+				is_puppet_of = JAP
 				tag = JAP
 				is_legit_china = yes
 				tag = CHI
@@ -3393,6 +3840,7 @@ production_unit_275_ratios = {
 		NOT = {
 			NOT = {
 				OR = {
+					is_puppet_of = JAP
 					tag = JAP
 					is_legit_china = yes
 					tag = CHI
@@ -3434,12 +3882,19 @@ production_unit_280_ratios = {
 	enable = {
 		OR = {
 			NOT = {
-				tag = GER
+				OR = {
+					tag = GER
+					tag = SOV
+					tag = ENG
+				}
 			}
-			has_completed_focus = GER_danzig_or_war
+			GER = {
+				has_completed_focus = GER_danzig_or_war
+			}
 		}
 		NOT = {
 			OR = {
+				is_puppet_of = JAP
 				tag = JAP
 				is_legit_china = yes
 				tag = CHI
@@ -3454,6 +3909,7 @@ production_unit_280_ratios = {
 		NOT = {
 			NOT = {
 				OR = {
+					is_puppet_of = JAP
 					tag = JAP
 					is_legit_china = yes
 					tag = CHI
@@ -3495,12 +3951,19 @@ production_unit_285_ratios = {
 	enable = {
 		OR = {
 			NOT = {
-				tag = GER
+				OR = {
+					tag = GER
+					tag = SOV
+					tag = ENG
+				}
 			}
-			has_completed_focus = GER_danzig_or_war
+			GER = {
+				has_completed_focus = GER_danzig_or_war
+			}
 		}
 		NOT = {
 			OR = {
+				is_puppet_of = JAP
 				tag = JAP
 				is_legit_china = yes
 				tag = CHI
@@ -3515,6 +3978,7 @@ production_unit_285_ratios = {
 		NOT = {
 			NOT = {
 				OR = {
+					is_puppet_of = JAP
 					tag = JAP
 					is_legit_china = yes
 					tag = CHI
@@ -3556,12 +4020,19 @@ production_unit_290_ratios = {
 	enable = {
 		OR = {
 			NOT = {
-				tag = GER
+				OR = {
+					tag = GER
+					tag = SOV
+					tag = ENG
+				}
 			}
-			has_completed_focus = GER_danzig_or_war
+			GER = {
+				has_completed_focus = GER_danzig_or_war
+			}
 		}
 		NOT = {
 			OR = {
+				is_puppet_of = JAP
 				tag = JAP
 				is_legit_china = yes
 				tag = CHI
@@ -3576,6 +4047,7 @@ production_unit_290_ratios = {
 		NOT = {
 			NOT = {
 				OR = {
+					is_puppet_of = JAP
 					tag = JAP
 					is_legit_china = yes
 					tag = CHI
@@ -3617,12 +4089,19 @@ production_unit_295_ratios = {
 	enable = {
 		OR = {
 			NOT = {
-				tag = GER
+				OR = {
+					tag = GER
+					tag = SOV
+					tag = ENG
+				}
 			}
-			has_completed_focus = GER_danzig_or_war
+			GER = {
+				has_completed_focus = GER_danzig_or_war
+			}
 		}
 		NOT = {
 			OR = {
+				is_puppet_of = JAP
 				tag = JAP
 				is_legit_china = yes
 				tag = CHI
@@ -3637,6 +4116,7 @@ production_unit_295_ratios = {
 		NOT = {
 			NOT = {
 				OR = {
+					is_puppet_of = JAP
 					tag = JAP
 					is_legit_china = yes
 					tag = CHI

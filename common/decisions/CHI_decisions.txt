@@ -179,6 +179,9 @@
 			icon = ger_mefo_bills
 			available = {
 				has_hyper_inflation = yes
+				NOT = {
+					has_idea = CHI_emergency_bailout
+				}
 			}
 			cost = 25
 			ai_will_do = {
@@ -209,7 +212,7 @@
 					has_completed_focus = WRL_forced_loans
 				}
 			}
-			days_re_enable = 100
+			#days_re_enable = 100
 			days_remove = 30
 			complete_effect = {
 			}
@@ -218,7 +221,7 @@
 			}
 			remove_effect = {
 				add_timed_idea = {
-					days = 50 idea = CHI_emergency_bailout
+					days = 70 idea = CHI_emergency_bailout
 				}
 				custom_effect_tooltip = blank_line
 				CHI_hyper_inflation_level_down = yes
