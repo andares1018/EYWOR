@@ -53,7 +53,11 @@ set_politics = {
 
 	parties = {
 		democratic = { 
-			popularity = 33
+			popularity = 20
+		}
+		
+		n_socialism = { 
+			popularity = 17
 		}
 
 		fascism = {
@@ -61,10 +65,10 @@ set_politics = {
 		}
 		
 		communism = {
-			popularity = 33
+			popularity = 13
 		}
 		neutrality = {
-			popularity = 34
+			popularity = 50
 		}		
 	}
 	ruling_party = neutrality
@@ -76,18 +80,7 @@ set_politics = {
 create_country_leader = {
 	name = "Onn Jaafar"
 	desc = ""
-	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_democracy.dds"
-	expire = "1953.3.1"
-	ideology = conservatism
-	traits = {
-		
-	}
-}
-
-create_country_leader = {
-	name = "Shenton Thomas"
-	desc = ""
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
+	picture = "gfx/leaders/MAL/Portrait_Malaysia_Onn_Jaafar.dds"
 	expire = "1953.3.1"
 	ideology = conservatism
 	traits = {
@@ -98,7 +91,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Lai Teck"
 	desc = ""
-	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_1.dds"
+	picture = "gfx/leaders/MAL/Portrait_Malaysia_Lai_Teck.dds"
 	expire = "1953.3.1"
 	ideology = marxism
 	traits = {
@@ -115,26 +108,17 @@ create_country_leader = {
 		
 	}
 }
-#create_country_leader = {
-#	name = "Christopher Dominic Ahearne"
-#	desc = ""
-#	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
-#	expire = "1953.3.1"
-#	ideology = despotism
-#	traits = {
-#		
-#	}
-#}
-#create_country_leader = {
-#	name = "Ibrahim Hj Yaacob" #this guy supported Japanese during the war, and was imprisoned for it, could be made fascist?
-##	desc = ""
-#	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_fascism.dds"
-#	expire = "1953.3.1"
-#	ideology = moderatism
-#	traits = {
-#		
-#	}
-#}
+
+create_country_leader = {
+	name = "Ibrahim Hj Yaacob" #this guy supported Japanese during the war, and was imprisoned for it, could be made fascist?
+	desc = ""
+	picture = "gfx/leaders/MAL/Portrait_Malaysia_Ibrahim_Hj_Yaacob.dds"
+	expire = "1953.3.1"
+	ideology = n_socialism_ideology
+	traits = {
+		
+	}
+}
 
 set_cosmetic_tag = MAL_UK # British Malaya
 
@@ -188,26 +172,30 @@ set_cosmetic_tag = MAL_UK # British Malaya
 	}
 	set_politics = {
 
-	parties = {
-		democratic = { 
-			popularity = 33
-		}
-
-		fascism = {
-			popularity = 0
-		}
+		parties = {
+			democratic = { 
+				popularity = 20
+			}
 		
-		communism = {
-			popularity = 33
+			n_socialism = { 
+				popularity = 17
+			}
+	
+			fascism = {
+				popularity = 0
+			}
+		
+			communism = {
+				popularity = 13
+			}
+			neutrality = {
+				popularity = 50
+			}		
 		}
-		neutrality = {
-			popularity = 34
-		}		
-	}
-	ruling_party = neutrality
-	last_election = "1935.11.14"
-	election_frequency = 48
-	elections_allowed = no
+		ruling_party = neutrality
+		last_election = "1935.11.14"
+		election_frequency = 48
+		elections_allowed = no
 	}
 }
 

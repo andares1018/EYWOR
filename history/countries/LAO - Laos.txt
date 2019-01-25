@@ -58,6 +58,13 @@ set_politics = {
 			popularity = 40
 		}
 	}
+	
+	ruling_party = neutrality
+	last_election = "1933.2.16"
+	election_frequency = 36
+	elections_allowed = yes
+	
+	
 }
 
 create_country_leader = {
