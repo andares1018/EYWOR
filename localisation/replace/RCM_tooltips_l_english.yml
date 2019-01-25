@@ -162,4 +162,4 @@
  commie_civil_war_tt:0 "The §YCommunist Supporters§! start a civil war.\n"
  has_taken_monetary_reform_decision_tt:0 "Has taken £decision_icon_small §HDecision§!: §HMonetary Reform§!.\n"
 
- country_color_change:0 "§YCountry's color will change to blue or red depending on the ruling ideologies.§!."
+ country_color_change:0 "§HCountry's color will change to blue or red depending on the ruling ideologies.§!.\n"

@@ -332,6 +332,7 @@ focus_tree = {
 		cost = 10.00
 		prerequisite = {
 			focus = WRL_fascist_coup
+			focus = WRL_reactionary_rule
 		}
 		prerequisite = {
 			focus = WRL_german_training_method
@@ -379,7 +380,6 @@ focus_tree = {
 				has_idea = neutrality_idea
 			}
 			is_in_faction = no
-			has_idea = CHI_german_coop
 		}
 		bypass = {
 			is_in_faction_with = GER
@@ -1344,12 +1344,6 @@ focus_tree = {
 			}
 		}
 		available = {
-			NOT = {
-				has_war_with = USA
-			}
-			NOT = {
-				has_war_with = ENG
-			}
 			democratic > 0.5
 		}
 
@@ -1395,7 +1389,7 @@ focus_tree = {
 			}
 			ENG = {
 				has_opinion = {
-					target = CHI
+					target = ROOT
 					value > 89
 				}
 			}
@@ -1404,7 +1398,6 @@ focus_tree = {
 				has_idea = neutrality_idea
 			}
 			is_in_faction = no
-			has_idea = CHI_new_equal_treaty
 		}
 		bypass = {
 			is_in_faction_with = ENG

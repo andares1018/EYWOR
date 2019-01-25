@@ -50,9 +50,12 @@
 						tag = CHI
 					}
 					has_completed_focus = CHI_reorganize_nra
-					else = {
-						has_completed_focus = WRL_reorganize_the_military
+				}
+				else_if = {
+					limit = {
+						is_originally_warlord = yes
 					}
+					has_completed_focus = WRL_reorganize_the_military
 				}
 			}
 			cost = 0
@@ -225,6 +228,33 @@
 				}
 				custom_effect_tooltip = blank_line
 				CHI_hyper_inflation_level_down = yes
+			}
+		}
+		CHI_fight_corruption = {
+			icon = ger_mefo_bills
+			available = {
+				has_idea = PRC_government_corruption
+				NOT = {
+					has_idea = CHI_ineffective_bureaucracy_warlord
+				}
+				is_legit_china = yes
+			}
+			ai_will_do = {
+				factor = 5
+			}
+			visible = {
+				has_idea = PRC_government_corruption
+				#tag = event_target:WTT_current_china_leader
+			}
+			#days_re_enable = 100
+			days_remove = 120
+			complete_effect = {
+			}
+			modifier = {
+				political_power_gain = -0.5
+			}
+			remove_effect = {
+				remove_ideas = PRC_government_corruption
 			}
 		}
 	}

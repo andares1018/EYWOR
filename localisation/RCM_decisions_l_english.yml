@@ -99,6 +99,9 @@
 monetary_reform_decision:0 "Monetary Reform"
 monetary_reform_decision_desc:0 "The Silver Standard economy that has served us for ceturies now due to the shortage of silver it has been rendered obsolete. A monetary reform can help us put our curreny on fiat money."
 
+CHI_fight_corruption:0 "Fight Corruption"
+CHI_fight_corruption_desc:0 "Corruption within our government is a blight on our national integrity. Effort needs to be made in order to rid our nation from such practices."
+
 RCM_communist_infiltration:0 "Partisan Offensive"
 RCM_communist_infiltration_desc:0 "In order to win the war against both the nationalists and the imperialists, a series of partisan activities will be launched against them. Once we've garnered enough support, up we rise!\n\n§YUnlocks the ability to spread communist partisan activities and launch operations.§!"
 send_in_the_partisans:0 "Send in the Partisans"
@@ -127,5 +130,3 @@ invade_indochina:0 "Strike the South"
 invade_indochina_desc:0 "Now the Soviet Union is at war with Germany, it's time to retake all of indochina!"
 PRC_specialized_training_decision:0 "Specialized Training Program"
 PRC_specialized_training_decision_desc:0 "Specialized training programs designed to train new reseachers. A batch of trained personnel will be ready and it will §Yallieviate the skilled personnel shortage every§! §G90§! §Ydays§!.\n"
-
-

@@ -79,6 +79,107 @@ ideas = {
 		}
 	}
 	country = {
+		#JAPANESE　PUPPET GOVERMENT ideas
+		JPG_illegal_regime_1 = {
+			name = CHI_illegal_regime
+			picture = generic_purge
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.5
+				war_support_factor = -0.65
+				surrender_limit = -0.35
+			}
+		}
+		JPG_illegal_regime_2 = {
+			name = CHI_illegal_regime
+			picture = generic_purge
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.4
+				war_support_factor = -0.52
+				surrender_limit = -0.28
+			}
+		}
+		JPG_illegal_regime_3 = {
+			name = CHI_illegal_regime
+			picture = generic_purge
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.3
+				war_support_factor = -0.39
+				surrender_limit = -0.21
+			}
+		}
+		JPG_illegal_regime_4 = {
+			name = CHI_illegal_regime
+			picture = generic_purge
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.2
+				war_support_factor = -0.26
+				surrender_limit = -0.14
+			}
+		}
+		JPG_illegal_regime_5 = {
+			name = CHI_illegal_regime
+			picture = generic_purge
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.13
+				surrender_limit = -0.07
+			}
+		}
 		#PRC com uprise
 		prepared_for_operation = {
 			picture = chi_war_of_resistance3

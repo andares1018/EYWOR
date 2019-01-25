@@ -1,0 +1,700 @@
+focus_tree = {
+	id = japan_puppet_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			OR = {
+				tag = RFM
+				tag = EHB
+			}
+
+		}
+	}
+	continuous_focus_position = { x = 1050 y = 50 }
+	default = no
+	focus = {
+		id = JPG_seek_japanese_support
+		icon = GFX_goal_reorg_JAP
+		cost = 10.00
+		x = 4
+		y = 0
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+
+			JAP = {
+				has_opinion = {
+					target = ROOT
+					value > 9
+				}
+			}
+			NOT = {
+				has_war_with = JAP
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			unlock_decision_category_tooltip = CHI_seek_japanese_support
+		}
+	}
+	focus = {
+		id = JPG_public_works
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = JPG_seek_japanese_support
+		}
+		x = 1
+		y = 1
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_ideas = CHI_public_works
+		}
+	}
+	focus = {
+		id = JPG_labor_reform
+		icon = GFX_goal_generic_construction2
+		cost = 10.00
+		prerequisite = {
+			focus = JPG_public_works
+		}
+		x = 0
+		y = 2
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_ideas = CHI_labor_reform
+		}
+	}
+	focus = {
+		id = JPG_take_what_we_can_take
+		icon = GFX_goal_generic_small_arms
+		cost = 10.00
+		prerequisite = {
+			focus = JPG_labor_reform
+		}
+		x = 0
+		y = 3
+		completion_reward = {
+			add_ideas = CHI_take_them_all
+		}
+	}
+	focus = {
+		id = JPG_war_taxes
+		icon = GFX_goal_generic_consumer_goods
+		cost = 10.00
+		prerequisite = {
+			focus = JPG_public_works
+		}
+		x = 3
+		y = 2
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_ideas = CHI_war_taxes
+		}
+	}
+	focus = {
+		id = JPG_personal_leadership
+		icon = GFX_goal_generic_political_pressure
+		cost = 10.00
+		prerequisite = {
+			focus = JPG_war_taxes
+		}
+		x = 2
+		y = 3
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_country_leader_trait = generallissimo
+		}
+	}
+	focus = {
+		id = JPG_military_indoctrination
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		prerequisite = {
+			focus = JPG_personal_leadership
+		}
+		x = 1
+		y = 4
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_political_power = -50
+			swap_ideas = {
+				remove_idea = JPG_illegal_regime_1
+				add_idea = JPG_illegal_regime_2
+			}
+		}
+		available = {
+			is_in_faction_with = JAP
+		}
+		bypass = {
+		}
+	}
+	focus = {
+		id = JPG_rural_militias
+		icon = GFX_goal_generic_military_sphere
+		cost = 10.00
+		prerequisite = {
+			focus = JPG_take_what_we_can_take
+		}
+		prerequisite = {
+			focus = JPG_military_indoctrination
+		}
+		x = 0
+		y = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_ideas = CHI_rural_militias
+		}
+	}
+	focus = {
+		id = JPG_cult_of_personality
+		icon = GFX_focus_generic_military_mission
+		cost = 10.00
+		prerequisite = {
+			focus = JPG_war_taxes
+		}
+		x = 4
+		y = 3
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+	focus = {
+		id = JPG_defensive_posture
+		icon = GFX_goal_generic_defence
+		cost = 10.00
+		prerequisite = {
+			focus = JPG_personal_leadership
+		}
+		prerequisite = {
+			focus = JPG_cult_of_personality
+		}
+		x = 3
+		y = 4
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_ideas = CHI_defensive_posture
+		}
+	}
+	focus = {
+		id = JPG_ban_communism
+		icon = GFX_focus_ger_bulwark_against_bolshevism
+		cost = 5.00
+		prerequisite = {
+			focus = JPG_cult_of_personality
+		}
+		x = 5
+		y = 4
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+				ideology = communism
+				popularity = -0.2
+			}
+			add_ideas = communism_banned
+		}
+		available = {
+		}
+		bypass = {
+		}
+	}
+	focus = {
+		id = JPG_government_reorganization
+		icon = GFX_assembly_const_focus
+		cost = 10.00
+		prerequisite = {
+			focus = JPG_ban_communism
+		}
+		x = 5
+		y = 5
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			remove_ideas = CHI_kmt
+		}
+		available = {
+		}
+		bypass = {
+			NOT = {
+				has_idea = CHI_kmt
+			}
+		}
+	}
+	focus = {
+		id = JPG_rapid_mobilization
+		icon = GFX_focus_generic_little_entente
+		cost = 10.00
+		prerequisite = {
+			focus = JPG_defensive_posture
+		}
+		prerequisite = {
+			focus = JPG_government_reorganization
+		}
+		prerequisite = {
+			focus = JPG_rural_militias
+		}
+		x = 3
+		y = 6
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		complete_tooltip = {
+		}
+		completion_reward = {
+			add_ideas = CHI_rapid_mobilization
+		}
+	}
+	focus = {
+		id = JPG_industrial_investment
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = JPG_seek_japanese_support
+		}
+		x = 7
+		y = 1
+		ai_will_do = {
+			factor = 4
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		complete_tooltip = {
+			random_state = {
+				limit = {
+					has_state_flag = JPG_industrial_investment_IC
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = JPG_industrial_investment_IC
+			}
+		}
+	}
+	focus = {
+		id = JPG_long_term_economic_planning
+		icon = GFX_focus_generic_industry_3
+		cost = 10.00
+		prerequisite = {
+			focus = JPG_industrial_investment
+		}
+		x = 6
+		y = 2
+		ai_will_do = {
+			factor = 4
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_ideas = CHI_long_term_economic_planning
+		}
+	}
+	focus = {
+		id = JPG_public_education_reform
+		icon = GFX_focus_generic_military_academy
+		cost = 10.00
+		prerequisite = {
+			focus = JPG_long_term_economic_planning
+		}
+		x = 7
+		y = 3
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = JPG_Faction_Research_jap
+		icon = GFX_goal_tfv_generic_tech_sharing
+		cost = 10.00
+		prerequisite = {
+			focus = JPG_heavy_weapons_development
+		}
+		prerequisite = {
+			focus = JPG_public_education_reform
+		}
+		x = 7
+		y = 6
+		available = {
+			OR = {
+				is_in_faction_with = SOV
+				is_in_faction_with = JAP
+				is_in_faction_with = GER
+				is_in_faction_with = USA
+				is_in_faction_with = ENG
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_dlc = "Together for Victory"
+				}
+				if = {
+					limit = {
+						is_in_faction_with = SOV
+					}
+					SOV = {
+						add_to_tech_sharing_group = comintern_research
+					}
+					add_to_tech_sharing_group = comintern_research
+					else = {
+						if = {
+							limit = {
+								is_in_faction_with = JAP
+								NOT = {
+									is_in_faction_with = GER
+								}
+							}
+							JAP = {
+								add_to_tech_sharing_group = japanese_research
+							}
+							add_to_tech_sharing_group = japanese_research
+							else = {
+								if = {
+									limit = {
+										is_in_faction_with = GER
+									}
+									GER = {
+										add_to_tech_sharing_group = axis_research
+									}
+									add_to_tech_sharing_group = axis_research
+									else = {
+										if = {
+											limit = {
+												is_in_faction_with = USA
+											}
+											USA = {
+												add_to_tech_sharing_group = us_research
+											}
+											add_to_tech_sharing_group = us_research
+											else = {
+												if = {
+													limit = {
+														is_in_faction_with = ENG
+													}
+													ENG = {
+														add_to_tech_sharing_group = commonwealth_research
+													}
+													add_to_tech_sharing_group = commonwealth_research
+													else = {
+														custom_effect_tooltip = CHI_Faction_Research_tt
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				else = {
+					add_tech_bonus = {
+						name = faction_bonus
+						bonus = 0.5
+						uses = 1
+						category = naval_equipment
+					}
+					add_tech_bonus = {
+						name = faction_bonus
+						bonus = 0.5
+						uses = 1
+						category = medium_air
+					}
+					add_tech_bonus = {
+						name = faction_bonus
+						bonus = 0.5
+						uses = 1
+						category = light_air
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = JPG_local_arms_production
+		icon = GFX_goal_generic_production
+		cost = 10.00
+		prerequisite = {
+			focus = JPG_industrial_investment
+		}
+		x = 8
+		y = 2
+		ai_will_do = {
+			factor = 4
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		complete_tooltip = {
+			random_state = {
+				limit = {
+					has_state_flag = CHI_local_arms_production_AF
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = CHI_local_arms_production_AF
+			}
+		}
+	}
+	focus = {
+		id = JPG_local_arms_development
+		icon = GFX_focus_secret_rearmament
+		cost = 10.00
+		prerequisite = {
+			focus = JPG_local_arms_production
+		}
+		x = 8
+		y = 4
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_tech_bonus = {
+				name = CHI_local_arms_development
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+	focus = {
+		id = JPG_heavy_weapons_development
+		icon = GFX_goal_generic_army_artillery
+		cost = 10.00
+		prerequisite = {
+			focus = JPG_local_arms_development
+		}
+		x = 8
+		y = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_tech_bonus = {
+				name = CHI_heavy_weapons_development
+				bonus = 0.5
+				uses = 1
+				category = artillery
+			}
+		}
+	}
+	focus = {
+		id = JPG_reorganization_of_the_regime
+		icon = GFX_goal_puppet_rrc
+		cost = 10.00
+		prerequisite = {
+			focus = JPG_rapid_mobilization
+		}
+		prerequisite = {
+			focus = JPG_Faction_Research_jap
+		}
+		x = 5
+		y = 7
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_subject = no
+			OR = {
+				neutrality > 0.5
+				communism > 0.5
+			}
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			every_state = {
+				limit = {
+					has_state_flag = is_chinese_states_flag
+				}
+				add_core_of = ROOT
+			}
+			country_event = {
+				id = rcmchina.360
+			}
+			if = {
+				limit = {
+					OR = {
+						has_government = communism
+						has_government = n_socialism
+						communism > 0.5
+						n_socialism > 0.5
+					}
+				}
+				load_focus_tree = warlord_generic_communist
+			}
+			else = {
+				load_focus_tree = warlord_generic_nationalist
+			}
+		}
+	}
+}
