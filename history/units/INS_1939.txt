@@ -1,0 +1,181 @@
+﻿division_template = {
+	name = "Infanterie Divisie"		# full Colonial Divisions (old equipment, low experience)
+	division_names_group = INS_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+}
+division_template = {
+	name = "KNIL Koloniale Garnizoen"		
+	# Note: originally formed in 1939
+	division_names_group = INS_GAR_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+	}
+}
+
+
+
+units = {
+	######## LAND OOB ########
+	##### Indonesian High Command #####
+	division = { # "IIIe Territoriaal Commando 'Borneo'"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 10237 #Balikapan/Borneo
+		division_template = "KNIL Koloniale Garnizoen"		
+		start_experience_factor = 0.0
+		start_equipment_factor = 0.3
+	}
+	
+	division = { # "Ie Territoriaal Commando 'Sumatra'"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 12268 #Palembang/Sumatra
+		division_template = "KNIL Koloniale Garnizoen"		
+		start_experience_factor = 0.0
+		start_equipment_factor = 0.3
+	}
+	division = { # "IIe Territoriaal Commando 'Sumatra'"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 4652 #Medan/Palembang
+		division_template = "KNIL Koloniale Garnizoen"		
+		start_experience_factor = 0.0
+		start_equipment_factor = 0.3
+	}
+	division = { # "IVe Territoriaal Commando 'Celebes'"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 10263 #Celebes
+		division_template = "KNIL Koloniale Garnizoen"		
+		start_experience_factor = 0.0
+		start_equipment_factor = 0.3
+	}
+### Java defense, replacing 3 full divisions at 1/3 strength
+	division = { # "Ie Divisie 'Java'"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 4608 #Java
+		division_template = "Infanterie Divisie"		
+		start_experience_factor = 0.2 #regulars
+		start_equipment_factor = 0.3
+	}
+
+	division = { # "IIe Divisie 'Java'"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 7642 #Java
+		division_template = "Infanterie Divisie"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+	}
+
+	division = { # "IIIe Divisie 'Java'"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 7381 #Java
+		division_template = "Infanterie Divisie"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+	}
+	
+	### EAST INDIES SQUADRON ###
+	navy = {				
+		name = "Nederlands-Indië Eskader"			
+		base = 7381 
+		location = 7381  # Batavia	
+		ship = { name = "HrMs Soerabaja" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = INS } }	}		
+		ship = { name = "HrMs Tromp" definition = light_cruiser equipment = { light_cruiser_3 = { amount = 1 owner = INS } } }
+		ship = { name = "HrMs De Ruyter" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = INS } } }
+		ship = { name = "HrMs Java" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = INS } } }
+		ship = { name = "HrMs Sumatra" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = INS } } }
+		# Torpedobootjager Divisie
+		ship = { name = "HrMs Van Ghent" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = INS } } }		
+		ship = { name = "HrMs Evertsen" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = INS } } }		
+		ship = { name = "HrMs Kortenaer" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = INS } } }		
+		ship = { name = "HrMs Piet Hein" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = INS } } }		
+		ship = { name = "HrMs Witte de With" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = INS } } }	
+		ship = { name = "HrMs Banckert" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = INS } } }	
+		ship = { name = "HrMs Van Nes" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = INS } } }	
+	}				
+	navy = {				
+		name = "Nederlands-Indië Onderzeeboot Smaldeel"			
+		base = 4608
+		location = 4608  # Soerbaja
+		ship = { name = "HrMs K-VII" definition = submarine equipment = { submarine_1 = { amount = 1 owner = INS } } }
+		ship = { name = "HrMs K-VIII" definition = submarine equipment = { submarine_1 = { amount = 1 owner = INS } } }
+		ship = { name = "HrMs K-X" definition = submarine equipment = { submarine_1 = { amount = 1 owner = INS } } }
+		# I Onderzeeboot Divisie
+		ship = { name = "HrMs K-XVII" definition = submarine equipment = { submarine_1 = { amount = 1 owner = INS version_name = "K-XIV Class" } } }
+		ship = { name = "HrMs K-XVIII" definition = submarine equipment = { submarine_1 = { amount = 1 owner = INS version_name = "K-XIV Class" } } }
+		# II Onderzeeboot Divisie
+		ship = { name = "HrMs K-IX" definition = submarine equipment = { submarine_1 = { amount = 1 owner = INS } } }
+		ship = { name = "HrMs K-XI" definition = submarine equipment = { submarine_1 = { amount = 1 owner = INS } } }
+		ship = { name = "HrMs K-XII" definition = submarine equipment = { submarine_1 = { amount = 1 owner = INS } } }
+		ship = { name = "HrMs K-XIII" definition = submarine equipment = { submarine_1 = { amount = 1 owner = INS } } }
+		# III Onderzeeboot Divisie
+		ship = { name = "HrMs K-XIV" definition = submarine equipment = { submarine_1 = { amount = 1 owner = INS version_name = "K-XIV Class" } } }
+		ship = { name = "HrMs K-XV" definition = submarine equipment = { submarine_1 = { amount = 1 owner = INS version_name = "K-XIV Class" } } }
+		ship = { name = "HrMs K-XVI" definition = submarine equipment = { submarine_1 = { amount = 1 owner = INS version_name = "K-XIV Class" } } }
+	}	
+
+}
+
+air_wings = {
+	# Militaire Luchtvaart van het Koninklijk Nederlands-Indisch Leger (ML-KNIL) #
+	673 = {																#  Celebes
+		fighter_equipment_1 = {	owner = "INS" amount = 36 }				# Fighter Group -- H-75A Hawks, CW-21 Interceptors
+		tac_bomber_equipment_0 = {	owner = "INS" creator = "USA" version_name = "Martin M166" amount = 27 }# Bomber Group -- Martin WH-3 (US B-10 Bolos, upgraded)
+		tac_bomber_equipment_0 = {	owner = "INS" creator = "USA" version_name = "Martin M166" amount = 27 }			# Bomber Group -- Martin WH-1/2s (US B-10 Bolos)
+	}
+}
+
+
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+
+instant_effect = {
+
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "INS"
+		}
+		requested_factories = 2
+		progress = 0.1
+		efficiency = 50
+	}
+
+}
+
+#################################

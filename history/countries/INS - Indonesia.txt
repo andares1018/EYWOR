@@ -13,6 +13,7 @@ set_technology = {
 	early_fighter = 1
 	early_bomber = 1
 	early_submarine = 1
+	basic_submarine = 1
 	basic_destroyer = 1
 	early_destroyer = 1
 	early_light_cruiser = 1
@@ -27,24 +28,28 @@ set_politics = {
 
 	parties = {
 		democratic = { 
-			popularity = 10
+			popularity = 27
+		}
+		
+		n_socialism = {
+			popularity = 7
 		}
 
 		fascism = {
-			popularity = 10
+			popularity = 1
 		}
 		
 		communism = {
-			popularity = 30
+			popularity = 3
 		}
 		neutrality = {
-			popularity = 50
+			popularity = 62
 		}
 	}
 	ruling_party = neutrality
 	last_election = "1935.11.14"
 	election_frequency = 48
-	elections_allowed = no
+	elections_allowed = yes
 }
 
 create_country_leader = {
@@ -52,7 +57,18 @@ create_country_leader = {
 	desc = ""
 	picture = "gfx/leaders/INS/Portrait_Indonesia_Sukarno.dds"
 	expire = "1953.3.1"
-	ideology = socialism #Marhaenism his own unique mix of stuff
+	ideology = n_socialism_ideology #Marhaenism his own unique mix of stuff
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
+	name = "Raden Soetomo" #Dies in 1938
+	desc = ""
+	picture = "gfx/leaders/INS/Portrait_Indonesia_Raden_Soetomo.dds"
+	expire = "1953.3.1"
+	ideology = conservatism 
 	traits = {
 		
 	}
@@ -61,7 +77,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Amir Sjarifuddin Harahap"
 	desc = ""
-	picture = "gfx/leaders/INS/Portrait_Asia_Generic_1.dds"
+	picture = "gfx/leaders/INS/Portrait_Indonesia_Amir_Sjarifoeddin_Harahap.dds"
 	expire = "1953.3.1"
 	ideology = marxism
 	traits = {
@@ -70,9 +86,9 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Suharto"
+	name = "Sekarmadji Maridjan Kartosoewirjo"
 	desc = ""
-	picture = "gfx/leaders/INS/Portrait_Indonesia_Suharto.dds"
+	picture = "gfx/leaders/INS/Portrait_Indonesia_Sekarmadji_Maridjan_Kartosoewirjo.dds"
 	expire = "1953.3.1"
 	ideology = fascism_ideology # except for no connection to catholicism, this party perfectly fits into falangism 
 	traits = {
@@ -92,6 +108,85 @@ create_country_leader = {
 }
 
 set_cosmetic_tag = INS_HOL # Netherlands East Indies
+
+create_corps_commander = { #Dies in a plane crash '1941
+	name = "Gerardus Johannes Berenschot"
+	picture = "Portrait_Indonesia_Gerardus_Johannes_Berenschot.dds"
+	traits = { career_officer infantry_officer organizer skilled_staffer }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 4
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "Hein ter Poorten"
+	picture = "Portrait_Indonesia_Hein_ter_Poorten.dds"
+	traits = { fortress_buster infantry_officer }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Simon Spoor"
+	picture = "Portrait_Indonesia_Simon_Spoor.dds"
+	traits = { career_officer organizer }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 4
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Roelof Overakker"
+	picture = "Portrait_Indonesia_Roelof_Overakker.dds"
+	traits = { commando }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Jacob Pesman"
+	picture = "Portrait_Indonesia_Jacob_Pesman.dds"
+	traits = { career_officer politically_connected }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Ludolph Hendrik van Oyen"
+	picture = "Portrait_Indonesia_Ludolph_Hendrik_van_Oyen.dds"
+	traits = { career_officer }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+### Ship Variants ###
+
+create_equipment_variant = {
+	name = "K-XIV Class"
+	type = submarine_1
+	upgrades = {
+		ship_reliability_upgrade = 2
+		sub_engine_upgrade = 2
+		sub_stealth_upgrade = 2
+		sub_torpedo_upgrade = 2
+	}
+}
 
 1939.1.1 = {
 	add_political_power = 1198
@@ -117,6 +212,13 @@ set_cosmetic_tag = INS_HOL # Netherlands East Indies
 		tech_recon = 1
 		infantry_weapons2 = 1
 		support_weapons = 1
+		
+		#navy
+		improved_light_cruiser = 1
+		
+		#air
+		fighter1 = 1
+		
 
 		#doctrines
 		air_superiority = 1
@@ -142,6 +244,28 @@ set_cosmetic_tag = INS_HOL # Netherlands East Indies
 		construction2 = 1
 		dispersed_industry = 1
 		dispersed_industry2 = 1
+	}
+	
+	create_country_leader = {
+		name = "Mohammad Husni Thamrin"
+		desc = ""
+		picture = "gfx/leaders/INS/Portrait_Indonesia_Mohammad_Husni_Thamrin.dds"
+		expire = "1953.3.1"
+		ideology = conservatism 
+		traits = {
+		
+		}
+	}
+	
+	create_country_leader = {
+		name = "A. T. van Starkenborgh Stachouwer"
+		desc = ""
+		picture = "gfx/leaders/INS/Portrait_Alidius_van_Starkenborgh_Stachouwer.dds"
+		expire = "1953.3.1"
+		ideology = despotism 
+		traits = {
+	
+		}
 	}
 }
 

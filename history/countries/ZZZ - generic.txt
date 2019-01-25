@@ -606,6 +606,197 @@ RAJ = {
 		elections_allowed = no
 	}
 }
+
+ENG = {
+	if = {
+		limit = {
+			has_dlc = "Together for Victory"
+		}
+		set_autonomy = {
+			target = SST
+			autonomous_state = autonomy_integrated_puppet
+			freedom_level = 0.6
+		}
+		else = {
+			puppet = SST
+		}
+	}
+}
+
+SST = {
+	set_politics = {
+
+		parties = {
+			democratic = { 
+				popularity = 30
+			}
+
+			fascism = {
+				popularity = 0
+			}
+		
+			n_socialism = {
+				popularity = 0
+			}
+		
+			communism = {
+				popularity = 0
+				#banned = no #default is no
+			}
+		
+			neutrality = { 
+				popularity = 70
+			}
+		}
+	
+		ruling_party = neutrality
+		last_election = "1936.1.1"
+		election_frequency = 48
+		elections_allowed = no
+	}
+}
+
+ENG = {
+	if = {
+		limit = {
+			has_dlc = "Together for Victory"
+		}
+		set_autonomy = {
+			target = MAL
+			autonomous_state = autonomy_integrated_puppet
+		}
+		else = {
+			puppet = MAL
+		}
+	}
+}
+
+MAL = {
+	set_politics = {
+
+		parties = {
+			democratic = { 
+				popularity = 20
+			}
+
+			fascism = {
+				popularity = 0
+			}
+		
+			n_socialism = {
+				popularity = 17
+			}
+		
+			communism = {
+				popularity = 13
+				#banned = no #default is no
+			}
+		
+			neutrality = { 
+				popularity = 50
+			}
+		}
+	
+		ruling_party = neutrality
+		last_election = "1936.1.1"
+		election_frequency = 48
+		elections_allowed = no
+	}
+}
+
+HOL = {
+	if = {
+		limit = {
+			has_dlc = "Together for Victory"
+		}
+		set_autonomy = {
+			target = INS
+			autonomous_state = autonomy_colony
+			freedom_level = 0.2
+		}
+		else = {
+			puppet = INS
+		}
+	}
+	
+	set_politics = {
+
+		parties = {
+			democratic = { 
+				popularity = 66
+			}
+
+			fascism = {
+				popularity = 1
+			}
+		
+			communism = {
+				popularity = 5
+			}
+			
+			n_socialism = {
+				popularity = 28
+			}
+		}
+	
+		ruling_party = democratic
+		last_election = "1933.4.26"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+	
+	create_country_leader = {
+		name = "Hendrikus Colijn"
+		desc = "POLITICS_HENDRIKUS_COLIJN_DESC"
+		picture = "Portrait_Netherlands_Hendrikus_Coljin.dds"
+		expire = "1965.1.1"
+		ideology = conservatism
+		traits = {
+			#
+		}
+	}
+	
+	create_country_leader = {
+		name = "Johann Willem Albarda"
+		desc = "POLITICS_JOHANN_ALBARDA_DESC"
+		picture = "Portrait_Netherlands_Dirk_Jan_de_Geer.dds"
+		expire = "1965.1.1"
+		ideology = n_socialism_ideology
+		traits = {
+			#
+		}
+	}
+}
+INS = {
+	set_politics = {
+
+		parties = {
+			democratic = { 
+				popularity = 27
+			}
+		
+			n_socialism = {
+				popularity = 7
+			}
+
+			fascism = {
+				popularity = 1
+			}
+		
+			communism = {
+				popularity = 3
+			}
+			neutrality = {
+				popularity = 62
+			}
+		}
+		ruling_party = neutrality
+		last_election = "1935.11.14"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+}
+
 ########1939.1.1
 1939.1.1 = {
 	NOR = {
@@ -728,6 +919,33 @@ RAJ = {
 			traits = {
 				
 			}
+		}
+	}
+	HOL = {
+		set_politics = {
+
+			parties = {
+				democratic = { 
+					popularity = 63
+				}
+
+				fascism = {
+					popularity = 4
+				}
+		
+				communism = {
+					popularity = 3
+				}
+			
+				n_socialism = {
+					popularity = 30
+				}
+			}
+	
+			ruling_party = democratic
+			last_election = "1937.5.26"
+			election_frequency = 48
+			elections_allowed = yes
 		}
 	}
 	every_country = {
