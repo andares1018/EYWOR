@@ -350,7 +350,11 @@ focus_tree = {
 				remove_state_core = 714
 				remove_state_core = 747
 			}
-			custom_effect_tooltip = increase_penalty_appeasement
+			#custom_effect_tooltip = increase_penalty_appeasement
+			swap_ideas = {
+				add_idea = appeasement_policy_2
+				remove_idea = appeasement_policy
+			}
 			custom_effect_tooltip = promise_remove_bs_cc
 		}
 		available = {
@@ -1272,13 +1276,13 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_political_power = 120
-			custom_effect_tooltip = decrease_penalty_appeasement
-			hidden_effect = {
+			#custom_effect_tooltip = decrease_penalty_appeasement
+			#hidden_effect = {
 				swap_ideas = {
 					remove_idea = appeasement_policy
 					add_idea = appeasement_policy_0
 				}
-			}
+			#}
 		}
 		bypass = {
 			NOT = {

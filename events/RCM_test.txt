@@ -20,10 +20,10 @@ country_event = {
 	#	days = 0
 	#}
 	immediate = {
-		
+
 	}
 	is_triggered_only = yes
-	option = { 
+	option = {
 		name = rcmtest.1.a
 	}
 }
@@ -33,12 +33,14 @@ country_event = {
 	picture = GFX_report_event_test
 	hidden = yes
 	trigger = {
-		is_originally_warlord = yes
+		is_in_faction_with = HPC
+
+		has_global_flag = joined_chi_HPC
 	}
 	immediate = {
 		add_offsite_building = { type = arms_factory level = 1 }
 	}
 	is_triggered_only = yes
-	option = { 
+	option = {
 	}
 }

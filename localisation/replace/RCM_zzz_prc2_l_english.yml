@@ -752,7 +752,7 @@
  Has_decent_or_better_recovery_tt:0 "Has made §Ydecent§! or §Yeven better§! recovery from §Ythe Long March§!"
  ### PRC ideas ###
  PRC_Isolated_status:0 "No Way Out"
- PRC_Isolated_status_desc:0 "The National Government and regional warlords have landlocked our controlled area. Moscow still does not want to start problems with the authorities in Nanking. Under such circumstances, it is extremely difficult for us to get assistance from the outside world."
+ PRC_Isolated_status_desc:0 "The National Government and regional warlords have landlocked our controlled area. Moscow still does not want to start problems with the authorities in Nanking. Under such circumstances, it is extremely difficult for us to get assistance from the outside world.\n--------------\n§RBorder the Soviet Union directly to remove these penalties.§!"
  PRC_Mobile_Warfare:0 "Battle of the World"
  PRC_Mobile_Warfare_desc:0 "Tactics of annihilating the enemy's viable forces with locally superior forces, and the Chinese Workers' and Peasants' Red Army will use tactical tactics to combat this tactic and shift its strategy until it can make a strategic battle."
  PRC_Mobile_Warfare_2:0 "Tactical Advantage"

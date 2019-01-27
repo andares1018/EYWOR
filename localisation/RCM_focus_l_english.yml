@@ -2,6 +2,9 @@
 #####JAPfocuses
  man_territorial_extension:0 "Territorial Extension"
  man_territorial_extension_desc:0 "Manchuria has always been the main focus for Kōdōha, and only by extending Japan proper into Manchuria can we shows the world the glory of our empire."
+ JAP_move_our_capital:0 "Move our Capital?"
+ JAP_move_our_capital_desc:0 "After our integration effort, we can finally announce that the Manchurian region is part of our core territories. Some people within our government proposed that moving our capital there can stregthen the stability of the region and even encourage investment and prosperity."
+ JAP_move_our_capital_tt:0 "\n§MMove our capital to Hsinking allows easier army deployment on mainland.§!"
  man_restore_the_empire:0 "Restore the Empire"
  man_restore_the_empire_desc:0 "Manchukuo has been preparing for independence for a period of time. Now it is time for us to help them restore their empire."
  man_independent_focus:0 "Manchuria Independence Movement"
@@ -51,7 +54,7 @@
  JAP_fortress_manchuria_focus:0 "Fortress Manchuria"
  JAP_fortress_manchuria_focus_desc:0 "Our territory in Manchuria is surrounded by enemies on several sides. The threats of the Soviets and the Chinese alike require a network of defenses to protect our interests."
  JAP_Sonno_Tokkan_focus:0 "Sonnō Tōkan"
- kodoha_purge_desc:0 "Only by "revering the Emperor and destroying the traitors" can we make sure the Japanese Empire prevail along with its glorious Emperor."
+ JAP_Sonno_Tokkan_focus_desc:0 "Only by "revering the Emperor and destroying the traitors" can we make sure the Japanese Empire prevail along with its glorious Emperor."
  showa_restoration_focus:0 "Showa Restoration"
  showa_restoration_focus_desc:0 "The Imperial Way Faction, aslo known as Kōdōha, has finally reclaimed power. It is now the time for Japan to have a true Emperor, an Emperor that truly controls his own Empire."
  our_national_socialism:0 "National Socialist of the East"

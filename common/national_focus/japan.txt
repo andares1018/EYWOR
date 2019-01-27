@@ -457,18 +457,18 @@ focus_tree = {
 		ai_will_do = {
 			factor = 50
 		}
-		select_effect = {
-			country_event = {
-				days = 25
-				id = rcmjapan.60
-			}
-		}
+		#select_effect = {
+		#	country_event = {
+		#		days = 25
+		#		id = rcmjapan.60
+		#	}
+		#}
 		completion_reward = {
-			effect_tooltip = {
-				country_event = {
-					id = rcmjapan.60
-				}
-			}
+			unlock_decision_category_tooltip = JAP_revise_hiro_san_decision_cat
+			custom_effect_tooltip = revise_terms_with_chi_for_alliance_tt
+			custom_effect_tooltip = blank_line
+			custom_effect_tooltip = blank_line
+			custom_effect_tooltip = pan_asianist_chance
 		}
 		bypass = {
 			hidden_trigger = {
@@ -477,16 +477,16 @@ focus_tree = {
 			has_global_flag = CHI_accept_san_hiro
 		}
 		available = {
-			NOT = {
+			NOT = {#
 				has_war_with = CHI
 			}
-			NOT = {
-				has_country_flag = china_refuses
-			}
+			#NOT = {
+			#	has_country_flag = china_refuses
+			#}
 		}
-		cancel = {
-			has_country_flag = china_refuses
-		}
+		#cancel = {
+		#	has_country_flag = china_refuses
+		#}
 	}
 	focus = {
 		id = man_infra
@@ -1702,7 +1702,7 @@ focus_tree = {
 	focus = {
 		id = JAP_unite_china_focus
 		icon = GFX_focus_chi_one_china_policy
-		cost = 10.00
+		cost = 20.00
 		prerequisite = {
 			focus = jap_revise_hiro_san
 		}
@@ -1726,6 +1726,10 @@ focus_tree = {
 		will_lead_to_war_with = TNG
 		will_lead_to_war_with = YUN
 		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = event_target:WTT_communist_china
+			}
 			custom_effect_tooltip = declare_war_on_all_warlords_tt
 			hidden_effect = {
 				every_other_country = {
@@ -1755,9 +1759,9 @@ focus_tree = {
 					}
 				}
 			}
-			add_political_power = 300
-			add_war_support = 0.2
-			add_stability = 0.1
+			add_political_power = 50
+			add_war_support = 0.05
+			add_stability = 0.05
 			hidden_effect = {
 				if = {
 					limit = {
@@ -1913,8 +1917,11 @@ focus_tree = {
 		available = {
 			MAN = {
 				compare_autonomy_progress_ratio < 0.25
+			}
+			MAN = {
 				has_idea = MAN_kwantung_veto
 			}
+
 		}
 		completion_reward = {
 			MAN = {
@@ -1934,6 +1941,32 @@ focus_tree = {
 					transfer_troops = yes
 				}
 			}
+		}
+	}
+	focus = {
+		id = JAP_move_our_capital
+		icon = GFX_focus_generic_industry_3
+		cost = 10.00
+		prerequisite = {
+			focus = man_territorial_extension
+		}
+		x = 0
+		y = 2
+		relative_position_id = man_integrate_focus
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			328 = {
+				is_owned_and_controlled_by = ROOT
+				is_core_of = ROOT
+			}
+		}
+		completion_reward = {
+			country_event = {
+				id = rcmjapan.111
+			}
+			custom_effect_tooltip = JAP_move_our_capital_tt
 		}
 	}
 	focus = {
@@ -1993,8 +2026,6 @@ focus_tree = {
 			#		type = puppet_wargoal_focus
 			#	}
 			#}
-			#else = {
-				#}
 
 			every_country = {
 				limit = {
@@ -2034,7 +2065,7 @@ focus_tree = {
 					}
 				}
 			}
-			if = {
+			if = { #to avoid AI don't declare
 				limit = {
 					is_ai = no
 				}

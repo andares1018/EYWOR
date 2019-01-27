@@ -1325,17 +1325,17 @@ PRC_border_conflict_NXM_select = {
 	custom_effect_tooltip = RCM_border_incident_delay_until_new_incident_180
 	NXM = {
 		country_event = { id = RCM_border_incident_defender_warning.1 hours = 1 }
-		activate_targeted_decision = { target = ROOT decision = RCM_border_conflict_incident_warning_defender }				
+		activate_targeted_decision = { target = ROOT decision = RCM_border_conflict_incident_warning_defender }
 	}
 }
 
 PRC_border_conflict_NXM = {
 	hidden_effect = {
 		var:NXM.defender_state_vs_@ROOT = {
-			save_event_target_as = defender_state 
+			save_event_target_as = defender_state
 		}
 		var:NXM.attacker_state_vs_@ROOT = {
-			save_event_target_as = attacker_state 
+			save_event_target_as = attacker_state
 		}
 		random_state = {
 			limit = {
@@ -1371,7 +1371,7 @@ PRC_border_conflict_NXM = {
 			on_lose = RCM_border_conflict_lost_attacker.1
 			on_cancel = RCM_border_conflict_canceled_attacker.1
 		}
-		
+
 		defender = {
 			state = var:NXM.defender_state_vs_@ROOT
 			num_provinces = 4
@@ -1445,16 +1445,16 @@ PRC_border_conflict_SHX_select = {
 	custom_effect_tooltip = RCM_border_incident_delay_until_new_incident_180
 	SHX = {
 		country_event = { id = RCM_border_incident_defender_warning.1 hours = 1 }
-		activate_targeted_decision = { target = ROOT decision = RCM_border_conflict_incident_warning_defender }				
+		activate_targeted_decision = { target = ROOT decision = RCM_border_conflict_incident_warning_defender }
 	}
 }
 PRC_border_conflict_SHX = {
 	hidden_effect = {
 		var:SHX.defender_state_vs_@ROOT = {
-			save_event_target_as = defender_state 
+			save_event_target_as = defender_state
 		}
 		var:SHX.attacker_state_vs_@ROOT = {
-			save_event_target_as = attacker_state 
+			save_event_target_as = attacker_state
 		}
 		random_state = {
 			limit = {
@@ -1490,7 +1490,7 @@ PRC_border_conflict_SHX = {
 			on_lose = RCM_border_conflict_lost_attacker.1
 			on_cancel = RCM_border_conflict_canceled_attacker.1
 		}
-		
+
 		defender = {
 			state = var:SHX.defender_state_vs_@ROOT
 			num_provinces = 4
@@ -1541,5 +1541,93 @@ PRC_personnel_shortage_down = {
 			has_idea = PRC_no_skilled_personnel_4
 		}
 		remove_ideas = PRC_no_skilled_personnel_4
+	}
+}
+remove_manchuria_cores_as_china = {
+	 every_state = {
+	 	limit = {
+	 		is_core_of = event_target:WTT_current_china_leader
+	 		OR = {
+	 			state = 612
+	 			state = 757
+	 			state = 747
+	 			is_manchuria_state = yes
+	 		}
+	 	}
+	 	remove_core_of = event_target:WTT_current_china_leader
+	 }
+ }
+JAP_remove_hostile_create_cmj_bloc_add_china_and_puppets_into_faction = {
+	remove_opinion_modifier = {
+		target = event_target:WTT_current_china_leader
+		modifier = hostile_status
+	}
+	#dismantle_faction = yes
+	create_faction = CHI_man_bloc
+	every_country = {
+		limit = {
+			is_puppet_of = JAP
+		}
+		JAP = {
+			add_to_faction = PREV
+		}
+	}
+	add_to_faction = event_target:WTT_current_china_leader
+}
+
+Puppet_HPC_Add_sino_jap_idea_Remove_hostile_Add_alliance_opinion_increase_appeasement = {
+	if = {
+		limit = {
+			has_dlc = "Together for Victory"
+		}
+		set_autonomy = {
+			target = HPC
+			autonomous_state = autonomy_integrated_puppet
+		}
+		else = {
+			puppet = HPC
+		}
+	}
+	add_ideas = sino_japanese_alliance
+	remove_opinion_modifier = {
+		target = JAP
+		modifier = hostile_status
+	}
+	add_opinion_modifier = { target = JAP modifier = sino_japanese_alliance_opinion }
+	if = {
+		limit = {
+			has_idea = appeasement_policy
+		}
+		swap_ideas = {
+			add_idea = appeasement_policy_2
+			remove_idea = appeasement_policy
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = appeasement_policy_0
+		}
+		swap_ideas = {
+			add_idea = appeasement_policy_2
+			remove_idea = appeasement_policy_0
+		}
+		else = {
+			add_ideas = appeasement_policy_2
+		}
+	}
+}
+
+integrated_puppet_HPC = {
+	if = {
+		limit = {
+			has_dlc = "Together for Victory"
+		}
+		set_autonomy = {
+			target = HPC
+			autonomous_state = autonomy_integrated_puppet
+		}
+		else = {
+			puppet = HPC
+		}
 	}
 }

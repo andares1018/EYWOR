@@ -5389,9 +5389,6 @@ focus_tree = {
 		icon = GFX_focus_generic_strike_at_democracy1
 		cost = 10.00
 		prerequisite = {
-			focus = PRC_military_dictatorship
-		}
-		prerequisite = {
 			focus = PRC_China_lead
 		}
 		x = 8

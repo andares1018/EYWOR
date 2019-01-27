@@ -1,3 +1,150 @@
+JAP_revise_hiro_san_decision_cat = {
+	JAP_negotiate_with_china = {
+
+		available = {
+			NOT = {
+				has_war_with = event_target:WTT_current_china_leader
+			}
+		}
+
+		target_trigger = {
+			#Target is FROM
+			FROM = {
+				tag = event_target:WTT_current_china_leader
+			}
+		}
+
+
+		visible = {
+			NOT = {
+				has_country_flag = JAP_give_up_alliance_with_china
+			}
+		}
+		days_remove = 30
+		#days_re_enable = 20
+		cost = 50
+
+		ai_will_do = {
+			factor = 400
+		}
+
+		complete_effect = {
+			country_event = {
+				id = rcmjapan.60
+			}
+		}
+	}
+	JAP_give_up_alliance_decision = {
+
+		available = {
+			NOT = {
+				has_war_with = event_target:WTT_current_china_leader
+			}
+		}
+		fire_only_once = yes
+		target_trigger = {
+			#Target is FROM
+			FROM = {
+				tag = event_target:WTT_current_china_leader
+			}
+		}
+
+
+		visible = {
+			NOT = {
+				has_country_flag = JAP_give_up_alliance_with_china
+			}
+			#has_country_flag = china_refuses
+		}
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = JAP_give_up_alliance_with_china_tt
+			set_country_flag = JAP_give_up_alliance_with_china
+		}
+	}
+	JAP_give_up_alliance_declare_war = {
+		available = {
+			NOT = {
+				has_global_flag = CHI_accept_san_hiro
+				has_idea = peace_talk_with_china
+				has_idea = officer_purged_jap
+			}
+		}
+		fire_only_once = yes
+		target_trigger = {
+			#Target is FROM
+			FROM = {
+				tag = event_target:WTT_current_china_leader
+			}
+		}
+		war_with_target_on_remove = yes
+		visible = {
+			has_country_flag = JAP_give_up_alliance_with_china
+			NOT = {
+				has_country_flag = JAP_give_up_alliance_non_aggression_flag
+			}
+		}
+		days_remove = 70
+		#days_re_enable = 20
+		cost = 0
+		modifier = {
+			political_power_gain = -1
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		complete_effect = {
+			set_global_flag = justifying_on_china
+			set_country_flag = JAP_give_up_alliance_declare_war_flag
+		}
+		remove_effect = {
+			complete_national_focus = JAP_intervene_in_china
+		}
+	}
+	JAP_give_up_alliance_non_aggression = {
+
+		available = {
+			NOT = {
+				has_war_with = event_target:WTT_current_china_leader
+			}
+		}
+		fire_only_once = yes
+		target_trigger = {
+			#Target is FROM
+			FROM = {
+				tag = event_target:WTT_current_china_leader
+			}
+		}
+		war_with_target_on_remove = no
+
+		visible = {
+			has_country_flag = JAP_give_up_alliance_with_china
+			NOT = {
+				has_country_flag = JAP_give_up_alliance_declare_war_flag
+			}
+		}
+		days_remove = 70
+		cost = 0
+		modifier = {
+			political_power_gain = -1
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		complete_effect = {
+			set_country_flag = JAP_give_up_alliance_non_aggression_flag
+		}
+		remove_effect = {
+			complete_national_focus = JAP_non_aggression_pact_with_china
+		}
+	}
+}
+
 foreign_politics = {
 
 	CHI_sue_for_peace_JAP = {

@@ -1870,9 +1870,80 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				war_support_factor = -0.15
+				war_support_factor = -0.5
+				stability_factor = -0.5
 			}
 		}
+		appeasement_policy_2_a = {
+			picture = generic_morale_bonus
+			name = appeasement_policy
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			removal_cost = -1
+			modifier = {
+				war_support_factor = -0.4
+				stability_factor = -0.4
+			}
+		}
+		appeasement_policy_2_b = {
+			picture = generic_morale_bonus
+			name = appeasement_policy
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			removal_cost = -1
+			modifier = {
+				war_support_factor = -0.3
+				stability_factor = -0.3
+			}
+		}
+		appeasement_policy_2_c = {
+			picture = generic_morale_bonus
+			name = appeasement_policy
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			removal_cost = -1
+			modifier = {
+				war_support_factor = -0.2
+				stability_factor = -0.2
+			}
+		}
+		appeasement_policy_2_d = {
+			picture = generic_morale_bonus
+			name = appeasement_policy
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			removal_cost = -1
+			modifier = {
+				war_support_factor = -0.1
+				stability_factor = -0.1
+			}
+		}
+
+
 		CHI_sunfall_sea	= {
 			allowed = {
 				always = no
@@ -3114,7 +3185,7 @@ ideas = {
 					is_in_faction_with = SHX
 					custom_trigger_tooltip = {
 						tooltip = joined_chi_SHX
-						has_global_flag = joined_chi_@SHX
+						has_global_flag = joined_chi_SHX
 					}
 				}
 			}
@@ -3138,7 +3209,7 @@ ideas = {
 					is_in_faction_with = GUD
 					custom_trigger_tooltip = {
 						tooltip = joined_chi_GUD
-						has_global_flag = joined_chi_@GUD
+						has_global_flag = joined_chi_GUD
 					}
 				}
 			}
@@ -3163,7 +3234,7 @@ ideas = {
 					is_in_faction_with = GXC
 					custom_trigger_tooltip = {
 						tooltip = joined_chi_GXC
-						has_global_flag = joined_chi_@GXC
+						has_global_flag = joined_chi_GXC
 					}
 				}
 			}
@@ -3187,7 +3258,7 @@ ideas = {
 					is_in_faction_with = HPC
 					custom_trigger_tooltip = {
 						tooltip = joined_chi_HPC
-						has_global_flag = joined_chi_@HPC
+						has_global_flag = joined_chi_HPC
 					}
 				}
 			}

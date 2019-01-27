@@ -70,6 +70,13 @@
  JAP_bribe_the_tokko_desc:0 "The political climate in Japan is very tense now. With the ever growing military and shady secret police, a political reform can never happen. However, we might be able to influence some of those groups to further our cause.\n\n§YTake this decision once or multiple times can lower the chance of Prime Minister's assassination in the case of a reform.§!"
  JAP_bribe_the_tokko_decision:0 "Influence the Tokkō"
  #JAP_bribe_the_tokko_decision_desc:0 "Influence the Tokkō"
+ JAP_revise_hiro_san_decision_cat:0 "Revise Hirota Sangensoku"
+ JAP_revise_hiro_san_decision_cat_desc:0 "§YNegotiate a deal with China.§!\n§WIn the deal, our government will§! §Rcede lands§! §Wor§! §Rcancel certain puppets§! §Win China in exchange for their §!§Galliance§! §Wand§! §Grecognition of Manchuria's independence§!§W.§!\n\n§YHaving§! §RPan-Asianists§! §MCabinet Ministers§! or §Yoffering the deal when China has a stronger§! §RAppeasement Policy§! would make China §Ymore willing§! to accept the alliance."
+ JAP_negotiate_with_china:0 "Negotiate with China"
+ JAP_give_up_alliance_decision:0 "Give up the Negotiation"
+ JAP_give_up_alliance_declare_war:0 "War with China"
+ JAP_give_up_alliance_non_aggression:0 "Non-aggression Pact with China"
+
  ###
  CHI_sue_for_peace_JAP:0 "Offer Peace to Japan"
  lushan_declaration:0 "Lushan Declaration"

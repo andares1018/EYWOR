@@ -371,6 +371,11 @@
  rcmjapan.107.t:0 "Japan Persues its "Strik-South" Doctrine"
  rcmjapan.107.d:0 "Some of our agents have found plenty of evidence suggesting the [JAP.GetName] is pursuing its "Strike-South" doctrines and mostly likely well launch an offensive operation against us. Also due to the recently-signed Tripartite Pact Between the German Riech and Japan, it will be very hard for us to call for help if they actually do launch an attack."
  rcmjapan.107.a:0 "This is not good!"
+ #
+ rcmjapan.111.t:0 "Move our Capital to Hsinking?"
+ rcmjapan.111.d:0 "After our integration effort, we can finally announce that the Manchurian region is part of our core territories. Some people within our government proposed that moving our capital there can stregthen the stability of the region and even encourage investment and prosperity. Should we proceed to move our capital to Hsinking?"
+ rcmjapan.111.a:0 "Sure! (Easier army deployment on mainland.)"
+ rcmjapan.111.b:0 "Not this time."
                     #################################
  ####===============######PUPPET STATES REBUILD######===============####
                     #################################

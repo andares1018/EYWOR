@@ -1,5 +1,5 @@
 #	Example:
-# 
+#
 #	example_trigger = {
 #		tag = GER
 #		is_ai = no
@@ -11,7 +11,7 @@
 #	trigger = {
 #		example_trigger = yes
 #	}
-# 
+#
 #	THIS FILE IS FOR TRIGGERS SPECIFICALLY FOR THE CHI TAG
 
 is_potentially_communist_china = {
@@ -36,7 +36,7 @@ is_literally_china = {
 	}
 }
 is_chinese_warlord = {
-	OR = {		
+	OR = {
 		is_originally_warlord = yes
 		original_tag = SIK
 	}
@@ -63,7 +63,7 @@ check_has_focus_tree_to_switch_to_fascism = {
 
 check_has_focus_tree_to_switch_to_democratic = {
 	AND = {
-		NOT = { 
+		NOT = {
 			OR = {
 				has_idea = chiang
 				has_idea = chiang1
@@ -135,7 +135,7 @@ check_has_focus_tree_to_switch_to_democratic = {
 
 check_has_focus_tree_to_switch_to_communism = {
 	AND = {
-		NOT = { 
+		NOT = {
 			OR = {
 				has_idea = chiang
 				has_idea = chiang1
@@ -184,7 +184,7 @@ check_has_focus_tree_to_switch_to_communism = {
 
 check_has_focus_tree_to_switch_to_n_socialism = {
 	AND = {
-		NOT = { 
+		NOT = {
 			OR = {
 				has_idea = chiang
 				has_idea = chiang1
@@ -228,4 +228,82 @@ JAP_or_friend_controls_big_part_of_CHI_or_peace = {
 }
 
 ####
+one_among_three_ikki_kanji_appeasement = {
+	OR = {
+		event_target:WTT_current_china_leader = { has_idea = appeasement_policy }
+		JAP = { has_idea = ikki_kita }
+		JAP = { has_idea = kanji_ishiwara }
+	}
+	NOT = {
+		OR = {
+			AND = {
+				event_target:WTT_current_china_leader = { has_idea = appeasement_policy }
+				JAP = { has_idea = ikki_kita }
+			}
+			AND = {
+				JAP = { has_idea = ikki_kita }
+				JAP = { has_idea = kanji_ishiwara }
+			}
+			AND = {
+				event_target:WTT_current_china_leader = { has_idea = appeasement_policy }
+				JAP = { has_idea = kanji_ishiwara }
+			}
+		}
+	}
+	NOT = {
+		AND ={
+			event_target:WTT_current_china_leader = { has_idea = appeasement_policy }
+			JAP = { has_idea = ikki_kita }
+			JAP = { has_idea = kanji_ishiwara }
+		}
+	}
+}
 
+two_among_three_ikki_kanji_appeasement = {
+	OR = {
+		AND = {
+			event_target:WTT_current_china_leader = { has_idea = appeasement_policy }
+			JAP = { has_idea = ikki_kita }
+		}
+		AND = {
+			JAP = { has_idea = ikki_kita }
+			JAP = { has_idea = kanji_ishiwara }
+		}
+		AND = {
+			event_target:WTT_current_china_leader = { has_idea = appeasement_policy }
+			JAP = { has_idea = kanji_ishiwara }
+		}
+	}
+	NOT = {
+		AND ={
+			event_target:WTT_current_china_leader = { has_idea = appeasement_policy }
+			JAP = { has_idea = ikki_kita }
+			JAP = { has_idea = kanji_ishiwara }
+		}
+	}
+}
+
+all_three_ikki_kanji_appeasement = {
+	AND ={
+		event_target:WTT_current_china_leader = { has_idea = appeasement_policy }
+		JAP = { has_idea = ikki_kita }
+		JAP = { has_idea = kanji_ishiwara }
+	}
+}
+
+two_and_three_ikki_kanji_appeasement = {
+	OR = {
+		AND = {
+			event_target:WTT_current_china_leader = { has_idea = appeasement_policy }
+			JAP = { has_idea = ikki_kita }
+		}
+		AND = {
+			JAP = { has_idea = ikki_kita }
+			JAP = { has_idea = kanji_ishiwara }
+		}
+		AND = {
+			event_target:WTT_current_china_leader = { has_idea = appeasement_policy }
+			JAP = { has_idea = kanji_ishiwara }
+		}
+	}
+}

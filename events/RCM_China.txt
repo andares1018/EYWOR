@@ -661,6 +661,7 @@ country_event = {
 					is_in_faction = no
 					owns_state = 614
 					tag = SHD
+					tag = NEA
 				}
 				OR = {
 					has_war = no
@@ -671,7 +672,7 @@ country_event = {
 		}
 	}
 }
-# Japan attacks - Chinese Popular Front forms
+# Japan attacks - Chinese Popular Front forms( to warlords )
 country_event = {
 	id = rcmchina.101
 	title = rcmchina.101.t
@@ -683,19 +684,19 @@ country_event = {
 		set_country_flag = china101_fired
 	}
 
-	option = {#join united front (Sichuan)
+	option = { #join united front (Sichuan)
 		name = rcmchina.101.a
 		ai_chance = {
 			base = 0
 			modifier = {
-				factor = 100
-				tag = SIC
+				add = 100
+				AND = {
+					TAG = SIC
+					has_government = FROM
+				}
 			}
 		}
-		random_other_country = {
-			limit = {
-				is_legit_china = yes
-			}
+		FROM = {
 			if = {
 				limit = {
 					is_faction_leader = yes
@@ -724,12 +725,9 @@ country_event = {
 			}
 		}
 		custom_effect_tooltip = stop_subject_war_end_tt
-		add_to_war = { targeted_alliance = CHI enemy = JAP }
+		add_to_war = { targeted_alliance = FROM enemy = JAP }
 		hidden_effect = {
-			random_other_country = {
-				limit = {
-					is_legit_china = yes
-				}
+			FROM = {
 				country_event = { id = rcmchina.106 }
 			}
 		}
@@ -737,105 +735,93 @@ country_event = {
 	option = {#join united front (no puppet, default)
 		name = rcmchina.101.g
 		ai_chance = {
-			base = 0
+			factor = 100
 			modifier = {
-				factor = 100
-				NOT = {
-					OR = {
-						tag = HPC
-						tag = HMI
-						tag = TNG
-						tag = SHD
-						tag = NEA
-						tag = SIC
-					}
+				factor = 0
+				OR = {
+					TAG = HPC
+					TAG = HMI
+					TAG = TNG
+					TAG = SHD
+					TAG = NEA
+					TAG = SIC
 				}
 			}
 		}
-		random_other_country = {
-			limit = {
-				is_legit_china = yes
-			}
-			if = {
-				limit = {
-					is_faction_leader = yes
-				}
-				add_to_faction = ROOT
-				else = {
-					random_other_country = {
-						limit = {
-							is_in_faction_with = PREV
-							is_faction_leader = yes
-						}
-						add_to_faction = ROOT
-					}
-				}
-			}
-			#set_autonomy = {
-			#	target = ROOT
-			#	autonomous_state = autonomy_dominion
-			#	freedom_level = 0.1
-			#}
-			add_to_war = { targeted_alliance = CHI enemy = JAP }
+		FROM = {
+			add_to_faction = ROOT
 		}
+		add_to_war = { targeted_alliance = FROM enemy = JAP }
 		hidden_effect = {
-			random_other_country = {
-				limit = {
-					is_legit_china = yes
-				}
+			FROM = {
 				country_event = { id = rcmchina.106 }
 			}
 		}
 	}
 	option = {
-		name = rcmchina.101.b
+		name = rcmchina.101.b #annex
 		trigger = {
 			NOT = { TAG = SHD }
 			NOT = { TAG = HPC }
+			NOT = { TAG = NEA }
 		}
 		ai_chance = {
-			base = 0
-			modifier = {
-				factor = 100
-				tag = NEA
-			}
+			factor = 0
 		}
 		custom_effect_tooltip = GAME_OVER_TT
 		hidden_effect = {
-			random_other_country = {
+			every_army_leader = {
 				limit = {
-					is_legit_china = yes
+					OWNER = { TAG = ROOT }
 				}
-				global_every_army_leader = {
-					limit = {
-						OWNER = { tag = ROOT }
-					}
-					set_nationality = PREV
+				set_nationality = FROM
+			}
+			every_unit_leader = {
+				limit = {
+					OWNER = { TAG = ROOT }
 				}
+				set_nationality = FROM
 			}
 			set_global_flag = joined_chi_@ROOT
-			random_other_country = {
-				limit = {
-					is_legit_china = yes
-				}
+			FROM = {
 				country_event = { id = rcmchina.103 }
 				annex_country = { target = ROOT transfer_troops = yes }
 			}
 		}
 	}
 	option = {
-		name = rcmchina.101.c
+		name = rcmchina.101.c #annex, separated cause annexing can cause problems
 		trigger = {
 			OR = {
 				TAG = HPC
 				TAG = SHD
+				TAG = NEA
 			}
 		}
 		ai_chance = {
 			factor = 100
+			modifier = {
+				factor = 0
+				NOT = {
+					has_government = FROM
+				}
+			}
 		}
 		custom_effect_tooltip = GAME_OVER_TT
 		hidden_effect = {
+			every_army_leader = {
+				limit = {
+					OWNER = { TAG = ROOT }
+				}
+				set_nationality = FROM
+			}
+			every_unit_leader = {
+				limit = {
+					OWNER = { TAG = ROOT }
+				}
+				set_nationality = FROM
+			}
+			set_global_flag = joined_chi_@ROOT
 			event_target:WTT_current_china_leader = {
 				country_event = { id = rcmchina.103 }
 				annex_country = { target = ROOT transfer_troops = yes }
@@ -846,27 +832,9 @@ country_event = {
 				}
 				transfer_state = 614
 				transfer_state = 608
-				event_target:WTT_current_china_leader = {
+				FROM = {
 					annex_country = { target = HPC transfer_troops = yes }
 					every_owned_state = { remove_core_of = HPC }
-					global_every_army_leader = {
-						limit = {
-							OWNER = { tag = ROOT }
-						}
-						set_nationality = PREV
-					}
-					set_global_flag = joined_chi_@ROOT
-				}
-				else = {
-					event_target:WTT_current_china_leader = {
-						global_every_army_leader = {
-							limit = {
-								OWNER = { tag = ROOT }
-							}
-							set_nationality = PREV
-						}
-						set_global_flag = joined_chi_@ROOT
-					}
 				}
 			}
 		}
@@ -5274,7 +5242,7 @@ country_event = {
 		#custom_effect_tooltip = NDP_unite
 		FROM = {
 			set_autonomy = {
-				target = ROOT
+				target = SIC
 				autonomous_state = autonomy_integrated_puppet
 				freedom_level = 0.5
 			}
@@ -5328,7 +5296,7 @@ country_event = {
 		custom_effect_tooltip = NDP_unite
 		hidden_effect = {
 			annex_country = { target = SIC transfer_troops = yes }
-			set_global_flag = joined_chi_@SIC
+			set_global_flag = joined_chi_SIC
 		}
 	}
 }

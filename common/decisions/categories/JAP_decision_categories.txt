@@ -1,3 +1,13 @@
+JAP_revise_hiro_san_decision_cat = {
+	allowed = {
+		original_tag = JAP
+	}
+	visible = {
+		is_puppet = no
+		has_completed_focus = jap_revise_hiro_san
+	}
+	priority = 101
+}
 JAP_intervene_in_china = {
 	allowed = {
 		original_tag = JAP
