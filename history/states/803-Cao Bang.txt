@@ -8,6 +8,9 @@ state={
 		owner = FIC
 		add_core_of = FIC
 		add_core_of = VIN
+		victory_points = {
+			9948 2
+		}
 		buildings = {
 			infrastructure = 2
 		}

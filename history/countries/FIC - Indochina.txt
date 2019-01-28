@@ -271,6 +271,41 @@ create_corps_commander = {
 	logistics_skill = 3
 }
 
+create_corps_commander = {
+	name = "Émile Lemonnier"
+    picture = "Portrait_Indochina_Emile_Lemonnier.dds"
+	traits = { career_officer trait_reckless }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Maurice Martin"
+    picture = "Portrait_Indochina_Maurice_Martin.dds"
+	traits = { career_officer organizer infantry_officer }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Henri Cazin"
+    picture = "Portrait_Indochina_Henri_Cazin.dds"
+	traits = { career_officer war_hero }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+#Fernand Rabut, Joseph Bourèly, Jean Charbonneau and Gaston Blanc can be added as well (or as advisors)
+
 create_navy_leader = {
 	name = "Régis Bérenger"
 	picture = "Portrait_Indochina_Regis_Berenger.dds"

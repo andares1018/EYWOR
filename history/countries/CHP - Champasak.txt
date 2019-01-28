@@ -1,10 +1,8 @@
-﻿capital = 670 #today Vientiane in 1945 Luang Prabang sel proclaimed indie Laos 
+﻿capital = 825
 
-oob = "LAO_1936"
+oob = "CHP_1936"
 
-set_research_slots = 3
-
-set_cosmetic_tag = LAO_PRA #Luang Prabang
+set_research_slots = 2
 
 # Starting tech
 # clone of France
@@ -46,44 +44,37 @@ set_politics = {
 
 	parties = {
 		democratic = { 
-			popularity = 25
+			popularity = 0
 		}
-
-#		fascism = {
-#		
-#		}
+		fascism = {
+			popularity = 0
+		}
+		
+		
+		n_socialism = {
+			popularity = 0
+		}
 		
 		communism = {
-			popularity = 35
+			popularity = 0
 		}
 		neutrality = {
-			popularity = 40
+			popularity = 100
 		}
 	}
 	
 	ruling_party = neutrality
 	last_election = "1933.2.16"
 	election_frequency = 36
-	elections_allowed = yes
+	elections_allowed = no
 	
 	
 }
 
 create_country_leader = {
-	name = "Souphanouvong"
+	name = "Ratsadanay"
 	desc = ""
-	picture = "Portrait_Laos_Souphanouvong.dds"
-	expire = "1953.3.1"
-	ideology = marxism
-	traits = {
-		
-	}
-}
-
-create_country_leader = {
-	name = "Sisavang Vong"
-	desc = ""
-	picture = "Portrait_Laos_Sisavang_Vong.dds"
+	picture = "gfx/leaders/LAO/Portrait_Laos_Ratsadanay.dds"
 	expire = "1953.3.1"
 	ideology = despotism
 	traits = {
@@ -91,25 +82,4 @@ create_country_leader = {
 	}
 }
 
-create_country_leader = {
-	name = "Phetsarath Ratanavongsa" 
-	desc = ""
-	picture = "Portrait_Laos_Phetsarath_Ratanavongsa.dds"
-	expire = "1953.3.1"
-	ideology = n_socialism_ideology
-	traits = {
-		
-	}
-}
-
-create_country_leader = {
-	name = "Kou Voravong" 
-	desc = ""
-	picture = "Portrait_Laos_Kou_Voravong.dds"
-	expire = "1953.3.1"
-	ideology = conservatism
-	traits = {
-		
-	}
-}
 
