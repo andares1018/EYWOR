@@ -8,7 +8,7 @@ JAP_bribe_the_tokko = {
     allowed = {
         tag = JAP
     }
-
+	priority = 101
     visible = {
     }
 }
@@ -31,4 +31,65 @@ MAN_CHI_peace = {
 invade_indochina_cat = {
 	icon = jap_southern_expansion
 	priority = 100
+}
+###MODDED
+japan_form_CHI_puppets = {
+	icon = jap_intervene_in_china
+	priority = 100
+	allowed = {
+		tag = JAP
+
+	}
+
+	visible = {
+		has_completed_focus = JAP_intervene_in_china
+	}
+}
+japan_form_IN_MON_puppets = {
+	icon = generic_formable_nations
+	priority = 100
+	allowed = {
+		tag = JAP
+	}
+
+	#visible = {
+	#	NOT = { has_government = democratic }
+	#	has_idea_with_trait = democratic_reformer
+	#}
+}
+liangguang_incident = {
+	priority = 100
+	icon = generic_crisis
+
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
+recovery_effort = {
+	icon = generic_communism
+	priority = 100
+	#picture = GFX_decision_cat_picture_chi_infiltration
+}
+RCM_communist_infiltration = {
+	#allowed = {
+	#	tag = event_target:WTT_communist_china
+	#}
+	icon = infiltration
+	priority = 100
+	picture = GFX_decision_cat_picture_chi_infiltration
+}
+RCM_communist_crackdown = {
+	icon = infiltration
+	priority = 100
+	picture = GFX_decision_cat_picture_chi_infiltration
+}
+national_infra_decision = {
+	priority = 100
+	icon = generic_prospect_for_resources
+	picture = GFX_decision_cat_generic_mefo_bills
+}
+###
+CHI_suppress_anti_japanese_activity = {
+	priority = 100
+	icon = jap_southern_expansion
 }

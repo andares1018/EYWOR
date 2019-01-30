@@ -96,7 +96,7 @@ country_event = {
 		trigger = {
 			TAG = ECA
 		}
-		effect_tooltip = {	
+		effect_tooltip = {
 			transfer_state = 621
 			transfer_state = 763
 		}
@@ -382,7 +382,7 @@ country_event = {
 				white_peace = SHX
 				#white_peace = PLM
 			}
-			
+
 			ECA = {
 				white_peace = SHX
 				#white_peace = PLM
@@ -390,14 +390,14 @@ country_event = {
 			}
 		}
 	}
-	
+
 	option = {#ECA
 		name = MEN.2.a
 		trigger = {
 			TAG = ECA
 		}
 		effect_tooltip = {
-			transfer_state = 621	
+			transfer_state = 621
 		}
 		hidden_effect = {
 			set_country_flag = suiyaun_done
@@ -496,7 +496,7 @@ country_event = {
 				}
 			}
 		}
-		hidden_effect = { 
+		hidden_effect = {
 			set_country_flag = suiyaun_done
 		}
 		add_political_power = -50
@@ -662,7 +662,7 @@ country_event = {
 		name = MEN.6.a
 		set_province_name = { id = 4801 name = "Urga" }
 		set_capital = 330
-		set_cosmetic_tag = MEN_MON
+		#set_cosmetic_tag = MEN_MON
 		add_stability = 0.1
 		add_political_power = 100
 		add_autonomy_ratio = {
@@ -696,14 +696,14 @@ country_event = {
 			limit = {
 				JAP = { is_in_faction = no }
 			}
-			JAP = { 
-				create_faction = "daitoa_kyoeiken" 
-				add_to_faction = ECA 
+			JAP = {
+				create_faction = "daitoa_kyoeiken"
+				add_to_faction = ECA
 			}
 		}
 		if = {
 			limit = {
-				JAP = { 
+				JAP = {
 					is_faction_leader = no
 					is_in_faction = yes
 				}
@@ -730,8 +730,8 @@ country_event = {
 		tag = ECA
 		SHX = {
 			OR = {
-				has_war_with = CHI 
-				has_war_with = PRC 
+				has_war_with = CHI
+				has_war_with = PRC
 			}
 			owns_state = 621
 			controls_state = 621
@@ -779,7 +779,7 @@ country_event = {
 				infantry = { x = 0 y = 0 }
 				infantry = { x = 0 y = 1 }
 				infantry = { x = 0 y = 2 }
-		
+
 		        infantry = { x = 1 y = 0 }
 				infantry = { x = 1 y = 1 }
 				infantry = { x = 1 y = 2 }
@@ -790,20 +790,20 @@ country_event = {
 			}
 		}
 		random_owned_controlled_state = {
-			create_unit = { 
-				division = "name = \"Grand Han Righteous Army 1st Division\" division_template = \"Grand Han Righteous Army\" start_experience_factor = 0.4" 
-				owner = ECA
-			}
-		}
-		random_owned_controlled_state = {
-			create_unit = { 
-				division = "name = \"Grand Han Righteous Army 2nd Division\" division_template = \"Grand Han Righteous Army\" start_experience_factor = 0.4" 
+			create_unit = {
+				division = "name = \"Grand Han Righteous Army 1st Division\" division_template = \"Grand Han Righteous Army\" start_experience_factor = 0.4"
 				owner = ECA
 			}
 		}
 		random_owned_controlled_state = {
 			create_unit = {
-				division = "name = \"Grand Han Righteous Army 3rd Division\" division_template = \"Grand Han Righteous Army\" start_experience_factor = 0.4" 
+				division = "name = \"Grand Han Righteous Army 2nd Division\" division_template = \"Grand Han Righteous Army\" start_experience_factor = 0.4"
+				owner = ECA
+			}
+		}
+		random_owned_controlled_state = {
+			create_unit = {
+				division = "name = \"Grand Han Righteous Army 3rd Division\" division_template = \"Grand Han Righteous Army\" start_experience_factor = 0.4"
 				owner = ECA
 			}
 		}
@@ -835,7 +835,7 @@ country_event = {
 				infantry = { x = 0 y = 0 }
 				infantry = { x = 0 y = 1 }
 				infantry = { x = 0 y = 2 }
-		
+
 		        infantry = { x = 1 y = 0 }
 				infantry = { x = 1 y = 1 }
 				infantry = { x = 1 y = 2 }
@@ -846,32 +846,32 @@ country_event = {
 			}
 		}
 		random_owned_controlled_state = {
-			create_unit = { 
-				division = "name = \"Grand Han Righteous Army 1st Division\" division_template = \"Grand Han Righteous Army\" start_experience_factor = 0.4" 
+			create_unit = {
+				division = "name = \"Grand Han Righteous Army 1st Division\" division_template = \"Grand Han Righteous Army\" start_experience_factor = 0.4"
 				owner = ECA
 			}
 		}
 		random_owned_controlled_state = {
-			create_unit = { 
-				division = "name = \"Grand Han Righteous Army 2nd Division\" division_template = \"Grand Han Righteous Army\" start_experience_factor = 0.4" 
+			create_unit = {
+				division = "name = \"Grand Han Righteous Army 2nd Division\" division_template = \"Grand Han Righteous Army\" start_experience_factor = 0.4"
 				owner = ECA
 			}
 		}
 		random_owned_controlled_state = {
-			create_unit = { 
-				division = "name = \"Grand Han Righteous Army 3rd Division\" division_template = \"Grand Han Righteous Army\" start_experience_factor = 0.4" 
+			create_unit = {
+				division = "name = \"Grand Han Righteous Army 3rd Division\" division_template = \"Grand Han Righteous Army\" start_experience_factor = 0.4"
 				owner = ECA
 			}
 		}
 		random_owned_controlled_state = {
-			create_unit = { 
-				division = "name = \"Grand Han Righteous Army 4th Division\" division_template = \"Grand Han Righteous Army\" start_experience_factor = 0.4" 
+			create_unit = {
+				division = "name = \"Grand Han Righteous Army 4th Division\" division_template = \"Grand Han Righteous Army\" start_experience_factor = 0.4"
 				owner = ECA
 			}
 		}
 		random_owned_controlled_state = {
-			create_unit = { 
-				division = "name = \"Grand Han Righteous Army 5th Division\" division_template = \"Grand Han Righteous Army\" start_experience_factor = 0.4" 
+			create_unit = {
+				division = "name = \"Grand Han Righteous Army 5th Division\" division_template = \"Grand Han Righteous Army\" start_experience_factor = 0.4"
 				owner = ECA
 			}
 		}
@@ -894,10 +894,10 @@ country_event = {
 		tag = ECA
 		owns_state = 621
 		owns_state = 763
-		NXM = { 
+		NXM = {
 			OR = {
-				has_war_with = CHI 
-				has_war_with = PRC 
+				has_war_with = CHI
+				has_war_with = PRC
 			}
 			owns_state = 616
 			controls_state = 616

@@ -3,6 +3,8 @@
 oob = "RRC_1936"
 set_research_slots = 3
 # Starting tech
+add_stability = 0.1
+add_war_support = 0.1
 set_technology = {
 		fighter1 = 1
 		fighter2 = 1
@@ -33,7 +35,7 @@ set_technology = {
 		prepared_defense = 1
 		battlefleet_concentration = 1
 		submarine_operations = 1
-		
+
 		#Air
 		force_rotation = 1
 		fighter_baiting = 1
@@ -134,11 +136,11 @@ set_convoys = 40
 			fascism = {
 				popularity = 60
 			}
-			
+
 			n_socialism = {
 				popularity = 0
 			}
-			
+
 			communism = {
 				popularity = 0
 			}
@@ -163,7 +165,7 @@ set_convoys = 40
 	traits = {
 	}
 	}
-	
+
 	create_country_leader = {
 	name = "Wang Jingwei"
 	desc = "POLITICS_WANG_JINGWEI_DESC"
@@ -245,4 +247,3 @@ create_country_leader = {
 	traits = {
 	}
 }
-

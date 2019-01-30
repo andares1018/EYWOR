@@ -40,7 +40,10 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-			unlock_decision_category_tooltip = CHI_seek_japanese_support
+			add_political_power = 150
+			add_stability = 0.05
+			add_war_support = 0.05
+			add_ideas = generic_jap_advisor
 		}
 	}
 	focus = {
@@ -286,13 +289,13 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			remove_ideas = CHI_kmt
+			remove_ideas = CHI_ineffective_bureaucracy_warlord
 		}
 		available = {
 		}
 		bypass = {
 			NOT = {
-				has_idea = CHI_kmt
+				has_idea = CHI_ineffective_bureaucracy_warlord
 			}
 		}
 	}
@@ -660,10 +663,9 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
-			is_subject = no
-			OR = {
-				neutrality > 0.5
-				communism > 0.5
+			has_country_flag = im_rrc_now
+			NOT = {
+				country_exists = event_target:WTT_current_china_leader
 			}
 		}
 		bypass = {
@@ -672,29 +674,13 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-			every_state = {
-				limit = {
-					has_state_flag = is_chinese_states_flag
-				}
-				add_core_of = ROOT
-			}
-			country_event = {
-				id = rcmchina.360
-			}
-			if = {
-				limit = {
-					OR = {
-						has_government = communism
-						has_government = n_socialism
-						communism > 0.5
-						n_socialism > 0.5
-					}
-				}
-				load_focus_tree = warlord_generic_communist
-			}
-			else = {
-				load_focus_tree = warlord_generic_nationalist
-			}
+			#swap_ideas = {
+			#	add_idea = JPG_illegal_regime_3
+			#	remove_idea = JPG_illegal_regime_2
+			#}
+			custom_effect_tooltip = will_become_the_recognized_leader_of_china
+			save_global_event_target_as = WTT_current_china_leader
+			load_focus_tree = warlord_generic_nationalist
 		}
 	}
 }

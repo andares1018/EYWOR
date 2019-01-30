@@ -22,15 +22,15 @@ state={
 			arms_factory = 3
 			industrial_complex = 3
 			517 = {
-				bunker = 8
+				bunker = 4
 
 			}
 			8049 = {
-				bunker = 8
+				bunker = 4
 
 			}
 			7208 = {
-				bunker = 8
+				bunker = 4
 
 			}
 

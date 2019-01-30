@@ -29,7 +29,7 @@ division_template = {
 	}
 }
 division_template = {
-	name = "Duli Bubing Lu"				
+	name = "Duli Bubing Lu"
 
 	regiments = {
 		infantry = { x = 0 y = 0 }
@@ -46,21 +46,21 @@ units = {
 		location = 10733
 		start_experience_factor = 0.5
 		division_template = "Bubing Shi"
-		start_equipment_factor = 1
+		start_equipment_factor = 0.5
 	}
 	division = {
 		name = "Di 2 Bubing Shi"
 		location = 12156
 		division_template = "Bubing Shi"
 		start_experience_factor = 0.1
-		start_equipment_factor = 1
+		start_equipment_factor = 0.5
 	}
 	division = {
 		name = "Di 3 Bubing Shi"
 		location = 5007
 		division_template = "Bubing Shi"
 		start_experience_factor = 0.3
-		start_equipment_factor = 1
+		start_equipment_factor = 0.5
 	}
 	division = {
 		name = "Di 4 Bubing Shi"

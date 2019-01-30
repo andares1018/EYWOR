@@ -13,15 +13,15 @@ set_technology = {
 	add_political_power = 1198
 	set_global_flag = rfm_exists
 	#generic focuses
-	complete_national_focus = army_effort
-	complete_national_focus = equipment_effort
-	complete_national_focus = motorization_effort
-	complete_national_focus = aviation_effort
-	complete_national_focus = naval_effort
-	complete_national_focus = flexible_navy
-	complete_national_focus = industrial_effort
-	complete_national_focus = construction_effort
-	complete_national_focus = production_effort
+	complete_national_focus = JPG_seek_japanese_support
+	complete_national_focus = JPG_public_works
+	complete_national_focus = JPG_labor_reform
+	complete_national_focus = JPG_war_taxes
+	complete_national_focus = JPG_take_what_we_can_take
+	complete_national_focus = JPG_personal_leadership
+	complete_national_focus = JPG_industrial_investment
+	complete_national_focus = JPG_cult_of_personality
+	complete_national_focus = JPG_long_term_economic_planning
 
 	oob = "RFM_1939"
 	set_technology = {
@@ -142,4 +142,3 @@ create_country_leader = {
 	expire = "1945.12.25"
 	ideology = collaborationism
 }
-

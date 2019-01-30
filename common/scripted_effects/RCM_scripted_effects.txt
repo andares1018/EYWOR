@@ -474,6 +474,14 @@ RRC_CREATION = {
 				set_state_controller = PREV
 			}
 		}
+		if = {
+			limit = {
+				is_owned_by = JAP
+			}
+			PREV = {
+				transfer_state = PREV
+			}
+		}
 	}
 	#####HIST
 	set_cosmetic_tag = RRC
@@ -1629,5 +1637,96 @@ integrated_puppet_HPC = {
 		else = {
 			puppet = HPC
 		}
+	}
+}
+
+
+#KMT-CC Civil WAR
+CHI_kmt_cc_civil_war = {
+	set_country_flag = im_civ_war_exception
+	random_enemy_country = {
+		limit = {
+			original_tag = ROOT
+		}
+		set_country_flag = im_civ_war_exception
+		save_global_event_target_as = KMT_CC_clique
+		create_country_leader = {
+			name = "Chen Guofu"
+			desc = ""
+			picture = "Portrait_Chen_Guofu.dds"
+			expire = "1965.1.1"
+			ideology = despotism
+			traits = {
+				backroom_backstabber
+			}
+		}
+		set_politics = {
+		    parties = {
+				democratic = {
+					popularity = 0
+				}
+
+				fascism = {
+					popularity = 0
+				}
+
+				communism = {
+					popularity = 0
+				}
+
+				neutrality = {
+					popularity = 100
+				}
+			}
+			ruling_party = neutrality
+		}
+		load_focus_tree = { tree = warlord_generic_nationalist keep_completed = no }
+		set_cosmetic_tag = CHI_power_struggle_defeated
+		set_party_name = { ideology = neutrality long_name = CHI_neutrality_CC_party_long name = CHI_neutrality_CC_party }
+	}
+}
+#appeasement_policy
+appeasement_policy_2_level_down = {
+	if ={
+		limit = {
+			has_idea = appeasement_policy_2
+		}
+		swap_ideas = {
+			remove_idea = appeasement_policy_2
+			add_idea = appeasement_policy_2_a
+		}
+	}
+	if ={
+		limit = {
+			has_idea = appeasement_policy_2_a
+		}
+		swap_ideas = {
+			remove_idea = appeasement_policy_2_a
+			add_idea = appeasement_policy_2_b
+		}
+	}
+	if ={
+		limit = {
+			has_idea = appeasement_policy_2_b
+		}
+		swap_ideas = {
+			remove_idea = appeasement_policy_2_b
+			add_idea = appeasement_policy_2_c
+		}
+	}
+	if ={
+		limit = {
+			has_idea = appeasement_policy_2_c
+		}
+		swap_ideas = {
+			remove_idea = appeasement_policy_2_c
+			add_idea = appeasement_policy_2_d
+		}
+	}
+	if ={
+		limit = {
+			has_idea = appeasement_policy_2_d
+		}
+		remove_ideas = appeasement_policy_2_d
 	}
 }
