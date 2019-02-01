@@ -158,6 +158,101 @@ JAP_revise_hiro_san_decision_cat = {
 }
 
 foreign_politics = {
+	CHI_inch_blood_up_decision = { #perk increase
+		target_trigger = {
+			#Target is FROM
+			FROM = {
+				OR = {
+					has_idea = CHI_inch_blood_1
+					has_idea = CHI_inch_blood_2
+					has_idea = CHI_inch_blood_3
+					has_idea = CHI_inch_blood_4
+					has_idea = CHI_inch_blood_5
+					has_idea = CHI_inch_blood_6
+					has_idea = CHI_inch_blood_7
+					has_idea = CHI_inch_blood_8
+					has_idea = CHI_inch_blood_9
+					has_idea = CHI_inch_blood_10
+				}
+			}
+		}
+		available = {
+			NOT = {
+				any_other_country = {
+					has_country_flag = CHI_inch_blood_up_decision_flag
+				}
+			}
+			FROM = {
+				CHI_inch_blood_up_trigger = yes
+			}
+		}
+		visible = {
+			is_ai = yes
+			NOT = {
+				any_other_country = {
+					has_country_flag = CHI_inch_blood_up_decision_flag
+				}
+			}
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 4000
+		}
+		complete_effect = {
+			set_country_flag = CHI_inch_blood_up_decision_flag
+			FROM = {
+				CHI_inch_blood_level_up = yes
+			}
+		}
+	}
+
+	CHI_inch_blood_down_decision = { #perk decrease
+		target_trigger = {
+			#Target is FROM
+			FROM = {
+				OR = {
+					has_idea = CHI_inch_blood_1
+					has_idea = CHI_inch_blood_2
+					has_idea = CHI_inch_blood_3
+					has_idea = CHI_inch_blood_4
+					has_idea = CHI_inch_blood_5
+					has_idea = CHI_inch_blood_6
+					has_idea = CHI_inch_blood_7
+					has_idea = CHI_inch_blood_8
+					has_idea = CHI_inch_blood_9
+					has_idea = CHI_inch_blood_10
+				}
+			}
+		}
+		available = {
+			NOT = {
+				any_other_country = {
+					has_country_flag = CHI_inch_blood_up_decision_flag
+				}
+			}
+			FROM = {
+				CHI_inch_blood_down_trigger = yes
+			}
+		}
+		visible = {
+			is_ai = yes
+			NOT = {
+				any_other_country = {
+					has_country_flag = CHI_inch_blood_up_decision_flag
+				}
+			}
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 4000
+		}
+		complete_effect = {
+			set_country_flag = CHI_inch_blood_up_decision_flag
+			FROM = {
+				CHI_inch_blood_level_down = yes
+			}
+		}
+	}
 
 	CHI_sue_for_peace_JAP = {
 
@@ -786,11 +881,13 @@ japan_form_CHI_puppets = {
 		available = { #objective
 			has_global_flag = ccp_exists
 		}
-
 		days_mission_timeout = 180
 		fire_only_once = yes
 		is_good = no
 		activation = {
+			NOT = {
+				has_global_flag = ccp_exists
+			}
 			independent_war_china_or_china_died = yes
 			613 = {
 				is_controlled_by_jap_or_its_puppet = yes
@@ -800,7 +897,18 @@ japan_form_CHI_puppets = {
 			add_political_power = 50
 		}
 		timeout_effect = {
-			add_stability = -0.1 #naughty
+			add_stability = -0.05 #naughty
+			activate_decision = JAP_form_CCP_mission
+		}
+		cancel_trigger = {
+			NOT = {
+				OR = {
+					independent_war_china_or_china_died = yes
+					613 = {
+						is_controlled_by_jap_or_its_puppet = yes
+					}
+				}
+			}
 		}
 	}
 	JAP_form_CCP = {
@@ -825,6 +933,19 @@ japan_form_CHI_puppets = {
 			add_stability = 0.03
 			CCP_CREATION = yes
 		}
+		cancel_trigger = {
+			custom_trigger_tooltip = {
+				tooltip = requirments_not_met_tt
+				NOT = {
+					OR = {
+						independent_war_china_or_china_died = yes
+						613 = {
+							is_controlled_by_jap_or_its_puppet = yes
+						}
+					}
+				}
+			}
+		}
 		ai_will_do = {
 			factor = 1000
 		}
@@ -841,6 +962,9 @@ japan_form_CHI_puppets = {
 		fire_only_once = yes
 		is_good = no
 		activation = {
+			NOT = {
+				has_global_flag = rfm_exists
+			}
 			independent_war_china_or_china_died = yes
 			has_global_flag = ccp_exists
 			598 = {
@@ -851,7 +975,18 @@ japan_form_CHI_puppets = {
 			add_political_power = 50
 		}
 		timeout_effect = {
-			add_stability = -0.1 #naughty
+			add_stability = -0.05 #naughty
+			activate_decision = JAP_form_RFM_mission
+		}
+		cancel_trigger = {
+			NOT = {
+				OR = {
+					independent_war_china_or_china_died = yes
+					598 = {
+						is_controlled_by_jap_or_its_puppet = yes
+					}
+				}
+			}
 		}
 	}
 	JAP_form_RFM = {
@@ -877,6 +1012,19 @@ japan_form_CHI_puppets = {
 			add_stability = 0.03
 			RFM_CREATION = yes
 		}
+		cancel_trigger = {
+			custom_trigger_tooltip = {
+				tooltip = requirments_not_met_tt
+				NOT = {
+					OR = {
+						independent_war_china_or_china_died = yes
+						598 = {
+							is_controlled_by_jap_or_its_puppet = yes
+						}
+					}
+				}
+			}
+		}
 		ai_will_do = {
 			factor = 1000
 		}
@@ -885,7 +1033,6 @@ japan_form_CHI_puppets = {
 	###JNC
 	JAP_form_JNC_mission = {
 		icon = generic_form_nation
-
 		available = { #objective
 			has_global_flag = jnc_exists
 		}
@@ -893,8 +1040,11 @@ japan_form_CHI_puppets = {
 		fire_only_once = yes
 		is_good = no
 		activation = {
+			NOT = {
+				has_global_flag = jnc_exists
+			}
 			independent_war_china_or_china_died = yes
-			598 = {
+			608 = {
 				is_controlled_by_jap_or_its_puppet = yes
 			}
 		}
@@ -902,9 +1052,19 @@ japan_form_CHI_puppets = {
 			add_political_power = 50
 		}
 		timeout_effect = {
-			add_stability = -0.1 #naughty
+			add_stability = -0.05 #naughty
+			activate_decision = JAP_form_JNC_mission
 		}
-
+		cancel_trigger = {
+			NOT = {
+				OR = {
+					independent_war_china_or_china_died = yes
+					608 = {
+						is_controlled_by_jap_or_its_puppet = yes
+					}
+				}
+			}
+		}
 	}
 	JAP_form_JNC = {
 		icon = generic_form_nation
@@ -967,6 +1127,19 @@ japan_form_CHI_puppets = {
 			custom_effect_tooltip = EHB_reform
 			custom_effect_tooltip = JNC_prov_focus
 		}
+		cancel_trigger = {
+			custom_trigger_tooltip = {
+				tooltip = requirments_not_met_tt
+				NOT = {
+					OR = {
+						independent_war_china_or_china_died = yes
+						608 = {
+							is_controlled_by_jap_or_its_puppet = yes
+						}
+					}
+				}
+			}
+		}
 		ai_will_do = {
 			factor = 2000
 		}
@@ -983,6 +1156,9 @@ japan_form_CHI_puppets = {
 		fire_only_once = yes
 		is_good = no
 		activation = {
+			NOT = {
+				has_global_flag = rrc_exists
+			}
 			independent_war_china_or_china_died = yes
 			598 = {
 				is_controlled_by_jap_or_its_puppet = yes
@@ -1010,7 +1186,33 @@ japan_form_CHI_puppets = {
 			add_political_power = 50
 		}
 		timeout_effect = {
-			add_stability = -0.1 #naughty
+			add_stability = -0.05 #naughty
+			activate_decision = JAP_form_RRC_mission
+		}
+		cancel_trigger = {
+			NOT = {
+				OR = {
+					independent_war_china_or_china_died = yes
+					598 = {
+						is_controlled_by_jap_or_its_puppet = yes
+					}
+					606 = {
+						is_controlled_by_jap_or_its_puppet = yes
+					}
+					596 = {
+						is_controlled_by_jap_or_its_puppet = yes
+					}
+					597 = {
+						is_controlled_by_jap_or_its_puppet = yes
+					}
+					766 = {
+						is_controlled_by_jap_or_its_puppet = yes
+					}
+					613 = {
+						is_controlled_by_jap_or_its_puppet = yes
+					}
+				}
+			}
 		}
 	}
 	JAP_form_RRC = {
@@ -1119,6 +1321,34 @@ japan_form_CHI_puppets = {
 			}
 			custom_effect_tooltip = RRC_annex
 		}
+		cancel_trigger = {
+			custom_trigger_tooltip = {
+				tooltip = requirments_not_met_tt
+				NOT = {
+					OR = {
+						independent_war_china_or_china_died = yes
+						598 = {
+							is_controlled_by_jap_or_its_puppet = yes
+						}
+						606 = {
+							is_controlled_by_jap_or_its_puppet = yes
+						}
+						596 = {
+							is_controlled_by_jap_or_its_puppet = yes
+						}
+						597 = {
+							is_controlled_by_jap_or_its_puppet = yes
+						}
+						766 = {
+							is_controlled_by_jap_or_its_puppet = yes
+						}
+						613 = {
+							is_controlled_by_jap_or_its_puppet = yes
+						}
+					}
+				}
+			}
+		}
 		ai_will_do = {
 			factor = 2000
 		}
@@ -1175,6 +1405,20 @@ japan_form_IN_MON_puppets = {
 				}
 			}
 		}
+		cancel_trigger = {
+			custom_trigger_tooltip = {
+				tooltip = requirments_not_met_tt
+				NOT = {
+					OR = {
+						is_puppet = no
+						ECA = {
+							controls_state = 757
+						}
+						country_exists = PLM
+					}
+				}
+			}
+		}
 		ai_will_do = {
 			factor = 2000
 		}
@@ -1190,6 +1434,9 @@ japan_form_IN_MON_puppets = {
 		fire_only_once = yes
 		is_good = no
 		activation = {
+			NOT = {
+				has_global_flag = mua_exists
+			}
 			independent_war_china_or_china_died = yes
 			757 = {
 				is_controlled_by_jap_or_its_puppet = yes
@@ -1205,7 +1452,24 @@ japan_form_IN_MON_puppets = {
 			add_political_power = 50
 		}
 		timeout_effect = {
-			add_stability = -0.1 #naughty
+			add_stability = -0.05 #naughty
+			activate_decision = JAP_form_MUA_mission
+		}
+		cancel_trigger = {
+			NOT = {
+				OR = {
+					independent_war_china_or_china_died = yes
+					757 = {
+						is_controlled_by_jap_or_its_puppet = yes
+					}
+					612 = {
+						is_controlled_by_jap_or_its_puppet = yes
+					}
+					611 = {
+						is_controlled_by_jap_or_its_puppet = yes
+					}
+				}
+			}
 		}
 	}
 	JAP_form_MUA = {
@@ -1254,6 +1518,25 @@ japan_form_IN_MON_puppets = {
 				}
 			}
 		}
+		cancel_trigger = {
+			custom_trigger_tooltip = {
+				tooltip = requirments_not_met_tt
+				NOT = {
+					OR = {
+						independent_war_china_or_china_died = yes
+						757 = {
+							is_controlled_by_jap_or_its_puppet = yes
+						}
+						612 = {
+							is_controlled_by_jap_or_its_puppet = yes
+						}
+						611 = {
+							is_controlled_by_jap_or_its_puppet = yes
+						}
+					}
+				}
+			}
+		}
 		ai_will_do = {
 			factor = 2000
 		}
@@ -1269,6 +1552,9 @@ japan_form_IN_MON_puppets = {
 		fire_only_once = yes
 		is_good = no
 		activation = {
+			NOT = {
+				has_global_flag = mej_exists
+			}
 			independent_war_china_or_china_died = yes
 			757 = {
 				is_controlled_by_jap_or_its_puppet = yes
@@ -1298,7 +1584,30 @@ japan_form_IN_MON_puppets = {
 			add_political_power = 50
 		}
 		timeout_effect = {
-			add_stability = -0.1 #naughty
+			add_stability = -0.05 #naughty
+			activate_decision = JAP_form_MEJ_mission
+		}
+		cancel_trigger = {
+			NOT = {
+				OR = {
+					independent_war_china_or_china_died = yes
+					757 = {
+						is_controlled_by_jap_or_its_puppet = yes
+					}
+					612 = {
+						is_controlled_by_jap_or_its_puppet = yes
+					}
+					611 = {
+						is_controlled_by_jap_or_its_puppet = yes
+					}
+					802 = {
+						is_controlled_by_jap_or_its_puppet = yes
+					}
+					763 = {
+						is_controlled_by_jap_or_its_puppet = yes
+					}
+				}
+			}
 		}
 	}
 	JAP_form_MEJ = {
@@ -1361,6 +1670,31 @@ japan_form_IN_MON_puppets = {
 					add_state_core = 763
 					add_state_core = 802
 					add_state_core = 330
+				}
+			}
+		}
+		cancel_trigger = {
+			custom_trigger_tooltip = {
+				tooltip = requirments_not_met_tt
+				NOT = {
+					OR = {
+						independent_war_china_or_china_died = yes
+						757 = {
+							is_controlled_by_jap_or_its_puppet = yes
+						}
+						612 = {
+							is_controlled_by_jap_or_its_puppet = yes
+						}
+						611 = {
+							is_controlled_by_jap_or_its_puppet = yes
+						}
+						802 = {
+							is_controlled_by_jap_or_its_puppet = yes
+						}
+						763 = {
+							is_controlled_by_jap_or_its_puppet = yes
+						}
+					}
 				}
 			}
 		}
@@ -2948,5 +3282,138 @@ CHI_suppress_anti_japanese_activity = {
 				CHI_kmt_cc_civil_war = yes
 			}
 		}
+	}
+}
+
+##JAPANESE PUPPETS
+JPG_declare_our_authority = {
+	JPG_declare_our_sovereignty = {
+		icon = generic_nationalism
+		cost = 150
+		days_remove = 70
+		visible = {
+			OR = {
+				tag = EHB
+				tag = RFM
+				AND = {
+					tag = HPC
+					NOT = {
+						has_focus_tree = china_warlord_focus
+					}
+				}
+			}
+			OR = {
+				has_idea = JPG_illegal_regime_1
+				has_idea = JPG_illegal_regime_2
+				has_idea = JPG_illegal_regime_3
+				has_idea = JPG_illegal_regime_4
+				has_idea = JPG_illegal_regime_5
+			}
+		}
+		available = { #can do
+			if = {
+				limit = {
+					has_idea = JPG_illegal_regime_1
+				}
+				at_least_one_major_like_us = yes
+			}
+			if = {
+				limit = {
+					has_idea = JPG_illegal_regime_2
+				}
+				at_least_two_major_like_us = yes
+			}
+			if = {
+				limit = {
+					has_idea = JPG_illegal_regime_3
+				}
+				at_least_three_major_like_us = yes
+			}
+			if = {
+				limit = {
+					has_idea = JPG_illegal_regime_4
+				}
+				at_least_four_major_like_us = yes
+			}
+			if = {
+				limit = {
+					has_idea = JPG_illegal_regime_5
+				}
+				at_least_five_major_like_us = yes
+			}
+		}
+		complete_effect = { #run effect on selection
+
+		}
+		remove_trigger = { #will run remove effect and abort
+
+		}
+		remove_effect = { #run effect when removed/finished
+			JPG_illegal_regime_level_down = yes
+		}
+		cancel_trigger = { #will abort
+			if = {
+				limit = {
+					has_idea = JPG_illegal_regime_1
+				}
+				custom_trigger_tooltip = {
+					tooltip = requirments_not_met_tt
+					NOT = {
+						at_least_one_major_like_us = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_idea = JPG_illegal_regime_2
+				}
+				custom_trigger_tooltip = {
+					tooltip = requirments_not_met_tt
+					NOT = {
+						at_least_two_major_like_us = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_idea = JPG_illegal_regime_3
+				}
+				custom_trigger_tooltip = {
+					tooltip = requirments_not_met_tt
+					NOT = {
+						at_least_three_major_like_us = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_idea = JPG_illegal_regime_4
+				}
+				custom_trigger_tooltip = {
+					tooltip = requirments_not_met_tt
+					NOT = {
+						at_least_four_major_like_us = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_idea = JPG_illegal_regime_5
+				}
+				custom_trigger_tooltip = {
+					tooltip = requirments_not_met_tt
+					NOT = {
+						at_least_five_major_like_us = yes
+					}
+				}
+			}
+		}
+		modifier = { #active during the course of the decision
+			political_power_gain = -0.5
+		}
+		ai_will_do = {
+			factor = 100
+		}
+
 	}
 }

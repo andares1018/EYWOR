@@ -2,6 +2,10 @@ RCM_border_clashes = {
 	picture = generic_border_conflicts
 	icon = border_conflicts
 }
+JPG_declare_our_authority = {
+	icon = generic_propaganda
+	priority = 100
+}
 JAP_bribe_the_tokko = {
     icon = generic_propaganda
     picture = GFX_decision_cat_generic_tokko

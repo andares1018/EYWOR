@@ -118,12 +118,24 @@ shared_focus = {
 		every_army_leader = {
 			add_planning = 1
 		}
-		add_ideas = CHI_whampoa_military_academy
-		hidden_effect = {
-			news_event = {
-				days = 3
-				id = news.5008
+		if = {
+			limit = {
+				OR = {
+					is_warlord = yes
+					tag = CHI
+				}
 			}
+			add_ideas = CHI_whampoa_military_academy
+			else = {
+				add_command_power = 50
+			}
+		}
+
+		hidden_effect = {
+			#news_event = {
+			#	days = 3
+			#	id = news.5008
+			#}
 		}
 	}
 	available = {

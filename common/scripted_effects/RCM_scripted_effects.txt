@@ -614,6 +614,13 @@ JNC_CREATION = {
 		}
 	}
 	custom_effect_tooltip = JNC_prov_focus
+	if = {
+		limit = {
+			tag = HPC
+		}
+		load_focus_tree = japan_puppet_focus
+		add_ideas = JPG_illegal_regime_1
+	}
 }
 
 RFM_CREATION = {
@@ -663,6 +670,7 @@ RFM_CREATION = {
 				enemy = CHI
 			}
 			load_oob = RFM_focus
+			load_focus_tree = japan_puppet_focus
 			set_politics = {
 				parties = {
 					democratic = {
@@ -1687,7 +1695,7 @@ CHI_kmt_cc_civil_war = {
 }
 #appeasement_policy
 appeasement_policy_2_level_down = {
-	if ={
+	if = {
 		limit = {
 			has_idea = appeasement_policy_2
 		}
@@ -1696,7 +1704,7 @@ appeasement_policy_2_level_down = {
 			add_idea = appeasement_policy_2_a
 		}
 	}
-	if ={
+	else_if = {
 		limit = {
 			has_idea = appeasement_policy_2_a
 		}
@@ -1705,7 +1713,7 @@ appeasement_policy_2_level_down = {
 			add_idea = appeasement_policy_2_b
 		}
 	}
-	if ={
+	else_if = {
 		limit = {
 			has_idea = appeasement_policy_2_b
 		}
@@ -1714,7 +1722,7 @@ appeasement_policy_2_level_down = {
 			add_idea = appeasement_policy_2_c
 		}
 	}
-	if ={
+	else_if = {
 		limit = {
 			has_idea = appeasement_policy_2_c
 		}
@@ -1723,10 +1731,228 @@ appeasement_policy_2_level_down = {
 			add_idea = appeasement_policy_2_d
 		}
 	}
-	if ={
+	else_if = {
 		limit = {
 			has_idea = appeasement_policy_2_d
 		}
 		remove_ideas = appeasement_policy_2_d
 	}
 }
+
+
+####CHI_inch_blood
+
+CHI_inch_blood_level_up = {
+	if = {
+		limit = {
+			has_idea = CHI_inch_blood_1
+		}
+		swap_ideas = {
+			remove_idea = CHI_inch_blood_1
+			add_idea = CHI_inch_blood_2
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = CHI_inch_blood_2
+		}
+		swap_ideas = {
+			remove_idea = CHI_inch_blood_2
+			add_idea = CHI_inch_blood_3
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = CHI_inch_blood_3
+		}
+		swap_ideas = {
+			remove_idea = CHI_inch_blood_3
+			add_idea = CHI_inch_blood_4
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = CHI_inch_blood_4
+		}
+		swap_ideas = {
+			remove_idea = CHI_inch_blood_4
+			add_idea = CHI_inch_blood_5
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = CHI_inch_blood_5
+		}
+		swap_ideas = {
+			remove_idea = CHI_inch_blood_5
+			add_idea = CHI_inch_blood_6
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = CHI_inch_blood_6
+		}
+		swap_ideas = {
+			remove_idea = CHI_inch_blood_6
+			add_idea = CHI_inch_blood_7
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = CHI_inch_blood_7
+		}
+		swap_ideas = {
+			remove_idea = CHI_inch_blood_7
+			add_idea = CHI_inch_blood_8
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = CHI_inch_blood_8
+		}
+		swap_ideas = {
+			remove_idea = CHI_inch_blood_8
+			add_idea = CHI_inch_blood_9
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = CHI_inch_blood_9
+		}
+		swap_ideas = {
+			remove_idea = CHI_inch_blood_9
+			add_idea = CHI_inch_blood_10
+		}
+	}
+}
+CHI_inch_blood_level_down = {
+	if = {
+		limit = {
+			has_idea = CHI_inch_blood_2
+		}
+		swap_ideas = {
+			add_idea = CHI_inch_blood_1
+			remove_idea = CHI_inch_blood_2
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = CHI_inch_blood_3
+		}
+		swap_ideas = {
+			add_idea = CHI_inch_blood_2
+			remove_idea = CHI_inch_blood_3
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = CHI_inch_blood_4
+		}
+		swap_ideas = {
+			add_idea = CHI_inch_blood_3
+			remove_idea = CHI_inch_blood_4
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = CHI_inch_blood_5
+		}
+		swap_ideas = {
+			add_idea = CHI_inch_blood_4
+			remove_idea = CHI_inch_blood_5
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = CHI_inch_blood_6
+		}
+		swap_ideas = {
+			add_idea = CHI_inch_blood_5
+			remove_idea = CHI_inch_blood_6
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = CHI_inch_blood_7
+		}
+		swap_ideas = {
+			add_idea = CHI_inch_blood_6
+			remove_idea = CHI_inch_blood_7
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = CHI_inch_blood_8
+		}
+		swap_ideas = {
+			add_idea = CHI_inch_blood_7
+			remove_idea = CHI_inch_blood_8
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = CHI_inch_blood_9
+		}
+		swap_ideas = {
+			add_idea = CHI_inch_blood_8
+			remove_idea = CHI_inch_blood_9
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = CHI_inch_blood_10
+		}
+		swap_ideas = {
+			add_idea = CHI_inch_blood_9
+			remove_idea = CHI_inch_blood_10
+		}
+	}
+}
+
+#JPG_illegal_regime_ LEVEL down
+JPG_illegal_regime_level_down = {
+	if = {
+		limit = {
+			has_idea = JPG_illegal_regime_1
+		}
+		swap_ideas = {
+		    remove_idea = JPG_illegal_regime_1
+		    add_idea = JPG_illegal_regime_2
+	    	}
+	}
+	else_if = {
+		limit = {
+			has_idea = JPG_illegal_regime_2
+		}
+		swap_ideas = {
+		    remove_idea = JPG_illegal_regime_2
+		    add_idea = JPG_illegal_regime_3
+	    	}
+	}
+	else_if = {
+		limit = {
+			has_idea = JPG_illegal_regime_3
+		}
+		swap_ideas = {
+		    remove_idea = JPG_illegal_regime_3
+		    add_idea = JPG_illegal_regime_4
+	    	}
+	}
+	else_if = {
+		limit = {
+			has_idea = JPG_illegal_regime_4
+		}
+		swap_ideas = {
+		    remove_idea = JPG_illegal_regime_4
+		    add_idea = JPG_illegal_regime_5
+	    	}
+	}
+	else_if = {
+		limit = {
+			has_idea = JPG_illegal_regime_5
+		}
+		remove_ideas = JPG_illegal_regime_5
+	}
+}
+
+#COUNT HOW MANY MAJORS LIKE YOU
