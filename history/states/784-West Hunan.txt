@@ -12,13 +12,10 @@ state={
 		owner = CHI
 		add_core_of = CHI
 		add_core_of = PRC
-		victory_points = {
-			10335 1
-		}
 
 	}
 	provinces={
-		4480 7665 10006 10335 12017 12053 12310
+		4480 7665 10006 10335 12017 12053 12310 
 	}
 	manpower=11293700
 	buildings_max_level_factor=1.000

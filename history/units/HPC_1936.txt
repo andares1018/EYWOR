@@ -38,7 +38,7 @@ division_template = {
 	}
 }
 division_template = {
-	name = "Independent Infantry Brigade"
+	name = "Independent Infantry Brigade"				
 
 	regiments = {
 		infantry = { x = 0 y = 0 }
@@ -47,7 +47,7 @@ division_template = {
 	}
 }
 division_template = {
-	name = "Independent Cavalry Brigade"
+	name = "Independent Cavalry Brigade"				
 
 	regiments = {
 		cavalry = { x = 0 y = 0 }
@@ -55,7 +55,7 @@ division_template = {
 	}
 }
 division_template = {
-	name = "Bao An Dui"
+	name = "Bao An Dui"				
 
 	regiments = {
 		infantry = { x = 0 y = 0 }
@@ -90,23 +90,23 @@ units = {
 	division = {
 		name = "Independent 39 Brigade"
 		location = 9843
-		division_template = "Independent Infantry Brigade"
+		division_template = "Independent Infantry Brigade" 
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
+		start_equipment_factor = 0.9
 	}
 	division = {
 		name = "Independent 40 Brigade"
 		location = 9843
-		division_template = "Independent Infantry Brigade"
+		division_template = "Independent Infantry Brigade" 
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
+		start_equipment_factor = 0.9
 	}
 	division = {
 		name = "Di 9 Jibing Shi"
 		location = 10068
 		start_experience_factor = 0.1
-		division_template = "Jibing Shi"
-		start_equipment_factor = 0.3
+		division_template = "Jibing Shi" 
+		start_equipment_factor = 0.9
 	}
 	division = {
 		name = "Independent Cavalry 13 Brigade"
@@ -116,11 +116,11 @@ units = {
 		start_equipment_factor = 0.7
 	}
 	division = {
-		name = "Tehwu Lu"
+		name = "Tehwu Lu"	
 		location = 9843
 		division_template = "Tehwu Lu"
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
+		start_equipment_factor = 0.9
 	}
 	division = {
 		name = "Hebei Bao An Dui"

@@ -172,22 +172,6 @@ ENG = {
 		complete_national_focus = CHI_secure_internal_politics
 		complete_national_focus = CHI_cooperation_with_the_nationalists
 	}
-	if = {
-		limit = {
-			has_dlc = "Waking the Tiger"
-		}
-		every_country = {
-			limit = {
-				tag = RFM
-			}
-			add_ideas = {
-				unstable_economy
-				PRC_government_corruption
-				CHI_ineffective_bureaucracy_warlord
-			}
-
-		}
-	}
 
 }
 every_country = {
@@ -249,11 +233,7 @@ if = {
 	}
 	every_country = {
 		limit = {
-			OR = {
-				is_warlord = yes
-				tag = EHB
-				#tag = RFM
-			}
+			is_warlord = yes
 		}
 		add_ideas = {
 			unstable_economy

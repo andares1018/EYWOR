@@ -777,8 +777,6 @@ on_actions = {
 							tag = CHI
 							date < 1937.1.1
 						}
-						tag = RFM
-						tag = EHB
 					}
 				}
 				add_ideas = {
@@ -809,8 +807,6 @@ on_actions = {
 					OR = {
 						is_warlord = yes
 						#tag = PRC
-						tag = RFM
-						tag = EHB
 						AND = {
 							tag = CHI
 							date < 1937.1.1
@@ -846,20 +842,5 @@ on_actions = {
 			}
 		}
 	}
-	on_civil_war_end = {
-		effect = {
-			clr_country_flag = im_civ_war_exception
-			if = {
-				limit = {
-					tag = event_target:KMT_CC_clique
-				}
-				set_cosmetic_tag = CHI
-				FROM = {
-					clr_country_flag = im_civ_war_exception
-					clear_global_event_target = WTT_current_china_leader
-				}
-				save_global_event_target_as = WTT_current_china_leader
-			}
-		}
-	}
+
 }

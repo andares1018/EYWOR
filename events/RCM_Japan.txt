@@ -1698,29 +1698,23 @@ country_event = {
 			remove_ideas = osami_nagano
 			remove_ideas = isoroku_yamamoto
 			if = {
-				limit = {
-					has_unit_leader = 2001
-				}
-				remove_unit_leader = 2001
+			limit = {
+				has_unit_leader = 2001
 			}
+			remove_unit_leader = 2001
+		}
 			if = {
-				limit = {
-					has_unit_leader = 2002
-				}
-				remove_unit_leader = 2002
+			limit = {
+				has_unit_leader = 2002
 			}
+			remove_unit_leader = 2002
+		}
 			if = {
-				limit = {
-					has_unit_leader = 2003
-				}
-				remove_unit_leader = 2003
+			limit = {
+				has_unit_leader = 2003
 			}
-			if = {
-				limit = {
-					has_unit_leader = 2902
-				}
-				remove_unit_leader = 2902
-			}
+			remove_unit_leader = 2003
+		}
 		}
 	}
 }
@@ -1743,14 +1737,7 @@ country_event = {
 		name = rcmjapan.44.a
 		custom_effect_tooltip = remove_political_advisor
 		show_ideas_tooltip = kanin_kotohito
-		if = {
-			limit = {
-				has_unit_leader = 2901
-			}
-			remove_unit_leader = 2901
-		}
 		custom_effect_tooltip = prince_will_be_purged
-
 		add_political_power = 200
 		add_stability = -0.1
 		add_timed_idea = { days = 350 idea = prince_purged_jap }
@@ -1764,14 +1751,7 @@ country_event = {
 		name = rcmjapan.44.b
 		custom_effect_tooltip = remove_political_advisor
 		show_ideas_tooltip = kanin_kotohito
-		if = {
-			limit = {
-				has_unit_leader = 2901
-			}
-			remove_unit_leader = 2901
-		}
 		custom_effect_tooltip = prince_will_be_put_on_house_arrest
-
 		add_political_power = 120
 		add_stability = -0.08
 		hidden_effect = {

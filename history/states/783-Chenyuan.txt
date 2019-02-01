@@ -2,7 +2,7 @@ state={
 	id=783
 	name="STATE_783"
 	provinces={
-		1010 1474 4325 7577 8095 9939 10763
+		1010 1474 4325 7577 8095 9939 10763 
 	}
 	history={
 		owner = CHI
@@ -13,9 +13,6 @@ state={
 			#industrial_complex = 1
 			#arms_factory = 1
 		}
-		victory_points = {
-			7577 1
-		}
 		1939.1.1 = {
 			buildings = {
 				industrial_complex = 1
@@ -24,7 +21,6 @@ state={
 				arms_factory = 1
 
 			}
-
 		}
 	}
 	manpower=4043200

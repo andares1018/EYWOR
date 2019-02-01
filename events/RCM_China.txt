@@ -7128,21 +7128,28 @@ country_event = {
 					set_state_owner = PREV
 				}
 			}
-
+			every_owned_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+				}
+				FROM = {
+					transfer_state = PREV
+				}
+			}
 		}
+
 
 		FROM = {
 			country_event = { id = wtt_take_national_leadership.2 }
 
-			annex_country = {
-				target = ROOT transfer_troops = yes
+			effect_tooltip = {
+				annex_country = { target = ROOT transfer_troops = yes }
 			}
 
 			hidden_effect = {
 				news_event = { id = wtt_news.45 days = 3 }
 			}
 			WTT_political_struggle_recalculate_support = yes
-
 		}
 		custom_effect_tooltip = GAME_OVER_TT
 	}

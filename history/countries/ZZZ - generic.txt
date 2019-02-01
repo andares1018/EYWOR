@@ -2,20 +2,20 @@
 every_country = {
 	limit = {
 		OR = {
-			capital_scope = {
+			capital_scope = { 
 				OR = {
 					is_on_continent = europe
-					is_on_continent = north_america
+					is_on_continent = north_america 
 					is_on_continent = oceania
 				}
-			}
+			}	
 			is_subject_of = ENG
 			is_subject_of = HOL
 			is_subject_of = FRA
 			tag = FIC
 		}
 	}
-
+	
 	add_ideas = {
 		generic_wartime_propagantist_europe
 		generic_staunch_patriot_europe
@@ -31,11 +31,11 @@ every_country = {
 		generic_revolutionary_syndicalist_europe
 		generic_robber_baron_europe
 	}
-
+	
 }
 every_country = {
 	limit = {
-		OR = {
+		OR = { 
 			AND = {
 				capital_scope = { is_on_continent = asia }
 				is_puppet = no
@@ -49,15 +49,13 @@ every_country = {
 			tag = EHB
 			tag = ECA
 			tag = RFM
-			tag = MAL
-			tag = SAR
 			tag = PLM
 			tag = NEA
 			tag = SCG
 			tag = NSG
 		}
 	}
-	add_ideas = {
+	add_ideas = { 
 		generic_wartime_propagantist_asia
 		generic_staunch_patriot_asia
 		generic_progressive_activist_asia
@@ -72,14 +70,14 @@ every_country = {
 		generic_revolutionary_syndicalist_asia
 		generic_robber_baron_asia
 	}
-
+	
 }
 every_country = {
 	limit = {
 		capital_scope = { is_on_continent = middle_east }
 		is_puppet = no
 	}
-	add_ideas = {
+	add_ideas = { 
 		generic_wartime_propagantist_arab
 		generic_staunch_patriot_arab
 		generic_progressive_activist_arab
@@ -128,7 +126,7 @@ every_country = {
 			tag = PHI
 		}
 	}
-	add_ideas = {
+	add_ideas = { 
 		generic_wartime_propagantist_south_america
 		generic_staunch_patriot_south_america
 		generic_progressive_activist_south_america
@@ -148,20 +146,20 @@ every_country = {
 	every_country = {
 		limit = {
 			OR = {
-				capital_scope = {
+				capital_scope = { 
 					OR = {
 						is_on_continent = europe
-						is_on_continent = north_america
+						is_on_continent = north_america 
 						is_on_continent = oceania
 					}
-				}
+				}	
 				is_subject_of = ENG
 				is_subject_of = HOL
 				is_subject_of = FRA
 				tag = FIC
 			}
 		}
-
+		
 		add_ideas = {
 			generic_wartime_propagantist_europe
 			generic_staunch_patriot_europe
@@ -177,11 +175,11 @@ every_country = {
 			generic_revolutionary_syndicalist_europe
 			generic_robber_baron_europe
 		}
-
+		
 	}
 	every_country = {
 		limit = {
-			OR = {
+			OR = { 
 				AND = {
 					capital_scope = { is_on_continent = asia }
 					is_puppet = no
@@ -201,7 +199,7 @@ every_country = {
 				tag = NSG
 			}
 		}
-		add_ideas = {
+		add_ideas = { 
 			generic_wartime_propagantist_asia
 			generic_staunch_patriot_asia
 			generic_progressive_activist_asia
@@ -216,14 +214,14 @@ every_country = {
 			generic_revolutionary_syndicalist_asia
 			generic_robber_baron_asia
 		}
-
+		
 	}
 	every_country = {
 		limit = {
 			capital_scope = { is_on_continent = middle_east }
 			is_puppet = no
 		}
-		add_ideas = {
+		add_ideas = { 
 			generic_wartime_propagantist_arab
 			generic_staunch_patriot_arab
 			generic_progressive_activist_arab
@@ -272,7 +270,7 @@ every_country = {
 				tag = PHI
 			}
 		}
-		add_ideas = {
+		add_ideas = { 
 			generic_wartime_propagantist_south_america
 			generic_staunch_patriot_south_america
 			generic_progressive_activist_south_america
@@ -308,28 +306,28 @@ NOR = {
 	set_politics = {
 
 		parties = {
-			democratic = {
+			democratic = { 
 				popularity = 48
 			}
-			n_socialism = {
+			n_socialism = { 
 				popularity = 52
 			}
 			fascism = {
 				popularity = 2
 			}
-
+			
 			communism = {
 				popularity = 2
 			}
 		}
-
+		
 		ruling_party = n_socialism
 		last_election = "1933.10.16"
 		election_frequency = 36
 		elections_allowed = yes
 	}
 
-
+	
 
 	create_country_leader = {
 		name = "Johan Nygaardsvold"
@@ -361,31 +359,31 @@ DEN = {
 	set_politics = {
 
 		parties = {
-			democratic = {
+			democratic = { 
 				popularity = 42
 			}
-
-			n_socialism = {
+			
+			n_socialism = { 
 				popularity = 55
 			}
 			fascism = {
 				popularity = 1
 			}
-
+			
 			communism = {
 				popularity = 2
 			}
 		}
-
+		
 		ruling_party = n_socialism
 		last_election = "1935.10.22"
 		election_frequency = 48
 		elections_allowed = yes
 	}
 
+	
 
-
-
+	
 
 	create_country_leader = {
 		name = "Thorvald Stauning"
@@ -412,14 +410,14 @@ NZL = {
 	set_politics = {
 
 		parties = {
-			democratic = {
+			democratic = { 
 				popularity = 45
 			}
 
 			fascism = {
 				popularity = 0
 			}
-			n_socialism = {
+			n_socialism = { 
 				popularity = 55
 			}
 			communism = {
@@ -427,7 +425,7 @@ NZL = {
 				#banned = no #default is no
 			}
 		}
-
+		
 		ruling_party = n_socialism
 		last_election = "1935.11.27"
 		election_frequency = 36
@@ -458,28 +456,28 @@ NZL = {
 
 
 
-
+	
 }
 AST = {
 	set_politics = {
 
 		parties = {
-			democratic = {
+			democratic = { 
 				popularity = 40
 			}
-			n_socialism = {
+			n_socialism = { 
 				popularity = 60
 			}
 			fascism = {
 				popularity = 0
 			}
-
+			
 			communism = {
 				popularity = 2
 				#banned = no #default is no
 			}
 		}
-
+		
 		ruling_party = n_socialism
 		last_election = "1934.9.15"
 		election_frequency = 36
@@ -522,7 +520,7 @@ FRA = {
 	set_politics = {
 
 		parties = {
-			democratic = {
+			democratic = { 
 				popularity = 38
 			}
 
@@ -536,7 +534,7 @@ FRA = {
 				popularity = 20
 			}
 		}
-
+		
 		ruling_party = democratic
 		last_election = "1932.5.1"
 		election_frequency = 48
@@ -549,10 +547,10 @@ FRA = {
 		expire = "1965.1.1"
 		ideology = n_socialism_ideology
 		traits = {
-
+			
 		}
 	}
-
+	
 	create_country_leader = {
 		name = "Pierre Laval"
 		desc = ""
@@ -560,7 +558,7 @@ FRA = {
 		expire = "1965.1.1"
 		ideology = conservatism
 		traits = {
-
+			
 		}
 	}
 
@@ -571,7 +569,7 @@ FRA = {
 		expire = "1965.1.1"
 		ideology = collaborationism
 		traits = {
-
+			
 		}
 	}
 }
@@ -585,14 +583,14 @@ RAJ = {
 	set_politics = {
 
 		parties = {
-			democratic = {
+			democratic = { 
 				popularity = 17
 			}
 
 			fascism = {
 				popularity = 2
 			}
-
+			
 			communism = {
 				popularity = 1
 			}
@@ -601,7 +599,7 @@ RAJ = {
 				popularity = 80
 			}
 		}
-
+		
 		ruling_party = neutrality
 		last_election = "1935.11.14"
 		election_frequency = 48
@@ -629,28 +627,28 @@ SST = {
 	set_politics = {
 
 		parties = {
-			democratic = {
+			democratic = { 
 				popularity = 30
 			}
 
 			fascism = {
 				popularity = 0
 			}
-
+		
 			n_socialism = {
 				popularity = 0
 			}
-
+		
 			communism = {
 				popularity = 0
 				#banned = no #default is no
 			}
-
-			neutrality = {
+		
+			neutrality = { 
 				popularity = 70
 			}
 		}
-
+	
 		ruling_party = neutrality
 		last_election = "1936.1.1"
 		election_frequency = 48
@@ -677,28 +675,28 @@ MAL = {
 	set_politics = {
 
 		parties = {
-			democratic = {
+			democratic = { 
 				popularity = 20
 			}
 
 			fascism = {
 				popularity = 0
 			}
-
+		
 			n_socialism = {
 				popularity = 17
 			}
-
+		
 			communism = {
 				popularity = 13
 				#banned = no #default is no
 			}
-
-			neutrality = {
+		
+			neutrality = { 
 				popularity = 50
 			}
 		}
-
+	
 		ruling_party = neutrality
 		last_election = "1936.1.1"
 		election_frequency = 48
@@ -720,33 +718,33 @@ HOL = {
 			puppet = INS
 		}
 	}
-
+	
 	set_politics = {
 
 		parties = {
-			democratic = {
+			democratic = { 
 				popularity = 66
 			}
 
 			fascism = {
 				popularity = 1
 			}
-
+		
 			communism = {
 				popularity = 5
 			}
-
+			
 			n_socialism = {
 				popularity = 28
 			}
 		}
-
+	
 		ruling_party = democratic
 		last_election = "1933.4.26"
 		election_frequency = 48
 		elections_allowed = yes
 	}
-
+	
 	create_country_leader = {
 		name = "Hendrikus Colijn"
 		desc = "POLITICS_HENDRIKUS_COLIJN_DESC"
@@ -757,7 +755,7 @@ HOL = {
 			#
 		}
 	}
-
+	
 	create_country_leader = {
 		name = "Johann Willem Albarda"
 		desc = "POLITICS_JOHANN_ALBARDA_DESC"
@@ -773,10 +771,10 @@ INS = {
 	set_politics = {
 
 		parties = {
-			democratic = {
+			democratic = { 
 				popularity = 27
 			}
-
+		
 			n_socialism = {
 				popularity = 7
 			}
@@ -784,7 +782,7 @@ INS = {
 			fascism = {
 				popularity = 1
 			}
-
+		
 			communism = {
 				popularity = 3
 			}
@@ -805,14 +803,14 @@ INS = {
 		set_politics = {
 
 			parties = {
-				democratic = {
+				democratic = { 
 					popularity = 48
 				}
 
 				fascism = {
 					popularity = 2
 				}
-				n_socialism = {
+				n_socialism = { 
 					popularity = 52
 				}
 				communism = {
@@ -823,7 +821,7 @@ INS = {
 					popularity = 12
 				}
 			}
-
+			
 			ruling_party = n_socialism
 			last_election = "1936.10.19"
 			election_frequency = 36
@@ -834,14 +832,14 @@ INS = {
 		set_politics = {
 
 			parties = {
-				democratic = {
+				democratic = { 
 					popularity = 45
 				}
 
 				fascism = {
 					popularity = 0
 				}
-				n_socialism = {
+				n_socialism = { 
 					popularity = 55
 				}
 				communism = {
@@ -849,7 +847,7 @@ INS = {
 					#banned = no #default is no
 				}
 			}
-
+			
 			ruling_party = democratic
 			last_election = "1938.10.15"
 			election_frequency = 60
@@ -873,7 +871,7 @@ INS = {
 		set_politics = {
 
 			parties = {
-				democratic = {
+				democratic = { 
 					popularity = 42
 				}
 				n_socialism = {
@@ -882,12 +880,12 @@ INS = {
 				fascism = {
 					popularity = 1
 				}
-
+				
 				communism = {
 					popularity = 2
 				}
 			}
-
+			
 			ruling_party = n_socialism
 			last_election = "1939.4.3"
 			election_frequency = 48
@@ -919,7 +917,7 @@ INS = {
 			expire = "1965.1.1"
 			ideology = socialism
 			traits = {
-
+				
 			}
 		}
 	}
@@ -927,23 +925,23 @@ INS = {
 		set_politics = {
 
 			parties = {
-				democratic = {
+				democratic = { 
 					popularity = 63
 				}
 
 				fascism = {
 					popularity = 4
 				}
-
+		
 				communism = {
 					popularity = 3
 				}
-
+			
 				n_socialism = {
 					popularity = 30
 				}
 			}
-
+	
 			ruling_party = democratic
 			last_election = "1937.5.26"
 			election_frequency = 48
@@ -957,7 +955,7 @@ INS = {
 		if = {
 			limit = {
 				has_dlc = "Waking the Tiger"
-			}
+			}		
 			CHI = { add_to_faction = PREV }
 			add_to_war = {
 				targeted_alliance = CHI
@@ -973,7 +971,7 @@ INS = {
 				unlock_national_focus = CHI_opposition
 				else = {
 					complete_national_focus = CHI_cooperation_with_the_nationalists
-				}
+				}				
 			}
 			complete_national_focus = CHI_industrial_investment
 			complete_national_focus = CHI_public_education_reform
@@ -998,6 +996,6 @@ INS = {
 				complete_national_focus = production_effort
 			}
 		}
-
+		
 	}
 }
