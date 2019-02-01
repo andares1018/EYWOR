@@ -50,6 +50,7 @@ set_politics = {
 
 add_opinion_modifier = { target = CHI modifier = hostile_status }
 
+#mongolian_autonoumous fed
 create_country_leader = {
 	name = "Wang Kemin"
 	desc = "POLITICS_WANG_KEMIN_DESC"

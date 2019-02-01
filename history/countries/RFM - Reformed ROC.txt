@@ -9,6 +9,7 @@ set_technology = {
 }
 
 1939.1.1 = {
+	
 	add_to_war = { targeted_alliance = JAP enemy = CHI }
 	add_political_power = 1198
 	set_global_flag = rfm_exists
@@ -79,31 +80,39 @@ set_technology = {
 		base_strike = 1
 		synth_oil_experiments = 1
 	}
-	set_politics = {
-	parties = {
-		democratic = {
-			popularity = 00
-			banned = yes
-		}
-
-		fascism = {
-			popularity = 60
-		}
-
-		communism = {
-			popularity = 0
-			banned = yes
-		}
-
-		neutrality = {
-			popularity = 40
-		}
+	JAP = {
+		puppet = RFM
 	}
+	set_politics = {
+		parties = {
+			democratic = {
+				popularity = 0
+				banned = yes
+			}
+	
+			fascism = {
+				popularity = 60
+			}
+	
+			communism = {
+				popularity = 0
+				banned = yes
+			}
 
-	ruling_party = fascism
-	last_election = "1936.1.1"
-	election_frequency = 48
-	elections_allowed = no
+			n_socialism = {
+				popularity = 0
+				banned = yes
+			}
+	
+			neutrality = {
+				popularity = 40
+			}
+		}
+
+		ruling_party = fascism
+		last_election = "1936.1.1"
+		election_frequency = 48
+		elections_allowed = no
 	}
 }
 
@@ -120,6 +129,11 @@ set_politics = {
 		}
 
 		communism = {
+			popularity = 0
+			banned = yes
+		}
+
+		n_socialism = {
 			popularity = 0
 			banned = yes
 		}

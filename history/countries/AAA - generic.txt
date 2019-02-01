@@ -147,18 +147,18 @@ ENG = {
 			parties = {
 				democratic = {
 					popularity = 0
-					banned = yes
+					banned = no
 				}
 				fascism = {
 					popularity = 0
 				}
 				communism = {
 					popularity = 0
-					banned = yes
+					banned = no
 				}
 				n_socialism = {
 					popularity = 0
-					banned = yes
+					banned = no
 				}
 				neutrality = {
 					popularity = 100
@@ -176,7 +176,7 @@ ENG = {
 		limit = {
 			has_dlc = "Waking the Tiger"
 		}
-		every_country = {
+		random_country = {
 			limit = {
 				tag = RFM
 			}
@@ -199,18 +199,18 @@ every_country = {
 		parties = {
 			democratic = {
 				popularity = 0
-				banned = yes
+				banned = no
 			}
 			fascism = {
 				popularity = 0
 			}
 			communism = {
 				popularity = 0
-				banned = yes
+				banned = no
 			}
 			n_socialism = {
 				popularity = 0
-				banned = yes
+				banned = no
 			}
 			neutrality = {
 				popularity = 100
