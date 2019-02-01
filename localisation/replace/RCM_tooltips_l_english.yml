@@ -102,6 +102,7 @@
  #MESC
  failed_to_do_this_focus_in_time_can_lead_to_a_complete_defection_of_inner_mongolia_tt:0 "§RFailed to do this focus in time can lead to a complete defection of Inner Mongolia.§!\n"
  not_has_appeasement_policy_2_tt:0 "Is not affected by §YAppeasement Policy§!.\n"
+ not_affacted_by_illegal_regime_JPG_tt:0 "Is not affected by §YIllegal Regime§!"
  MEJ_reform:0 "@MEJ §Y[MEJ.GetNameDef]§! will be called @MEJ §YMongol Autonomous Federation§!\n"
  help_china_war:0 "Join the wars between @CHI §Y[CHI.GetNameDef]§! and the warlords to help reunify China.\n"
  increase_penalty_appeasement:0 "§RIncrease the penalty of§! §YAppeasement Policy§!"
@@ -184,3 +185,11 @@
  has_taken_monetary_reform_decision_tt:0 "Has taken £decision_icon_small §HDecision§!: §HMonetary Reform§!.\n"
 
  country_color_change:0 "§HCountry's color will change to blue or red depending on the ruling ideologies.§!.\n"
+
+ at_least_one_major_like_us_tt:0 "At least one §YMajor Nation§! has opinion of us at least §G60§!."
+ at_least_two_major_like_us_tt:0 "At least two §YMajor Nations§! has opinion of us at least §G60§!."
+ at_least_three_major_like_us_tt:0 "At least three §YMajor Nations§! has opinion of us at least §G60§!."
+ at_least_four_major_like_us_tt:0 "At least four §YMajor Nations§! has opinion of us at least §G60§!."
+ at_least_five_major_like_us_tt:0 "At least five §YMajor Nations§! has opinion of us at least §G60§!."
+
+ requirments_not_met_tt:0 "§RRequirements are not met§!\n"

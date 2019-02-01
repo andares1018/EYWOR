@@ -1,5 +1,5 @@
 #	Example:
-# 
+#
 #	example_trigger = {
 #		tag = GER
 #		is_ai = no
@@ -11,7 +11,7 @@
 #	trigger = {
 #		exampel_trigger = yes
 #	}
-# 
+#
 #	THIS FILE IS FOR TRIGGERS SPECIFICALLY FOR THE GER TAG
 
 
@@ -156,5 +156,274 @@ is_manchuria_state_count_triggers = {
 			781 = { is_controlled_by_jap_or_its_puppet = yes }
 		}
 	}
-	
+
+}
+
+#HOW MANY MAJORS LIKE YOU
+at_least_one_major_like_us = {
+	custom_trigger_tooltip = {
+		tooltip = at_least_one_major_like_us_tt
+		count_triggers = {
+			amount = 1
+			GER = {
+				has_opinion = {
+					target = ROOT
+					value > 59
+				}
+			}
+			USA = {
+				has_opinion = {
+					target = ROOT
+					value > 59
+				}
+			}
+			ENG = {
+				has_opinion = {
+					target = ROOT
+					value > 59
+				}
+			}
+			ITA = {
+				has_opinion = {
+					target = ROOT
+					value > 59
+				}
+			}
+			FRA = {
+				has_opinion = {
+					target = ROOT
+					value > 59
+				}
+			}
+			SOV = {
+				has_opinion = {
+					target = ROOT
+					value > 59
+				}
+			}
+			JAP = {
+				has_opinion = {
+					target = ROOT
+					value > 59
+				}
+			}
+		}
+	}
+}
+
+at_least_two_major_like_us = {
+	custom_trigger_tooltip = {
+		tooltip = at_least_two_major_like_us_tt
+		count_triggers = {
+			amount = 2
+			GER = {
+				has_opinion = {
+					target = ROOT
+					value > 59
+				}
+			}
+			USA = {
+				has_opinion = {
+					target = ROOT
+					value > 59
+				}
+			}
+			ENG = {
+				has_opinion = {
+					target = ROOT
+					value > 59
+				}
+			}
+			ITA = {
+				has_opinion = {
+					target = ROOT
+					value > 59
+				}
+			}
+			FRA = {
+				has_opinion = {
+					target = ROOT
+					value > 59
+				}
+			}
+			SOV = {
+				has_opinion = {
+					target = ROOT
+					value > 59
+				}
+			}
+			JAP = {
+				has_opinion = {
+					target = ROOT
+					value > 59
+				}
+			}
+		}
+	}
+}
+
+at_least_three_major_like_us = {
+	custom_trigger_tooltip = {
+		tooltip = at_least_three_major_like_us_tt
+		count_triggers = {
+			amount = 3
+			GER = {
+				has_opinion = {
+					target = ROOT
+					value > 59
+				}
+			}
+			USA = {
+				has_opinion = {
+					target = ROOT
+					value > 59
+				}
+			}
+			ENG = {
+				has_opinion = {
+					target = ROOT
+					value > 59
+				}
+			}
+			ITA = {
+				has_opinion = {
+					target = ROOT
+					value > 59
+				}
+			}
+			FRA = {
+				has_opinion = {
+					target = ROOT
+					value > 59
+				}
+			}
+			SOV = {
+				has_opinion = {
+					target = ROOT
+					value > 59
+				}
+			}
+			JAP = {
+				has_opinion = {
+					target = ROOT
+					value > 59
+				}
+			}
+		}
+	}
+}
+
+at_least_four_major_like_us = {
+	custom_trigger_tooltip = {
+		tooltip = at_least_four_major_like_us_tt
+		count_triggers = {
+			amount = 4
+			GER = {
+				has_opinion = {
+					target = ROOT
+					value > 59
+				}
+			}
+			USA = {
+				has_opinion = {
+					target = ROOT
+					value > 59
+				}
+			}
+			ENG = {
+				has_opinion = {
+					target = ROOT
+					value > 59
+				}
+			}
+			ITA = {
+				has_opinion = {
+					target = ROOT
+					value > 59
+				}
+			}
+			FRA = {
+				has_opinion = {
+					target = ROOT
+					value > 59
+				}
+			}
+			SOV = {
+				has_opinion = {
+					target = ROOT
+					value > 59
+				}
+			}
+			JAP = {
+				has_opinion = {
+					target = ROOT
+					value > 59
+				}
+			}
+		}
+	}
+}
+at_least_five_major_like_us = {
+	custom_trigger_tooltip = {
+		tooltip = at_least_five_major_like_us_tt
+		count_triggers = {
+			amount = 5
+			GER = {
+				has_opinion = {
+					target = ROOT
+					value > 59
+				}
+			}
+			USA = {
+				has_opinion = {
+					target = ROOT
+					value > 59
+				}
+			}
+			ENG = {
+				has_opinion = {
+					target = ROOT
+					value > 59
+				}
+			}
+			ITA = {
+				has_opinion = {
+					target = ROOT
+					value > 59
+				}
+			}
+			FRA = {
+				has_opinion = {
+					target = ROOT
+					value > 59
+				}
+			}
+			SOV = {
+				has_opinion = {
+					target = ROOT
+					value > 59
+				}
+			}
+			JAP = {
+				has_opinion = {
+					target = ROOT
+					value > 59
+				}
+			}
+		}
+	}
+}
+not_affacted_by_illegal_regime_JPG = {
+	custom_trigger_tooltip = {
+		tooltip = not_affacted_by_illegal_regime_JPG_tt
+		NOT = {
+			OR = {
+				has_idea = JPG_illegal_regime_1
+				has_idea = JPG_illegal_regime_2
+				has_idea = JPG_illegal_regime_3
+				has_idea = JPG_illegal_regime_4
+				has_idea = JPG_illegal_regime_5
+			}
+		}
+	}
 }
