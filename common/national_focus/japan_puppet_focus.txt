@@ -11,7 +11,7 @@ focus_tree = {
 
 		}
 	}
-	continuous_focus_position = { x = 950 y = 1080 }
+	continuous_focus_position = { x = 1050 y = 50 }
 	default = no
 	focus = {
 		id = JPG_seek_japanese_support
@@ -165,7 +165,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_political_power = -50
-			JPG_illegal_regime_level_down = yes
+			swap_ideas = {
+				remove_idea = JPG_illegal_regime_1
+				add_idea = JPG_illegal_regime_2
+			}
 		}
 		available = {
 			is_in_faction_with = JAP
@@ -661,7 +664,6 @@ focus_tree = {
 		}
 		available = {
 			has_country_flag = im_rrc_now
-			not_affacted_by_illegal_regime_JPG = yes
 			NOT = {
 				country_exists = event_target:WTT_current_china_leader
 			}

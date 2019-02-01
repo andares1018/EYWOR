@@ -372,12 +372,7 @@ create_corps_commander = {
 	traits = {
 		trickster trait_engineer brilliant_strategist politically_connected
 	}
-	id = 4500
 	skill = 5
-	attack_skill = 5
-	defense_skill = 5
-	planning_skill = 5
-	logistics_skill = 5
 	attack_skill = 4
 	defense_skill = 5
 	planning_skill = 3
@@ -392,7 +387,6 @@ create_field_marshal = {
 		JAP_samurai_lineage   # hakushaku
 		politically_connected
 	}
-	id = 4501
 	skill = 4
 	attack_skill = 4
 	defense_skill = 4
@@ -404,7 +398,6 @@ create_field_marshal = {
 	name = "Shunroku Hata"
 		picture = "Portrait_Japan_Shunroku_Hata.dds"
 	traits = { offensive_doctrine JAP_samurai_lineage }
-	id = 4502
 	skill = 4
 	attack_skill = 3
 	defense_skill = 4
@@ -416,7 +409,6 @@ create_field_marshal = {
 	name = "Prince Naruhiko Higashikuni"
 	picture = "Portrait_Japan_Naruhiko_Higashikuni.dds"
 	traits = { JAP_samurai_lineage infantry_officer politically_connected }
-	id = 4503
 	skill = 3
 	attack_skill = 3
 	defense_skill = 3
@@ -428,7 +420,6 @@ create_field_marshal = {
 	name = "Prince Nashimoto Morimasa"
 	picture = "Portrait_Japan_Prince_Nashimoto_Morimasa.dds"
 	traits = { old_guard politically_connected }
-	id = 4504
 	skill = 4
 	attack_skill = 3
 	defense_skill = 2
@@ -477,7 +468,6 @@ create_corps_commander = {
 	name = "Kanji Ishiwara"
 		picture = "Portrait_Japan_Kanji_Ishiwara.dds"
 	traits = { JAP_samurai_lineage }
-	id = 4508
 	skill = 1
 	attack_skill = 1
 	defense_skill = 1
@@ -489,7 +479,6 @@ create_corps_commander = {
 	name = "Shizuichi Tanaka"
 		picture = "Portrait_Japan_Shizuichi_Tanaka.dds"
 	traits = { trickster career_officer infantry_officer }
-	id = 4509
 	skill = 4
 	attack_skill = 4
 	defense_skill = 3
@@ -501,7 +490,6 @@ create_corps_commander = {
 	name = "Yasuji Okamura"
 		picture = "Portrait_Japan_Yasuji_Okamura.dds"
 	traits = { trait_reckless }
-	id = 4510
 	skill = 1
 	attack_skill = 1
 	defense_skill = 1
@@ -513,7 +501,6 @@ create_corps_commander = {
 	name = "Toshizo Nishio" #Toshizo
 		picture = "Portrait_Japan_Toshizo_Nishio.dds"
 	traits = { brilliant_strategist infantry_officer }
-	id = 4511
 	skill = 3
 	attack_skill = 3
 	defense_skill = 2
@@ -525,7 +512,6 @@ create_corps_commander = {
 	name = "Rikichi Ando" #Ando
 		picture = "Portrait_Japan_Rikichi_Ando.dds"
 	traits = { career_officer }
-	id = 4512
 	skill = 3
 	attack_skill = 1
 	defense_skill = 3
@@ -539,12 +525,7 @@ create_corps_commander = {
 	name = "Seishiro Itagaki"
 		picture = "Portrait_Japan_Seishiro_Itagaki.dds"
 	traits = { JAP_samurai_lineage inflexible_strategist trait_reckless }
-	id = 4513
 	skill = 3
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 3
 	attack_skill = 3
 	defense_skill = 3
 	planning_skill = 2
@@ -555,12 +536,7 @@ create_corps_commander = {
 	name = "Takashi Sakai"
 		picture = "Portrait_Japan_Takashi_Sakai.dds"
 	traits = { infantry_officer trait_reckless }
-	id = 4514
 	skill = 3
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 3
 	attack_skill = 2
 	defense_skill = 2
 	planning_skill = 3
@@ -571,11 +547,13 @@ create_corps_commander = {
 	name = "Kenji Doihara"
 		picture = "Portrait_Japan_Kenji_Doihara.dds"
 	traits = { career_officer substance_abuser }
-	id = 4515
 	skill = 1
 	attack_skill = 1
 	defense_skill = 1
 	planning_skill = 1
+
+
+
 	logistics_skill = 1
 }
 
@@ -583,7 +561,6 @@ create_corps_commander = {
 	name = "Kenkichi Ueda"
 		picture = "Portrait_Japan_Kenkichi_Ueda.dds"
 	traits = { old_guard cavalry_officer trait_reckless }
-	id = 4516
 	skill = 4
 	attack_skill = 3
 	defense_skill = 2
@@ -595,7 +572,6 @@ create_corps_commander = {
 	name = "Shigeru Honjo"
 		picture = "Portrait_Japan_Shigeru_Honjo.dds"
 	traits = { old_guard war_hero }
-	id = 4517
 	skill = 1
 	attack_skill = 1
 	defense_skill = 1
@@ -607,7 +583,6 @@ create_corps_commander = {
 	name = "Yoshijiro Umezu"
 		picture = "Portrait_Japan_Yoshijiro_Umezu.dds"
 	traits = { trait_cautious politically_connected }
-	id = 4518
 	skill = 3
 	attack_skill = 3
 	defense_skill = 3
@@ -619,7 +594,6 @@ create_corps_commander = {
 	name = "Otozo Yamada"
 		picture = "Portrait_Japan_Otozo_Yamada.dds"
 	traits = { cavalry_officer career_officer }
-	id = 4519
 	skill = 3
 	attack_skill = 3
 	defense_skill = 1
@@ -631,7 +605,6 @@ create_corps_commander = {
 	name = "Hatazo Adachi"
 		picture = "Portrait_Japan_Hatazo_Adachi.dds"
 	traits = { trickster JAP_samurai_lineage trait_reckless infantry_officer }
-	id = 4520
 	skill = 2
 	attack_skill = 1
 	defense_skill = 2
@@ -643,7 +616,6 @@ create_corps_commander = {
 	name = "Iwane Matsui"
 		picture = "Portrait_Japan_Iwane_Matsui.dds"
 	traits = { old_guard trait_reckless }
-	id = 4521
 	skill = 1
 	attack_skill = 1
 	defense_skill = 1
@@ -655,7 +627,6 @@ create_corps_commander = {
 		picture = "Portrait_Japan_Sadao_Araki.dds"
 	traits = { JAP_samurai_lineage }
 
-	id = 4522
 	skill = 2
 	attack_skill = 1
 	defense_skill = 2
@@ -667,7 +638,6 @@ create_corps_commander = {
 	name = "Keisuke Fujie"
 		picture = "Portrait_Japan_Keisuke_Fujie.dds"
 	traits = { fortress_buster career_officer politically_connected }
-	id = 4523
 	skill = 3
 	attack_skill = 1
 	defense_skill = 3
@@ -678,7 +648,6 @@ create_corps_commander = {
 	name = "Kiichiro Higuchi"
 		picture = "Portrait_Japan_Kiichiro_Higuchi.dds"
 	traits = { career_officer trait_cautious }
-	id = 4524
 	skill = 2
 	attack_skill = 2
 	defense_skill = 2
@@ -690,7 +659,6 @@ create_corps_commander = {
 	name = "Masaharu Homma"
 		picture = "Portrait_Japan_Masaharu_Homma.dds"
 	traits = { media_personality trait_cautious }
-	id = 4525
 	skill = 2
 	attack_skill = 2
 	defense_skill = 2
@@ -702,7 +670,6 @@ create_corps_commander = {
 	name = "Harukichi Hyakutake"
 		picture = "Portrait_Japan_Harukichi_Hyakutake.dds"
 	traits = { infantry_officer  }
-	id = 4526
 	skill = 3
 	attack_skill = 2
 	defense_skill = 2
@@ -714,7 +681,6 @@ create_corps_commander = {
 	name = "Jo Iimura"
 		picture = "Portrait_Japan_Jo_Iimura.dds"
 	traits = { career_officer }
-	id = 4527
 	skill = 2
 	attack_skill = 1
 	defense_skill = 2
@@ -726,7 +692,6 @@ create_corps_commander = {
 	name = "Hitoshi Imamura"
 		picture = "Portrait_Japan_Hitoshi_Imamura.dds"
 	traits = {  commando career_officer infantry_officer }
-	id = 4528
 	skill = 3
 	attack_skill = 3
 	defense_skill = 1
@@ -738,7 +703,6 @@ create_corps_commander = {
 	name = "Masatane Kanda"
 		picture = "Portrait_Japan_Masatane_Kanda.dds"
 	traits = { trait_cautious }
-	id = 4529
 	skill = 2
 	attack_skill = 2
 	defense_skill = 2
@@ -750,7 +714,6 @@ create_corps_commander = {
 	name = "Kuniaki Koiso"
 		picture = "Portrait_Japan_Kuniaki_Koiso.dds"
 	traits = { JAP_samurai_lineage old_guard politically_connected }
-	id = 4530
 	skill = 2
 	attack_skill = 2
 	defense_skill = 2
@@ -770,7 +733,6 @@ create_navy_leader = {
 	name = "Mineichi Koga"
 		picture = "Portrait_Japan_Mineichi_Koga.dds"
 	traits = { superior_tactician spotter }
-	id = 4532
 	skill = 4
 }
 
@@ -778,7 +740,6 @@ create_navy_leader = {
 	name = "Kiyoshi Hasegawa"
 		picture = "Portrait_Japan_Hasegawa_Kiyoshi.dds"
 	traits = {  }
-	id = 4533
 	skill = 2
 }
 
@@ -787,7 +748,6 @@ create_navy_leader = {
 	name = "Shigeyoshi Inoue"
 		picture = "Portrait_Japan_Shigeyoshi_Inoue.dds"
 	traits = { air_controller }
-	id = 4534
 	skill = 1
 }
 
@@ -795,7 +755,6 @@ create_navy_leader = {
 	name = "Nobutake Kondo"
 		picture = "Portrait_Japan_Nobutake_Kondo.dds"
 	traits = { fly_swatter }
-	id = 4535
 	skill = 3
 }
 
@@ -803,7 +762,6 @@ create_navy_leader = {
 	name = "Takeo Takagi"
 		picture = "Portrait_Japan_Takeo_Takagi.dds"
 	traits = {  }
-	id = 4536
 	skill = 2
 }
 
@@ -811,7 +769,6 @@ create_navy_leader = {
 	name = "Soemu Toyoda"
 		picture = "Portrait_Japan_Soemu_Toyoda.dds"
 	traits = { old_guard_navy }
-	id = 4537
 	skill = 1
 }
 
@@ -819,7 +776,6 @@ create_navy_leader = {
 	name = "Jisaburo Ozawa"
 		picture = "Portrait_Japan_Jisaburo_Ozawa.dds"
 	traits = { blockade_runner superior_tactician }
-	id = 4538
 	skill = 5
 	}
 
@@ -827,7 +783,6 @@ create_navy_leader = {
 	name = "Zengo Yoshida"
 		picture = "Portrait_Japan_Zengo_Yoshida.dds"
 	traits = {  }
-	id = 4539
 	skill = 2
 }
 
@@ -835,7 +790,6 @@ create_navy_leader = {
 	name = "Hiroaki Abe"
 		picture = "Portrait_Japan_Hiroaki_Abe.dds"
 	traits = {  }
-	id = 4540
 	skill = 1
 }
 
@@ -843,7 +797,6 @@ create_navy_leader = {
 	name = "Tadashige Daigo"
 		picture = "Portrait_Japan_Tadashige_Daigo.dds"
 	traits = { seawolf }
-	id = 4541
 	skill = 1
 }
 
@@ -851,7 +804,6 @@ create_navy_leader = {
 	name = "Gengo Hyakutake"
 		picture = "Portrait_Japan_Gengo_Hyakutake.dds"
 	traits = {  }
-	id = 4542
 	skill = 3
 }
 

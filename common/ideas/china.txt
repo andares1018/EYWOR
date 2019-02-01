@@ -193,6 +193,8 @@ ideas = {
 			modifier = {
 				army_attack_factor = -0.45
 				army_defence_factor = -0.45
+				army_org_factor = -0.15
+				army_morale_factor = -0.15
 				mobilization_speed = -0.3
 				command_power_gain_mult = -0.6
 				land_reinforce_rate = -0.3
@@ -219,6 +221,8 @@ ideas = {
 			modifier = {
 				army_attack_factor = -0.30
 				army_defence_factor = -0.30
+				army_org_factor = -0.1
+				army_morale_factor = -0.1
 				mobilization_speed = -0.2
 				command_power_gain_mult = -0.4
 				land_reinforce_rate = -0.2
@@ -245,6 +249,8 @@ ideas = {
 			modifier = {
 				army_attack_factor = -0.15
 				army_defence_factor = -0.15
+				army_org_factor = -0.05
+				army_morale_factor = -0.05
 				mobilization_speed = -0.1
 				command_power_gain_mult = -0.2
 				land_reinforce_rate = -0.1
@@ -1948,7 +1954,7 @@ ideas = {
 		}
 
 
-		CHI_sunfall_sea = {
+		CHI_sunfall_sea	= {
 			allowed = {
 				always = no
 			}
@@ -1972,11 +1978,19 @@ ideas = {
 				always = no
 			}
 			removal_cost = -1
-			modifier = {
-				convoy_escort_efficiency = 0.07
-				naval_coordination = 0.07
-				naval_hit_chance = 0.07
-				naval_speed_factor = 0.07
+			equipment_bonus = {
+				capital_ship = {
+					build_cost_ic = -0.10 instant = yes
+				}
+				carrier = {
+					build_cost_ic = -0.10 instant = yes
+				}
+				screen_ship = {
+					build_cost_ic = -0.10 instant = yes
+				}
+				submarine = {
+					build_cost_ic = -0.10 instant = yes
+				}
 			}
 
 		}
@@ -2006,10 +2020,9 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				army_morale_factor = 0.07
-				army_org_factor = 0.07
-				army_defence_factor = 0.07
-				army_attack_factor = 0.07
+				army_morale_factor = 0.1
+				army_defence_factor = 0.1
+				army_attack_factor = 0.1
 				max_command_power = 20
 			}
 		}
@@ -2349,16 +2362,16 @@ ideas = {
 			picture = generic_air_bonus
 			equipment_bonus = {
 				tac_bomber_equipment = {
-					air_attack = 0.07 instant = yes
+					air_attack = 0.05 instant = yes
 				}
 				tac_bomber_equipment = {
-					air_defence = 0.07 instant = yes
+					air_defence = 0.05 instant = yes
 				}
 				fighter_equipment = {
-					air_attack = 0.07 instant = yes
+					air_attack = 0.05 instant = yes
 				}
 				fighter_equipment = {
-					air_defence = 0.07  instant = yes
+					air_defence = 0.05  instant = yes
 				}
 			}
 		}
@@ -2529,10 +2542,8 @@ ideas = {
 			modifier = {
 				army_org_factor = 0.05
 				army_morale_factor = 0.05
-				army_core_defence_factor = 0.075
+				army_core_defence_factor = 0.05
 				army_core_attack_factor = 0.05
-				land_reinforce_rate = 0.05
-				mobilization_speed = 0.05
 				conscription = 0.005
 			}
 		}
@@ -2554,10 +2565,8 @@ ideas = {
 
 				army_org_factor = 0.1
 				army_morale_factor = 0.1
-				army_core_defence_factor = 0.15
+				army_core_defence_factor = 0.1
 				army_core_attack_factor = 0.1
-				land_reinforce_rate = 0.1
-				mobilization_speed = 0.1
 				conscription = 0.01
 			}
 		}
@@ -2578,10 +2587,8 @@ ideas = {
 			modifier = {
 				army_org_factor = 0.15
 				army_morale_factor = 0.15
-				army_core_defence_factor = 0.225
+				army_core_defence_factor = 0.15
 				army_core_attack_factor = 0.15
-				land_reinforce_rate = 0.15
-				mobilization_speed = 0.15
 				conscription = 0.015
 			}
 		}
@@ -2602,10 +2609,8 @@ ideas = {
 			modifier = {
 				army_org_factor = 0.20
 				army_morale_factor = 0.20
-				army_core_defence_factor = 0.3
+				army_core_defence_factor = 0.20
 				army_core_attack_factor = 0.20
-				land_reinforce_rate = 0.20
-				mobilization_speed = 0.20
 				conscription = 0.020
 			}
 		}
@@ -2626,10 +2631,8 @@ ideas = {
 			modifier = {
 				army_org_factor = 0.25
 				army_morale_factor = 0.25
-				army_core_defence_factor = 0.375
+				army_core_defence_factor = 0.25
 				army_core_attack_factor = 0.25
-				land_reinforce_rate = 0.25
-				mobilization_speed = 0.25
 				conscription = 0.025
 			}
 		}
@@ -2650,10 +2653,8 @@ ideas = {
 			modifier = {
 				army_org_factor = 0.3
 				army_morale_factor = 0.3
-				army_core_defence_factor = 0.45
+				army_core_defence_factor = 0.3
 				army_core_attack_factor = 0.3
-				land_reinforce_rate = 0.3
-				mobilization_speed = 0.3
 				conscription = 0.03
 			}
 		}
@@ -2674,10 +2675,8 @@ ideas = {
 			modifier = {
 				army_org_factor = 0.35
 				army_morale_factor = 0.35
-				army_core_defence_factor = 0.525
+				army_core_defence_factor = 0.35
 				army_core_attack_factor = 0.35
-				land_reinforce_rate = 0.35
-				mobilization_speed = 0.35
 				conscription = 0.035
 			}
 		}
@@ -2698,10 +2697,8 @@ ideas = {
 			modifier = {
 				army_org_factor = 0.4
 				army_morale_factor = 0.4
-				army_core_defence_factor = 0.6
+				army_core_defence_factor = 0.4
 				army_core_attack_factor = 0.4
-				land_reinforce_rate = 0.4
-				mobilization_speed = 0.4
 				conscription = 0.04
 			}
 		}
@@ -2722,10 +2719,8 @@ ideas = {
 			modifier = {
 				army_org_factor = 0.45
 				army_morale_factor = 0.45
-				army_core_defence_factor = 0.675
+				army_core_defence_factor = 0.45
 				army_core_attack_factor = 0.45
-				land_reinforce_rate = 0.45
-				mobilization_speed = 0.45
 				conscription = 0.045
 			}
 		}
@@ -2746,10 +2741,8 @@ ideas = {
 			modifier = {
 				army_org_factor = 0.5
 				army_morale_factor = 0.5
-				army_core_defence_factor = 0.75
+				army_core_defence_factor = 0.5
 				army_core_attack_factor = 0.5
-				land_reinforce_rate = 0.5
-				mobilization_speed = 0.5
 				conscription = 0.05
 			}
 		}

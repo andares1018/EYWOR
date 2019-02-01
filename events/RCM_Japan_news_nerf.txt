@@ -1,0 +1,347 @@
+﻿add_namespace = newsnerf
+
+#perk increases
+news_event = {
+	id = newsnerf.1
+	hidden = yes
+	trigger = {
+		has_idea = CHI_inch_blood_1
+		surrender_progress > 0.25
+	}
+	mean_time_to_happen = {
+		days = 0
+	} 
+	immediate = {
+		swap_ideas = {
+			remove_idea = CHI_inch_blood_1
+			add_idea = CHI_inch_blood_2
+		}
+	}
+	option = {
+	}
+}
+news_event = {
+	id = newsnerf.2
+	hidden = yes
+	trigger = {
+		has_idea = CHI_inch_blood_2
+		surrender_progress > 0.35
+	}
+	mean_time_to_happen = {
+		days = 0
+	} 
+	immediate = {
+		swap_ideas = {
+			remove_idea = CHI_inch_blood_2
+			add_idea = CHI_inch_blood_3
+		}
+	}
+	option = {
+	}
+}
+news_event = {
+	id = newsnerf.3
+	hidden = yes
+	trigger = {
+		has_idea = CHI_inch_blood_3
+		surrender_progress > 0.4
+	}
+	mean_time_to_happen = {
+		days = 0
+	} 
+	immediate = {
+		swap_ideas = {
+			remove_idea = CHI_inch_blood_3
+			add_idea = CHI_inch_blood_4
+		}
+	}
+	option = {
+	}
+}
+news_event = {
+	id = newsnerf.4
+	hidden = yes
+	trigger = {
+		has_idea = CHI_inch_blood_4
+		surrender_progress > 0.45
+	}
+	mean_time_to_happen = {
+		days = 0
+	} 
+	immediate = {
+		swap_ideas = {
+			remove_idea = CHI_inch_blood_4
+			add_idea = CHI_inch_blood_5
+		}
+	}
+	option = {
+	}
+}
+news_event = {
+	id = newsnerf.5
+	hidden = yes
+	trigger = {
+		has_idea = CHI_inch_blood_5
+		surrender_progress > 0.5
+	}
+	mean_time_to_happen = {
+		days = 0
+	} 
+	immediate = {
+		swap_ideas = {
+			remove_idea = CHI_inch_blood_5
+			add_idea = CHI_inch_blood_6
+		}
+	}
+	option = {
+	}
+}
+news_event = {
+	id = newsnerf.6
+	hidden = yes
+	trigger = {
+		has_idea = CHI_inch_blood_6
+		surrender_progress > 0.55
+	}
+	mean_time_to_happen = {
+		days = 0
+	} 
+	immediate = {
+		swap_ideas = {
+			remove_idea = CHI_inch_blood_6
+			add_idea = CHI_inch_blood_7
+		}
+	}
+	option = {
+	}
+}
+news_event = {
+	id = newsnerf.7
+	hidden = yes
+	trigger = {
+		has_idea = CHI_inch_blood_7
+		surrender_progress > 0.6
+	}
+	mean_time_to_happen = {
+		days = 0
+	} 
+	immediate = {
+		swap_ideas = {
+			remove_idea = CHI_inch_blood_7
+			add_idea = CHI_inch_blood_8
+		}
+	}
+	option = {
+	}
+}
+news_event = {
+	id = newsnerf.15
+	hidden = yes
+	trigger = {
+		has_idea = CHI_inch_blood_8
+		surrender_progress > 0.65
+	}
+	mean_time_to_happen = {
+		days = 0
+	} 
+	immediate = {
+		swap_ideas = {
+			remove_idea = CHI_inch_blood_8
+			add_idea = CHI_inch_blood_9
+		}
+	}
+	option = {
+	}
+}
+news_event = {
+	id = newsnerf.16
+	hidden = yes
+	trigger = {
+		has_idea = CHI_inch_blood_9
+		surrender_progress > 0.7
+	}
+	mean_time_to_happen = {
+		days = 0
+	} 
+	immediate = {
+		swap_ideas = {
+			remove_idea = CHI_inch_blood_9
+			add_idea = CHI_inch_blood_10
+		}
+	}
+	option = {
+	}
+}
+#perk decreases
+news_event = {
+	id = newsnerf.17
+	hidden = yes
+	trigger = {
+		has_idea = CHI_inch_blood_10
+		surrender_progress < 0.7
+	}
+	mean_time_to_happen = {
+		days = 0
+	} 
+	immediate = {
+		swap_ideas = {
+			remove_idea = CHI_inch_blood_10
+			add_idea = CHI_inch_blood_9
+		}
+	}
+	option = {
+	}
+}
+news_event = {
+	id = newsnerf.18
+	hidden = yes
+	trigger = {
+		has_idea = CHI_inch_blood_9
+		surrender_progress < 0.65
+	}
+	mean_time_to_happen = {
+		days = 0
+	} 
+	immediate = {
+		swap_ideas = {
+			remove_idea = CHI_inch_blood_9
+			add_idea = CHI_inch_blood_8
+		}
+	}
+	option = {
+	}
+}
+
+news_event = {
+	id = newsnerf.8
+	hidden = yes
+	trigger = {
+		has_idea = CHI_inch_blood_8
+		surrender_progress < 0.6
+	}
+	mean_time_to_happen = {
+		days = 0
+	} 
+	immediate = {
+		swap_ideas = {
+			remove_idea = CHI_inch_blood_8
+			add_idea = CHI_inch_blood_7
+		}
+	}
+	option = {
+	}
+}
+news_event = {
+	id = newsnerf.9
+	hidden = yes
+	trigger = {
+		has_idea = CHI_inch_blood_7
+		surrender_progress < 0.55
+	}
+	mean_time_to_happen = {
+		days = 0
+	} 
+	immediate = {
+		swap_ideas = {
+			remove_idea = CHI_inch_blood_7
+			add_idea = CHI_inch_blood_6
+		}
+	}
+	option = {
+	}
+}
+news_event = {
+	id = newsnerf.10
+	hidden = yes
+	trigger = {
+		has_idea = CHI_inch_blood_6
+		surrender_progress < 0.5
+	}
+	mean_time_to_happen = {
+		days = 0
+	} 
+	immediate = {
+		swap_ideas = {
+			remove_idea = CHI_inch_blood_6
+			add_idea = CHI_inch_blood_5
+		}
+	}
+	option = {
+	}
+}
+news_event = {
+	id = newsnerf.11
+	hidden = yes
+	trigger = {
+		has_idea = CHI_inch_blood_5
+		surrender_progress < 0.45
+	}
+	mean_time_to_happen = {
+		days = 0
+	} 
+	immediate = {
+		swap_ideas = {
+			remove_idea = CHI_inch_blood_5
+			add_idea = CHI_inch_blood_4
+		}
+	}
+	option = {
+	}
+}
+news_event = {
+	id = newsnerf.12
+	hidden = yes
+	trigger = {
+		has_idea = CHI_inch_blood_4
+		surrender_progress < 0.4
+	}
+	mean_time_to_happen = {
+		days = 0
+	} 
+	immediate = {
+		swap_ideas = {
+			remove_idea = CHI_inch_blood_4
+			add_idea = CHI_inch_blood_3
+		}
+	}
+	option = {
+	}
+}
+news_event = {
+	id = newsnerf.13
+	hidden = yes
+	trigger = {
+		has_idea = CHI_inch_blood_3
+		surrender_progress < 0.35
+	}
+	mean_time_to_happen = {
+		days = 0
+	} 
+	immediate = {
+		swap_ideas = {
+			remove_idea = CHI_inch_blood_3
+			add_idea = CHI_inch_blood_2
+		}
+	}
+	option = {
+	}
+}
+news_event = {
+	id = newsnerf.14
+	hidden = yes
+	trigger = {
+		has_idea = CHI_inch_blood_2
+		surrender_progress < 0.25
+	}
+	mean_time_to_happen = {
+		days = 0
+	} 
+	immediate = {
+		swap_ideas = {
+			remove_idea = CHI_inch_blood_2
+			add_idea = CHI_inch_blood_1
+		}
+	}
+	option = {
+	}
+}

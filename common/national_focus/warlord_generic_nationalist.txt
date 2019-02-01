@@ -62,15 +62,6 @@ focus_tree = {
 			add_ideas = WRL_authoritarianism
 		}
 		available = {
-			if = {
-				limit = {
-					is_subject = yes
-				}
-				OR = {
-					has_government = fascism
-					has_government = neutrality
-				}
-			}
 		}
 		bypass = {
 		}
@@ -270,18 +261,8 @@ focus_tree = {
 		}
 		available = {
 			RCM_GER_will_support = yes
-			if = {
-				limit = {
-					NOT = {
-						OR = {
-							is_in_faction_with = JAP
-							is_subject_of = JAP
-						}
-					}
-				}
-				NOT = {
-					has_global_flag = falkenhausen_recalled
-				}
+			NOT = {
+				has_global_flag = falkenhausen_recalled
 			}
 		}
 
@@ -338,18 +319,8 @@ focus_tree = {
 		}
 		available = {
 			RCM_GER_will_support = yes
-			if = {
-				limit = {
-					NOT = {
-						OR = {
-							is_in_faction_with = JAP
-							is_subject_of = JAP
-						}
-					}
-				}
-				NOT = {
-					has_global_flag = falkenhausen_recalled
-				}
+			NOT = {
+				has_global_flag = falkenhausen_recalled
 			}
 		}
 		bypass = {
@@ -589,15 +560,6 @@ focus_tree = {
 			add_ideas = new_culture
 		}
 		available = {
-			if = {
-				limit = {
-					is_subject = yes
-				}
-				OR = {
-					has_government = democratic
-					has_government = neutrality
-				}
-			}
 		}
 		bypass = {
 		}
@@ -703,7 +665,10 @@ focus_tree = {
 				}
 				if = {
 					limit = {
-						RCM_UK_will_support = yes
+						ENG_will_support = yes
+						not = {
+							has_war_with = ENG
+						}
 					}
 					add_equipment_to_stockpile = {
 						type = fighter_equipment_0
@@ -713,7 +678,10 @@ focus_tree = {
 				}
 				if = {
 					limit = {
-						RCM_USA_will_support = yes
+						USA_will_support = yes
+						not = {
+							has_war_with = USA
+						}
 					}
 					add_equipment_to_stockpile = {
 						type = fighter_equipment_0
@@ -750,7 +718,7 @@ focus_tree = {
 		}
 		available = {
 			RCM_USA_UK_will_support = yes
-			#has_defensive_war_with = JAP
+			has_defensive_war_with = JAP
 		}
 	}
 	focus = {
@@ -1481,7 +1449,6 @@ focus_tree = {
 			}
 		}
 		available = {
-			has_government = neutrality
 		}
 		bypass = {
 		}

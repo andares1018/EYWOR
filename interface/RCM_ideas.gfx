@@ -742,19 +742,6 @@ spriteTypes = {
 		name = "GFX_idea_PRC_no_skilled_personnel_1"
 		texturefile = "gfx/interface/ideas/PRC_SPS_1.dds"
 	}
-	
-	
-	spriteType = {
-		name = "GFX_idea_PRC_no_navy"
-		texturefile = "gfx/interface/ideas/no_navy.dds"
-	}
-	
-	spriteType = {
-		name = "GFX_idea_PRC_no_air"
-		texturefile = "gfx/interface/ideas/no_air.dds"
-	}
-	
-	
 	spriteType = {
 		name = "GFX_idea_jap_prop_idea"
 		texturefile = "gfx/interface/ideas/jap_prop_idea.dds"

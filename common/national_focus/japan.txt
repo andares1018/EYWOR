@@ -2026,7 +2026,7 @@ focus_tree = {
 			#		type = puppet_wargoal_focus
 			#	}
 			#}
-			#add_ideas = JAP_intervene_in_china_5
+
 			every_country = {
 				limit = {
 					OR = {
@@ -2088,8 +2088,6 @@ focus_tree = {
 					}
 				}
 			}
-			add_named_threat = { threat = 1 name = JAP_intervene_in_china }
-			#unlock_decision_tooltip = JAP_china_step_up_war_effort
 			unlock_decision_category_tooltip = japan_form_CHI_puppets
 		}
 		available = {
@@ -5415,16 +5413,7 @@ focus_tree = {
 			}
 		}
 		available = {
-			OR = {
-				has_global_flag = falkenhausen_recalled
-				NOT = {
-					any_other_country = {
-						tag = event_target:WTT_current_china_leader
-						is_subject = no
-					}
-				}
-			}
-
+			has_global_flag = falkenhausen_recalled
 			any_country = {
 				original_tag = GER
 				has_government = fascism
