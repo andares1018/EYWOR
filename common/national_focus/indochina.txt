@@ -1063,38 +1063,28 @@ focus_tree = {
 		y = 6
 		
 		available = {
-			NOT = { controls_state = 809 controls_state = 810 }
-			has_country_leader = { ruling_only = yes name = "Jean Decoux" }
-			has_government = fascism
+		NOT = { controls_state = 809 controls_state = 810 }
+		has_country_leader = { ruling_only = yes name = "Jean Decoux" }
+		has_government = fascism
 		}
 		
 		completion_reward = {
-			add_political_power = 25
-			CHP = {
-				remove_state_core = 809
-				remove_state_core = 825
-			}
-			LAO = {
-				add_state_core = 809
-				add_state_core = 825
-				drop_cosmetic_tag = yes
-			}
-
-			SIA = {
-				add_stability = -0.05
-			}
-			809 = {
-				damage_building = {
-					type = infrastructure
-					damage = 1
-				}
-			}
-			810 = {
-				damage_building = {
-					type = infrastructure
-					damage = 1
-				}
-			}
+		add_political_power = 25
+		SIA = {
+		add_stability = -0.05
+		}
+		809 = {
+		damage_building = {
+		type = infrastructure
+		damage = 1
+		}
+		}
+		810 = {
+		damage_building = {
+		type = infrastructure
+		damage = 1
+		}
+		}
 		}
 	}
 	focus = {

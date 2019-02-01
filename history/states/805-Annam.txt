@@ -9,7 +9,7 @@ state={
 		add_core_of = FIC
 		add_core_of = VIN
 		victory_points = {
-			4379 4
+		4379 3
 		}
 		buildings = {
 			infrastructure = 3

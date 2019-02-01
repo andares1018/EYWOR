@@ -4,8 +4,6 @@ oob = "LAO_1936"
 
 set_research_slots = 3
 
-set_cosmetic_tag = LAO_PRA #Luang Prabang
-
 # Starting tech
 # clone of France
 set_technology = {
