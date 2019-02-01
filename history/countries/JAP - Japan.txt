@@ -405,9 +405,50 @@ create_field_marshal = {
 	logistics_skill = 4
 }
 
+create_field_marshal = {
+	name = "Prince Naruhiko Higashikuni"
+	picture = "Portrait_Japan_Naruhiko_Higashikuni.dds"
+	traits = { JAP_samurai_lineage infantry_officer politically_connected }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}
 
+create_field_marshal = {
+	name = "Prince Nashimoto Morimasa"
+	picture = "Portrait_Japan_Prince_Nashimoto_Morimasa.dds"
+	traits = { old_guard politically_connected }
+	skill = 4
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 3
+}
 
-
+create_field_marshal = {
+	name = "Prince Kan'in Kotohito"
+	picture = "Portrait_Prince_Kanin_Kotohito.dds"
+	traits = { JAP_samurai_lineage politically_connected career_officer defensive_doctrine }
+	skill = 4
+	id = 2901
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
+}
+create_field_marshal = {
+	name = "Hajime Sugiyama"
+	picture = "Portrait_Hajime_Sugiyama.dds"
+	traits = { harsh_leader politically_connected }
+	skill = 3
+	id = 2902
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}
 
 
 
@@ -478,16 +519,7 @@ create_corps_commander = {
 	logistics_skill = 3
 }
 
-create_corps_commander = {
-	name = "Naruhiko Higashikuni"
-	picture = "Portrait_Japan_Naruhiko_Higashikuni.dds"
-	traits = { JAP_samurai_lineage politically_connected }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 2
-}
+
 
 create_corps_commander = {
 	name = "Seishiro Itagaki"

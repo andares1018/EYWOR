@@ -30,7 +30,7 @@ units = {
 		location = 7208
 		division_template = "Renmin Jundui"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.9
+		start_equipment_factor = 0.5
 
 	}
 	division = {
@@ -38,7 +38,7 @@ units = {
 		location = 8049
 		division_template = "Renmin Jundui"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.9
+		start_equipment_factor = 0.5
 
 	}
 	division = {
@@ -46,7 +46,7 @@ units = {
 		location = 517
 		division_template = "Renmin Jundui"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.9
+		start_equipment_factor = 0.5
 
 	}
 	division = {
@@ -54,7 +54,7 @@ units = {
 		location = 517
 		division_template = "Renmin Jundui"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.9
+		start_equipment_factor = 0.5
 
 	}
 	division = {
@@ -62,7 +62,7 @@ units = {
 		location = 517
 		division_template = "Renmin Jundui"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.9
+		start_equipment_factor = 0.5
 
 	}
 	division = {
@@ -70,10 +70,10 @@ units = {
 		location = 517
 		division_template = "Renmin Jundui"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.9
+		start_equipment_factor = 0.5
 
 	}
-	
+
 	### Provincial Forces ###
 	division = {
 		name =  "1 Shensi Juntuán"

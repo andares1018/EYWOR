@@ -33,6 +33,12 @@
  CHI_liangguang_incident_desc:0 "We can't allow Chiang Kei Shek to continue his dictorship. We can seek support from the Guangdong Clique to form an united front."
  liangguang_incident:0 "Liangguang Incident"
 
+ #anti_japanese CHI_suppress_anti_japanese_activity
+ CHI_suppress_anti_japanese_activity:0 "Suppress Anti-Japanese Activities"
+ CHI_suppress_anti_japanese_activity_desc:0 "After our alliance with Japan, there's a lot of disgruntled voices within the country trying to destroy this newly-formed alliance. If we allow this to continue, a nationwide civil war could break out in the near future."
+ CHI_suppress_anti_japanese_sentiment:0 "Suppress Anti-Japanese Sentiment"
+ CHI_civil_unrest_build_up:0 "Civil Unrest Builds Up"
+
  ######
  japan_form_CHI_puppets:0 "Form Puppet Governments in China"
  japan_form_CHI_puppets_desc:0 "Due to the toxic human nature of rejecting the new and the grand scale of our operations, proxy governments need to be put in place in order for our campaigns to proceed smoothly. We can't risk disrupting our operations simply because of some ineffective occupation policies."
@@ -71,7 +77,7 @@
  JAP_bribe_the_tokko_decision:0 "Influence the Tokkō"
  #JAP_bribe_the_tokko_decision_desc:0 "Influence the Tokkō"
  JAP_revise_hiro_san_decision_cat:0 "Revise Hirota Sangensoku"
- JAP_revise_hiro_san_decision_cat_desc:0 "§YNegotiate a deal with China.§!\n§WIn the deal, our government will§! §Rcede lands§! §Wor§! §Rcancel certain puppets§! §Win China in exchange for their §!§Galliance§! §Wand§! §Grecognition of Manchuria's independence§!§W.§!\n\n§YHaving§! §RPan-Asianists§! §MCabinet Ministers§! or §Yoffering the deal when China has a stronger§! §RAppeasement Policy§! would make China §Ymore willing§! to accept the alliance."
+ JAP_revise_hiro_san_decision_cat_desc:0 "§YNegotiate a deal with China.§!\n§WIn the deal, our government will§! §Rcede lands§! §Wor§! §Rcancel certain puppets§! §Win China in exchange for their §!§Galliance§! §Wand§! §Grecognition of Manchuria's independence§!§W.§!\n\n§YHaving§! §RPan-Asianists§! §MCabinet Ministers§! and §Yoffering the deal when China has a stronger§! §RAppeasement Policy§! would make China §Ymore willing§! to accept the alliance."
  JAP_negotiate_with_china:0 "Negotiate with China"
  JAP_give_up_alliance_decision:0 "Give up the Negotiation"
  JAP_give_up_alliance_declare_war:0 "War with China"
@@ -137,3 +143,6 @@ invade_indochina:0 "Strike the South"
 invade_indochina_desc:0 "Now the Soviet Union is at war with Germany, it's time to retake all of indochina!"
 PRC_specialized_training_decision:0 "Specialized Training Program"
 PRC_specialized_training_decision_desc:0 "Specialized training programs designed to train new reseachers. A batch of trained personnel will be ready and it will §Yallieviate the skilled personnel shortage every§! §G90§! §Ydays§!.\n"
+
+CHI_internal_party_support_n_socialism:0 "Internal Party Support"
+CHI_aggresive_prosecution_of_opposition_n_socialism:0 "Aggressive Prosecution of Opposition"

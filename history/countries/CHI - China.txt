@@ -21,6 +21,8 @@ set_variable = { var = cost_of_infra_cf_minus_1 value = 11 } #teir 1
 set_variable = { var = cost_of_infra_cf value = 12 }
 
 add_stability = 0.1
+add_war_support = 0.2
+
 add_ideas = {
 	free_trade
 	german_advisors

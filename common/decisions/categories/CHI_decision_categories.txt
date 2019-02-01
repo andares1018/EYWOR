@@ -61,7 +61,7 @@ PRC_provoke_japan = {
 CHI_seek_japanese_support = {
 	icon = jap_pacific_guardian
 	allowed = {
-		is_warlord = yes
+		#is_warlord = yes
 	}
 }
 

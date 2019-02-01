@@ -92,6 +92,13 @@ JAP_revise_hiro_san_decision_cat = {
 		days_remove = 70
 		#days_re_enable = 20
 		cost = 0
+		cancel_trigger = {
+			OR = {
+				has_global_flag = CHI_accept_san_hiro
+				has_idea = peace_talk_with_china
+				has_idea = officer_purged_jap
+			}
+		}
 		modifier = {
 			political_power_gain = -1
 		}
@@ -135,6 +142,11 @@ JAP_revise_hiro_san_decision_cat = {
 		}
 		ai_will_do = {
 			factor = 10
+		}
+		cancel_trigger = {
+			FROM = {
+				tag = event_target:WTT_current_china_leader
+			}
 		}
 		complete_effect = {
 			set_country_flag = JAP_give_up_alliance_non_aggression_flag
@@ -866,7 +878,7 @@ japan_form_CHI_puppets = {
 			RFM_CREATION = yes
 		}
 		ai_will_do = {
-			factor = 100
+			factor = 1000
 		}
 	}
 
@@ -2782,5 +2794,159 @@ special_projects = {
 	     ai_will_do = {
 	          factor = 100
 	     }
+	}
+}
+#suppress CHI_suppress_anti_japanese_activity
+CHI_suppress_anti_japanese_activity = {
+	CHI_suppress_anti_japanese_sentiment = {
+		icon = oppression
+		fire_only_once = no
+		cost = 50
+		days_remove = 70 # Stays for 5 days before being removed
+		#days_re_enable = 5 # Will show up in the interface and can be selected again after 5 days
+		highlight_states = { #These states will be highlighted
+
+		}
+		visible = { #can see
+			tag = event_target:WTT_current_china_leader
+			OR = {
+				has_idea = appeasement_policy_2
+				has_idea = appeasement_policy_2_a
+				has_idea = appeasement_policy_2_b
+				has_idea = appeasement_policy_2_c
+				has_idea = appeasement_policy_2_d
+			}
+		}
+		available = { #can do
+			NOT = {
+				has_idea = central_club
+			}
+			NOT = {
+				has_idea = the_blueshirts
+			}
+		}
+		complete_effect = { #run effect on selection
+
+		}
+		remove_trigger = { #will run remove effect and abort
+
+		}
+		remove_effect = { #run effect when removed/finished
+			appeasement_policy_2_level_down = yes
+			custom_effect_tooltip = if_war_breaks_out_it_will_be_weakened_tt
+		}
+		cancel_trigger = { #will abort
+
+		}
+		modifier = { #active during the course of the decision
+			political_power_gain = -0.75
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	CHI_civil_unrest_build_up = {
+		icon = revolt
+		fire_only_once = yes
+		available = { #objective
+			not_has_appeasement_policy_2 = yes
+		}
+		days_mission_timeout = 550
+		fire_only_once = yes
+		is_good = no
+		activation = {
+			has_idea = appeasement_policy_2
+		}
+		complete_effect = {
+			add_political_power = 50
+			add_stability = 0.05
+			add_war_support = 0.05
+		}
+		timeout_effect = {
+			if = {
+				limit = {
+					has_idea = appeasement_policy_2
+				}
+				remove_ideas = appeasement_policy_2
+				custom_effect_tooltip = anti_japanese_rebels_start_a_civil_war_1_tt
+				hidden_effect = {
+					start_civil_war = {
+					    ruling_party = neutrality
+					    ideology = communism
+					    size = 0.7
+					    only_own_territory = no
+					}
+				}
+				CHI_kmt_cc_civil_war = yes
+			}
+			if = {
+				limit = {
+					has_idea = appeasement_policy_2_a
+				}
+				remove_ideas = appeasement_policy_2_a
+				custom_effect_tooltip = anti_japanese_rebels_start_a_civil_war_2_tt
+
+				hidden_effect = {
+					start_civil_war = {
+				    		ruling_party = neutrality
+				    		ideology = communism
+				   		size = 0.6
+				    		only_own_territory = no
+					}
+				}
+				CHI_kmt_cc_civil_war = yes
+			}
+			if = {
+				limit = {
+					has_idea = appeasement_policy_2_b
+				}
+				remove_ideas = appeasement_policy_2_b
+				custom_effect_tooltip = anti_japanese_rebels_start_a_civil_war_3_tt
+
+				hidden_effect = {
+					start_civil_war = {
+				    		ruling_party = neutrality
+				    		ideology = communism
+				   		size = 0.5
+				    		only_own_territory = no
+					}
+				}
+				CHI_kmt_cc_civil_war = yes
+			}
+			if = {
+				limit = {
+					has_idea = appeasement_policy_2_c
+				}
+				remove_ideas = appeasement_policy_2_c
+				custom_effect_tooltip = anti_japanese_rebels_start_a_civil_war_4_tt
+
+				hidden_effect = {
+					start_civil_war = {
+				    		ruling_party = neutrality
+				    		ideology = communism
+				   		size = 0.4
+				    		only_own_territory = no
+					}
+				}
+				CHI_kmt_cc_civil_war = yes
+			}
+			if = {
+				limit = {
+					has_idea = appeasement_policy_2_d
+				}
+				remove_ideas = appeasement_policy_2_d
+				custom_effect_tooltip = anti_japanese_rebels_start_a_civil_war_5_tt
+
+				hidden_effect = {
+					start_civil_war = {
+				    		ruling_party = neutrality
+				    		ideology = communism
+				   		size = 0.3
+				    		only_own_territory = no
+					}
+				}
+				CHI_kmt_cc_civil_war = yes
+			}
+		}
 	}
 }

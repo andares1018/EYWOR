@@ -1,10 +1,10 @@
 #Category allowed for GXC YUN SHX XSM
 
- ###  ##  ###   ##  #  # ###  ## ###      ## #  # ###  ###   ##  ###  ### 
-   # #  # #  # #  # ## # #   #   #       #   #  # #  # #  # #  # #  #  #  
-   # #### ###  #### # ## ##   #  ##       #  #  # ###  ###  #  # ###   #  
-#  # #  # #    #  # #  # #     # #         # #  # #    #    #  # #  #  #  
- ##  #  # #    #  # #  # ### ##  ###     ##   ##  #    #     ##  #  #  #  
+ ###  ##  ###   ##  #  # ###  ## ###      ## #  # ###  ###   ##  ###  ###
+   # #  # #  # #  # ## # #   #   #       #   #  # #  # #  # #  # #  #  #
+   # #### ###  #### # ## ##   #  ##       #  #  # ###  ###  #  # ###   #
+#  # #  # #    #  # #  # #     # #         # #  # #    #    #  # #  #  #
+ ##  #  # #    #  # #  # ### ##  ###     ##   ##  #    #     ##  #  #  #
 
 CHI_seek_japanese_support = {
 
@@ -17,7 +17,10 @@ CHI_seek_japanese_support = {
 		}
 
 		visible = {
-			has_completed_focus = CHI_seek_japanese_support
+			#OR = {
+				has_completed_focus = CHI_seek_japanese_support
+				#has_completed_focus = JPG_seek_japanese_support
+			#}
 			JAP = { has_government = fascism }
 		}
 
@@ -48,7 +51,10 @@ CHI_seek_japanese_support = {
 		}
 
 		visible = {
-			has_completed_focus = CHI_seek_japanese_support
+			#OR = {
+				has_completed_focus = CHI_seek_japanese_support
+				#has_completed_focus = JPG_seek_japanese_support
+			#}
 			JAP = { has_government = fascism }
 		}
 
@@ -84,7 +90,10 @@ CHI_seek_japanese_support = {
 		}
 
 		visible = {
-			has_completed_focus = CHI_seek_japanese_support
+			#OR = {
+				has_completed_focus = CHI_seek_japanese_support
+				#has_completed_focus = JPG_seek_japanese_support
+			#}
 			JAP = { has_government = communism }
 		}
 
@@ -115,7 +124,10 @@ CHI_seek_japanese_support = {
 		}
 
 		visible = {
-			has_completed_focus = CHI_seek_japanese_support
+			#OR = {
+				has_completed_focus = CHI_seek_japanese_support
+				#has_completed_focus = JPG_seek_japanese_support
+			#}
 			JAP = { has_government = communism }
 		}
 
@@ -151,7 +163,10 @@ CHI_seek_japanese_support = {
 		}
 
 		visible = {
-			has_completed_focus = CHI_seek_japanese_support
+			#OR = {
+				has_completed_focus = CHI_seek_japanese_support
+				#has_completed_focus = JPG_seek_japanese_support
+			#}
 			JAP = { has_government = neutrality }
 		}
 
@@ -182,7 +197,83 @@ CHI_seek_japanese_support = {
 		}
 
 		visible = {
-			has_completed_focus = CHI_seek_japanese_support
+			#OR = {
+				has_completed_focus = CHI_seek_japanese_support
+				#has_completed_focus = JPG_seek_japanese_support
+			#}
+			JAP = { has_government = neutrality }
+		}
+
+		fire_only_once = no
+
+		days_remove = 90
+
+		cost = 0
+
+		modifier = {
+			neutrality_drift = 0.1
+			stability_weekly = -0.01
+		}
+
+		remove_effect = {
+
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -500
+			}
+		}
+	}
+
+	CHI_internal_party_support_n_socialism = {
+
+		icon = generic_political_discourse
+
+		available = {
+			is_subject = no
+		}
+
+		visible = {
+			#OR = {
+				has_completed_focus = CHI_seek_japanese_support
+				#has_completed_focus = JPG_seek_japanese_support
+			#}
+			JAP = { has_government = n_socialism }
+		}
+
+		fire_only_once = no
+
+		days_remove = 90
+
+		cost = 35
+
+		modifier = {
+			n_socialism_drift = 0.05
+			stability_weekly = -0.005
+			political_power_gain = -0.5
+		}
+
+		complete_effect = {
+
+		}
+	}
+
+	CHI_aggresive_prosecution_of_opposition_n_socialism = {
+
+		icon = generic_civil_support
+
+		available = {
+			has_equipment = { infantry_equipment > 499 }
+			is_subject = no
+		}
+
+		visible = {
+			#OR = {
+				has_completed_focus = CHI_seek_japanese_support
+				#has_completed_focus = JPG_seek_japanese_support
+			#}
 			JAP = { has_government = neutrality }
 		}
 
@@ -218,7 +309,10 @@ CHI_seek_japanese_support = {
 		}
 
 		visible = {
-			has_completed_focus = CHI_seek_japanese_support
+			#OR = {
+				has_completed_focus = CHI_seek_japanese_support
+				#has_completed_focus = JPG_seek_japanese_support
+			#}
 			JAP = { has_government = democratic }
 		}
 
@@ -264,7 +358,10 @@ CHI_seek_japanese_support = {
 		}
 
 		visible = {
-			has_completed_focus = CHI_seek_japanese_support
+			#OR = {
+				has_completed_focus = CHI_seek_japanese_support
+				#has_completed_focus = JPG_seek_japanese_support
+			#}
 		}
 
 		fire_only_once = yes

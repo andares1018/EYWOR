@@ -307,3 +307,19 @@ two_and_three_ikki_kanji_appeasement = {
 		}
 	}
 }
+
+not_has_appeasement_policy_2 = {
+	custom_trigger_tooltip = {
+		tooltip = not_has_appeasement_policy_2_tt
+		NOT = {
+			OR = {
+				has_idea = appeasement_policy_2
+				has_idea = appeasement_policy_2_a
+				has_idea = appeasement_policy_2_b
+				has_idea = appeasement_policy_2_c
+				has_idea = appeasement_policy_2_d
+			}
+		}
+	}
+
+}
