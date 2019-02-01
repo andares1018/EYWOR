@@ -1,21 +1,22 @@
 state={
-	id=816
-	name="STATE_816"
+	id=825
+	name="STATE_825"
 	provinces={
-		4251 4302 5236 10134 10177 10467 
+		1374 1563 1577 4554 7426 10238 10453 12210 
 	}
 	history={
 		owner = FIC
 		add_core_of = FIC
-		add_core_of = CAM
+		#add_core_of = LAO
+		add_core_of = CHP
 		victory_points = {
-			4302 3
+			1563 3
 		}
 		buildings = {
 			infrastructure = 2
 		}
 	}
-	manpower=548712
+	manpower=97542
 	buildings_max_level_factor=1.000
 	state_category=rural
 }

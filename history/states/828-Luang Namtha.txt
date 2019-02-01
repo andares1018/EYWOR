@@ -1,19 +1,18 @@
 state={
-	id=809
-	name="STATE_809"
+	id=828
+	name="STATE_828"
 	provinces={
-		1592 
+		4568 7103 12392 12433 
 	}
 	history={
 		owner = FIC
 		add_core_of = FIC
-		#add_core_of = LAO
-		add_core_of = CHP
+		add_core_of = LAO
 		buildings = {
 			infrastructure = 2
 		}
 	}
-	manpower=21542
+	manpower=132451
 	buildings_max_level_factor=1.000
-	state_category=rural
+	state_category=pastoral
 }
