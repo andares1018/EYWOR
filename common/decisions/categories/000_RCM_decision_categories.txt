@@ -1,3 +1,16 @@
+RCM_war_of_resistance_decision_cat = {
+	picture = GFX_decision_cat_war_of_resistance
+	icon = border_conflicts
+	allowed = {
+		NOT = {
+			OR = {
+				is_in_faction_with = JAP
+				has_country_flag = CHI_accept_san_hiro
+			}
+		}
+	}
+	priority = 100
+}
 RCM_border_clashes = {
 	picture = generic_border_conflicts
 	icon = border_conflicts

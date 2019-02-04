@@ -5632,8 +5632,38 @@ country_event = {
 		if = {
 			limit = { ROOT = { tag = ENG }
 			}
-			FROM = { puppet = MAL }
-			FROM = { puppet = SST }
+			if = {
+				limit = {
+					MAL = {
+						is_subject_of = ROOT
+					}
+				}
+				FROM = { puppet = MAL }
+			}
+			if = {
+				limit = {
+					SST = {
+						is_subject_of = ROOT
+					}
+				}
+				FROM = { puppet = SST }
+			}
+			if = {
+				limit = {
+					BOR = {
+						is_subject_of = ROOT
+					}
+				}
+				FROM = { puppet = BOR }
+			}
+			if = {
+				limit = {
+					SAR = {
+						is_subject_of = ROOT
+					}
+				}
+				FROM = { puppet = SAR }
+			}
 		}
 
 		if = {
@@ -5682,6 +5712,8 @@ country_event = {
 				}
 				puppet = MAL
 				puppet = SST
+				puppet = SAR
+				puppet = BOR
 			}
 
 			if = {

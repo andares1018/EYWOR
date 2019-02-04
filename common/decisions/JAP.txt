@@ -949,9 +949,21 @@ JAP_pacific_guardian = {
 			ENG = {
 				#has_capitulated = yes
 			}
-			MAL = {
-				is_puppet_of = ENG
+			OR = {
+				MAL = {
+					is_puppet_of = ENG
+				}
+				BOR = {
+					is_puppet_of = ENG
+				}
+				SAR = {
+					is_puppet_of = ENG
+				}
+				SST = {
+					is_puppet_of = ENG
+				}
 			}
+
 		}
 
 		fire_only_once = yes

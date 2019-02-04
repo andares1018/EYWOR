@@ -1580,6 +1580,7 @@ JAP_remove_hostile_create_cmj_bloc_add_china_and_puppets_into_faction = {
 	}
 	#dismantle_faction = yes
 	create_faction = CHI_man_bloc
+	unlock_national_focus = jap_revise_hiro_san
 	every_country = {
 		limit = {
 			is_puppet_of = JAP
@@ -1605,6 +1606,15 @@ Puppet_HPC_Add_sino_jap_idea_Remove_hostile_Add_alliance_opinion_increase_appeas
 		}
 	}
 	add_ideas = sino_japanese_alliance
+	unlock_national_focus = ack_hiro_sen_focus
+	if = {
+		limit = {
+			NOT = {
+				has_completed_focus = CHI_Encirclement_Campaign_focus
+			}
+		}
+		complete_national_focus = CHI_Encirclement_Campaign_focus
+	}
 	remove_opinion_modifier = {
 		target = JAP
 		modifier = hostile_status

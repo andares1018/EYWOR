@@ -246,50 +246,6 @@ focus_tree = {
 
 	}
 	focus = {
-		id = CHI_lushan_focus
-		icon = GFX_goal_generic_propaganda
-		cost = 2.00
-		x = 10
-		y = 5
-		ai_will_do = {
-			factor = 100
-		}
-		select_effect = {
-			set_country_flag = Im_doing_CHI_lushan_focus
-		}
-		completion_reward = {
-			#remove_ideas = CHI_kmt
-			remove_ideas = appeasement_policy
-			hidden_effect = {
-				remove_ideas = appeasement_policy_0
-				remove_ideas = appeasement_policy_2
-			}
-			add_political_power = 50
-			add_country_leader_trait = generallissimo
-			hidden_effect = {
-				if = {
-					limit = {
-						has_country_leader = { ruling_only = yes name = "Chiang Kai-shek" }
-					}
-					news_event = {
-						id = news.2017
-					}
-				}
-
-				if = {
-					limit = {
-						is_ai = yes
-					}
-					remove_ideas = idea_gongxian_arsenal
-				}
-			}
-		}
-		available = {
-			has_war_with = JAP
-		}
-
-	}
-	focus = {
 		id = ack_hiro_sen_focus
 		icon = GFX_focus_chi_collaboration_with_the_japanese
 		cost = 7.15
@@ -1090,171 +1046,6 @@ focus_tree = {
 
 	}
 	focus = {
-		id = an_inch_of_mountain_an_inch_of_blood
-		icon = GFX_focus_generic_little_entente
-		cost = 8.00
-		prerequisite = {
-			focus = CHI_lushan_focus
-		}
-		x = 8
-		y = 6
-		ai_will_do = {
-			factor = 10
-		}
-		completion_reward = {
-			add_ideas = CHI_inch_blood_1
-		}
-		available = {
-			has_war_with = JAP
-		}
-		bypass = {
-
-		}
-
-	}
-	focus = {
-		id = CHI_dare_to_die_corps
-		icon = GFX_goal_generic_special_forces
-		prerequisite = { focus = an_inch_of_mountain_an_inch_of_blood }
-		x = 8
-		y = 7
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			custom_effect_tooltip = CHI_50_cheaper_force_attack
-		}
-	}
-	focus = { #Operation Sunfall, air
-		id = CHI_air_arc_focus
-		icon = GFX_goal_generic_CAS
-		cost = 20.00
-		prerequisite = {
-			focus = CHI_dare_to_die_corps
-		}
-		mutually_exclusive = {
-			focus = CHI_navy_sunfall_focus
-		}
-		x = 7
-		y = 8
-		ai_will_do = {
-			factor = 10
-		}
-		completion_reward = {
-			add_ideas = CHI_arc
-			news_event = {
-				id = efm_news.1026
-			}
-			add_state_claim = 536
-			add_state_claim = 282
-			add_state_claim = 535
-			add_state_claim = 528
-			add_state_claim = 555
-			add_state_claim = 537
-			add_state_claim = 533
-			add_state_claim = 534
-			add_state_claim = 531
-			add_state_claim = 529
-			add_state_claim = 530
-			add_state_claim = 532
-		}
-		available = {
-			527 = {
-				is_controlled_by = CHI
-			}
-			525 = {
-				is_controlled_by = CHI
-			}
-			524 = {
-				is_controlled_by = CHI
-			}
-		}
-		bypass = {
-			OR = {
-				NOT = {
-					country_exists = JAP
-				}
-				JAP = {
-					is_puppet = yes
-				}
-			}
-		}
-
-	}
-	focus = {#Operation Sunfall, sea
-		id = CHI_navy_sunfall_focus
-		icon = GFX_goal_generic_navy_anti_submarine
-		cost = 20.00
-		prerequisite = {
-			focus = CHI_dare_to_die_corps
-		}
-		mutually_exclusive = {
-			focus = CHI_air_arc_focus
-		}
-		x = 9
-		y = 8
-		ai_will_do = {
-			factor = 10
-		}
-		completion_reward = {
-			add_ideas = CHI_sunfall_sea
-			news_event = {
-				id = efm_news.1026
-			}
-			add_state_claim = 536
-			add_state_claim = 282
-			add_state_claim = 535
-			add_state_claim = 528
-			add_state_claim = 555
-			add_state_claim = 537
-			add_state_claim = 533
-			add_state_claim = 534
-			add_state_claim = 531
-			add_state_claim = 529
-			add_state_claim = 530
-			add_state_claim = 532
-		}
-		available = {
-			has_war_with = JAP
-			527 = {
-				is_controlled_by = CHI
-			}
-			525 = {
-				is_controlled_by = CHI
-			}
-			524 = {
-				is_controlled_by = CHI
-			}
-		}
-		bypass = {
-			OR = {
-				NOT = {
-					country_exists = JAP
-				}
-				JAP = {
-					is_puppet = yes
-				}
-			}
-		}
-
-	}
-	focus = {
 		id = CHI_National_Defense_Council_focus
 		icon = GFX_focus_national_defense
 		cost = 7.15
@@ -1452,19 +1243,6 @@ focus_tree = {
 
 		}
 
-	}
-	focus = {
-		id = CHI_take_what_we_can_take
-		icon = GFX_goal_generic_small_arms
-		cost = 8.00
-		prerequisite = {
-			focus = CHI_lushan_focus
-		}
-		x = 10
-		y = 6
-		completion_reward = {
-			add_ideas = CHI_take_them_all
-		}
 	}
 	focus = {
 		id = CHI_Second_United_Front_focus
@@ -1763,213 +1541,6 @@ focus_tree = {
 
 	}
 	focus = {
-		id = big_rear_plan
-		icon = GFX_goal_generic_military_sphere
-		cost = 10.00
-		prerequisite = {
-			focus = CHI_lushan_focus
-			focus = CHI_defend_river_focus
-		}
-		x = 12
-		y = 6
-		ai_will_do = {
-			factor = 100
-		}
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available = {
-			613 = {
-				is_owned_and_controlled_by = ROOT
-				arms_factory > 2
-				industrial_complex > 1
-			}
-			598 = {
-				is_owned_and_controlled_by = ROOT
-				arms_factory > 1
-				industrial_complex > 0
-			}
-			596 = {
-				is_owned_and_controlled_by = ROOT
-				industrial_complex > 1
-			}
-			has_global_flag = justifying_on_china
-			605 = {
-				controller = {
-					OR = {
-						is_subject_of = ROOT
-						has_country_leader = {
-							ruling_only = yes
-							name = "Liu Xiang"
-						}
-						tag = ROOT
-					}
-				}
-			}
-		}
-		completion_reward = {
-			613 = {
-				remove_building = {
-					type = arms_factory
-					level = 3
-				}
-				remove_building = {
-					type = industrial_complex
-					level = 2
-				}
-			}
-			598 = {
-				remove_building = {
-					type = arms_factory
-					level = 2
-				}
-				remove_building = {
-					type = industrial_complex
-					level = 1
-				}
-			}
-			596 = {
-				remove_building = {
-					type = industrial_complex
-					level = 2
-				}
-			}
-			605 = {
-				add_extra_state_shared_building_slots = 10
-				add_building_construction = {
-					type = arms_factory
-					level = 5
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = industrial_complex
-					level = 5
-					instant_build = yes
-				}
-			}
-		}
-
-	}
-	focus = {
-		id = CHI_scorched_earth_tactics
-		icon = GFX_focus_generic_strike_at_democracy1
-		cost = 8.00
-		prerequisite = {
-			focus = big_rear_plan
-		}
-		x = 0
-		y = 1
-		relative_position_id = big_rear_plan
-		ai_will_do = {
-			factor = 4
-		}
-		allow_branch = {
-			has_dlc = "Waking the Tiger"
-		}
-		available = {
-			has_war = yes
-		}
-		bypass = {
-
-		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		completion_reward = {
-			unlock_decision_tooltip = CHI_scorched_earth_tactics
-		}
-
-	}
-	focus = {
-		id = last-ditch_effort
-		icon = GFX_focus_last_ditch
-		cost = 8.00
-		prerequisite = {
-			focus = CHI_scorched_earth_tactics
-		}
-		x = 12
-		y = 8
-		available = {
-			605 = {
-				is_controlled_by = ROOT
-				OR = {
-					any_neighbor_state = {
-						is_controlled_by_jap_or_its_puppet = yes
-					}
-					ROOT = {
-						surrender_progress > 0.5
-					}
-				}
-			}
-			769 = {
-				is_controlled_by = ROOT
-			}
-			770 = {
-				is_controlled_by = ROOT
-			}
-		}
-		ai_will_do = {
-			factor = 100
-		}
-		completion_reward = {
-			army_experience = 5
-			605 = {
-				add_building_construction = {
-					type = bunker
-					level = 3
-					province = 6999
-					instant_build = yes
-				}
-			}
-			769 = {
-				add_building_construction = {
-					type = bunker
-					level = 3
-					province = 8026
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = bunker
-					level = 3
-					province = 12767
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = bunker
-					level = 3
-					province = 2045
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = bunker
-					level = 3
-					province = 5193
-					instant_build = yes
-				}
-			}
-			770 = {
-				add_building_construction = {
-					type = bunker
-					level = 3
-					province = 7240
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = bunker
-					level = 3
-					province = 12705
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = bunker
-					level = 4
-					province = 12819
-					instant_build = yes
-				}
-			}
-		}
-
-	}
-	focus = {
 		id = CHI_pressure_xinjiang
 		icon = GFX_focus_MON_sinkiang_coup
 		cost = 5.00
@@ -1998,9 +1569,7 @@ focus_tree = {
 			add_political_power = -25
 		}
 		available = {
-			JAP = {
-				has_war_with = CHI
-			}
+			has_defensive_war_with = JAP
 		}
 		bypass = {
 			OR = {
@@ -2048,9 +1617,7 @@ focus_tree = {
 			any_neighbor_country = {
 				tag = SIK
 			}
-			JAP = {
-				has_war_with = CHI
-			}
+			has_defensive_war_with = JAP
 		}
 		bypass = {
 			OR = {
@@ -2097,9 +1664,7 @@ focus_tree = {
 			}
 		}
 		available = {
-			JAP = {
-				has_war_with = CHI
-			}
+			has_defensive_war_with = JAP
 		}
 		bypass = {
 			NOT = {
@@ -2900,6 +2465,59 @@ focus_tree = {
 		}
 		completion_reward = {
 			remove_ideas = CHI_kmt
+			if = {
+				limit = {
+					has_dlc = "Waking the Tiger"
+				}
+				random_owned_state = {
+					#Add random state support for ROOT
+					WTT_random_support_chance_increase_for_ROOT_in_state = yes
+
+					hidden_effect = {
+						#Save relevant event targets. Need to be done before updating state support
+						save_event_target_as = state
+						random_country = {
+							limit = {
+								PREV = { has_state_flag = majority_political_platform_@PREV }
+							}
+							save_event_target_as = majority_country
+						}
+
+						#Update state support
+						WTT_recalculate_state_support_for_ROOT = yes
+
+						#Status events
+						WTT_fire_add_support_status_events = yes
+
+						#Recalc all support
+						WTT_political_struggle_recalculate_support = yes
+					}
+				}
+				random_owned_state = {
+					#Add random state support for ROOT
+					WTT_random_support_chance_increase_for_ROOT_in_state = yes
+
+					hidden_effect = {
+						#Save relevant event targets. Need to be done before updating state support
+						save_event_target_as = state
+						random_country = {
+							limit = {
+								PREV = { has_state_flag = majority_political_platform_@PREV }
+							}
+							save_event_target_as = majority_country
+						}
+
+						#Update state support
+						WTT_recalculate_state_support_for_ROOT = yes
+
+						#Status events
+						WTT_fire_add_support_status_events = yes
+
+						#Recalc all support
+						WTT_political_struggle_recalculate_support = yes
+					}
+				}
+			}
 		}
 		available = {
 
@@ -5104,8 +4722,8 @@ focus_tree = {
 
 	}
 	focus = {
-		id = CHI_extra_research_slot
-		icon = GFX_focus_research2
+		id = CHI_chinese_special_force
+		icon = GFX_goal_generic_special_forces
 		cost = 10.00
 		prerequisite = {
 			focus = CHI_army_reorganisation_focus
@@ -5126,7 +4744,24 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			add_research_slot = 1
+			army_experience = 15
+			navy_experience = 15
+			air_experience = 15
+			add_tech_bonus = {
+				name = special_bonus
+				bonus = 0.5
+				uses = 2
+				technology = paratroopers
+				technology = paratroopers2
+				technology = tech_mountaineers
+				technology = tech_mountaineers2
+				technology = tech_engineers
+				technology = tech_engineers2
+				technology = tech_engineers3
+				technology = tech_recon
+				technology = tech_recon2
+				technology = tech_recon3
+			}
 		}
 
 	}
@@ -5216,7 +4851,7 @@ focus_tree = {
 		x = 55
 		y = 2
 		completion_reward = {
-			add_political_power = -100
+			add_political_power = -50
 			swap_ideas = {
 				remove_idea = iliterate_population_1
 				add_idea = iliterate_population_2

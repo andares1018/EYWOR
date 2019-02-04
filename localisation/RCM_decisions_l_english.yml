@@ -3,8 +3,8 @@
  socialism_on_the_rise_desc:0 "Vocal political elements have begun to speak up in favor of socialist values, finding support with an increasing number of the population. The nation's path to socialism lies open, merely awaiting the choice of peaceful or violent transition."
  prepare_for_socialist_civil_war:0 "Prepare for Civil War"
  prepare_for_socialist_civil_war_desc:1 "We have no time to wait for the slow changes in the minds of the people. For their own sake, we must force the matter swiftly, even if some may lose their lives in the process. Unlike a peaceful referendum, a civil war will cause tremendous devastation to our armed forces and the country's industry and infrastructure, but it is also quicker, and ensures we will be able to force our will through more forcefully afterwards."
- expand_civil_n_socialism_support:0 "Expand Civil Support"
- expand_civil_n_socialism_support_desc:1 "We must ensure the continuing spread of support for our cause among the people, and encourage them to publically challenge the authority of the present government. As the position of the government is increasingly undermined and civil unrest continues to mount, it will become easier for us to achieve our goals. This holds especially true if, unlike a legal change in government, these goals involves a more... sinister means of regime change."
+ expand_civil_socialist_support:0 "Expand Civil Support"
+ expand_civil_socialist_support_desc:1 "We must ensure the continuing spread of support for our cause among the people, and encourage them to publically challenge the authority of the present government. As the position of the government is increasingly undermined and civil unrest continues to mount, it will become easier for us to achieve our goals. This holds especially true if, unlike a legal change in government, these goals involves a more... sinister means of regime change."
  army_support_for_socialist_civil_war:0 "Expand Military Support"
  army_support_for_socialist_civil_war_desc:0 "Without ample support of the military, any hope of victory in an armed ideological struggle would be vain. We must ensure the loyalty of well-placed units of our military forces."
  army_support_TT:0 "Each time army support is increased, 10% is added to the strength of your faction in the civil war, up to a maximum total strength of 70%.\n"
@@ -151,3 +151,32 @@
  JPG_declare_our_authority:0 "Declare our Authority"
  JPG_declare_our_authority_desc:0 "Our government is now regarded as "illegitimate" by most countries and deviants in our own country. This can not continue. We will need show the world that we are the legitimate government of this land, not our enemies."
  JPG_declare_our_sovereignty:0 "Declare our Sovereignty"
+
+
+ #WAR of RESISTANCE
+ RCM_war_of_resistance_decision_cat:0 "War of Resistance"
+ RCM_war_of_resistance_decision_cat_desc:0 "The Japanese threat has always been a plight on the Chinese people. A war of resistance against the Japanese invasion will be inevitable. In order to triumph, there will be measures taken and blood shed. However, if we chose not to defend ourselves and lose our country to Japan, the things they would do to the innocent Chinese poeple will be much worse. We need to protect our country at all cost. "
+
+ CHI_inch_blood_decision:0 "An Inch of Mountain, an Inch of Blood"
+ CHI_inch_blood_decision_desc:0 "An inch of mountain, an inch of blood; A thousand of youth, a thousand of troops. We will fight off our enemies as the saying describes!"
+ CHI_inch_blood_decision_tt:0 "§YThe perk of this national spirit will increase when our surrender progress increases, and vice versa.§!"
+
+ CHI_weapon_scavenging_decision:0 "Weapon Scavenging"
+ CHI_weapon_scavenging_decision_desc:0 "As the war goes on, our guns are running short. We should hold on to the equipment we currently have and take as many firearms from our enemy as possible."
+ CHI_space_for_time_decision:0 "Space for Time"
+ CHI_space_for_time_decision_desc:0 "In order to win this tough fight, sacrifice our territories can help us outlast our enemies."
+ CHI_dare_to_die_corps_decision:0 "Dare-to-die Corps"
+ CHI_dare_to_die_corps_decision_desc:0 "The struggle for the republic has already created plenty of martyrs. There will be plenty more before it is over. Their sacrifices will be remembered by generations to come."
+ CHI_last_ditch_effort_decision:0 "Last-ditch Effort"
+ CHI_last_ditch_effort_decision_desc:0 "The situation is not looking good for us, but we the Chinese people will never back down and will fights on with everything we've got!"
+ CHI_sunfall_air_decision:0 "Operation Sunset: Air Route"
+ CHI_sunfall_sea_decision:0 "Operation Sunset: Sea Route"
+
+ #CUSTOM COST
+ RCM_army_xp_at_least_30_command_power_at_least_30:0 "£army_experience  §H30§!  £command_power  §H30§!"
+ RCM_army_xp_at_least_30_command_power_at_least_30_blocked:0 "£army_experience  [Root.Get30xpornot]  £command_power  [Root.Get30cpornot]"
+ RCM_army_xp_at_least_30_command_power_at_least_30_tooltip:0 "It costs £army_experience  [Root.Get30xpornot] and £command_power [Root.Get30cpornot] to take the decision"
+ yes_has_30_xp:0 "§H30§!"
+ no_has_30_xp:0 "§R30§!"
+ yes_has_30_cp:0 "§H30§!"
+ no_has_30_cp:0 "§R30§!"

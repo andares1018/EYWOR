@@ -777,8 +777,13 @@ on_actions = {
 							tag = CHI
 							date < 1937.1.1
 						}
-						tag = RFM
-						tag = EHB
+						AND = {
+							OR = {
+								tag = RFM
+								tag = EHB
+							}
+							has_dlc = "Waking the Tiger"
+						}						
 					}
 				}
 				add_ideas = {
@@ -821,6 +826,20 @@ on_actions = {
 				add_ideas = {
 					CHI_hyper_inflation_1
 				}
+			}
+			every_country = {
+				limit = {
+					#OR = {
+					#	is_warlord = yes
+					#	#tag = PRC
+					#	AND = {
+							tag = CHI
+							date > 1937.1.1
+					#	}
+					#}
+					#has_dlc = "Waking the Tiger"
+				}
+				add_ideas = CHI_inch_blood_1
 			}
 		}
 	}

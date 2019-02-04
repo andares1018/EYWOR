@@ -199,8 +199,6 @@
  CHI_allies_help_diplo_focus_desc:0 "After suffering from unequal treaties for almost a century, the United States and the British Empire are now finally open for re-negotiating our trade deals. We can finally develop a healthy economy once the treaties are signed."
  CHI_internal_navy_focus:0 "Expansion of the Navy"
  CHI_internal_navy_focus_desc:0 "A large navy will help us protect our homeland from the east."
- CHI_retake_taiwan_focus:0 "Operation Formosa"
- CHI_retake_taiwan_focus_desc:0 "Retaking Taiwan is the first step in taking down Japan."
  shanghai_navy:0 "Shanghai Naval Construction"
  shanghai_navy_desc:0 "Shanghai is the core area of our coastal lands and so it is also an ideal place for us to rebuild our navy."
  CHI_taiwan_navy:0 "Taiwan Naval Construction"
@@ -211,7 +209,7 @@
  CHI_study_foreign_ship_desc:0 "Navies such as that of the United Kingdom and the USA should be studied to better our own for the future."
  CHI_navy_reorganization:0 "Reorganization of the Navy"
  CHI_navy_reorganization_desc:0 "The war is over, we can now finally rebuild and reorganize our navy without worrying about the threat from Japan."
- CHI_air_arc_focus:0 "Operation Sunfall:\nAir Route"
+ CHI_air_arc_focus:0 "Operation Sunset:\nAir Route"
  CHI_air_arc_focus_desc:0 "Even after our total victory in the North East China and Korea, Japan still won't give up and continuing to raid our coastal provinces. At this point, a total military takeover of the Japanese archipelago is inevitable now. Attacking from the air with paratroopers is a fast, but risky way."
  CHI_air_orga_focus:0 "Reorganization of the Air Force"
  CHI_air_orga_focus_desc:0 "To compete against the Japanese we need to restructure our air forces."
@@ -227,7 +225,7 @@
  CHI_allies_help_party_focus:0 "Lighthouse of Democracy"
  CHI_allies_help_party_focus_desc:0 "By having an democractic country and praticing the three principles of the people, we can honor Dr. Sun Yet Sen's last will."
 
- CHI_navy_sunfall_focus:0 "Operation Sunfall:\nSea Route"
+ CHI_navy_sunfall_focus:0 "Operation Sunset:\nSea Route"
  CHI_navy_sunfall_focus_desc:0 "Even after our total victory in the North East China and Korea, Japan still won't give up and continuing to raid our coastal provinces. At this point, a total military takeover of the Japanese archipelago is inevitable now. Invading their ports from the sea is a slow, but safer way."
 
 
@@ -423,12 +421,12 @@
  CHI_artillery_effort_focus:0 "Artillery Effort"
  CHI_whampoa_rifle:0 "Whampoa Rifle"
  CHI_reform_military_academy:0 "Reform Military Academy"
- CHI_extra_research_slot:0 "Extra Research Slot"
+ CHI_chinese_special_force:0 "Chinese Special Force"
 
  ##################DESC
  CHI_Encirclement_Campaign_focus_desc:0 "Communism is the biggest threat in China. Only by eradicating it can the Republic of China defend any foreign threat."
  CHI_Truce_of_the_Civil_War_desc:0 "Japan has become more and more aggressive. Fighting an enemy with an ally is far better than fighting two enemies at the same time."
- CHI_extra_research_slot_desc:0 "An expansion of our research facilities can help China as a whole."
+ CHI_chinese_special_force_desc:0 "An establishment of a new special force for our armies can help China strengthen itself as a whole."
  CHI_split_plm_focus:0 "Split Pailingmiao Council"
  CHI_split_plm_focus_desc:0 "Prince Demchugdongrub has shown some obvious sign of conspiring with the Japanese forces. It is best to suppress his influence within the Mongolia Political Committee, also known as the Pailingmiao council, before he does anything stupid."
  CHI_dissolve_cc_desc:0 "We have promised Japan to dissolve the Central Club Clique. Now we have to fulfill our promise."
@@ -445,11 +443,10 @@
  two_fronts_war_desc:0 "We the Chinese people are fearless. An war with two fronts won't make us back down!"
  delaying_tactics_desc:0 "We shall try to have peace talks with the Japanese to buy us some time."
  united_and_ready_desc:0 "United we stand, divided we fall. The Chinese people has successfully reunites. Now we can finally defend our homeland together."
- an_inch_of_mountain_an_inch_of_blood_desc:0 "An inch of mountain, an inch of blood; A thousand of youth, a thousand of troops. We will fight off our enemies as the saying describes!"
- big_rear_plan_desc:0 "In order to win this tough fight, sacrifice our territories can help us outlast our enemies."
- CHI_take_what_we_can_take_desc:0"As the war goes on, our guns are running short. We should hold on to the equipment we currently have and take as many firearms from our enemy as possible."
- last-ditch_effort_desc:0 "The situation is not looking good for us, but we the Chinese people will never back down and will fights on with everything we've got!"
- end_civil_war_desc:0 "-"
+ #an_inch_of_mountain_an_inch_of_blood_desc:0 "An inch of mountain, an inch of blood; A thousand of youth, a thousand of troops. We will fight off our enemies as the saying describes!"
+ #big_rear_plan_desc:0 "In order to win this tough fight, sacrifice our territories can help us outlast our enemies."
+ #CHI_take_what_we_can_take_desc:0"As the war goes on, our guns are running short. We should hold on to the equipment we currently have and take as many firearms from our enemy as possible."
+ #last-ditch_effort_desc:0 "The situation is not looking good for us, but we the Chinese people will never back down and will fights on with everything we've got!"
 
  #left
  recognize_their_government_desc:0 "After the truce and the institutional reform, the political position of this country should be readjusted, too. With that in mind, recognizing the existence of the Communist Government can be a great way to restore harmony in China."

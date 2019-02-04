@@ -123,7 +123,7 @@ add_opinion_modifier = { target = CHI modifier = hostile_status }
 	complete_national_focus = JAP_fighter_modernization
 	complete_national_focus = JAP_carrier_warfare_experiments
 	complete_national_focus = JAP_supremacy_of_technology
-
+	remove_ideas = JAP_expansionist_propaganda_1
 	remove_ideas = officer_purged_jap
 	puppet = MAN
 	set_autonomy = {

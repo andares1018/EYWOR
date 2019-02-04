@@ -3,4 +3,13 @@ spriteTypes = {
 		name = "GFX_decision_cat_generic_tokko"
 		texturefile = "gfx/interface/decisions/decision_cat_generic_tokko.dds"
 	}
+	spriteType = {
+		name = "GFX_decision_cat_war_of_resistance"
+		texturefile = "gfx/interface/decisions/decision_cat_war_of_resistance.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_generic_propaganda"
+		texturefile = "gfx/interface/decisions/decision_generic_propaganda.dds"
+	}
+	
 }

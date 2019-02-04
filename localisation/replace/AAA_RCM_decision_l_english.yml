@@ -29,3 +29,6 @@
  #WTT_unlock_struggle_comchina:0 "Complete §HThe Conference of the Soviet Regions§! focus to initiate the power struggle."
  WTT_unlock_struggle_warlord:0 "Complete §HJoin the Republican Government§! focus to initiate the power struggle."
  WTT_unlock_struggle_leader:0 "To initiate the power struggle §HWarlords§! have to complete§H Join the Republican Government§!."
+
+ DECISION_REMOVE_HEADER:1 "§HEffects when finished:§!"
+ DECISION_WILL_BE_REMOVED_IF:1 "§HInstantly finish if:§!"

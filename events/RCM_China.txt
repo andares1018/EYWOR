@@ -4026,17 +4026,13 @@ country_event = {
 			modifier = {
 				factor = 100
 				OR = {
-					JAP = {
-						has_war_with = USA
-					}
-					JAP = {
-						has_war_with = SOV
-					}
+					has_war_with = USA
+					has_war_with = SOV
 				}
 			}
 		}
 		effect_tooltip = {
-			white_peace = CHI
+			white_peace = FROM
 			every_state = {
 				limit = {
 					OR = {
@@ -4101,11 +4097,11 @@ country_event = {
 						}
 					}
 					OR = {
-						is_core_of = PRC
-						is_claimed_by = PRC
+						is_core_of = event_target:WTT_communist_china
+						is_claimed_by = event_target:WTT_communist_china
 					}
 				}
-				PRC = { transfer_state = PREV }
+				event_target:WTT_communist_china = { transfer_state = PREV }
 			}
 			#527 = { KOR = { transfer_state = PREV } }
 			#525 = { KOR = { transfer_state = PREV } }
@@ -4154,12 +4150,12 @@ country_event = {
 			}
 			if = {
 				limit = {
-					PRC = {
+					event_target:WTT_communist_china = {
 						is_in_faction_with = ROOT
 					}
 				}
 				add_opinion_modifier = {
-					target = PRC modifier = liberator
+					target = event_target:WTT_communist_china modifier = liberator
 				}
 			}
 		}
@@ -4171,7 +4167,7 @@ country_event = {
 		}
 		ai_chance = { factor = 0 }
 		peace_with_japan_land_partition = yes
-		527 = { PRC = { transfer_state = PREV } }
+		527 = { event_target:WTT_communist_china = { transfer_state = PREV } }
 		525 = { ROOT = { transfer_state = PREV } }
 	}
 	option = {#PUPPET KOR#NO RED MANCH
@@ -7083,6 +7079,12 @@ country_event = {
 			FROM = {
 				save_event_target_as = new_leader
 				CHI_negative_spirit_transfer = yes
+				if = {
+					limit = {
+						has_global_flag = lushan_declaration_flag
+					}
+					add_country_leader_trait = generallissimo
+				}
 				if = {
 					limit = {
 						has_cosmetic_tag = CHI_power_struggle_defeated

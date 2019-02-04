@@ -52,6 +52,8 @@ set_convoys = 40
 
 1939.1.1 = {
 	set_country_flag = china101_fired
+	set_global_flag = lushan_declaration_flag
+	add_country_leader_trait = generallissimo
 	set_country_flag = mbf_ed
 	set_country_flag = nineteen_thirtynine_start
 	set_global_flag = nineteen_thirtynine_start
@@ -72,8 +74,48 @@ set_convoys = 40
 	complete_national_focus = CHI_government_bailout_focus
 	unlock_national_focus  = CHI_Encirclement_Campaign_focus
 	complete_national_focus	= CHI_reinforce_new_life_movement
-	complete_national_focus = big_rear_plan
-	complete_national_focus = CHI_lushan_focus
+	#complete_national_focus = big_rear_plan
+	set_global_flag = space_for_time_done_flag
+	613 = {
+		remove_building = {
+			type = arms_factory
+			level = 3
+		}
+		remove_building = {
+			type = industrial_complex
+			level = 2
+		}
+	}
+	598 = {
+		remove_building = {
+			type = arms_factory
+			level = 2
+		}
+		remove_building = {
+			type = industrial_complex
+			level = 1
+		}
+	}
+	596 = {
+		remove_building = {
+			type = industrial_complex
+			level = 2
+		}
+	}
+	605 = {
+		add_extra_state_shared_building_slots = 10
+		add_building_construction = {
+			type = arms_factory
+			level = 5
+			instant_build = yes
+		}
+		add_building_construction = {
+			type = industrial_complex
+			level = 5
+			instant_build = yes
+		}
+	}
+	#complete_national_focus = CHI_lushan_focus
 	complete_national_focus = CHI_inst_reform_focus
 	unlock_national_focus = CHI_foreign_help_focus
 	complete_national_focus = one_party_tutelage
@@ -91,7 +133,8 @@ set_convoys = 40
 		tot_economic_mobilisation
 		service_by_requirement
 		closed_economy
-		CHI_t_v_soong
+		dai_li
+		chen_lifu
 		carsun_chang
 
 		#ministers
@@ -100,7 +143,6 @@ set_convoys = 40
 		kiangnan_shipyard_group
 
 	}
-
 	set_global_flag = fall_of_nanjing
 	create_faction = chinese_united_front
 	every_other_country = {
@@ -112,7 +154,9 @@ set_convoys = 40
 		}
 	}
 	add_to_faction = PRC
-
+	remove_ideas = appeasement_policy
+	remove_ideas = appeasement_policy_0
+	remove_ideas = appeasement_policy_2
 	remove_opinion_modifier = { target = PRC modifier = hostile_status }
 	#load_oob = "CHI_united_front"
 	set_global_flag = JAP_attacks_CHI_unites

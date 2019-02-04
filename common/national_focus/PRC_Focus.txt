@@ -1,3 +1,4 @@
+
 focus_tree = {
 	id = PRC_Focus
 	country = {
