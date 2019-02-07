@@ -72,7 +72,7 @@ CHI_nationalist_historical_plan = {
 		CHI_infrastructure_effort_3
 		national_poltical_council
 		constit_draft_focus
-		assembly_of_the_constutients
+		CHI_political_consultative_assembly_focus
 
 	}
 	research = {

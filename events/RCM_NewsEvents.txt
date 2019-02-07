@@ -10,11 +10,11 @@ news_event = {
 	title = news.1300.t
 	desc = news.1300.d
 	picture = GFX_news_event_500
-	
+
 	major = yes
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = news.1300.a
 		trigger = {
@@ -52,7 +52,7 @@ news_event = {
 			has_global_flag = CHI_zhang_lan_doctrine
 		}
 	}
-	
+
 	immediate = {
 		hidden_effect = {
 			CHI = {
@@ -65,7 +65,7 @@ news_event = {
 				set_country_flag = zhang_bojun_available
 				add_ideas = zhang_bojun
 				remove_ideas = zhang_bojun
-				
+
 				create_country_leader = {
 					name = "Zhang Lan"
 					desc = "POLITICS_ZHANG_LAN_DESC"
@@ -79,7 +79,7 @@ news_event = {
 			}
 		}
 	}
-	
+
 	option = {
 		name = news.1301.a
 		trigger = {
@@ -106,17 +106,17 @@ news_event = {
 	picture = GFX_news_event_szy
 	major = yes
 	is_triggered_only = yes
-	
-	immediate = { 
+
+	immediate = {
 		hidden_effect = {
-			JAP = { puppet = HPC } 
+			JAP = { puppet = HPC }
 			HPC = {
 			set_politics = { ruling_party = neutrality elections_allowed = no }
 			set_political_party = { ideology = neutrality popularity = 100 }
 			}
 		}
 	}
-	
+
 	option = {
 		name = news.1302.a
 		trigger = {
@@ -143,7 +143,7 @@ news_event = {
 	picture = GFX_news_event_500
 	major = yes
 	is_triggered_only = yes
-	
+
 	option = {
 		name = news.1303.a
 		trigger = {
@@ -170,7 +170,7 @@ news_event = {
 	picture = GFX_news_event_500
 	major = yes
 	is_triggered_only = yes
-	
+
 	option = {
 		name = news.1304.a
 		trigger = {
@@ -197,7 +197,7 @@ news_event = {
 	picture = GFX_news_event_500
 	major = yes
 	is_triggered_only = yes
-	
+
 	option = {
 		name = news.1305.a
 		trigger = {
@@ -224,7 +224,7 @@ news_event = {
 	picture = GFX_news_event_500
 	major = yes
 	is_triggered_only = yes
-	
+
 	option = {
 		name = news.1306.a
 		trigger = {
@@ -251,7 +251,7 @@ news_event = {
 	picture = GFX_news_event_500
 	major = yes
 	is_triggered_only = yes
-	
+
 	option = {
 		name = news.1307.a
 		trigger = {
@@ -304,7 +304,7 @@ news_event = {
 	picture = GFX_news_event_500
 	major = yes
 	is_triggered_only = yes
-	
+
 	option = {
 		name = news.1309.a
 		trigger = {
@@ -342,10 +342,10 @@ news_event = {
 	}
 	immediate = {
 		hidden_effect = {
-			set_party_name = { 
-				ideology = fascism 
-				name = JAP_fascism_party_toh 
-				long_name = JAP_fascism_party_toh 
+			set_party_name = {
+				ideology = fascism
+				name = JAP_fascism_party_toh
+				long_name = JAP_fascism_party_toh
 			}
 			set_cosmetic_tag = JAP_TOH
 			create_country_leader = { ##Tohokai, created in may 25 1936
@@ -357,7 +357,7 @@ news_event = {
 				traits = {
 					#
 				}
-			}	
+			}
 		}
 	}
 	option = {
@@ -375,7 +375,7 @@ news_event = {
 	immediate = {
 		hidden_effect = {
 			kill_country_leader = yes
-		}		
+		}
 	}
 	option = {
 		name = news.401.a
@@ -393,7 +393,7 @@ news_event = {
 	immediate = {
 		hidden_effect = {
 			set_country_flag = assed_in_226
-		}		
+		}
 	}
 	option = {
 		name = news.401.a
@@ -410,7 +410,7 @@ news_event = {
 	immediate = {
 		hidden_effect = {
 			set_country_flag = assed_in_226
-		}		
+		}
 	}
 	option = {
 		name = news.401.a
@@ -428,7 +428,7 @@ news_event = {
 	immediate = {
 		hidden_effect = {
 			set_country_flag = new_order_flag
-		}		
+		}
 	}
 	option = {
 		name = news.401.a
@@ -453,9 +453,9 @@ news_event = {
 	}
 	immediate = {
 		random_list = {
-			10 = { 
+			10 = {
 				news_event = { id = news.410 }
-				set_country_flag = pm_killed 
+				set_country_flag = pm_killed
 				kill_country_leader = yes
 				create_country_leader = {
 					name = "Senjuro Hayashi"
@@ -470,8 +470,8 @@ news_event = {
 				unlock_national_focus = JAP_placate_military_focus
 				unlock_national_focus = pressure_pm_focus
 			}
-			90 = { 
-				news_event = { id = news.407 } 
+			90 = {
+				news_event = { id = news.407 }
 				create_country_leader = {
 					name = "Koki Hirota"
 					desc = ""
@@ -484,7 +484,7 @@ news_event = {
 				}
 			}
 		}
-				
+
 	}
 	option = {
 	}
@@ -510,9 +510,9 @@ news_event = {
 		random_list = {
 			10 = {
 			}
-			20 = { 
+			20 = {
 				news_event = { id = news.410 }
-				set_country_flag = pm_killed 
+				set_country_flag = pm_killed
 				kill_country_leader = yes
 				create_country_leader = {
 					name = "Senjuro Hayashi"
@@ -525,10 +525,10 @@ news_event = {
 					}
 				}
 				unlock_national_focus = JAP_placate_military_focus
-				unlock_national_focus = pressure_pm_focus				
+				unlock_national_focus = pressure_pm_focus
 			}
-			70 = { 
-				news_event = { id = news.408 } 
+			70 = {
+				news_event = { id = news.408 }
 				create_country_leader = {
 					name = "Koki Hirota"
 					desc = ""
@@ -540,7 +540,7 @@ news_event = {
 					}
 				}
 			}
-		}		
+		}
 	}
 	option = {
 	}
@@ -562,9 +562,9 @@ news_event = {
 	}
 	immediate = {
 		random_list = {
-			50 = { 
+			50 = {
 				news_event = { id = news.410 }
-				set_country_flag = pm_killed 
+				set_country_flag = pm_killed
 				kill_country_leader = yes
 				create_country_leader = {
 					name = "Senjuro Hayashi"
@@ -580,7 +580,7 @@ news_event = {
 				unlock_national_focus = pressure_pm_focus
 			}
 			50 = {
-				news_event = { id = news.409 } 
+				news_event = { id = news.409 }
 				create_country_leader = {
 					name = "Koki Hirota"
 					desc = ""
@@ -592,7 +592,7 @@ news_event = {
 					}
 				}
 			}
-		}		
+		}
 	}
 	option = {
 	}
@@ -710,11 +710,11 @@ news_event = {
 	title = news.2017.t
 	desc = news.2017.d
 	picture = GFX_news_event_lushan
-	
+
 	major = yes
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = news.2017.a
 		trigger = {
@@ -796,5 +796,33 @@ news_event = {
 				}
 			}
 		}
+	}
+}
+
+#Soviet Union Joins Allies
+add_namespace = RCM_news
+news_event = {
+	id = RCM_news.1
+	title = RCM_news.1.t
+	desc = RCM_news.1.d
+	picture = GFX_news_event_generic_read_write
+	major = yes
+	#fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = RCM_news.1.a
+	}
+}
+#China Japan truce
+news_event = {
+	id = RCM_news.2
+	title = RCM_news.2.t
+	desc = RCM_news.2.d
+	picture = GFX_news_event_hitler_handshake
+	major = yes
+	#fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = RCM_news.2.a
 	}
 }

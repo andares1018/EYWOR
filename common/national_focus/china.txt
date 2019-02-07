@@ -905,7 +905,7 @@ focus_tree = {
 	focus = {
 		id = military_indoctrination
 		icon = GFX_goal_generic_propaganda
-		cost = 8.00
+		cost = 25.00
 		prerequisite = {
 			focus = CHI_strengthen_chiangs_rule
 		}
@@ -1896,8 +1896,8 @@ focus_tree = {
 			focus = CHI_inst_reform_focus
 		}
 		mutually_exclusive = {
-			focus = CHI_reinforce_new_life_movement
-			focus = CHI_revive_new_culture_movement
+			focus = one_party_tutelage
+			focus = CHI_begin_constitionalization_focus
 		}
 		x = 21
 		y = 1
@@ -2345,16 +2345,13 @@ focus_tree = {
 	focus = {
 		id = CHI_reinforce_new_life_movement
 		icon = GFX_goal_generic_propaganda
-		cost = 7.00
+		cost = 8.00
 		prerequisite = {
-			focus = CHI_inst_reform_focus
+			focus = one_party_tutelage
 		}
-		mutually_exclusive = {
-			focus = recognize_their_government
-			focus = CHI_revive_new_culture_movement
-		}
-		x = 32
-		y = 1
+
+		x = 27
+		y = 2
 		ai_will_do = {
 			factor = 80
 		}
@@ -2375,12 +2372,16 @@ focus_tree = {
 	focus = {
 		id = one_party_tutelage
 		icon = GFX_goal_one_party
-		cost = 8.00
+		cost = 7.00
 		prerequisite = {
-			focus = CHI_reinforce_new_life_movement
+			focus = CHI_inst_reform_focus
 		}
-		x = 27
-		y = 2
+		mutually_exclusive = {
+			focus = recognize_their_government
+			focus = CHI_begin_constitionalization_focus
+		}
+		x = 32
+		y = 1
 		ai_will_do = {
 			factor = 10
 		}
@@ -2399,7 +2400,8 @@ focus_tree = {
 		icon = GFX_focus_cc_clique
 		cost = 8.00
 		prerequisite = {
-			focus = one_party_tutelage
+			#focus = one_party_tutelage
+			focus = CHI_reinforce_new_life_movement
 		}
 		x = 25
 		y = 3
@@ -2426,7 +2428,8 @@ focus_tree = {
 		icon = GFX_focus_bs
 		cost = 8.00
 		prerequisite = {
-			focus = one_party_tutelage
+			#focus = one_party_tutelage
+			focus = CHI_reinforce_new_life_movement
 		}
 		x = 29
 		y = 3
@@ -2465,59 +2468,6 @@ focus_tree = {
 		}
 		completion_reward = {
 			remove_ideas = CHI_kmt
-			if = {
-				limit = {
-					has_dlc = "Waking the Tiger"
-				}
-				random_owned_state = {
-					#Add random state support for ROOT
-					WTT_random_support_chance_increase_for_ROOT_in_state = yes
-
-					hidden_effect = {
-						#Save relevant event targets. Need to be done before updating state support
-						save_event_target_as = state
-						random_country = {
-							limit = {
-								PREV = { has_state_flag = majority_political_platform_@PREV }
-							}
-							save_event_target_as = majority_country
-						}
-
-						#Update state support
-						WTT_recalculate_state_support_for_ROOT = yes
-
-						#Status events
-						WTT_fire_add_support_status_events = yes
-
-						#Recalc all support
-						WTT_political_struggle_recalculate_support = yes
-					}
-				}
-				random_owned_state = {
-					#Add random state support for ROOT
-					WTT_random_support_chance_increase_for_ROOT_in_state = yes
-
-					hidden_effect = {
-						#Save relevant event targets. Need to be done before updating state support
-						save_event_target_as = state
-						random_country = {
-							limit = {
-								PREV = { has_state_flag = majority_political_platform_@PREV }
-							}
-							save_event_target_as = majority_country
-						}
-
-						#Update state support
-						WTT_recalculate_state_support_for_ROOT = yes
-
-						#Status events
-						WTT_fire_add_support_status_events = yes
-
-						#Recalc all support
-						WTT_political_struggle_recalculate_support = yes
-					}
-				}
-			}
 		}
 		available = {
 
@@ -2644,7 +2594,7 @@ focus_tree = {
 		cost = 7.00
 		prerequisite = {
 			focus = CHI_foreign_help_focus
-			focus = CHI_reinforce_new_life_movement
+			focus = one_party_tutelage
 		}
 		x = 31
 		y = 3
@@ -3148,15 +3098,16 @@ focus_tree = {
 
 	}
 	focus = {
-		id = CHI_revive_new_culture_movement
-		icon = GFX_goal_generic_demand_territory
+		id = CHI_begin_constitionalization_focus
+		icon = GFX_constitution_focus
 		cost = 7.00
 		prerequisite = {
 			focus = CHI_inst_reform_focus
 		}
 		mutually_exclusive = {
 			focus = recognize_their_government
-			focus = CHI_reinforce_new_life_movement
+			#focus = CHI_reinforce_new_life_movement
+			focus = one_party_tutelage
 		}
 		x = 34
 		y = 1
@@ -3164,7 +3115,13 @@ focus_tree = {
 			factor = 40
 		}
 		completion_reward = {
-			add_ideas = new_culture
+			#add_ideas = new_culture
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.1
+			}
+			add_political_power = 75
+			add_stability = 0.05
 		}
 		available = {
 
@@ -3180,7 +3137,7 @@ focus_tree = {
 		cost = 7.00
 		prerequisite = {
 			focus = CHI_foreign_help_focus
-			focus = CHI_revive_new_culture_movement
+			focus = CHI_begin_constitionalization_focus
 		}
 		x = 35
 		y = 3
@@ -3583,7 +3540,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = CHI_Tibet_Ultimatum
 		}
-		x = 32
+		x = 34
 		y = 8
 		available = {
 			TIB = {
@@ -3682,7 +3639,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = CHI_Befriend_Tibet
 		}
-		x = 34
+		x = 32
 		y = 8
 		available = {
 			TIB = {
@@ -3703,7 +3660,7 @@ focus_tree = {
 			factor = 25
 		}
 		completion_reward = {
-			add_state_claim = 322
+			#add_state_claim = 322
 			TIB = {
 				country_event = {
 					id = rcmchina.340
@@ -3718,7 +3675,7 @@ focus_tree = {
 		icon = GFX_three_principle_focus
 		cost = 8.00
 		prerequisite = {
-			focus = CHI_revive_new_culture_movement
+			focus = CHI_begin_constitionalization_focus
 		}
 		x = 39
 		y = 2
@@ -3726,12 +3683,7 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			add_political_power = 75
-			add_popularity = {
-				ideology = democratic
-				popularity = 0.1
-			}
-			add_stability = 0.05
+			add_ideas = sanmin_doctrine
 		}
 		available = {
 
@@ -3933,23 +3885,68 @@ focus_tree = {
 		}
 
 	}
+
 	focus = {
-		id = national_poltical_council
-		icon = GFX_goal_generic_intelligence_exchange
+		id = constit_draft_focus
+		icon = GFX_draft_focus
 		cost = 6.00
 		prerequisite = {
 			focus = CHI_inst_reform_focus
 		}
+
 		x = 43
 		y = 2
 		ai_will_do = {
 			factor = 10
 		}
 		completion_reward = {
+			add_political_power = 50
 			swap_ideas = {
 				add_idea = chiang1
 				remove_idea = chiang
 			}
+
+		}
+		available = {
+			has_idea = carsun_chang
+			NOT = {
+				is_in_faction_with = JAP
+			}
+			NOT = {
+				OR = {
+					has_government = fascism
+					has_government = communism
+					has_government = n_socialism
+				}
+			}
+		}
+		bypass = {
+			hidden_trigger = {
+				has_country_flag = yang_hucheng_in_charge
+			}
+		}
+
+	}
+	focus = {
+		id = national_poltical_council
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 7.00
+
+		x = 43
+		y = 3
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = constit_draft_focus
+		}
+		completion_reward = {
+			add_political_power = 50
+			swap_ideas = {
+				add_idea = chiang2
+				remove_idea = chiang1
+			}
+
 		}
 		available = {
 			NOT = {
@@ -3970,40 +3967,13 @@ focus_tree = {
 		}
 
 	}
-	focus = {
-		id = constit_draft_focus
-		icon = GFX_draft_focus
-		cost = 8.00
-		prerequisite = {
-			focus = national_poltical_council
-		}
-		x = 43
-		y = 3
-		ai_will_do = {
-			factor = 10
-		}
-		completion_reward = {
-			swap_ideas = {
-				add_idea = chiang2
-				remove_idea = chiang1
-			}
-		}
-		available = {
-			has_idea = carsun_chang
-		}
-		bypass = {
-			hidden_trigger = {
-				has_country_flag = yang_hucheng_in_charge
-			}
-		}
 
-	}
 	focus = {
-		id = assembly_of_the_constutients
+		id = CHI_political_consultative_assembly_focus
 		icon = GFX_assembly_const_focus
 		cost = 10.00
 		prerequisite = {
-			focus = constit_draft_focus
+			focus = national_poltical_council
 		}
 		x = 43
 		y = 4
@@ -4011,12 +3981,30 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
+			add_political_power = 50
 			swap_ideas = {
 				add_idea = chiang3
 				remove_idea = chiang2
 			}
+
 		}
 		available = {
+			NOT = {
+				any_state = {
+					has_state_flag = china_core_state
+					custom_trigger_tooltip = {
+						tooltip = is_NOT_controlled_by_jap_or_its_puppet_tt
+						is_controlled_by_jap_or_its_puppet = yes
+					}
+				}
+			}
+			NOT = {
+				OR = {
+					has_government = fascism
+					has_government = communism
+					has_government = n_socialism
+				}
+			}
 
 		}
 		bypass = {
@@ -4029,12 +4017,48 @@ focus_tree = {
 	focus = {
 		id = CHI_constitution_focus
 		icon = GFX_constitution_focus
+		cost = 10.00
+		prerequisite = {
+			focus = CHI_political_consultative_assembly_focus
+		}
+		x = 43
+		y = 5
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			remove_ideas = chiang3
+			add_political_power = 150
+		}
+		available = {
+			NOT = {
+				any_state = {
+					has_state_flag = china_core_state
+					custom_trigger_tooltip = {
+						tooltip = is_NOT_controlled_by_jap_or_its_puppet_tt
+						is_controlled_by_jap_or_its_puppet = yes
+					}
+				}
+			}
+			NOT = {
+				OR = {
+					has_government = fascism
+					has_government = communism
+					has_government = n_socialism
+				}
+			}
+		}
+		bypass = {
+			#has_government = fascism
+		}
+
+	}
+	focus = {
+		id = CHI_legislative_reforms
+		icon = GFX_focus_chi_legislative_yuan
 		cost = 20.00
 		prerequisite = {
 			focus = CHI_liberty_ethos
-		}
-		prerequisite = {
-			focus = assembly_of_the_constutients
 		}
 		x = 39
 		y = 5
@@ -4042,8 +4066,8 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			remove_ideas = chiang3
-			add_political_power = 160
+			add_ideas = CHI_legislative_yuan
+			add_political_power = 50
 		}
 		available = {
 			fascism < 0.25
@@ -4051,6 +4075,40 @@ focus_tree = {
 		}
 		bypass = {
 			has_government = fascism
+		}
+
+	}
+	focus = {
+		id = CHI_allies_help_party_focus
+		icon = GFX_goal_generic_air_doctrine
+		cost = 10.00
+		prerequisite = {
+			focus = CHI_constitution_focus
+		}
+		prerequisite = {
+			focus = CHI_legislative_reforms
+		}
+		x = 39
+		y = 6
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_political_power = -50
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+			}
+			remove_ideas = the_blueshirts
+			remove_ideas = central_club
+			set_rule = {
+				can_send_volunteers = yes
+			}
+		}
+		available = {
+			democratic > 0.5
+		}
+		cancel = {
 		}
 
 	}
@@ -6328,47 +6386,7 @@ focus_tree = {
 		}
 
 	}
-	focus = {
-		id = CHI_allies_help_party_focus
-		icon = GFX_goal_generic_air_doctrine
-		cost = 10.00
-		prerequisite = {
-			focus = CHI_constitution_focus
-		}
-		x = 39
-		y = 6
-		ai_will_do = {
-			factor = 10
-		}
-		completion_reward = {
-			add_political_power = -50
-			set_politics = {
-				ruling_party = democratic
-				elections_allowed = yes
-			}
-			remove_ideas = the_blueshirts
-			remove_ideas = central_club
-			set_rule = {
-				can_send_volunteers = yes
-			}
-		}
-		available = {
-			NOT = {
-				has_war_with = USA
-			}
-			NOT = {
-				has_war_with = ENG
-			}
-			democratic > 0.5
-		}
-		cancel = {
-			OR = {
-				has_war_with = USA
-				has_war_with = ENG
-			}
-		}
 
-	}
 	focus = {
 		id = CHI_join_allies
 		icon = GFX_goal_generic_alliance

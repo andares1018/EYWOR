@@ -3808,6 +3808,12 @@ country_event = {
 		609 = {
 			is_controlled_by_jap_or_its_puppet = yes
 			#is_owned_by = JAP
+			NOT = {
+				is_owned_by = HPC
+				HPC = {
+					is_subject_of = JAP
+				}
+			}
 		}
 		NOT = {#got sabotaged
 			country_exists = EHB
@@ -3892,6 +3898,12 @@ country_event = {
 		608 = {
 			is_controlled_by_jap_or_its_puppet = yes
 			#is_owned_by = JAP
+			NOT = {
+				is_owned_by = HPC
+				HPC = {
+					is_subject_of = JAP
+				}
+			}
 		}
 		OR = {
 			NOT = {

@@ -1,4 +1,39 @@
+RCM_join_allies_decision_cat = {
+	SOV_join_allies_decision = {
+		target_trigger = {
+			#Target is FROM
+			FROM = {
+				is_faction_leader = yes
+				has_government = democratic
+				has_war_with = GER
+			}
+		}
+		available = {
+		}
+		visible = {
+			tag = SOV
+			has_war_with = GER
+			#has_war_together_with = FROM
+		}
+		cost = 50
+		ai_will_do = {
+			factor = 4000
+		}
+		complete_effect = {
+			FROM = {
+				country_event = rcmsoviet.23
+			}
+			custom_effect_tooltip = if_they_accept_green
+			effect_tooltip = {
+				dismantle_faction = yes
+				FROM = {
+					add_to_faction = ROOT
+				}
+			}
 
+		}
+	}
+}
 RCM_war_of_resistance_decision_cat = {
 	CHI_space_for_time_decision = {
 		icon = infiltrate_state
@@ -844,6 +879,7 @@ JAP_revise_hiro_san_decision_cat = {
 }
 
 foreign_politics = {
+
 	CHI_inch_blood_up_decision = { #perk increase
 		target_trigger = {
 			#Target is FROM
@@ -865,6 +901,7 @@ foreign_politics = {
 		available = {
 			NOT = {
 				any_other_country = {
+					exists = yes
 					has_country_flag = CHI_inch_blood_up_decision_flag
 				}
 			}
@@ -876,6 +913,7 @@ foreign_politics = {
 			is_ai = yes
 			NOT = {
 				any_other_country = {
+					exists = yes
 					has_country_flag = CHI_inch_blood_up_decision_flag
 				}
 			}
@@ -913,6 +951,7 @@ foreign_politics = {
 		available = {
 			NOT = {
 				any_other_country = {
+					exists = yes
 					has_country_flag = CHI_inch_blood_up_decision_flag
 				}
 			}
@@ -924,6 +963,7 @@ foreign_politics = {
 			is_ai = yes
 			NOT = {
 				any_other_country = {
+					exists = yes
 					has_country_flag = CHI_inch_blood_up_decision_flag
 				}
 			}

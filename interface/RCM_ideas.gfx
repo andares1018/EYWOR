@@ -704,6 +704,11 @@ spriteTypes = {
 		name = "GFX_idea_leader_hospitalized"
 		texturefile = "gfx/interface/ideas/leader_hospitalized.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_sanmin_doctrine"
+		texturefile = "gfx/interface/ideas/sanmin_doctrine.dds"
+	}
+	
 	###PRC
 	spriteType = {
 		name = "GFX_idea_Long_March_1"

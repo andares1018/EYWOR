@@ -745,7 +745,7 @@
  reform_government_tt:0 "\nThe §Ynational flag§! of @PRC §Y[PRC.GetNameDef]§! will be changed.\n"
  tacit_truce_flag:0 "Has tacit truce with @PRC Chines Soviet Republic"
  zhang_refuses_tacit_truce:0 "Zhang Xueliang refused to arrange tacit truce with @PRC Chines Soviet Republic"
- switch_to_AJAC_focus:0 "§YThis focus§! will be §Rcanceled§!.\nthe §YResist the Nationalists Oust the Imperialists§! focus will be §Gbypassed§!.\n"
+ switch_to_AJAC_focus:0 "§YThis focus§! will be §Rcanceled§!.\n"
  separate_line_tt:0 "--------------\n"
  about_twenfivdays_in_tt:0 "§MAbout§! §G25§! §Ydays§! §Min:§!\n"
  upon_completion_tt:0 "§MUpon completion:§!\n"

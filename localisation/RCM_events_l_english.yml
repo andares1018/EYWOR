@@ -207,7 +207,7 @@
  news.408.d:0 "The anger among the military officers and ultranationalists only grew stronger ever since the last failed assassination attempt on the Prime Minister a few weeks ago. Yesterday, the same thing happened last month went down again. the Prime was wounded by a gunman in an attempt to kill him. \n\nFortunately, the prime minister was immediately sent to the hospital after the incident and is no longer in jeopardy. Government official urges the Prime Minister to stop his dangerous reform, but the Prime Minister stated that he would finish what he started."
  news.408.a:0 "Why is he doing this?"
  news.409.t:0 "3rd Prime Minister Assassination Attempt"
- news.409.d:0 "This has been the 3rd assassination attempt on the Prime Minister Hirota due to the controversial reform. Despite the continueing discontent of him from the military, citizens and civilians started to applaud Prime Minister's deeds. \n\nThe popularity of his policies has been growing substantially after the public has witnessed how determined the Prime Minister is to bring peace back to Japan. The Prime Minister also states the following in a peace conference this morning: "I have, and will, risked my life to save my country, but I would by no means risk my country to save my life." "
+ news.409.d:0 "This has been the 3rd assassination attempt on the Prime Minister Hirota due to the controversial reform. Despite the continueing discontent of him from the military, citizens and civilians started to applaud Prime Minister's deeds. \n\nThe popularity of his policies has been growing substantially after the public has witnessed how determined the Prime Minister is to bring peace back to Japan. The Prime Minister also states the following in a press conference this morning: "I have, and will, risked my life to save my country, but I would by no means risk my country to save my life." "
  news.409.a:0 "That was unexpected."
  news.410.t:0 "Prime Minister Hirota Assassinated"
  news.410.d:0 "Despite his determination, Prime Minister Hirota is found dead at his residence this morning. The culprit of this assassination is still on the loose and has not yet been identified. Local police has launched an investigation into the case. Today is a dark day for Japan."
@@ -429,3 +429,10 @@
  rcmgeneric.3.t:0 "[From.GetName] Refused our Request"
  rcmgeneric.3.d:0 "[From.GetName] has refused our good will for reaching a preace agreement. Those goons will pay for their foolish decision. We'll fight until the end."
  rcmgeneric.3.a:0 "Damn them!"
+
+
+
+######RCM_news
+ RCM_news.2.t:0 "China and Japan Agreed to Truce"
+ RCM_news.2.d:0 "After several years of war and bloodshed, China and Japan have finally come to an armistice, which marks the end of the long-lasting war fought between the two powers.\n\n It is still unsure whether or not a war will break out again, however according East Asian Politics experts, the chance of such event happening in the near future is low. Whatever future awaits the two powers, they can both recover from the war for now."
+ RCM_news.2.a:0 "Bitter peace in the end."

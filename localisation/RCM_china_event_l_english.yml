@@ -396,7 +396,7 @@
  rcmchina.284.t:0 "Japanese Government Accepted the Truce"
  rcmchina.284.d:0 "The Japanese Government has accepted to a mutual ceasefire. China can recover in peace for now."
  rcmchina.284.a:0 "Good. And we shall release Korea."
- rcmchina.284.b:0 "Good. And we shall split Korea."
+ rcmchina.284.b:0 "Good."
  rcmchina.284.c:0 "Good. And we shall puppet Korea."
  rcmchina.284.e:0 "Good. And we shall annex Korea."
  rcmchina.285.t:0 "Japanese Government Refused to the Truce"
@@ -418,9 +418,11 @@
  rcmchina.290.a:0 "So be it."
  rcmchina.291.t:0 "Chinese in the Axis?"
  rcmchina.291.d:0 "China has been an ally of the Riech for quite some time, and now their leader had sent a formal request to join the Axis powers. However, some within the Nazi party claims that we could find a greater ally in Japan. What measures should we take in response?"
- rcmchina.292.d:0 "[From.GetNameDef] has accepted our request to join the Axis!"
+ rcmchina.292.t:0 "[From.GetNameDef] Accepts our Alliance"
+ rcmchina.292.d:0 "[From.GetNameDef] has accepted our request to join the Axis! We are now officially allied together and will help each other out in difficult times."
  rcmchina.292.a:0 "Excellent!"
- rcmchina.293.d:0 "[From.GetNameDef] has refused our request to join the Axis!"
+ rcmchina.293.t:0 "[From.GetNameDef] Declines our Alliance"
+ rcmchina.293.d:0 "[From.GetNameDef] has refused our request to join the Axis! Our country either will have to seek other alliances or sustain on our own."
  rcmchina.293.a:0 "Troublesome."
  ##################
  ####split PLM#####

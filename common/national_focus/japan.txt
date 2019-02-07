@@ -480,6 +480,11 @@ focus_tree = {
 			NOT = {#
 				has_war_with = CHI
 			}
+			NOT = {
+				CHI = {
+					has_opinion_modifier = CHI_prc_pact
+				}
+			}
 			#NOT = {
 			#	has_country_flag = china_refuses
 			#}

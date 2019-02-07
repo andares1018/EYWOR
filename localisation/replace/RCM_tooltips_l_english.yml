@@ -31,6 +31,8 @@
  de_wang_defect_flag:0 "§YPrince Demchugdongrub Defected§!"
  a_few_divisions_recuited_tt:0 "§YA few divisions from the central government will be recruited.§!\n"
  stop_subject_war_end_tt:0 "§MYou will stop being a subject of [CHI.GetNameDef] when the war ends.§!\n"
+ china_core_state:0 "Is a §Ycore state§! of China"
+ is_NOT_controlled_by_jap_or_its_puppet_tt:0"Is §Rnot§! controlled by @JAP§Y[JAP.GetName]§! or its §YSubjects§!.\n"
  ###JAP
  jap_starting_land:0 "Is Japan's pre-war territories\n"
  jap_usa_pact_flag:0 "Signed a pact with the USA."

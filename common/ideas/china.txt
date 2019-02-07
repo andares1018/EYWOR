@@ -863,7 +863,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = generic_volunteer_expedition_bonus
+			picture = ast_volunteer_defence_corps
 
 			modifier = {
 				army_speed_factor = -0.02
@@ -1031,9 +1031,8 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				army_morale_factor = 0.05
-				stability_factor = 0.05
-				stability_weekly = 0.001
-				war_support_factor = 0.001#war support+?
+				defensive_war_stability_factor = 0.1
+				offensive_war_stability_factor = 0.1
 			}
 		}
 		new_life = {
@@ -1070,6 +1069,24 @@ ideas = {
 				research_time_factor = -0.05
 				democratic_acceptance = 20
 				stability_factor = 0.1
+			}
+		}
+		sanmin_doctrine = {
+			picture = sanmin_doctrine
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				OR = {
+					has_government = democratic
+					has_government = neutrality
+				}
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.05
+				democratic_drift = 0.05
 			}
 		}
 		CHI_sov_pact = {

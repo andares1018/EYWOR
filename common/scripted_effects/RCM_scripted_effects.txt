@@ -262,34 +262,67 @@ peace_with_japan_land_partition = {
 				OR = {
 					tag = ROOT
 					has_war_together_with = ROOT
+					tag = event_target:scp_war_opposition_leader
+					has_war_together_with = event_target:scp_war_opposition_leader
 				}
 				has_war_with = JAP
 			}
-			white_peace = JAP
+			if = {
+				limit = {
+					tag = SOV
+				}
+				country_event = rcmsoviet.26
+			}
+			every_state = {
+				limit = {
+					is_controlled_by = PREV
+					is_owned_by_jap_or_its_puppet = yes
+				}
+				PREV = {
+					transfer_state = PREV
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						is_warlord = yes
+						tag = event_target:WTT_current_china_leader
+						tag = event_target:WTT_communist_china
+					}
+				}
+				white_peace = JAP
+			}
 		}
 		every_country = {
 			limit = {
 				OR = {
 					tag = JAP
-					has_war_together_with = JAP
+					AND = {
+						has_war_together_with = JAP
+						OR = {
+							is_subject_of = JAP
+							is_in_faction_with = JAP
+						}
+					}
 				}
-				has_war_with = ROOT
+				OR = {
+					has_war_with = ROOT
+					has_war_with = event_target:scp_war_opposition_leader
+				}
 			}
 			white_peace = ROOT
+			white_peace = event_target:scp_war_opposition_leader
 		}
-		JAP = {
-			white_peace = NEA
-		}
-		every_state = {
-			limit = {
-				is_core_of = ROOT
-				is_controlled_by = ROOT
-				is_owned_by_jap_or_its_puppet = yes
-			}
-			ROOT = {
-				transfer_state = PREV
-			}
-		}
+		#every_state = {
+		#	limit = {
+		#		is_core_of = ROOT
+		#		is_controlled_by = ROOT
+		#		is_owned_by_jap_or_its_puppet = yes
+		#	}
+		#	ROOT = {
+		#		transfer_state = PREV
+		#	}
+		#}
 		if = {
 			limit = {
 				HPC = {
@@ -298,6 +331,7 @@ peace_with_japan_land_partition = {
 			}
 			annex_country = { target = HPC transfer_troops = no }
 		}
+		news_event = RCM_news.2
 	}
 	every_state = {
 		limit = {

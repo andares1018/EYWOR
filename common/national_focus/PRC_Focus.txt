@@ -494,7 +494,7 @@ focus_tree = {
 		}
 		will_lead_to_war_with = CHI
 		bypass = {
-			has_global_flag = zhang_refuses_tacit_truce
+			#has_global_flag = zhang_refuses_tacit_truce
 		}
 
 	}
@@ -633,6 +633,9 @@ focus_tree = {
 				ai_cont_foc_prc = yes
 			}
 			has_full_control_of_state = 622
+			NOT = {
+				has_global_flag = zhang_refuses_tacit_truce
+			}
 		}
 		bypass = {
 			has_opinion_modifier = CHI_prc_reconciliation

@@ -4141,17 +4141,46 @@ country_event = {
 	option = {#RELEASE KOR
 		name = rcmchina.284.a
 		ai_chance = { factor = 100 }
+		trigger = {
+			NOT = {
+				MAN = {
+					OR = {
+						controls_state = 527
+						controls_state = 525
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						controls_state = 527
+						controls_state = 525
+					}
+				}
+				set_global_flag = socialist_korea_flag
+			}
+			if = {
+				limit = {
+					event_target:WTT_communist_china = {
+						has_war_together_with = ROOT
+					}
+				}
+				set_global_flag = communist_china_liberates_too_flag
+			}
+		}
 		peace_with_japan_land_partition = yes
 		527 = { KOR = { transfer_state = PREV } }
 		525 = { KOR = { transfer_state = PREV } }
-		KOR = {
+		effect_tooltip = {
 			add_opinion_modifier = {
 				target = ROOT modifier = liberator
 			}
 			if = {
 				limit = {
 					event_target:WTT_communist_china = {
-						is_in_faction_with = ROOT
+						has_war_together_with = ROOT
 					}
 				}
 				add_opinion_modifier = {
@@ -4159,22 +4188,70 @@ country_event = {
 				}
 			}
 		}
+		hidden_effect = {
+			KOR = {
+				if = {
+					limit = {
+						has_global_flag = socialist_korea_flag
+					}
+					set_politics = {
+					    parties = {
+							democratic = {
+								popularity = 10
+							}
+
+							fascism = {
+								popularity = 10
+							}
+
+							communism = {
+								popularity = 10
+							}
+							n_socialism = {
+								popularity = 60
+							}
+							neutrality = {
+								popularity = 10
+							}
+						}
+						ruling_party = n_socialism
+					}
+					else = {
+						add_opinion_modifier = {
+							target = ROOT modifier = liberator
+						}
+						if = {
+							limit = {
+								has_global_flag = communist_china_liberates_too_flag
+							}
+							add_opinion_modifier = {
+								target = event_target:WTT_communist_china modifier = liberator
+							}
+						}
+					}
+				}
+			}
+		}
 	}
-	option = {#SPLIT KOR#YES RED MANCH
+	option = {#MAN CONTROLS KOREA
 		name = rcmchina.284.b
 		trigger = {
-			has_global_flag = dongbei_turned_red
+			MAN = {
+				OR = {
+					controls_state = 527
+					controls_state = 525
+				}
+			}
 		}
-		ai_chance = { factor = 0 }
+		ai_chance = { factor = 100 }
 		peace_with_japan_land_partition = yes
-		527 = { event_target:WTT_communist_china = { transfer_state = PREV } }
-		525 = { ROOT = { transfer_state = PREV } }
 	}
 	option = {#PUPPET KOR#NO RED MANCH
 		name = rcmchina.284.c
 		trigger = {
-			NOT = {
-				has_global_flag = dongbei_turned_red
+			ROOT = {
+				controls_state = 527
+				controls_state = 525
 			}
 		}
 		ai_chance = { factor = 0 }
@@ -4190,8 +4267,9 @@ country_event = {
 	option = {#ANNEX KOR#NO RED MANCH
 		name = rcmchina.284.e
 		trigger = {
-			NOT = {
-				has_global_flag = dongbei_turned_red
+			ROOT = {
+				controls_state = 527
+				controls_state = 525
 			}
 		}
 		ai_chance = { factor = 0 }
@@ -4230,7 +4308,7 @@ country_event = {
 
 	}
 	option = {
-		name = rcmchina.285.a
+		name = rcmchina.286.a
 		ai_chance = { factor = 100 }
 		unlock_national_focus = JAP_intervene_in_china
 		remove_from_faction = HPC
@@ -4260,7 +4338,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = rcmchina.285.a
+		name = rcmchina.287.a
 		ai_chance = { factor = 100 }
 		unlock_national_focus = JAP_intervene_in_china
 		remove_from_faction = HPC
@@ -4273,7 +4351,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = rcmchina.285.b
+		name = rcmchina.287.b
 		ai_chance = { factor = 0 }
 	}
 }
@@ -4391,7 +4469,7 @@ country_event = {
 # GER says yes
 country_event = {
 	id = rcmchina.292
-	title = rcmchina.291.t
+	title = rcmchina.292.t
 	desc = rcmchina.292.d
 	picture = GFX_report_event_hitler_handshake
 
@@ -4409,7 +4487,7 @@ country_event = {
 # GER says no
 country_event = {
 	id = rcmchina.293
-	title = rcmchina.291.t
+	title = rcmchina.293.t
 	desc = rcmchina.293.d
 	picture = GFX_report_event_hitler_handshake
 
@@ -7108,10 +7186,8 @@ country_event = {
 			factor = 5
 			modifier = {
 				factor = 0
-				OR = {
-					has_stability > 0.6
-					has_war = no
-				}
+				has_stability > 0.7
+				has_war = no
 			}
 		}
 
@@ -7157,8 +7233,11 @@ country_event = {
 			factor = 10
 			modifier = {
 				factor = 0
+				NOT = {
+					has_stability > 0.7
+				}
 				has_war_with = JAP
-				surrender_progress > 0.25
+				surrender_progress > 0.1
 			}
 		}
 
