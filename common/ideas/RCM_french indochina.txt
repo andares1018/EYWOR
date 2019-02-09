@@ -29,7 +29,7 @@ ideas = {
 			picture = saf_ossewabrandwag
 
 			modifier = {
-				conscription_factor = -0.7
+				conscription_factor = -0.9
 				consumer_goods_factor = 0.1
 			}
 		}
@@ -323,9 +323,146 @@ ideas = {
 			}
 
 			modifier = {
+				army_attack_factor = -0.4
+				army_defence_factor = -0.4
+				army_org_factor = -0.4
+				army_morale_factor = -0.4
+				max_command_power = -50
+				conscription_factor = 0.2
+			}
+		}
+		
+		FIC_native_recruitment_1 = {
+			removal_cost = -1
+			picture = chi_army_corruption3
 
+			allowed = {
+				always = no
 			}
 
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_attack_factor = -0.3
+				army_defence_factor = -0.3
+				army_org_factor = -0.3
+				army_morale_factor = -0.3
+				max_command_power = -30
+				conscription_factor = 0.2
+			}
+		}
+		
+		FIC_native_recruitment_2 = {
+			removal_cost = -1
+			picture = chi_army_corruption3
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_attack_factor = -0.25
+				army_defence_factor = -0.25
+				army_org_factor = -0.25
+				army_morale_factor = -0.25
+				max_command_power = -25
+				conscription_factor = 0.2
+			}
+		}
+		
+		FIC_native_recruitment_3 = {
+			removal_cost = -1
+			picture = chi_army_corruption3
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_attack_factor = -0.25
+				army_defence_factor = -0.25
+				army_org_factor = -0.25
+				army_morale_factor = -0.25
+				max_command_power = -25
+				conscription_factor = 0.25
+			}
+		}
+		
+		FIC_no_native_recruitment = {
+			removal_cost = -1
+			picture = chi_army_corruption3
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_org_factor = 0.05
+				army_morale_factor = 0.05
+				mobilization_speed = 0.05
+			}
+		}
+		
+		FIC_no_native_recruitment_1 = {
+			removal_cost = -1
+			picture = chi_army_corruption3
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_org_factor = 0.05
+				army_morale_factor = 0.05
+				mobilization_speed = 0.05
+				conscription_factor = 0.05
+			}
+		}
+		
+		FIC_no_native_recruitment_2 = {
+			removal_cost = -1
+			picture = chi_army_corruption3
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				army_org_factor = 0.1
+				army_morale_factor = 0.1
+				army_speed_factor = 0.05
+				max_command_power = 10
+				mobilization_speed = 0.05
+				conscription_factor = 0.05
+			}
 		}
 		
 		fic_support_war = {
@@ -349,14 +486,34 @@ ideas = {
 			}
 		}
 		
+		fic_support_war_nomp = {
+			allowed = {
+				always = no
+			}
+			
+			available = {
+				is_puppet_of = FRA
+				FRA = { has_war = yes }
+			}
+
+			removal_cost = -1
+
+			picture = generic_deal_with_the_devil
+
+			modifier = {
+				war_support_factor = 0.1
+				consumer_goods_factor = -0.05
+			}
+		}
+		
 		fic_indochinese_manpower = {
 			allowed = {
 				always = no
 			}
 			
 			available = {
-			FIC = { is_puppet_of = ROOT }
-			has_war = yes 
+				FIC = { is_puppet_of = ROOT }
+				has_war = yes 
 			}
 
 			removal_cost = -1
@@ -395,7 +552,7 @@ ideas = {
 			}
 		}
 		
-		fic_indigenous_officers = {
+		fic_vietnamese_textbooks = {
 			removal_cost = -1
 			picture = chi_wargaming_division
 			allowed = {
@@ -403,11 +560,47 @@ ideas = {
 			}
 			modifier = {
 				experience_gain_army = 0.03
-				army_morale_factor = 0.1
-				army_core_defence_factor = 0.05
-				army_core_attack_factor = 0.05
-				max_command_power = 10
+				command_power_gain_mult = 0.1
 			}
+		}
+		
+		fic_local_pilot_formation = {
+			removal_cost = -1
+			picture = air_support_focus
+			allowed = {
+				always = no
+			}
+			modifier = {
+				experience_gain_air = 0.03
+			}
+			research_bonus = {
+				air_doctrine = 0.05
+			}
+		}
+		
+		fic_aircraft_factory = {
+			removal_cost = -1
+			picture = man_five_year_plan_air
+			allowed = {
+				always = no
+			}
+			equipment_bonus = {
+				fighter_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				CAS_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				tac_bomber_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+			research_bonus = {
+				air_equipment = 0.1
+			}	
 		}
 		
 		fic_repression = {
@@ -787,7 +980,7 @@ ideas = {
 			}
 			
 			available = {
-			NOT = { has_government = fascism }
+				NOT = { has_government = fascism }
 			}
 
 			traits = { compassionate_gentleman }
@@ -813,7 +1006,7 @@ ideas = {
 			}
 			
 			available = {
-			NOT = { has_government = fascism }
+				NOT = { has_government = fascism }
 			}
 
 			traits = { captain_of_industry }
@@ -869,6 +1062,21 @@ ideas = {
 				factor = 1
 			}
 		}
+		
+		FIC_sylvestre_tavera = {
+
+			picture = generic_air_europe_2
+
+			allowed = {
+				original_tag = FIC
+			}
+
+			traits = { air_chief_safety_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
 
 	}
 
@@ -883,7 +1091,7 @@ ideas = {
 			}
 			
 			available = {
-			NOT = { has_government = fascism }
+				NOT = { has_government = fascism }
 			}
 
 			traits = { navy_chief_decisive_battle_2 }
@@ -935,7 +1143,7 @@ ideas = {
 			}
 			
 			available = {
-			NOT = { has_government = fascism }
+				NOT = { has_government = fascism }
 			}
 
 			traits = { army_logistics_2 }

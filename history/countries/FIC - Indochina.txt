@@ -49,7 +49,7 @@ add_ideas = {
 	complete_national_focus = FIC_strengthen_military_intel
 	complete_national_focus = FIC_increase_mil_spending
 	complete_national_focus = FIC_reduce_illiteracy
-	complete_national_focus = FIC_train_indigenous_officers
+	complete_national_focus = FIC_translate_military_textbooks
 	complete_national_focus = FIC_expand_hanoi_univ
 	complete_national_focus = FIC_defence_of_indochina
 	complete_national_focus = FIC_colonial_reforms
@@ -62,9 +62,9 @@ add_ideas = {
 		#laws
 		partial_economic_mobilisation
 		service_by_requirement
-		fic_indigenous_officers
 		FIC_opium_profits_1
 		FIC_iliterate_population_1
+		fic_vietnamese_textbooks
 		fic_resource_effort
 		fic_strengthened_mil_intel
 		fic_better_working_conditions_1

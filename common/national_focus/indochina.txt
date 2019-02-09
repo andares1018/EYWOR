@@ -26,7 +26,7 @@ focus_tree = {
 		id = FIC_strengthen_military_intel
 		icon = GFX_goal_counter_intellegence
 		cost = 10
-		x = 12
+		x = 15
 		y = 0
 		completion_reward = {
 			add_ideas = fic_strengthened_mil_intel
@@ -54,10 +54,10 @@ focus_tree = {
 		id = FIC_colonial_reforms
 		icon = GFX_focus_generic_self_management
 		cost = 10
-		x = 23
+		x = 28
 		y = 0
 		ai_will_do = {
-		factor = 10
+			factor = 10
 		}
 		available = {
 			has_idea = FIC_strikes
@@ -154,7 +154,7 @@ focus_tree = {
 				remove_idea = FIC_colonial_loan_2
 				add_idea = FIC_colonial_loan_3
 			}
-			unlock_decision_category_tooltip = fic_transindochinese_rail_decision
+			unlock_decision_tooltip = FIC_transindochinese_railway_dec
 		}
 
 	}
@@ -321,7 +321,15 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			add_ideas = fic_support_war
+			if = {
+				limit = {
+					has_completed_focus = FIC_rely_on_white_conscription
+				}
+				add_ideas = fic_support_war_nomp
+			}
+			else = {
+				add_ideas = fic_support_war
+			}
 			FRA = {
 				add_ideas = fic_indochinese_manpower
 			}
@@ -389,32 +397,31 @@ focus_tree = {
 
 	}
 	focus = {
-		id = FIC_train_indigenous_officers
-		icon = GFX_focus_generic_military_academy
+		id = FIC_translate_military_textbooks
+		icon = GFX_constitution_focus
 		cost = 10
 		prerequisite = {
 			focus = FIC_increase_mil_spending
 		}
-		x = -4
+		x = -5
 		y = 0
 		relative_position_id = FIC_defence_of_indochina
 		completion_reward = {
 			army_experience = 10
-			add_ideas = fic_indigenous_officers
+			add_ideas = fic_vietnamese_textbooks
 		}
-
 	}
 	focus = {
 		id = FIC_expand_hanoi_univ
 		icon = GFX_focus_research
 		cost = 10
 		prerequisite = {
-			focus = FIC_train_indigenous_officers
+			focus = FIC_translate_military_textbooks
 		}
 		prerequisite = {
 			focus = FIC_reduce_illiteracy
 		}
-		x = 2
+		x = 3
 		y = 1
 		relative_position_id = FIC_reduce_illiteracy
 		completion_reward = {
@@ -458,7 +465,7 @@ focus_tree = {
 		prerequisite = {
 			focus = FIC_defence_of_indochina
 		}
-		x = -2
+		x = -4
 		y = 1
 		relative_position_id = FIC_defence_of_indochina
 		completion_reward = {
@@ -561,7 +568,133 @@ focus_tree = {
 		completion_reward = {
 			add_manpower = 30000
 		}
-
+	}
+	focus = {
+		id = FIC_rely_on_white_conscription
+		icon = GFX_focus_generic_commonwealth_build_infantry
+		cost = 10
+		prerequisite = {
+			focus = FIC_army_expansion
+		}
+		mutually_exclusive = {
+			focus = FIC_train_indigenous_officers
+		}
+		x = -2
+		y = 1
+		relative_position_id = FIC_army_expansion
+		completion_reward = {
+			add_political_power = 25
+			swap_ideas = {
+				remove_idea = FIC_native_recruitment
+				add_idea = FIC_no_native_recruitment
+			}
+		}
+	}
+	focus = {
+		id = FIC_expand_garde_indigene
+		icon = GFX_goal_generic_more_territorial_claims
+		cost = 10
+		prerequisite = {
+			focus = FIC_rely_on_white_conscription
+		}
+		x = 0
+		y = 1
+		relative_position_id = FIC_rely_on_white_conscription
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FIC_no_native_recruitment
+				add_idea = FIC_no_native_recruitment_1
+			}
+		}
+	}
+	focus = {
+		id = FIC_foreign_legion_reinforcement
+		icon = GFX_goal_generic_special_forces
+		cost = 10
+		prerequisite = {
+			focus = FIC_expand_garde_indigene
+		}
+		x = 0
+		y = 1
+		relative_position_id = FIC_expand_garde_indigene
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FIC_no_native_recruitment_1
+				add_idea = FIC_no_native_recruitment_2
+			}
+			add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = 0.5
+				uses = 2
+				category = mountaineers_tech
+				category = marine_tech
+				category = para_tech
+			}
+		}
+	}
+	focus = {
+		id = FIC_train_indigenous_officers
+		icon = GFX_focus_generic_military_academy
+		cost = 10
+		prerequisite = {
+			focus = FIC_army_expansion
+		}
+		mutually_exclusive = {
+			focus = FIC_rely_on_white_conscription
+		}
+		x = 2
+		y = 1
+		relative_position_id = FIC_army_expansion
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FIC_native_recruitment
+				add_idea = FIC_native_recruitment_1
+			}
+		}
+	}
+	focus = {
+		id = FIC_better_autochthon_management
+		icon = GFX_focus_generic_military_mission
+		cost = 10
+		prerequisite = {
+			focus = FIC_train_indigenous_officers
+		}
+		x = 0
+		y = 1
+		relative_position_id = FIC_train_indigenous_officers
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FIC_native_recruitment_1
+				add_idea = FIC_native_recruitment_2
+			}
+		}
+	}
+	focus = {
+		id = FIC_incorporate_laotian_soldiers
+		icon = GFX_focus_RAJ_indian_gurkhas
+		cost = 10
+		prerequisite = {
+			focus = FIC_better_autochthon_management
+		}
+		available = {
+			OR = {
+				has_completed_focus = FIC_ally_local_leaders
+				has_completed_focus = FIC_support_laotian_renovation_movement
+			}
+			any_state = { 
+				is_core_of = LAO 
+				is_owned_by = ROOT
+			}
+		}
+		x = 0
+		y = 1
+		relative_position_id = FIC_better_autochthon_management
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FIC_native_recruitment_2
+				add_idea = FIC_native_recruitment_3
+			}
+		}
 	}
 	focus = {
 		id = FIC_request_tanks
@@ -571,7 +704,7 @@ focus_tree = {
 			focus = FIC_army_expansion
 		}
 		x = 0
-		y = 1
+		y = 2
 		relative_position_id = FIC_army_expansion
 		completion_reward = {
 			add_equipment_to_stockpile = {
@@ -609,7 +742,7 @@ focus_tree = {
 		prerequisite = {
 			focus = FIC_defence_of_indochina
 		}
-		x = 2
+		x = 4
 		y = 1
 		relative_position_id = FIC_defence_of_indochina
 		completion_reward = {
@@ -655,7 +788,22 @@ focus_tree = {
 				producer = FRA
 			}
 		}
-
+	}
+	focus = {
+		id = FIC_local_pilot_formation
+		icon = GFX_goal_generic_air_production
+		cost = 10
+		prerequisite = {
+			focus = FIC_expand_tan_son_nhat_airport
+		}
+		x = 2
+		y = 1
+		relative_position_id = FIC_expand_tan_son_nhat_airport
+		completion_reward = {
+			air_experience = 25
+			add_ideas = fic_local_pilot_formation
+			unlock_decision_tooltip = FIC_aircraft_production_factory
+		}
 	}
 	focus = {
 		id = FIC_air_reorganization
@@ -1150,7 +1298,10 @@ focus_tree = {
 		relative_position_id = FIC_at_the_helm_of_indochina
 		
 		available = {
-			NOT = { controls_state = 809 controls_state = 810 }
+			any_state = { 
+				is_core_of = LAO 
+				is_owned_by = ROOT
+			}
 			has_country_leader = { ruling_only = yes name = "Jean Decoux" }
 			has_government = fascism
 		}

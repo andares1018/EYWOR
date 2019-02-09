@@ -54,7 +54,7 @@ political_actions = {
 	}
 }
 
-fic_transindochinese_rail_decision = {
+fic_industrial_decisions = {
 
 	FIC_transindochinese_railway_dec = {
 		icon = generic_construction
@@ -63,11 +63,12 @@ fic_transindochinese_rail_decision = {
 		days_re_enable = duration_of_infra_reenable # Will show up in the interface and can be selected again after 5 days
 		cost = 50
 		available = { #can do
+			has_completed_focus = FIC_transindochinese_railway
+			num_of_civilian_factories_available_for_projects > 1
 			controls_state = 286
 			controls_state = 670
 			controls_state = 671
 			controls_state = 741
-			num_of_civilian_factories_available_for_projects > 1
 		}
 		remove_effect = { #run effect when removed/finished
 			every_owned_state = {
@@ -98,6 +99,51 @@ fic_transindochinese_rail_decision = {
 		}
 		ai_will_do = {
 			factor = 10
+		}
+	}
+	
+	FIC_aircraft_production_factory = {
+		icon = generic_air
+		fire_only_once = yes
+		days_remove = 365 # Stays for 5 days before being removed
+		cost = 100
+		available = { #can do
+			has_completed_focus = FIC_local_pilot_formation
+			num_of_civilian_factories_available_for_projects > 4
+		}
+		remove_effect = { #run effect when removed/finished
+			add_ideas = fic_aircraft_factory
+			hidden_effect = {
+				set_technology = {
+					fighter1 = 1
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 671 286 }
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		cancel_trigger = { #will abort
+
+		}
+		modifier = { #active during the course of the decision
+			civilian_factory_use = 5
+		}
+		ai_will_do = {
+			factor = 5
 		}
 	}
 }
