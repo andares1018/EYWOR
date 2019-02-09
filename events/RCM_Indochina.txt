@@ -69,7 +69,43 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = rcmindochina.3.a
+		name = rcmindochina.3.a #defect
+		every_country = {
+			limit = {
+				OR = { 
+					original_tag = FRA
+					tag = FRA 
+				}
+				NOT = { has_government = fascism }
+			}
+			puppet = FIC
+		}
+		create_country_leader = {
+			name = "Georges Catroux"
+			desc = "POLITICS_GEORGES_CATROUX_DESC"
+			picture = "gfx/leaders/FIC/Portrait_Indochina_Georges_Catroux.dds"
+			expire = "1965.1.1"
+			ideology = conservatism
+			traits = {
+			}
+		}
+		set_party_name = {
+			ideology = democratic
+			name = FIC_democratic_col
+			long_name = FIC_democratic_col_long
+		}
+		country_event = { days = 1 id = rcmindochina.5 } #free france informed
+		every_country = {
+			limit = {
+				original_tag = FRA
+				has_government = fascism 
+			} 
+			country_event = { days = 1 id = rcmindochina.6 } #vichy informed
+		}	
+	}
+	
+	option = { # we can't oppose the government's will
+		name = rcmindochina.3.b
 		hidden_effect = {
 			kill_country_leader = yes
 		}
@@ -90,6 +126,19 @@ country_event = {
 			expire = "1965.1.1"
 			ideology = collaborationism
 			traits = {
+			}
+		}
+		
+		hidden_effect = {
+			every_country = {
+				limit = {
+					OR = { 
+						original_tag = FRA
+						tag = FRA 
+					}
+					NOT = { has_government = fascism }
+				}
+				country_event = { days = 10 id = rcmfrance.7 } #general catroux joins FFL
 			}
 		}
 		
@@ -280,12 +329,10 @@ country_event = {
 		add_political_power = 50
 		transfer_state = 809
 		transfer_state = 810
-		transfer_state = 815
-		transfer_state = 816
+		transfer_state = 812
 		add_state_core = 809
 		add_state_core = 810
-		add_state_core = 815 
-		add_state_core = 816
+		add_state_core = 812 
 	}
 }
 

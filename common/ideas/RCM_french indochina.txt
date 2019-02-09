@@ -19,6 +19,20 @@ ideas = {
 			}
 		}
 
+		FIC_colonial_government = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = saf_ossewabrandwag
+
+			modifier = {
+				conscription_factor = -0.7
+				consumer_goods_factor = 0.1
+			}
+		}
 		
 		FIC_colonial_loan_idea = {
 			allowed = {
@@ -258,14 +272,70 @@ ideas = {
 			}
 		}
 		
+		FIC_opium_profits = {
+			removal_cost = -1
+			picture = prc_permit_opium_trade
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				political_power_gain = -0.05
+			}
+
+		}
+		
+		FIC_opium_profits_1 = {
+			removal_cost = -1
+			picture = prc_permit_opium_trade
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.1
+				political_power_gain = -0.15
+			}
+
+		}
+		
+		FIC_native_recruitment = {
+			removal_cost = -1
+			picture = chi_army_corruption3
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+
+			}
+
+		}
+		
 		fic_support_war = {
 			allowed = {
 				always = no
 			}
 			
 			available = {
-			is_puppet_of = FRA
-			FRA = { has_war = yes }
+				is_puppet_of = FRA
+				FRA = { has_war = yes }
 			}
 
 			removal_cost = -1
@@ -273,9 +343,9 @@ ideas = {
 			picture = generic_deal_with_the_devil
 
 			modifier = {
-			war_support_factor = 0.1
-			consumer_goods_factor = -0.05
-			conscription_factor	= -0.5
+				war_support_factor = 0.1
+				consumer_goods_factor = -0.05
+				conscription_factor	= -0.2
 			}
 		}
 		
@@ -327,16 +397,16 @@ ideas = {
 		
 		fic_indigenous_officers = {
 			removal_cost = -1
-			picture = generic_spy_political
+			picture = chi_wargaming_division
 			allowed = {
 				always = no
 			}
 			modifier = {
-			experience_gain_army = 0.03
-			army_morale_factor = 0.1
-			army_core_defence_factor = 0.05
-			army_core_attack_factor = 0.05
-			max_command_power = 10
+				experience_gain_army = 0.03
+				army_morale_factor = 0.1
+				army_core_defence_factor = 0.05
+				army_core_attack_factor = 0.05
+				max_command_power = 10
 			}
 		}
 		
@@ -350,9 +420,9 @@ ideas = {
 			picture = generic_spy_coup
 
 			modifier = {
-			drift_defence_factor = 0.25
-			stability_factor = 0.1
-			political_power_gain = 0.1
+				drift_defence_factor = 0.25
+				stability_factor = 0.1
+				political_power_gain = 0.1
 			}
 		}
 		
@@ -366,8 +436,8 @@ ideas = {
 			picture = generic_spy_coup
 
 			modifier = {
-			drift_defence_factor = 0.1
-			stability_factor = 0.05
+				drift_defence_factor = 0.1
+				stability_factor = 0.05
 			}
 		}
 		
@@ -381,9 +451,9 @@ ideas = {
 			picture = generic_spy_coup
 
 			modifier = {
-			drift_defence_factor = 0.2
-			stability_factor = 0.05
-			political_power_gain = 0.1
+				drift_defence_factor = 0.2
+				stability_factor = 0.05
+				political_power_gain = 0.1
 			}
 		}
 		
@@ -397,9 +467,9 @@ ideas = {
 			picture = generic_goods_red_bonus
 
 			modifier = {
-			industrial_capacity_factory = -0.1
-			stability_factor = 0.05
-			production_factory_max_efficiency_factor = 0.05
+				industrial_capacity_factory = -0.1
+				stability_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
 			}
 		}
 		
@@ -413,11 +483,11 @@ ideas = {
 			picture = generic_goods_red_bonus
 
 			modifier = {
-			industrial_capacity_factory = -0.05
-			stability_factor = 0.075
-			production_factory_max_efficiency_factor = 0.05
-			drift_defence_factor = -0.1
-			production_factory_efficiency_gain_factor = 0.05
+				industrial_capacity_factory = -0.05
+				stability_factor = 0.075
+				production_factory_max_efficiency_factor = 0.05
+				drift_defence_factor = -0.1
+				production_factory_efficiency_gain_factor = 0.05
 			}
 		}
 		
@@ -431,12 +501,12 @@ ideas = {
 			picture = generic_production_bonus
 
 			modifier = {
-			consumer_goods_factor = 0.2
-			industrial_capacity_factory = -0.2
-			production_speed_buildings_factor = -0.2
-			production_factory_max_efficiency_factor = -0.15
-			stability_factor = -0.1
-			political_power_gain = -0.2
+				consumer_goods_factor = 0.2
+				industrial_capacity_factory = -0.2
+				production_speed_buildings_factor = -0.2
+				production_factory_max_efficiency_factor = -0.15
+				stability_factor = -0.1
+				political_power_gain = -0.2
 			}
 		}
 		
@@ -449,12 +519,12 @@ ideas = {
 			picture = generic_production_bonus
 
 			modifier = {
-			consumer_goods_factor = 0.15
-			industrial_capacity_factory = -0.15
-			production_speed_buildings_factor = -0.15
-			production_factory_max_efficiency_factor = -0.1
-			stability_factor = -0.1
-			political_power_gain = -0.2
+				consumer_goods_factor = 0.15
+				industrial_capacity_factory = -0.15
+				production_speed_buildings_factor = -0.15
+				production_factory_max_efficiency_factor = -0.1
+				stability_factor = -0.1
+				political_power_gain = -0.2
 			}
 		}
 		
@@ -467,12 +537,12 @@ ideas = {
 			picture = generic_production_bonus
 
 			modifier = {
-			consumer_goods_factor = 0.1
-			industrial_capacity_factory = -0.1
-			production_speed_buildings_factor = -0.1
-			production_factory_max_efficiency_factor = -0.1
-			stability_factor = -0.05
-			political_power_gain = -0.1
+				consumer_goods_factor = 0.1
+				industrial_capacity_factory = -0.1
+				production_speed_buildings_factor = -0.1
+				production_factory_max_efficiency_factor = -0.1
+				stability_factor = -0.05
+				political_power_gain = -0.1
 			}
 		}
 		
@@ -485,12 +555,12 @@ ideas = {
 			picture = generic_production_bonus
 
 			modifier = {
-			consumer_goods_factor = 0.05
-			industrial_capacity_factory = -0.05
-			production_speed_buildings_factor = -0.05
-			production_factory_max_efficiency_factor = -0.05
-			stability_factor = -0.05
-			political_power_gain = -0.1
+				consumer_goods_factor = 0.05
+				industrial_capacity_factory = -0.05
+				production_speed_buildings_factor = -0.05
+				production_factory_max_efficiency_factor = -0.05
+				stability_factor = -0.05
+				political_power_gain = -0.1
 			}
 		}
 
@@ -503,13 +573,13 @@ ideas = {
 			picture = FRA_scw_intervention_nationalists_focus
 			
 			available = {
-			has_war_with = JAP
+				has_war_with = JAP
 			}
 			
 			modifier = {
-			political_power_gain = 0.1
-			stability_factor = 0.05
-			partisan_effect = 0.1
+				political_power_gain = 0.1
+				stability_factor = 0.05
+				partisan_effect = 0.1
 			}
 		}
 		
@@ -522,15 +592,15 @@ ideas = {
 			picture = FRA_scw_intervention_nationalists_focus
 			
 			available = {
-			has_war_with = JAP
+				has_war_with = JAP
 			}
 			
 			modifier = {
-			political_power_gain = 0.1
-			stability_factor = 0.05
-			partisan_effect = 0.25
-			army_core_attack_factor = 0.1
-			army_core_defence_factor = 0.1
+				political_power_gain = 0.1
+				stability_factor = 0.05
+				partisan_effect = 0.25
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
 			}
 		}
 			
@@ -543,9 +613,9 @@ ideas = {
 			picture = FRA_scw_intervention_nationalists_focus
 				
 			modifier = {
-			political_power_gain = 0.05
-			war_support_factor = 0.05
-			partisan_effect = 0.05
+				political_power_gain = 0.05
+				war_support_factor = 0.05
+				partisan_effect = 0.05
 			}
 		}
 		
@@ -558,7 +628,7 @@ ideas = {
 			picture = chi_army_corruption2
 				
 			modifier = {
-			conscription = 0.01
+				conscription = 0.01
 			}
 		}
 		
@@ -571,10 +641,10 @@ ideas = {
 			picture = generic_disjointed_gov
 				
 			modifier = {
-			consumer_goods_factor = -0.03
-			political_power_gain = 0.1
-			stability_factor = 0.05
-			conscription_factor = 0.05
+				consumer_goods_factor = -0.03
+				political_power_gain = 0.1
+				stability_factor = 0.05
+				conscription_factor = 0.05
 			}
 		}
 		
@@ -587,11 +657,11 @@ ideas = {
 			picture = generic_wall_line
 			
 			available = {
-			has_war_with = JAP
+				has_war_with = JAP
 			}
 			
 			modifier = {
-			production_speed_bunker_factor = 0.1
+				production_speed_bunker_factor = 0.1
 			}
 			
 			targeted_modifier = {
@@ -610,7 +680,7 @@ ideas = {
 			picture = generic_goods_red_bonus
 
 			modifier = {
-			consumer_goods_factor = -0.05
+				consumer_goods_factor = -0.05
 			}
 		}
 

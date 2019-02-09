@@ -76,7 +76,7 @@ fic_transindochinese_rail_decision = {
 				}
 				add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -90,6 +90,232 @@ fic_transindochinese_rail_decision = {
 					controls_state = 670
 					controls_state = 671
 					controls_state = 741
+				}
+			}
+		}
+		modifier = { #active during the course of the decision
+			civilian_factory_use = 2
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+}
+
+FIC_guangzhouwan_development = {
+	FIC_succesful_expansion_ktw = {
+		icon = generic_construction
+		available = {
+			728 = {
+				infrastructure > 6
+				naval_base > 5
+				coastal_bunker > 3
+			}
+		}
+		allowed = {
+			has_completed_focus = FIC_guangzhouwan_navalbase
+		}
+		activation = {
+			is_ai = no
+		}
+		selectable_mission = no
+		days_mission_timeout = 2000
+		is_good = no
+		fire_only_once = yes
+		complete_effect = {
+			add_political_power = 100
+			add_stability = 0.03
+			728 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		timeout_effect = {
+			add_political_power = -50
+		}
+	}
+	
+	FIC_reinvest_coal_profits_ktw = {
+		icon = ger_mefo_bills
+		fire_only_once = yes
+		days_remove = 180 # Stays for 5 days before being removed
+		days_re_enable = duration_of_infra_reenable # Will show up in the interface and can be selected again after 5 days
+		cost = 100
+		available = { #can do
+			controls_state = 728
+		}
+		remove_effect = { #run effect when removed/finished
+			728 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		cancel_trigger = { #will abort
+			custom_trigger_tooltip = {
+				tooltip = does_not_meet_pre
+				NOT = {
+					controls_state = 728
+				}
+			}
+		}
+		modifier = { #active during the course of the decision
+		
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	FIC_expand_naval_infrastructure_ktw = {
+		icon = generic_construction
+		fire_only_once = yes
+		days_remove = 360 # Stays for 5 days before being removed
+		days_re_enable = duration_of_infra_reenable # Will show up in the interface and can be selected again after 5 days
+		cost = 50
+		available = { #can do
+			controls_state = 728
+			num_of_civilian_factories_available_for_projects > 2
+		}
+		remove_effect = { #run effect when removed/finished
+			728 = {
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					province = 11981
+					instant_build = yes
+				}
+			}
+		}
+		cancel_trigger = { #will abort
+			custom_trigger_tooltip = {
+				tooltip = does_not_meet_pre
+				NOT = {
+					controls_state = 728
+				}
+			}
+		}
+		modifier = { #active during the course of the decision
+			civilian_factory_use = 3
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	FIC_coastal_artillery_ktw = {
+		icon = generic_industry
+		fire_only_once = yes
+		days_remove = 90 # Stays for 5 days before being removed
+		days_re_enable = duration_of_infra_reenable # Will show up in the interface and can be selected again after 5 days
+		cost = 10
+		available = { #can do
+			controls_state = 728
+			num_of_civilian_factories_available_for_projects > 1
+			has_equipment = {
+				artillery_equipment_1 > 49
+			}
+		}
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = artillery_equipment_1
+				amount = -50
+				producer = FIC
+			}
+		}
+		remove_effect = { #run effect when removed/finished
+			728 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 3
+					province = 11981
+					instant_build = yes
+				}
+			}
+		}
+		cancel_trigger = { #will abort
+			custom_trigger_tooltip = {
+				tooltip = does_not_meet_pre
+				NOT = {
+					controls_state = 728
+				}
+			}
+		}
+		modifier = { #active during the course of the decision
+			civilian_factory_use = 2
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	FIC_inland_fortifications_ktw = {
+		icon = generic_ignite_civil_war
+		fire_only_once = yes
+		days_remove = 360 # Stays for 5 days before being removed
+		days_re_enable = duration_of_infra_reenable # Will show up in the interface and can be selected again after 5 days
+		cost = 25
+		available = { #can do
+			controls_state = 728
+			num_of_civilian_factories_available_for_projects > 1
+		}
+		remove_effect = { #run effect when removed/finished
+			728 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 11981
+					instant_build = yes
+				}
+			}
+		}
+		cancel_trigger = { #will abort
+			custom_trigger_tooltip = {
+				tooltip = does_not_meet_pre
+				NOT = {
+					controls_state = 728
+				}
+			}
+		}
+		modifier = { #active during the course of the decision
+			civilian_factory_use = 2
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	FIC_expand_airport_ktw = {
+		icon = generic_air
+		fire_only_once = yes
+		days_remove = 500 # Stays for 5 days before being removed
+		days_re_enable = duration_of_infra_reenable # Will show up in the interface and can be selected again after 5 days
+		cost = 25
+		available = { #can do
+			controls_state = 728
+			num_of_civilian_factories_available_for_projects > 1
+		}
+		remove_effect = { #run effect when removed/finished
+			728 = {
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		cancel_trigger = { #will abort
+			custom_trigger_tooltip = {
+				tooltip = does_not_meet_pre
+				NOT = {
+					controls_state = 728
 				}
 			}
 		}
@@ -123,13 +349,12 @@ fic_franco_siam_war = {
 			}
 		}
 		war_with_target_on_remove = yes
-		days_remove = 25
+		days_remove = 30
 		cost = 10
-		complete_effect = {
+		remove_effect = {
 			add_state_claim = 809
 			add_state_claim = 810
-			add_state_claim = 815
-			add_state_claim = 816
+			add_state_claim = 812
 			declare_war_on = {
 				type = annex_everything
 				target = FIC
@@ -149,8 +374,7 @@ fic_franco_siam_war = {
 		}
 		available = {
 			SIA = {
-				controls_state = 815
-				controls_state = 816
+				controls_state = 812
 				has_war_with = FIC
 			}
 		}
@@ -173,11 +397,11 @@ fic_franco_siam_war = {
 #		tag = JAP
 #		}
 #		available = {
-#		FIC = { is_in_faction_with = ROOT }
-#		NOT = { #BURMA
-#		controls_state = 288
-# 		controls_state = 640
-#		}
+#			FIC = { is_in_faction_with = ROOT }
+#			NOT = { #BURMA
+#				controls_state = 288
+# 				controls_state = 640
+#			}
 #		}
 #		is_good = no
 #		fire_only_once = yes
@@ -187,19 +411,18 @@ fic_franco_siam_war = {
 #		days_remove = 0
 #		cost = 10
 #		complete_effect = {
-#		transfer_state = 286 #Cochinchina
-#		transfer_state = 808
+#			transfer_state = 286 #Cochinchina
+#			transfer_state = 808
 # 
 #		LAO = {
-#		transfer_state = 670
+#			transfer_state = 670
+#			transfer_state = 821
+#			transfer_state = 822
 #		}
 #
 #		CAM = {
-#		transfer_state = 741
-#		transfer_state = 811
-#		transfer_state = 812
-#		transfer_state = 813
-#		transfer_state = 814
+#			transfer_state = 741
+#			transfer_state = 811
 #		}
 #		
 #		puppet = LAO 

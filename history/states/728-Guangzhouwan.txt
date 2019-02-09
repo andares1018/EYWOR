@@ -8,7 +8,9 @@ state={
 	history={
 		owner = FIC
 		add_core_of = CHI
-		add_core_of = PRC
+		victory_points = {
+			11981 2
+		}
 		buildings = {
 			infrastructure = 3
 			11981 = {

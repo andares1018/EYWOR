@@ -1,17 +1,20 @@
 state={
-	id=819
-	name="STATE_819"
+	id=814
+	name="STATE_814"
 	provinces={
-		2117 4396 7443 8091 12283 
+		7371 7387 10269 10285 
 	}
 	history={
 		owner = SAR
 		add_core_of = SAR
 		buildings = {
 			infrastructure = 2
+			7371 = {
+				naval_base = 2
+			}
 		}
 	}
-	manpower=257413
+	manpower=154278
 	buildings_max_level_factor=1.000
-	state_category=rural
+	state_category = rural
 }

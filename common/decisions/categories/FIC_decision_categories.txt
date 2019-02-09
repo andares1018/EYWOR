@@ -25,6 +25,18 @@ fic_transindochinese_rail_decision = {
 	}
 }
 
+FIC_guangzhouwan_development = {
+	allowed = {
+		original_tag = FIC
+		is_ai = no
+	}
+	icon = generic_industry
+	visible = {
+		has_completed_focus = FIC_guangzhouwan_navalbase
+		controls_state = 728
+	}
+}
+
 fic_franco_siam_war = {
 	allowed = {
 	

@@ -273,9 +273,9 @@ bookmarks = {
 			history = "FIC_GATHERING_STORM_DESC"
 			ideology = neutrality
 			ideas = {
+				FIC_colonial_government
 				FIC_colonial_loan_idea
 				FIC_iliterate_population
-				fic_indochinese_manpower
 			}
 			focuses = {
 				FIC_colonial_loan

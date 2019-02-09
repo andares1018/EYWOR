@@ -27,8 +27,8 @@ country_event = {
 		add_ideas = FRA_front_populaire
 		set_politics = { ruling_party = n_socialism elections_allowed = yes }
 		hidden_effect = {
-		FIC = { country_event = { days = 100 id = rcmindochina.1 } } #new colonial governor appointed
-		FIC = { country_event = { days = 1 id = rcmindochina.7 } } #strikes
+			FIC = { country_event = { days = 100 id = rcmindochina.1 } } #new colonial governor appointed
+			FIC = { country_event = { days = 1 id = rcmindochina.7 } } #strikes
 		}
 		
 	}
@@ -55,14 +55,14 @@ country_event = {
 		ai_chance = { factor = 100 }
 		hidden_effect = { kill_country_leader = yes }
 		create_country_leader = {
-		name = "Albert Sarraut"
-		desc = ""
-		picture = "Portrait_Albert_Sarraut.dds"
-		expire = "1965.1.1"
-		ideology = liberalism
-		traits = {
+			name = "Albert Sarraut"
+			desc = ""
+			picture = "Portrait_Albert_Sarraut.dds"
+			expire = "1965.1.1"
+			ideology = liberalism
+			traits = {
 			
-		}
+			}
 		}
 	}
 }
@@ -88,14 +88,14 @@ country_event = {
 		ai_chance = { factor = 100 }
 		hidden_effect = { kill_country_leader = yes }
 		create_country_leader = {
-		name = "Camille Chautemps"
-		desc = ""
-		picture = "Portrait_Camille_Chautemps.dds"
-		expire = "1965.1.1"
-		ideology = n_socialism_ideology
-		traits = {
+			name = "Camille Chautemps"
+			desc = ""
+			picture = "Portrait_Camille_Chautemps.dds"
+			expire = "1965.1.1"
+			ideology = n_socialism_ideology
+			traits = {
 			
-		}
+			}
 		}
 	}
 }
@@ -116,7 +116,7 @@ country_event = {
 		date > 1938.1.1
 		date < 1939.1.1
 		GER = {
-		controls_state = 4
+			controls_state = 4
 		}
 	}
 	option = {
@@ -124,14 +124,14 @@ country_event = {
 		ai_chance = { factor = 100 }
 		hidden_effect = { kill_country_leader = yes }
 		create_country_leader = {
-		name = "Léon Blum"
-		desc = ""
-		picture = "Portrait_Leon_Blum.dds"
-		expire = "1965.1.1"
-		ideology = n_socialism_ideology
-		traits = {
+			name = "Léon Blum"
+			desc = ""
+			picture = "Portrait_Leon_Blum.dds"
+			expire = "1965.1.1"
+			ideology = n_socialism_ideology
+			traits = {
 			
-		}
+			}
 		}
 	}
 }
@@ -158,14 +158,14 @@ country_event = {
 		remove_ideas = FRA_front_populaire
 		set_politics = { ruling_party = democratic elections_allowed = yes }
 		create_country_leader = {
-		name = "Édouard Daladier"
-		desc = ""
-		picture = "Portrait_France_Edouard_Daladier.dds"
-		expire = "1965.1.1"
-		ideology = socialism
-		traits = {
-			
-		}
+			name = "Édouard Daladier"
+			desc = ""
+			picture = "Portrait_France_Edouard_Daladier.dds"
+			expire = "1965.1.1"
+			ideology = socialism
+			traits = {
+				stout_defender
+			}
 		}
 		
 	} 
@@ -187,8 +187,8 @@ country_event = {
 		date > 1940.3.18
 		has_war_with = GER
 		OR = {
-		FIN = { has_war_with = SOV }
-		FIN = { NOT = { controls_state = 146 } }
+			FIN = { has_war_with = SOV }
+			FIN = { NOT = { controls_state = 146 } }
 		}
 	}
 	
@@ -196,15 +196,40 @@ country_event = {
 		name = rcmfrance.6.a
 		ai_chance = { factor = 100 }
 		create_country_leader = {
-		name = "Paul Reynaud"
-		desc = ""
-		picture = "Portrait_France_Paul_Reynaud.dds"
-		expire = "1965.1.1"
-		ideology = liberalism
-		traits = {
+			name = "Paul Reynaud"
+			desc = ""
+			picture = "Portrait_France_Paul_Reynaud.dds"
+			expire = "1965.1.1"
+			ideology = liberalism
+			traits = {
 			
+			}
 		}
+	} 
+}
+
+#Catroux joins Free France
+country_event = {
+	id = rcmfrance.7
+	title = rcmfrance.7.t
+	desc = rcmfrance.7.d
+	picture = GFX_report_event_degaulle_inspect_troops
+ 
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = rcmfrance.7.a
+		ai_chance = { factor = 100 }
+		create_corps_commander = {
+			name = "Georges Catroux"
+			portrait_path = "gfx/leaders/FIC/Portrait_Indochina_Georges_Catroux.dds"
+			traits = { career_officer desert_fox infantry_officer brilliant_strategist }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 3
 		}
-		
 	} 
 }

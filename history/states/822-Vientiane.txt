@@ -1,9 +1,8 @@
+
 state={
-	id=829
-	name="STATE_829"
-	provinces={
-		1464 1507 7356 10496 
-	}
+	id=822
+	name="STATE_822"
+
 	history={
 		owner = FIC
 		add_core_of = FIC
@@ -13,9 +12,15 @@ state={
 		}
 		buildings = {
 			infrastructure = 2
+
 		}
+
 	}
-	manpower=504213
+
+	provinces={
+		1362 1390 1464 1507 1520 4260 4539 7356 10195 10326 10496 12332 
+	}
+	manpower=741987
 	buildings_max_level_factor=1.000
 	state_category=pastoral
 }

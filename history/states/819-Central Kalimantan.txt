@@ -1,18 +1,17 @@
 state={
-	id=814
-	name="STATE_814"
+	id=819
+	name="STATE_819"
 	provinces={
-		4359 7376 7404 7432 10289 10317 
+		2170 2184 7424 8221 10138 10310 12110 12280 
 	}
 	history={
-		owner = FIC
-		add_core_of = FIC
-		add_core_of = CAM
+		owner = INS
+		add_core_of = INS
 		buildings = {
 			infrastructure = 2
 		}
 	}
-	manpower=687982
+	manpower=352417
 	buildings_max_level_factor=1.000
 	state_category=rural
 }

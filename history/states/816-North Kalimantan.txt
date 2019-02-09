@@ -1,18 +1,17 @@
 state={
-	id=815
-	name="STATE_815"
+	id=816
+	name="STATE_816"
 	provinces={
-		12447 12460 
+		1404 2047 5226 7415 12243 
 	}
 	history={
-		owner = FIC
-		add_core_of = FIC
-		add_core_of = CAM
+		owner = INS
+		add_core_of = INS
 		buildings = {
 			infrastructure = 2
 		}
 	}
-	manpower=254789
+	manpower=91754
 	buildings_max_level_factor=1.000
 	state_category=rural
 }

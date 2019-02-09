@@ -21,10 +21,13 @@ add_stability = -0.15
 add_war_support = -0.1
 
 add_ideas = {
+	FIC_colonial_government
+	FIC_native_recruitment
 	FIC_economic_crisis
 	FIC_iliterate_population
 	no_proper_equipment_design
 	fic_repression
+	FIC_opium_profits
 }
 
 1939.1.1 = {
@@ -37,6 +40,7 @@ add_ideas = {
 	complete_national_focus = FIC_colonial_loan
 	complete_national_focus = FIC_help_peasants
 	complete_national_focus = FIC_hydraulic_works
+	complete_national_focus = FIC_opium_monopolies
 	complete_national_focus = FIC_transindochinese_railway
 	complete_national_focus = FIC_small_scale_industrialisation
 	complete_national_focus = FIC_develop_hanoi_arsenal
@@ -59,6 +63,7 @@ add_ideas = {
 		partial_economic_mobilisation
 		service_by_requirement
 		fic_indigenous_officers
+		FIC_opium_profits_1
 		FIC_iliterate_population_1
 		fic_resource_effort
 		fic_strengthened_mil_intel
